@@ -1053,7 +1053,7 @@ GeodudeEvosAttacks:
 	db 32, EARTHQUAKE 
 	db 36, ROCK_SLIDE 
 	db 40, EXPLOSION 
-	db 45, DOUBLE-EDGE
+	db 45, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 GravelerEvosAttacks:
@@ -1067,7 +1067,7 @@ GravelerEvosAttacks:
 	db 35, EARTHQUAKE 
 	db 41, ROCK_SLIDE 
 	db 47, EXPLOSION 
-	db 53, DOUBLE-EDGE
+	db 53, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 GolemEvosAttacks:
