@@ -76,6 +76,7 @@ EvolutionMoves::
 	db NO_MOVE      ; GEODUDE
 	db NO_MOVE      ; GRAVELER
 	db NO_MOVE      ; GOLEM
+	db NO_MOVE	; PONYTA
 	db MEGAHORN     ; RAPIDASH
 	db NO_MOVE      ; SLOWPOKE
 	db WITHDRAW     ; SLOWBRO
