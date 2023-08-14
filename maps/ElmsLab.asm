@@ -100,7 +100,7 @@ ElmCheckMasterBall:
 	checkflag ENGINE_RISINGBADGE
 	iftrue ElmGiveMasterBallScript
 ElmCheckExpShare:
-	checkevent EVENT_GOT_EXP_SHARE_FROM_ELM
+	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
 	iftrue ElmScript_CallYou
 	checkevent EVENT_SHOWED_TOGEPI_TO_ELM
 	iftrue ElmGiveExpShareScript
@@ -386,7 +386,7 @@ ElmGiveExpShareScript:
 	writetext ElmGiveExpShareText2
 	waitbutton
 	closetext
-	setevent EVENT_GOT_EXP_SHARE_FROM_ELM
+	setevent EVENT_GOT_EVERSTONE_FROM_ELM
 	end
 
 ElmScript_CallYou:
