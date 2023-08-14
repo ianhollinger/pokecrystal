@@ -72,6 +72,7 @@ MrPokemonsHouse_MrPokemonScript:
 	verbosegiveitem EVERSTONE
 	iffalse .full
 	takeitem RED_SCALE
+	writetext MrPokemonText_Everstone
 	sjump .AlwaysNewDiscoveries
 
 .refused
@@ -340,6 +341,25 @@ MrPokemonText_GimmeTheScale:
 	para "I can offer this"
 	line "EVERSTONE I got"
 	cont "from PROF.OAK."
+	done
+
+MrPokemonText_Everstone:
+	text "That's an"
+	line "EVERSTONE."
+
+	para "Some species of"
+	line "#MON evolve"
+
+	para "when they grow to"
+	line "certain levels."
+
+	para "A #MON holding"
+	line "the EVERSTONE"
+	cont "won't evolve."
+
+	para "Give it to a #-"
+	line "MON you don't want"
+	cont "to evolve."
 	done
 
 MrPokemonText_Disappointed:
