@@ -10,10 +10,7 @@ Marts:
 	dw MartGoldenrod2F2
 	dw MartGoldenrod3F
 	dw MartGoldenrod4F
-	dw MartGoldenrod5F1
-	dw MartGoldenrod5F2
-	dw MartGoldenrod5F3
-	dw MartGoldenrod5F4
+	dw MartGoldenrod5F
 	dw MartOlivine
 	dw MartEcruteak
 	dw MartMahogany1
@@ -83,11 +80,11 @@ MartAzalea:
 
 MartCianwood:
 	db 5 ; # items
-	db POTION
-	db SUPER_POTION
-	db HYPER_POTION
-	db FULL_HEAL
-	db REVIVE
+	db ENERGY_ROOT
+	db ENERGYPOWDER
+	db HEAL_POWDER
+	db REVIVAL_HERB
+	db BERRY_JUICE
 	db -1 ; end
 
 MartGoldenrod2F1:
@@ -133,36 +130,11 @@ MartGoldenrod4F:
 	db HP_UP
 	db -1 ; end
 
-MartGoldenrod5F1:
+MartGoldenrod5F:
 	db 3 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
-	db -1 ; end
-
-MartGoldenrod5F2:
-	db 4 ; # items
-	db TM_THUNDERPUNCH
-	db TM_FIRE_PUNCH
-	db TM_ICE_PUNCH
-	db TM_HEADBUTT
-	db -1 ; end
-
-MartGoldenrod5F3:
-	db 4 ; # items
-	db TM_THUNDERPUNCH
-	db TM_FIRE_PUNCH
-	db TM_ICE_PUNCH
-	db TM_ROCK_SMASH
-	db -1 ; end
-
-MartGoldenrod5F4:
-	db 5 ; # items
-	db TM_THUNDERPUNCH
-	db TM_FIRE_PUNCH
-	db TM_ICE_PUNCH
-	db TM_HEADBUTT
-	db TM_ROCK_SMASH
 	db -1 ; end
 
 MartOlivine:
@@ -170,11 +142,11 @@ MartOlivine:
 	db GREAT_BALL
 	db SUPER_POTION
 	db HYPER_POTION
-	db ANTIDOTE
-	db PARLYZ_HEAL
-	db AWAKENING
-	db ICE_HEAL
-	db SUPER_REPEL
+	db FULL_HEAL
+	db FIRE_STONE
+	db WATER_STONE
+	db THUNDERSTONE
+	db LEAF_STONE
 	db SURF_MAIL
 	db -1 ; end
 
@@ -201,16 +173,17 @@ MartMahogany1:
 	db -1 ; end
 
 MartMahogany2:
-	db 9 ; # items
+	db 10 ; # items
 	db RAGECANDYBAR
 	db GREAT_BALL
-	db SUPER_POTION
 	db HYPER_POTION
 	db ANTIDOTE
 	db PARLYZ_HEAL
 	db SUPER_REPEL
 	db REVIVE
-	db FLOWER_MAIL
+	db EON_MAIL
+	db MORPH_MAIL
+	db MUSIC_MAIL
 	db -1 ; end
 
 MartBlackthorn:
@@ -245,9 +218,9 @@ MartPewter:
 	db SUPER_POTION
 	db SUPER_REPEL
 	db ANTIDOTE
-	db PARLYZ_HEAL
-	db AWAKENING
-	db BURN_HEAL
+	db SUN_STONE
+	db MOON_STONE
+	db EVERSTONE
 	db -1 ; end
 
 MartCerulean:
@@ -288,33 +261,29 @@ MartVermilion:
 	db -1 ; end
 
 MartCeladon2F1:
-	db 7 ; # items
-	db POTION
-	db SUPER_POTION
+	db 6 ; # items
 	db HYPER_POTION
 	db MAX_POTION
+	db FULL_RESTORE
 	db REVIVE
-	db SUPER_REPEL
+	db MAX_REVIVE
 	db MAX_REPEL
 	db -1 ; end
 
 MartCeladon2F2:
-	db 10 ; # items
-	db POKE_BALL
-	db GREAT_BALL
+	db 7 ; # items
 	db ULTRA_BALL
 	db ESCAPE_ROPE
 	db FULL_HEAL
-	db ANTIDOTE
-	db BURN_HEAL
-	db ICE_HEAL
-	db AWAKENING
-	db PARLYZ_HEAL
+	db ETHER
+	db MAX_ETHER
+	db ELIXER
+	db MAX_ELIXER
 	db -1 ; end
 
 MartCeladon3F:
 	db 5 ; # items
-	db TM_HIDDEN_POWER
+	db TM_PSYCH_UP
 	db TM_SUNNY_DAY
 	db TM_PROTECT
 	db TM_RAIN_DANCE
@@ -329,8 +298,9 @@ MartCeladon4F:
 	db -1 ; end
 
 MartCeladon5F1:
-	db 5 ; # items
+	db 6 ; # items
 	db HP_UP
+	db PP_UP
 	db PROTEIN
 	db IRON
 	db CARBOS
