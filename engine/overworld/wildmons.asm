@@ -295,12 +295,12 @@ ChooseWildEncounter:
 	ld a, [hli]
 	ld b, a
 ; If the Pokemon is encountered by surfing, fishing, or headbutt tree, we need to give the levels some variety.
-	ld e, BATTLETYPE_FISH
+	ld d, BATTLETYPE_FISH
   	ld a, [wBattleType]
-	cp e
+	cp d
 	jr z, .encounterlevelbuff
-	ld e, BATTLETYPE_TREE
-	cp e
+	ld d, BATTLETYPE_TREE
+	cp d
 	jr z, .encounterlevelbuff
 	call CheckOnWater
 	jr z, .encounterlevelbuff
