@@ -69,9 +69,11 @@ MrPokemonsHouse_MrPokemonScript:
 	writetext MrPokemonText_GimmeTheScale
 	yesorno
 	iffalse .refused
-	verbosegiveitem EVERSTONE
+	verbosegiveitem GS_BALL
 	iffalse .full
 	takeitem RED_SCALE
+	setevent EVENT_GOT_GS_BALL_FROM_GOLDENROD_POKEMON_CENTER
+	setevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
 	writetext MrPokemonText_Everstone
 	sjump .AlwaysNewDiscoveries
 
@@ -339,27 +341,27 @@ MrPokemonText_GimmeTheScale:
 	line "care to trade it?"
 
 	para "I can offer this"
-	line "EVERSTONE I got"
+	line "BALL I got"
 	cont "from PROF.OAK."
 	done
 
 MrPokemonText_Everstone:
-	text "That's an"
-	line "EVERSTONE."
+	text "That is called"
+	line "the GS BALL."
 
-	para "Some species of"
-	line "#MON evolve"
+	para "It cannot be"
+	line "opened by any"
+	cont "means."
 
-	para "when they grow to"
-	line "certain levels."
+	para "I meant to lend"
+	line "it to KURT, but"
+	
+	para "I never had"
+	line "the time."
 
-	para "A #MON holding"
-	line "the EVERSTONE"
-	cont "won't evolve."
-
-	para "Give it to a #-"
-	line "MON you don't want"
-	cont "to evolve."
+	para "Perhaps he would"
+	line "be able to"
+	cont "open it."
 	done
 
 MrPokemonText_Disappointed:
