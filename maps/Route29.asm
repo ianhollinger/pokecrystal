@@ -179,7 +179,7 @@ TuscanyScript:
 .MetTuscany:
 	writetext TuscanyGivesGiftText
 	promptbutton
-	verbosegiveitem PINK_BOW
+	verbosegiveitem TWISTEDSPOON
 	iffalse TuscanyDoneScript
 	setevent EVENT_GOT_PINK_BOW_FROM_TUSCANY
 	writetext TuscanyGaveGiftText
@@ -365,7 +365,7 @@ TuscanyGivesGiftText:
 	line "duction, please"
 
 	para "accept this gift,"
-	line "a PINK BOW."
+	line "a TWISTEDSPOON."
 	done
 
 TuscanyGaveGiftText:
@@ -373,8 +373,8 @@ TuscanyGaveGiftText:
 	line "you agree that it"
 	cont "is most adorable?"
 
-	para "It strengthens"
-	line "normal-type moves."
+	para "It boosts psychic-"
+	line "type moves."
 
 	para "I am certain it"
 	line "will be of use."
