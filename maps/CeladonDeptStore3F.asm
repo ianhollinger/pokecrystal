@@ -49,10 +49,10 @@ CeladonDeptStore3FDirectory:
 
 CeladonDeptStore3FYoungsterText:
 	text "I can't decide"
-	line "which #MON I"
+	line "which TM I"
 
-	para "should use this TM"
-	line "on…"
+	para "should give my"
+	line "#MON…"
 	done
 
 CeladonDeptStore3FGameboyKid1Text:
