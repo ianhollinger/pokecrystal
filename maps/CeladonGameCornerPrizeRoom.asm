@@ -52,7 +52,7 @@ CeladonPrizeRoom_tmcounterloop:
 	sjump CeladonPrizeRoom_purchased
 
 .Psychic:
-	checkitem TM_PSYCHIC
+	checkitem TM_PSYCHIC_M
 	iftrue CeladonPrizeRoom_alreadyhavetm
 	checkcoins CELADONGAMECORNERPRIZEROOM_TM29_COINS
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
