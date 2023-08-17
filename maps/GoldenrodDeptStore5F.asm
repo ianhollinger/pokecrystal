@@ -53,11 +53,6 @@ GoldenrodDeptStore5FReceptionistScript:
 	closetext
 	end
 
-.AlreadyGotTM:
-	writetext GoldenrodDeptStore5FAlreadyGotTMText
-	waitbutton
-	closetext
-	end
 
 .SomewhatHappy:
 	writetext GoldenrodDeptStore5FReceptionistItsAdorableText
