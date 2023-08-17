@@ -68,9 +68,16 @@ GoldenrodDeptStore5FReceptionistScript:
 .NotVeryHappy:
 	writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
 	promptbutton
+	checkitem TM_FRUSTRATION
+	iftrue .AlreadyGotTM
 	verbosegiveitem TM_FRUSTRATION
-	iffalse .Done
 	setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
+	closetext
+	end
+
+.AlreadyGotTM:
+	writetext GoldenrodDeptStore5FAlreadyGotTMText
+	waitbutton
 	closetext
 	end
 
