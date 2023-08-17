@@ -72,7 +72,6 @@ MrPokemonsHouse_MrPokemonScript:
 	verbosegiveitem GS_BALL
 	iffalse .full
 	takeitem RED_SCALE
-	setevent EVENT_GOT_GS_BALL_FROM_GOLDENROD_POKEMON_CENTER
 	setevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
 	writetext MrPokemonText_Everstone
 	sjump .AlwaysNewDiscoveries
