@@ -866,6 +866,7 @@ PoliwagEvosAttacks:
 PoliwhirlEvosAttacks:
 	db EVOLVE_ITEM, WATER_STONE, POLIWRATH
 	db EVOLVE_ITEM, KINGS_ROCK, POLITOED
+	db EVOLVE_TRADE, KINGS_ROCK, POLITOED
 	db 0 ; no more evolutions
 	db 1, BUBBLE 
 	db 14, DOUBLESLAP
@@ -895,6 +896,7 @@ AbraEvosAttacks:
 
 KadabraEvosAttacks:
 	db EVOLVE_ITEM, TWISTEDSPOON, ALAKAZAM
+	db EVOLVE_TRADE, -1, ALAKAZAM
 	db 0 ; no more evolutions
 	db 1, TELEPORT
 	db 1, KINESIS
@@ -948,6 +950,7 @@ MachopEvosAttacks:
 
 MachokeEvosAttacks:
 	db EVOLVE_ITEM, BLACKBELT_I, MACHAMP
+	db EVOLVE_TRADE, -1, MACHAMP
 	db 0 ; no more evolutions
 	db 1, SEISMIC_TOSS
 	db 20, FORESIGHT
@@ -1058,6 +1061,7 @@ GeodudeEvosAttacks:
 
 GravelerEvosAttacks:
 	db EVOLVE_ITEM, HARD_STONE, GOLEM
+	db EVOLVE_TRADE, -1, GOLEM
 	db 0 ; no more evolutions
 	db 1, ROCK_THROW
 	db 14, MAGNITUDE
@@ -1112,6 +1116,7 @@ RapidashEvosAttacks:
 SlowpokeEvosAttacks:
 	db EVOLVE_LEVEL, 37, SLOWBRO
 	db EVOLVE_ITEM, KINGS_ROCK, SLOWKING
+	db EVOLVE_TRADE, KINGS_ROCK, SLOWKING
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 4, CURSE
@@ -1315,6 +1320,7 @@ GastlyEvosAttacks:
 
 HaunterEvosAttacks:
 	db EVOLVE_ITEM, SPELL_TAG, GENGAR
+	db EVOLVE_TRADE, -1, GENGAR
 	db 0 ; no more evolutions
 	db 1, MEAN_LOOK
 	db 17, CURSE
@@ -1342,6 +1348,7 @@ GengarEvosAttacks:
 
 OnixEvosAttacks:
 	db EVOLVE_ITEM, METAL_COAT, STEELIX
+	db EVOLVE_TRADE, METAL_COAT, STEELIX
 	db 0 ; no more evolutions
 	db 1, SHARPEN
 	db 1, TACKLE
@@ -1685,6 +1692,7 @@ HorseaEvosAttacks:
 
 SeadraEvosAttacks:
 	db EVOLVE_ITEM, DRAGON_SCALE, KINGDRA
+	db EVOLVE_TRADE, DRAGON_SCALE, KINGDRA
 	db 0 ; no more evolutions
 	db 1, TWISTER
 	db 18, FOCUS_ENERGY
@@ -1784,6 +1792,7 @@ MrMimeEvosAttacks:
 
 ScytherEvosAttacks:
 	db EVOLVE_ITEM, METAL_COAT, SCIZOR
+	db EVOLVE_TRADE, METAL_COAT, SCIZOR
 	db 0 ; no more evolutions
 	db 1, LEER
 	db 1, QUICK_ATTACK
@@ -1984,6 +1993,7 @@ FlareonEvosAttacks:
 
 PorygonEvosAttacks:
 	db EVOLVE_ITEM, UP_GRADE, PORYGON2
+	db EVOLVE_TRADE, UP_GRADE, PORYGON2
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, CONVERSION
