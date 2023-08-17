@@ -7,7 +7,7 @@ OverworldWhiteoutScript::
 	callasm OverworldBGMap
 
 Script_Whiteout:
-checkflag ENGINE_BUG_CONTEST_TIMER
+	checkflag ENGINE_BUG_CONTEST_TIMER
 	iftrue .bug_contest
 	callasm LoseWhiteOutMoney
 	iffalse .plain_whiteout_text
