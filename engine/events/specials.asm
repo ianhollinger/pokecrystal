@@ -311,9 +311,6 @@ CheckPokerus:
 	jp ScriptReturnCarry
 
 ResetLuckyNumberShowFlag:
-	farcall RestartLuckyNumberCountdown
-	ld hl, wLuckyNumberShowFlag
-	res LUCKYNUMBERSHOW_GAME_OVER_F, [hl]
 	farcall LoadOrRegenerateLuckyIDNumber
 	ret
 
