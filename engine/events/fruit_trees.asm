@@ -26,7 +26,7 @@ FruitTreeScript::
 	giveitem ITEM_FROM_MEM, $3
 	iffalse .try_two
 	promptbutton
-	writetext ObtainedFiveFruitText
+	writetext ObtainedThreeFruitText
 	sjump .continue
 .try_two
 ; if you somehow approach the limit of number of a single berry
