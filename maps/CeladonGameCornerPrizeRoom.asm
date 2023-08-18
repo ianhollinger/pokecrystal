@@ -173,7 +173,7 @@ CeladonGameCornerPrizeRoomPokemonVendor:
 	sjump .loop
 
 .Omanyte:
-	checkcoins CELADONGAMECORNERPRIZEROOM_PORYGON_COINS
+	checkcoins CELADONGAMECORNERPRIZEROOM_OMANYTE_COINS
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, CeladonPrizeRoom_notenoughroom
