@@ -2,72 +2,70 @@ TrainerClassDVs:
 ; entries correspond to trainer classes (see constants/trainer_constants.asm)
 	table_width 2, TrainerClassDVs
 	;  atk,def,spd,spc
-	dn  9, 10,  7,  7 ; FALKNER
-	dn  8,  8,  8,  8 ; WHITNEY
-	dn  9,  8,  8,  8 ; BUGSY
-	dn  9,  8,  8,  8 ; MORTY
-	dn  9,  8,  8,  8 ; PRYCE
-	dn  9,  8,  8,  8 ; JASMINE
-	dn  9,  8,  8,  8 ; CHUCK
+	dn 11,  8, 10,  8 ; FALKNER
+	dn  9,  7,  7,  7 ; WHITNEY
+	dn  9, 10, 10,  8 ; BUGSY
+	dn  9,  8, 10, 10 ; MORTY
+	dn  9,  8,  8, 12 ; PRYCE
+	dn  9, 12,  6, 10 ; JASMINE
+	dn 13,  8,  8,  8 ; CHUCK
 	dn  7, 12, 13, 13 ; CLAIR
-	dn 13, 13, 13, 13 ; RIVAL1
+	dn 10,  9,  9, 10 ; RIVAL1
 	dn  9,  8,  8,  8 ; POKEMON_PROF
-	dn 13, 12, 13, 13 ; WILL
-	dn 13, 12, 13, 13 ; CAL
-	dn 13, 12, 13, 13 ; BRUNO
-	dn  7, 15, 13, 15 ; KAREN
-	dn 13, 12, 13, 13 ; KOGA
-	dn 13, 12, 13, 13 ; CHAMPION
-	dn  9,  8,  8,  8 ; BROCK
-	dn  7,  8,  8,  8 ; MISTY
-	dn  9,  8,  8,  8 ; LT_SURGE
-	dn  9,  8,  8,  8 ; SCIENTIST
-	dn  7,  8,  8,  8 ; ERIKA
-	dn  9,  8,  8,  8 ; YOUNGSTER
+	dn 13, 12, 13, 14 ; WILL
+	dn 13, 12, 13, 14 ; CAL
+	dn 15, 12, 13, 12 ; BRUNO
+	dn 13, 12, 13, 13 ; KAREN
+	dn 13, 12, 13, 14 ; KOGA
+	dn 13, 12, 13, 14 ; CHAMPION
+	dn  9, 12,  8,  8 ; BROCK
+	dn  7,  8, 12,  9 ; MISTY
+	dn  9,  8, 10, 10 ; LT_SURGE
+	dn  7,  8,  9, 10 ; SCIENTIST
+	dn  7,  8, 10, 11 ; ERIKA
+	dn  9,  6,  6,  6 ; YOUNGSTER
 	dn  9,  8,  8,  8 ; SCHOOLBOY
-	dn  9,  8,  8,  8 ; BIRD_KEEPER
-	dn  5,  8,  8,  8 ; LASS
-	dn  9,  8,  8,  8 ; JANINE
-	dn 13,  8, 12,  8 ; COOLTRAINERM
-	dn  7, 12, 12,  8 ; COOLTRAINERF
-	dn  6,  9, 12,  8 ; BEAUTY
-	dn  9,  8,  8,  8 ; POKEMANIAC
+	dn  9,  8, 10,  6 ; BIRD_KEEPER
+	dn  5,  8,  8,  5 ; LASS
+	dn  7, 10, 12,  7 ; JANINE
+	dn 13,  8, 12, 10 ; COOLTRAINERM (HP Rock)
+	dn 10, 13, 11,  9 ; COOLTRAINERF
+	dn  6,  9,  9,  9 ; BEAUTY
+	dn  9,  7,  7,  8 ; POKEMANIAC
 	dn 13,  8, 10,  8 ; GRUNTM
-	dn  9,  8,  8,  8 ; GENTLEMAN
-	dn  9,  8,  8,  8 ; SKIER
-	dn  6,  8,  8,  8 ; TEACHER
-	dn  7, 13,  8,  7 ; SABRINA
+	dn  8,  9,  9, 10 ; GENTLEMAN
+	dn  7,  6, 10,  9 ; SKIER
+	dn  5,  9,  7,  9 ; TEACHER
+	dn  5,  6, 12, 13 ; SABRINA
 	dn  9,  8,  8,  8 ; BUG_CATCHER
-	dn  9,  8,  8,  8 ; FISHER
-	dn  9,  8,  8,  8 ; SWIMMERM
-	dn  7,  8,  8,  8 ; SWIMMERF
-	dn  9,  8,  8,  8 ; SAILOR
-	dn  9,  8,  8,  8 ; SUPER_NERD
-; BUG: RIVAL2 has lower DVs than RIVAL1 (see docs/bugs_and_glitches.md)
-	dn  9,  8,  8,  8 ; RIVAL2
-	dn  9,  8,  8,  8 ; GUITARIST
-	dn 10,  8,  8,  8 ; HIKER
-	dn  9,  8,  8,  8 ; BIKER
-	dn  9,  8,  8,  8 ; BLAINE
-	dn  9,  8,  8,  8 ; BURGLAR
-	dn  9,  8,  8,  8 ; FIREBREATHER
-	dn  9,  8,  8,  8 ; JUGGLER
-	dn  9,  8,  8,  8 ; BLACKBELT_T
-	dn 13,  8, 10,  8 ; EXECUTIVEM
-	dn  9,  8,  8,  8 ; PSYCHIC_T
-	dn  6, 10, 10,  8 ; PICNICKER
-	dn  9,  8,  8,  8 ; CAMPER
-	dn  7, 14, 10,  8 ; EXECUTIVEF
-	dn  9,  8,  8,  8 ; SAGE
-	dn  7,  8,  8,  8 ; MEDIUM
-	dn  9,  8,  8,  8 ; BOARDER
-	dn  9,  8,  8,  8 ; POKEFANM
-	dn  6,  8,  8, 10 ; KIMONO_GIRL
-	dn  6,  8, 10,  8 ; TWINS
-	dn  6, 13,  8,  8 ; POKEFANF
+	dn  7,  6,  7,  8 ; FISHER
+	dn  8,  7,  9,  8 ; SWIMMERM
+	dn  5,  6,  7,  9 ; SWIMMERF
+	dn  9,  7,  6,  8 ; SAILOR
+	dn  9,  7,  9,  6 ; SUPER_NERD
+	dn 14, 13, 13, 14 ; RIVAL2 (HP Water)
+	dn  9,  6, 10,  8 ; GUITARIST
+	dn  8, 11,  7,  8 ; HIKER
+	dn  9,  8, 10,  8 ; BIKER
+	dn  9,  8,  8, 12 ; BLAINE
+	dn  9,  8, 10,  8 ; BURGLAR
+	dn  9,  8,  8, 10 ; FIREBREATHER
+	dn 10,  6, 13,  6 ; JUGGLER (HP Grass)
+	dn 12,  7,  7,  8 ; BLACKBELT_T
+	dn 10, 10, 13, 14 ; EXECUTIVEM (HP Grass)
+	dn  9,  8,  8, 10 ; PSYCHIC_T (HP Rock)
+	dn  8,  8,  9,  9 ; PICNICKER
+	dn  7,  6,  8,  8 ; CAMPER
+	dn 10, 10, 13, 13 ; EXECUTIVEF
+	dn  9,  8,  8,  8 ; SAGE (HP Rock)
+	dn  7,  8,  8, 10 ; MEDIUM
+	dn  7,  6, 11,  8 ; BOARDER
+	dn  9,  7,  5,  8 ; POKEFANM
+	dn  5,  8,  8, 10 ; KIMONO_GIRL
+	dn  5,  5,  5,  5 ; TWINS
+	dn  7,  9,  5,  7 ; POKEFANF
 	dn 15, 13, 13, 14 ; RED
-	dn  9, 13, 13, 13 ; BLUE
-	dn  9,  8,  8,  8 ; OFFICER
-	dn  7, 14, 10,  8 ; GRUNTF
-	dn  9,  8,  8,  8 ; MYSTICALMAN
-	assert_table_length NUM_TRAINER_CLASSES
+	dn 13, 13,  9, 12 ; BLUE
+	dn  7,  7,  8,  8 ; OFFICER
+	dn  7, 14, 10,  7 ; GRUNTF
+	dn 11, 10, 10, 10 ; MYSTICALMAN (shiny)
