@@ -32,7 +32,7 @@ BattleTowerMons:
 
 	db ESPEON
 	db LEFTOVERS
-	db MUD_SLAP, PSYCHIC_M, PSYCH_UP, TOXIC
+	db MUD_SLAP, PSYCHIC_M, SHADOW_BALL, HIDDEN_POWER ; HP WATER
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -42,7 +42,7 @@ BattleTowerMons:
 	bigdw 40000
 	bigdw 40000
 	dn 14, 13, 15, 11 ; DVs
-	db 10, 10, 10, 10 ; PP
+	db 10, 10, 15, 15 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 10 ; Level
@@ -58,7 +58,7 @@ BattleTowerMons:
 
 	db UMBREON
 	db GOLD_BERRY
-	db SHADOW_BALL, IRON_TAIL, PSYCH_UP, TOXIC
+	db SHADOW_BALL, IRON_TAIL, TOXIC, CHARM
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -68,7 +68,7 @@ BattleTowerMons:
 	bigdw 50000
 	bigdw 40000
 	dn 13, 11, 14, 15 ; DVs
-	db 15, 15, 10, 10 ; PP
+	db 15, 15, 10, 20 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 10 ; Level
@@ -83,7 +83,7 @@ BattleTowerMons:
 	db "BURAtuKI-@@"
 
 	db WOBBUFFET
-	db FOCUS_BAND
+	db LEFTOVERS
 	db COUNTER, MIRROR_COAT, SAFEGUARD, DESTINY_BOND
 	dw 0 ; OT ID
 	dt 1000 ; Exp
@@ -109,8 +109,8 @@ BattleTowerMons:
 	db "SO-NANSU@@@"
 
 	db KANGASKHAN
-	db MIRACLEBERRY
-	db REVERSAL, HYPER_BEAM, EARTHQUAKE, ATTRACT
+	db FOCUS_BAND
+	db REVERSAL, ENDURE, EARTHQUAKE, RETURN
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -120,8 +120,8 @@ BattleTowerMons:
 	bigdw 30000
 	bigdw 30000
 	dn 14, 15, 12, 15 ; DVs
-	db 15, 5, 10, 15 ; PP
-	db 100 ; Happiness
+	db 15, 10, 10, 15 ; PP
+	db 255 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 10 ; Level
 	db 0, 0 ; Status
@@ -146,7 +146,7 @@ BattleTowerMons:
 	bigdw 30000
 	bigdw 30000
 	dn 15, 14, 15, 13 ; DVs
-	db 15, 10, 20, 5 ; PP
+	db 15, 10, 5, 5 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 10 ; Level
@@ -162,7 +162,7 @@ BattleTowerMons:
 
 	db MILTANK
 	db GOLD_BERRY
-	db BLIZZARD, EARTHQUAKE, HYPER_BEAM, TOXIC
+	db BLIZZARD, EARTHQUAKE, DOUBLE_EDGE, SWAGGER
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -172,7 +172,7 @@ BattleTowerMons:
 	bigdw 30000
 	bigdw 35000
 	dn 11, 11, 13, 15 ; DVs
-	db 5, 10, 5, 10 ; PP
+	db 5, 10, 15, 15 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 10 ; Level
@@ -188,7 +188,7 @@ BattleTowerMons:
 
 	db AERODACTYL
 	db LEFTOVERS
-	db HYPER_BEAM, SUPERSONIC, EARTHQUAKE, BITE
+	db FIRE_BLAST, SUPERSONIC, EARTHQUAKE, BITE
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -240,7 +240,7 @@ BattleTowerMons:
 
 	db SNEASEL
 	db GOLD_BERRY
-	db SLASH, FAINT_ATTACK, SURF, BLIZZARD
+	db SLASH, FAINT_ATTACK, SURF, ICE_PUNCH
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -266,7 +266,7 @@ BattleTowerMons:
 
 	db PORYGON2
 	db BRIGHTPOWDER
-	db PSYCHIC_M, BLIZZARD, HYPER_BEAM, TRI_ATTACK
+	db PSYCHIC_M, BLIZZARD, HYPER_BEAM, THUNDERBOLT
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -276,7 +276,7 @@ BattleTowerMons:
 	bigdw 30000
 	bigdw 30000
 	dn 15, 11, 13, 14 ; DVs
-	db 10, 5, 5, 10 ; PP
+	db 10, 5, 5, 15 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 10 ; Level
@@ -292,7 +292,7 @@ BattleTowerMons:
 
 	db MISDREAVUS
 	db FOCUS_BAND
-	db PERISH_SONG, MEAN_LOOK, PAIN_SPLIT, SHADOW_BALL
+	db PERISH_SONG, MEAN_LOOK, PROTECT, SHADOW_BALL
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -318,7 +318,7 @@ BattleTowerMons:
 
 	db HOUNDOUR
 	db GOLD_BERRY
-	db FAINT_ATTACK, SOLARBEAM, ROAR, SUNNY_DAY
+	db FAINT_ATTACK, SOLARBEAM, FLAMETHROWER, SUNNY_DAY
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -328,7 +328,7 @@ BattleTowerMons:
 	bigdw 33000
 	bigdw 30000
 	dn 15, 13, 15, 14 ; DVs
-	db 20, 10, 20, 5 ; PP
+	db 20, 10, 15, 5 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 10 ; Level
@@ -344,7 +344,7 @@ BattleTowerMons:
 
 	db GIRAFARIG
 	db KINGS_ROCK
-	db PSYBEAM, MUD_SLAP, SHADOW_BALL, AGILITY
+	db PSYCHIC_M, THUNDERBOLT, SHADOW_BALL, AGILITY
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -354,7 +354,7 @@ BattleTowerMons:
 	bigdw 30000
 	bigdw 30000
 	dn 14, 13, 15, 13 ; DVs
-	db 20, 10, 15, 30 ; PP
+	db 10, 15, 15, 30 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 10 ; Level
@@ -370,7 +370,7 @@ BattleTowerMons:
 
 	db BLISSEY
 	db QUICK_CLAW
-	db HEADBUTT, SOLARBEAM, ROLLOUT, STRENGTH
+	db DEFENSE_CURL, THUNDERBOLT, ROLLOUT, ICE_BEAM
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -396,7 +396,7 @@ BattleTowerMons:
 
 	db SNORLAX
 	db MIRACLEBERRY
-	db HEADBUTT, PROTECT, SNORE, SURF
+	db RETURN, EARTHQUAKE, REST, SLEEP_TALK
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -406,8 +406,8 @@ BattleTowerMons:
 	bigdw 30000
 	bigdw 30000
 	dn 14, 15, 15, 7 ; DVs
-	db 15, 10, 15, 15 ; PP
-	db 100 ; Happiness
+	db 15, 10, 5, 10 ; PP
+	db 255 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 10 ; Level
 	db 0, 0 ; Status
@@ -421,8 +421,8 @@ BattleTowerMons:
 	db "KABIGON@@@@"
 
 	db EXEGGUTOR
-	db KINGS_ROCK
-	db TOXIC, GIGA_DRAIN, THIEF, CONFUSION
+	db GOLD_BERRY
+	db HYPNOSIS, GIGA_DRAIN, THIEF, PSYCHIC_M
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -432,7 +432,7 @@ BattleTowerMons:
 	bigdw 30000
 	bigdw 30000
 	dn 15, 14, 15, 14 ; DVs
-	db 10, 5, 10, 25 ; PP
+	db 20, 10, 25, 10 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 10 ; Level
@@ -447,8 +447,8 @@ BattleTowerMons:
 	db "NAtuSI-@@@@"
 
 	db HERACROSS
-	db GOLD_BERRY
-	db REVERSAL, ENDURE, COUNTER, ROCK_SMASH
+	db FOCUS_BAND
+	db REVERSAL, ENDURE, EARTHQUAKE, MEGAHORN
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -458,7 +458,7 @@ BattleTowerMons:
 	bigdw 30000
 	bigdw 30000
 	dn 15, 7, 15, 7 ; DVs
-	db 15, 10, 20, 15 ; PP
+	db 15, 10, 10, 10 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 10 ; Level
