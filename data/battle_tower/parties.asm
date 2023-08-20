@@ -281,14 +281,14 @@ BattleTowerMons:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 10 ; Level
 	db 0, 0 ; Status
-	bigdw 44 ; HP
-	bigdw 44 ; Max HP
-	bigdw 28 ; Atk
-	bigdw 30 ; Def
-	bigdw 23 ; Spd
-	bigdw 33 ; SAtk
-	bigdw 31 ; SDef
-	db "PORIGON2@@@"
+	bigdw 35 ; HP
+	bigdw 35 ; Max HP
+	bigdw 20 ; Atk
+	bigdw 21 ; Def
+	bigdw 15 ; Spd
+	bigdw 24 ; SAtk
+	bigdw 22 ; SDef
+	db "PORIGON@@@@"
 
 	db MISDREAVUS
 	db FOCUS_BAND
@@ -368,7 +368,7 @@ BattleTowerMons:
 	bigdw 24 ; SDef
 	db "KIRINRIKI@@"
 
-	db BLISSEY
+	db CHANSEY
 	db QUICK_CLAW
 	db DEFENSE_CURL, THUNDERBOLT, ROLLOUT, ICE_BEAM
 	dw 0 ; OT ID
@@ -385,13 +385,13 @@ BattleTowerMons:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 10 ; Level
 	db 0, 0 ; Status
-	bigdw 77 ; HP
-	bigdw 77 ; Max HP
-	bigdw 14 ; Atk
-	bigdw 14 ; Def
-	bigdw 22 ; Spd
-	bigdw 27 ; SAtk
-	bigdw 39 ; SDef
+	bigdw 72 ; HP
+	bigdw 72 ; Max HP
+	bigdw 8 ; Atk
+	bigdw 9 ; Def
+	bigdw 17 ; Spd
+	bigdw 14 ; SAtk
+	bigdw 28 ; SDef
 	db "HAPINASU@@@"
 
 	db SNORLAX
@@ -2566,7 +2566,7 @@ BattleTowerMons:
 
 	db ZAPDOS
 	db MIRACLEBERRY
-	db DRILL_PECK, THUNDERBOLT, THUNDER_WAVE, HIDDEN POWER ; WATER
+	db DRILL_PECK, THUNDERBOLT, THUNDER_WAVE, HIDDEN_POWER ; WATER
 	dw 0 ; OT ID
 	dt 125000 ; Exp
 	; Stat exp
