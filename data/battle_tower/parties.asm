@@ -264,7 +264,7 @@ BattleTowerMons:
 	bigdw 27 ; SDef
 	db "NIyu-RA@@@@"
 
-	db PORYGON2
+	db PORYGON
 	db BRIGHTPOWDER
 	db PSYCHIC_M, BLIZZARD, HYPER_BEAM, THUNDERBOLT
 	dw 0 ; OT ID
@@ -1677,7 +1677,7 @@ BattleTowerMons:
 	bigdw 94 ; SDef
 	db "KENTAROSU@@"
 
-	db KINGDRA
+	db SEADRA
 	db LEFTOVERS
 	db SURF, DRAGONBREATH, HYPER_BEAM, ICE_BEAM
 	dw 0 ; OT ID
