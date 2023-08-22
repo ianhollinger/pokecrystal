@@ -2143,6 +2143,7 @@ XItemEffect:
 	ld [wAttackMissed], a
 	ld [wEffectFailed], a
 	farcall RaiseStat
+	farcall RaiseStat
 	call WaitSFX
 
 	farcall BattleCommand_StatUpMessage
