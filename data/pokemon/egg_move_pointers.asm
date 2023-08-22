@@ -127,7 +127,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw PinsirEggMoves
-	dw NoEggMoves
+	dw MagikarpEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw LaprasEggMoves
@@ -191,7 +191,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw AipomEggMoves
 	dw NoEggMoves
-	dw NoEggMoves
+	dw SunkernEggMoves
 	dw YanmaEggMoves
 	dw WooperEggMoves
 	dw NoEggMoves
