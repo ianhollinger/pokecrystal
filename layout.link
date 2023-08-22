@@ -50,12 +50,12 @@ ROMX $08
 	"Tileset Data 3"
 ROMX $09
 	"bank9"
-	"Egg Moves"
 ROMX $0a
 	"bankA"
 	"Trainer Backpics"
 ROMX $0b
 	"bankB"
+	"Egg Moves"
 ROMX $0c
 	"Tileset Data 4"
 ROMX $0d
