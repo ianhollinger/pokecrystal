@@ -19,7 +19,7 @@ RuinsOfAlphHoOhItemRoomRevivalHerb:
 	itemball REVIVAL_HERB
 
 RuinsOfAlphHoOhItemRoomCharcoal:
-	itemball CHARCOAL
+	itemball TWISTEDSPOON
 
 RuinsOfAlphHoOhItemRoomAncientReplica:
 	jumptext RuinsOfAlphHoOhItemRoomAncientReplicaText
