@@ -10,7 +10,7 @@ RuinsOfAlphKabutoItemRoom_MapScripts:
 	def_callbacks
 
 RuinsOfAlphKabutoItemRoomBerry:
-	itemball BERRY
+	itemball BLACKBELT_I
 
 RuinsOfAlphKabutoItemRoomPsncureberry:
 	itemball PSNCUREBERRY
