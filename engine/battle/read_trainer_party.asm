@@ -1,9 +1,3 @@
-GetNextTrainerDataByte:
-	ld a, [wTrainerGroupBank]
-	call GetFarByte
-	inc hl
-	ret
-
 ReadTrainerParty:
 	ld a, [wInBattleTowerBattle]
 	bit 0, a
@@ -39,9 +33,6 @@ ReadTrainerParty:
 	ld hl, TrainerGroups
 	add hl, bc
 	add hl, bc
-	add hl, bc
-	ld a, [hli]
-	ld [wTrainerGroupBank], a
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -52,18 +43,18 @@ ReadTrainerParty:
 	dec b
 	jr z, .got_trainer
 .loop
-	call GetNextTrainerDataByte
+	ld a, [hli]
 	cp -1
 	jr nz, .loop
 	jr .skip_trainer
 .got_trainer
 
 .skip_name
-	call GetNextTrainerDataByte
+	ld a, [hli]
 	cp "@"
 	jr nz, .skip_name
 
-	call GetNextTrainerDataByte
+	ld a, [hli]
 	ld [wOtherTrainerType], a
 	ld d, h
 	ld e, l
@@ -82,13 +73,13 @@ ReadTrainerParty:
 	call CloseSRAM
 	jr .done
 
-ReadTrainerPartyPieces
+ReadTrainerPartyPieces:
 	ld h, d
 	ld l, e
 
 .loop
 ; end?
-	call GetNextTrainerDataByte
+	ld a, [hli]
 	cp -1
 	ret z
 
@@ -96,7 +87,7 @@ ReadTrainerPartyPieces
 	ld [wCurPartyLevel], a
 
 ; species
-	call GetNextTrainerDataByte
+	ld a, [hli]
 	ld [wCurPartySpecies], a
 
 ; add to party
@@ -106,51 +97,35 @@ ReadTrainerPartyPieces
 	predef TryAddMonToParty
 	pop hl
 
-; stat exp?
+; dvs?
 	ld a, [wOtherTrainerType]
-	bit TRAINERTYPE_STAT_EXP_F, a
-	jr z, .no_stat_exp
+	bit TRAINERTYPE_DVS_F, a
+	jr z, .no_dvs
 
 	push hl
 	ld a, [wOTPartyCount]
 	dec a
-	ld hl, wOTPartyMon1StatExp
+	ld hl, wOTPartyMon1DVs
 	call GetPartyLocation
 	ld d, h
 	ld e, l
 	pop hl
 
-	ld c, NUM_EXP_STATS
-.stat_exp_loop
-; When reading stat experience, treat PERFECT_STAT_EXP as $FFFF
-	call GetNextTrainerDataByte
-	dec hl
-	cp LOW(PERFECT_STAT_EXP)
-	jr nz, .not_perfect_stat_exp
-	inc hl
-	call GetNextTrainerDataByte
-	dec hl
-	cp HIGH(PERFECT_STAT_EXP)
-	dec hl
-	jr nz, .not_perfect_stat_exp
+; When reading DVs, treat PERFECT_DV as $ff
+	ld a, [hli]
+	cp PERFECT_DV
+	jr nz, .atk_def_dv_ok
 	ld a, $ff
-rept 2
+.atk_def_dv_ok
 	ld [de], a
 	inc de
-	inc hl
-endr
-	jr .continue_stat_exp
-
-.not_perfect_stat_exp
-rept 2
-	call GetNextTrainerDataByte
+	ld a, [hli]
+	cp PERFECT_DV
+	jr nz, .spd_spc_dv_ok
+	ld a, $ff
+.spd_spc_dv_ok
 	ld [de], a
-	inc de
-endr
-.continue_stat_exp
-	dec c
-	jr nz, .stat_exp_loop
-.no_stat_exp
+.no_dvs
 
 ; item?
 	ld a, [wOtherTrainerType]
@@ -166,7 +141,7 @@ endr
 	ld e, l
 	pop hl
 
-	call GetNextTrainerDataByte
+	ld a, [hli]
 	ld [de], a
 .no_item
 
@@ -186,7 +161,7 @@ endr
 
 	ld b, NUM_MOVES
 .copy_moves
-	call GetNextTrainerDataByte
+	ld a, [hli]
 	ld [de], a
 	inc de
 	dec b
@@ -233,11 +208,9 @@ endr
 
 	pop hl
 .no_moves
-
-; Custom stat experience affects stats,
-; so recalculate them after TryAddMonToParty
+; Custom DVs affect stats, so recalculate them after TryAddMonToParty
 	ld a, [wOtherTrainerType]
-	and TRAINERTYPE_STAT_EXP
+	and TRAINERTYPE_DVS
 	jr z, .no_stat_recalc
 
 	push hl
@@ -273,7 +246,7 @@ endr
 	pop hl
 .no_stat_recalc
 
- 	jp .loop
+	jp .loop
 
 ComputeTrainerReward:
 	ld hl, hProduct
@@ -299,8 +272,6 @@ Battle_GetTrainerName::
 	ld a, [wInBattleTowerBattle]
 	bit 0, a
 	ld hl, wOTPlayerName
-	ld a, BANK(Battle_GetTrainerName)
-	ld [wTrainerGroupBank], a
 	jp nz, CopyTrainerName
 
 	ld a, [wOtherTrainerID]
@@ -333,9 +304,6 @@ GetTrainerName::
 	ld hl, TrainerGroups
 	add hl, bc
 	add hl, bc
-	add hl, bc
-	ld a, [hli]
-	ld [wTrainerGroupBank], a
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -347,7 +315,6 @@ GetTrainerName::
 
 .skip
 	ld a, [hli]
-	call GetNextTrainerDataByte
 	cp $ff
 	jr nz, .skip
 	jr .loop
@@ -356,8 +323,7 @@ CopyTrainerName:
 	ld de, wStringBuffer1
 	push de
 	ld bc, NAME_LENGTH
-	ld a, [wTrainerGroupBank]
-	call FarCopyBytes
+	call CopyBytes
 	pop de
 	ret
 
@@ -369,4 +335,4 @@ IncompleteCopyNameFunction: ; unreferenced
 	pop de
 	ret
 
-INCLUDE "data/trainers/party_pointers.asm"
+INCLUDE "data/trainers/parties.asm"
