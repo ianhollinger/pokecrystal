@@ -411,8 +411,9 @@ GoldenrodCityRocket6Text:
 	done
 
 GoldenrodCityStationSignText:
-	text "GOLDENROD CITY"
-	line "STATION"
+	text "JOHTO-KANTO MAGNET"
+	line "TRAIN LINE"
+	cont "GOLDENROD STATION"
 	done
 
 GoldenrodCityRadioTowerSignText:
