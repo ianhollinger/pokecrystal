@@ -9,7 +9,7 @@
 ;    (TRAINERTYPE_ITEM_MOVES is just TRAINERTYPE_ITEM | TRAINERTYPE_MOVES)
 ; - db -1 ; end
 
-SECTION "Enemy Trainer Parties 2", ROMX
+; SECTION "Enemy Trainer Parties 2", ROMX
 
 GruntMGroup:
 	; GRUNTM (1)
