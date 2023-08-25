@@ -1409,7 +1409,7 @@ JohtoGrassWildMons:
 	db 16, PIDGEY
 	db 15, GROWLITHE
 	db 12, ABRA
-	db 14, JIGGLYPUFF
+	db 14, MAGNEMITE
 	db 12, DITTO
 	db 14, YANMA
 	; day
@@ -1417,7 +1417,7 @@ JohtoGrassWildMons:
 	db 16, PIDGEY
 	db 15, GROWLITHE
 	db 12, ABRA
-	db 14, JIGGLYPUFF
+	db 14, MAGNEMITE
 	db 12, DITTO
 	db 14, YANMA
 	; nite
@@ -1425,7 +1425,7 @@ JohtoGrassWildMons:
 	db 16, HOOTHOOT
 	db 15, PSYDUCK
 	db 12, ABRA
-	db 14, JIGGLYPUFF
+	db 14, MAGNEMITE
 	db 12, DITTO
 	db 14, YANMA
 	end_grass_wildmons
