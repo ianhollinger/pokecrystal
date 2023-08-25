@@ -5937,19 +5937,19 @@ LoadEnemyMon:
 
 ; Failing that, it's all up to chance
 ;  Effective chances:
-;    75% None
-;    23% Item1
-;     2% Item2
+;    45% None
+;    50% Item1
+;     5% Item2
 
-; 25% chance of getting an item
+; 55% chance of getting an item
 	call BattleRandom
-	cp 75 percent + 1
+	cp 45 percent + 1
 	ld a, NO_ITEM
 	jr c, .UpdateItem
 
-; From there, an 8% chance for Item2
+; From there, a 10% chance for Item2
 	call BattleRandom
-	cp 8 percent ; 8% of 25% = 2% Item2
+	cp 10 percent ; 10% of 50% = 5% Item2
 	ld a, [wBaseItem1]
 	jr nc, .UpdateItem
 	ld a, [wBaseItem2]
@@ -6147,9 +6147,13 @@ LoadEnemyMon:
 ; Set happiness
 	ld a, [wBattleMode]
 	dec a
-	ld a, $ff ; Give the enemy mon max happiness...
-	jr nz, .load_happiness ; ...if it's a Trainer battle.
 	ld a, BASE_HAPPINESS
+	jr z, .load_happiness
+
+	ld a, [wCurPartyMon]
+	ld hl, wOTPartyMon1Happiness
+	call GetPartyLocation
+	ld a, [hl]
 .load_happiness
 	ld [wEnemyMonHappiness], a
 ; Set level
