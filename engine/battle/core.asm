@@ -428,7 +428,6 @@ HandleBerserkGene:
 	and %11
 	add 2
 	ld [hl], a
- 	ld a, BATTLE
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVarAddr
 	push hl
