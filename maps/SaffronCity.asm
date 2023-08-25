@@ -258,11 +258,11 @@ MrPsychicsHouseSignText:
 	done
 
 SaffronCityMagnetTrainStationSignText:
-	text "SAFFRON CITY"
-	line "MAGNET TRAIN"
+	text "JOHTO-KANTO MAGNET"
+	line "TRAIN LINE SAFFRON"
 	cont "STATION"
 	done
-
+	
 SaffronCity_MapEvents:
 	db 0, 0 ; filler
 
