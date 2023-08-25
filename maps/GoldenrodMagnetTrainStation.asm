@@ -104,14 +104,15 @@ GoldenrodMagnetTrainStationPlayerLeaveTrainAndEnterStationMovement:
 	step_end
 
 GoldenrodMagnetTrainStationOfficerTheTrainHasntComeInText:
-	text "The train hasn't"
-	line "come in…"
+	text "MAGNEMITE keep"
+	line "getting stuck to"
+	cont "the track…"
 
-	para "I know! I'll carry"
-	line "the passengers on"
-	cont "my back!"
-
-	para "That won't work."
+	para "The STATION's"
+	line "grand opening has"
+	
+	para "been delayed"
+	line "indefinitely."
 	done
 
 GoldenrodMagnetTrainStationOfficerAreYouComingAboardText:
