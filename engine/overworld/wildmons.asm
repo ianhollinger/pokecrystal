@@ -898,6 +898,11 @@ RandomPhoneMon:
 	ld b, 0
 	add hl, bc
 	add hl, bc
+	add hl, bc
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	ld [wTrainerGroupBank], a
+	inc hl
 	ld a, BANK(TrainerGroups)
 	call GetFarWord
 
@@ -905,7 +910,7 @@ RandomPhoneMon:
 	dec e
 	jr z, .skipped
 .skip
-	ld a, BANK(Trainers)
+	ld a, [wTrainerGroupBank]
 	call GetFarByte
 	inc hl
 	cp -1
@@ -914,13 +919,13 @@ RandomPhoneMon:
 .skipped
 
 .skip_name
-	ld a, BANK(Trainers)
+	ld a, [wTrainerGroupBank]
 	call GetFarByte
 	inc hl
 	cp "@"
 	jr nz, .skip_name
 
-	ld a, BANK(Trainers)
+	ld a, [wTrainerGroupBank]
 	call GetFarByte
 	inc hl
 ; b = trainer type
@@ -934,6 +939,13 @@ RandomPhoneMon:
 	inc c
 	inc c
 .no_dvs
+; TRAINERTYPE_STAT_EXP uses NUM_EXP_STATS * 2 (10) more bytes
+	bit TRAINERTYPE_STAT_EXP_F, b
+	jr z, .no_stat_exp
+	ld a, NUM_EXP_STATS * 2
+	add c
+	ld c, a
+.no_stat_exp
 ; TRAINERTYPE_ITEM uses 1 more byte
 	bit TRAINERTYPE_ITEM_F, b
 	jr z, .no_item
@@ -955,7 +967,7 @@ RandomPhoneMon:
 .count_mon
 	inc e
 	add hl, bc
-	ld a, BANK(Trainers)
+	ld a, [wTrainerGroupBank]
 	call GetFarByte
 	cp -1
 	jr nz, .count_mon
@@ -976,7 +988,7 @@ RandomPhoneMon:
 .got_mon
 
 	inc hl ; species
-	ld a, BANK(Trainers)
+	ld a, [wTrainerGroupBank]
 	call GetFarByte
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
