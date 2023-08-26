@@ -4609,20 +4609,6 @@ SageGroup:
 		dw $3FFF, $3FFF, $3FFF, $3FFF, $3FFF
 	db -1 ; end
 
-	; SAGE (6)
-	db "PING@", TRAINERTYPE_STAT_EXP
-	db 19, GASTLY
-		dw $30A3, $30A3, $30A3, $30A3, $30A3
-	db 19, GASTLY
-		dw $30A3, $30A3, $30A3, $30A3, $30A3
-	db 19, GASTLY
-		dw $30A3, $30A3, $30A3, $30A3, $30A3
-	db 19, GASTLY
-		dw $30A3, $30A3, $30A3, $30A3, $30A3
-	db 19, GASTLY
-		dw $30A3, $30A3, $30A3, $30A3, $30A3
-	db -1 ; end
-
 	; SAGE (7)
 	db "EDMOND@", TRAINERTYPE_STAT_EXP
 	db  3, BELLSPROUT
@@ -4674,6 +4660,20 @@ SageGroup:
 		dw $63D6, $63D6, $63D6, $63D6, $63D6
 	db 39, VAPOREON
 		dw $63D6, $63D6, $63D6, $63D6, $63D6
+	db -1 ; end
+
+	; SAGE (6)
+	db "PING@", TRAINERTYPE_STAT_EXP
+	db 19, GASTLY
+		dw $30A3, $30A3, $30A3, $30A3, $30A3
+	db 19, GASTLY
+		dw $30A3, $30A3, $30A3, $30A3, $30A3
+	db 19, GASTLY
+		dw $30A3, $30A3, $30A3, $30A3, $30A3
+	db 19, GASTLY
+		dw $30A3, $30A3, $30A3, $30A3, $30A3
+	db 19, GASTLY
+		dw $30A3, $30A3, $30A3, $30A3, $30A3
 	db -1 ; end
 
 MediumGroup:
