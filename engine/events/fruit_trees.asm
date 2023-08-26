@@ -29,28 +29,24 @@ FruitTreeScript::
 	writetext ObtainedThreeFruitText
 	sjump .continue
 .try_two
-; if you somehow approach the limit of number of a single berry
-; and 3-5 will not fit in the bag but 2 will, it prints the "bag is full" text to let you know
-; but still gives you the 2 berry too
-; if 2 still wont fit, try 1
 	readmem wCurFruit
 	giveitem ITEM_FROM_MEM, $2
 	iffalse .try_one
 	promptbutton
-	writetext FruitPackIsFullText
+;	writetext FruitPackIsFullText
 	promptbutton
 	writetext ObtainedTwoFruitText
 	sjump .continue
 .try_one
 ; if you somehow approach the limit of number of a single berry
-; and 3-5 will not fit in the bag but 1 will, it prints the "bag is full" text to let you know
+; and 2-3 will not fit in the bag but 1 will, it prints the "bag is full" text to let you know
 ; but still gives you the 1 berry too
 ; if not even one berry will fit, print "bag is full text" and do not print ObtainedFruitText 
 	readmem wCurFruit
 	giveitem ITEM_FROM_MEM
 	iffalse .packisfull
 	promptbutton
-	writetext FruitPackIsFullText
+;	writetext FruitPackIsFullText
 	promptbutton
 	writetext ObtainedFruitText
 .continue
