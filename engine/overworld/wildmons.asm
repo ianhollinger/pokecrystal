@@ -330,7 +330,6 @@ ChooseWildEncounter:
 	call ValidateTempWildMonSpecies
 	jr c, .nowildbattle
 
-	ld a, b
 	cp UNOWN
 	jr nz, .done
 
