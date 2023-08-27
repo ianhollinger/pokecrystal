@@ -2657,7 +2657,6 @@ TruncateHL_BC:
 	or b
 	jr nz, .loop
 
-.done
 	ld b, l
 	ret
 
