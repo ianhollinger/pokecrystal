@@ -504,7 +504,7 @@ CheckEnemyTurn:
 	call StdBattleTextbox
 
 	call HitSelfInConfusion
-	call ConfusionDamageCalc
+	call BattleCommand_DamageCalc
 	call BattleCommand_LowerSub
 
 	xor a
@@ -607,7 +607,7 @@ HitConfusion:
 	ld [wCriticalHit], a
 
 	call HitSelfInConfusion
-	call ConfusionDamageCalc
+	call BattleCommand_DamageCalc
 	call BattleCommand_LowerSub
 
 	xor a
@@ -1395,16 +1395,16 @@ BattleCheckTypeMatchup:
 	ld hl, wEnemyMonType1
 	ldh a, [hBattleTurn]
 	and a
-	jr z, .get_type
+	jr z, CheckTypeMatchup
 	ld hl, wBattleMonType1
-.get_type
-	ld a, BATTLE_VARS_MOVE_TYPE
-	call GetBattleVar ; preserves hl, de, and bc
 	; fallthrough
 CheckTypeMatchup:
+; BUG: AI makes a false assumption about CheckTypeMatchup (see docs/bugs_and_glitches.md)
 	push hl
 	push de
 	push bc
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar
 	and TYPE_MASK
 	ld d, a
 	ld b, [hl]
@@ -1858,11 +1858,8 @@ BattleCommand_EffectChance:
 	jr z, .got_move_chance
 	ld hl, wEnemyMoveStruct + MOVE_CHANCE
 .got_move_chance
-	ld a, [hl]
-	sub 100 percent
-	; If chance was 100%, RNG won't be called (carry not set)
-	; Thus chance will be subtracted from 0, guaranteeing a carry
-	call c, BattleRandom
+; BUG: Moves with a 100% secondary effect chance will not trigger it in 1/256 uses (see docs/bugs_and_glitches.md)
+	call BattleRandom
 	cp [hl]
 	pop hl
 	ret c
@@ -2083,13 +2080,12 @@ BattleCommand_FailureText:
 	inc hl
 	ld a, [hl]
 
+; BUG: Beat Up may fail to raise Substitute (see docs/bugs_and_glitches.md)
 	cp EFFECT_MULTI_HIT
 	jr z, .multihit
 	cp EFFECT_DOUBLE_HIT
 	jr z, .multihit
 	cp EFFECT_POISON_MULTI_HIT
-	jr z, .multihit
-	cp EFFECT_BEAT_UP
 	jr z, .multihit
 	jp EndMoveEffect
 
@@ -2506,24 +2502,21 @@ DittoMetalPowder:
 	pop bc
 	ret nz
 
-	ld h, b
-	ld l, c
-	srl b
-	rr c
-	add hl, bc
-	ld b, h
-	ld c, l
-
-	ld a, HIGH(MAX_STAT_VALUE)
-	cp b
-	jr c, .cap
-	ret nz
-	ld a, LOW(MAX_STAT_VALUE)
-	cp c
+; BUG: Metal Powder can increase damage taken with boosted (Special) Defense (see docs/bugs_and_glitches.md)
+	ld a, c
+	srl a
+	add c
+	ld c, a
 	ret nc
 
-.cap
-	ld bc, MAX_STAT_VALUE
+	srl b
+	ld a, b
+	and a
+	jr nz, .done
+	inc b
+.done
+	scf
+	rr c
 	ret
 
 BattleCommand_DamageStats:
@@ -2606,14 +2599,11 @@ PlayerAttackDamage:
 	call ThickClubBoost
 
 .done
-	push hl
-	call DittoMetalPowder
-	pop hl
-
 	call TruncateHL_BC
 
 	ld a, [wBattleMonLevel]
 	ld e, a
+	call DittoMetalPowder
 
 	ld a, 1
 	and a
@@ -2650,6 +2640,10 @@ TruncateHL_BC:
 	inc l
 
 .finish
+; BUG: Reflect and Light Screen can make (Special) Defense wrap around above 1024 (see docs/bugs_and_glitches.md)
+	ld a, [wLinkMode]
+	cp LINK_COLOSSEUM
+	jr z, .done
 ; If we go back to the loop point,
 ; it's the same as doing this exact
 ; same check twice.
@@ -2657,6 +2651,7 @@ TruncateHL_BC:
 	or b
 	jr nz, .loop
 
+.done
 	ld b, l
 	ret
 
@@ -2772,19 +2767,9 @@ SpeciesItemBoost:
 	ret nz
 
 ; Double the stat
+; BUG: Thick Club and Light Ball can make (Special) Attack wrap around above 1024 (see docs/bugs_and_glitches.md)
 	sla l
 	rl h
-
-	ld a, HIGH(MAX_STAT_VALUE)
-	cp h
-	jr c, .cap
-	ret nz
-	ld a, LOW(MAX_STAT_VALUE)
-	cp l
-	ret nc
-
-.cap
-	ld hl, MAX_STAT_VALUE
 	ret
 
 EnemyAttackDamage:
@@ -2856,14 +2841,11 @@ EnemyAttackDamage:
 	call ThickClubBoost
 
 .done
-	push hl
-	call DittoMetalPowder
-	pop hl
-
 	call TruncateHL_BC
 
 	ld a, [wEnemyMonLevel]
 	ld e, a
+	call DittoMetalPowder
 
 	ld a, 1
 	and a
@@ -2912,25 +2894,25 @@ HitSelfInConfusion:
 	ld d, 40
 	pop af
 	ld e, a
-	ld a, TRUE
-	ld [wIsConfusionDamage], a
 	ret
 
 BattleCommand_DamageCalc:
 ; Return a damage value for move power d, player level e, enemy defense c and player attack b.
+; BUG: Confusion damage is affected by type-boosting items and Explosion/Self-Destruct doubling (see docs/bugs_and_glitches.md)
+
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	and TYPE_MASK
 
 ; Selfdestruct and Explosion halve defense.
-;	cp EFFECT_SELFDESTRUCT
-;	jr nz, .dont_selfdestruct
-;
-;	srl c
-;	jr nz, .dont_selfdestruct
-;	inc c
-;
-;.dont_selfdestruct
+	cp EFFECT_SELFDESTRUCT
+	jr nz, .dont_selfdestruct
+
+	srl c
+	jr nz, .dont_selfdestruct
+	inc c
+
+.dont_selfdestruct
 
 ; Variable-hit moves and Conversion can have a power of 0.
 	cp EFFECT_MULTI_HIT
@@ -2945,11 +2927,6 @@ BattleCommand_DamageCalc:
 	ret z
 
 .skip_zero_damage_check
-	xor a ; Not confusion damage
-	ld [wIsConfusionDamage], a
-	; fallthrough
-
-ConfusionDamageCalc:
 ; Minimum defense value is 1.
 	ld a, c
 	and a
@@ -3004,12 +2981,6 @@ ConfusionDamageCalc:
 	call Divide
 
 ; Item boosts
-
-; Item boosts don't apply to confusion damage
-	ld a, [wIsConfusionDamage]
-	and a
-	jr nz, .DoneItem
-
 	call GetUserItem
 
 	ld a, b
@@ -5206,10 +5177,12 @@ BattleCommand_EndLoop:
 	jr .double_hit
 
 .only_one_beatup
+; BUG: Beat Up works incorrectly with only one Pokémon in the party (see docs/bugs_and_glitches.md)
 	ld a, BATTLE_VARS_SUBSTATUS3
 	call GetBattleVarAddr
 	res SUBSTATUS_IN_LOOP, [hl]
-	ret
+	call BattleCommand_BeatUpFailText
+	jp EndMoveEffect
 
 .not_triple_kick
 	call BattleRandom
@@ -6468,12 +6441,7 @@ INCLUDE "engine/battle/move_effects/future_sight.asm"
 INCLUDE "engine/battle/move_effects/thunder.asm"
 
 CheckHiddenOpponent:
-	ld a, BATTLE_VARS_SUBSTATUS5_OPP
-	call GetBattleVar
-	cpl
-	and 1 << SUBSTATUS_LOCK_ON
-	ret z
-	
+; BUG: Lock-On and Mind Reader don't always bypass Fly and Dig (see docs/bugs_and_glitches.md)
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP
 	call GetBattleVar
 	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
