@@ -433,7 +433,7 @@ wBattleScriptBufferAddress:: dw
 
 wTurnEnded:: db
 
-wIsConfusionDamage:: db
+	ds 1
 
 wPlayerStats::
 wPlayerAttack::  dw
