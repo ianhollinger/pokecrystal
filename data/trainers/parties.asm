@@ -5214,7 +5214,7 @@ PokefanMGroup:
 
 	; POKEFANM (11)
 	db "DEREK@", TRAINERTYPE_NORMAL
-	db 36, PIKACH
+	db 36, PIKACHU
 	db -1 ; end
 
 	; POKEFANM (12)
