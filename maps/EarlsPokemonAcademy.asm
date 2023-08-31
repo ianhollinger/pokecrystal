@@ -251,8 +251,10 @@ EarlsPokemonAcademyGameboyKid2Text:
 
 EarlsPokemonAcademyYoungster2Text:
 	text "A #MON holding"
-	line "a BERRY will heal"
-	cont "itself in battle."
+	line "an ORAN BERRY"
+
+	para "will heal itself"
+	line "in battle."
 
 	para "Many other items"
 	line "can be held by"
