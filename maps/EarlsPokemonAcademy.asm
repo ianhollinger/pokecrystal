@@ -282,10 +282,7 @@ AcademyPoisonText:
 	cont "loses HP."
 
 	para "Poison lingers"
-	line "after the battle,"
-
-	para "and HP is lost as"
-	line "you walk."
+	line "after a battle."
 
 	para "To cure it, use an"
 	line "ANTIDOTE."
@@ -298,7 +295,7 @@ AcademyParalysisText:
 
 	para "It remains after"
 	line "battle, so use"
-	cont "a PARLYZ HEAL."
+	cont "a PARALYZEHEAL."
 	done
 
 AcademySleepText:
