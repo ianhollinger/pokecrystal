@@ -700,8 +700,8 @@ SpellTagDesc:
 	next "type moves. (HOLD)@"
 
 RageCandyBarDesc:
-	db   "Restores #MON"
-	next "HP by 20.@"
+	db   "Eliminates all"
+	next "status problems.@"
 
 GSBallDesc:
 	db   "A BALL of Gold"
