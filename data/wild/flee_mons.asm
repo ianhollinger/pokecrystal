@@ -25,7 +25,6 @@ SometimesFleeMons:
 	db CROBAT
 	db AERODACTYL
 	db JOLTEON
-	db ELECTRODE
 	db KADABRA
 	db PIDGEOT
 	db -1
