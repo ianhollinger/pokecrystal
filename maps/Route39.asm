@@ -246,7 +246,7 @@ PokefanfRuthAfterBattleText:
 	text "Do you know about"
 	line "baby #MON?"
 
-	para "I bet they're just"
+	para "They're just"
 	line "adorable!"
 	done
 
