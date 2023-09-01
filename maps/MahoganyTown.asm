@@ -1,4 +1,4 @@
-DEF MAHOGANYTOWN_RAGECANDYBAR_PRICE EQU 300
+DEF MAHOGANYTOWN_RAGECANDYBAR_PRICE EQU 1000
 
 	object_const_def
 	const MAHOGANYTOWN_POKEFAN_M
@@ -154,7 +154,7 @@ RageCandyBarMerchantTryOneText:
 
 	para "Right now, it can"
 	line "be yours for just"
-	cont "¥300! Want one?"
+	cont "¥1000! Want one?"
 	done
 
 RageCandyBarMerchantSavorItText:
@@ -223,10 +223,10 @@ MahoganyTownLassText:
 	done
 
 MahoganyTownSignText:
-	text "MAHOGANY TOWN"
+	text "Welcome to"
+	line "MAHOGANY TOWN"
 
-	para "Welcome to the"
-	line "Home of the Ninja"
+	para "Home of the Ninja"
 	done
 
 MahoganyTownRagecandybarSignText:
