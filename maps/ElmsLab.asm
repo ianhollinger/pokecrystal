@@ -1109,7 +1109,7 @@ ElmGiveExpShareText1:
 
 ElmGiveExpShareText2:
 	text "That's an"
-	line "EXP. SHARE."
+	line "EXP.SHARE."
 
 	para "If you turn it on,"
 	line "experience gained"
