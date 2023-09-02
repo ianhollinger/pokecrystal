@@ -340,7 +340,7 @@ MrPokemonText_GimmeTheScale:
 	line "care to trade it?"
 
 	para "I can offer this"
-	line "BALL I got"
+	line "BALL that I got"
 	cont "from PROF.OAK."
 	done
 
@@ -353,14 +353,17 @@ MrPokemonText_Everstone:
 	cont "means."
 
 	para "I meant to lend"
-	line "it to KURT, but"
+	line "it to KURT, the"
 	
-	para "I never had"
-	line "the time."
+	para "# BALL expert,"
+	line "but I never had"
+	cont "the time…"
 
 	para "Perhaps he would"
 	line "be able to"
 	cont "open it."
+
+	para ""
 	done
 
 MrPokemonText_Disappointed:
