@@ -10,6 +10,6 @@ HealingHPAmounts:
 	dbw MOOMOO_MILK,  100
 	dbw BERRY,         10
 	dbw GOLD_BERRY,    30
-	dbw ENERGYPOWDER,  50
+	dbw ENERGYPOWDER,  60
 	dbw ENERGY_ROOT,  120
 	dbw BERRY_JUICE,   20
