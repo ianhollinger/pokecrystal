@@ -4459,10 +4459,10 @@ PicnickerGroup:
 
 	; PICNICKER (13)
 	db "HEIDI@", TRAINERTYPE_STAT_EXP
-	db 32, SKIPLOOM
-		dw $51EB, $51EB, $51EB, $51EB, $51EB
-	db 32, SKIPLOOM
-		dw $51EB, $51EB, $51EB, $51EB, $51EB
+	db 47, SKIPLOOM
+		dw $7851, $7851, $7851, $7851, $7851
+	db 47, SKIPLOOM
+		dw $7851, $7851, $7851, $7851, $7851
 	db -1 ; end
 
 	; PICNICKER (14)
