@@ -259,8 +259,8 @@ MrPsychicsHouseSignText:
 
 SaffronCityMagnetTrainStationSignText:
 	text "JOHTO-KANTO MAGNET"
-	line "TRAIN LINE SAFFRON"
-	cont "STATION"
+	line "TRAIN LINE"
+	cont "SAFFRON STATION"
 	done
 	
 SaffronCity_MapEvents:
