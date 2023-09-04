@@ -171,7 +171,7 @@ ItemNames::
 	li "SUN STONE"
 	li "POLKADOT BOW"
 	li "TERU-SAMA"
-	li "UP-GRADE"
+	li "UPGRADE"
 	li "ORAN BERRY"
 	li "SITRUS BERRY"
 	li "SQUIRTBOTTLE"
