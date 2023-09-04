@@ -2715,6 +2715,7 @@ HoppipEvosAttacks:
 
 SkiploomEvosAttacks:
 	db EVOLVE_LEVEL, 27, JUMPLUFF
+	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 11, TAIL_WHIP 
 	db 14, POISONPOWDER
