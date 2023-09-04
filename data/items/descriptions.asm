@@ -916,8 +916,8 @@ TeruSama22Desc:
 	db   "?@"
 
 UpGradeDesc:
-	db   "A mysterious box"
-	next "made by SILPH CO.@"
+	db   "A software update"
+	next "for PORYGON.@"
 
 BerryDesc:
 	db   "A self-restore"
