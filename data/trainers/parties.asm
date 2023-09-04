@@ -617,6 +617,7 @@ LtSurgeGroup:
 		dw $8F5B, $8F5B, $8F5B, $8F5B, $8F5B
 		db SCOPE_LENS
 		db THUNDERBOLT, ICE_PUNCH, FIRE_PUNCH, CROSS_CHOP
+	db -1 ; end
 
 ScientistGroup:
 	; SCIENTIST (1)
