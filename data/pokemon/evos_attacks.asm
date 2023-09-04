@@ -3032,6 +3032,7 @@ SnubbullEvosAttacks:
 	db 0 ; no more level-up moves
 
 GranbullEvosAttacks:
+	db 0 ; no more evolutions
 	db 1, CHARM
 	db 13, BITE
 	db 17, LICK 
@@ -3223,25 +3224,26 @@ RemoraidEvosAttacks:
 	db EVOLVE_LEVEL, 25, OCTILLERY
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
-	db 8, LOCK_ON
-	db 16, PSYBEAM
+	db 6, LOCK_ON
+	db 11, PSYBEAM
 	db 16, AURORA_BEAM
-	db 16, BUBBLEBEAM
-	db 24, FOCUS_ENERGY
-	db 32, ICE_BEAM
-	db 40, HYDRO_PUMP
-	db 48, HYPER_BEAM
+	db 21, BUBBLEBEAM
+	db 26, FOCUS_ENERGY
+	db 31, ICE_BEAM
+	db 36, HYDRO_PUMP
+	db 41, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 OctilleryEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, BUBBLEBEAM
-	db 24, FOCUS_ENERGY
+	db 1, AURORA_BEAM
+	db 21, BUBBLEBEAM
 	db 24, OCTAZOOKA
 	db 25, WRAP
-	db 35, ICE_BEAM
-	db 46, HYDRO_PUMP
-	db 57, HYPER_BEAM
+	db 29, FOCUS_ENERGY
+	db 37, ICE_BEAM
+	db 45, HYDRO_PUMP
+	db 53, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 DelibirdEvosAttacks:
