@@ -1281,7 +1281,7 @@ LassGroup:
 	; LASS (11)
 	db "ELLEN@", TRAINERTYPE_NORMAL
 	db 45, WIGGLYTUFF
-	db 49, GRANBULL
+	db 48, GRANBULL
 	db -1 ; end
 
 	; LASS (12)
