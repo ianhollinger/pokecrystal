@@ -1279,9 +1279,11 @@ LassGroup:
 	db -1 ; end
 
 	; LASS (11)
-	db "ELLEN@", TRAINERTYPE_NORMAL
+	db "ELLEN@", TRAINERTYPE_STAT_EXP
 	db 45, WIGGLYTUFF
-	db 49, WIGGLYTUFF
+		dw $7332, $7332, $7332, $7332, $7332	
+	db 49, GRANBULL
+		dw $7D70, $7D70, $7D70, $7D70, $7D70
 	db -1 ; end
 
 	; LASS (12)
