@@ -9,7 +9,7 @@ TinTower8F_MapScripts:
 	def_callbacks
 
 TinTower8FNugget:
-	itemball NUGGET
+	itemball SILVERPOWDER
 
 TinTower8FMaxElixer:
 	itemball MAX_ELIXER
