@@ -1299,13 +1299,13 @@ ResetClock:
 ;		shift 2
 ;	endr
 ; ENDM
-	; frame 0 y, x; frame 1 y, x
-	trail_coords 11, 10,  0,  0
-	trail_coords 11, 13, 11, 11
-	trail_coords 11, 13, 11, 15
-	trail_coords 11, 17, 11, 15
-	trail_coords  0,  0, 11, 15
-	trail_coords  0,  0, 11, 11
+; frame 0 y, x; frame 1 y, x
+;	trail_coords 11, 10,  0,  0
+;	trail_coords 11, 13, 11, 11
+;	trail_coords 11, 13, 11, 15
+;	trail_coords 11, 17, 11, 15
+;	trail_coords  0,  0, 11, 15
+;	trail_coords  0,  0, 11, 11
 
 Copyright:
 	call ClearTilemap
