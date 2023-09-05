@@ -178,7 +178,7 @@ Route39FruitTree:
 	fruittree FRUITTREE_ROUTE_39
 
 Route39HiddenNugget:
-	hiddenitem X_SP_DEF, EVENT_ROUTE_39_HIDDEN_NUGGET
+	hiddenitem POKE_DOLL, EVENT_ROUTE_39_HIDDEN_NUGGET
 
 Route39MiltankText:
 	text "MILTANK: Mooo!"
