@@ -2198,12 +2198,12 @@ wFacingDirection:: db
 wWalkingX:: db
 wWalkingY:: db
 wWalkingTile:: db
-	ds 6
+;	ds 6
 wPlayerTurningDirection:: db
 
 NEXTU
 ; std script buffer
-	ds 1
+;	ds 1
 wJumpStdScriptBuffer:: ds 3
 
 NEXTU
@@ -2215,12 +2215,12 @@ wAvailableCallers:: ds CONTACT_LIST_SIZE
 
 NEXTU
 ; phone caller contact
-	ds 1
+;	ds 1
 wCallerContact:: ds PHONE_CONTACT_SIZE
 
 NEXTU
 ; backup menu data
-	ds 7
+;	ds 7
 wMenuCursorPositionBackup:: db
 wMenuScrollPositionBackup:: db
 
