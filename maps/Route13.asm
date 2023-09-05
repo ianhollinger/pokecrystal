@@ -169,9 +169,11 @@ HikerKennyAfterBattleText:
 Route13TrainerTipsText:
 	text "TRAINER TIPS"
 
-	para "Look! Right there,"
-	line "at the left side"
-	cont "of the post."
+	para "Trained #MON"
+	line "will be stronger"
+
+	para "than wild #MON"
+	line "of the same level."
 	done
 
 Route13SignText:
