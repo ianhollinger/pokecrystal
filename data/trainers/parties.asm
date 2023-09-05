@@ -4622,10 +4622,10 @@ CamperGroup:
 
 	; CAMPER (5)
 	db "BARRY@", TRAINERTYPE_STAT_EXP
-	db 36, URSARING
-		dw $5C28, $5C28, $5C28, $5C28, $5C28
-	db 36, DONPHAN
-		dw $5C28, $5C28, $5C28, $5C28, $5C28
+	db 51, URSARING
+		dw $828E, $828E, $828E, $828E, $828E
+	db 51, DONPHAN
+		dw $828E, $828E, $828E, $828E, $828E
 	db -1 ; end
 
 	; CAMPER (6)
