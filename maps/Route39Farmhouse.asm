@@ -21,8 +21,8 @@ PokefanM_DairyFarmer:
 	end
 
 FarmerMScript_SellMilk:
-	checkitem MOOMOO_MILK
-	iftrue FarmerMScript_Milking
+;	checkitem MOOMOO_MILK
+;	iftrue FarmerMScript_Milking
 	writetext FarmerMText_BuyMilk
 	special PlaceMoneyTopRight
 	yesorno
