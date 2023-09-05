@@ -1298,7 +1298,7 @@ ResetClock:
 ;		dbpixel \1, \2, _dx, 0
 ;		shift 2
 ;	endr
-ENDM
+; ENDM
 	; frame 0 y, x; frame 1 y, x
 	trail_coords 11, 10,  0,  0
 	trail_coords 11, 13, 11, 11
