@@ -244,7 +244,7 @@ Pack:
 	ret
 
 	.InitMedicinePocket:
-		ld a, Medicine_POCKET
+		ld a, MEDICINE_POCKET
 		ld [wCurPocket], a
 		call ClearPocketList
 		call DrawPocketName
@@ -1245,7 +1245,7 @@ TutorialPack:
 	dba UpdateItemDescription
 
 .Medicine:
-	ld a, BERRY_POCKET
+	ld a, MEDICINE_POCKET
 	ld hl, .MedicineMenuHeader
 	jr .DisplayPocket
 
