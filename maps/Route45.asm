@@ -288,7 +288,7 @@ Route45FruitTree:
 	fruittree FRUITTREE_ROUTE_45
 
 Route45Nugget:
-	itemball NUGGET
+	itemball POKE_DOLL
 
 Route45Revive:
 	itemball REVIVE
