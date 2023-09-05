@@ -691,31 +691,31 @@ NamingScreen_AdvanceCursor_CheckEndOfString:
 	scf
 	ret
 
-AddDakutenToCharacter: ; unreferenced
-	ld a, [wNamingScreenCurNameLength]
-	and a
-	ret z
-	push hl
-	ld hl, wNamingScreenCurNameLength
-	dec [hl]
-	call NamingScreen_GetTextCursorPosition
-	ld c, [hl]
-	pop hl
+; AddDakutenToCharacter: ; unreferenced
+;	ld a, [wNamingScreenCurNameLength]
+;	and a
+;	ret z
+;	push hl
+;	ld hl, wNamingScreenCurNameLength
+;	dec [hl]
+;	call NamingScreen_GetTextCursorPosition
+;	ld c, [hl]
+;	pop hl
 
-.loop
-	ld a, [hli]
-	cp -1
-	jr z, NamingScreen_AdvanceCursor_CheckEndOfString
-	cp c
-	jr z, .done
-	inc hl
-	jr .loop
+; .loop
+;	ld a, [hli]
+;	cp -1
+;	jr z, NamingScreen_AdvanceCursor_CheckEndOfString
+;	cp c
+;	jr z, .done
+;	inc hl
+;	jr .loop
 
-.done
-	ld a, [hl]
-	jr NamingScreen_LoadNextCharacter
+; .done
+;	ld a, [hl]
+;	jr NamingScreen_LoadNextCharacter
 
-INCLUDE "data/text/unused_dakutens.asm"
+; INCLUDE "data/text/unused_dakutens.asm"
 
 NamingScreen_DeleteCharacter:
 	ld hl, wNamingScreenCurNameLength
@@ -1334,38 +1334,38 @@ MailComposition_TryAddLastCharacter:
 	ld a, [wNamingScreenLastCharacter]
 	jp MailComposition_TryAddCharacter
 
-.add_dakuten ; unreferenced
-	ld a, [wNamingScreenCurNameLength]
-	and a
-	ret z
-	cp $11
-	jr nz, .one_back
-	push hl
-	ld hl, wNamingScreenCurNameLength
-	dec [hl]
-	dec [hl]
-	jr .continue
+; .add_dakuten ; unreferenced
+;	ld a, [wNamingScreenCurNameLength]
+;	and a
+;	ret z
+;	cp $11
+;	jr nz, .one_back
+;	push hl
+;	ld hl, wNamingScreenCurNameLength
+;	dec [hl]
+;	dec [hl]
+;	jr .continue
 
-.one_back
-	push hl
-	ld hl, wNamingScreenCurNameLength
-	dec [hl]
-
-.continue
-	call NamingScreen_GetTextCursorPosition
-	ld c, [hl]
-	pop hl
-.loop
-	ld a, [hli]
-	cp -1 ; end?
-	jp z, NamingScreen_AdvanceCursor_CheckEndOfString
-	cp c
-	jr z, .done
-	inc hl
-	jr .loop
-
-.done
-	ld a, [hl]
-	jp NamingScreen_LoadNextCharacter
-
+; .one_back
+;	push hl
+;	ld hl, wNamingScreenCurNameLength
+;	dec [hl]
+;
+;.continue
+;	call NamingScreen_GetTextCursorPosition
+;	ld c, [hl]
+;	pop hl
+; .loop
+;	ld a, [hli]
+;	cp -1 ; end?
+;	jp z, NamingScreen_AdvanceCursor_CheckEndOfString
+;	cp c
+;	jr z, .done
+;	inc hl
+;	jr .loop
+;
+; .done
+;	ld a, [hl]
+;	jp NamingScreen_LoadNextCharacter
+;
 INCLUDE "data/text/mail_input_chars.asm"
