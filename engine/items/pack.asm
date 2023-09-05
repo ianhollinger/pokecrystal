@@ -531,33 +531,33 @@ TossMenu:
 .finish
 	ret
 
-ResetPocketCursorPositions: ; unreferenced
-	ld a, [wCurPocket]
-	and a ; ITEM_POCKET
-	jr z, .items
-	dec a ; BALL_POCKET
-	jr z, .balls
-	dec a ; KEY_ITEM_POCKET
-	jr z, .key
-	ret
+; ResetPocketCursorPositions: ; unreferenced
+; 	ld a, [wCurPocket]
+; 	and a ; ITEM_POCKET
+; 	jr z, .items
+; 	dec a ; BALL_POCKET
+; 	jr z, .balls
+; 	dec a ; KEY_ITEM_POCKET
+; 	jr z, .key
+;	ret
 
-.balls
-	xor a
-	ld [wBallsPocketCursor], a
-	ld [wBallsPocketScrollPosition], a
-	ret
-
-.items
-	xor a
-	ld [wItemsPocketCursor], a
-	ld [wItemsPocketScrollPosition], a
-	ret
-
-.key
-	xor a
-	ld [wKeyItemsPocketCursor], a
-	ld [wKeyItemsPocketScrollPosition], a
-	ret
+; .balls
+;	xor a
+;	ld [wBallsPocketCursor], a
+;	ld [wBallsPocketScrollPosition], a
+;	ret
+;
+;.items
+;	xor a
+;	ld [wItemsPocketCursor], a
+;	ld [wItemsPocketScrollPosition], a
+;	ret
+;
+;.key
+;	xor a
+;	ld [wKeyItemsPocketCursor], a
+;	ld [wKeyItemsPocketScrollPosition], a
+;	ret
 
 RegisterItem:
 	farcall CheckSelectableItem
@@ -1527,12 +1527,12 @@ Pack_GetItemName:
 	call CopyName1
 	ret
 
-Pack_ClearTilemap: ; unreferenced
-	hlcoord 0, 0
-	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	ld a, " "
-	call ByteFill
-	ret
+; Pack_ClearTilemap: ; unreferenced
+;	hlcoord 0, 0
+;	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
+;	ld a, " "
+;	call ByteFill
+;	ret
 
 ClearPocketList:
 	hlcoord 5, 2
@@ -1668,9 +1668,9 @@ PC_Mart_BallsPocketMenuHeader:
 	dba PlaceMenuItemQuantity
 	dba UpdateItemDescription
 
-PackNoItemText: ; unreferenced
-	text_far _PackNoItemText
-	text_end
+; PackNoItemText: ; unreferenced
+; 	text_far _PackNoItemText
+;	text_end
 
 AskThrowAwayText:
 	text_far _AskThrowAwayText
@@ -1708,9 +1708,9 @@ PackEmptyText:
 	text_far _PackEmptyText
 	text_end
 
-YouCantUseItInABattleText: ; unreferenced
-	text_far _YouCantUseItInABattleText
-	text_end
+; YouCantUseItInABattleText: ; unreferenced
+;	text_far _YouCantUseItInABattleText
+;	text_end
 
 PackMenuGFX:
 INCBIN "gfx/pack/pack_menu.2bpp"
