@@ -29,7 +29,7 @@ DarkCaveBlackthornEntranceRevive:
 	itemball REVIVE
 
 DarkCaveBlackthornEntranceTMSnore:
-	itemball SILVERPOWDER
+	itemball X_SP_DEF
 
 DarkCaveBlackthornEntrancePharmacistText1:
 	text "Whoa! You startled"
