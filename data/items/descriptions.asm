@@ -454,7 +454,7 @@ XAttackDesc:
 
 XSpDefDesc:
 	db   "Raises SPECIAL"
-	next "DEFENSE. (1 BTL)@
+	next "DEFENSE. (1 BTL)@"
 
 XDefendDesc:
 	db   "Raises DEFENSE."
