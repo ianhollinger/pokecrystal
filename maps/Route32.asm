@@ -164,7 +164,7 @@ TrainerFisherJustin:
 	end
 
 TrainerFisherRalph1:
-	trainer FISHER, RALPH1, EVENT_BEAT_FISHER_RALPH, FisherRalph1SeenText, FisherRalph1BeatenText, 0, .Script
+	trainer FISHER, RALPH1, EVENT_BEAT_FISHER_RALPH, Route32UnusedFisher2SeenText, Route32UnusedFisher2BeatenText, 0, .Script
 
 .Script:
 	loadvar VAR_CALLERID, PHONE_FISHER_RALPH
