@@ -298,7 +298,7 @@ MainMenu_PrintCurrentTimeAndDay:
 	and a
 	ret z
 ;	call CheckRTCStatus
-;	and $80
+	and $80
 ;	jp nz, .PrintTimeNotSet
 	call UpdateTime
 	call GetWeekday
