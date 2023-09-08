@@ -297,9 +297,9 @@ MainMenu_PrintCurrentTimeAndDay:
 	ld a, [wSaveFileExists]
 	and a
 	ret z
-	call CheckRTCStatus
-	and $80
-	jp nz, .PrintTimeNotSet
+;	call CheckRTCStatus
+;	and $80
+;	jp nz, .PrintTimeNotSet
 	call UpdateTime
 	call GetWeekday
 	ld b, a
