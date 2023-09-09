@@ -97,15 +97,15 @@ Route32Pokecenter1FCooltrainerFText:
 	done
 
 Route32Pokecenter1FGentlemanText:
-	para "There used to be"
+	text "There used to be"
 	line "a town here."
 
 	para "But years ago, the"
 	line "local industry"
 
 	para "collapsed and the"
-	line "people moved to"
-	cont "the cities."
+	line "workers moved"
+	cont "away."
 
 	para "This #MON"
 	line "CENTER is all"
