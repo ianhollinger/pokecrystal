@@ -708,16 +708,16 @@ YoungsterGroup:
 
 	; YOUNGSTER (3)
 	db "ALBERT@", TRAINERTYPE_STAT_EXP
-	db  7, RATTATA
+	db  5, RATTATA
+		dw $3333, $3333, $3333, $3333, $3333
+	db  7, ZUBAT
 		dw $2492, $2492, $2492, $2492, $2492
-	db  9, ZUBAT
-		dw $1C71, $1C71, $1C71, $1C71, $1C71
 	db -1 ; end
 
 	; YOUNGSTER (4)
 	db "GORDON@", TRAINERTYPE_STAT_EXP
-	db 11, WOOPER
-		dw $1C28, $1C28, $1C28, $1C28, $1C28
+	db  9, WOOPER
+		dw $1C71, $1C71, $1C71, $1C71, $1C71
 	db -1 ; end
 
 	; YOUNGSTER (5)
@@ -2681,8 +2681,8 @@ FisherGroup:
 
 	; FISHER (2)
 	db "RALPH@", TRAINERTYPE_STAT_EXP
-	db 11, GOLDEEN
-		dw $1C28, $1C28, $1C28, $1C28, $1C28
+	db  9, GOLDEEN
+		dw $1C71, $1C71, $1C71, $1C71, $1C71
 	db -1 ; end
 
 	; FISHER (3)
@@ -2703,10 +2703,10 @@ FisherGroup:
 
 	; FISHER (5)
 	db "HENRY@", TRAINERTYPE_STAT_EXP
-	db  9, POLIWAG
-		dw $1C71, $1C71, $1C71, $1C71, $1C71
-	db  9, POLIWAG
-		dw $1C71, $1C71, $1C71, $1C71, $1C71
+	db  7, POLIWAG
+		dw $2492, $2492, $2492, $2492, $2492
+	db  7, POLIWAG
+		dw $2492, $2492, $2492, $2492, $2492
 	db -1 ; end
 
 	; FISHER (6)
@@ -4368,8 +4368,8 @@ PsychicGroup:
 PicnickerGroup:
 	; PICNICKER (1)
 	db "LIZ@", TRAINERTYPE_STAT_EXP
-	db 10, NIDORAN_F
-		dw $1999, $1999, $1999, $1999, $1999
+	db  8, NIDORAN_F
+		dw $1FFE, $1FFE, $1FFE, $1FFE, $1FFE
 	db -1 ; end
 
 	; PICNICKER (2)
@@ -4592,8 +4592,8 @@ PicnickerGroup:
 CamperGroup:
 	; CAMPER (1)
 	db "ROLAND@", TRAINERTYPE_STAT_EXP
-	db 10, NIDORAN_M
-		dw $1999, $1999, $1999, $1999, $1999
+	db  8, NIDORAN_M
+		dw $1FFE, $1FFE, $1FFE, $1FFE, $1FFE
 	db -1 ; end
 
 	; CAMPER (2)
