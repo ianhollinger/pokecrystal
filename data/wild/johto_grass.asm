@@ -565,29 +565,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons ILEX_FOREST
 	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
 	; morn
-	db 7, CATERPIE
-	db 7, WEEDLE
+	db 8, CATERPIE
+	db 8, WEEDLE
 	db 9, METAPOD
 	db 9, KAKUNA
-	db 9, PIDGEY
-	db 8, PARAS
-	db 8, PICHU
+	db 10, PIDGEY
+	db 9, PARAS
+	db 9, PICHU
 	; day
-	db 7, CATERPIE
-	db 7, WEEDLE
+	db 8, CATERPIE
+	db 8, WEEDLE
 	db 9, METAPOD
 	db 9, KAKUNA
-	db 9, PIDGEY
-	db 8, PARAS
-	db 8, PICHU
+	db 10, PIDGEY
+	db 9, PARAS
+	db 9, PICHU
 	; nite
-	db 7, ODDISH
-	db 7, VENONAT
+	db 8, ODDISH
+	db 8, VENONAT
 	db 9, ODDISH
 	db 9, PSYDUCK
-	db 9, HOOTHOOT
-	db 8, PARAS
-	db 8, PARAS
+	db 10, HOOTHOOT
+	db 9, PARAS
+	db 9, PARAS
 	end_grass_wildmons
 
 	def_grass_wildmons MOUNT_MORTAR_1F_OUTSIDE
@@ -1321,29 +1321,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_32
 	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
 	; morn
-	db 5, EKANS
-	db 6, RATTATA
-	db 8, BELLSPROUT
-	db 7, HOPPIP
-	db 8, PIDGEY
-	db 8, HOPPIP
-	db 8, MAREEP
+	db 3, EKANS
+	db 4, RATTATA
+	db 6, BELLSPROUT
+	db 5, HOPPIP
+	db 6, PIDGEY
+	db 6, HOPPIP
+	db 6, MAREEP
 	; day
-	db 5, EKANS
-	db 6, RATTATA
-	db 8, BELLSPROUT
-	db 7, HOPPIP
-	db 8, PIDGEY
-	db 8, HOPPIP
-	db 8, MAREEP
+	db 3, EKANS
+	db 4, RATTATA
+	db 6, BELLSPROUT
+	db 5, HOPPIP
+	db 6, PIDGEY
+	db 6, HOPPIP
+	db 6, MAREEP
 	; nite
-	db 5, WOOPER
-	db 6, RATTATA
-	db 8, BELLSPROUT
-	db 7, ZUBAT
-	db 8, HOOTHOOT
-	db 8, GASTLY
-	db 8, GASTLY
+	db 3, WOOPER
+	db 4, RATTATA
+	db 6, BELLSPROUT
+	db 5, ZUBAT
+	db 6, HOOTHOOT
+	db 6, GASTLY
+	db 6, GASTLY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_33
