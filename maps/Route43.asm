@@ -165,6 +165,7 @@ TrainerPicnickerTiffany:
 
 .Script:
 	loadvar VAR_CALLERID, PHONE_PICNICKER_TIFFANY
+	endifjustbattled
 	opentext
 	checkflag ENGINE_TIFFANY_READY_FOR_REMATCH
 	iftrue .WantsBattle
