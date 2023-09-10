@@ -3,7 +3,7 @@ TrainerClassDVs:
 	table_width 2, TrainerClassDVs
 	;  atk,def,spd,spc
 	dn 11,  8, 10,  8 ; FALKNER
-	dn  9,  7,  7,  7 ; WHITNEY
+	dn  9, 10,  7, 10 ; WHITNEY
 	dn  9, 10, 10,  8 ; BUGSY
 	dn  9,  8, 10, 10 ; MORTY
 	dn  9,  8,  8, 12 ; PRYCE
