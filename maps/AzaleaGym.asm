@@ -278,7 +278,7 @@ BugCatcherJoshSeenText:
 	cont "you're mighty!"
 
 	para "But my grown-up"
-	line "#MON are pretty"
+	line "#MON is pretty"
 	cont "tough too!"
 	done
 
@@ -288,7 +288,7 @@ BugCatcherJoshBeatenText:
 
 BugCatcherJoshAfterBattleText:
 	text "I guess I should"
-	line "teach them better"
+	line "teach it better"
 	cont "moves…"
 	done
 
