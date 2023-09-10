@@ -369,29 +369,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons RUINS_OF_ALPH_OUTSIDE
 	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
 	; morn
-	db 24, NATU
-	db 26, NATU
-	db 22, NATU
-	db 28, NATU
-	db 24, SMEARGLE
-	db 26, SMEARGLE
-	db 26, SMEARGLE
+	db 23, NATU
+	db 25, NATU
+	db 21, NATU
+	db 27, NATU
+	db 23, SMEARGLE
+	db 25, SMEARGLE
+	db 25, SMEARGLE
 	; day
-	db 24, NATU
-	db 26, NATU
-	db 22, NATU
-	db 28, NATU
-	db 24, SMEARGLE
-	db 26, SMEARGLE
-	db 26, SMEARGLE
+	db 23, NATU
+	db 25, NATU
+	db 21, NATU
+	db 27, NATU
+	db 23, SMEARGLE
+	db 25, SMEARGLE
+	db 25, SMEARGLE
 	; nite
-	db 24, NATU
-	db 26, NATU
-	db 22, NATU
-	db 28, NATU
-	db 26, WOOPER
-	db 26, QUAGSIRE
-	db 26, QUAGSIRE
+	db 23, NATU
+	db 25, NATU
+	db 21, NATU
+	db 27, NATU
+	db 25, WOOPER
+	db 25, QUAGSIRE
+	db 25, QUAGSIRE
 	end_grass_wildmons
 
 	def_grass_wildmons RUINS_OF_ALPH_INNER_CHAMBER
@@ -481,29 +481,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons UNION_CAVE_B2F
 	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
 	; morn
-	db 26, ZUBAT
-	db 26, GOLBAT
-	db 26, ZUBAT
-	db 25, RATICATE
-	db 24, GEODUDE
-	db 27, ONIX
-	db 27, ONIX
+	db 25, ZUBAT
+	db 25, GOLBAT
+	db 25, ZUBAT
+	db 24, RATICATE
+	db 23, GEODUDE
+	db 26, ONIX
+	db 26, ONIX
 	; day
-	db 26, ZUBAT
-	db 26, GOLBAT
-	db 26, ZUBAT
-	db 25, RATICATE
-	db 24, GEODUDE
-	db 27, ONIX
-	db 27, ONIX
+	db 25, ZUBAT
+	db 25, GOLBAT
+	db 25, ZUBAT
+	db 24, RATICATE
+	db 23, GEODUDE
+	db 26, ONIX
+	db 26, ONIX
 	; nite
-	db 26, ZUBAT
-	db 26, GOLBAT
-	db 26, QUAGSIRE
-	db 25, RATICATE
-	db 24, GEODUDE
-	db 27, ONIX
-	db 27, ONIX
+	db 25, ZUBAT
+	db 25, GOLBAT
+	db 25, QUAGSIRE
+	db 24, RATICATE
+	db 23, GEODUDE
+	db 26, ONIX
+	db 26, ONIX
 	end_grass_wildmons
 
 	def_grass_wildmons SLOWPOKE_WELL_B1F
@@ -537,29 +537,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons SLOWPOKE_WELL_B2F
 	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
 	; morn
-	db 25, ZUBAT
-	db 27, ZUBAT
-	db 23, ZUBAT
-	db 25, SLOWPOKE
-	db 27, GOLBAT
-	db 27, SLOWPOKE
-	db 27, SLOWPOKE
+	db 24, ZUBAT
+	db 26, ZUBAT
+	db 22, ZUBAT
+	db 24, SLOWPOKE
+	db 26, GOLBAT
+	db 26, SLOWPOKE
+	db 26, SLOWPOKE
 	; day
-	db 25, ZUBAT
-	db 27, ZUBAT
-	db 23, ZUBAT
-	db 25, SLOWPOKE
-	db 27, GOLBAT
-	db 27, SLOWPOKE
-	db 27, SLOWPOKE
+	db 24, ZUBAT
+	db 26, ZUBAT
+	db 22, ZUBAT
+	db 24, SLOWPOKE
+	db 26, GOLBAT
+	db 26, SLOWPOKE
+	db 26, SLOWPOKE
 	; nite
-	db 25, ZUBAT
-	db 27, ZUBAT
-	db 23, ZUBAT
-	db 25, SLOWPOKE
-	db 27, GOLBAT
-	db 27, SLOWPOKE
-	db 27, SLOWPOKE
+	db 24, ZUBAT
+	db 26, ZUBAT
+	db 22, ZUBAT
+	db 24, SLOWPOKE
+	db 26, GOLBAT
+	db 26, SLOWPOKE
+	db 26, SLOWPOKE
 	end_grass_wildmons
 
 	def_grass_wildmons ILEX_FOREST
@@ -1212,25 +1212,25 @@ JohtoGrassWildMons:
 	db 27, GEODUDE
 	db 27, ZUBAT
 	db 29, GRAVELER
-	db 30, URSARING
 	db 24, TEDDIURSA
 	db 27, GOLBAT
+	db 30, URSARING
 	db 27, DUNSPARCE
 	; day
 	db 27, GEODUDE
 	db 27, ZUBAT
 	db 29, GRAVELER
-	db 30, URSARING
-	db 30, URSARING
 	db 27, GOLBAT
+	db 30, URSARING
+	db 30, URSARING
 	db 27, DUNSPARCE
 	; nite
 	db 27, GEODUDE
 	db 27, ZUBAT
 	db 29, GRAVELER
+	db 27, GOLBAT
 	db 24, WOBBUFFET
 	db 29, WOBBUFFET
-	db 27, GOLBAT
 	db 27, DUNSPARCE
 	end_grass_wildmons
 
