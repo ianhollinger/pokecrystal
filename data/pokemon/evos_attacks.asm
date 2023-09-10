@@ -1296,8 +1296,8 @@ CloysterEvosAttacks:
 	db 1, BARRIER
 	db 1, PROTECT
 	db 1, CLAMP
-	db 12, SPIKE_CANNON
-	db 24, SPIKES  
+	db 16, SPIKE_CANNON
+	db 26, SPIKES  
 	db 36, AURORA_BEAM
 	db 0 ; no more level-up moves
 
