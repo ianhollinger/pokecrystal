@@ -87,7 +87,7 @@ JohtoWaterWildMons:
 	db 25, TENTACOOL
 	db 20, HORSEA
 	db 25, SEEL
-	db 30, TENTACRUEL
+	db 25, TENTACOOL
 	end_water_wildmons
 
 	def_water_wildmons WHIRL_ISLAND_B2F
@@ -95,15 +95,15 @@ JohtoWaterWildMons:
 	db 25, TENTACOOL
 	db 20, HORSEA
 	db 25, SEEL
-	db 30, TENTACRUEL
+	db 25, TENTACOOL
 	end_water_wildmons
 
 	def_water_wildmons WHIRL_ISLAND_LUGIA_CHAMBER
 	db 3 percent ; encounter rate
-	db 25, HORSEA
-	db 30, SEEL
-	db 30, TENTACRUEL
-	db 32, SEADRA
+	db 25, TENTACOOL
+	db 20, HORSEA
+	db 25, SEEL
+	db 25, TENTACOOL
 	end_water_wildmons
 
 	def_water_wildmons SILVER_CAVE_ROOM_2
@@ -220,10 +220,10 @@ JohtoWaterWildMons:
 
 	def_water_wildmons ROUTE_44
 	db 3 percent ; encounter rate
-	db 25, POLIWAG
+	db 20, POLIWAG
 	db 20, POLIWAG
 	db 25, POLIWHIRL
-	db 30, POLIWHIRL
+	db 25, POLIWHIRL
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_45
