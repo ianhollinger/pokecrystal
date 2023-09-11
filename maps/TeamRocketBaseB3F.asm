@@ -129,7 +129,7 @@ SlowpokeTailGrunt:
 	trainer GRUNTF, GRUNTF_5, EVENT_BEAT_ROCKET_GRUNTF_5, GruntF5SeenText, GruntF5BeatenText, 0, GruntF5Script
 
 GruntF5Script:
-;	endifjustbattled
+	endifjustbattled
 	opentext
 	writetext GruntF5AfterBattleText
 	waitbutton
@@ -141,7 +141,7 @@ RaticateTailGrunt:
 	trainer GRUNTM, GRUNTM_28, EVENT_BEAT_ROCKET_GRUNTM_28, GruntM28SeenText, GruntM28BeatenText, 0, GruntM28Script
 
 GruntM28Script:
-;	endifjustbattled
+	endifjustbattled
 	opentext
 	writetext GruntM28AfterBattleText
 	waitbutton
