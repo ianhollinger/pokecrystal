@@ -1481,7 +1481,7 @@ JohtoGrassWildMons:
 	db 17, STANTLER
 	db 18, HOOTHOOT
 	db 19, HOUNDOUR
-	db 18, NOCTOWL
+	db 18, HOOTHOOT
 	db 18, LEDYBA
 	db 18, LEDYBA
 	end_grass_wildmons
