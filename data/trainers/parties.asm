@@ -728,9 +728,9 @@ YoungsterGroup:
 	db 12, SANDSHREW
 		dw $25EC, $25EC, $25EC, $25EC, $25EC
 	db 10, SPEAROW
-		dw dw $1F9A, $1F9A, $1F9A, $1F9A, $1F9A
+		dw $1F9A, $1F9A, $1F9A, $1F9A, $1F9A
 	db 10, SPEAROW
-		dw dw $1F9A, $1F9A, $1F9A, $1F9A, $1F9A
+		dw $1F9A, $1F9A, $1F9A, $1F9A, $1F9A
 	db -1 ; end
 
 	; YOUNGSTER (6)
