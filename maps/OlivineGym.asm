@@ -137,7 +137,13 @@ Text_ReceivedMineralBadge:
 	done
 
 Jasmine_BadgeSpeech:
-	text "…Um… Please take"
+	text "MINERALBADGE makes"
+	line "all #MON up to"
+
+	para "L50 obey, even"
+	line "traded ones."
+
+	para "…Um… Please take"
 	line "this too…"
 	done
 
