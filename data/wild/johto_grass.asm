@@ -649,29 +649,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons MOUNT_MORTAR_2F_INSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 39, GRAVELER
-	db 40, MACHOKE
-	db 39, GEODUDE
-	db 38, RATICATE
-	db 36, MACHOP
-	db 38, GOLBAT
-	db 38, GOLBAT
+	db 40, GRAVELER
+	db 41, MACHOKE
+	db 40, GEODUDE
+	db 39, RATICATE
+	db 37, MACHOP
+	db 39, GOLBAT
+	db 39, GOLBAT
 	; day
-	db 39, GRAVELER
-	db 38, MACHOKE
-	db 39, GEODUDE
-	db 38, RATICATE
-	db 36, MACHOP
-	db 38, GOLBAT
-	db 38, GOLBAT
+	db 40, GRAVELER
+	db 39, MACHOKE
+	db 40, GEODUDE
+	db 39, RATICATE
+	db 37, MACHOP
+	db 39, GOLBAT
+	db 39, GOLBAT
 	; nite
-	db 39, GRAVELER
-	db 39, GEODUDE
-	db 38, RATICATE
-	db 38, GOLBAT
-	db 36, MARILL
-	db 38, GOLBAT
-	db 38, GOLBAT
+	db 40, GRAVELER
+	db 40, GEODUDE
+	db 39, RATICATE
+	db 39, GOLBAT
+	db 37, MARILL
+	db 39, GOLBAT
+	db 39, GOLBAT
 	end_grass_wildmons
 
 	def_grass_wildmons MOUNT_MORTAR_B1F
