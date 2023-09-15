@@ -2689,6 +2689,16 @@ BattleAnim_DreamEater:
 	anim_ret
 
 BattleAnim_LeechLife:
+	anim_2gfx ANIM_GFX_CUT, ANIM_GFX_HIT
+	anim_obj ANIM_OBJ_BITE, 136, 56, $98
+	anim_obj ANIM_OBJ_BITE, 136, 56, $18
+	anim_wait 8
+	anim_sound 0, 1, SFX_BITE
+	anim_obj ANIM_OBJ_HIT_YFIX, 144, 48, $18
+	anim_wait 16
+	anim_sound 0, 1, SFX_BITE
+	anim_obj ANIM_OBJ_HIT_YFIX, 128, 64, $18
+	anim_wait 8
 	anim_1gfx ANIM_GFX_BUBBLE
 	anim_sound 6, 3, SFX_WATER_GUN
 	anim_call BattleAnimSub_Drain
