@@ -57,7 +57,16 @@ TrainerPicnickerErin1:
 	iftrue .LoadFight2
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight1
+	checkevent EVENT_TEAM_ROCKET_DISBANDED
+	iftrue .LoadFight0
 	loadtrainer PICNICKER, ERIN1
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_ERIN_READY_FOR_REMATCH
+	end
+
+.LoadFight0:
+	loadtrainer PICNICKER, ERIN4
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_ERIN_READY_FOR_REMATCH
