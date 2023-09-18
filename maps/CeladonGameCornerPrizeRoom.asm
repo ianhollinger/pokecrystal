@@ -30,6 +30,7 @@ CeladonGameCornerPrizeRoomTMVendor:
 	checkitem COIN_CASE
 	iffalse CeladonPrizeRoom_NoCoinCase
 	writetext CeladonPrizeRoom_AskWhichPrizeText
+	waitbutton
 CeladonPrizeRoom_tmcounterloop:
 	special DisplayCoinCaseBalance
 	loadmenu CeladonPrizeRoom_TMMenuHeader
