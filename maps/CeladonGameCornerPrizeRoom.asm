@@ -143,6 +143,7 @@ CeladonGameCornerPrizeRoomPokemonVendor:
 	iffalse CeladonPrizeRoom_NoCoinCase
 .loop
 	writetext CeladonPrizeRoom_AskWhichPrizeText
+	waitbutton
 	special DisplayCoinCaseBalance
 	loadmenu .MenuHeader
 	verticalmenu
