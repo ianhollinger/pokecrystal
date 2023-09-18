@@ -66,6 +66,7 @@ GoldenrodGameCornerTMVendorScript:
 	checkitem COIN_CASE
 	iffalse GoldenrodGameCornerPrizeVendor_NoCoinCaseScript
 	writetext GoldenrodGameCornerPrizeVendorWhichPrizeText
+	waitbutton
 GoldenrodGameCornerTMVendor_LoopScript:
 	special DisplayCoinCaseBalance
 	loadmenu GoldenrodGameCornerTMVendorMenuHeader
@@ -179,6 +180,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	iffalse GoldenrodGameCornerPrizeVendor_NoCoinCaseScript
 .loop
 	writetext GoldenrodGameCornerPrizeVendorWhichPrizeText
+	waitbutton
 	special DisplayCoinCaseBalance
 	loadmenu .MenuHeader
 	verticalmenu
