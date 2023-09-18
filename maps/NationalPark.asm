@@ -186,6 +186,7 @@ TrainerPokefanfBeverly1:
 
 .Script:
 	loadvar VAR_CALLERID, PHONE_POKEFAN_BEVERLY
+	endifjustbattled
 	opentext
 	checkflag ENGINE_BEVERLY_HAS_NUGGET
 	iftrue .GiveNugget
