@@ -51,9 +51,7 @@ CeladonDeptStore5FGentlemanText:
 CeladonDeptStore5FSailorText:
 	text "I want PP UP, so I"
 	line "can raise the PP"
-
-	para "of moves. But you"
-	line "can't buy it…"
+	cont "of moves."
 	done
 
 CeladonDeptStore5FTeacherText:
