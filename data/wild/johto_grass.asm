@@ -1490,7 +1490,7 @@ JohtoGrassWildMons:
 	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
 	; morn
 	db 19, RATTATA
-	db 19, RATICATE
+	db 20, RATICATE
 	db 19, MAGNEMITE
 	db 19, PIDGEOTTO
 	db 16, TAUROS
@@ -1498,7 +1498,7 @@ JohtoGrassWildMons:
 	db 16, DODUO
 	; day
 	db 19, RATTATA
-	db 19, RATICATE
+	db 20, RATICATE
 	db 19, MAGNEMITE
 	db 19, PIDGEOTTO
 	db 16, TAUROS
@@ -1506,9 +1506,9 @@ JohtoGrassWildMons:
 	db 16, DODUO
 	; nite
 	db 19, MEOWTH
-	db 19, RATICATE
+	db 20, RATICATE
 	db 19, MAGNEMITE
-	db 19, NOCTOWL
+	db 20, NOCTOWL
 	db 19, MEOWTH
 	db 19, MEOWTH
 	db 19, DODUO
@@ -1518,7 +1518,7 @@ JohtoGrassWildMons:
 	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
 	; morn
 	db 19, RATTATA
-	db 19, RATICATE
+	db 20, RATICATE
 	db 19, MAGNEMITE
 	db 19, PIDGEOTTO
 	db 18, MILTANK
@@ -1526,7 +1526,7 @@ JohtoGrassWildMons:
 	db 18, TAUROS
 	; day
 	db 19, RATTATA
-	db 19, RATICATE
+	db 20, RATICATE
 	db 19, MAGNEMITE
 	db 19, PIDGEOTTO
 	db 18, MILTANK
@@ -1534,9 +1534,9 @@ JohtoGrassWildMons:
 	db 18, TAUROS
 	; nite
 	db 19, MEOWTH
-	db 19, RATICATE
+	db 20, RATICATE
 	db 19, MAGNEMITE
-	db 19, NOCTOWL
+	db 20, NOCTOWL
 	db 21, MEOWTH
 	db 21, MEOWTH
 	db 21, MEOWTH
@@ -1563,11 +1563,11 @@ JohtoGrassWildMons:
 	; nite
 	db 17, RATTATA
 	db 18, ZUBAT
-	db 19, RATICATE
-	db 20, GOLBAT
+	db 20, RATICATE
+	db 21, GOLBAT
 	db 19, MARILL
-	db 20, GOLBAT
-	db 20, GOLBAT
+	db 21, GOLBAT
+	db 21, GOLBAT
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_43
@@ -1576,7 +1576,7 @@ JohtoGrassWildMons:
 	db 19, PIDGEOTTO
 	db 20, FARFETCH_D
 	db 20, FURRET
-	db 19, RATICATE
+	db 20, RATICATE
 	db 21, FLAAFFY
 	db 21, GIRAFARIG
 	db 21, ELEKID
@@ -1584,7 +1584,7 @@ JohtoGrassWildMons:
 	db 19, PIDGEOTTO
 	db 20, FARFETCH_D
 	db 20, FURRET
-	db 19, RATICATE
+	db 20, RATICATE
 	db 21, FLAAFFY
 	db 21, GIRAFARIG
 	db 21, ELEKID
