@@ -513,7 +513,7 @@ KantoGrassWildMons:
 	db 41, NIDORINA
 	db 41, NIDORINO
 	db 43, HOPPIP
-	db 45, HOPPIP
+	db 45, PIDGEOT
 	db 45, SKIPLOOM
 	db 43, CHANSEY
 	; day
@@ -521,7 +521,7 @@ KantoGrassWildMons:
 	db 41, NIDORINA
 	db 41, NIDORINO
 	db 43, HOPPIP
-	db 45, HOPPIP
+	db 45, PIDGEOT
 	db 45, SKIPLOOM
 	db 43, CHANSEY
 	; nite
