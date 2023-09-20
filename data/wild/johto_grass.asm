@@ -1153,7 +1153,7 @@ JohtoGrassWildMons:
 	def_grass_wildmons SILVER_CAVE_ITEM_ROOMS
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 58, GOLBAT
+	db 58, PILOSWINE
 	db 56, GOLBAT
 	db 60, GOLBAT
 	db 56, PARASECT
@@ -1161,7 +1161,7 @@ JohtoGrassWildMons:
 	db 60, PARASECT
 	db 62, PARASECT
 	; day
-	db 58, GOLBAT
+	db 58, PILOSWINE
 	db 56, GOLBAT
 	db 60, GOLBAT
 	db 56, PARASECT
