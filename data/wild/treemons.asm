@@ -100,10 +100,9 @@ TreeMonSet_Canyon:
 	db  3, AIPOM,      28
 	db  2, AIPOM,      29
 	db  1, AIPOM,      30
-	db  6, PRIMEAPE,   27
-	db  5, PRIMEAPE,   28
-	db  3, PRIMEAPE,   29
-	db  1, PRIMEAPE,   30
+	db  7, PRIMEAPE,   28
+	db  5, PRIMEAPE,   29
+	db  3, PRIMEAPE,   30
 	db -1
 
 TreeMonSet_Town:
