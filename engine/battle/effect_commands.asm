@@ -5576,7 +5576,6 @@ BattleCommand_TrapTarget:
 	ld a, GHOST ; Don't trap a Ghost-type
 	call CheckIfTargetIsGivenType
 	ret nz
-	jr nz, .failed
 	ld hl, wEnemyWrapCount
 	ld de, wEnemyTrappingMove
 	ldh a, [hBattleTurn]
