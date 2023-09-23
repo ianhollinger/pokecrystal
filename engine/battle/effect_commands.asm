@@ -6206,7 +6206,7 @@ BattleCommand_ArenaTrap:
 
 	ld a, GHOST
 	call CheckIfTargetIsGivenType
-	jr nz, .failed
+	jr z, .failed
 
 ; Otherwise trap the opponent.
 
