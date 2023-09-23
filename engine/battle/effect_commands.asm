@@ -3712,7 +3712,7 @@ BattleCommand_Poison:
 
 	ld a, POISON ; Don't poison a Poison-type
 	call CheckIfTargetIsGivenType
-	ret z
+	jp z, .failed
 	ld a, STEEL ; Don't poison a Steel-type
 	call CheckIfTargetIsGivenType
 	jp z, .failed
