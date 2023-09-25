@@ -4896,9 +4896,10 @@ SageGroup:
 	db -1 ; end
 
 	; SAGE (5)
-	db "JEFFREY@", TRAINERTYPE_STAT_EXP
+	db "JEFFREY@", TRAINERTYPE_STAT_EXP | TRAINERTYPE_MOVES
 	db 25, HAUNTER
 		dw $1862, $1862, $1862, $1862, $1862
+                db CONFUSE_RAY, NIGHT_SHADE, HYPNOSIS, SMOG
 	db -1 ; end
 
 	; SAGE (6)
