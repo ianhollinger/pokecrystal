@@ -2013,10 +2013,10 @@ PokemaniacGroup:
 
 	; POKEMANIAC (2)
 	db "ANDREW@", TRAINERTYPE_STAT_EXP
-	db 27, MAROWAK
-		dw $1C71, $1C71, $1C71, $1C71, $1C71
-	db 27, MAROWAK
-		dw $1C71, $1C71, $1C71, $1C71, $1C71
+	db 26, CUBONE
+		dw $1A60, $1A60, $1A60, $1A60, $1A60
+	db 28, MAROWAK
+		dw $1E97, $1E97, $1E97, $1E97, $1E97
 	db -1 ; end
 
 	; POKEMANIAC (3)
