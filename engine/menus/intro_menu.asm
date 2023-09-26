@@ -350,6 +350,12 @@ Continue:
 	ld c, 20
 	call DelayFrames
 	call ConfirmContinue
+	jr nc, .Check1Pass
+	call CloseWindow
+	jr .FailToLoad
+
+.Check1Pass:
+	call Continue_CheckRTC_RestartClock
 	jr nc, .Check2Pass
 	call CloseWindow
 	jr .FailToLoad
@@ -443,17 +449,17 @@ ConfirmContinue:
 	ret
 
 Continue_CheckRTC_RestartClock:
-;	call CheckRTCStatus
-;	and %10000000 ; Day count exceeded 16383
-;	jr z, .pass
-;	farcall RestartClock
-;	ld a, c
-;	and a
-;	jr z, .pass
-;	scf
-;	ret
-;
-;.pass
+	call CheckRTCStatus
+	and %10000000 ; Day count exceeded 16383
+	jr z, .pass
+	farcall RestartClock
+	ld a, c
+	and a
+	jr z, .pass
+	scf
+	ret
+
+.pass
 	xor a
 	ret
 
@@ -478,14 +484,14 @@ FinishContinueFunction:
 	jr .loop
 
 DisplaySaveInfoOnContinue:
-;	call CheckRTCStatus
-;	and %10000000
-;	jr z, .clock_ok
-;	lb de, 4, 8
-;	call DisplayContinueDataWithRTCError
-;	ret
-;
-;.clock_ok
+	call CheckRTCStatus
+	and %10000000
+	jr z, .clock_ok
+	lb de, 4, 8
+	call DisplayContinueDataWithRTCError
+	ret
+
+.clock_ok
 	lb de, 4, 8
 	call DisplayNormalContinueData
 	ret
