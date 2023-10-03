@@ -230,7 +230,7 @@ TrainerCard_Page3_Joypad:
 	ld [wJumptableIndex], a
 	ret
 
-  .pressed_a
+.pressed_a
 	ld a, TRAINERCARDSTATE_QUIT
 	ld [wJumptableIndex], a
 	ret
