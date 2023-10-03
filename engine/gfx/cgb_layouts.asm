@@ -823,7 +823,7 @@ _CGB_TrainerCardKanto:
 	ret
 
 .BadgePalettes:
-INCLUDE "gfx/trainer_card/johto_badges.pal"
+INCLUDE "gfx/trainer_card/kanto_badges.pal"
 
 _CGB_MoveList:
 	ld de, wBGPals1
