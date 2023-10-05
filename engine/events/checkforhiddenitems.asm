@@ -102,14 +102,14 @@ RockItemEncounter:
 	ret
 	
 .RockItems:
-	db 2, NUGGET       ; 0.781%
+	db 1, NUGGET       ; 0.391%
 	db 2, STAR_PIECE   ; 0.781%
 	db 3, BIG_PEARL    ; 1.172%
-	db 3, KINGS_ROCK   ; 1.172%
-	db 5, THICK_CLUB   ; 1.953%
+	db 4, KINGS_ROCK   ; 1.563%
 	db 5, SOFT_SAND    ; 1.953%
 	db 5, HARD_STONE   ; 1.953%
 	db 5, METAL_COAT   ; 1.953%
+	db 6, THICK_CLUB   ; 2.344%
 	db 8, FIRE_STONE   ; 3.125%
 	db 8, WATER_STONE  ; 3.125%
 	db 8, THUNDERSTONE ; 3.125%
@@ -123,4 +123,4 @@ RockItemEncounter:
 	db 14, SILVER_LEAF ; 5.469%
 	db 16, POKE_BALL   ; 6.250%
 	db 16, BRICK_PIECE ; 6.250%
-	db -1              ; 66.41%
+	db -1              ; 66.80%
