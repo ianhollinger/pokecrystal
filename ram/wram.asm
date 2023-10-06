@@ -2929,7 +2929,7 @@ endr
 
 wCmdQueue:: ds CMDQUEUE_CAPACITY * CMDQUEUE_ENTRY_SIZE
 
-	ds 40
+;	ds 40
 
 wMapObjects::
 wPlayerObject:: map_object wPlayer ; player is map object 0
@@ -3146,7 +3146,7 @@ wKenjiFightCount::   db ; unreferenced
 wParryFightCount::   db
 wErinFightCount::    db
 
-	ds 100
+;	ds 100
 
 wEventFlags:: flag_array NUM_EVENTS
 
@@ -3252,7 +3252,7 @@ wSafariTimeRemaining:: dw
 
 wPhoneList:: ds CONTACT_LIST_SIZE + 1
 
-	ds 22
+;	ds 22
 
 wLuckyNumberShowFlag:: db
 wRepelType:: db
