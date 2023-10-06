@@ -347,6 +347,7 @@ ElmAfterTheftScript:
 	waitbutton
 	closetext
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS
+        setmapscene ROUTE_32, SCENE_ROUTE32_OFFER_SLOWPOKETAIL
 	end
 
 ElmStudyingEggScript:
