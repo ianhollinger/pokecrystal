@@ -60,12 +60,11 @@ GoldenrodDeptStore2FUnusedText2: ; unreferenced
 
 GoldenrodDeptStore2FYoungsterText:
 	text "#GEAR can store"
-	line "up to twenty phone"
+	line "up to thirty phone"
 	cont "numbers."
 
-	para "It's hard to de-"
-	line "cide which numbers"
-	cont "to keep."
+	para "That's more than"
+	line "enough for me!"
 	done
 
 GoldenrodDeptStore2FCooltrainerFText:
