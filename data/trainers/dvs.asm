@@ -7,7 +7,7 @@ TrainerClassDVs:
 	dn  9, 10, 10,  8 ; BUGSY
 	dn  9,  8, 10, 10 ; MORTY
 	dn  9,  8,  8, 12 ; PRYCE
-	dn  9, 12,  6, 10 ; JASMINE
+	dn  9, 11,  6,  8 ; JASMINE (HP Steel)
 	dn 13,  8,  8,  8 ; CHUCK
 	dn  7, 12, 13, 13 ; CLAIR
 	dn 14, 13, 13, 14 ; RIVAL1
@@ -22,7 +22,7 @@ TrainerClassDVs:
 	dn  7,  8, 12,  9 ; MISTY
 	dn  9,  8, 10, 10 ; LT_SURGE
 	dn  7,  8,  9, 10 ; SCIENTIST
-	dn  10, 8, 11, 13 ; ERIKA
+	dn  10, 8, 11, 13 ; ERIKA (HP Fire)
 	dn  9,  6,  6,  6 ; YOUNGSTER
 	dn  9,  8,  8,  8 ; SCHOOLBOY
 	dn  9,  8, 10,  6 ; BIRD_KEEPER
