@@ -638,6 +638,7 @@ PichuEggMoves:
 	db EXTREMESPEED
 	db DOUBLE_KICK
 	db MEGA_KICK
+        db DIZZY_PUNCH
 	db -1 ; end
 
 CleffaEggMoves:
@@ -648,6 +649,7 @@ CleffaEggMoves:
 	db SPLASH
 	db MIMIC
 	db SCARY_FACE
+        db DIZZY_PUNCH
 	db -1 ; end
 
 IgglybuffEggMoves:
@@ -656,6 +658,7 @@ IgglybuffEggMoves:
 	db FAINT_ATTACK
 	db MIMIC
 	db SCARY_FACE
+        db DIZZY_PUNCH
 	db -1 ; end
 
 TogepiEggMoves:
@@ -960,11 +963,13 @@ TyrogueEggMoves:
 	db COUNTER
 	db LEER
 	db LOW_KICK
+        db DIZZY_PUNCH
 	db -1 ; end
 
 SmoochumEggMoves:
 	db MEDITATE
 	db TELEPORT
+        db DIZZY_PUNCH
 	db -1 ; end
 
 ElekidEggMoves:
@@ -974,6 +979,7 @@ ElekidEggMoves:
 	db MEDITATE
 	db CROSS_CHOP
 	db PURSUIT
+        db DIZZY_PUNCH
 	db -1 ; end
 
 MagbyEggMoves:
@@ -987,6 +993,7 @@ MagbyEggMoves:
 	db SCARY_FACE
 	db BELLY_DRUM
 	db POISON_GAS
+        db DIZZY_PUNCH
 	db -1 ; end
 
 MiltankEggMoves:
