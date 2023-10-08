@@ -16,7 +16,7 @@ AzaleaGymBugsyScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_BUGSY
-	iftrue .FightDone
+	iftrue .PostGame
 	writetext BugsyText_INeverLose
 	waitbutton
 	closetext
@@ -32,6 +32,21 @@ AzaleaGymBugsyScript:
 	setflag ENGINE_HIVEBADGE
 	readvar VAR_BADGES
 	scall AzaleaGymActivateRockets
+.PostGame:
+	checkevent EVENT_BEAT_BUGSY2
+	iftrue .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
+.Rematch:
+	writetext BugsyRematchText
+	waitbutton
+	closetext
+	winlosstext BugsyRematchWinLossText, 0
+	loadtrainer BUGSY, BUGSY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BUGSY2
 .FightDone:
 	checkevent EVENT_GOT_TM49_FURY_CUTTER
 	iftrue .GotFuryCutter
@@ -124,6 +139,8 @@ TrainerBugCatcherJosh:
 
 AzaleaGymGuideScript:
 	faceplayer
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .AzaleaGymGuideRematchScript
 	checkevent EVENT_BEAT_BUGSY
 	iftrue .AzaleaGymGuideWinScript
 	opentext
@@ -132,9 +149,25 @@ AzaleaGymGuideScript:
 	closetext
 	end
 
+.AzaleaGymGuideRematchScript:
+	checkevent EVENT_BEAT_BUGSY2
+	iftrue .AzaleaGymGuideRematchWinScript
+	opentext
+	writetext AzaleaGymGuideRematchText
+	waitbutton
+	closetext
+	end
+
 .AzaleaGymGuideWinScript:
 	opentext
 	writetext AzaleaGymGuideWinText
+	waitbutton
+	closetext
+	end
+
+.AzaleaGymGuideRematchWinScript:
+	opentext
+	writetext AzaleaGymGuideRematchWinText
 	waitbutton
 	closetext
 	end
@@ -163,6 +196,18 @@ BugsyText_INeverLose:
 	para "Let me demonstrate"
 	line "what I've learned"
 	cont "from my studies."
+	done
+
+BugsyRematchText:
+	text "Good to see you"
+	line "again! Behold my" 
+	cont "bug research!"
+	done
+
+BugsyRematchWinLossText:
+	text "You must have"
+	line "studied a lot" 
+	cont "about #MON!"
 	done
 
 BugsyText_ResearchIncomplete:
@@ -342,7 +387,7 @@ AzaleaGymGuideText:
 	line "#MON don't like"
 	cont "fire."
 
-	para "Flying-type moves"
+	para "Rock-type moves"
 	line "are super-effec-"
 	cont "tive too."
 	done
@@ -357,6 +402,30 @@ AzaleaGymGuideWinText:
 	para "With people like"
 	line "you, the future of"
 	cont "#MON is bright!"
+	done
+
+AzaleaGymGuideRematchText:
+	text "Yo, CHAMPION!"
+
+	para "BUGSY's not the"
+	line "kid you fought"
+	cont "way back when."
+
+	para "He's grown into"
+	line "a real bug-type"
+	cont "master."
+
+	para "You won't be able"
+	line "to smush his"
+	cont "insects easily."
+	done
+
+AzaleaGymGuideRematchWinText:
+	text "What an excellent"
+	line "display of know-"
+
+	para "ledge between two"
+	line "expert trainers!"
 	done
 
 AzaleaGym_MapEvents:
