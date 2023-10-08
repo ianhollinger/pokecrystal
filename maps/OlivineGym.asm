@@ -11,7 +11,7 @@ OlivineGymJasmineScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_JASMINE
-	iftrue .FightDone
+	iftrue .PostGame
 	writetext Jasmine_SteelTypeIntro
 	waitbutton
 	closetext
@@ -27,9 +27,26 @@ OlivineGymJasmineScript:
 	setflag ENGINE_MINERALBADGE
 	readvar VAR_BADGES
 	scall OlivineGymActivateRockets
+.PostGame:
+	checkevent EVENT_BEAT_JASMINE2
+	iftrue .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
+.Rematch:
+	writetext JasmineRematchText
+	waitbutton
+	closetext
+	winlosstext JasmineRematchWinLossText, 0
+	loadtrainer JASMINE, JASMINE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_JASMINE2
 .FightDone:
 	checkevent EVENT_GOT_TM23_IRON_TAIL
 	iftrue .GotIronTail
+	checkevent EVENT_BEAT_JASMINE2
+	iftrue .SpeechAfterRematch
 	writetext Jasmine_BadgeSpeech
 	promptbutton
 	verbosegiveitem TM_IRON_TAIL
@@ -46,6 +63,9 @@ OlivineGymJasmineScript:
 .NoRoomForIronTail:
 	closetext
 	end
+.SpeechAfterRematch:
+	writetext JasmineRematchDoneText
+	waitbutton
 
 OlivineGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -60,6 +80,8 @@ OlivineGymActivateRockets:
 
 OlivineGymGuideScript:
 	faceplayer
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .OlivineGymGuideRematchScript
 	checkevent EVENT_BEAT_JASMINE
 	iftrue .OlivineGymGuideWinScript
 	checkevent EVENT_JASMINE_RETURNED_TO_GYM
@@ -80,6 +102,22 @@ OlivineGymGuideScript:
 .OlivineGymGuidePreScript:
 	opentext
 	writetext OlivineGymGuidePreText
+	waitbutton
+	closetext
+	end
+
+.OlivineGymGuideRematchScript:
+	opentext
+	checkevent EVENT_BEAT_JASMINE2
+	iftrue .OlivineGymGuideRematchWinScript
+	writetext OlivineGymGuideRematchText
+	waitbutton
+	closetext
+	end
+
+.OlvineGymGuideRematchWinScript:
+	opentext
+	writetext OlivineGymGuideRematchWinText
 	waitbutton
 	closetext
 	end
@@ -117,6 +155,28 @@ Jasmine_SteelTypeIntro:
 	para "…Um… May I begin?"
 	done
 
+JasmineRematchText:
+	text "…Um… Hello,"
+	line "CHAMPION."
+
+	para "I remember when"
+	line "you helped AMPHY"
+	cont "in the LIGHTHOUSE."
+
+	para "You've accom-"
+	line "plished a lot"
+	cont "since then."
+
+	para "You must have"
+	line "encountered many"
+
+	para "steel-type #MON"
+	line "in your journey."
+
+	para "…May I test"
+	line "your knowledge?"
+	done
+
 Jasmine_BetterTrainer:
 	text "…You are a better"
 	line "trainer than me,"
@@ -129,6 +189,15 @@ Jasmine_BetterTrainer:
 
 	para "confer upon you"
 	line "this BADGE."
+	done
+
+JasmineRematchWinLossText:
+	text "your kindness and"
+	line "your #MON's"
+
+	para "strength brought"
+	line "this victory to"
+	cont "you."
 	done
 
 Text_ReceivedMineralBadge:
@@ -164,6 +233,12 @@ Jasmine_GoodLuck:
 	cont "but good luck…"
 	done
 
+JasmineRematchDoneText:
+	text "Um… Keep on 
+	line "doing your best…"
+	cont "with your #MON."
+	done
+
 OlivineGymGuideText:
 	text "JASMINE uses the"
 	line "newly discovered"
@@ -171,6 +246,16 @@ OlivineGymGuideText:
 
 	para "I don't know very"
 	line "much about it."
+
+	para "If it's anything"
+	line "like the rock-"
+
+	para "type, a ground-"
+	line "or fighting-type"
+
+	para "move oughtta break"
+	line "through its"
+	cont "defenses."
 	done
 
 OlivineGymGuideWinText:
@@ -182,6 +267,31 @@ OlivineGymGuideWinText:
 	para "That was a close"
 	line "encounter of an"
 	cont "unknown kind!"
+	done
+
+OlivineGymGuideRematchText:
+	para "You probably know"
+	line "more about the"
+
+	para "steel-type than"
+	line "I ever will."
+
+	para "I believe in you,"
+	line "CHAMPION! Show"
+	cont "JASMINE your"
+	cont "steely resolve!"
+	done
+
+OlivineGymGuideRematchWinText:
+	para "I've been seeing"
+	line "more trainers"
+
+	para "use steel-types"
+	line "lately."
+
+	para "It's almost lost"
+	line "its mysterious"
+	cont "appeal."
 	done
 
 OlivineGymGuidePreText:
