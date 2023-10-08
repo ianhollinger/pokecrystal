@@ -49,7 +49,10 @@ BrunoScript_Battle:
 	waitbutton
 	closetext
 	winlosstext BrunoScript_BrunoBeatenText, 0
-	loadtrainer BRUNO, BRUNO1
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue BrunoScript_PostGame
+	checkevent EVENT_OPENED_MT_SILVER
+	iffalse BrunoScript_Fight
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_BRUNO
@@ -64,6 +67,14 @@ BrunoScript_Battle:
 	setevent EVENT_BRUNOS_ROOM_EXIT_OPEN
 	waitsfx
 	end
+
+BrunoScript_PostGame:
+	loadtrainer Bruno, Bruno2
+	ret
+
+BrunoScript_Fight:
+	loadtrainer Bruno, Bruno1
+	ret
 
 BrunoScript_AfterBattle:
 	writetext BrunoScript_BrunoDefeatText
@@ -128,8 +139,8 @@ BrunosRoom_MapEvents:
 	def_warp_events
 	warp_event  4, 17, KOGAS_ROOM, 3
 	warp_event  5, 17, KOGAS_ROOM, 4
-	warp_event  4,  2, KARENS_ROOM, 1
-	warp_event  5,  2, KARENS_ROOM, 2
+	warp_event  4,  2, BrunoS_ROOM, 1
+	warp_event  5,  2, BrunoS_ROOM, 2
 
 	def_coord_events
 
