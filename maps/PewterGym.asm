@@ -86,14 +86,8 @@ PewterGymGuideScript:
 
 .PewterGymGuideRematchScript:
 	checkevent EVENT_BEAT_BROCK2
-	iftrue .PewterGymGuideRematchWinScript
+	iftrue .PewterGymGuideWinScript
 	writetext PewterGymGuideRematchText
-	waitbutton
-	closetext
-	end
-
-.PewterGymGuideRematchWinScript:
-	writetext PewterGymGuideWinText
 	waitbutton
 	closetext
 	end
