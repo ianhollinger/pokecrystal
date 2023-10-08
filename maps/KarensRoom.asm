@@ -49,7 +49,10 @@ KarenScript_Battle:
 	waitbutton
 	closetext
 	winlosstext KarenScript_KarenBeatenText, 0
-	loadtrainer KAREN, KAREN1
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue KarenScript_PostGame
+	checkevent EVENT_OPENED_MT_SILVER
+	iffalse KarenScript_Fight
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KAREN
@@ -64,6 +67,14 @@ KarenScript_Battle:
 	setevent EVENT_KARENS_ROOM_EXIT_OPEN
 	waitsfx
 	end
+
+KarenScript_PostGame:
+	loadtrainer KAREN, KAREN2
+	ret
+
+KarenScript_Fight:
+	loadtrainer KAREN, KAREN1
+	ret
 
 KarenScript_AfterBattle:
 	writetext KarenScript_KarenDefeatText
