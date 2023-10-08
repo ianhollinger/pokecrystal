@@ -16,7 +16,8 @@ Red:
 	winlosstext RedWinLossText, RedWinLossText
 	checkevent EVENT_BEAT_RED
 	iftrue .Rematch 
-	loadtrainer RED, RED1
+	checkevent EVENT_BEAT_RED
+	iffalse .Battle 
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -28,6 +29,7 @@ Red:
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	disappear SILVERCAVEROOM3_RED
+	setevent EVENT_BEAT_RED
 	pause 15
 	special FadeInQuickly
 	pause 30
@@ -37,24 +39,10 @@ Red:
 	end
 .Rematch:
 	loadtrainer RED, RED2
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	special FadeOutMusic
-	opentext
-	writetext RedLeavesText
-	waitbutton
-	closetext
-	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
-	disappear SILVERCAVEROOM3_RED
-	pause 15
-	special FadeInQuickly
-	pause 30
-	special HealParty
-	refreshscreen
-	credits
-	end
+	ret
+.Battle:
+	loadtrainer RED, RED1
+	ret
 
 RedSeenText:
 	text "<……>"
