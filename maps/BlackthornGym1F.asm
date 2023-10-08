@@ -62,6 +62,11 @@ BlackthornGymClairScript:
 	end
 
 .AlreadyGotBadge:
+	checkevent EVENT_BEAT_CLAIR2
+	iftrue .RematchDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
 	checkevent EVENT_GOT_TM24_DRAGONBREATH
 	iftrue .GotTM24
 	writetext BlackthornGymClairText_YouKeptMeWaiting
@@ -77,6 +82,20 @@ BlackthornGymClairScript:
 	writetext BlackthornGymClairText_DescribeTM24
 	promptbutton
 	sjump .GotTM24
+
+.Rematch:
+	writetext ClairRematchText
+	waitbutton
+	closetext
+	winlosstext ClairRematchWinLossText, 0
+	loadtrainer CLAIR, CLAIR2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_CLAIR2
+
+.RematchDone:
+	writetext ClairRematchDoneText
+	waitbutton
 
 .BagFull:
 	writetext BlackthornGymClairText_BagFull
@@ -126,6 +145,8 @@ TrainerCooltrainerfLola:
 BlackthornGymGuideScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .BlackthornGymGuideRematchScript
 	checkevent EVENT_BEAT_CLAIR
 	iftrue .BlackthornGymGuideWinScript
 	writetext BlackthornGymGuideText
@@ -135,6 +156,20 @@ BlackthornGymGuideScript:
 
 .BlackthornGymGuideWinScript:
 	writetext BlackthornGymGuideWinText
+	waitbutton
+	closetext
+	end
+
+.BlackthornGymGuideRematchScript:
+	checkevent EVENT_BEAT_CLAIR2
+	iftrue .BlackthornGymGuideRematchWinScript
+	writetext BlackthornGymGuideRematchText
+	waitbutton
+	closetext
+	end
+
+.BlackthornGymGuideRematchWinScript:
+	writetext BlackthornGymGuideRematchWinText
 	waitbutton
 	closetext
 	end
@@ -283,6 +318,42 @@ BlackthornGymClairText_League:
 	line "thing you've got."
 	done
 
+ClairRematchText:
+	text "Hello, <PLAYER>."
+
+	para "I've heard you've"
+	line "beaten my cousin."
+
+	para "If I beat you now,"
+	line "that means I'm"
+
+	para "more powerful" 
+	cont "than Lance."
+
+	para "I've been medi-"
+	line "tating in DRAGON'S"
+
+	para "DEN to hone my"
+	line "skills."
+
+	para "This time, you"
+	line "won't defeat me!"
+	done
+
+ClairRematchWinLossText:
+	text "It can't be!"
+	done
+
+ClairRematchDoneText:
+	text "This isn't over."
+
+	para "One day, I will"
+	line "beat you."
+
+	para "And then I'll"
+	line "become CHAMPION."
+	done
+
 CooltrainermPaulSeenText:
 	text "Your first battle"
 	line "against dragons?"
@@ -382,6 +453,34 @@ BlackthornGymGuideWinText:
 	para "You're on the way"
 	line "to becoming the"
 	cont "#MON CHAMPION!"
+	done
+
+BlackthornGymGuideRematchText:
+	text "Yo! CHAMP!"
+
+	para "CLAIR'S been in"
+	line "a rut since you"
+	cont "beat her."
+
+	para "Maybe if you"
+	line "show her it"
+
+	para "wasn't a fluke,"
+	line "she'll mellow"
+	cont "out a little!"
+	done
+
+BlackthornGymGuideRematchWinText:
+	text "Wow! What a"
+	line "battle!"
+
+	para "I hope that"
+	line "will put an"
+
+	para "end to her quest"
+	line "for vengeance!"
+
+	para "Probably not…"	
 	done
 
 BlackthornGym1F_MapEvents:
