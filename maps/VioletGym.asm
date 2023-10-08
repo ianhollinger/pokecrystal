@@ -118,6 +118,12 @@ VioletGymGuideScript:
 	closetext
 	end
 
+.VioletGymGuideWinScript:
+	writetext VioletGymGuideWinText
+	waitbutton
+	closetext
+	end
+
 .VioletGymGuideRematchScript:
 	checkevent EVENT_BEAT_FALKNER2
 	iftrue .VioletGymGuideRematchWinScript
