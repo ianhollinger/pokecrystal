@@ -12,7 +12,7 @@ PewterGymBrockScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_BOULDERBADGE
-	iftrue .FightDone
+	iftrue .PostGame
 	writetext BrockIntroText
 	waitbutton
 	closetext
@@ -31,6 +31,23 @@ PewterGymBrockScript:
 	waitbutton
 	closetext
 	end
+
+.PostGame:
+	checkevent EVENT_BEAT_BROCK2
+	iftrue .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
+
+.Rematch:
+	writetext BrockRematchText
+	waitbutton
+	closetext
+	winlosstext BrockRematchWinLossText, 0
+	loadtrainer BROCK, BROCK2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BROCK2
 
 .FightDone:
 	writetext BrockFightDoneText
@@ -52,6 +69,8 @@ TrainerCamperJerry:
 PewterGymGuideScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .PewterGymGuideRematchScript
 	checkevent EVENT_BEAT_BROCK
 	iftrue .PewterGymGuideWinScript
 	writetext PewterGymGuideText
@@ -60,6 +79,20 @@ PewterGymGuideScript:
 	end
 
 .PewterGymGuideWinScript:
+	writetext PewterGymGuideWinText
+	waitbutton
+	closetext
+	end
+
+.PewterGymGuideRematchScript:
+	checkevent EVENT_BEAT_BROCK2
+	iftrue .PewterGymGuideRematchWinScript
+	writetext PewterGymGuideRematchText
+	waitbutton
+	closetext
+	end
+
+.PewterGymGuideRematchWinScript:
 	writetext PewterGymGuideWinText
 	waitbutton
 	closetext
@@ -144,6 +177,36 @@ BrockFightDoneText:
 	cont "er too."
 	done
 
+BrockRematchText:
+	text "…You sure look"
+	line "different from"
+	cont "when we first met!"
+
+	para "Please allow me"
+	line "the privilege of"
+
+	para "facing you in"
+	line "battle once again!"
+
+	para "Allow me to show"
+	line "you the true rock-"
+	cont "hard strength of"
+	cont "my #MON!"
+	done
+
+BrockRematchWinLossText:
+	text "I knew you were"
+	line "strong, but this…"
+	done
+
+BrockFightDoneText:
+	text "Awesome…"
+	line "That was a really"
+	cont "great battle."
+
+	para "I compliment you"
+	line "on your victory!"
+
 CamperJerrySeenText:
 	text "The trainers of"
 	line "this GYM use rock-"
@@ -176,14 +239,12 @@ CamperJerryAfterBattleText:
 	done
 
 PewterGymGuideText:
-	text "Yo! CHAMP in"
-	line "making! You're"
+	text "Yo! CHAMP!"
+	line "You're really"
 
-	para "really rocking."
-	line "Are you battling"
-
-	para "the GYM LEADERS of"
-	line "KANTO?"
+	para "rocking. Are you"
+	line "battling the GYM"
+	cont "LEADERS of KANTO?"
 
 	para "They're strong and"
 	line "dedicated people,"
@@ -192,12 +253,25 @@ PewterGymGuideText:
 	line "GYM LEADERS."
 	done
 
-PewterGymGuideWinText:
-	text "Yo! CHAMP in"
-	line "making! That GYM"
+PewterGymGuideRematchText:
+	text "Yo! CHAMP!"
+	line "You're really"
 
-	para "didn't give you"
-	line "much trouble."
+	para "rocking. You've"
+	line "earned all 16"
+	cont "BADGES?"
+
+	para "BROCK has no"
+	line "chance of beating"
+	cont "your grit!"
+	done
+
+PewterGymGuideWinText:
+	text "Yo! CHAMP!"
+	line "That GYM didn't"
+
+	para "give you much"
+	line "trouble."
 
 	para "The way you took"
 	line "charge was really"
