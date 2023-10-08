@@ -18,7 +18,7 @@ CianwoodGymChuckScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_CHUCK
-	iftrue .FightDone
+	iftrue .PostGame
 	writetext ChuckIntroText1
 	waitbutton
 	closetext
@@ -49,6 +49,21 @@ CianwoodGymChuckScript:
 	setflag ENGINE_STORMBADGE
 	readvar VAR_BADGES
 	scall CianwoodGymActivateRockets
+.PostGame:
+	checkevent EVENT_BEAT_CHUCK2
+	iftrue .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
+.Rematch:
+	writetext ChuckRematchText
+	waitbutton
+	closetext
+	winlosstext ChuckRematchWinLossText, 0
+	loadtrainer CHUCK, CHUCK2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_CHUCK2
 .FightDone:
 	checkevent EVENT_GOT_TM01_DYNAMICPUNCH
 	iftrue .AlreadyGotTM
@@ -182,6 +197,34 @@ ChuckIntroText3:
 
 	para "Come on. We shall"
 	line "do battle!"
+	done
+
+ChuckRematchText:
+	text "<PLAYER>!"
+
+	para "I've been training"
+	line "24/7 since we"
+	cont "last met!"
+
+	para "My wife even put"
+	line "me on a weight-"
+	cont "loss regimen!"
+
+	para "Now I'm 100%"
+	line "muscle!"
+
+	para "You can't defeat"
+	line "me! I'm at my"
+	cont "peak performance!"
+
+	para "Put 'em up,"
+	line "CHAMPION!"
+	end
+
+ChuckRematchWinLossText:
+	text "WAHAHAH!"
+	line "A battle with you"
+	cont "is never boring!"
 	done
 
 ChuckLossText:
