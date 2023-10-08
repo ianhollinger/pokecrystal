@@ -57,7 +57,10 @@ LancesRoomLanceScript:
 	closetext
 	winlosstext LanceBattleWinText, 0
 	setlasttalked LANCESROOM_LANCE
-	loadtrainer CHAMPION, LANCE
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue LanceScript_PostGame
+	checkevent EVENT_OPENED_MT_SILVER
+	iffalse LanceScript_Fight
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -100,7 +103,7 @@ LancesRoomLanceScript:
 	writetext LancesRoomMaryInterviewText
 	waitbutton
 	closetext
-	applymovement LANCESROOM_LANCE, LancesRoomMovementData_LancePositionsSelfToGuidePlayerAway
+	applymovement LANCESROOM_LANCE, LANCEsRoomMovementData_LancePositionsSelfToGuidePlayerAway
 	turnobject PLAYER, UP
 	opentext
 	writetext LancesRoomNoisyText
@@ -109,7 +112,7 @@ LancesRoomLanceScript:
 	follow LANCESROOM_LANCE, PLAYER
 	turnobject LANCESROOM_MARY, UP
 	turnobject LANCESROOM_OAK, UP
-	applymovement LANCESROOM_LANCE, LancesRoomMovementData_LanceLeadsPlayerToHallOfFame
+	applymovement LANCESROOM_LANCE, LANCEsRoomMovementData_LanceLeadsPlayerToHallOfFame
 	stopfollow
 	playsound SFX_EXIT_BUILDING
 	disappear LANCESROOM_LANCE
@@ -127,6 +130,14 @@ LancesRoomLanceScript:
 	pause 15
 	warpfacing UP, HALL_OF_FAME, 4, 13
 	end
+
+LanceScript_PostGame:
+	loadtrainer LANCE, LANCE2
+	ret
+
+LanceScript_Fight:
+	loadtrainer LANCE, LANCE1
+	ret
 
 LancesRoom_EnterMovement:
 	step UP
@@ -339,8 +350,8 @@ LancesRoom_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4, 23, KARENS_ROOM, 3
-	warp_event  5, 23, KARENS_ROOM, 4
+	warp_event  4, 23, LanceS_ROOM, 3
+	warp_event  5, 23, LanceS_ROOM, 4
 	warp_event  4,  1, HALL_OF_FAME, 1
 	warp_event  5,  1, HALL_OF_FAME, 2
 
