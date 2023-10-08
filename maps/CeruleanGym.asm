@@ -60,7 +60,7 @@ CeruleanGymMistyScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_CASCADEBADGE
-	iftrue .FightDone
+	iftrue .PostGame
 	writetext MistyIntroText
 	waitbutton
 	closetext
@@ -77,12 +77,33 @@ CeruleanGymMistyScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_CASCADEBADGE
+.PostGame:
+	checkevent EVENT_BEAT_MISTY2
+	iftrue .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
+.Rematch:
+	writetext MistyRematchText
+	waitbutton
+	closetext
+	winlosstext MistyRematchWinLossText, 0
+	loadtrainer MISTY, MISTY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_MISTY2
 .FightDone:
+	checkevent EVENT_BEAT_MISTY2
+	iftrue .SpeechAfterRematch
 	writetext MistyFightDoneText
 	waitbutton
 	closetext
 	end
-
+.SpeechAfterRematch
+	writetext MistyRematchDoneText
+	waitbutton
+	closetext
+	end
 TrainerSwimmerfDiana:
 	trainer SWIMMERF, DIANA, EVENT_BEAT_SWIMMERF_DIANA, SwimmerfDianaSeenText, SwimmerfDianaBeatenText, 0, .Script
 
@@ -119,6 +140,8 @@ TrainerSwimmermParker:
 CeruleanGymGuideScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .CeruleanGymGuideRematchScript
 	checkevent EVENT_BEAT_MISTY
 	iftrue .CeruleanGymGuideWinScript
 	writetext CeruleanGymGuideText
@@ -128,6 +151,14 @@ CeruleanGymGuideScript:
 
 .CeruleanGymGuideWinScript:
 	writetext CeruleanGymGuideWinText
+	waitbutton
+	closetext
+	end
+
+.CeruleanGymGuideRematchScript:
+	checkevent EVENT_BEAT_MISTY2
+	iftrue .CeruleanGymGuideWinScript
+	writetext CeruleanrGymGuideRematchText
 	waitbutton
 	closetext
 	end
@@ -283,6 +314,32 @@ MistyFightDoneText:
 	line "skilled trainers."
 	done
 
+MistyRematchText:
+	text "So you've re-"
+	line "turned, pest!"
+
+	para "So what if you've"
+	line "gotten every BADGE"
+	cont "in KANTO?"
+
+	para "I'm still hose you"
+	line "down!"
+	done
+
+MistyRematchWinLossText:
+	text "Looks like this"
+	line "is it…"
+	done
+
+MistyRematchDoneText:
+	text "My pride and joy"
+	line "are my water-type"
+	
+	para "#MON. But they"
+	line "were no match"
+	cont "for yours."
+	done
+
 SwimmerfDianaSeenText:
 	text "Sorry about being"
 	line "away. Let's get on"
@@ -341,14 +398,26 @@ SwimmermParkerAfterBattleText:
 	done
 
 CeruleanGymGuideText:
-	text "Yo! CHAMP in"
-	line "making!"
+	text "Yo! CHAMP!"
 
 	para "Since MISTY was"
 	line "away, I went out"
 
 	para "for some fun too."
 	line "He-he-he."
+	done
+
+CeruleanGymGuideRematchText:
+	text "Yo! CHAMP!"
+
+	para "MISTY and her"
+	line "#MON have been"
+
+	para "training in the"
+	line "GYM's pool daily."
+
+	para "They're in tip-"
+	line "top shape!"
 	done
 
 CeruleanGymGuideWinText:
