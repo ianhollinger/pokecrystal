@@ -69,11 +69,11 @@ BrunoScript_Battle:
 	end
 
 BrunoScript_PostGame:
-	loadtrainer Bruno, Bruno2
+	loadtrainer BRUNO, BRUNO2
 	ret
 
 BrunoScript_Fight:
-	loadtrainer Bruno, Bruno1
+	loadtrainer BRUNO, BRUNO1
 	ret
 
 BrunoScript_AfterBattle:
