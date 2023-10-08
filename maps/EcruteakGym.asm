@@ -25,7 +25,7 @@ EcruteakGymMortyScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_MORTY
-	iftrue .FightDone
+	iftrue .PostGame
 	writetext MortyIntroText
 	waitbutton
 	closetext
@@ -44,6 +44,21 @@ EcruteakGymMortyScript:
 	setmapscene ECRUTEAK_TIN_TOWER_ENTRANCE, SCENE_ECRUTEAKTINTOWERENTRANCE_NOOP
 	setevent EVENT_RANG_CLEAR_BELL_1
 	setevent EVENT_RANG_CLEAR_BELL_2
+.PostGame:
+	checkevent EVENT_BEAT_MORTY2
+	iftrue .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
+.Rematch:
+	writetext MortyRematchText
+	waitbutton
+	closetext
+	winlosstext MortyRematchWinLossText, 0
+	loadtrainer MORTY, MORTY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_MORTY2
 .FightDone:
 	checkevent EVENT_GOT_TM30_SHADOW_BALL
 	iftrue .GotShadowBall
@@ -142,6 +157,8 @@ TrainerMediumGrace:
 EcruteakGymGuideScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .EcruteakGymGuideScript
 	checkevent EVENT_BEAT_MORTY
 	iftrue .EcruteakGymGuideWinScript
 	writetext EcruteakGymGuideText
@@ -151,6 +168,20 @@ EcruteakGymGuideScript:
 
 .EcruteakGymGuideWinScript:
 	writetext EcruteakGymGuideWinText
+	waitbutton
+	closetext
+	end
+
+.EcruteakGymGuideRematchScript:
+	checkevent EVENT_BEAT_MORTY2
+	iftrue .EcruteakGymGuideWinScript
+	writetext EcruteakGymGuideText
+	waitbutton
+	closetext
+	end
+
+.EcruteakGymGuideRematchWinScript:
+	writetext EcruteakGymGuideRematchWinText
 	waitbutton
 	closetext
 	end
@@ -218,12 +249,21 @@ MortyIntroText:
 	cont "level!"
 	done
 
+MortyRematchText:
+	text ""
+	done
+	
 MortyWinLossText:
 	text "I'm not good"
 	line "enough yet…"
 
 	para "All right. This"
 	line "BADGE is yours."
+	done
+
+MortyRematchWinLossText:
+	text "I'm not good"
+	line "enough yet…"
 	done
 
 Text_ReceivedFogBadge:
