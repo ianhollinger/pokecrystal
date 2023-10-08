@@ -16,7 +16,7 @@ MahoganyGymPryceScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_PRYCE
-	iftrue .FightDone
+	iftrue .PostGame
 	writetext PryceText_Intro
 	waitbutton
 	closetext
@@ -32,6 +32,21 @@ MahoganyGymPryceScript:
 	setflag ENGINE_GLACIERBADGE
 	readvar VAR_BADGES
 	scall MahoganyGymActivateRockets
+.PostGame:
+	checkevent EVENT_BEAT_PRYCE2
+	iftrue .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
+.Rematch:
+	writetext PryceRematchText
+	waitbutton
+	closetext
+	winlosstext PryceRematchWinLossText, 0
+	loadtrainer PRYCE, PRYCE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_PRYCE2
 .FightDone:
 	checkevent EVENT_GOT_TM16_ICY_WIND
 	iftrue PryceScript_Defeat
@@ -126,6 +141,8 @@ TrainerBoarderDouglas:
 MahoganyGymGuideScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .MahoganyGymGuideRematchScript
 	checkevent EVENT_BEAT_PRYCE
 	iftrue .MahoganyGymGuideWinScript
 	writetext MahoganyGymGuideText
@@ -135,6 +152,14 @@ MahoganyGymGuideScript:
 
 .MahoganyGymGuideWinScript:
 	writetext MahoganyGymGuideWinText
+	waitbutton
+	closetext
+	end
+
+.MahoganyGymGuideRematchScript:
+	checkevent EVENT_BEAT_PRYCE2
+	iftrue .MahoganyGymGuideWinScript
+	writetext MahoganyGymGuideText
 	waitbutton
 	closetext
 	end
@@ -190,6 +215,39 @@ PryceText_Impressed:
 
 	para "You are worthy of"
 	line "this BADGE!"
+	done
+
+PryceRematchText:
+	text "Ah, young"
+	line "Champion!"
+
+	para "Do you know why"
+	line "they call me the"
+	cont "winter Trainer?"
+
+	para "Did you know that"
+	line "my middle name is"
+	cont "WILLOW"?
+
+	para "The willow tree"
+	line "looks like it"
+	
+	para "withers in"
+	line "winter's cold."
+
+	para "But really, it"
+	line "sprouts dozens"
+	cont "of new buds."
+
+	para "My fighting style"
+	line "is also strong"
+	cont "just like that."
+	done
+
+PryceRematchWinLossText:
+	text "Hmm. Seems as if"
+	line "my luck has run 
+	cont "out."
 	done
 
 Text_ReceivedGlacierBadge:
