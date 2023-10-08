@@ -13,7 +13,7 @@ VioletGymFalknerScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_FALKNER
-	iftrue .FightDone
+	iftrue .PostGame
 	writetext FalknerIntroText
 	waitbutton
 	closetext
@@ -29,9 +29,26 @@ VioletGymFalknerScript:
 	setflag ENGINE_ZEPHYRBADGE
 	readvar VAR_BADGES
 	scall VioletGymActivateRockets
+.PostGame:
+	checkevent EVENT_BEAT_FALKNER2
+	iftrue .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
+.Rematch:
+	writetext FalknerRematchText
+	waitbutton
+	closetext
+	winlosstext FalknerRematchWinLossText, 0
+	loadtrainer FALKNER, FALKNER2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_FALKNER2
 .FightDone:
 	checkevent EVENT_GOT_TM31_MUD_SLAP
 	iftrue .SpeechAfterTM
+	checkevent EVENT_BEAT_FALKNER2
+	iftrue .SpeechAfterRematch
 	setevent EVENT_BEAT_BIRD_KEEPER_ROD
 	setevent EVENT_BEAT_BIRD_KEEPER_ABE
 	setmapscene ELMS_LAB, SCENE_ELMSLAB_NOOP
@@ -52,6 +69,9 @@ VioletGymFalknerScript:
 .NoRoomForMudSlap:
 	closetext
 	end
+.SpeechAfterRematch:
+	writetext FalknerRematchDoneText
+	waitbutton
 
 VioletGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -89,6 +109,8 @@ TrainerBirdKeeperAbe:
 VioletGymGuideScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .VioletGymGuideRematchScript
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .VioletGymGuideWinScript
 	writetext VioletGymGuideText
@@ -96,8 +118,16 @@ VioletGymGuideScript:
 	closetext
 	end
 
-.VioletGymGuideWinScript:
-	writetext VioletGymGuideWinText
+.VioletGymGuideRematchScript:
+	checkevent EVENT_BEAT_FALKNER2
+	iftrue .VioletGymGuideRematchWinScript
+	writetext VioletGymGuideRematchText
+	waitbutton
+	closetext
+	end
+
+.VioletGymGuideRematchWinScript:
+	writetext VioletGymGuideRematchWinText
 	waitbutton
 	closetext
 	end
@@ -133,6 +163,16 @@ FalknerIntroText:
 	line "#MON!"
 	done
 
+FalknerRematchText:
+	text "I've been waiting"
+	line "for you!"
+
+	para "I'll show you how"
+	line "high my magnifi-"
+ 	cont "cent bird #MON"
+	cont "have soared!"
+	done
+
 FalknerWinLossText:
 	text "…Darn! My dad's"
 	line "cherished bird"
@@ -144,6 +184,12 @@ FalknerWinLossText:
 	para "It's the official"
 	line "#MON LEAGUE"
 	cont "ZEPHYRBADGE."
+	done
+
+FalknerRematchWinLossText:
+	text "…Darn! My dad's"
+	line "cherished bird"
+	cont "#MON…"
 	done
 
 ReceivedZephyrBadgeText:
@@ -196,6 +242,14 @@ FalknerFightDoneText:
 	cont "these GYMS."
 
 	para "I'm going to train"
+	line "harder to become"
+
+	para "the greatest bird"
+	line "master!"
+	done
+
+FalknerRematchDoneText:
+	text "I'm going to train"
 	line "harder to become"
 
 	para "the greatest bird"
@@ -272,6 +326,31 @@ VioletGymGuideWinText:
 
 	para "be the CHAMP in no"
 	line "time at all!"
+	done
+
+VioletGymGuideRematchText:
+	text "Hey! CHAMPION!"
+
+	para "Falkner's been"
+	line "itching to give"
+
+	para "it another go"
+	line "with you."
+
+	para "Show him what"
+	line "it means to"
+
+	para "be a #MON"
+	line "MASTER!"
+	done
+
+VioletGymGuideRematchWinText:
+	text "Nice battle! It's"
+	line "always a pleasure"
+
+	para "to watch two"
+	line "masters of the"
+	cont "craft!"
 	done
 
 VioletGym_MapEvents:
