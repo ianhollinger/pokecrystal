@@ -15,7 +15,7 @@ CeladonGymErikaScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_RAINBOWBADGE
-	iftrue .FightDone
+	iftrue .PostGame
 	writetext ErikaBeforeBattleText
 	waitbutton
 	closetext
@@ -33,6 +33,22 @@ CeladonGymErikaScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_RAINBOWBADGE
+.PostGame:
+	checkevent EVENT_BEAT_ERIKA2
+	iftrue .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
+
+.Rematch:
+	writetext ErikaRematchText
+	waitbutton
+	closetext
+	winlosstext ErikaRematchBeatenText, 0
+	loadtrainer ERIKA, ERIKA2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_ERIKA2
 .FightDone:
 	checkevent EVENT_GOT_TM19_GIGA_DRAIN
 	iftrue .GotGigaDrain
@@ -148,6 +164,46 @@ ErikaBeatenText:
 	para "I shall give you"
 	line "RAINBOWBADGE…"
 	done
+
+ErikaRematchText:
+	text "ERIKA: Do you like"
+	line "plants? Plants are"
+	cont "such delicate"
+	cont "things." 
+
+	para "The amount of"
+	line "water, the con-"
+
+	para "dition of the"
+	line "soil, the temp-"
+	
+	para "erature diff-"
+	line "erences, the"
+	cont "changing weather…"
+	
+	para "All those little"
+	line "things we don't"
+	
+	para "think about can"
+	line "have such a huge"
+	cont "effect."
+
+	para "Oh. I'm sorry, I"
+	line "didn't realize"
+
+	para "that you wished to"
+	line "challenge me."
+
+	para "Very well, but I"
+	line "shall not lose."
+	done
+
+ErikaRematchBeatenText:
+	text "ERIKA: Oh!"
+	line "I concede defeat…"
+
+	para "You are remarkably"
+	line "strong…"
 
 PlayerReceivedRainbowBadgeText:
 	text "<PLAYER> received"
