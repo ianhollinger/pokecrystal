@@ -14,7 +14,7 @@ VermilionGymSurgeScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_THUNDERBADGE
-	iftrue .FightDone
+	iftrue .PostGame
 	writetext LtSurgeIntroText
 	waitbutton
 	closetext
@@ -36,8 +36,30 @@ VermilionGymSurgeScript:
 	closetext
 	end
 
+.PostGame:
+	checkevent EVENT_BEAT_LT_SURGE2
+	iftrue .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
+.Rematch:
+	writetext LtSurgeRematchText
+	waitbutton
+	closetext
+	winlosstext FalknerRematchWinLossText, 0
+	loadtrainer LT_SURGE, LT_SURGE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_LT_SURGE2
 .FightDone:
+	checkevent EVENT_BEAT_LT_SURGE2
+	iftrue .SpeechAfterRematch
 	writetext LtSurgeFightDoneText
+	waitbutton
+	closetext
+	end
+.SpeechAfterRematch:
+	writetext LtSurgeRematchDefeatText
 	waitbutton
 	closetext
 	end
@@ -78,6 +100,8 @@ TrainerJugglerHorton:
 VermilionGymGuideScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .VermillionGymGuideRematchScript
 	checkevent EVENT_BEAT_LTSURGE
 	iftrue .VermilionGymGuideWinScript
 	writetext VermilionGymGuideText
@@ -87,6 +111,14 @@ VermilionGymGuideScript:
 
 .VermilionGymGuideWinScript:
 	writetext VermilionGymGuideWinText
+	waitbutton
+	closetext
+	end
+
+.VermilionGymGuideRematchScript:
+	checkevent EVENT_BEAT_LT_SURGE2
+	iftrue .VermillionGymGuideWinScript
+	writetext VermillionGymGuideRematchText
 	waitbutton
 	closetext
 	end
@@ -155,6 +187,49 @@ LtSurgeFightDoneText:
 	line "are still at it!"
 	done
 
+LtSurgeRematchText:
+	text "Hey there, kid!"
+	line "Pretty shocking"
+	
+	para "you made it"
+	line "through the KANTO"
+	
+	para "LEAGUE! No doubt"
+	line "some electric-type"
+	
+	para "#MON had a pretty"
+	line "big hand in that,"
+	cont "right?"
+
+	para "All right, then."
+	line "How about you show"
+	
+	para "me how you've"
+	line "raised your"
+	cont "#MON!"
+	done
+
+LtSurgeRematchWinLossText:
+	text "Absolutely"
+	line "shocking!"
+	done
+
+LtSurgeRematchDefeatText:
+	text "Looks like there's"
+	line "still a gap"
+	
+	para "between our skill"
+	line "levels I need to"
+	cont "close, kid!"
+
+	para "This is the first"
+	line "time I've felt"
+	
+	para "like this since I"
+	line "first arrived here"
+	cont "in KANTO!
+	done
+
 GentlemanGregorySeenText:
 	text "You're here to"
 	line "defeat LT.SURGE?"
@@ -220,8 +295,7 @@ JugglerHortonAfterBattleText:
 	done
 
 VermilionGymGuideText:
-	text "Yo! CHAMP in"
-	line "making!"
+	text "Yo! CHAMP!"
 
 	para "You lucked out"
 	line "this time."
@@ -239,6 +313,14 @@ VermilionGymGuideText:
 	para "You'll have no"
 	line "problem getting to"
 	cont "LT.SURGE."
+	done
+
+VermilionGymGuideRematchText:
+	text "Yo! CHAMP!"
+
+	para "I want to see you"
+	line "give LT.SURGE a"
+	cont "shocking display!"
 	done
 
 VermilionGymGuideWinText:
