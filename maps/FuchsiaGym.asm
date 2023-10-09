@@ -13,7 +13,7 @@ FuchsiaGym_MapScripts:
 
 FuchsiaGymJanineScript:
 	checkflag ENGINE_SOULBADGE
-	iftrue .FightDone
+	iftrue .PostGame
 	applymovement FUCHSIAGYM_JANINE, Movement_NinjaSpin
 	faceplayer
 	opentext
@@ -40,6 +40,21 @@ FuchsiaGymJanineScript:
 	waitsfx
 	setflag ENGINE_SOULBADGE
 	sjump .AfterBattle
+.PostGame:
+	checkevent EVENT_BEAT_JANINE2
+	iftrue .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
+.Rematch:
+	writetext JanineText_Rematch
+	waitbutton
+	closetext
+	winlosstext JanineText_ToughOneRematch, 0
+	loadtrainer JANINE, JANINE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_JANINE2
 .FightDone:
 	faceplayer
 	opentext
@@ -196,9 +211,19 @@ CamperBarryScript:
 FuchsiaGymGuideScript:
 	faceplayer
 	opentext
+        checkevent EVENT_OPENED_MT_SILVER
+	iftrue .FuchsiaGymGuideRematchScript
 	checkevent EVENT_BEAT_JANINE
 	iftrue .FuchsiaGymGuideWinScript
 	writetext FuchsiaGymGuideText
+	waitbutton
+	closetext
+	end
+
+.FuchsiaGymGuideRematchScript:
+	checkevent EVENT_BEAT_JANINE2
+	iftrue .FuchsiaGymGuideWinScript
+	writetext FuchsiaGymGuideRematchText
 	waitbutton
 	closetext
 	end
@@ -247,6 +272,21 @@ JanineText_DisappointYou:
 	line "GYM, that's me!"
 	done
 
+JanineText_Rematch:
+	text "Greetings,"
+ 	line "<PLAYER>!"
+
+	text "I insist on"
+ 	line "a rematch!"
+
+	para "If I defeat"
+	line "you, I can"
+
+	para "call myself a"
+	line "real poison-"
+	cont "type master!"
+        done
+
 JanineText_ToughOne:
 	text "JANINE: You're a"
 	line "tough one. You"
@@ -254,6 +294,12 @@ JanineText_ToughOne:
 
 	para "Here's SOULBADGE."
 	line "Take it."
+	done
+
+JanineText_ToughOneRematch:
+	text "JANINE: You're a"
+	line "tough one. You"
+	cont "definitely won…"
 	done
 
 Text_ReceivedSoulBadge:
@@ -358,8 +404,7 @@ CamperBarryAfterText:
 	done
 
 FuchsiaGymGuideText:
-	text "Yo, CHAMP in"
-	line "making!"
+	text "Yo, CHAMP!"
 
 	para "Whoops! Take a"
 	line "good look around"
@@ -370,6 +415,19 @@ FuchsiaGymGuideText:
 
 	para "Which of them is"
 	line "the real JANINE?"
+	done
+
+FuchsiaGymGuideRematchText:
+	text "Yo, CHAMP!"
+
+	para "JANINE's been"
+	line "really applying"
+        cont "herself!"
+
+	para "I daresay she's"
+	line "as good a trainer"
+
+        para "as her father!"
 	done
 
 FuchsiaGymGuideWinText:
