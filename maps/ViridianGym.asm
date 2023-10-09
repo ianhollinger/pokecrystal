@@ -11,7 +11,7 @@ ViridianGymBlueScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_EARTHBADGE
-	iftrue .FightDone
+	iftrue .PostGame
 	writetext LeaderBlueBeforeText
 	waitbutton
 	closetext
@@ -30,8 +30,33 @@ ViridianGymBlueScript:
 	closetext
 	end
 
+.PostGame:
+	checkevent EVENT_BEAT_BLUE2
+	iftrue .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
+
+.Rematch:
+	writetext LeaderBlueRematchBeforeText
+	waitbutton
+	closetext
+	winlosstext LeaderBlueWinText, 0
+	loadtrainer BLUE, BLUE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BLUE2
+
 .FightDone:
+	checkevent EVENT_BEAT_BLUE2
+	iftrue .RematchDone
 	writetext LeaderBlueEpilogueText
+	waitbutton
+	closetext
+	end
+
+.RematchDone:
+	writetext LeaderBlueRematchEpilogueText
 	waitbutton
 	closetext
 	end
@@ -39,6 +64,8 @@ ViridianGymBlueScript:
 ViridianGymGuideScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .ViridianGymGuideRematchScript
 	checkevent EVENT_BEAT_BLUE
 	iftrue .ViridianGymGuideWinScript
 	writetext ViridianGymGuideText
@@ -48,6 +75,14 @@ ViridianGymGuideScript:
 
 .ViridianGymGuideWinScript:
 	writetext ViridianGymGuideWinText
+	waitbutton
+	closetext
+	end
+
+.ViridianGymGuideRematchScript:
+	checkevent EVENT_BEAT_BLUE2
+	iftrue .ViridianGymGuideWinScript
+	writetext ViridianGymGuideRematchText
 	waitbutton
 	closetext
 	end
@@ -136,9 +171,58 @@ LeaderBlueEpilogueText:
 	cont "you. Got it?"
 	done
 
+LeaderBlueRematchBeforeText:
+	para "BLUE: Oh ho!" 
+	line "Couldn't stand"
+	
+	para "being away from my"
+	line "greatness? You'd
+	cont "better watch out!"
+	
+	para "All right! Let's"
+	line "get started! No"
+	cont "way I'm losing"
+	cont "this time!"
+	done
+
+LeaderBlueRematchEpilogueText:
+	para "BLUE: When I look"
+	line "at #MON, I get"
+	
+	para "a strange feeling—"
+	line "you ever get that?"
+	
+	para "There's round"
+	line "ones, flying ones,"
+	
+	para "swimming ones,"
+	line "flaming ones,"
+	
+	para "freezing ones,"
+	line "shiny ones, dark"
+	
+	para "ones—there are so"
+	line "many different"
+	
+	para "types, and yet,"
+	line "they're all"
+	cont "#MON."
+
+	para "I mean, like"
+	line "#MON, there's"
+
+	para "not just one type"
+	line "of person, either…"
+
+	para "But it's still"
+	line "kind of strange"
+	
+	para "when you think"
+	line "about it."
+	done
+
 ViridianGymGuideText:
-	text "Yo, CHAMP in"
-	line "making!"
+	text "Yo, CHAMP!"
 
 	para "How's it going?"
 	line "Looks like you're"
@@ -154,6 +238,19 @@ ViridianGymGuideText:
 
 	para "Give it everything"
 	line "you've got!"
+	done
+
+ViridianGymGuideRematchText:
+	text "Yo, CHAMP!"
+
+	para "BLUE's as pow-"
+	line "erful as ever!"
+
+	para "You're not gonna"
+	line "be able to beat"
+
+	para "him without a"
+	line "serious strategy!"
 	done
 
 ViridianGymGuideWinText:
