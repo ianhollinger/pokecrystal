@@ -15,7 +15,7 @@ SaffronGymSabrinaScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_MARSHBADGE
-	iftrue .FightDone
+	iftrue .PostGame
 	writetext SabrinaIntroText
 	waitbutton
 	closetext
@@ -37,6 +37,23 @@ SaffronGymSabrinaScript:
 	waitbutton
 	closetext
 	end
+
+.PostGame:
+	checkevent EVENT_BEAT_SABRINA2
+	iftrue .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
+
+.Rematch:
+	writetext SabrinaRematchText
+	waitbutton
+	closetext
+	winlosstext SabrinaRematchWinLossText, 0
+	loadtrainer SABRINA, SABRINA2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_SABRINA2
 
 .FightDone:
 	writetext SabrinaFightDoneText
@@ -91,6 +108,8 @@ TrainerPsychicJared:
 SaffronGymGuideScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .SaffronGymGuideRematchScript
 	checkevent EVENT_BEAT_SABRINA
 	iftrue .SaffronGymGuideWinScript
 	writetext SaffronGymGuideText
@@ -100,6 +119,14 @@ SaffronGymGuideScript:
 
 .SaffronGymGuideWinScript:
 	writetext SaffronGymGuideWinText
+	waitbutton
+	closetext
+	end
+
+.SaffronGymGuideRematchScript:
+	checkevent EVENT_BEAT_SABRINA2
+	iftrue .SaffronGymGuideWinScript
+	writetext SaffronGymGuideRematchText
 	waitbutton
 	closetext
 	end
@@ -136,6 +163,55 @@ SabrinaIntroText:
 	para "Since you wish it,"
 	line "I will show you my"
 	cont "psychic powers!"
+	done
+
+SabrinaRematchText:
+	text "SABRINA: It's true"
+	line "that psychic power"
+
+	para "is a potent"
+	line "ability. However,"
+	
+	para "there are things"
+	line "that cannot be"
+	
+	para "overcome with that"
+	line "power alone. I"
+	
+	para "finally understand"
+	line "that now, after"
+	
+	para "losing to you in"
+	line "our last battle."
+
+	para "I won't be relying"
+	line "on just psychic"
+	cont "power this time."
+	
+	para "My true strength…"
+	line "my true self…"
+
+	para "Allow me to test"
+	line "them against you!"
+	done
+
+;SabrinaRematchText:
+;	text "SABRINA: Oh…"
+;
+;	para "I must admit, I"
+;	line "hadn't seen that"
+;	cont "you would return."
+;
+;	para "And yet, I'm"
+;	line "not surprised."
+;
+;	para "Let us begin."
+;	done
+
+SabrinaRematchWinLossText:
+	para "I admit I didn't"
+	line "work hard enough"
+	cont "to win."
 	done
 
 SabrinaWinLossText:
@@ -265,8 +341,7 @@ PsychicJaredAfterBattleText:
 	done
 
 SaffronGymGuideText:
-	text "Yo, CHAMP in"
-	line "making!"
+	text "Yo, CHAMPION!"
 
 	para "A trainer as"
 	line "skilled as you"
@@ -281,6 +356,19 @@ SaffronGymGuideText:
 	line "things from you!"
 
 	para "Good luck!"
+	done
+
+SaffronGymGuideRematchText:
+	text "Yo, CHAMPION!"
+
+	para "You've over-"
+	line "powered SABRINA's"
+
+	para "psychic power"
+	line "before."
+
+	para "I predict you"
+	line "can do it again!"
 	done
 
 SaffronGymGuideWinText:
