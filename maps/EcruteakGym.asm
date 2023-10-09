@@ -51,7 +51,19 @@ EcruteakGymMortyScript:
 	iftrue .Rematch
 	iffalse .FightDone
 .Rematch:
-	writetext MortyRematchText
+        setval HO_OH
+        special MonCheck
+        iffalse .NoHooh
+	writetext MortyRematchHoohText
+	waitbutton
+	closetext
+	winlosstext MortyRematchWinLossText, 0
+	loadtrainer MORTY, MORTY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_MORTY2
+.NoHooh:
+        writetext MortyRematchText
 	waitbutton
 	closetext
 	winlosstext MortyRematchWinLossText, 0
@@ -75,9 +87,14 @@ EcruteakGymMortyScript:
 	waitbutton
 	closetext
 	end
-
 .GotShadowBall:
-	writetext MortyFightDoneText
+        setval HO_OH
+        special MonCheck
+        iftrue .Hooh
+        writetext MortyFightDoneText
+	waitbutton
+.Hooh:
+        writetext MortyFightDoneHoohText
 	waitbutton
 .NoRoomForShadowBall:
 	closetext
@@ -158,7 +175,7 @@ EcruteakGymGuideScript:
 	faceplayer
 	opentext
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .EcruteakGymGuideScript
+	iftrue .EcruteakGymGuideRematchScript
 	checkevent EVENT_BEAT_MORTY
 	iftrue .EcruteakGymGuideWinScript
 	writetext EcruteakGymGuideText
@@ -181,7 +198,7 @@ EcruteakGymGuideScript:
 	end
 
 .EcruteakGymGuideRematchWinScript:
-	writetext EcruteakGymGuideRematchWinText
+	writetext EcruteakGymGuideWinText
 	waitbutton
 	closetext
 	end
@@ -249,8 +266,44 @@ MortyIntroText:
 	cont "level!"
 	done
 
+MortyRematchHoohText:
+	text "That's… The 
+	line "rainbow-colored"
+        cont "#MON! HO-OH!"
+
+        para "You must have been"
+        line "recognized as a"
+     
+        para "worthy trainer for"
+        line "it to have joined"
+        cont "your party."
+
+        para "I would be honored"
+        line "to challenge you."
+	done
+
 MortyRematchText:
-	text ""
+	text "Welcome back. I"
+        line "have been honing"
+        
+        para "my abilities since"
+        line "our last meeting."
+
+        para "I have seen a"
+        line "shadow of the" 
+
+        para "person who will"
+        line "make the rainbow-"
+
+        para "colored #MON"
+        line "appear."
+
+        para "I believe that"
+        line "person is me!"
+
+        para "You're going to"
+        line "help me reach"
+        cont "that level!"
 	done
 	
 MortyWinLossText:
@@ -313,6 +366,24 @@ MortyFightDoneText:
 	para "I envy you for"
 	line "that…"
 	done
+
+MortyFightDoneHoohText:
+        text "The legendary"
+        line "#MON did not"
+        cont "choose me…"
+
+        para "But that does not"
+        line "mean that I have"
+
+        para "lost out on my 
+        line "future." 
+
+        para "I will continue my"
+        line "training until I" 
+  
+        para "discover a new"
+        line "future for me."
+        done 
 
 SageJeffreySeenText:
 	text "I spent the spring"
