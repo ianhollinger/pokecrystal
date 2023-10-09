@@ -15,7 +15,7 @@ SeafoamGymBlaineScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_VOLCANOBADGE
-	iftrue .FightDone
+	iftrue .PostGame
 	writetext BlaineIntroText
 	waitbutton
 	closetext
@@ -24,6 +24,7 @@ SeafoamGymBlaineScript:
 	startbattle
 	iftrue .ReturnAfterBattle
 	appear SEAFOAMGYM_GYM_GUIDE
+
 .ReturnAfterBattle:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLAINE
@@ -37,6 +38,23 @@ SeafoamGymBlaineScript:
 	closetext
 	end
 
+.PostGame:
+	checkevent EVENT_BEAT_BLAINE2
+	iftrue .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
+
+.Rematch:
+	writetext BlaineRematchIntroText
+	waitbutton
+	closetext
+	winlosstext BlaineRematchWinLossText, 0
+	loadtrainer BLAINE, BLAINE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BLAINE2
+
 .FightDone:
 	writetext BlaineFightDoneText
 	waitbutton
@@ -46,12 +64,28 @@ SeafoamGymBlaineScript:
 SeafoamGymGuideScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .SeafoamGymGuideRematchScript
 	checkevent EVENT_TALKED_TO_SEAFOAM_GYM_GUIDE_ONCE
 	iftrue .TalkedToSeafoamGymGuideScript
 	writetext SeafoamGymGuideWinText
 	waitbutton
 	closetext
 	setevent EVENT_TALKED_TO_SEAFOAM_GYM_GUIDE_ONCE
+	end
+
+.SeafoamGymGuideWinScript:
+	writetext PewterGymGuideWinText
+	waitbutton
+	closetext
+	end
+
+.SeafoamGymGuideRematchScript:
+	checkevent EVENT_BEAT_BLAINE2
+	iftrue .TalkedToSeafoamGymGuideScript
+	writetext SeafoamGymGuideRematchText
+	waitbutton
+	closetext
 	end
 
 .TalkedToSeafoamGymGuideScript:
@@ -88,6 +122,32 @@ BlaineIntroText:
 	line "have BURN HEAL!"
 	done
 
+BlaineRematchIntroText:
+	text "BLAINE: Waaah!"
+
+	para "You came back"
+	line "too soon!"
+
+	para "They haven't"
+	line "even started"
+
+	para "rebuilding the"
+	line "GYM!"
+
+	para "The town still"
+	line "looks like the"
+
+	para "volcano erupted"
+	line "yesterday!"
+
+	para "Waaah!"
+
+	para "I'm all fired up!"
+	
+	para "You'd better"
+	line "have BURN HEAL!"
+	done
+
 BlaineWinLossText:
 	text "BLAINE: Awesome."
 	line "I've burned out…"
@@ -95,6 +155,10 @@ BlaineWinLossText:
 	para "You've earned"
 	line "VOLCANOBADGE!"
 	done
+
+BlaineRematchWinLossText:
+	text "BLAINE: Awesome."
+	line "I've burned out…"
 
 ReceivedVolcanoBadgeText:
 	text "<PLAYER> received"
@@ -142,6 +206,20 @@ SeafoamGymGuideWinText:
 
 	para "without my advice."
 	line "I knew you'd win!"
+	done
+
+SeafoamGymGuideRematchText:
+	text "Yo, CHAMP!"
+
+	para "BLAINE's still"
+	line "stuck on this"
+	cont "island."
+
+	para "We might as well"
+	line "rename this the"
+
+	para "SEAFOAM GYM at"
+	line "this point."
 	done
 
 SeafoamGymGuideWinText2:
