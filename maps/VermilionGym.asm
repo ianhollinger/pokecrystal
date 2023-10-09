@@ -188,18 +188,20 @@ LtSurgeFightDoneText:
 	done
 
 LtSurgeRematchText:
-	text "Hey there, kid!"
-	line "Pretty shocking"
+	text "SURGE: Hey there,"
+	line "kid!"
 	
-	para "you made it"
-	line "through the KANTO"
+	para "Pretty shocking"
+	line "you made it"
+
+	para "through the KANTO"
+	line "LEAGUE! No doubt"
 	
-	para "LEAGUE! No doubt"
-	line "some electric-type"
+	para "some electric-type"
+	line "#MON had a pretty"
 	
-	para "#MON had a pretty"
-	line "big hand in that,"
-	cont "right?"
+	para "big hand in that,"
+	line "right?"
 
 	para "All right, then."
 	line "How about you show"
@@ -215,12 +217,14 @@ LtSurgeRematchWinLossText:
 	done
 
 LtSurgeRematchDefeatText:
-	text "Looks like there's"
-	line "still a gap"
+	text "SURGE: Looks like"
+	line "there's still a"
 	
-	para "between our skill"
-	line "levels I need to"
-	cont "close, kid!"
+	para "gap between our"
+	line "skill levels I"
+
+	para "need to close," 
+	line "kid!"
 
 	para "This is the first"
 	line "time I've felt"
