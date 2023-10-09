@@ -194,13 +194,13 @@ BrockRematchWinLossText:
 	line "strong, but this…"
 	done
 
-BrockFightDoneText:
-	text "Awesome…"
-	line "That was a really"
-	cont "great battle."
-
-	para "I compliment you"
-	line "on your victory!"
+; BrockFightDoneText:
+;	text "Awesome…"
+;	line "That was a really"
+;	cont "great battle."
+;
+;	para "I compliment you"
+;	line "on your victory!"
 
 CamperJerrySeenText:
 	text "The trainers of"
