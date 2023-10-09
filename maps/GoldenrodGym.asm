@@ -22,7 +22,7 @@ GoldenrodGymNoop2Scene:
 GoldenrodGymWhitneyScript:
 	faceplayer
 	checkevent EVENT_BEAT_WHITNEY
-	iftrue .FightDone
+	iftrue .PostGame
 	opentext
 	writetext WhitneyBeforeText
 	waitbutton
@@ -38,6 +38,12 @@ GoldenrodGymWhitneyScript:
 	setevent EVENT_BEAT_BEAUTY_SAMANTHA
 	setevent EVENT_BEAT_LASS_CARRIE
 	setevent EVENT_BEAT_LASS_BRIDGET
+.PostGame:
+	checkevent EVENT_BEAT_WHITNEY2
+	iftrue .RematchDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	iffalse .FightDone
 .FightDone:
 	opentext
 	checkevent EVENT_MADE_WHITNEY_CRY
@@ -46,6 +52,20 @@ GoldenrodGymWhitneyScript:
 	waitbutton
 	closetext
 	end
+.RematchDone:
+	writetext WhitneyRematchAfterText
+	waitbutton
+	closetext
+	end
+.Rematch:
+        writetext WhitneyRematchBeforeText
+	waitbutton
+	closetext
+	winlosstext WhitneyRematchDefeatText, 0
+	loadtrainer WHITNEY, WHITNEY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_WHITNEY2
 
 .StoppedCrying:
 	checkevent EVENT_GOT_TM45_ATTRACT
@@ -149,10 +169,20 @@ TrainerBeautySamantha:
 
 GoldenrodGymGuideScript:
 	faceplayer
+        checkevent EVENT_OPENED_MT_SILVER
+	iftrue .GoldenrodGymGuideRematchScript
 	checkevent EVENT_BEAT_WHITNEY
 	iftrue .GoldenrodGymGuideWinScript
 	opentext
 	writetext GoldenrodGymGuideText
+	waitbutton
+	closetext
+	end
+
+.GoldenrodGymGuideRematchScript:
+	checkevent EVENT_BEAT_WHITNEY2
+	iftrue .GoldenrodGymGuideWinScript
+	writetext GoldenrodGymGuideRematchText
 	waitbutton
 	closetext
 	end
@@ -264,6 +294,39 @@ WhitneyGoodCryText:
 	line "again! Bye-bye!"
 	done
 
+WhitneyRematchBeforeText:
+	text "You're back!"
+
+        para "Those BADGES look"
+	line "good on you!"
+
+	para "Oh, you want a"
+	line "Rematch? Okay!"
+
+	para "But I gotta"
+	line "warn ya--I've"
+
+	para "put together"
+	line "a team of"
+	cont "serious cuties!"
+	done 
+
+WhitneyRematchDefeatText:
+	text "Sniff…"
+
+	para "I won't cry…"
+	line "That was a"
+	cont "great battle!"
+	done
+
+WhitneyRematchAfterText:
+	text "Cuteness isn't"
+	line "everything!"
+
+	para "My #MON are"
+        line "cute and tough!"
+        done
+
 LassCarrieSeenText:
 	text "Don't let my"
 	line "#MON's cute"
@@ -366,6 +429,16 @@ GoldenrodGymGuideText:
 	line "use fighting-type"
 	cont "#MON."
 	done
+
+GoldenrodGymGuideRematchText:
+	text "Yo! CHAMP!"
+
+	para "You've taken on"
+        line "Whitney before!"
+
+	para "I know you can"
+        line "do it again!"
+        done
 
 GoldenrodGymGuideWinText:
 	text "You won? Great! I"
