@@ -172,9 +172,10 @@ BrockFightDoneText:
 	done
 
 BrockRematchText:
-	text "…You sure look"
-	line "different from"
-	cont "when we first met!"
+	text "BROCK: …You sure"
+	line "look different"
+	cont "from when we first"
+	cont "met!"
 
 	para "Please allow me"
 	line "the privilege of"
