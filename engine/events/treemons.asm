@@ -135,11 +135,11 @@ GetTreeMon:
 	ret
 
 .bad
-	; 10% chance of an encounter
-	ld a, 10
+	; 25% chance of an encounter
+	ld a, 4
 	call RandomRange
-	and a
-	jr nz, NoTreeMon
+	cp 1
+	jr nc, NoTreeMon
 	jr SelectTreeMon
 
 .good
@@ -151,10 +151,10 @@ GetTreeMon:
 	jr SelectTreeMon
 
 .rare
-	; 80% chance of an encounter
-	ld a, 10
+	; 75% chance of an encounter
+	ld a, 4
 	call RandomRange
-	cp 8
+	cp 3
 	jr nc, NoTreeMon
 	jr .skip
 .skip
