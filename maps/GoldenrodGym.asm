@@ -43,7 +43,7 @@ GoldenrodGymWhitneyScript:
 	iftrue .RematchDone
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .Rematch
-	iffalse .FightDone
+	call .FightDone
 .FightDone:
 	opentext
 	checkevent EVENT_MADE_WHITNEY_CRY
