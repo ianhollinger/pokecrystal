@@ -34,7 +34,7 @@ VioletGymFalknerScript:
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .Rematch
-	iffalse .FightDone
+	call .FightDone
 .Rematch:
 	writetext FalknerRematchText
 	waitbutton
