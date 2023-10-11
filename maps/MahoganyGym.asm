@@ -227,7 +227,7 @@ PryceRematchText:
 
 	para "Did you know that"
 	line "my middle name is"
-	cont "WILLOW"?
+	cont "WILLOW?"
 
 	para "The willow tree"
 	line "looks like it"
