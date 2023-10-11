@@ -246,7 +246,7 @@ PryceRematchText:
 
 PryceRematchWinLossText:
 	text "Hmm. Seems as if"
-	line "my luck has run 
+	line "my luck has run" 
 	cont "out."
 	done
 
