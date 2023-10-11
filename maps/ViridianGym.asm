@@ -189,7 +189,7 @@ LeaderBlueRematchEpilogueText:
 	para "BLUE: When I look"
 	line "at #MON, I get"
 	
-	para "a strange feel-
+	para "a strange feel-"
 	line "ing-- you ever"
 	cont "get that?"
 	
