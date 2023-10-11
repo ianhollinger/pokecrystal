@@ -103,7 +103,7 @@ LancesRoomLanceScript:
 	writetext LancesRoomMaryInterviewText
 	waitbutton
 	closetext
-	applymovement LANCESROOM_LANCE, LANCEsRoomMovementData_LancePositionsSelfToGuidePlayerAway
+	applymovement LANCESROOM_LANCE, LancesRoomMovementData_LancePositionsSelfToGuidePlayerAway
 	turnobject PLAYER, UP
 	opentext
 	writetext LancesRoomNoisyText
@@ -112,7 +112,7 @@ LancesRoomLanceScript:
 	follow LANCESROOM_LANCE, PLAYER
 	turnobject LANCESROOM_MARY, UP
 	turnobject LANCESROOM_OAK, UP
-	applymovement LANCESROOM_LANCE, LANCEsRoomMovementData_LanceLeadsPlayerToHallOfFame
+	applymovement LANCESROOM_LANCE, LancesRoomMovementData_LanceLeadsPlayerToHallOfFame
 	stopfollow
 	playsound SFX_EXIT_BUILDING
 	disappear LANCESROOM_LANCE
@@ -136,7 +136,7 @@ LanceScript_PostGame:
 	ret
 
 LanceScript_Fight:
-	loadtrainer LANCE, LANCE1
+	loadtrainer LANCE, LANCE
 	ret
 
 LancesRoom_EnterMovement:
