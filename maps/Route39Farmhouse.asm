@@ -59,11 +59,11 @@ FarmerMScript_NoSale:
 	closetext
 	end
 
-FarmerMScript_Milking:
-	writetext FarmerMText_Milking
-	waitbutton
-	closetext
-	end
+; FarmerMScript_Milking:
+;	writetext FarmerMText_Milking
+;	waitbutton
+;	closetext
+;	end
 
 PokefanF_SnoreFarmer:
 	faceplayer
@@ -145,10 +145,10 @@ FarmerMText_NoSale:
 	line "Come again, hear?"
 	done
 
-FarmerMText_Milking:
-	text "I best go do my"
-	line "milkin'."
-	done
+; FarmerMText_Milking:
+;	text "I best go do my"
+;	line "milkin'."
+;	done
 
 FarmerFText_InTrouble:
 	text "Our milk even goes"
@@ -172,10 +172,10 @@ FarmerFText_HealedMiltank:
 	line "fer your trouble."
 	done
 
-Text_ReceivedTM13: ; unreferenced
-	text "<PLAYER> received"
-	line "TM13 SNORE."
-	done
+; Text_ReceivedTM13: ; unreferenced
+;	text "<PLAYER> received"
+;	line "TM13 SNORE."
+;	done
 
 FarmerFText_SnoreSpeech:
 	text "That there's"
