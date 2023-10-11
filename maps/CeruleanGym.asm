@@ -158,7 +158,7 @@ CeruleanGymGuideScript:
 .CeruleanGymGuideRematchScript:
 	checkevent EVENT_BEAT_MISTY2
 	iftrue .CeruleanGymGuideWinScript
-	writetext CeruleanrGymGuideRematchText
+	writetext CeruleanGymGuideRematchText
 	waitbutton
 	closetext
 	end
