@@ -78,28 +78,28 @@ Text_GrampsLookingForYou:
 	line "for you."
 	done
 
-Text_DayCareManTalksAboutEggTicket: ; unreferenced
-	text "I'm the DAY-CARE"
-	line "MAN."
+; Text_DayCareManTalksAboutEggTicket: ; unreferenced
+;	text "I'm the DAY-CARE"
+;	line "MAN."
 
-	para "There's something"
-	line "new in GOLDENROD"
+;	para "There's something"
+;	line "new in GOLDENROD"
 
-	para "called the TRADE"
-	line "CORNER."
+;	para "called the TRADE"
+;	line "CORNER."
 
-	para "I was given an EGG"
-	line "TICKET that can be"
+;	para "I was given an EGG"
+;	line "TICKET that can be"
 
-	para "traded in for a"
-	line "ODD EGG."
+;	para "traded in for a"
+;	line "ODD EGG."
 
-	para "But since we run a"
-	line "DAY-CARE, we don't"
+;	para "But since we run a"
+;	line "DAY-CARE, we don't"
 
-	para "need it. You may"
-	line "as well have it."
-	done
+;	para "need it. You may"
+;	line "as well have it."
+;	done
 
 DayCareManText_GiveOddEgg:
 	text "I'm the DAY-CARE"
@@ -125,9 +125,9 @@ DayCareManText_GiveOddEgg:
 	line "yours to keep!"
 	done
 
-DayCareText_ComeAgain: ; unreferenced
-	text "Come again."
-	done
+; DayCareText_ComeAgain: ; unreferenced
+;	text "Come again."
+;	done
 
 DayCareText_GotOddEgg:
 	text "<PLAYER> received"
