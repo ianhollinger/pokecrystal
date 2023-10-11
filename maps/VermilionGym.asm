@@ -231,7 +231,7 @@ LtSurgeRematchDefeatText:
 	
 	para "like this since I"
 	line "first arrived here"
-	cont "in KANTO!
+	cont "in KANTO!"
 	done
 
 GentlemanGregorySeenText:
