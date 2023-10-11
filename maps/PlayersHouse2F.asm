@@ -11,8 +11,8 @@ PlayersHouse2F_MapScripts:
 	callback MAPCALLBACK_NEWMAP, PlayersHouse2FInitializeRoomCallback
 	callback MAPCALLBACK_TILES, PlayersHouse2FSetUpTileDecorationsCallback
 
-PlayersHouse2FNoopScene: ; unreferenced
-	end
+; PlayersHouse2FNoopScene: ; unreferenced
+;	end
 
 PlayersHouse2FInitializeRoomCallback:
 	special ToggleDecorationsVisibility
