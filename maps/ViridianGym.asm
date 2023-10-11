@@ -176,7 +176,7 @@ LeaderBlueRematchBeforeText:
 	line "Couldn't stand"
 	
 	para "being away from my"
-	line "greatness? You'd
+	line "greatness? You'd"
 	cont "better watch out!"
 	
 	para "All right! Let's"
