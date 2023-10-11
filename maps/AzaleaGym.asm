@@ -200,7 +200,9 @@ BugsyText_INeverLose:
 
 BugsyRematchText:
 	text "Good to see you"
-	line "again! Behold my" 
+	line "again! Behold the" 
+
+	para "results of my"
 	cont "bug research!"
 	done
 
