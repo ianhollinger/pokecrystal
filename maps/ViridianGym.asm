@@ -189,8 +189,9 @@ LeaderBlueRematchEpilogueText:
 	para "BLUE: When I look"
 	line "at #MON, I get"
 	
-	para "a strange feeling—"
-	line "you ever get that?"
+	para "a strange feel-
+	line "ing-- you ever"
+	cont "get that?"
 	
 	para "There's round"
 	line "ones, flying ones,"
@@ -201,7 +202,7 @@ LeaderBlueRematchEpilogueText:
 	para "freezing ones,"
 	line "shiny ones, dark"
 	
-	para "ones—there are so"
+	para "ones--there are so"
 	line "many different"
 	
 	para "types, and yet,"
