@@ -84,7 +84,7 @@ BlackthornGymClairScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CLAIR2
 
-.Postgame:
+.PostGame:
 	checkevent EVENT_BEAT_CLAIR2
 	iftrue .RematchDone
 	call .Rematch
