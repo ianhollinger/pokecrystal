@@ -216,10 +216,10 @@ Jasmine_BadgeSpeech:
 	line "this too…"
 	done
 
-Text_ReceivedTM09: ; unreferenced
-	text "<PLAYER> received"
-	line "TM09."
-	done
+; Text_ReceivedTM09: ; unreferenced
+;	text "<PLAYER> received"
+;	line "TM09."
+;	done
 
 Jasmine_IronTailSpeech:
 	text "…You could use"
@@ -234,7 +234,7 @@ Jasmine_GoodLuck:
 	done
 
 JasmineRematchDoneText:
-	text "Um… Keep on 
+	text "Um… Keep on" 
 	line "doing your best…"
 	cont "with your #MON."
 	done
