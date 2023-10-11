@@ -167,8 +167,8 @@ RuinsOfAlphResearchCenterPrinter:
 	closetext
 	end
 
-RuinsOfAlphResearchCenterPhoto: ; unreferenced
-	jumptext RuinsOfAlphResearchCenterProfSilktreePhotoText
+; RuinsOfAlphResearchCenterPhoto: ; unreferenced
+;	jumptext RuinsOfAlphResearchCenterProfSilktreePhotoText
 
 RuinsOfAlphResearchCenterBookshelf:
 	jumptext RuinsOfAlphResearchCenterAcademicBooksText
@@ -306,33 +306,33 @@ RuinsOfAlphResearchCenterScientist2Text_UnownAppeared:
 	cont "kinds of them…"
 	done
 
-RuinsOfAlphResearchCenterUnusedText1: ; unreferenced
-	text "We think something"
-	line "caused the cryptic"
+; RuinsOfAlphResearchCenterUnusedText1: ; unreferenced
+;	text "We think something"
+;	line "caused the cryptic"
 
-	para "patterns to appear"
-	line "in the RUINS."
+;	para "patterns to appear"
+;	line "in the RUINS."
 
-	para "We've focused our"
-	line "studies on that."
-	done
+;	para "We've focused our"
+;	line "studies on that."
+;	done
 
-RuinsOfAlphResearchCenterUnusedText2: ; unreferenced
-	text "According to my"
-	line "research…"
+; RuinsOfAlphResearchCenterUnusedText2: ; unreferenced
+;	text "According to my"
+;	line "research…"
 
-	para "Those mysterious"
-	line "patterns appeared"
+;	para "Those mysterious"
+;	line "patterns appeared"
 
-	para "when the #COM"
-	line "CENTER was built."
+;	para "when the #COM"
+;	line "CENTER was built."
 
-	para "It must mean that"
-	line "radio waves have"
+;	para "It must mean that"
+;	line "radio waves have"
 
-	para "some sort of a"
-	line "link…"
-	done
+;	para "some sort of a"
+;	line "link…"
+;	done
 
 RuinsOfAlphResearchCenterScientist2Text_GotAllUnown:
 	text "Why did those"
