@@ -18,11 +18,11 @@ BlackthornDragonSpeechHouseDratiniScript:
 	closetext
 	end
 
-BlackthornDragonSpeechHousePictureBookshelf: ; unreferenced
-	jumpstd PictureBookshelfScript
+; BlackthornDragonSpeechHousePictureBookshelf: ; unreferenced
+;	jumpstd PictureBookshelfScript
 
-BlackthornDragonSpeechHouseMagazineBookshelf: ; unreferenced
-	jumpstd MagazineBookshelfScript
+; BlackthornDragonSpeechHouseMagazineBookshelf: ; unreferenced
+;	jumpstd MagazineBookshelfScript
 
 BlackthornDragonSpeechHouseGrannyText:
 	text "A clan of trainers"
