@@ -66,12 +66,16 @@ VioletGymFalknerScript:
 .SpeechAfterTM:
 	writetext FalknerFightDoneText
 	waitbutton
+	closetext
+	end
 .NoRoomForMudSlap:
 	closetext
 	end
 .SpeechAfterRematch:
 	writetext FalknerRematchDoneText
 	waitbutton
+	closetext
+	end
 
 VioletGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
