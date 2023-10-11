@@ -62,11 +62,11 @@ Route32CooltrainerMContinueScene:
 	closetext
 	end
 
-.GoToSproutTower: ; unreferenced
-	writetext Route32CooltrainerMText_UnusedSproutTower
-	waitbutton
-	closetext
-	end
+; .GoToSproutTower: ; unreferenced
+;	writetext Route32CooltrainerMText_UnusedSproutTower
+;	waitbutton
+;	closetext
+;	end
 
 .GiveMiracleSeed:
 	writetext Route32CooltrainerMText_HaveThisSeed
