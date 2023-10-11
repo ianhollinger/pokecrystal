@@ -101,7 +101,7 @@ VermilionGymGuideScript:
 	faceplayer
 	opentext
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .VermillionGymGuideRematchScript
+	iftrue .VermilionGymGuideRematchScript
 	checkevent EVENT_BEAT_LTSURGE
 	iftrue .VermilionGymGuideWinScript
 	writetext VermilionGymGuideText
@@ -117,8 +117,8 @@ VermilionGymGuideScript:
 
 .VermilionGymGuideRematchScript:
 	checkevent EVENT_BEAT_LT_SURGE2
-	iftrue .VermillionGymGuideWinScript
-	writetext VermillionGymGuideRematchText
+	iftrue .VermilionGymGuideWinScript
+	writetext VermilionGymGuideRematchText
 	waitbutton
 	closetext
 	end
