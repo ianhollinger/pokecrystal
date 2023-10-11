@@ -267,7 +267,7 @@ MortyIntroText:
 	done
 
 MortyRematchHoohText:
-	text "That's… The 
+	text "That's… The"
 	line "rainbow-colored"
         cont "#MON! HO-OH!"
 
@@ -375,7 +375,7 @@ MortyFightDoneHoohText:
         para "But that does not"
         line "mean that I have"
 
-        para "lost out on my 
+        para "lost out on my"
         line "future." 
 
         para "I will continue my"
