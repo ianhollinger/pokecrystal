@@ -115,7 +115,7 @@ OlivineGymGuideScript:
 	closetext
 	end
 
-.OlvineGymGuideRematchWinScript:
+.OlivineGymGuideRematchWinScript:
 	opentext
 	writetext OlivineGymGuideRematchWinText
 	waitbutton
