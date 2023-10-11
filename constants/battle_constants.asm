@@ -1,7 +1,7 @@
 ; significant level values
 DEF MAX_LEVEL EQU 100
 DEF MIN_LEVEL EQU 2
-DEF EGG_LEVEL EQU 5
+DEF EGG_LEVEL EQU 1
 
 ; maximum moves known per mon
 DEF NUM_MOVES EQU 4
@@ -12,7 +12,7 @@ DEF MAX_STAT_LEVEL EQU 13
 
 ; turns that sleep lasts
 DEF REST_SLEEP_TURNS EQU 2
-DEF TREEMON_SLEEP_TURNS EQU 7
+DEF TREEMON_SLEEP_TURNS EQU 3
 
 ; default move priority
 DEF BASE_PRIORITY EQU 1
