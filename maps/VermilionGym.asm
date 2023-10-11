@@ -37,7 +37,7 @@ VermilionGymSurgeScript:
 	end
 
 .PostGame:
-	checkevent EVENT_BEAT_LT_SURGE2
+	checkevent EVENT_BEAT_LTSURGE2
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .Rematch
@@ -50,9 +50,9 @@ VermilionGymSurgeScript:
 	loadtrainer LT_SURGE, LT_SURGE2
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_LT_SURGE2
+	setevent EVENT_BEAT_LTSURGE2
 .FightDone:
-	checkevent EVENT_BEAT_LT_SURGE2
+	checkevent EVENT_BEAT_LTSURGE2
 	iftrue .SpeechAfterRematch
 	writetext LtSurgeFightDoneText
 	waitbutton
@@ -116,7 +116,7 @@ VermilionGymGuideScript:
 	end
 
 .VermilionGymGuideRematchScript:
-	checkevent EVENT_BEAT_LT_SURGE2
+	checkevent EVENT_BEAT_LTSURGE2
 	iftrue .VermilionGymGuideWinScript
 	writetext VermilionGymGuideRematchText
 	waitbutton
