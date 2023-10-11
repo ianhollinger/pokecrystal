@@ -138,8 +138,8 @@ AcademyNotebook:
 	closetext
 	end
 
-AcademyStickerMachine: ; unreferenced
-	jumptext AcademyStickerMachineText
+; AcademyStickerMachine: ; unreferenced
+;	jumptext AcademyStickerMachineText
 
 AcademyBookshelf:
 	jumpstd DifficultBookshelfScript
@@ -272,9 +272,9 @@ AcademyBlackboardText:
 	line "battle."
 	done
 
-AcademyBlackboardText2: ; unreferenced
-	text "Read which topic?"
-	done
+; AcademyBlackboardText2: ; unreferenced
+;	text "Read which topic?"
+;	done
 
 AcademyPoisonText:
 	text "If poisoned, a"
