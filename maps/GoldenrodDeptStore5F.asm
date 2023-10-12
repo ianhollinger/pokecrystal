@@ -184,15 +184,13 @@ GoldenrodDeptStore5FLassText:
 	done
 
 GoldenrodDeptStore5FPokefanMText:
-	text "You can't rename a"
+	text "You can rename a"
 	line "#MON you get in"
 	cont "a trade."
 
-	para "The name is a re-"
-	line "flection of the"
-
-	para "original trainer's"
-	line "feelings for it."
+	para "It's yours now,"
+	line "you can call it"
+	cont "whatever you want!"
 	done
 
 GoldenrodDeptStore5FDirectoryText:
