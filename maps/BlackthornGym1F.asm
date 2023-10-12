@@ -87,7 +87,8 @@ BlackthornGymClairScript:
 .PostGame:
 	checkevent EVENT_BEAT_CLAIR2
 	iftrue .RematchDone
-	call .Rematch
+	checkevent EVENT_BEAT_CLAIR2
+	iffalse .Rematch
 
 .FightDone:
 	writetext ClairText_TooMuchToExpect
