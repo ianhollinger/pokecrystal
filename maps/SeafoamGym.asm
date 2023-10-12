@@ -43,7 +43,8 @@ SeafoamGymBlaineScript:
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .Rematch
-	call .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iffalse .FightDone
 
 .Rematch:
 	writetext BlaineRematchIntroText
