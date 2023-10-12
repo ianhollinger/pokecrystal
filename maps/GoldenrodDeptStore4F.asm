@@ -53,10 +53,8 @@ GoldenrodDeptStore4FBugCatcherText:
 
 GoldenrodDeptStore4FGameboyKidText:
 	text "Some #MON"
-	line "evolve only by"
-
-	para "being traded via a"
-	line "Game Link cable."
+	line "evolve by using an"
+	cont "item on them."
 
 	para "I know of four:"
 	line "MACHOKE, KADABRA,"
