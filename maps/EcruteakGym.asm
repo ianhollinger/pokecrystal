@@ -49,7 +49,8 @@ EcruteakGymMortyScript:
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .Rematch
-        call .FightDone
+        checkevent EVENT_OPENED_MT_SILVER
+	iffalse .FightDone
 .Rematch:
         setval HO_OH
         special MonCheck
