@@ -932,7 +932,6 @@ _LearnedMoveText::
 _MoveAskForgetText::
 	text "Which move should"
 	next "be forgotten?"
-	text_promptbutton
 	done
 
 _StopLearningMoveText::
