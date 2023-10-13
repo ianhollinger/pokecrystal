@@ -1078,6 +1078,7 @@ SchoolboyGroup:
 
 	; SCHOOLBOY (10)
 	db "CHAD@", TRAINERTYPE_NORMAL
+        db 22, MR__MIME
 	db -1 ; end
 
 	; SCHOOLBOY (11)
