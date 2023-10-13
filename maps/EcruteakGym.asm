@@ -94,6 +94,8 @@ EcruteakGymMortyScript:
         iftrue .Hooh
         writetext MortyFightDoneText
 	waitbutton
+        closetext
+	end
 .Hooh:
         writetext MortyFightDoneHoohText
 	waitbutton
