@@ -87,6 +87,8 @@ GoldenrodPokecenter1FLassScript:
 GoldenrodPokecenter1FPokefanF:
 	faceplayer
 	opentext
+	checkevent EVENT_TRADED_EON_MAIL
+	iftrue .TradedMail
 	writetext GoldenrodPokecenter1FPokefanFDoYouHaveEonMailText
 	waitbutton
 	writetext GoldenrodPokecenter1FAskGiveAwayAnEonMailText
@@ -101,6 +103,7 @@ GoldenrodPokecenter1FPokefanF:
 	verbosegiveitem REVIVE
 	iffalse .NoRoom
 	writetext GoldenrodPokecenter1FPokefanFDaughterWillBeDelightedText
+	setevent EVENT_TRADED_EON_MAIL
 	waitbutton
 	closetext
 	end
@@ -114,6 +117,12 @@ GoldenrodPokecenter1FPokefanF:
 .NoRoom:
 	giveitem EON_MAIL
 	writetext GoldenrodPokecenter1FPokefanFAnotherTimeThenText
+	waitbutton
+	closetext
+	end
+
+.TradedMail:
+	writetext GoldenrodPokecenter1FPokefanFDaughterWillBeDelightedText
 	waitbutton
 	closetext
 	end
