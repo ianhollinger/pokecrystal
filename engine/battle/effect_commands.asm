@@ -4046,12 +4046,12 @@ BattleCommand_ParalyzeTarget:
 	ld a, [wTypeModifier]
 	and $7f
 	ret z
+        ld a, ELECTRIC ; Don't paralyze an Electric-type
+	call CheckIfTargetIsGivenType
+	ret z
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_PARALYZE
-	ret z
-	ld a, ELECTRIC ; Don't paralyze an Electric-type
-	call CheckIfTargetIsGivenType
 	ret z
 	ld a, [wEffectFailed]
 	and a
