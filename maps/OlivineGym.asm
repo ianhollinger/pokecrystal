@@ -254,7 +254,7 @@ OlivineGymGuideText:
 	para "type, a ground-"
 	line "or fighting-type"
 
-	para "move oughtta break"
+	para "move oughta break"
 	line "through its"
 	cont "defenses."
 	done
