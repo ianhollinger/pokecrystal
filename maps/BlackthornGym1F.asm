@@ -32,7 +32,7 @@ BlackthornGymClairScript:
 	checkflag ENGINE_RISINGBADGE
 	iftrue .AlreadyGotBadge
 	checkevent EVENT_BEAT_CLAIR
-	iftrue .PostGame
+	iftrue .FightDone
 	writetext ClairIntroText
 	waitbutton
 	closetext
