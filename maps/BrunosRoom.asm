@@ -41,6 +41,12 @@ BrunosRoomDoorLocksBehindYouScript:
 	end
 
 BrunoScript_Battle:
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue BrunoScript_PostGame
+	checkevent EVENT_OPENED_MT_SILVER
+	iffalse BrunoScript_Fight
+
+BrunoScript_PostGame:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_ELITE_4_BRUNO
@@ -49,10 +55,7 @@ BrunoScript_Battle:
 	waitbutton
 	closetext
 	winlosstext BrunoScript_BrunoBeatenText, 0
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue BrunoScript_PostGame
-	checkevent EVENT_OPENED_MT_SILVER
-	iffalse BrunoScript_Fight
+	loadtrainer BRUNO, BRUNO2
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_BRUNO
@@ -68,14 +71,30 @@ BrunoScript_Battle:
 	waitsfx
 	end
 
-BrunoScript_PostGame:
-	loadtrainer BRUNO, BRUNO2
-	ret
-
 BrunoScript_Fight:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_ELITE_4_BRUNO
+	iftrue BrunoScript_AfterBattle
+	writetext BrunoScript_BrunoBeforeText
+	waitbutton
+	closetext
+	winlosstext BrunoScript_BrunoBeatenText, 0
 	loadtrainer BRUNO, BRUNO1
-	ret
-
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_ELITE_4_BRUNO
+	opentext
+	writetext BrunoScript_BrunoDefeatText
+	waitbutton
+	closetext
+	playsound SFX_ENTER_DOOR
+	changeblock 4, 2, $16 ; open door
+	reloadmappart
+	closetext
+	setevent EVENT_BRUNOS_ROOM_EXIT_OPEN
+	waitsfx
+	end
 BrunoScript_AfterBattle:
 	writetext BrunoScript_BrunoDefeatText
 	waitbutton
