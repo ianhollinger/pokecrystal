@@ -70,11 +70,9 @@ WillScript_Battle:
 
 WillScript_PostGame:
 	loadtrainer WILL, WILL2
-	ret
 
 WillScript_Fight:
 	loadtrainer WILL, WILL1
-	ret
 
 WillScript_AfterBattle:
 	writetext WillScript_WillDefeatText
