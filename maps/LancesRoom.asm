@@ -55,16 +55,34 @@ LancesRoomLanceScript:
 	writetext LanceBattleIntroText
 	waitbutton
 	closetext
-	winlosstext LanceBattleWinText, 0
-	setlasttalked LANCESROOM_LANCE
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue LanceScript_PostGame
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse LanceScript_Fight
+
+LanceScript_PostGame:
+	loadtrainer LANCE, LANCE2
+	winlosstext LanceBattleWinText, 0
+	setlasttalked LANCESROOM_LANCE
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CHAMPION_LANCE
+	checkevent EVENT_BEAT_CHAMPION_LANCE
+	iftrue LanceScript_AfterBattle
+
+LanceScript_Fight:
+	loadtrainer LANCE, LANCE
+	winlosstext LanceBattleWinText, 0
+	setlasttalked LANCESROOM_LANCE
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	setevent EVENT_BEAT_CHAMPION_LANCE
+	checkevent EVENT_BEAT_CHAMPION_LANCE
+	iftrue LanceScript_AfterBattle
+
+LanceScript_AfterBattle:
 	opentext
 	writetext LanceBattleAfterText
 	waitbutton
@@ -130,14 +148,6 @@ LancesRoomLanceScript:
 	pause 15
 	warpfacing UP, HALL_OF_FAME, 4, 13
 	end
-
-LanceScript_PostGame:
-	loadtrainer LANCE, LANCE2
-	ret
-
-LanceScript_Fight:
-	loadtrainer LANCE, LANCE
-	ret
 
 LancesRoom_EnterMovement:
 	step UP
