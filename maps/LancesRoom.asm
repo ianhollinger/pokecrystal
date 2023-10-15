@@ -61,7 +61,7 @@ LancesRoomLanceScript:
 	iffalse LanceScript_Fight
 
 LanceScript_PostGame:
-	loadtrainer LANCE, LANCE2
+	loadtrainer CHAMPION, LANCE2
 	winlosstext LanceBattleWinText, 0
 	setlasttalked LANCESROOM_LANCE
 	startbattle
@@ -72,7 +72,7 @@ LanceScript_PostGame:
 	iftrue LanceScript_AfterBattle
 
 LanceScript_Fight:
-	loadtrainer LANCE, LANCE
+	loadtrainer CHAMPION, LANCE
 	winlosstext LanceBattleWinText, 0
 	setlasttalked LANCESROOM_LANCE
 	startbattle
