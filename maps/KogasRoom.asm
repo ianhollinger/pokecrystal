@@ -41,6 +41,12 @@ KogasRoomDoorLocksBehindYouScript:
 	end
 
 KogaScript_Battle:
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue KogaScript_PostGame
+	checkevent EVENT_OPENED_MT_SILVER
+	iffalse KogaScript_Fight
+
+KogaScript_Fight:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_ELITE_4_KOGA
@@ -49,10 +55,7 @@ KogaScript_Battle:
 	waitbutton
 	closetext
 	winlosstext KogaScript_KogaBeatenText, 0
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue KogaScript_PostGame
-	checkevent EVENT_OPENED_MT_SILVER
-	iffalse KogaScript_Fight
+	loadtrainer KOGA, KOGA1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KOGA
@@ -69,12 +72,29 @@ KogaScript_Battle:
 	end
 
 KogaScript_PostGame:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_ELITE_4_KOGA
+	iftrue KogaScript_AfterBattle
+	writetext KogaScript_KogaBeforeText
+	waitbutton
+	closetext
+	winlosstext KogaScript_KogaBeatenText, 0
 	loadtrainer KOGA, KOGA2
-	ret
-
-KogaScript_Fight:
-	loadtrainer KOGA, KOGA1
-	ret
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_ELITE_4_KOGA
+	opentext
+	writetext KogaScript_KogaDefeatText
+	waitbutton
+	closetext
+	playsound SFX_ENTER_DOOR
+	changeblock 4, 2, $16 ; open door
+	reloadmappart
+	closetext
+	setevent EVENT_KOGAS_ROOM_EXIT_OPEN
+	waitsfx
+	end
 
 KogaScript_AfterBattle:
 	writetext KogaScript_KogaDefeatText
