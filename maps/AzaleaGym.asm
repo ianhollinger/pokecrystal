@@ -204,7 +204,7 @@ BugsyRematchText:
 	line "again! Behold the" 
 
 	para "results of my"
-	cont "bug research!"
+	line "bug research!"
 	done
 
 BugsyRematchWinLossText:
