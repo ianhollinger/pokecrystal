@@ -41,6 +41,12 @@ WillsRoomDoorLocksBehindYouScript:
 	end
 
 WillScript_Battle:
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue WillScript_PostGame
+	checkevent EVENT_OPENED_MT_SILVER
+	iffalse WillScript_Fight
+
+WillScript_Fight:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_ELITE_4_WILL
@@ -49,10 +55,7 @@ WillScript_Battle:
 	waitbutton
 	closetext
 	winlosstext WillScript_WillBeatenText, 0
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue WillScript_PostGame
-	checkevent EVENT_OPENED_MT_SILVER
-	iffalse WillScript_Fight
+	loadtrainer WILL, WILL1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_WILL
@@ -69,10 +72,29 @@ WillScript_Battle:
 	end
 
 WillScript_PostGame:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_ELITE_4_WILL
+	iftrue WillScript_AfterBattle
+	writetext WillScript_WillBeforeText
+	waitbutton
+	closetext
+	winlosstext WillScript_WillBeatenText, 0
 	loadtrainer WILL, WILL2
-
-WillScript_Fight:
-	loadtrainer WILL, WILL1
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_ELITE_4_WILL
+	opentext
+	writetext WillScript_WillDefeatText
+	waitbutton
+	closetext
+	playsound SFX_ENTER_DOOR
+	changeblock 4, 2, $16 ; open door
+	reloadmappart
+	closetext
+	setevent EVENT_WILLS_ROOM_EXIT_OPEN
+	waitsfx
+	end
 
 WillScript_AfterBattle:
 	writetext WillScript_WillDefeatText
