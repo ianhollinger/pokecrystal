@@ -41,6 +41,12 @@ KarensRoomDoorLocksBehindYouScript:
 	end
 
 KarenScript_Battle:
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue KarenScript_PostGame
+	checkevent EVENT_OPENED_MT_SILVER
+	iffalse KarenScript_Fight
+
+KarenScript_Fight:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_ELITE_4_KAREN
@@ -49,10 +55,7 @@ KarenScript_Battle:
 	waitbutton
 	closetext
 	winlosstext KarenScript_KarenBeatenText, 0
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue KarenScript_PostGame
-	checkevent EVENT_OPENED_MT_SILVER
-	iffalse KarenScript_Fight
+	loadtrainer KAREN, KAREN1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KAREN
@@ -69,12 +72,29 @@ KarenScript_Battle:
 	end
 
 KarenScript_PostGame:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_ELITE_4_KAREN
+	iftrue KarenScript_AfterBattle
+	writetext KarenScript_KarenBeforeText
+	waitbutton
+	closetext
+	winlosstext KarenScript_KarenBeatenText, 0
 	loadtrainer KAREN, KAREN2
-	ret
-
-KarenScript_Fight:
-	loadtrainer KAREN, KAREN1
-	ret
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_ELITE_4_KAREN
+	opentext
+	writetext KarenScript_KarenDefeatText
+	waitbutton
+	closetext
+	playsound SFX_ENTER_DOOR
+	changeblock 4, 2, $16 ; open door
+	reloadmappart
+	closetext
+	setevent EVENT_KARENS_ROOM_EXIT_OPEN
+	waitsfx
+	end
 
 KarenScript_AfterBattle:
 	writetext KarenScript_KarenDefeatText
