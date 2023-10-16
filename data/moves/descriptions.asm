@@ -345,7 +345,7 @@ FlyDescription:
 
 BindDescription:
 	db   "Binds the target"
-	next "for 2-5 turns.@"
+	next "for 4-5 turns.@"
 
 SlamDescription:
 	db   "Slams the foe with"
@@ -405,7 +405,7 @@ BodySlamDescription:
 
 WrapDescription:
 	db   "Squeezes the foe"
-	next "for 2-5 turns.@"
+	next "for 4-5 turns.@"
 
 TakeDownDescription:
 	db   "A tackle that also"
@@ -420,16 +420,16 @@ DoubleEdgeDescription:
 	next "hurts the user.@"
 
 TailWhipDescription:
-	db   "Lowers the foe's"
-	next "DEFENSE.@"
+	db   "Wags tail cutely"
+	next "to lower DEFENSE.@"
 
 PoisonStingDescription:
 	db   "An attack that may"
 	next "poison the target.@"
 
 TwineedleDescription:
-	db   "Jabs the foe twice"
-	next "using stingers.@"
+	db   "Strikes twice with"
+	next "poison stingers.@"
 
 PinMissileDescription:
 	db   "Fires pins that"
@@ -469,7 +469,7 @@ DisableDescription:
 
 AcidDescription:
 	db   "An attack that may"
-	next "lower DEFENSE.@"
+	next "lower SPCL.DEF.@"
 
 EmberDescription:
 	db   "An attack that may"
@@ -532,8 +532,8 @@ SubmissionDescription:
 	next "so hurts the user.@"
 
 LowKickDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
+	db   "Deals more damage"
+	next "to heavier foes.@"
 
 CounterDescription:
 	db   "Returns a physical"
@@ -560,8 +560,8 @@ LeechSeedDescription:
 	next "foe on every turn.@"
 
 GrowthDescription:
-	db   "Raises the SPCL."
-	next "ATK rating.@"
+	db   "Raises ATTACK and"
+	next "SPCL.ATK stats.@"
 
 RazorLeafDescription:
 	db   "Has a high criti-"
@@ -588,7 +588,7 @@ PetalDanceDescription:
 	next "and confuses user.@"
 
 StringShotDescription:
-	db   "A move that lowers"
+	db   "Sharply lowers"
 	next "the foe's SPEED.@"
 
 DragonRageDescription:
@@ -597,7 +597,7 @@ DragonRageDescription:
 
 FireSpinDescription:
 	db   "Traps foe in fire"
-	next "for 2-5 turns.@"
+	next "for 4-5 turns.@"
 
 ThundershockDescription:
 	db   "An attack that may"
@@ -692,8 +692,8 @@ HardenDescription:
 	next "DEFENSE.@"
 
 MinimizeDescription:
-	db   "Heightens evasive-"
-	next "ness.@"
+	db   "Sharply boosts"
+	next "evasiveness.@"
 
 SmokescreenDescription:
 	db   "Lowers the foe's"
@@ -708,31 +708,31 @@ WithdrawDescription:
 	next "user's DEFENSE.@"
 
 DefenseCurlDescription:
-	db   "Heightens the"
-	next "user's DEFENSE.@"
+	db   "Curls up and"
+	next "raises DEFENSE.@"
 
 BarrierDescription:
 	db   "Sharply increases"
 	next "user's DEFENSE.@"
 
 LightScreenDescription:
-	db   "Ups SPCL.DEF with"
-	next "a wall of light.@"
+	db   "Ups allies' SPCL."
+	next "DEF for 5 turns.@"
 
 HazeDescription:
 	db   "Eliminates all"
 	next "stat changes.@"
 
 ReflectDescription:
-	db   "Raises DEFENSE"
-	next "with a barrier.@"
+	db   "Ups allies' DEF-"
+	next "ENSE for 5 turns.@"
 
 FocusEnergyDescription:
 	db   "Raises the criti-"
 	next "cal hit ratio.@"
 
 BideDescription:
-	db   "Waits 2-3 turns &"
+	db   "Waits 2 turns and"
 	next "hits back double.@"
 
 MetronomeDescription:
@@ -772,19 +772,19 @@ FireBlastDescription:
 	next "may cause a burn.@"
 
 WaterfallDescription:
-	db   "An aquatic charge"
-	next "attack.@"
+	db   "A charge attack."
+	next "May flinch foe.@"
 
 ClampDescription:
 	db   "Traps the foe for"
-	next "2-5 turns.@"
+	next "4-5 turns.@"
 
 SwiftDescription:
 	db   "An attack that"
 	next "never misses.@"
 
 SkullBashDescription:
-	db   "1st turn: Prepare"
+	db   "1st turn: Defend"
 	next "2nd turn: Attack@"
 
 SpikeCannonDescription:
@@ -936,8 +936,8 @@ TripleKickDescription:
 	next "with rising power.@"
 
 ThiefDescription:
-	db   "An attack that may"
-	next "steal a held item.@"
+	db   "A move that steals"
+	next "foe's held item.@"
 
 SpiderWebDescription:
 	db   "Prevents fleeing"
@@ -1029,7 +1029,7 @@ OctazookaDescription:
 
 SpikesDescription:
 	db   "Hurts foes when"
-	next "they switch out.@"
+	next "they switch in.@"
 
 ZapCannonDescription:
 	db   "An attack that"
@@ -1173,18 +1173,18 @@ BatonPassDescription:
 
 EncoreDescription:
 	db   "Makes the foe re-"
-	next "peat 2-6 times.@"
+	next "peat 3 times.@"
 
 PursuitDescription:
 	db   "Heavily strikes"
 	next "switching #MON.@"
 
 RapidSpinDescription:
-	db   "A high-speed"
-	next "spinning attack.@"
+	db   "Clears obstacles"
+	next "and raises SPEED.@"
 
 SweetScentDescription:
-	db   "Reduces the foe's"
+	db   "Sharply reduces"
 	next "evasiveness.@"
 
 IronTailDescription:
@@ -1200,16 +1200,16 @@ VitalThrowDescription:
 	next "that never misses.@"
 
 MorningSunDescription:
-	db   "Restores HP"
-	next "(varies by time).@"
+	db   "Restores more HP"
+	next "in the morning.@"
 
 SynthesisDescription:
-	db   "Restores HP"
-	next "(varies by time).@"
+	db   "Restores more HP"
+	next "during the day.@"
 
 MoonlightDescription:
-	db   "Restores HP"
-	next "(varies by time).@"
+	db   "Restores more HP"
+	next "at night.@"
 
 HiddenPowerDescription:
 	db   "The type varies"
@@ -1233,7 +1233,7 @@ SunnyDayDescription:
 
 CrunchDescription:
 	db   "An attack that may"
-	next "lower SPCL.DEF.@"
+	next "lower DEFENSE.@"
 
 MirrorCoatDescription:
 	db   "Counters a SPCL."
@@ -1265,7 +1265,7 @@ RockSmashDescription:
 
 WhirlpoolDescription:
 	db   "Traps the foe for"
-	next "2-5 turns.@"
+	next "4-5 turns.@"
 
 BeatUpDescription:
 	db   "Party #MON join"
