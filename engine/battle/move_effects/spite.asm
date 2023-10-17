@@ -35,11 +35,12 @@ BattleCommand_Spite:
 	push bc
 	call GetMoveName
 	; lose 2-5 PP
-	call BattleRandom
-	and %11
-	inc a
-	inc a
-	ld b, a
+;	call BattleRandom
+;	and %11
+;	inc a
+;	inc a
+;	ld b, a
+	ld b, 4
 	ld a, [hl]
 	and PP_MASK
 	cp b
