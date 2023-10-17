@@ -11,9 +11,9 @@ VioletGym_MapScripts:
 
 VioletGymFalknerScript:
 	faceplayer
-        opentext
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .PostGame
+        opentext
 	writetext FalknerIntroText
 	waitbutton
 	closetext
@@ -49,6 +49,7 @@ VioletGymFalknerScript:
 	iftrue .SpeechAfterRematch
         checkevent EVENT_GOT_TM31_MUD_SLAP
 	iftrue .SpeechAfterTM
+        opentext
 	setevent EVENT_BEAT_BIRD_KEEPER_ROD
 	setevent EVENT_BEAT_BIRD_KEEPER_ABE
 	setmapscene ELMS_LAB, SCENE_ELMSLAB_NOOP
@@ -64,6 +65,7 @@ VioletGymFalknerScript:
 	end
 
 .SpeechAfterTM:
+        opentext
 	writetext FalknerFightDoneText
 	waitbutton
 .NoRoomForMudSlap:
