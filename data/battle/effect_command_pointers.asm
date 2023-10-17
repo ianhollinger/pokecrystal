@@ -180,6 +180,6 @@ BattleCommandPointers:
 	dw BattleCommand_SuperEffectiveLoopText
 	dw BattleCommand_StartLoop
 	dw BattleCommand_Curl
-	dw BattleCommand_Growth
-	dw BattleCommand_LowKick 
+;	dw BattleCommand_Growth
+;	dw BattleCommand_LowKick 
 	assert_table_length NUM_EFFECT_COMMANDS
