@@ -2109,6 +2109,11 @@ Growth:
 	usedmovetext
 	doturn
 	growth
+        lowersub
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
 	endmove
 
 LowKick:
