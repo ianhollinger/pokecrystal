@@ -5593,8 +5593,10 @@ BattleCommand_TrapTarget:
 	bit SUBSTATUS_SUBSTITUTE, a
 	ret nz
 	call BattleRandom
-	; trapped for 2-5 turns
+	; trapped for 4-5 turns
 	and %11
+	inc a
+	inc a
 	inc a
 	inc a
 	inc a
