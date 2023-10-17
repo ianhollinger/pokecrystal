@@ -5806,6 +5806,9 @@ BattleCommand_Paralyze:
 	ld a, [wTypeModifier]
 	and $7f
 	jr z, .didnt_affect
+        ld a, ELECTRIC ; Don't paralyze an Electric-type
+	call CheckIfTargetIsGivenType
+	ret z
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_PARALYZE
