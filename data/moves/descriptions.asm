@@ -832,8 +832,8 @@ LeechLifeDescription:
 	next "damage inflicted.@"
 
 LovelyKissDescription:
-	db   "May cause the foe"
-	next "to fall asleep.@"
+	db   "An angelic kiss"
+	next "that causes sleep.@"
 
 SkyAttackDescription:
 	db   "Charges 1st turn"
@@ -972,8 +972,8 @@ Conversion2Description:
 	next "resist foe.@"
 
 AeroblastDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
+	db   "A high-critical-"
+	next "hit-ratio vortex.@"
 
 CottonSporeDescription:
 	db   "Puffballs sharply"
@@ -1008,8 +1008,8 @@ FaintAttackDescription:
 	next "never misses.@"
 
 SweetKissDescription:
-	db   "A move that causes"
-	next "confusion.@"
+	db   "An angelic kiss"
+	next "that confuses.@"
 
 BellyDrumDescription:
 	db   "Reduces own HP to"
@@ -1076,8 +1076,8 @@ GigaDrainDescription:
 	next "damage inflicted.@"
 
 EndureDescription:
-	db   "Always leaves at"
-	next "least 1HP.@"
+	db   "Survives with 1HP."
+	next "Fails eventually.@"
 
 CharmDescription:
 	db   "Sharply lowers the"
@@ -1192,7 +1192,7 @@ IronTailDescription:
 	next "May lower DEFENSE.@"
 
 MetalClawDescription:
-	db   "An attack that may"
+	db   "A slash that may"
 	next "up user's ATTACK.@"
 
 VitalThrowDescription:
@@ -1260,7 +1260,7 @@ FutureSightDescription:
 	next "turns into future.@"
 
 RockSmashDescription:
-	db   "Demolishes foe."
+	db   "Slugs the foe."
 	next "May lower DEFENSE.@"
 
 WhirlpoolDescription:
