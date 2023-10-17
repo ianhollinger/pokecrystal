@@ -745,92 +745,71 @@ ParkBallMultiplier:
 	ld b, $ff
 	ret
 
-HeavyBall_GetDexEntryBank:
-	push hl
-	push de
-	ld a, [wEnemyMonSpecies]
-	dec a
-	rlca
-	rlca
-	maskbits NUM_DEX_ENTRY_BANKS
-	ld hl, .PokedexEntryBanks
-	ld d, 0
-	ld e, a
-	add hl, de
-	ld a, [hl]
-	pop de
-	pop hl
-	ret
-
-.PokedexEntryBanks:
-	db BANK("Pokedex Entries 001-064")
-	db BANK("Pokedex Entries 065-128")
-	db BANK("Pokedex Entries 129-192")
-	db BANK("Pokedex Entries 193-251")
-
-HeavyBallMultiplier:
-; subtract 20 from catch rate if weight < 102.4 kg
-; else add 0 to catch rate if weight < 204.8 kg
-; else add 20 to catch rate if weight < 307.2 kg
-; else add 30 to catch rate if weight < 409.6 kg
-; else add 40 to catch rate
-	ld a, [wEnemyMonSpecies]
+GetSpeciesWeight::
+; input: a = species
+; output: hl = weight
 	ld hl, PokedexDataPointerTable
 	dec a
 	ld e, a
 	ld d, 0
 	add hl, de
 	add hl, de
+	add hl, de
+	ld a, BANK(PokedexDataPointerTable)
+	call GetFarByte
+	push af
+	inc hl
 	ld a, BANK(PokedexDataPointerTable)
 	call GetFarWord
+	pop de
 
-.SkipText:
-	call HeavyBall_GetDexEntryBank
+.skip_species
+	ld a, d
 	call GetFarByte
 	inc hl
 	cp "@"
-	jr nz, .SkipText
+	jr nz, .skip_species
 
-	call HeavyBall_GetDexEntryBank
+	; skip height
+	ld a, d
+	inc hl
+	inc hl
+
+	; get weight
+	jp GetFarWord
+
+HeavyBallMultiplier:
+; subtract 20 from base catch rate if weight < 102.4 kg
+; else add 0 to base catch rate if weight < 204.8 kg
+; else add 20 to base catch rate if weight < 307.2 kg
+; else add 30 to base catch rate if weight < 409.6 kg
+; else add 40 to base catch rate (never happens)
+	ld a, [wEnemyMonCatchRate]
+	ld b, a
+	call .do_it
+	ld a, b
+	ld [wEnemyMonCatchRate], a
+
+.do_it
+	ld a, [wEnemyMonSpecies]
+	call GetSpeciesWeight
+
 	push bc
-	inc hl
-	inc hl
-	call GetFarWord
-
 	srl h
 	rr l
 	ld b, h
 	ld c, l
-
 rept 4
 	srl b
 	rr c
 endr
 	call .subbc
-
 	srl b
 	rr c
 	call .subbc
-
 	ld a, h
 	pop bc
-	jr .compare
 
-.subbc
-	; subtract bc from hl
-	push bc
-	ld a, b
-	cpl
-	ld b, a
-	ld a, c
-	cpl
-	ld c, a
-	inc bc
-	add hl, bc
-	pop bc
-	ret
-
-.compare
 	ld c, a
 	cp HIGH(1024) ; 102.4 kg
 	jr c, .lightmon
@@ -850,7 +829,7 @@ endr
 	add [hl]
 	ld b, a
 	ret nc
-	ld b, $ff
+	ld b, 255
 	ret
 
 .lightmon
@@ -858,7 +837,21 @@ endr
 	sub 20
 	ld b, a
 	ret nc
-	ld b, $1
+	ld b, 1
+	ret
+
+.subbc
+	; subtract bc from hl
+	push bc
+	ld a, b
+	cpl
+	ld b, a
+	ld a, c
+	cpl
+	ld c, a
+	inc bc
+	add hl, bc
+	pop bc
 	ret
 
 .WeightsTable:
