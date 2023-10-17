@@ -45,6 +45,8 @@ VioletGymFalknerScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_FALKNER2
 .FightDone:
+	checkevent EVENT_BEAT_FALKNER2
+	iftrue .SpeechAfterRematch
         checkevent EVENT_GOT_TM31_MUD_SLAP
 	iftrue .SpeechAfterTM
 	setevent EVENT_BEAT_BIRD_KEEPER_ROD
