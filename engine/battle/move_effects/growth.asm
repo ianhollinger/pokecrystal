@@ -1,4 +1,4 @@
-BattleCommand_growth:
+BattleCommand_Growth:
 	  lb bc, ATTACK, SP_ATTACK
 	  ld a, [wBattleWeather]
 	  cp WEATHER_SUN
