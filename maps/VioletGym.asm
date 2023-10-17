@@ -70,7 +70,6 @@ VioletGymFalknerScript:
 	closetext
 	end
 .SpeechAfterRematch:
-	opentext
 	writetext FalknerRematchDoneText
 	waitbutton
 	closetext
