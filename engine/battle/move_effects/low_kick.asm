@@ -1,4 +1,4 @@
-BattleCommand_lowkick:
+BattleCommand_LowKick:
 	  push bc
 	  push de
 	  ldh a, [hBattleTurn]
