@@ -130,9 +130,6 @@ AcademyNotebook:
 	yesorno
 	iffalse .Done
 	writetext AcademyNotebookText2
-	yesorno
-	iffalse .Done
-	writetext AcademyNotebookText3
 	waitbutton
 .Done:
 	closetext
@@ -204,7 +201,7 @@ AcademyEarlTeachHowToRaiseWellText:
 	para "If #MON come"
 	line "out in battle even"
 
-	para "briefly, some EXP."
+	para "briefly, full EXP."
 	line "Points it gets."
 
 	para "At top of list put"
@@ -347,17 +344,39 @@ AcademyNotebookText:
 	para "Up to six can be"
 	line "in your party."
 
+	para "Before throwing a"
+	line "# BALL, weaken"
+	cont "the target first."
+
+	para "A #MON with a"
+	line "status condition"
+	cont "is easier to"
+        cont "catch."
+
 	para "Keep reading?"
 	done
 
 AcademyNotebookText1:
-	text "Before throwing a"
-	line "# BALL, weaken"
-	cont "the target first."
+        text "Electric-type"
+	line "#MON cannot be"
+        cont "paralyzed."
 
-	para "A poisoned or"
-	line "burned #MON is"
-	cont "easier to catch."
+	text "Fire-type #-"
+	line "MON cannot be"
+        cont "burned."
+
+        text "Ice-type #-"
+	line "MON cannot be"
+        cont "frozen."
+
+	para "Grass-type #-"
+	line "MON are immune"
+	cont "to powder and"
+	cont "spore moves."
+
+	para "And ghost-type"
+	line "#MON cannot be"
+        cont "trapped."
 
 	para "Keep reading?"
 	done
@@ -374,24 +393,9 @@ AcademyNotebookText2:
 	line "clears up any"
 	cont "confusion."
 
-	para "Keep reading?"
-	done
-
-AcademyNotebookText3:
-	text "People who catch"
-	line "and use #MON"
-
-	para "in battle are"
-	line "#MON trainers."
-
-	para "They are expected"
-	line "to visit #MON"
-
-	para "GYMS and defeat"
-	line "other trainers."
-
-	para "The next page"
-	line "is… Blank!"
+	para "The rest of the"
+	line "page is filled"
+        cont "with doodles…"
 
 	para "Boy: E-he-he…"
 
