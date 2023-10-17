@@ -43,7 +43,8 @@ BattleCommand_Encore:
 ;	inc a
 ;	inc a
 ;	ld [de], a
-	ld [de], 3
+	ld a, 3
+	ld [de], a
 	call CheckOpponentWentFirst
 	jr nz, .finish_move
 	ldh a, [hBattleTurn]
