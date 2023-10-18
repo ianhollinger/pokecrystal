@@ -361,11 +361,11 @@ AcademyNotebookText1:
 	line "#MON cannot be"
         cont "paralyzed."
 
-	text "Fire-type #-"
+	para "Fire-type #-"
 	line "MON cannot be"
         cont "burned."
 
-        text "Ice-type #-"
+        para "Ice-type #-"
 	line "MON cannot be"
         cont "frozen."
 
