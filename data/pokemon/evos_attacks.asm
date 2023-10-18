@@ -2370,27 +2370,29 @@ SentretEvosAttacks:
 	db 1, SCRATCH
 	db 1, FORESIGHT
 	db 5, DEFENSE_CURL
-	db 9, QUICK_ATTACK
+	db 10, QUICK_ATTACK
 	db 16, FURY_SWIPES
 	db 20, SLAM
-	db 24, REST
+	db 25, REST
 	db 31, AMNESIA
 	db 35, BATON_PASS
-	db 39, REVERSAL
+	db 40, REVERSAL
+        db 46, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 FurretEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, FORESIGHT
 	db 5, DEFENSE_CURL
-	db 9, QUICK_ATTACK
+	db 10, QUICK_ATTACK
 	db 14, AGILITY
-	db 18, FURY_SWIPES
-	db 23, SLAM
+	db 17, FURY_SWIPES
+	db 22, SLAM
 	db 28, REST
-	db 37, AMNESIA
-	db 42, BATON_PASS
-	db 47, REVERSAL
+	db 35, AMNESIA
+	db 40, BATON_PASS
+	db 46, REVERSAL
+        db 53, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 HoothootEvosAttacks:
