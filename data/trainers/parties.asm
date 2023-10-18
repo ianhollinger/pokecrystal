@@ -1184,7 +1184,7 @@ BirdKeeperGroup:
 	; BIRD_KEEPER (1)
 	db "ROD@", TRAINERTYPE_NORMAL
 	db  7, PIDGEY
-	db  7, NATU
+	db  7, PSYDUCK
 	db -1 ; end
 
 	; BIRD_KEEPER (2)
