@@ -38,8 +38,8 @@ OddEggs:
 
 	db PICHU
 	db NO_ITEM
-	db THUNDERSHOCK, CHARM, DIZZY_PUNCH, 0 
-	dw 02048 ; OT ID
+	db THUNDERSHOCK, DIZZY_PUNCH, 0, 0
+	dw 00256 ; OT ID
 	dt 0 ; Exp
 	; Stat exp
 	bigdw 0
@@ -64,7 +64,7 @@ OddEggs:
 
 	db PICHU
 	db NO_ITEM
-	db THUNDERSHOCK, CHARM, DIZZY_PUNCH, 0 
+	db THUNDERSHOCK, DIZZY_PUNCH, 0, 0
 	dw 00256 ; OT ID
 	dt 0 ; Exp
 	; Stat exp
@@ -74,7 +74,7 @@ OddEggs:
 	bigdw 0
 	bigdw 0
 	dn 7, 10, 10, 10 ; DVs
-	db 30, 20, 10, 0 ; PP
+	db 30, 10, 0, 0 ; PP
 	db 20 ; Step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
@@ -90,7 +90,7 @@ OddEggs:
 
 	db CLEFFA
 	db NO_ITEM
-	db POUND, CHARM, DIZZY_PUNCH, 0
+	db SPLASH, POUND, DIZZY_PUNCH, 0
 	dw 04096 ; OT ID
 	dt 0 ; Exp
 	; Stat exp
@@ -100,7 +100,7 @@ OddEggs:
 	bigdw 0
 	bigdw 0
 	dn 7, 7, 7, 7 ; DVs
-	db 35, 20, 10, 0 ; PP
+	db 40, 35, 10, 0 ; PP
 	db 20 ; Step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
@@ -116,8 +116,8 @@ OddEggs:
 
 	db CLEFFA
 	db NO_ITEM
-	db POUND, CHARM, DIZZY_PUNCH, 0
-	dw 00768 ; OT ID
+	db SPLASH, POUND, DIZZY_PUNCH, 0
+	dw 04096 ; OT ID
 	dt 0 ; Exp
 	; Stat exp
 	bigdw 0
@@ -125,6 +125,7 @@ OddEggs:
 	bigdw 0
 	bigdw 0
 	bigdw 0
+	db 40, 35, 10, 0 ; PP
 	dn 7, 10, 10, 10 ; DVs
 	db 35, 20, 10, 0 ; PP
 	db 20 ; Step cycles to hatch
