@@ -269,6 +269,7 @@ RaticateEvosAttacks:
 	db 13, BITE
 	db 17, HYPER_FANG
 	db 19, SCARY_FACE
+        db 20, SWORDS_DANCE
 	db 23, PURSUIT
 	db 29, CRUNCH
 	db 35, SUPER_FANG
@@ -1660,6 +1661,7 @@ TangelaEvosAttacks:
 	db 37, GIGA_DRAIN
 	db 41, SLEEP_POWDER
 	db 46, SLAM
+	db 50, AMNESIA
 	db 0 ; no more level-up moves
 
 KangaskhanEvosAttacks:
@@ -2521,20 +2523,21 @@ PichuEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, PIKACHU
 	db 0 ; no more evolutions
 	db 1, THUNDERSHOCK
-	db 1, CHARM
 	db 5, TAIL_WHIP
 	db 8, SWEET_KISS
 	db 12, THUNDER_WAVE
+        db 17, CHARM
 	db 0 ; no more level-up moves
 
 CleffaEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, CLEFAIRY
 	db 0 ; no more evolutions
+        db 1, SPLASH
 	db 1, POUND
-	db 1, CHARM
 	db 4, ENCORE 
 	db 8, SING 
 	db 13, SWEET_KISS
+        db 19, CHARM
 	db 0 ; no more level-up moves
 
 IgglybuffEvosAttacks:
