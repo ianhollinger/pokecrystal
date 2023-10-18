@@ -515,33 +515,37 @@ ClefableEvosAttacks:
 VulpixEvosAttacks:
 	db EVOLVE_ITEM, FIRE_STONE, NINETALES
 	db 0 ; no more evolutions
-	db 1, EMBER
-	db 1, TAIL_WHIP
-	db 5, ROAR
-	db 10, DISABLE
-	db 14, QUICK_ATTACK
-	db 19, SPITE
-	db 23, CONFUSE_RAY
-	db 28, FIRE_SPIN
-	db 32, FAINT_ATTACK
-	db 37, SAFEGUARD
-	db 41, FLAMETHROWER
+	db 1, TACKLE
+	db 4, TAIL_WHIP
+	db 8, EMBER
+	db 11, ROAR
+	db 15, DISABLE
+        db 18, QUICK_ATTACK
+	db 22, SPITE
+	db 25, FLAME_WHEEL
+        db 29, CONFUSE_RAY
+	db 32, FIRE_SPIN
+	db 36, FAINT_ATTACK
+	db 39, SAFEGUARD
+	db 43, FLAMETHROWER
 	db 46, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 NinetalesEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, EMBER
-	db 1, TAIL_WHIP
-	db 5, ROAR
-	db 10, DISABLE
-	db 14, QUICK_ATTACK
-	db 19, SPITE
-	db 23, CONFUSE_RAY
-	db 28, FIRE_SPIN
-	db 32, FAINT_ATTACK
-	db 37, SAFEGUARD
-	db 41, FLAMETHROWER
+	db 1, TACKLE
+	db 4, TAIL_WHIP
+	db 8, EMBER
+	db 11, ROAR
+	db 15, DISABLE
+        db 18, QUICK_ATTACK
+	db 22, SPITE
+	db 25, FLAME_WHEEL
+        db 29, CONFUSE_RAY
+	db 32, FIRE_SPIN
+	db 36, FAINT_ATTACK
+	db 39, SAFEGUARD
+	db 43, FLAMETHROWER
 	db 46, FIRE_BLAST
 	db 0 ; no more level-up moves
 
