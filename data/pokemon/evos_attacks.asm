@@ -1114,6 +1114,7 @@ RapidashEvosAttacks:
 	db 39, MEGAHORN
 	db 46, TAKE_DOWN
 	db 53, FIRE_BLAST 
+        db 67, HORN_DRILL
 	db 0 ; no more level-up moves
 
 SlowpokeEvosAttacks:
