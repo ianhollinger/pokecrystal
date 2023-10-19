@@ -127,7 +127,6 @@ OddEggs:
 	bigdw 0
 	db 40, 35, 10, 0 ; PP
 	dn 7, 10, 10, 10 ; DVs
-	db 35, 20, 10, 0 ; PP
 	db 20 ; Step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
