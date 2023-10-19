@@ -2985,9 +2985,9 @@ DunsparceEvosAttacks:
 	db 26, ANCIENTPOWER
 	db 29, BODY_SLAM
 	db 33, DIG
-	db 36, DOUBLE_EDGE
-	db 40, ENDURE
-	db 43, HORN_DRILL
+	db 36, HORN_DRILL 
+	db 40, DOUBLE_EDGE 
+	db 43, ENDURE
 	db 47, FLAIL
 	db 0 ; no more level-up moves
 
