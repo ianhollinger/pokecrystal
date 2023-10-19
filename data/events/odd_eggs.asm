@@ -48,7 +48,7 @@ OddEggs:
 	bigdw 0
 	bigdw 0
 	dn 7, 7, 7, 7 ; DVs
-	db 30, 20, 10, 0 ; PP
+	db 30, 10, 0, 0 ; PP
 	db 20 ; Step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
@@ -179,7 +179,7 @@ OddEggs:
 	bigdw 0
 	bigdw 0
 	dn 7, 10, 10, 10 ; DVs
-	db 15, 40, 0, 0 ; PP
+	db 15, 10, 0, 0 ; PP
 	db 20 ; Step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
@@ -231,7 +231,7 @@ OddEggs:
 	bigdw 0
 	bigdw 0
 	dn 7, 10, 10, 10 ; DVs
-	db 35, 30, 0, 0 ; PP
+	db 35, 10, 0, 0 ; PP
 	db 20 ; Step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
