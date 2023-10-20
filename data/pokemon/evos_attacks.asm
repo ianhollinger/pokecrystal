@@ -254,24 +254,24 @@ RattataEvosAttacks:
 	db 1, TACKLE
 	db 1, TAIL_WHIP
 	db 5, QUICK_ATTACK
-	db 9, FOCUS_ENERGY
-	db 13, BITE
-	db 17, HYPER_FANG
-	db 21, PURSUIT
-	db 25, CRUNCH
+	db 8, FOCUS_ENERGY
+	db 12, BITE
+	db 15, HYPER_FANG
+	db 19, PURSUIT
+        db 22, TAKE_DOWN
+	db 26, CRUNCH
 	db 29, SUPER_FANG
 	db 33, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 RaticateEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, FOCUS_ENERGY
-	db 13, BITE
-	db 17, HYPER_FANG
+	db 1, HYPER_FANG
+        db 19, PURSUIT
 	db 19, SCARY_FACE
         db 20, SWORDS_DANCE
-	db 23, PURSUIT
-	db 29, CRUNCH
+        db 24, TAKE_DOWN
+	db 30, CRUNCH
 	db 35, SUPER_FANG
 	db 41, DOUBLE_EDGE
 	db 0 ; no more level-up moves
