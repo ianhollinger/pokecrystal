@@ -16,7 +16,7 @@ AzaleaGymBugsyScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_BUGSY
-	iftrue .PostGame
+	iftrue .PostBattle
 	writetext BugsyText_INeverLose
 	waitbutton
 	closetext
@@ -32,23 +32,6 @@ AzaleaGymBugsyScript:
 	setflag ENGINE_HIVEBADGE
 	readvar VAR_BADGES
 	scall AzaleaGymActivateRockets
-.PostGame:
-	checkevent EVENT_BEAT_BUGSY2
-	iftrue .FightDone
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-	checkevent EVENT_OPENED_MT_SILVER
-	iffalse .FightDone
-.Rematch:
-	writetext BugsyRematchText
-	waitbutton
-	closetext
-	winlosstext BugsyRematchWinLossText, 0
-	loadtrainer BUGSY, BUGSY2
-	startbattle
-	reloadmapafterbattle
-	setevent EVENT_BEAT_BUGSY2
-        opentext
 .FightDone:
 	checkevent EVENT_GOT_TM49_FURY_CUTTER
 	iftrue .GotFuryCutter
@@ -65,6 +48,25 @@ AzaleaGymBugsyScript:
 	waitbutton
 	closetext
 	end
+
+.PostBattle:
+	checkevent EVENT_BEAT_BUGSY2
+	iftrue .FightDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	checkevent EVENT_OPENED_MT_SILVER
+	iffalse .FightDone
+
+.Rematch:
+	writetext BugsyRematchText
+	waitbutton
+	closetext
+	winlosstext BugsyRematchWinLossText, 0
+	loadtrainer BUGSY, BUGSY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BUGSY2
+        opentext
 
 .GotFuryCutter:
 	writetext BugsyText_BugMonsAreDeep
@@ -409,15 +411,15 @@ AzaleaGymGuideWinText:
 	done
 
 AzaleaGymGuideRematchText:
-	text "Yo, CHAMPION!"
+	text "Yo, CHAMP!"
 
 	para "BUGSY's not the"
-	line "kid you fought"
-	cont "way back when."
+	line "youngster you"
+	cont "fought before."
 
 	para "He's grown into"
 	line "a real bug-type"
-	cont "master."
+	cont "master!"
 
 	para "You won't be able"
 	line "to smush his"
