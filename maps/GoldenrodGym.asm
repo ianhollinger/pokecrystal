@@ -22,7 +22,7 @@ GoldenrodGymNoop2Scene:
 GoldenrodGymWhitneyScript:
 	faceplayer
 	checkevent EVENT_BEAT_WHITNEY
-	iftrue .PostGame
+	iftrue .FightDone
 	opentext
 	writetext WhitneyBeforeText
 	waitbutton
@@ -38,13 +38,6 @@ GoldenrodGymWhitneyScript:
 	setevent EVENT_BEAT_BEAUTY_SAMANTHA
 	setevent EVENT_BEAT_LASS_CARRIE
 	setevent EVENT_BEAT_LASS_BRIDGET
-.PostGame:
-	checkevent EVENT_BEAT_WHITNEY2
-	iftrue .RematchDone
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-	checkevent EVENT_OPENED_MT_SILVER
-	iffalse .FightDone
 .FightDone:
 	opentext
 	checkevent EVENT_MADE_WHITNEY_CRY
@@ -53,22 +46,12 @@ GoldenrodGymWhitneyScript:
 	waitbutton
 	closetext
 	end
-.RematchDone:
-	writetext WhitneyRematchAfterText
-	waitbutton
-	closetext
-	end
-.Rematch:
-        writetext WhitneyRematchBeforeText
-	waitbutton
-	closetext
-	winlosstext WhitneyRematchDefeatText, 0
-	loadtrainer WHITNEY, WHITNEY2
-	startbattle
-	reloadmapafterbattle
-	setevent EVENT_BEAT_WHITNEY2
 
 .StoppedCrying:
+	checkevent EVENT_BEAT_WHITNEY2
+	iftrue .RematchDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
 	checkevent EVENT_GOT_TM45_ATTRACT
 	iftrue .GotAttract
 	checkflag ENGINE_PLAINBADGE
@@ -89,6 +72,22 @@ GoldenrodGymWhitneyScript:
 	iffalse .NoRoomForAttract
 	setevent EVENT_GOT_TM45_ATTRACT
 	writetext WhitneyAttractText
+	waitbutton
+	closetext
+	end
+
+.Rematch:
+        writetext WhitneyRematchBeforeText
+	waitbutton
+	closetext
+	winlosstext WhitneyRematchDefeatText, 0
+	loadtrainer WHITNEY, WHITNEY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_WHITNEY2
+	opentext
+.RematchDone:
+	writetext WhitneyRematchAfterText
 	waitbutton
 	closetext
 	end
@@ -432,7 +431,7 @@ GoldenrodGymGuideText:
 	done
 
 GoldenrodGymGuideRematchText:
-	text "Yo! CHAMP!"
+	text "Yo, CHAMP!"
 
 	para "You've taken on"
         line "Whitney before!"
