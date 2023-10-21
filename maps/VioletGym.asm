@@ -341,7 +341,7 @@ VioletGymGuideWinText:
 	done
 
 VioletGymGuideRematchText:
-	text "Hey! CHAMPION!"
+	text "Hey, CHAMP!"
 
 	para "FALKNER's been"
 	line "itching to give"
