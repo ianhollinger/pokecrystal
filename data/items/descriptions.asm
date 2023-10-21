@@ -665,8 +665,8 @@ PinkBowDesc:
 	next "type moves. (HOLD)@"
 
 StickDesc:
-	db   "An ordinary stick."
-	next "Sell low.@"
+	db   "Ups FARFETCH'D's"
+	next "critical ratio.@"
 
 SmokeBallDesc:
 	db   "Escape from wild"
@@ -717,8 +717,8 @@ MiracleSeedDesc:
 	next "type moves. (HOLD)@"
 
 ThickClubDesc:
-	db   "A bone of some"
-	next "sort. Sell low.@"
+	db   "Ups CUBONE's and"
+	next "MAROWAK's ATTACK.@"
 
 FocusBandDesc:
 	db   "May prevent faint-"
@@ -835,7 +835,7 @@ TeruSama17Desc:
 
 MysteryBerryDesc:
 	db   "A self-restore"
-	next "for PP. (HOLD)@"
+	next "for PP. (10, HOLD)@"
 
 DragonScaleDesc:
 	db   "A rare dragon-type"
@@ -882,8 +882,8 @@ TeruSama21Desc:
 	db   "?@"
 
 LightBallDesc:
-	db   "An odd, electrical"
-	next "orb. (HOLD)@"
+	db   "Powers up"
+	next "PIKACHU. (HOLD)@"
 
 FriendBallDesc:
 	db   "A BALL that makes"
