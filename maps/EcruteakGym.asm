@@ -25,7 +25,7 @@ EcruteakGymMortyScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_MORTY
-	iftrue .PostGame
+	iftrue .PostBattle
 	writetext MortyIntroText
 	waitbutton
 	closetext
@@ -44,34 +44,6 @@ EcruteakGymMortyScript:
 	setmapscene ECRUTEAK_TIN_TOWER_ENTRANCE, SCENE_ECRUTEAKTINTOWERENTRANCE_NOOP
 	setevent EVENT_RANG_CLEAR_BELL_1
 	setevent EVENT_RANG_CLEAR_BELL_2
-.PostGame:
-	checkevent EVENT_BEAT_MORTY2
-	iftrue .FightDone
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-        checkevent EVENT_OPENED_MT_SILVER
-	iffalse .FightDone
-.Rematch:
-        setval HO_OH
-        special MonCheck
-        iffalse .NoHooh
-	writetext MortyRematchHoohText
-	waitbutton
-	closetext
-	winlosstext MortyRematchWinLossText, 0
-	loadtrainer MORTY, MORTY2
-	startbattle
-	reloadmapafterbattle
-	setevent EVENT_BEAT_MORTY2
-.NoHooh:
-        writetext MortyRematchText
-	waitbutton
-	closetext
-	winlosstext MortyRematchWinLossText, 0
-	loadtrainer MORTY, MORTY2
-	startbattle
-	reloadmapafterbattle
-	setevent EVENT_BEAT_MORTY2
 .FightDone:
 	checkevent EVENT_GOT_TM30_SHADOW_BALL
 	iftrue .GotShadowBall
@@ -88,10 +60,45 @@ EcruteakGymMortyScript:
 	waitbutton
 	closetext
 	end
-.GotShadowBall:
+
+.PostBattle:
+	checkevent EVENT_BEAT_MORTY2
+	iftrue .RematchDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+        checkevent EVENT_OPENED_MT_SILVER
+	iffalse .FightDone
+
+.Rematch:
         setval HO_OH
         special MonCheck
-        iftrue .Hooh
+        iffalse .NoHooh
+	writetext MortyRematchHoohText
+	waitbutton
+	closetext
+	winlosstext MortyRematchWinLossText, 0
+	loadtrainer MORTY, MORTY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_MORTY2
+	opentext
+        writetext MortyFightDoneHoohText
+	waitbutton
+        closetext
+	end
+
+.NoHooh:
+        writetext MortyRematchText
+	waitbutton
+	closetext
+	winlosstext MortyRematchWinLossText, 0
+	loadtrainer MORTY, MORTY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_MORTY2
+	opentext
+
+.GotShadowBall:
         writetext MortyFightDoneText
 	waitbutton
         closetext
@@ -100,6 +107,15 @@ EcruteakGymMortyScript:
         writetext MortyFightDoneHoohText
 	waitbutton
 .NoRoomForShadowBall:
+	closetext
+	end
+
+.RematchDone:
+        setval HO_OH
+        special MonCheck
+        iftrue .Hooh
+	writetext MortyFightDoneText
+	waitbutton
 	closetext
 	end
 
