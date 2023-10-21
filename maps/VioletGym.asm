@@ -48,6 +48,13 @@ VioletGymFalknerScript:
 	closetext
 	end
 
+.PostBattle:
+	checkevent EVENT_BEAT_FALKNER2
+	iftrue .SpeechAfterRematch
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	sjump .FightDone
+
 .Rematch:
 	writetext FalknerRematchText
 	waitbutton
@@ -57,23 +64,18 @@ VioletGymFalknerScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_FALKNER2
+	opentext
 
-.PostBattle:
-	checkevent EVENT_BEAT_FALKNER2
-	iftrue .SpeechAfterRematch
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-	sjump .FightDone
+.SpeechAfterRematch:
+	writetext FalknerRematchDoneText
+	waitbutton
+	closetext
+	end
 
 .SpeechAfterTM:
 	writetext FalknerFightDoneText
 	waitbutton
 .NoRoomForMudSlap:
-	closetext
-	end
-.SpeechAfterRematch:
-	writetext FalknerRematchDoneText
-	waitbutton
 	closetext
 	end
 
