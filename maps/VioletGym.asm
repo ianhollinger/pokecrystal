@@ -13,7 +13,7 @@ VioletGymFalknerScript:
 	faceplayer
         opentext
 	checkevent EVENT_BEAT_FALKNER
-	iftrue .PostGame
+	iftrue .PostBattle
 	writetext FalknerIntroText
 	waitbutton
 	closetext
@@ -29,21 +29,6 @@ VioletGymFalknerScript:
 	setflag ENGINE_ZEPHYRBADGE
 	readvar VAR_BADGES
 	scall VioletGymActivateRockets
-.PostGame:
-	checkevent EVENT_BEAT_FALKNER2
-	iftrue .SpeechAfterRematch
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-	sjump .FightDone
-.Rematch:
-	writetext FalknerRematchText
-	waitbutton
-	closetext
-	winlosstext FalknerRematchWinLossText, 0
-	loadtrainer FALKNER, FALKNER2
-	startbattle
-	reloadmapafterbattle
-	setevent EVENT_BEAT_FALKNER2
 .FightDone:
 	checkevent EVENT_BEAT_FALKNER2
 	iftrue .SpeechAfterRematch
@@ -62,6 +47,23 @@ VioletGymFalknerScript:
 	waitbutton
 	closetext
 	end
+
+.Rematch:
+	writetext FalknerRematchText
+	waitbutton
+	closetext
+	winlosstext FalknerRematchWinLossText, 0
+	loadtrainer FALKNER, FALKNER2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_FALKNER2
+
+.PostBattle:
+	checkevent EVENT_BEAT_FALKNER2
+	iftrue .SpeechAfterRematch
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	sjump .FightDone
 
 .SpeechAfterTM:
 	writetext FalknerFightDoneText
