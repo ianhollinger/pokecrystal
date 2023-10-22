@@ -11,7 +11,7 @@ OlivineGymJasmineScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_JASMINE
-	iftrue .PostGame
+	iftrue .PostBattle
 	writetext Jasmine_SteelTypeIntro
 	waitbutton
 	closetext
@@ -27,22 +27,6 @@ OlivineGymJasmineScript:
 	setflag ENGINE_MINERALBADGE
 	readvar VAR_BADGES
 	scall OlivineGymActivateRockets
-.PostGame:
-	checkevent EVENT_BEAT_JASMINE2
-	iftrue .FightDone
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-	checkevent EVENT_OPENED_MT_SILVER
-	iffalse .FightDone
-.Rematch:
-	writetext JasmineRematchText
-	waitbutton
-	closetext
-	winlosstext JasmineRematchWinLossText, 0
-	loadtrainer JASMINE, JASMINE2
-	startbattle
-	reloadmapafterbattle
-	setevent EVENT_BEAT_JASMINE2
 .FightDone:
 	checkevent EVENT_GOT_TM23_IRON_TAIL
 	iftrue .GotIronTail
@@ -58,15 +42,36 @@ OlivineGymJasmineScript:
 	closetext
 	end
 
+.PostBattle:
+	checkevent EVENT_BEAT_JASMINE2
+	iftrue .SpeechAfterRematch
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+	checkevent EVENT_OPENED_MT_SILVER
+	iffalse .FightDone
+
+.Rematch:
+	writetext JasmineRematchText
+	waitbutton
+	closetext
+	winlosstext JasmineRematchWinLossText, 0
+	loadtrainer JASMINE, JASMINE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_JASMINE2
+	opentext
+.SpeechAfterRematch:
+	writetext JasmineRematchDoneText
+	waitbutton
+	closetext
+	end
+
 .GotIronTail:
 	writetext Jasmine_GoodLuck
 	waitbutton
 .NoRoomForIronTail:
 	closetext
 	end
-.SpeechAfterRematch:
-	writetext JasmineRematchDoneText
-	waitbutton
 
 OlivineGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
