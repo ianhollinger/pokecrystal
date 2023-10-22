@@ -15,7 +15,7 @@ CeladonGymErikaScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_RAINBOWBADGE
-	iftrue .PostGame
+	iftrue .PostBattle
 	writetext ErikaBeforeBattleText
 	waitbutton
 	closetext
@@ -33,7 +33,21 @@ CeladonGymErikaScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_RAINBOWBADGE
-.PostGame:
+.FightDone:
+	checkevent EVENT_GOT_TM19_GIGA_DRAIN
+	iftrue .GotGigaDrain
+	writetext ErikaExplainTMText
+	promptbutton
+	verbosegiveitem TM_GIGA_DRAIN
+	iffalse .GotGigaDrain
+	setevent EVENT_GOT_TM19_GIGA_DRAIN
+.GotGigaDrain:
+	writetext ErikaAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.PostBattle:
 	checkevent EVENT_BEAT_ERIKA2
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
@@ -50,15 +64,7 @@ CeladonGymErikaScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ERIKA2
-.FightDone:
-	checkevent EVENT_GOT_TM19_GIGA_DRAIN
-	iftrue .GotGigaDrain
-	writetext ErikaExplainTMText
-	promptbutton
-	verbosegiveitem TM_GIGA_DRAIN
-	iffalse .GotGigaDrain
-	setevent EVENT_GOT_TM19_GIGA_DRAIN
-.GotGigaDrain:
+	opentext
 	writetext ErikaAfterBattleText
 	waitbutton
 	closetext
