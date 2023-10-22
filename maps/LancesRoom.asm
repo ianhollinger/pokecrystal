@@ -56,10 +56,7 @@ LancesRoomLanceScript:
 	waitbutton
 	closetext
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue LanceScript_PostGame
-	checkevent EVENT_OPENED_MT_SILVER
 	iffalse LanceScript_Fight
-
 LanceScript_PostGame:
 	loadtrainer CHAMPION, LANCE2
 	winlosstext LanceBattleWinText, 0
@@ -68,8 +65,7 @@ LanceScript_PostGame:
 	dontrestartmapmusic
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CHAMPION_LANCE
-	checkevent EVENT_BEAT_CHAMPION_LANCE
-	iftrue LanceScript_AfterBattle
+	sjump LanceScript_AfterBattle
 
 LanceScript_Fight:
 	loadtrainer CHAMPION, LANCE
@@ -79,9 +75,6 @@ LanceScript_Fight:
 	dontrestartmapmusic
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CHAMPION_LANCE
-	checkevent EVENT_BEAT_CHAMPION_LANCE
-	iftrue LanceScript_AfterBattle
-
 LanceScript_AfterBattle:
 	opentext
 	writetext LanceBattleAfterText
