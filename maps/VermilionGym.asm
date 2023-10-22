@@ -14,7 +14,7 @@ VermilionGymSurgeScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_THUNDERBADGE
-	iftrue .PostGame
+	iftrue .PostBattle
 	writetext LtSurgeIntroText
 	waitbutton
 	closetext
@@ -36,7 +36,15 @@ VermilionGymSurgeScript:
 	closetext
 	end
 
-.PostGame:
+.FightDone:
+	checkevent EVENT_BEAT_LTSURGE2
+	iftrue .SpeechAfterRematch
+	writetext LtSurgeFightDoneText
+	waitbutton
+	closetext
+	end
+
+.PostBattle:
 	checkevent EVENT_BEAT_LTSURGE2
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
@@ -53,13 +61,8 @@ VermilionGymSurgeScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_LTSURGE2
-.FightDone:
-	checkevent EVENT_BEAT_LTSURGE2
-	iftrue .SpeechAfterRematch
-	writetext LtSurgeFightDoneText
-	waitbutton
-	closetext
-	end
+	opentext
+
 .SpeechAfterRematch:
 	writetext LtSurgeRematchDefeatText
 	waitbutton
