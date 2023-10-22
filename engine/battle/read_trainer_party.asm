@@ -140,6 +140,10 @@ ReadTrainerPartyPieces:
 	ld a, [wOtherTrainerType]
 	bit TRAINERTYPE_STAT_EXP_F, a
 	jr z, .no_stat_exp
+	; if the stat exp option is turned off, ignore stat exp
+	ld a, [wOptions2]
+	and 1 << STAT_EXP_OPTION
+	jr z, .no_stat_exp
 
 	push hl
 	ld a, [wOTPartyCount]
