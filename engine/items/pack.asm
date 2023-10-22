@@ -114,7 +114,7 @@ Pack:
 	ld [wKeyItemsPocketScrollPosition], a
 	ld a, [wMenuCursorY]
 	ld [wKeyItemsPocketCursor], a
-	ld b, PACKSTATE_INITMEDICINEPOCKET ; left
+	ld b, PACKSTATE_INITBALLSPOCKET ; left
 	ld c, PACKSTATE_INITTMHMPOCKET ; right
 	call Pack_InterpretJoypad
 	ret c
@@ -236,40 +236,40 @@ Pack:
 	ld [wBallsPocketScrollPosition], a
 	ld a, [wMenuCursorY]
 	ld [wBallsPocketCursor], a
-	ld b, PACKSTATE_INITITEMSPOCKET ; left
-	ld c, PACKSTATE_INITMEDICINEPOCKET ; right
+	ld b, PACKSTATE_INITMEDICINEPOCKET ; left
+	ld c, PACKSTATE_INITKEYITEMSPOCKET ; right
 	call Pack_InterpretJoypad
 	ret c
 	call .ItemBallsKey_LoadSubmenu
 	ret
 
-	.InitMedicinePocket:
-		ld a, MEDICINE_POCKET
-		ld [wCurPocket], a
-		call ClearPocketList
-		call DrawPocketName
-		call WaitBGMap_DrawPackGFX
-		call Pack_JumptableNext
-		ret
+.InitMedicinePocket:
+	ld a, MEDICINE_POCKET
+	ld [wCurPocket], a
+	call ClearPocketList
+	call DrawPocketName
+	call WaitBGMap_DrawPackGFX
+	call Pack_JumptableNext
+	ret
 	
-	.MedicinePocketMenu:
-		ld hl, MedicinePocketMenuHeader
-		call CopyMenuHeader
-		ld a, [wMedicinePocketCursor]
-		ld [wMenuCursorPosition], a
-		ld a, [wMedicinePocketScrollPosition]
-		ld [wMenuScrollPosition], a
-		call ScrollingMenu
-		ld a, [wMenuScrollPosition]
-		ld [wMedicinePocketScrollPosition], a
-		ld a, [wMenuCursorY]
-		ld [wMedicinePocketCursor], a
-		ld b, PACKSTATE_INITBALLSPOCKET ; left
-		ld c, PACKSTATE_INITKEYITEMSPOCKET ; right
-		call Pack_InterpretJoypad
-		ret c
-		call .ItemBallsKey_LoadSubmenu
-		ret
+.MedicinePocketMenu:
+	ld hl, MedicinePocketMenuHeader
+	call CopyMenuHeader
+	ld a, [wMedicinePocketCursor]
+	ld [wMenuCursorPosition], a
+	ld a, [wMedicinePocketScrollPosition]
+	ld [wMenuScrollPosition], a
+	call ScrollingMenu
+	ld a, [wMenuScrollPosition]
+	ld [wMedicinePocketScrollPosition], a
+	ld a, [wMenuCursorY]
+	ld [wMedicinePocketCursor], a
+	ld b, PACKSTATE_INITITEMSPOCKET ; left
+	ld c, PACKSTATE_INITBALLSPOCKET ; right
+	call Pack_InterpretJoypad
+	ret c
+	call .ItemBallsKey_LoadSubmenu
+	ret
 
 .ItemBallsKey_LoadSubmenu:
 	farcall _CheckTossableItem
@@ -753,7 +753,7 @@ BattlePack:
 	ld [wKeyItemsPocketScrollPosition], a
 	ld a, [wMenuCursorY]
 	ld [wKeyItemsPocketCursor], a
-	ld b, PACKSTATE_INITMEDICINEPOCKET ; left
+	ld b, PACKSTATE_INITBALLSPOCKET ; left
 	ld c, PACKSTATE_INITTMHMPOCKET ; right
 	call Pack_InterpretJoypad
 	ret c
@@ -804,8 +804,8 @@ BattlePack:
 	ld [wBallsPocketScrollPosition], a
 	ld a, [wMenuCursorY]
 	ld [wBallsPocketCursor], a
-	ld b, PACKSTATE_INITITEMSPOCKET ; left
-	ld c, PACKSTATE_INITMEDICINEPOCKET ; right
+	ld b, PACKSTATE_INITMEDICINEPOCKET ; left
+	ld c, PACKSTATE_INITKEYITEMSPOCKET ; right
 	call Pack_InterpretJoypad
 	ret c
 	call ItemSubmenu
@@ -832,8 +832,8 @@ BattlePack:
 	ld [wMedicinePocketScrollPosition], a
 	ld a, [wMenuCursorY]
 	ld [wMedicinePocketCursor], a
-	ld b, PACKSTATE_INITBALLSPOCKET ; left
-	ld c, PACKSTATE_INITKEYITEMSPOCKET ; right
+	ld b, PACKSTATE_INITITEMSPOCKET ; left
+	ld c, PACKSTATE_INITBALLSPOCKET ; right
 	call Pack_InterpretJoypad
 	ret c
 	call ItemSubmenu
@@ -1003,8 +1003,8 @@ DepositSellPack:
 .Jumptable:
 ; entries correspond to *_POCKET constants
 	dw .ItemsPocket
-	dw .BallsPocket
 	dw .MedicinePocket
+	dw .BallsPocket
 	dw .KeyItemsPocket
 	dw .TMHMPocket
 
@@ -1049,22 +1049,6 @@ DepositSellPack:
 	ld [wCurItem], a
 	ret
 
-.BallsPocket:
-	ld a, BALL_POCKET
-	call InitPocket
-	ld hl, PC_Mart_BallsPocketMenuHeader
-	call CopyMenuHeader
-	ld a, [wBallsPocketCursor]
-	ld [wMenuCursorPosition], a
-	ld a, [wBallsPocketScrollPosition]
-	ld [wMenuScrollPosition], a
-	call ScrollingMenu
-	ld a, [wMenuScrollPosition]
-	ld [wBallsPocketScrollPosition], a
-	ld a, [wMenuCursorY]
-	ld [wBallsPocketCursor], a
-	ret
-
 .MedicinePocket:
 	ld a, MEDICINE_POCKET
 	call InitPocket
@@ -1079,6 +1063,22 @@ DepositSellPack:
 	ld [wMedicinePocketScrollPosition], a
 	ld a, [wMenuCursorY]
 	ld [wMedicinePocketCursor], a
+	ret
+
+.BallsPocket:
+	ld a, BALL_POCKET
+	call InitPocket
+	ld hl, PC_Mart_BallsPocketMenuHeader
+	call CopyMenuHeader
+	ld a, [wBallsPocketCursor]
+	ld [wMenuCursorPosition], a
+	ld a, [wBallsPocketScrollPosition]
+	ld [wMenuScrollPosition], a
+	call ScrollingMenu
+	ld a, [wMenuScrollPosition]
+	ld [wBallsPocketScrollPosition], a
+	ld a, [wMenuCursorY]
+	ld [wBallsPocketCursor], a
 	ret
 
 InitPocket:
@@ -1342,10 +1342,10 @@ DrawPackGFX:
 
 PackGFXPointers:
 	dw PackGFX + (15 tiles) * 1 ; ITEM_POCKET
-	dw PackGFX + (15 tiles) * 3 ; BALL_POCKET
+	dw PackGFX + (15 tiles) * 4 ; BALL_POCKET
 	dw PackGFX + (15 tiles) * 0 ; KEY_ITEM_POCKET
 	dw PackGFX + (15 tiles) * 2 ; TM_HM_POCKET
-	dw PackGFX + (15 tiles) * 4 ; MEDICINE_POCKET
+	dw PackGFX + (15 tiles) * 3 ; MEDICINE_POCKET
 
 Pack_InterpretJoypad:
 	ld hl, wMenuJoypad
