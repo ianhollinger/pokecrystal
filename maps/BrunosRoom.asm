@@ -41,16 +41,16 @@ BrunosRoomDoorLocksBehindYouScript:
 	end
 
 BrunoScript_Battle:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_ELITE_4_BRUNO
+	iftrue BrunoScript_AfterBattle
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue BrunoScript_PostGame
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse BrunoScript_Fight
 
 BrunoScript_PostGame:
-	faceplayer
-	opentext
-	checkevent EVENT_BEAT_ELITE_4_BRUNO
-	iftrue BrunoScript_AfterBattle
 	writetext BrunoScript_BrunoBeforeText
 	waitbutton
 	closetext
@@ -72,10 +72,6 @@ BrunoScript_PostGame:
 	end
 
 BrunoScript_Fight:
-	faceplayer
-	opentext
-	checkevent EVENT_BEAT_ELITE_4_BRUNO
-	iftrue BrunoScript_AfterBattle
 	writetext BrunoScript_BrunoBeforeText
 	waitbutton
 	closetext
