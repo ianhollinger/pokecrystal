@@ -15,7 +15,7 @@ SeafoamGymBlaineScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_VOLCANOBADGE
-	iftrue .PostGame
+	iftrue .PostBattle
 	writetext BlaineIntroText
 	waitbutton
 	closetext
@@ -24,7 +24,6 @@ SeafoamGymBlaineScript:
 	startbattle
 	iftrue .ReturnAfterBattle
 	appear SEAFOAMGYM_GYM_GUIDE
-
 .ReturnAfterBattle:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLAINE
@@ -38,7 +37,7 @@ SeafoamGymBlaineScript:
 	closetext
 	end
 
-.PostGame:
+.PostBattle:
 	checkevent EVENT_BEAT_BLAINE2
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
@@ -55,6 +54,7 @@ SeafoamGymBlaineScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLAINE2
+	opentext
 
 .FightDone:
 	writetext BlaineFightDoneText
