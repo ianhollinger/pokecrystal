@@ -18,7 +18,7 @@ CianwoodGymChuckScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_CHUCK
-	iftrue .PostGame
+	iftrue .PostBattle
 	writetext ChuckIntroText1
 	waitbutton
 	closetext
@@ -49,22 +49,6 @@ CianwoodGymChuckScript:
 	setflag ENGINE_STORMBADGE
 	readvar VAR_BADGES
 	scall CianwoodGymActivateRockets
-.PostGame:
-	checkevent EVENT_BEAT_CHUCK2
-	iftrue .FightDone
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-        checkevent EVENT_OPENED_MT_SILVER
-	iffalse .FightDone
-.Rematch:
-	writetext ChuckRematchText
-	waitbutton
-	closetext
-	winlosstext ChuckRematchWinLossText, 0
-	loadtrainer CHUCK, CHUCK2
-	startbattle
-	reloadmapafterbattle
-	setevent EVENT_BEAT_CHUCK2
 .FightDone:
 	checkevent EVENT_GOT_TM01_DYNAMICPUNCH
 	iftrue .AlreadyGotTM
@@ -78,6 +62,29 @@ CianwoodGymChuckScript:
 	iffalse .BagFull
 	setevent EVENT_GOT_TM01_DYNAMICPUNCH
 	writetext ChuckExplainTMText
+	waitbutton
+	closetext
+	end
+
+.PostBattle:
+	checkevent EVENT_BEAT_CHUCK2
+	iftrue .RematchDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
+        checkevent EVENT_OPENED_MT_SILVER
+	iffalse .FightDone
+
+.Rematch:
+	writetext ChuckRematchText
+	waitbutton
+	closetext
+	winlosstext ChuckRematchWinLossText, 0
+	loadtrainer CHUCK, CHUCK2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_CHUCK2
+.RematchDone:
+	writetext ChuckRematchAfterText
 	waitbutton
 	closetext
 	end
@@ -273,6 +280,18 @@ ChuckAfterText:
 
 	para "From now on, I'm"
 	line "going to train 24"
+	cont "hours a day!"
+	done
+
+ChuckRematchAfterText:
+	text "WAHAHAH! I enjoyed"
+	line "battling you!"
+
+	para "But a loss is a"
+	line "loss!"
+
+	para "I'm going to keep"
+	line "training 24"
 	cont "hours a day!"
 	done
 
