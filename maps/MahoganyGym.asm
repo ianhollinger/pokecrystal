@@ -16,7 +16,7 @@ MahoganyGymPryceScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_PRYCE
-	iftrue .PostGame
+	iftrue .PostBattle
 	writetext PryceText_Intro
 	waitbutton
 	closetext
@@ -32,13 +32,32 @@ MahoganyGymPryceScript:
 	setflag ENGINE_GLACIERBADGE
 	readvar VAR_BADGES
 	scall MahoganyGymActivateRockets
-.PostGame:
+.FightDone:
+	checkevent EVENT_GOT_TM16_ICY_WIND
+	iftrue .PryceScript_Defeat
+	setevent EVENT_BEAT_SKIER_ROXANNE
+	setevent EVENT_BEAT_SKIER_CLARISSA
+	setevent EVENT_BEAT_BOARDER_RONALD
+	setevent EVENT_BEAT_BOARDER_BRAD
+	setevent EVENT_BEAT_BOARDER_DOUGLAS
+	writetext PryceText_GlacierBadgeSpeech
+	promptbutton
+	verbosegiveitem TM_ICY_WIND
+	iffalse .MahoganyGym_NoRoomForIcyWind
+	setevent EVENT_GOT_TM16_ICY_WIND
+	writetext PryceText_IcyWindSpeech
+	waitbutton
+	closetext
+	end
+
+.PostBattle:
 	checkevent EVENT_BEAT_PRYCE2
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .Rematch
         checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
+
 .Rematch:
 	writetext PryceRematchText
 	waitbutton
@@ -48,28 +67,12 @@ MahoganyGymPryceScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_PRYCE2
-.FightDone:
-	checkevent EVENT_GOT_TM16_ICY_WIND
-	iftrue PryceScript_Defeat
-	setevent EVENT_BEAT_SKIER_ROXANNE
-	setevent EVENT_BEAT_SKIER_CLARISSA
-	setevent EVENT_BEAT_BOARDER_RONALD
-	setevent EVENT_BEAT_BOARDER_BRAD
-	setevent EVENT_BEAT_BOARDER_DOUGLAS
-	writetext PryceText_GlacierBadgeSpeech
-	promptbutton
-	verbosegiveitem TM_ICY_WIND
-	iffalse MahoganyGym_NoRoomForIcyWind
-	setevent EVENT_GOT_TM16_ICY_WIND
-	writetext PryceText_IcyWindSpeech
-	waitbutton
-	closetext
-	end
+	opentext
 
-PryceScript_Defeat:
+.PryceScript_Defeat:
 	writetext PryceText_CherishYourPokemon
 	waitbutton
-MahoganyGym_NoRoomForIcyWind:
+.MahoganyGym_NoRoomForIcyWind:
 	closetext
 	end
 
@@ -220,7 +223,7 @@ PryceText_Impressed:
 
 PryceRematchText:
 	text "Ah, young"
-	line "Champion!"
+	line "CHAMPION!"
 
 	para "Do you know why"
 	line "they call me the"
