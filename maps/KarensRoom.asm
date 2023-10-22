@@ -41,16 +41,16 @@ KarensRoomDoorLocksBehindYouScript:
 	end
 
 KarenScript_Battle:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_ELITE_4_KAREN
+	iftrue KarenScript_AfterBattle
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue KarenScript_PostGame
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse KarenScript_Fight
 
 KarenScript_Fight:
-	faceplayer
-	opentext
-	checkevent EVENT_BEAT_ELITE_4_KAREN
-	iftrue KarenScript_AfterBattle
 	writetext KarenScript_KarenBeforeText
 	waitbutton
 	closetext
@@ -72,10 +72,6 @@ KarenScript_Fight:
 	end
 
 KarenScript_PostGame:
-	faceplayer
-	opentext
-	checkevent EVENT_BEAT_ELITE_4_KAREN
-	iftrue KarenScript_AfterBattle
 	writetext KarenScript_KarenBeforeText
 	waitbutton
 	closetext
