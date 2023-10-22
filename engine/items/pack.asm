@@ -87,7 +87,7 @@ Pack:
 	ld a, [wMenuCursorY]
 	ld [wItemsPocketCursor], a
 	ld b, PACKSTATE_INITTMHMPOCKET ; left
-	ld c, PACKSTATE_INITBALLSPOCKET ; right
+	ld c, PACKSTATE_INITMEDICINEPOCKET ; right
 	call Pack_InterpretJoypad
 	ret c
 	call .ItemBallsKey_LoadSubmenu
