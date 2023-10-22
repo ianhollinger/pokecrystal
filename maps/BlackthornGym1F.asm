@@ -54,6 +54,11 @@ BlackthornGymClairScript:
 	setevent EVENT_BLACKTHORN_CITY_GRAMPS_BLOCKS_DRAGONS_DEN
 	clearevent EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
 	end
+.FightDone:
+	writetext ClairText_TooMuchToExpect
+	waitbutton
+	closetext
+	end
 
 .AlreadyGotBadge:
         checkevent EVENT_OPENED_MT_SILVER
@@ -83,24 +88,19 @@ BlackthornGymClairScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CLAIR2
-
-.PostGame:
-	checkevent EVENT_BEAT_CLAIR2
-	iftrue .RematchDone
-	checkevent EVENT_BEAT_CLAIR2
-	iffalse .Rematch
-
-.FightDone:
-	writetext ClairText_TooMuchToExpect
-	waitbutton
-	closetext
-	end
+	opentext
 
 .RematchDone:
 	writetext ClairRematchDoneText
 	waitbutton
         closetext
         end
+
+.PostGame:
+	checkevent EVENT_BEAT_CLAIR2
+	iftrue .RematchDone
+	checkevent EVENT_BEAT_CLAIR2
+	iffalse .Rematch
 
 .BagFull:
 	writetext BlackthornGymClairText_BagFull
