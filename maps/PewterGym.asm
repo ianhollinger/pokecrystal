@@ -12,7 +12,7 @@ PewterGymBrockScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_BOULDERBADGE
-	iftrue .PostGame
+	iftrue .PostBattle
 	writetext BrockIntroText
 	waitbutton
 	closetext
@@ -32,7 +32,7 @@ PewterGymBrockScript:
 	closetext
 	end
 
-.PostGame:
+.PostBattle:
 	checkevent EVENT_BEAT_BROCK2
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
@@ -49,6 +49,7 @@ PewterGymBrockScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BROCK2
+	opentext
 
 .FightDone:
 	writetext BrockFightDoneText
@@ -173,10 +174,9 @@ BrockFightDoneText:
 	done
 
 BrockRematchText:
-	text "BROCK: …You sure"
-	line "look different"
-	cont "from when we first"
-	cont "met!"
+	text "BROCK: I heard"
+	line "you've beaten"
+	cont "BLUE."
 
 	para "Please allow me"
 	line "the privilege of"
@@ -184,7 +184,7 @@ BrockRematchText:
 	para "facing you in"
 	line "battle once again!"
 
-	para "Allow me to show"
+	para "I will show"
 	line "you the true rock-"
 	cont "hard strength of"
 	cont "my #MON!"
