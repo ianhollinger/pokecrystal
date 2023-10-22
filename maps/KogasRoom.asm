@@ -41,16 +41,16 @@ KogasRoomDoorLocksBehindYouScript:
 	end
 
 KogaScript_Battle:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_ELITE_4_KOGA
+	iftrue KogaScript_AfterBattle
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue KogaScript_PostGame
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse KogaScript_Fight
 
 KogaScript_Fight:
-	faceplayer
-	opentext
-	checkevent EVENT_BEAT_ELITE_4_KOGA
-	iftrue KogaScript_AfterBattle
 	writetext KogaScript_KogaBeforeText
 	waitbutton
 	closetext
@@ -72,10 +72,6 @@ KogaScript_Fight:
 	end
 
 KogaScript_PostGame:
-	faceplayer
-	opentext
-	checkevent EVENT_BEAT_ELITE_4_KOGA
-	iftrue KogaScript_AfterBattle
 	writetext KogaScript_KogaBeforeText
 	waitbutton
 	closetext
