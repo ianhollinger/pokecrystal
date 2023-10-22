@@ -49,6 +49,7 @@ FuchsiaGymJanineScript:
 	iffalse .FightDone
 
 .Rematch:
+	opentext
 	writetext JanineText_Rematch
 	waitbutton
 	closetext
