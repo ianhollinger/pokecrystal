@@ -1808,6 +1808,7 @@ wGBPrinterBrightness::
 	db
 wOptions2::
 ; bit 1: menu account off/on
+; bit 2: enemy stat exp off/on
 	db
 	ds 2
 wOptionsEnd::
