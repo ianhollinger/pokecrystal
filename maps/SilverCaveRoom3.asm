@@ -13,11 +13,11 @@ Red:
 	writetext RedSeenText
 	waitbutton
 	closetext
-	winlosstext RedWinLossText, RedWinLossText
 	checkevent EVENT_BEAT_RED
 	iftrue .Rematch 
-	checkevent EVENT_BEAT_RED
-	iffalse .Battle 
+	winlosstext RedWinLossText, RedWinLossText
+	loadtrainer RED, RED1
+.Battle:
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -38,11 +38,9 @@ Red:
 	credits
 	end
 .Rematch:
+	winlosstext RedWinLossText, RedWinLossText
 	loadtrainer RED, RED2
-	ret
-.Battle:
-	loadtrainer RED, RED1
-	ret
+	sjump .Battle
 
 RedSeenText:
 	text "<……>"
