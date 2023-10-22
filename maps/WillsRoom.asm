@@ -41,16 +41,16 @@ WillsRoomDoorLocksBehindYouScript:
 	end
 
 WillScript_Battle:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_ELITE_4_WILL
+	iftrue WillScript_AfterBattle
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue WillScript_PostGame
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse WillScript_Fight
 
 WillScript_Fight:
-	faceplayer
-	opentext
-	checkevent EVENT_BEAT_ELITE_4_WILL
-	iftrue WillScript_AfterBattle
 	writetext WillScript_WillBeforeText
 	waitbutton
 	closetext
@@ -72,10 +72,6 @@ WillScript_Fight:
 	end
 
 WillScript_PostGame:
-	faceplayer
-	opentext
-	checkevent EVENT_BEAT_ELITE_4_WILL
-	iftrue WillScript_AfterBattle
 	writetext WillScript_WillBeforeText
 	waitbutton
 	closetext
