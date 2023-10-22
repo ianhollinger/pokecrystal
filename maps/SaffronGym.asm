@@ -15,7 +15,7 @@ SaffronGymSabrinaScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_MARSHBADGE
-	iftrue .PostGame
+	iftrue .PostBattle
 	writetext SabrinaIntroText
 	waitbutton
 	closetext
@@ -38,7 +38,7 @@ SaffronGymSabrinaScript:
 	closetext
 	end
 
-.PostGame:
+.PostBattle:
 	checkevent EVENT_BEAT_SABRINA2
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
@@ -55,6 +55,7 @@ SaffronGymSabrinaScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_SABRINA2
+	opentext
 
 .FightDone:
 	writetext SabrinaFightDoneText
