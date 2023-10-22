@@ -11,7 +11,7 @@ ViridianGymBlueScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_EARTHBADGE
-	iftrue .PostGame
+	iftrue .PostBattle
 	writetext LeaderBlueBeforeText
 	waitbutton
 	closetext
@@ -30,9 +30,9 @@ ViridianGymBlueScript:
 	closetext
 	end
 
-.PostGame:
+.PostBattle:
 	checkevent EVENT_BEAT_BLUE2
-	iftrue .FightDone
+	iftrue .RematchDone
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .Rematch
 	checkevent EVENT_OPENED_MT_SILVER
@@ -47,17 +47,15 @@ ViridianGymBlueScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLUE2
-
-.FightDone:
-	checkevent EVENT_BEAT_BLUE2
-	iftrue .RematchDone
-	writetext LeaderBlueEpilogueText
+	opentext
+.RematchDone:
+	writetext LeaderBlueRematchEpilogueText
 	waitbutton
 	closetext
 	end
 
-.RematchDone:
-	writetext LeaderBlueRematchEpilogueText
+.FightDone:
+	writetext LeaderBlueEpilogueText
 	waitbutton
 	closetext
 	end
