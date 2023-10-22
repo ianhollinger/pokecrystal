@@ -60,7 +60,7 @@ CeruleanGymMistyScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_CASCADEBADGE
-	iftrue .PostGame
+	iftrue .PostBattle
 	writetext MistyIntroText
 	waitbutton
 	closetext
@@ -77,9 +77,15 @@ CeruleanGymMistyScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_CASCADEBADGE
-.PostGame:
+.FightDone:
+	writetext MistyFightDoneText
+	waitbutton
+	closetext
+	end
+
+.PostBattle:
 	checkevent EVENT_BEAT_MISTY2
-	iftrue .FightDone
+	iftrue .SpeechAfterRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .Rematch
 	checkevent EVENT_OPENED_MT_SILVER
@@ -93,18 +99,14 @@ CeruleanGymMistyScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_MISTY2
-.FightDone:
-	checkevent EVENT_BEAT_MISTY2
-	iftrue .SpeechAfterRematch
-	writetext MistyFightDoneText
-	waitbutton
-	closetext
-	end
+	opentext
+
 .SpeechAfterRematch
 	writetext MistyRematchDoneText
 	waitbutton
 	closetext
 	end
+
 TrainerSwimmerfDiana:
 	trainer SWIMMERF, DIANA, EVENT_BEAT_SWIMMERF_DIANA, SwimmerfDianaSeenText, SwimmerfDianaBeatenText, 0, .Script
 
