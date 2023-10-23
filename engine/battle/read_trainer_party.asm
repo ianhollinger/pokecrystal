@@ -303,12 +303,17 @@ endr
 	ld d, h
 	ld e, l
 
+	; if the stat exp option is turned off, ignore stat exp
+	ld c, [wOptions2]
+	and 1 << STAT_EXP_OPTION
+	jr z, .recalculate_stats
+
 	ld a, [wOTPartyCount]
 	dec a
 	ld hl, wOTPartyMon1StatExp - 1
 	call GetPartyLocation
 
-; recalculate stats
+.recalculate_stats
 	ld b, TRUE
 	push de
 	predef CalcMonStats
