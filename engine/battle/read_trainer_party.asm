@@ -304,7 +304,7 @@ endr
 	ld e, l
 
 	; if the stat exp option is turned off, ignore stat exp
-	ld c, [wOptions2]
+	ld a, [wOptions2]
 	and 1 << STAT_EXP_OPTION
 	jr z, .recalculate_stats
 
