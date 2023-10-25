@@ -1182,12 +1182,9 @@ ErikaGroup:
 YoungsterGroup:
 	; YOUNGSTER (1)
 	db "JOEY@", TRAINERTYPE_DVS | TRAINERTYPE_STAT_EXP
-	db  6, BLISSEY
+	db  4, RATTATA
 		db PERFECT_DV, PERFECT_DV
 		dw $009F, $009F, $009F, $009F, $009F
-	db  6, BLISSEY
-		db PERFECT_DV, PERFECT_DV
-		dw $FEFE, $FEFE, $FEFE, $FEFE, $FEFE
 	db -1 ; end
 
 	; YOUNGSTER (2)
