@@ -6200,10 +6200,6 @@ LoadEnemyMon:
 	cp TRAINER_BATTLE
 	jr nz, .no_stat_exp
 
-	ld a, [wOptions2]
-	and 1 << STAT_EXP_OPTION
-	jr z, .no_stat_exp
-
 	ld a, [wCurPartyMon]
 	ld hl, wOTPartyMon1StatExp - 1
 	call GetPartyLocation
