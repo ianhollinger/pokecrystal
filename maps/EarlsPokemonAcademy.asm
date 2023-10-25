@@ -225,14 +225,18 @@ AcademyEarlNoMoreToTeachText:
 	done
 
 EarlsPokemonAcademyYoungster1Text:
-	text "I'm taking notes"
-	line "of the teacher's"
-	cont "lecture."
+	text "#MON have hid-"
+	line "den stats called"
+	cont "effort points."
 
-	para "I'd better copy"
-	line "the stuff on the"
-	cont "blackboard too."
-	done
+	para "Every time your"
+        line "#MON wins a"
+        cont "battle, it earns"
+
+        para "effort points and"
+        line "gets a little"
+        cont "stronger."
+        done
 
 EarlsPokemonAcademyGameboyKid1Text:
 	text "I traded my best"
