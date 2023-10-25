@@ -140,10 +140,6 @@ ReadTrainerPartyPieces:
 	ld a, [wOtherTrainerType]
 	bit TRAINERTYPE_STAT_EXP_F, a
 	jr z, .no_stat_exp
-	; if the stat exp option is turned off, ignore stat exp
-	ld a, [wOptions2]
-	and 1 << STAT_EXP_OPTION
-	jr z, .no_stat_exp
 
 	push hl
 	ld a, [wOTPartyCount]
@@ -156,7 +152,21 @@ ReadTrainerPartyPieces:
 
 	ld c, NUM_EXP_STATS
 .stat_exp_loop
+; if the stat exp option is turned off, set stat exp to 0
+	push a
+	ld a, [wOptions2]
+	and 1 << STAT_EXP_OPTION
+	jr nz, .perfect_stat_exp
+	pop a
+rept 2
+	call GetNextTrainerDataByte
+	ld [de], 0
+	inc de
+endr
+	jr .continue_stat_exp
+
 ; When reading stat experience, treat PERFECT_STAT_EXP as $FFFF
+.perfect_stat_exp
 	call GetNextTrainerDataByte
 	dec hl
 	cp LOW(PERFECT_STAT_EXP)
@@ -302,11 +312,6 @@ endr
 	call GetPartyLocation
 	ld d, h
 	ld e, l
-
-	; if the stat exp option is turned off, ignore stat exp
-	ld a, [wOptions2]
-	and 1 << STAT_EXP_OPTION
-	jr z, .recalculate_stats
 
 	ld a, [wOTPartyCount]
 	dec a
