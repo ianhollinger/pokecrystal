@@ -32,9 +32,20 @@ Oak:
 	writetext OakLabDexCheckText
 	waitbutton
 	special ProfOaksPCBoot
+	readvar VAR_DEXCAUGHT
+	ifgreater NUM_POKEMON - 2 - 1, .CompletedPokedex ; ignore Mew and Celebi
 	writetext OakLabGoodbyeText
 	waitbutton
 	closetext
+	end
+
+.CompletedPokedex:
+	writetext OakLabCompletedPokedexText
+	promptbutton
+	special Diploma
+	waitbutton
+	closetext
+	setevent EVENT_ENABLE_DIPLOMA_PRINTING
 	end
 
 .OpenMtSilver:
@@ -180,6 +191,14 @@ OakYesKantoBadgesText:
 
 	para "Keep trying hard,"
 	line "<PLAY_G>!"
+	done
+
+OakLabCompletedPokedexText:
+	text "You deserve some"
+	line "recognition for"
+	cont "your hard work!"
+
+	para "…"
 	done
 
 OaksAssistant1Text:
