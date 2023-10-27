@@ -365,13 +365,11 @@ AcademyNotebookText1:
 	line "#MON cannot be"
         cont "paralyzed."
 
-	para "Fire-type #-"
-	line "MON cannot be"
-        cont "burned."
+	para "Fire-type #MON"
+	line "cannot be burned."
 
-        para "Ice-type #-"
-	line "MON cannot be"
-        cont "frozen."
+        para "Ice-type #MON"
+	line "cannot be frozen."
 
 	para "Grass-type #-"
 	line "MON are immune"
