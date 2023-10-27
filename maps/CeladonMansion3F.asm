@@ -12,6 +12,10 @@ CeladonMansion3F_MapScripts:
 GameFreakGameDesignerScript:
 	faceplayer
 	opentext
+	checkevent EVENT_GOT_MEW
+	iftrue .GotMew
+	checkevent EVENT_BEAT_MORIMOTO
+	iftrue .GiveMew
 	writetext GameFreakGameDesignerText
 	readvar VAR_DEXCAUGHT
 	ifgreater NUM_POKEMON - 2 - 1, .CompletedPokedex ; ignore Mew and Celebi
@@ -24,13 +28,49 @@ GameFreakGameDesignerScript:
 	writetext GameFreakGameDesignerCompletedPokedexText
 	playsound SFX_DEX_FANFARE_230_PLUS
 	waitsfx
-	writetext GameFreakGameDesignerPauseForDiplomaText
-	promptbutton
-	special Diploma
-	writetext GameFreakGameDesignerAfterDiplomaText
+;	writetext GameFreakGameDesignerPauseForDiplomaText
+	writetext GameFreakGameDesignerAskForBattleText
+	yesorno
+	iffalse .Refused
+	writetext GameFreakGameDesignerLetsBeginText
 	waitbutton
 	closetext
-	setevent EVENT_ENABLE_DIPLOMA_PRINTING
+	winlosstext GameFreakGameDesignerWinLossText, 0
+	loadtrainer SUPER_NERD, MORIMOTO
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_MORIMOTO
+	opentext
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .NoRoom
+;	special Diploma
+;	writetext GameFreakGameDesignerAfterDiplomaText
+;	setevent EVENT_ENABLE_DIPLOMA_PRINTING
+.GiveMew:
+	writetext GameFreakGameDesignerMewText
+	promptbutton
+	waitsfx
+	writetext ReceivedMewText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke MEW, 30
+	setevent EVENT_GOT_MEW	
+.GotMew:
+	writetext GameFreakGameDesignerGoodLuckText
+	waitbutton
+	closetext
+	end
+
+.Refused:
+	writetext GameFreakGameDesignerRefusedText
+	waitbutton
+	closetext
+	end
+	
+.NoRoom:
+	writetext GameFreakGameDesignerPartyFullText
+	waitbutton
+	closetext
 	end
 
 GameFreakGraphicArtistScript:
@@ -102,6 +142,57 @@ GameFreakGameDesignerCompletedPokedexText:
 
 GameFreakGameDesignerPauseForDiplomaText:
 	text "…"
+	done
+
+GameFreakGameDesignerAskForBattleText:
+	text "Do you want to"
+	line "have a battle"
+	
+	para "with me? I'll"
+	line "give you a"
+
+	para "special gift if"
+	line "you win!"
+	
+	done
+
+GameFreakGameDesignerRefusedText:
+	text "What a pity…"
+	done
+
+GameFreakGameDesignerLetsBeginText:
+	text "Well, let's begin!"
+	done
+
+GameFreakGameDesignerWinLossText:
+	text "You think about"
+	line "battles very"
+	cont "thoroughly."
+	done
+
+GameFreakGameDesignerMewText:
+	text "Please take this"
+	line "#MON as a re-"
+
+	para "minder of our"
+	line "battle. It's"
+	cont "my favorite!"
+
+	done
+
+GameFreakGameDesignerPartyFullText:
+	text "You have no"
+	line "room in your"
+	cont "party for my"
+	cont "gift…"
+	done
+
+GameFreakGameDesignerGoodLuckText:
+	text "Wherever your"
+	line "journey takes you"
+
+	para "next, I wish you"
+	line "well."
 	done
 
 GameFreakGameDesignerAfterDiplomaText:
