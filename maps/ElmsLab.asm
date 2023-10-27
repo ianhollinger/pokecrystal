@@ -347,7 +347,7 @@ ElmAfterTheftScript:
 	waitbutton
 	closetext
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS
-	disappear ROUTE32_FISHER4
+	setevent EVENT_SLOWPOKE_WELL_ROCKETS 
 	end
 
 ElmStudyingEggScript:
