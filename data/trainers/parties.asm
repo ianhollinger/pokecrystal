@@ -1517,7 +1517,7 @@ BirdKeeperGroup:
 	db "ROD@", TRAINERTYPE_STAT_EXP
 	db  7, PIDGEY
 		dw $01E9, $01E9, $01E9, $01E9, $01E9
-	db  7, NATU
+	db  7, PSYDUCK
 		dw $01E9, $01E9, $01E9, $01E9, $01E9
 	db -1 ; end
 
