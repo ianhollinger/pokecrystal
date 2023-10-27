@@ -14,7 +14,7 @@ GameFreakGameDesignerScript:
 	opentext
 	checkevent EVENT_GOT_MEW
 	iftrue .GotMew
-	checkevent EVENT_BEAT_MORIMOTO
+	checkevent EVENT_FOUGHT_MORIMOTO
 	iftrue .GiveMew
 	writetext GameFreakGameDesignerText
 	readvar VAR_DEXCAUGHT
@@ -39,7 +39,7 @@ GameFreakGameDesignerScript:
 	loadtrainer SUPER_NERD, MORIMOTO
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_MORIMOTO
+	setevent EVENT_FOUGHT_MORIMOTO
 	opentext
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .NoRoom
@@ -178,6 +178,11 @@ GameFreakGameDesignerMewText:
 	line "battle. It's"
 	cont "my favorite!"
 
+	done
+
+ReceivedMewText:
+	text "<PLAYER> received"
+	line "MEW!"
 	done
 
 GameFreakGameDesignerPartyFullText:
