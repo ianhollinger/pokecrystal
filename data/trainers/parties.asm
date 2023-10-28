@@ -1222,11 +1222,13 @@ YoungsterGroup:
 	db -1 ; end
 
 	; YOUNGSTER (6)
-	db "IAN@", TRAINERTYPE_STAT_EXP
+	db "IAN@", TRAINERTYPE_STAT_EXP | TRAINER_TYPE_MOVES
 	db 12, MANKEY
 		dw $059E, $059E, $059E, $059E, $059E
+                db FURY_SWIPES, LOW_KICK, LEER, FOCUS_ENERGY 
 	db 14, DIGLETT
 		dw $07A5, $07A5, $07A5, $07A5, $07A5
+                db SCRATCH, GROWL, MUD_SLAP, FURY_SWIPES 
 	db -1 ; end
 
 	; YOUNGSTER (7)
