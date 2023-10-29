@@ -2331,18 +2331,18 @@ AI_Smart_HiddenPower:
 	jr c, .bad
 
 ; Discourage Hidden Power if its base power is lower than 50.
-	ld a, d
-	cp 50
-	jr c, .bad
+;	ld a, d
+;	cp 50
+;	jr c, .bad
 
 ; Encourage Hidden Power if super-effective.
 	ld a, [wTypeMatchup]
 	cp EFFECTIVE + 1
 	jr nc, .good
 
-; Encourage Hidden Power if its base power is 70.
+; Just encourage Hidden Power lol
 	ld a, d
-	cp 70
+	cp 60
 	ret c
 
 .good
