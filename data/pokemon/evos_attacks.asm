@@ -2995,14 +2995,15 @@ GligarEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 6, SAND_ATTACK
-	db 12, HARDEN
-	db 17, QUICK_ATTACK
-	db 23, MUD_SLAP
-	db 28, FURY_CUTTER
-	db 34, FAINT_ATTACK
-	db 39, SLASH
-	db 45, SCREECH
-	db 50, SWORDS_DANCE
+	db 11, HARDEN
+	db 16, QUICK_ATTACK
+	db 21, MUD_SLAP
+	db 26, FURY_CUTTER
+	db 31, FAINT_ATTACK
+	db 36, SLASH
+	db 41, SCREECH
+	db 46, SWORDS_DANCE
+	db 51, CRABHAMMER
 	db 56, GUILLOTINE
 	db 0 ; no more level-up moves
 
