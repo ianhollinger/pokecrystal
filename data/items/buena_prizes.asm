@@ -7,6 +7,6 @@ BuenaPrizeItems:
 	db BRIGHTPOWDER, 4
 	db LEFTOVERS,    4
 	db SCOPE_LENS,   4
-	db NUGGET,       5
 	db RARE_CANDY,   5
+	db NUGGET,       6
 	assert_table_length NUM_BUENA_PRIZES
