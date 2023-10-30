@@ -259,6 +259,9 @@ TrainerCamperQuentin:
 	checkevent EVENT_BEAT_CAMPER_QUENTIN
 	iftrue .Defeated
 	writetext CamperQuentinSeenText
+        yesorno
+	iffalse .Denied
+	writetext CamperQuentinFightText
 	waitbutton
 	closetext
 	winlosstext CamperQuentinBeatenText, 0
@@ -271,6 +274,12 @@ TrainerCamperQuentin:
 
 .Defeated:
 	writetext CamperQuentinAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.Denied:
+	writetext CamperQuentinDeniedText
 	waitbutton
 	closetext
 	end
@@ -487,18 +496,24 @@ CooltrainerfKellyAfterBattleText:
 	cont "to harm #MON."
 	done
 
-Route45DummyText:
-	text "I'm really, really"
-	line "tough!"
-
-	para "Is there anywhere"
-	line "I can prove how"
-	cont "tough I really am?"
-	done
-
 CamperQuentinSeenText:
 	text "I'm really, really"
 	line "tough!"
+
+ 	para "Are you sure you"
+	line "want to fight me?"
+	done
+
+CamperQuentinFightText:
+	text "Let's do this!"
+
+	done
+
+CamperQuentinDeniedText:
+	text "But I wanted to"
+	line "prove how tough"
+	cont "I was…"
+
 	done
 
 CamperQuentinBeatenText:
