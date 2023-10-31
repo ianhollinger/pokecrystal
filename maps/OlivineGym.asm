@@ -86,34 +86,31 @@ OlivineGymActivateRockets:
 
 OlivineGymGuideScript:
 	faceplayer
+        opentext
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .OlivineGymGuideRematchScript
 	checkevent EVENT_BEAT_JASMINE
 	iftrue .OlivineGymGuideWinScript
 	checkevent EVENT_JASMINE_RETURNED_TO_GYM
 	iffalse .OlivineGymGuidePreScript
-	opentext
 	writetext OlivineGymGuideText
 	waitbutton
 	closetext
 	end
 
 .OlivineGymGuideWinScript:
-	opentext
 	writetext OlivineGymGuideWinText
 	waitbutton
 	closetext
 	end
 
 .OlivineGymGuidePreScript:
-	opentext
 	writetext OlivineGymGuidePreText
 	waitbutton
 	closetext
 	end
 
 .OlivineGymGuideRematchScript:
-	opentext
 	checkevent EVENT_BEAT_JASMINE2
 	iftrue .OlivineGymGuideRematchWinScript
 	writetext OlivineGymGuideRematchText
@@ -122,7 +119,6 @@ OlivineGymGuideScript:
 	end
 
 .OlivineGymGuideRematchWinScript:
-	opentext
 	writetext OlivineGymGuideRematchWinText
 	waitbutton
 	closetext
