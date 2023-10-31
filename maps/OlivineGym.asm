@@ -272,7 +272,7 @@ OlivineGymGuideWinText:
 	done
 
 OlivineGymGuideRematchText:
-	para "You probably know"
+	text "You probably know"
 	line "more about the"
 
 	para "steel-type than"
@@ -285,7 +285,7 @@ OlivineGymGuideRematchText:
 	done
 
 OlivineGymGuideRematchWinText:
-	para "I've been seeing"
+	text "I've been seeing"
 	line "more trainers"
 
 	para "use steel-types"
