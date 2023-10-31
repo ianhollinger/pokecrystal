@@ -333,13 +333,13 @@ ClairRematchText:
 	line "that means I'm"
 
 	para "more powerful" 
-	cont "than Lance."
+	line "than Lance."
 
-	para "I've been medi-"
-	line "tating in DRAGON'S"
+	para "I have been"
+	line "meditating in"
 
-	para "DEN to hone my"
-	line "skills."
+	para "DRAGON'S DEN to"
+	line "hone my power."
 
 	para "This time, you"
 	line "won't defeat me!"
