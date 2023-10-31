@@ -218,8 +218,8 @@ ChuckRematchText:
 	line "me on a weight-"
 	cont "loss regimen!"
 
-	para "Now I'm 100%"
-	line "muscle!"
+	para "Now I'm 100"
+	line "percent muscle!"
 
 	para "You can't defeat"
 	line "me! I'm at my"
@@ -227,7 +227,7 @@ ChuckRematchText:
 
 	para "Put 'em up,"
 	line "CHAMPION!"
-	end
+	done
 
 ChuckRematchWinLossText:
 	text "WAHAHAH!"
