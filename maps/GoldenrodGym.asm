@@ -169,11 +169,11 @@ TrainerBeautySamantha:
 
 GoldenrodGymGuideScript:
 	faceplayer
+        opentext
         checkevent EVENT_OPENED_MT_SILVER
 	iftrue .GoldenrodGymGuideRematchScript
 	checkevent EVENT_BEAT_WHITNEY
 	iftrue .GoldenrodGymGuideWinScript
-	opentext
 	writetext GoldenrodGymGuideText
 	waitbutton
 	closetext
@@ -188,7 +188,6 @@ GoldenrodGymGuideScript:
 	end
 
 .GoldenrodGymGuideWinScript:
-	opentext
 	writetext GoldenrodGymGuideWinText
 	waitbutton
 	closetext
