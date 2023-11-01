@@ -499,8 +499,8 @@ SproutTower1F_Blocks:
 SproutTower2F_Blocks:
 	INCBIN "maps/SproutTower2F.blk"
 
-BetaSproutTowerCutOut2_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaSproutTowerCutOut2.blk"
+; BetaSproutTowerCutOut2_Blocks: ; unreferenced
+;	INCBIN "maps/unused/BetaSproutTowerCutOut2.blk"
 
 SproutTower3F_Blocks:
 	INCBIN "maps/SproutTower3F.blk"
@@ -746,8 +746,8 @@ MahoganyGym_Blocks:
 OlivineGym_Blocks:
 	INCBIN "maps/OlivineGym.blk"
 
-BetaUnknownGym_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaUnknownGym.blk"
+; BetaUnknownGym_Blocks: ; unreferenced
+;	INCBIN "maps/unused/BetaUnknownGym.blk"
 
 CianwoodGym_Blocks:
 	INCBIN "maps/CianwoodGym.blk"
@@ -1040,8 +1040,8 @@ BattleTowerElevator_Blocks:
 BattleTowerOutside_Blocks:
 	INCBIN "maps/BattleTowerOutside.blk"
 
-BetaBlank_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaBlank.blk"
+; BetaBlank_Blocks: ; unreferenced
+;	INCBIN "maps/unused/BetaBlank.blk"
 
 GoldenrodDeptStoreRoof_Blocks:
 	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
