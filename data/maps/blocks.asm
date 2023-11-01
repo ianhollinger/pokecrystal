@@ -424,8 +424,8 @@ CeladonMansion3F_Blocks:
 CeladonMansionRoof_Blocks:
 	INCBIN "maps/CeladonMansionRoof.blk"
 
-BetaHouse_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaHouse.blk"
+; BetaHouse_Blocks: ; unreferenced
+;	INCBIN "maps/unused/BetaHouse.blk"
 
 CeladonGameCorner_Blocks:
 	INCBIN "maps/CeladonGameCorner.blk"
@@ -478,8 +478,8 @@ GoldenrodMagnetTrainStation_Blocks:
 RuinsOfAlphOutside_Blocks:
 	INCBIN "maps/RuinsOfAlphOutside.blk"
 
-BetaRuinsOfAlphUnsolvedPuzzleRoom_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaRuinsOfAlphUnsolvedPuzzleRoom.blk"
+; BetaRuinsOfAlphUnsolvedPuzzleRoom_Blocks: ; unreferenced
+;	INCBIN "maps/unused/BetaRuinsOfAlphUnsolvedPuzzleRoom.blk"
 
 RuinsOfAlphInnerChamber_Blocks:
 	INCBIN "maps/RuinsOfAlphInnerChamber.blk"
@@ -493,8 +493,8 @@ RuinsOfAlphAerodactylChamber_Blocks:
 SproutTower1F_Blocks:
 	INCBIN "maps/SproutTower1F.blk"
 
-BetaSproutTowerCutOut1_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaSproutTowerCutOut1.blk"
+; BetaSproutTowerCutOut1_Blocks: ; unreferenced
+;	INCBIN "maps/unused/BetaSproutTowerCutOut1.blk"
 
 SproutTower2F_Blocks:
 	INCBIN "maps/SproutTower2F.blk"
@@ -505,8 +505,8 @@ BetaSproutTowerCutOut2_Blocks: ; unreferenced
 SproutTower3F_Blocks:
 	INCBIN "maps/SproutTower3F.blk"
 
-BetaSproutTowerCutOut3_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaSproutTowerCutOut3.blk"
+; BetaSproutTowerCutOut3_Blocks: ; unreferenced
+;	INCBIN "maps/unused/BetaSproutTowerCutOut3.blk"
 
 RadioTower1F_Blocks:
 	INCBIN "maps/RadioTower1F.blk"
