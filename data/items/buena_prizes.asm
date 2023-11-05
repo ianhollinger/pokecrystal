@@ -8,5 +8,5 @@ BuenaPrizeItems:
 	db LEFTOVERS,    4
 	db SCOPE_LENS,   4
 	db RARE_CANDY,   5
-	db NUGGET,       6
+	db NUGGET,       9
 	assert_table_length NUM_BUENA_PRIZES
