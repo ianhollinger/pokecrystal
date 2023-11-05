@@ -541,6 +541,9 @@ _BargainShopIntroText::
 
 	para "carries--but only"
 	line "one of each item."
+
+	para "They, uh… fell"
+	line "off a truck… yeah…"
 	done
 
 _BargainShopFinalPriceText::
