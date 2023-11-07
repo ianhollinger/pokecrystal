@@ -769,7 +769,7 @@ BoneClubDescription:
 
 FireBlastDescription:
 	db   "An intense flame."
-	next "may cause a burn.@"
+	next "May cause a burn.@"
 
 WaterfallDescription:
 	db   "A charge attack."
