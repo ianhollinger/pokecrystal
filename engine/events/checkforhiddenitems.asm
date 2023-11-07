@@ -108,7 +108,6 @@ RockItemEncounter:
 	db 4, KINGS_ROCK   ; 1.563%
 	db 5, SOFT_SAND    ; 1.953%
 	db 5, HARD_STONE   ; 1.953%
-	db 5, METAL_COAT   ; 1.953%
 	db 5, FIRE_STONE   ; 1.953%
 	db 5, WATER_STONE  ; 1.953%
 	db 5, THUNDERSTONE ; 1.953%
@@ -121,6 +120,6 @@ RockItemEncounter:
 	db 6, GOLD_LEAF    ; 2.344%
         db 7, THICK_CLUB   ; 2.734%
 	db 7, SILVER_LEAF  ; 2.734%
-	db 12, POKE_BALL   ; 4.688%
-	db 23, BRICK_PIECE ; 8.984%
+	db 15, POKE_BALL   ; 5.859%
+	db 25, BRICK_PIECE ; 9.766%
 	db -1              ; 50%

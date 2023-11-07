@@ -5601,6 +5601,9 @@ BattleCommand_TrapTarget:
 	; trapped for 4-5 turns
 	and %101
 	inc a
+	inc a
+	inc a
+	inc a
 	ld [hl], a
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar

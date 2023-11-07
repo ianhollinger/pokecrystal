@@ -197,19 +197,6 @@ SabrinaRematchText:
 	line "them against you!"
 	done
 
-;SabrinaRematchText:
-;	text "SABRINA: Oh…"
-;
-;	para "I must admit, I"
-;	line "hadn't seen that"
-;	cont "you would return."
-;
-;	para "And yet, I'm"
-;	line "not surprised."
-;
-;	para "Let us begin."
-;	done
-
 SabrinaRematchWinLossText:
 	para "I admit I didn't"
 	line "work hard enough"
