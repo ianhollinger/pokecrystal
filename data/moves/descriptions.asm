@@ -1188,7 +1188,7 @@ SweetScentDescription:
 	next "evasiveness.@"
 
 IronTailDescription:
-	db   "Whacks with tail."
+	db   "Slams with tail."
 	next "May lower DEFENSE.@"
 
 MetalClawDescription:
