@@ -1654,7 +1654,7 @@ BattleCommand_CheckHit:
 	ld hl, ProtectingItselfText
 	call StdBattleTextbox
 
-	ld c, 40
+	ld c, 20
 	call DelayFrames
 
 	ld a, 1
