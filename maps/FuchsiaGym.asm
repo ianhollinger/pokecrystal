@@ -277,17 +277,16 @@ JanineText_DisappointYou:
 
 JanineText_Rematch:
 	text "Greetings,"
- 	line "<PLAYER>!"
+ 	line "CHAMPION <PLAYER>!"
 
 	para "I insist on"
  	line "a rematch!"
 
-	para "If I defeat"
-	line "you, I can"
+	para "If I defeat you,"
+	line "I can call myself"
 
-	para "call myself a"
-	line "real poison-"
-	cont "type master!"
+	para "a true poison-"
+	line "type master!"
         done
 
 JanineText_ToughOne:
