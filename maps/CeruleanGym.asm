@@ -325,8 +325,8 @@ MistyRematchText:
 	line "gotten every BADGE"
 	cont "in KANTO?"
 
-	para "I'm still hose you"
-	line "down!"
+	para "I'm still gonna"
+	line "hose you down!"
 	done
 
 MistyRematchWinLossText:
