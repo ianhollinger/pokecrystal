@@ -479,11 +479,11 @@ BlackthornGymGuideRematchWinText:
 	text "Wow! What a"
 	line "battle!"
 
-	para "I hope that"
-	line "will put an"
+	para "I hope that will"
+	line "put an end to her"
 
-	para "end to her quest"
-	line "for vengeance!"
+	para "quest for"
+	line "vengeance!"
 
 	para "Probably not…"	
 	done
