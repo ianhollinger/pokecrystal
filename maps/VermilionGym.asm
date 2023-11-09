@@ -203,10 +203,10 @@ LtSurgeRematchText:
 	line "LEAGUE! No doubt"
 	
 	para "some electric-type"
-	line "#MON had a pretty"
+	line "#MON had a"
 	
-	para "big hand in that,"
-	line "right?"
+	para "pretty big hand in"
+	line "that, right?"
 
 	para "All right, then."
 	line "How about you show"
