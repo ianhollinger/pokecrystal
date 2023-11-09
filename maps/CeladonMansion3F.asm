@@ -186,10 +186,9 @@ ReceivedMewText:
 	done
 
 GameFreakGameDesignerPartyFullText:
-	text "You have no"
-	line "room in your"
-	cont "party for my"
-	cont "gift…"
+	text "You have no room"
+	line "in your party for"
+	cont "my gift…"
 	done
 
 GameFreakGameDesignerGoodLuckText:
