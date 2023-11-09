@@ -243,8 +243,8 @@ ViridianGymGuideText:
 ViridianGymGuideRematchText:
 	text "Yo, CHAMP!"
 
-	para "BLUE's as pow-"
-	line "erful as ever!"
+	para "BLUE's as powerful"
+	line "as ever!"
 
 	para "You're not gonna"
 	line "be able to beat"
