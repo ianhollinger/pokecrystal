@@ -83,6 +83,7 @@ CianwoodGymChuckScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CHUCK2
+        opentext
 .RematchDone:
 	writetext ChuckRematchAfterText
 	waitbutton
