@@ -160,6 +160,7 @@ BlaineWinLossText:
 BlaineRematchWinLossText:
 	text "BLAINE: Awesome."
 	line "I've burned out…"
+        done 
 
 ReceivedVolcanoBadgeText:
 	text "<PLAYER> received"
