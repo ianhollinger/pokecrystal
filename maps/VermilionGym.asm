@@ -56,7 +56,7 @@ VermilionGymSurgeScript:
 	writetext LtSurgeRematchText
 	waitbutton
 	closetext
-	winlosstext FalknerRematchWinLossText, 0
+	winlosstext LtSurgeRematchWinLossText, 0
 	loadtrainer LT_SURGE, LT_SURGE2
 	startbattle
 	reloadmapafterbattle
