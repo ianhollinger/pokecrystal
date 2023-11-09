@@ -279,7 +279,7 @@ JanineText_Rematch:
 	text "Greetings,"
  	line "<PLAYER>!"
 
-	text "I insist on"
+	para "I insist on"
  	line "a rematch!"
 
 	para "If I defeat"
