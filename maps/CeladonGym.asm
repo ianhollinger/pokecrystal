@@ -211,6 +211,7 @@ ErikaRematchBeatenText:
 
 	para "You are remarkably"
 	line "strong…"
+        done
 
 PlayerReceivedRainbowBadgeText:
 	text "<PLAYER> received"
