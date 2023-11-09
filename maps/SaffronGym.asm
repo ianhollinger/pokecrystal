@@ -198,7 +198,7 @@ SabrinaRematchText:
 	done
 
 SabrinaRematchWinLossText:
-	para "I admit I didn't"
+	text "I admit I didn't"
 	line "work hard enough"
 	cont "to win."
 	done
