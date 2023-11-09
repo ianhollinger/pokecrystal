@@ -171,7 +171,7 @@ LeaderBlueEpilogueText:
 	done
 
 LeaderBlueRematchBeforeText:
-	para "BLUE: Oh ho!" 
+	text "BLUE: Oh ho!" 
 	line "Couldn't stand"
 	
 	para "being away from my"
@@ -185,7 +185,7 @@ LeaderBlueRematchBeforeText:
 	done
 
 LeaderBlueRematchEpilogueText:
-	para "BLUE: When I look"
+	text "BLUE: When I look"
 	line "at #MON, I get"
 	
 	para "a strange feel-"
