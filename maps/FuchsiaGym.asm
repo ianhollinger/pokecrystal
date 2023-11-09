@@ -429,8 +429,7 @@ FuchsiaGymGuideRematchText:
 
 	para "I daresay she's"
 	line "as good a trainer"
-
-        para "as her father!"
+        cont "as her father!"
 	done
 
 FuchsiaGymGuideWinText:
