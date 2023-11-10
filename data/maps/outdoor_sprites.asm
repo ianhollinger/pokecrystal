@@ -131,6 +131,8 @@ CinnabarGroupSprites:
 	db SPRITE_SWIMMER_GUY
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
+	db SPRITE_MONSTER
+	db SPRITE_MOLTRES
 
 CeruleanGroupSprites:
 	db SPRITE_SUICUNE
@@ -156,6 +158,7 @@ CeruleanGroupSprites:
 	db SPRITE_MISTY
 	db SPRITE_POKE_BALL
 	db SPRITE_SLOWPOKE
+	db SPRITE_MOLTRES
 
 SaffronGroupSprites:
 	db SPRITE_SUICUNE
@@ -181,6 +184,7 @@ SaffronGroupSprites:
 	db SPRITE_MISTY
 	db SPRITE_POKE_BALL
 	db SPRITE_SLOWPOKE
+	db SPRITE_GRAMPS
 
 CeladonGroupSprites:
 	db SPRITE_SUICUNE
@@ -631,6 +635,7 @@ DungeonsGroupSprites:
 	db SPRITE_SCIENTIST
 	db SPRITE_POKE_BALL
 	db SPRITE_BOULDER
+	db SPRITE_MOLTRES
 
 FastShipGroupSprites:
 	db SPRITE_SUICUNE
