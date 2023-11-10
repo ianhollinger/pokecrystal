@@ -281,7 +281,7 @@ NationalParkTrainerTipsSign:
 	jumptext NationalParkTrainerTipsText
 
 NationalParkParlyzHeal:
-	itemball PARLYZ_HEAL
+	itemball SILVERPOWDER
 
 NationalParkTMDig:
 	itemball TM_DIG
