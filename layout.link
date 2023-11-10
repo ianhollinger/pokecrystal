@@ -66,7 +66,7 @@ ROMX $0f
 	"Battle Core"
 ROMX $10
 	"bank10"
-	"Evolutions and Attacks"
+	"Crystal Events"
 ROMX $11
 	"bank11"
 ROMX $12
@@ -313,7 +313,7 @@ ROMX $7c
 ROMX $7d
 	"Mobile News Data"
 ROMX $7e
-	"Crystal Events"
+	"Evolutions and Attacks"
 ROMX $7f
 	org $7de0
 	"Stadium 2 Checksums"
