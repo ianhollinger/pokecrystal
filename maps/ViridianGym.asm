@@ -42,7 +42,7 @@ ViridianGymBlueScript:
 	writetext LeaderBlueRematchBeforeText
 	waitbutton
 	closetext
-	winlosstext LeaderBlueWinText, 0
+	winlosstext LeaderBlueRematchWinText, 0
 	loadtrainer BLUE, BLUE2
 	startbattle
 	reloadmapafterbattle
@@ -162,6 +162,13 @@ LeaderBlueAfterText:
 	line "it!"
 	done
 
+LeaderBlueRematchWinText:
+        text "BLUE: What?"
+
+	para "Guess last time"
+	line "wasn't a fluke…"
+        done 
+
 LeaderBlueEpilogueText:
 	text "BLUE: Listen, you."
 
@@ -189,7 +196,7 @@ LeaderBlueRematchEpilogueText:
 	line "at #MON, I get"
 	
 	para "a strange feel-"
-	line "ing-- you ever"
+	line "ing--you ever"
 	cont "get that?"
 	
 	para "There's round"
