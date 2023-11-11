@@ -537,7 +537,6 @@ SECTION "bank5B", ROMX
 
 INCLUDE "mobile/mobile_5b.asm"
 INCLUDE "engine/link/link_trade.asm"
-INCLUDE "engine/events/mom_phone.asm"
 
 
 SECTION "mobile5C", ROMX
@@ -638,6 +637,7 @@ INCLUDE "data/items/names.asm"
 INCLUDE "engine/items/print_item_description.asm"
 INCLUDE "data/moves/names.asm"
 INCLUDE "engine/overworld/landmarks.asm"
+INCLUDE "engine/events/mom_phone.asm"
 
 
 SECTION "Print Party", ROMX
