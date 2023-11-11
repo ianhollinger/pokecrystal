@@ -182,6 +182,8 @@ DEF NUM_ROAMMON_MAPS EQU 16 ; RoamMaps table size (see data/wild/roammon_maps.as
 ; TreeMons indexes (see data/wild/treemons.asm)
 	const_def
 	const TREEMON_SET_CITY
+	const TREEMON_SET_SILVER
+	const TREEMON_SET_EAST
 	const TREEMON_SET_CANYON
 	const TREEMON_SET_TOWN
 	const TREEMON_SET_ROUTE

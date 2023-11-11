@@ -1,10 +1,12 @@
 TreeMons:
 ; entries correspond to TREEMON_SET_* constants
 	table_width 2, TreeMons
-	dw TreeMonSet_City ; Route 28, Mt. Silver (Outside)
-	dw TreeMonSet_Canyon ; Routes 44, 45
-	dw TreeMonSet_Town ; Routes 37, 38, 39, 425
-	dw TreeMonSet_Route ; Azalea Town, Routes 29, 30, 31, 32, 33, 34, 35, 36, 46
+	dw TreeMonSet_City ; Unused
+	dw TreeMonSet_Silver ; Route 28, Mt. Silver (Outside)
+	dw TreeMonSet_East ; Postgame Kanto
+	dw TreeMonSet_Canyon ; Blackthorn City, Routes 44, 45
+	dw TreeMonSet_Town ; Ecruteak City, Olivine City, Mahogany Town, Routes 37, 38, 39, 42
+	dw TreeMonSet_Route ; New Bark Town, Cherrygrove Town, Violet City, Azalea Town, Routes 29, 30, 31, 32, 33, 34, 35, 36, 46
 	dw TreeMonSet_Kanto ; Routes 26, 27
 	dw TreeMonSet_Lake ; Lake of Rage, Route 43
 	dw TreeMonSet_Forest ; Ilex Forest
@@ -16,6 +18,7 @@ TreeMons:
 ;	db  %, species, level
 
 TreeMonSet_City:
+TreeMonSet_Silver:
 ; common
 	db 17, NATU,       46
 	db 13, NATU,       47
@@ -59,6 +62,42 @@ TreeMonSet_City:
 	db  3, HERACROSS,  48
 	db  2, HERACROSS,  49
 	db  1, HERACROSS,  50
+	db -1
+
+TreeMonSet_East:
+	; common
+	db 17, NOCTOWL,    41
+	db 13, NOCTOWL,    42
+	db 10, NOCTOWL,    43
+	db  7, NOCTOWL,    44
+	db  3, NOCTOWL,    45
+	db  8, LEDIAN,     41
+	db  7, LEDIAN,     42
+	db  5, LEDIAN,     43
+	db  3, LEDIAN,     44
+	db  2, LEDIAN,     45
+	db  8, ARIADOS,    41
+	db  7, ARIADOS,    42
+	db  5, ARIADOS,    43
+	db  3, ARIADOS,    44
+	db  2, ARIADOS,    45
+	db -1
+; rare
+	db 17, FEAROW,     41
+	db 13, FEAROW,     42
+	db 10, FEAROW,     43
+	db  7, FEAROW,     44
+	db  3, FEAROW,     45
+	db 10, FORRETRESS, 41
+	db  8, FORRETRESS, 42
+	db  6, FORRETRESS, 43
+	db  4, FORRETRESS, 44
+	db  2, FORRETRESS, 45
+	db  7, HERACROSS,  41
+	db  5, HERACROSS,  42
+	db  4, HERACROSS,  43
+	db  3, HERACROSS,  44
+	db  1, HERACROSS,  45
 	db -1
 
 TreeMonSet_Canyon:
