@@ -637,7 +637,6 @@ INCLUDE "data/items/names.asm"
 INCLUDE "engine/items/print_item_description.asm"
 INCLUDE "data/moves/names.asm"
 INCLUDE "engine/overworld/landmarks.asm"
-INCLUDE "engine/events/mom_phone.asm"
 
 
 SECTION "Print Party", ROMX
@@ -679,6 +678,7 @@ INCLUDE "data/battle_tower/unknown.asm"
 SECTION "Mobile News Data", ROMX
 
 INCLUDE "mobile/news/news.asm"
+INCLUDE "engine/events/mom_phone.asm"
 
 
 SECTION "Crystal Events", ROMX
