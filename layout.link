@@ -103,7 +103,6 @@ ROMX $20
 	"bank20"
 ROMX $21
 	"bank21"
-	"Crystal Events"
 ROMX $22
 	"Crystal Features 2"
 ROMX $23
@@ -172,6 +171,7 @@ ROMX $3e
 	"bank3E"
 ROMX $3f
 	"bank3F"
+	"Crystal Events"
 ROMX $40
 	"mobile40"
 ROMX $41
