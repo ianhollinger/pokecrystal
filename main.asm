@@ -487,7 +487,6 @@ SECTION "bank3F", ROMX
 
 INCLUDE "engine/tilesets/tileset_anims.asm"
 INCLUDE "engine/events/npc_trade.asm"
-INCLUDE "engine/events/mom_phone.asm"
 
 
 SECTION "mobile40", ROMX
@@ -538,6 +537,7 @@ SECTION "bank5B", ROMX
 
 INCLUDE "mobile/mobile_5b.asm"
 INCLUDE "engine/link/link_trade.asm"
+INCLUDE "engine/events/mom_phone.asm"
 
 
 SECTION "mobile5C", ROMX
