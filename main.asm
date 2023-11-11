@@ -487,6 +487,7 @@ SECTION "bank3F", ROMX
 
 INCLUDE "engine/tilesets/tileset_anims.asm"
 INCLUDE "engine/events/npc_trade.asm"
+INCLUDE "engine/events/mom_phone.asm"
 
 
 SECTION "mobile40", ROMX
@@ -678,7 +679,6 @@ INCLUDE "data/battle_tower/unknown.asm"
 SECTION "Mobile News Data", ROMX
 
 INCLUDE "mobile/news/news.asm"
-INCLUDE "engine/events/mom_phone.asm"
 
 
 SECTION "Crystal Events", ROMX
