@@ -293,6 +293,7 @@ MoveDeletersHouseSignText:
 	text "MOVE DELETER AND"
 	line "MOVE REMINDER'S"
 	cont "HOUSE"
+        done
 
 DragonDensSignText:
 	text "DRAGON'S DEN"
