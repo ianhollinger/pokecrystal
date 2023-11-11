@@ -5,9 +5,9 @@ TreeMons:
 	dw TreeMonSet_Silver ; Route 28, Mt. Silver (Outside)
 	dw TreeMonSet_East ; Postgame Kanto
 	dw TreeMonSet_Canyon ; Blackthorn City, Routes 44, 45
-	dw TreeMonSet_Town ; Ecruteak City, Olivine City, Mahogany Town, Routes 37, 38, 39, 42
+	dw TreeMonSet_Town ; Ecruteak City, Olivine City, Mahogany Town, Routes 27, 37, 38, 39, 42
 	dw TreeMonSet_Route ; New Bark Town, Cherrygrove Town, Violet City, Azalea Town, Routes 29, 30, 31, 32, 33, 34, 35, 36, 46
-	dw TreeMonSet_Kanto ; Routes 26, 27
+	dw TreeMonSet_Kanto ; Route 26
 	dw TreeMonSet_Lake ; Lake of Rage, Route 43
 	dw TreeMonSet_Forest ; Ilex Forest
 	dw TreeMonSet_Rock ; Rock Smash
