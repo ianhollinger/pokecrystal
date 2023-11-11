@@ -66,7 +66,6 @@ ROMX $0f
 	"Battle Core"
 ROMX $10
 	"bank10"
-	"Crystal Events"
 ROMX $11
 	"bank11"
 ROMX $12
@@ -182,6 +181,7 @@ ROMX $42
 	"Credits"
 ROMX $43
 	"Title"
+	"Crystal Events"
 ROMX $44
 	"Mobile Adapter SDK"
 ROMX $45
