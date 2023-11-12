@@ -132,7 +132,7 @@ BurnedTower1FHiddenEther:
 	hiddenitem ETHER, EVENT_BURNED_TOWER_1F_HIDDEN_ETHER
 
 BurnedTower1FHiddenUltraBall:
-	hiddenitem ULTRA_BALL, EVENT_BURNED_TOWER_1F_HIDDEN_ULTRA_BALL
+	hiddenitem  BRICK_PIECE, EVENT_BURNED_TOWER_1F_HIDDEN_ULTRA_BALL
 
 BurnedTower1FHPUp:
 	itemball HP_UP
