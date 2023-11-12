@@ -15,10 +15,10 @@ TinTower4FPPUp:
 	itemball PP_UP
 
 TinTower4FEscapeRope:
-	itemball ESCAPE_ROPE
+	itemball MAX_POTION
 
 TinTower4FHiddenMaxPotion:
-	hiddenitem MAX_POTION, EVENT_TIN_TOWER_4F_HIDDEN_MAX_POTION
+	hiddenitem BRICK_PIECE, EVENT_TIN_TOWER_4F_HIDDEN_MAX_POTION
 
 TinTower4F_MapEvents:
 	db 0, 0 ; filler
