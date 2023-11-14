@@ -224,7 +224,9 @@ EcruteakCitySignText:
 	done
 
 TinTowerSignText:
-	text "BELL TOWER"
+	text "BELL TOWER,"
+        line "also known as"
+	cont "TIN TOWER."
 
 	para "A legendary #-"
 	line "MON is said to"
@@ -246,7 +248,9 @@ EcruteakDanceTheaterSignText:
 	done
 
 BurnedTowerSignText:
-	text "BURNED TOWER"
+	text "BURNED TOWER,"
+        line "formerly known as"
+	cont "BRASS TOWER."
 
 	para "It was destroyed"
 	line "by a mysterious"
