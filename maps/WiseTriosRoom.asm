@@ -154,7 +154,7 @@ WiseTriosRoomSage2Text:
 	done
 
 WiseTriosRoomSage3BlocksExitText:
-	text "TIN TOWER may be"
+	text "BELL TOWER may be"
 	line "entered by those"
 
 	para "bearing ECRUTEAK's"
@@ -250,10 +250,11 @@ SageMasaAfterBattleText:
 	line "which was said to"
 
 	para "awaken #MON,"
-	line "and the TIN TOWER,"
+	line "and the BELL"
 
-	para "where #MON were"
-	line "said to rest."
+	para "TOWER, where"
+	line "#MON were said"
+        cont "to rest."
 
 	para "The view from the"
 	line "tops of the TOWERS"
