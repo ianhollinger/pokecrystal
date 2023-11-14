@@ -402,19 +402,19 @@ TreeMonSet_Forest:
 	db -1
 
 TreeMonSet_Rock:
-	db 17, GEODUDE,    16
-	db 13, GEODUDE,    17
-	db 10, GEODUDE,    18
-	db  7, GEODUDE,    19
-	db  3, GEODUDE,    20
-	db 10, KRABBY,     16
-	db  8, KRABBY,     17
-	db  6, KRABBY,     18
-	db  4, KRABBY,     19
-	db  2, KRABBY,     20
-	db  7, SHUCKLE,    16
-	db  5, SHUCKLE,    17
-	db  4, SHUCKLE,    18
-	db  3, SHUCKLE,    19
-	db  1, SHUCKLE,    20
+	db 17, GEODUDE,    15
+	db 13, GEODUDE,    16
+	db 10, GEODUDE,    17
+	db  7, GEODUDE,    18
+	db  3, GEODUDE,    19
+	db 10, KRABBY,     15
+	db  8, KRABBY,     16
+	db  6, KRABBY,     17
+	db  4, KRABBY,     18
+	db  2, KRABBY,     19
+	db  7, SHUCKLE,    15
+	db  5, SHUCKLE,    16
+	db  4, SHUCKLE,    17
+	db  3, SHUCKLE,    18
+	db  1, SHUCKLE,    19
 	db -1
