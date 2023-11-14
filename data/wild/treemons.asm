@@ -42,45 +42,45 @@ TreeMonSet_Silver:
 	db  1, PINSIR,     50
 	db -1
 ; rare
-	db 17, NATU,       46
-	db 13, NATU,       47
-	db 10, NATU,       48
-	db  7, NATU,       49
-	db  3, NATU,       50
-	db  7, TANGELA,    46
-	db  5, TANGELA,    47
-	db  4, TANGELA,    48
-	db  3, TANGELA,    49
-	db  1, TANGELA,    50
-	db  5, SCIZOR,     46
-	db  4, SCIZOR,     47
-	db  3, SCIZOR,     48
-	db  2, SCIZOR,     49
-	db  1, SCIZOR,     50
-	db  5, HERACROSS,  46
-	db  4, HERACROSS,  47
-	db  3, HERACROSS,  48
-	db  2, HERACROSS,  49
-	db  1, HERACROSS,  50
+	db 17, NATU,       48
+	db 13, NATU,       49
+	db 10, NATU,       50
+	db  7, NATU,       51
+	db  3, NATU,       52
+	db  7, TANGELA,    48
+	db  5, TANGELA,    49
+	db  4, TANGELA,    50
+	db  3, TANGELA,    51
+	db  1, TANGELA,    52
+	db  5, SCIZOR,     48
+	db  4, SCIZOR,     49
+	db  3, SCIZOR,     50
+	db  2, SCIZOR,     51
+	db  1, SCIZOR,     52
+	db  5, HERACROSS,  48
+	db  4, HERACROSS,  49
+	db  3, HERACROSS,  50
+	db  2, HERACROSS,  51
+	db  1, HERACROSS,  52
 	db -1
 
 TreeMonSet_East:
 	; common
-	db 17, NOCTOWL,    41
-	db 13, NOCTOWL,    42
-	db 10, NOCTOWL,    43
-	db  7, NOCTOWL,    44
-	db  3, NOCTOWL,    45
-	db  8, LEDIAN,     41
-	db  7, LEDIAN,     42
-	db  5, LEDIAN,     43
-	db  3, LEDIAN,     44
-	db  2, LEDIAN,     45
-	db  8, ARIADOS,    41
-	db  7, ARIADOS,    42
-	db  5, ARIADOS,    43
-	db  3, ARIADOS,    44
-	db  2, ARIADOS,    45
+	db 17, NOCTOWL,    39
+	db 13, NOCTOWL,    40
+	db 10, NOCTOWL,    41
+	db  7, NOCTOWL,    42
+	db  3, NOCTOWL,    43
+	db  8, LEDIAN,     39
+	db  7, LEDIAN,     40
+	db  5, LEDIAN,     41
+	db  3, LEDIAN,     42
+	db  2, LEDIAN,     43
+	db  8, ARIADOS,    39
+	db  7, ARIADOS,    40
+	db  5, ARIADOS,    41
+	db  3, ARIADOS,    42
+	db  2, ARIADOS,    43
 	db -1
 ; rare
 	db 17, FEAROW,     41
@@ -124,48 +124,50 @@ TreeMonSet_Canyon:
 	db  1, MANKEY,     30
 	db -1
 ; rare
-	db 17, SPEAROW,    26
-	db 13, SPEAROW,    27
-	db 10, SPEAROW,    28
-	db  7, SPEAROW,    29
-	db  3, SPEAROW,    30
-	db  7, HERACROSS,  26
-	db  5, HERACROSS,  27
-	db  4, HERACROSS,  28
-	db  3, HERACROSS,  29
-	db  1, HERACROSS,  30
-	db  5, AIPOM,      26
-	db  4, AIPOM,      27
-	db  3, AIPOM,      28
-	db  2, AIPOM,      29
-	db  1, AIPOM,      30
-	db  7, PRIMEAPE,   28
-	db  5, PRIMEAPE,   29
+	db 17, SPEAROW,    28
+	db 13, SPEAROW,    29
+	db 10, SPEAROW,    30
+	db  7, SPEAROW,    31
+	db  3, SPEAROW,    32
+	db  7, HERACROSS,  28
+	db  5, HERACROSS,  29
+	db  4, HERACROSS,  30
+	db  3, HERACROSS,  31
+	db  1, HERACROSS,  32
+	db  5, AIPOM,      28
+	db  4, AIPOM,      29
+	db  3, AIPOM,      30
+	db  2, AIPOM,      31
+	db  1, AIPOM,      32
+	db  5, PRIMEAPE,   28
+	db  4, PRIMEAPE,   29
 	db  3, PRIMEAPE,   30
+	db  2, PRIMEAPE,   31
+	db  1, PRIMEAPE,   32
 	db -1
 
 TreeMonSet_Town:
 ; common
-	db 17, SPEAROW,    16
-	db 13, SPEAROW,    17
-	db 10, SPEAROW,    18
-	db  7, SPEAROW,    19
-	db  3, SPEAROW,    20
-	db  7, EKANS,      16
-	db  5, EKANS,      17
-	db  4, EKANS,      18
-	db  3, EKANS,      19
-	db  1, EKANS,      20
-	db  5, AIPOM,      16
-	db  4, AIPOM,      17
-	db  3, AIPOM,      18
-	db  2, AIPOM,      19
-	db  1, AIPOM,      20
-	db  5, BEEDRILL,   16
-	db  4, BEEDRILL,   17
-	db  3, BEEDRILL,   18
-	db  2, BEEDRILL,   19
-	db  1, BEEDRILL,   20
+	db 17, SPEAROW,    14
+	db 13, SPEAROW,    15
+	db 10, SPEAROW,    16
+	db  7, SPEAROW,    17
+	db  3, SPEAROW,    18
+	db  7, EKANS,      14
+	db  5, EKANS,      15
+	db  4, EKANS,      16
+	db  3, EKANS,      17
+	db  1, EKANS,      18
+	db  5, AIPOM,      14
+	db  4, AIPOM,      15
+	db  3, AIPOM,      16
+	db  2, AIPOM,      17
+	db  1, AIPOM,      18
+	db  5, BEEDRILL,   14
+	db  4, BEEDRILL,   15
+	db  3, BEEDRILL,   16
+	db  2, BEEDRILL,   17
+	db  1, BEEDRILL,   18
 	db -1
 ; rare
 	db 17, SPEAROW,    16
@@ -192,31 +194,31 @@ TreeMonSet_Town:
 
 TreeMonSet_Route:
 ; common
-	db 17, HOOTHOOT,    8
-	db 13, HOOTHOOT,    9
-	db 10, HOOTHOOT,   10
-	db  7, HOOTHOOT,   11
-	db  3, HOOTHOOT,   12
-	db  5, SPINARAK,    8
-	db  4, SPINARAK,    9
-	db  3, SPINARAK,   10
-	db  2, SPINARAK,   11
-	db  1, SPINARAK,   12
-	db  5, LEDYBA,      8
-	db  4, LEDYBA,      9
-	db  3, LEDYBA,     10
-	db  2, LEDYBA,     11
-	db  1, LEDYBA,     12
-	db  3, SUNKERN,     8
-	db  3, SUNKERN,     9
-	db  2, SUNKERN,    10
-	db  1, SUNKERN,    11
-	db  1, SUNKERN,    12
-	db  3, EXEGGCUTE,   8
-	db  3, EXEGGCUTE,   9
-	db  2, EXEGGCUTE,  10
-	db  1, EXEGGCUTE,  11
-	db  1, EXEGGCUTE,  12
+	db 17, HOOTHOOT,    6
+	db 13, HOOTHOOT,    7
+	db 10, HOOTHOOT,    8
+	db  7, HOOTHOOT,    9
+	db  3, HOOTHOOT,   10
+	db  5, SPINARAK,    6
+	db  4, SPINARAK,    7
+	db  3, SPINARAK,    8
+	db  2, SPINARAK,    9
+	db  1, SPINARAK,   10
+	db  5, LEDYBA,      6
+	db  4, LEDYBA,      7
+	db  3, LEDYBA,      8
+	db  2, LEDYBA,      9
+	db  1, LEDYBA,     10
+	db  3, SUNKERN,     6
+	db  3, SUNKERN,     7
+	db  2, SUNKERN,     8
+	db  1, SUNKERN,     9
+	db  1, SUNKERN,    10
+	db  3, EXEGGCUTE,   6
+	db  3, EXEGGCUTE,   7
+	db  2, EXEGGCUTE,   8
+	db  1, EXEGGCUTE,   9
+	db  1, EXEGGCUTE,  10
 	db -1
 ; rare
 	db 17, HOOTHOOT,    8
@@ -275,50 +277,50 @@ TreeMonSet_Kanto:
 	db  1, EXEGGUTOR,  40
 	db -1
 ; rare
-	db 17, NOCTOWL,    36
-	db 13, NOCTOWL,    37
-	db 10, NOCTOWL,    38
-	db  7, NOCTOWL,    39
-	db  3, NOCTOWL,    40
-	db 10, FORRETRESS, 36
-	db  8, FORRETRESS, 37
-	db  6, FORRETRESS, 38
-	db  4, FORRETRESS, 39
-	db  2, FORRETRESS, 40
-	db  3, ARBOK,      36
-	db  3, ARBOK,      37
-	db  2, ARBOK,      38
-	db  1, ARBOK,      39
-	db  1, ARBOK,      40
-	db  3, EXEGGUTOR,  36
-	db  3, EXEGGUTOR,  37
-	db  2, EXEGGUTOR,  38
-	db  1, EXEGGUTOR,  39
-	db  1, EXEGGUTOR,  40
+	db 17, NOCTOWL,    38
+	db 13, NOCTOWL,    39
+	db 10, NOCTOWL,    40
+	db  7, NOCTOWL,    41
+	db  3, NOCTOWL,    42
+	db 10, FORRETRESS, 38
+	db  8, FORRETRESS, 39
+	db  6, FORRETRESS, 40
+	db  4, FORRETRESS, 41
+	db  2, FORRETRESS, 42
+	db  3, ARBOK,      38
+	db  3, ARBOK,      39
+	db  2, ARBOK,      40
+	db  1, ARBOK,      41
+	db  1, ARBOK,      42
+	db  3, EXEGGUTOR,  38
+	db  3, EXEGGUTOR,  39
+	db  2, EXEGGUTOR,  40
+	db  1, EXEGGUTOR,  41
+	db  1, EXEGGUTOR,  42
 	db -1
 
 TreeMonSet_Lake:
 ; common
-	db 17, PIDGEY,     16
-	db 13, PIDGEY,     17
-	db 10, PIDGEY,     18
-	db  7, PIDGEY,     19
-	db  3, PIDGEY,     20
-	db  7, EXEGGCUTE,  16
-	db  5, EXEGGCUTE,  17
-	db  4, EXEGGCUTE,  18
-	db  3, EXEGGCUTE,  19
-	db  1, EXEGGCUTE,  20
-	db  5, VENONAT,    16
-	db  4, VENONAT,    17
-	db  3, VENONAT,    18
-	db  2, VENONAT,    19
-	db  1, VENONAT,    20
-	db  3, BUTTERFREE, 16
-	db  3, BUTTERFREE, 17
-	db  2, BUTTERFREE, 18
-	db  1, BUTTERFREE, 19
-	db  1, BUTTERFREE, 20
+	db 17, PIDGEY,     14
+	db 13, PIDGEY,     15
+	db 10, PIDGEY,     16
+	db  7, PIDGEY,     17
+	db  3, PIDGEY,     18
+	db  7, EXEGGCUTE,  14
+	db  5, EXEGGCUTE,  15
+	db  4, EXEGGCUTE,  16
+	db  3, EXEGGCUTE,  17
+	db  1, EXEGGCUTE,  18
+	db  5, VENONAT,    14
+	db  4, VENONAT,    15
+	db  3, VENONAT,    16
+	db  2, VENONAT,    17
+	db  1, VENONAT,    18
+	db  3, BUTTERFREE, 14
+	db  3, BUTTERFREE, 15
+	db  2, BUTTERFREE, 16
+	db  1, BUTTERFREE, 17
+	db  1, BUTTERFREE, 18
 	db -1
 ; rare
 	db 17, MURKROW,    16
@@ -345,31 +347,31 @@ TreeMonSet_Lake:
 
 TreeMonSet_Forest:
 ; common
-	db 17, HOOTHOOT,    8
-	db 13, HOOTHOOT,    9
-	db 10, HOOTHOOT,   10
-	db  7, HOOTHOOT,   11
-	db  3, HOOTHOOT,   12
-	db  5, PINECO,      8
-	db  4, PINECO,      9
-	db  3, PINECO,     10
-	db  2, PINECO,     11
-	db  1, PINECO,     12
-	db  5, SUNKERN,     8
-	db  4, SUNKERN,     9
-	db  3, SUNKERN,    10
-	db  2, SUNKERN,    11
-	db  1, SUNKERN,    12
-	db  3, METAPOD,     8
-	db  3, METAPOD,     9
-	db  2, METAPOD,    10
-	db  1, METAPOD,    11
-	db  1, METAPOD,    12
-	db  3, KAKUNA,      8
-	db  3, KAKUNA,      9
-	db  2, KAKUNA,     10
-	db  1, KAKUNA,     11
-	db  1, KAKUNA,     12
+	db 17, HOOTHOOT,    6
+	db 13, HOOTHOOT,    7
+	db 10, HOOTHOOT,    8
+	db  7, HOOTHOOT,    9
+	db  3, HOOTHOOT,   10
+	db  5, PINECO,      6
+	db  4, PINECO,      7
+	db  3, PINECO,      8
+	db  2, PINECO,      9
+	db  1, PINECO,     10
+	db  5, SUNKERN,     6
+	db  4, SUNKERN,     7
+	db  3, SUNKERN,     8
+	db  2, SUNKERN,     9
+	db  1, SUNKERN,    10
+	db  3, CATERPIE,    6
+	db  3, CATERPIE,    7
+	db  2, CATERPIE,    8
+	db  1, CATERPIE,    9
+	db  1, CATERPIE,   10
+	db  3, WEEDLE,      6
+	db  3, WEEDLE,      7
+	db  2, WEEDLE,      8
+	db  1, WEEDLE,      9
+	db  1, WEEDLE,     10
 	db -1
 ; rare
 	db 17, HOOTHOOT,    8
@@ -377,16 +379,16 @@ TreeMonSet_Forest:
 	db 10, HOOTHOOT,   10
 	db  7, HOOTHOOT,   11
 	db  3, HOOTHOOT,   12
-	db  5, CATERPIE,    8
-	db  4, CATERPIE,    9
-	db  3, CATERPIE,   10
-	db  2, CATERPIE,   11
-	db  1, CATERPIE,   12
-	db  5, WEEDLE,      8
-	db  4, WEEDLE,      9
-	db  3, WEEDLE,     10
-	db  2, WEEDLE,     11
-	db  1, WEEDLE,     12
+	db  5, METAPOD,     8
+	db  4, METAPOD,     9
+	db  3, METAPOD,    10
+	db  2, METAPOD,    11
+	db  1, METAPOD,    12
+	db  5, KAKUNA,      8
+	db  4, KAKUNA,      9
+	db  3, KAKUNA,     10
+	db  2, KAKUNA,     11
+	db  1, KAKUNA,     12
 	db  3, TEDDIURSA,   8
 	db  3, TEDDIURSA,   9
 	db  2, TEDDIURSA,  10
