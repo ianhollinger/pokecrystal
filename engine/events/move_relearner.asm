@@ -289,7 +289,7 @@ ChooseMoveToLearn:
 	call GetFarByte
 	ld [wTempSpecies], a
 	; get move type
-	and $c0
+	and $3f
 ; 5 characters
 	ld c, a
 	add a
@@ -313,7 +313,7 @@ ChooseMoveToLearn:
 	ld [hl], "/"
 	; get move class
 	ld a, [wTempSpecies]
-	and $3f
+	and $c0
 	rlca
 	rlca
 	ld c, a
