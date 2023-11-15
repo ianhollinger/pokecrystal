@@ -14,16 +14,18 @@ MoveRelearner:
 ;	farcall PlaceMoneyTopRight
 	call YesNoBox
 	jp c, .cancel
-	ld hl, .cost_to_relearn
-	ld de, hMoneyTemp
-	ld bc, 3
-	call CopyBytes
-	ld bc, hMoneyTemp
-	ld de, wMoney
+;	ld hl, .cost_to_relearn
+;	ld de, hMoneyTemp
+;	ld bc, 3
+;	call CopyBytes
+;	ld bc, hMoneyTemp
+;	ld de, wMoney
 ;	farcall CompareMoney
 ;	jp c, .not_enough_money
-	checkitem BRICK_PIECE
-	iffalse .no_brick_pieces
+
+	ld a, BRICK_PIECE
+	call checkitem 
+	jr z, .no_brick_pieces
 	ld a, MOVERELEARNERTEXT_WHICHMON
 	call PrintMoveRelearnerText
 	call JoyWaitAorB
@@ -67,7 +69,16 @@ MoveRelearner:
 ;	ld bc, hMoneyTemp
 ;	ld de, wMoney
 ;	farcall TakeMoney
-	takeitem BRICK_PIECE
+
+	ld a, BRICK_PIECE
+	ld [wCurItem], a
+	ld a, 1
+	ld [wItemQuantityChange], a
+	ld a, -1
+	ld [wCurItemQuantity], a
+	ld hl, wNumItems
+	call TossItem
+
 	ld de, SFX_TRANSACTION
 	call PlaySFX
 	call WaitSFX
