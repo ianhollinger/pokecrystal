@@ -77,7 +77,7 @@ EvolutionMoves::
 	db NO_MOVE      ; GRAVELER
 	db NO_MOVE      ; GOLEM
 	db NO_MOVE	; PONYTA
-	db MEGAHORN     ; RAPIDASH
+	db FURY_ATTACK  ; RAPIDASH
 	db NO_MOVE      ; SLOWPOKE
 	db WITHDRAW     ; SLOWBRO
 	db NO_MOVE      ; MAGNEMITE
