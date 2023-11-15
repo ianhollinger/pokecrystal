@@ -5,7 +5,7 @@
 	const MOVERELEARNERTEXT_COMEAGAIN
 	const MOVERELEARNERTEXT_EGG
 	const MOVERELEARNERTEXT_NOTAPOKEMON
-	const MOVERELEARNERTEXT_NOTENOUGHMONEY
+	const MOVERELEARNERTEXT_NOBRICKPIECES
 	const MOVERELEARNERTEXT_NOMOVESTOLEARN
 
 MoveRelearner:
@@ -14,16 +14,16 @@ MoveRelearner:
 ;	farcall PlaceMoneyTopRight
 	call YesNoBox
 	jp c, .cancel
-;	ld hl, .cost_to_relearn
-;	ld de, hMoneyTemp
-;	ld bc, 3
-;	call CopyBytes
-;	ld bc, hMoneyTemp
-;	ld de, wMoney
+	ld hl, .cost_to_relearn
+	ld de, hMoneyTemp
+	ld bc, 3
+	call CopyBytes
+	ld bc, hMoneyTemp
+	ld de, wMoney
 ;	farcall CompareMoney
 ;	jp c, .not_enough_money
 	checkitem BRICK_PIECE
-	iffalse .not_enough_money
+	iffalse .no_brick_pieces
 	ld a, MOVERELEARNERTEXT_WHICHMON
 	call PrintMoveRelearnerText
 	call JoyWaitAorB
@@ -82,8 +82,8 @@ MoveRelearner:
 	ld a, MOVERELEARNERTEXT_EGG
 	call PrintMoveRelearnerText
 	ret
-.not_enough_money
-	ld a, MOVERELEARNERTEXT_NOTENOUGHMONEY
+.no_brick_pieces
+	ld a, MOVERELEARNERTEXT_NOBRICKPIECES
 	call PrintMoveRelearnerText
 	ret
 .no_mon
@@ -95,8 +95,8 @@ MoveRelearner:
 	call PrintMoveRelearnerText
 	ret
 
-; .cost_to_relearn
-;	dt 1000
+.cost_to_relearn
+	dt 0
 
 GetRelearnableMoves:
 	; Get moves relearnable by CurPartyMon
@@ -293,7 +293,7 @@ ChooseMoveToLearn:
 	ld [wTempSpecies], a
 	; get move type
 	and $3f
-; 5 characters
+	; 5 characters
 	ld c, a
 	add a
 	add a
@@ -428,7 +428,7 @@ PrintMoveRelearnerText:
 	dw .ComeAgain
 	dw .Egg
 	dw .NotMon
-	dw .NotEnoughMoney
+	dw .NoBrickPieces
 	dw .NoMovesToLearn
 
 .Intro
@@ -473,7 +473,7 @@ PrintMoveRelearnerText:
 	text "What?! That's not"
 	line "a #MON!"
 	done
-.NotEnoughMoney
+.NoBrickPieces
 	text "You don't have"
 	line "any BRICK PIECES."
 	done
