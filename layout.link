@@ -181,7 +181,6 @@ ROMX $42
 	"Credits"
 ROMX $43
 	"Title"
-	"bank1"
 ROMX $44
 	"Mobile Adapter SDK"
 ROMX $45
@@ -234,6 +233,7 @@ ROMX $59
 	"Pics 18"
 ROMX $5a
 	"Pics 19"
+	"bank1"
 ROMX $5b
 	"bank5B"
 	"Pics 20"
