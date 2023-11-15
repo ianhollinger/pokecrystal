@@ -62,7 +62,7 @@ ROMX $0d
 	"Effect Commands"
 ROMX $0e
 	"Enemy Trainers"
-	"Map Scripts 12"
+	"Crystal Features 1"
 ROMX $0f
 	"Battle Core"
 ROMX $10
@@ -70,7 +70,7 @@ ROMX $10
 ROMX $11
 	"bank11"
 ROMX $12
-	"Crystal Features 1"
+	"Map Scripts 12"
 ROMX $13
 	"bank13"
 	"Shrink Pics"
