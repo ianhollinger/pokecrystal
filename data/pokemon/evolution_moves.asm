@@ -168,7 +168,7 @@ EvolutionMoves::
 	db NO_MOVE      ; LEDIAN
 	db NO_MOVE      ; SPINARAK
 	db SWORDS_DANCE ; ARIADOS
-	db SUPER_FANG   ; CROBAT
+	db NO_MOVE       ; CROBAT
 	db NO_MOVE      ; CHINCHOU
 	db NO_MOVE      ; LANTURN
 	db NO_MOVE      ; PICHU
@@ -198,7 +198,7 @@ EvolutionMoves::
 	db CONFUSION    ; ESPEON
 	db PURSUIT      ; UMBREON
 	db NO_MOVE      ; MURKROW
-	db HIDDEN_POWER ; SLOWKING
+	db NO_MOVE       ; SLOWKING
 	db NO_MOVE      ; MISDREAVUS
 	db NO_MOVE      ; UNOWN
 	db NO_MOVE      ; WOBBUFFET
