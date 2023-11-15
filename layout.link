@@ -30,7 +30,7 @@ ROM0
 	org $0150
 	"Home"
 ROMX $01
-	"bank1"
+	"Evolutions and Attacks"
 ROMX $02
 	"bank2"
 ROMX $03
@@ -86,7 +86,6 @@ ROMX $18
 	"Map Scripts 4"
 ROMX $19
 	"Crystal Phone Text"
-	"Crystal Features 1"
 ROMX $1a
 	"Map Scripts 5"
 ROMX $1b
@@ -116,11 +115,12 @@ ROMX $26
 	"Map Scripts 11"
 	"Unused Egg Pic"
 ROMX $27
-	"Evolutions and Attacks"
+	"Crystal Features 1"
 ROMX $28
 	"Phone Scripts 1"
 ROMX $29
 	"Phone Text"
+	"bank1"
 ROMX $2a
 	"Map Blocks 1"
 ROMX $2b
