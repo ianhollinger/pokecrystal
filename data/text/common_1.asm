@@ -1714,24 +1714,24 @@ _DayCareLadyIntroText::
 	line "#MON for you?"
 	done
 
-_DayCareLadyIntroEggText::
-	text "I'm the DAY-CARE"
-	line "LADY. Do you know"
-	cont "about EGGS?"
-
-	para "My husband and I"
-	line "were raising some"
-	cont "#MON, you see."
-
-	para "We were shocked to"
-	line "find an EGG!"
-
-	para "How incredible"
-	line "could that be?"
-
-	para "Should I raise a"
-	line "#MON for you?"
-	done
+; _DayCareLadyIntroEggText::
+;	text "I'm the DAY-CARE"
+;	line "LADY. Do you know"
+;	cont "about EGGS?"
+;
+;	para "My husband and I"
+;	line "were raising some"
+;	cont "#MON, you see."
+;
+;	para "We were shocked to"
+;	line "find an EGG!"
+;
+;	para "How incredible"
+;	line "could that be?"
+;
+;	para "Should I raise a"
+;	line "#MON for you?"
+;	done
 
 _WhatShouldIRaiseText::
 	text "What should I"
