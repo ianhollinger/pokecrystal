@@ -389,7 +389,7 @@ ChooseMoveToLearn:
 	db "DRGN@"
 	db "DARK@"
 .Classes
-	db "@"
+	db "PHYS@"
 	db "PHYS@"
 	db "SPEC@"
 	db "STAT@"
