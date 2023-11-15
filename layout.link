@@ -281,6 +281,7 @@ ROMX $6c
 	"Map Scripts 25"
 ROMX $6d
 	"Special Phone Text"
+	"Map Scripts 12"
 ROMX $6e
 	"Pokedex Entries 065-128"
 ROMX $6f
@@ -311,7 +312,6 @@ ROMX $7c
 	"Battle Tower Trainer Data"
 ROMX $7d
 	"Mobile News Data"
-	"Map Scripts 12"
 ROMX $7e
 	"Crystal Events"
 ROMX $7f
