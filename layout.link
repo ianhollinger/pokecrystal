@@ -55,13 +55,14 @@ ROMX $0a
 	"Trainer Backpics"
 ROMX $0b
 	"bankB"
-	"Map Scripts 12"
+	"Egg Moves"
 ROMX $0c
 	"Tileset Data 4"
 ROMX $0d
 	"Effect Commands"
 ROMX $0e
 	"Enemy Trainers"
+	"Map Scripts 12"
 ROMX $0f
 	"Battle Core"
 ROMX $10
@@ -116,7 +117,6 @@ ROMX $26
 	"Map Scripts 11"
 ROMX $27
 	"Evolutions and Attacks"
-	"Egg Moves"
 ROMX $28
 	"Phone Scripts 1"
 ROMX $29
