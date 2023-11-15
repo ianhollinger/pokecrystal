@@ -315,7 +315,7 @@ ROMX $7e
 	"Crystal Events"
 ROMX $7f
 	org $7de0
-	"Stadium 2 Checksums"
+	"Evolutions and Attacks"
 WRAM0
 	"Stack"
 	"Audio RAM"
