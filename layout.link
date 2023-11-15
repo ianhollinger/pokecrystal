@@ -32,7 +32,7 @@ ROM0
 ROMX $01
 	"bank1"
 ROMX $02
-	"Evolutions and Attacks"
+	"bank2"
 ROMX $03
 	"bank3"
 ROMX $04
@@ -116,6 +116,7 @@ ROMX $26
 	"Map Scripts 11"
 ROMX $27
 	"Map Scripts 12"
+	"Evolutions and Attacks"
 ROMX $28
 	"Phone Scripts 1"
 ROMX $29
