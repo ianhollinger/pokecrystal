@@ -307,7 +307,7 @@ PrintDayCareText:
 	text_end
 
 .DayCareLadyIntroEggText:
-	text_far _DayCareLadyIntroEggText
+	text_far _DayCareLadyIntroText
 	text_end
 
 .WhatShouldIRaiseText:
