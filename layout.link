@@ -120,7 +120,6 @@ ROMX $28
 	"Phone Scripts 1"
 ROMX $29
 	"Phone Text"
-	"bank1"
 ROMX $2a
 	"Map Blocks 1"
 ROMX $2b
@@ -182,6 +181,7 @@ ROMX $42
 	"Credits"
 ROMX $43
 	"Title"
+	"bank1"
 ROMX $44
 	"Mobile Adapter SDK"
 ROMX $45
