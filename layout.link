@@ -32,7 +32,7 @@ ROM0
 ROMX $01
 	"bank1"
 ROMX $02
-	"bank2"
+	"Evolutions and Attacks"
 ROMX $03
 	"bank3"
 ROMX $04
@@ -291,7 +291,6 @@ ROMX $71
 	"Text 3"
 ROMX $72
 	"Miscellaneous Text"
-	org $7de0
 ROMX $73
 	"Pokedex Entries 129-192"
 ROMX $74
@@ -315,7 +314,7 @@ ROMX $7d
 ROMX $7e
 	"Crystal Events"
 ROMX $7f
-	"Evolutions and Attacks"
+	org $7de0
 	"Stadium 2 Checksums"
 WRAM0
 	"Stack"
