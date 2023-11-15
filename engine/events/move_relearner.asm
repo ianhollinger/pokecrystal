@@ -24,8 +24,11 @@ MoveRelearner:
 ;	jp c, .not_enough_money
 
 	ld a, BRICK_PIECE
-	call checkitem 
-	jp z, .no_brick_pieces
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+	jp nc, .no_brick_pieces
+
 	ld a, MOVERELEARNERTEXT_WHICHMON
 	call PrintMoveRelearnerText
 	call JoyWaitAorB
