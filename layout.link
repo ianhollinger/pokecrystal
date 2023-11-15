@@ -316,6 +316,7 @@ ROMX $7e
 ROMX $7f
 	org $7de0
 	"Evolutions and Attacks"
+	"Stadium 2 Checksums"
 WRAM0
 	"Stack"
 	"Audio RAM"
