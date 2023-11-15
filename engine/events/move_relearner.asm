@@ -25,7 +25,7 @@ MoveRelearner:
 
 	ld a, BRICK_PIECE
 	call checkitem 
-	jr z, .no_brick_pieces
+	jp z, .no_brick_pieces
 	ld a, MOVERELEARNERTEXT_WHICHMON
 	call PrintMoveRelearnerText
 	call JoyWaitAorB
