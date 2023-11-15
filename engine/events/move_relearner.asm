@@ -302,14 +302,14 @@ ChooseMoveToLearn:
 	ld d, h
 	ld e, l
 
-	ld hl, StringBuffer1
+	ld hl, wStringBuffer1
 	ld bc, 5
 	call PlaceString
 
-	ld hl, StringBuffer1
+	ld hl, wStringBuffer1
 	ld bc, 5
 	call PlaceString
-	ld hl, StringBuffer1 + 4
+	ld hl, wStringBuffer1 + 4
 	ld [hl], "/"
 	; get move class
 	ld a, [wTempSpecies]
@@ -327,10 +327,10 @@ ChooseMoveToLearn:
 	ld d, h
 	ld e, l
 
-	ld hl, StringBuffer1 + 5
+	ld hl, wStringBuffer1 + 5
 	ld bc, 5
 	call PlaceString
-	ld hl, StringBuffer1 + 9
+	ld hl, wStringBuffer1 + 9
 	ld [hl], "/"
 
 	ld a, [MenuSelection]
