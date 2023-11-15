@@ -333,7 +333,7 @@ ChooseMoveToLearn:
 	ld hl, wStringBuffer1 + 9
 	ld [hl], "/"
 
-	ld a, [MenuSelection]
+	ld a, [wMenuSelection]
 	dec a
 	ld bc, MOVE_LENGTH
 	ld hl, Moves + MOVE_PP
