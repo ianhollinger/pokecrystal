@@ -117,9 +117,10 @@ GetRelearnableMoves:
 	ld b, 0
 	ld de, wd002 + 1
 ; based on GetEggMove in engine/pokemon/breeding.asm 
+.loop
+	push bc
 	ld a, [wCurPartySpecies]
 	dec a
-	push bc
 	ld b, 0
 	ld c, a
 	ld hl, EvosAttacksPointers
@@ -147,7 +148,7 @@ GetRelearnableMoves:
 	call GetFarByte
 	inc hl
 	jr c, .loop_moves
-
+.okay
 	ld c, a
 	call CheckAlreadyInList
 	jr c, .loop_moves
@@ -163,7 +164,9 @@ GetRelearnableMoves:
 	push bc
 	jr .loop_moves
 .done
+	callfar GetPreEvolution
 	pop bc
+	jr c, .loop
 	pop af
 	ld [wCurPartySpecies], a
 	ld a, b
@@ -286,29 +289,51 @@ ChooseMoveToLearn:
 	call GetFarByte
 	ld [wTempSpecies], a
 	; get move type
-	; 6 characters
-	ld c, a ;character width loaded into c
-	add a ;double a (two characters)
-	add c ;add c to a (three charaters)
-	add a ;double a (six characters)
-	add c ;add c to a (seven charaters, needed for blank space at the end)
+	and $c0
+; 5 characters
+	ld c, a
+	add a
+	add a
+	add c
 	ld c, a
 	ld b, 0
 	ld hl, .Types
 	add hl, bc
 	ld d, h
 	ld e, l
-	ld hl, wStringBuffer1
-	ld bc, 7
+
+	ld hl, StringBuffer1
+	ld bc, 5
 	call PlaceString
 
-	ld hl, wStringBuffer1 + 7
-	ld [hl], "P"
-	inc hl
-	ld [hl], "P"
-	inc hl
-	ld [hl], ":"
-	ld a, [wMenuSelection]
+	ld hl, StringBuffer1
+	ld bc, 5
+	call PlaceString
+	ld hl, StringBuffer1 + 4
+	ld [hl], "/"
+	; get move class
+	ld a, [wTempSpecies]
+	and $3f
+	rlca
+	rlca
+	ld c, a
+	add a
+	add a
+	add c
+	ld c, a
+	ld b, 0
+	ld hl, .Classes
+	add hl, bc
+	ld d, h
+	ld e, l
+
+	ld hl, StringBuffer1 + 5
+	ld bc, 5
+	call PlaceString
+	ld hl, StringBuffer1 + 9
+	ld [hl], "/"
+
+	ld a, [MenuSelection]
 	dec a
 	ld bc, MOVE_LENGTH
 	ld hl, Moves + MOVE_PP
@@ -333,34 +358,40 @@ ChooseMoveToLearn:
 	ret
 
 .Types
-	db "NORMAL@"
-	db "FIGHT@@"
-	db "FLYING@"
-	db "POISON@"
-	db "GROUND@"
-	db "ROCK@@@"
-	db "BIRD@@@"
-	db "BUG@@@@"
-	db "GHOST@@"
-	db "STEEL@@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "CURSE@@"
-	db "FIRE@@@"
-	db "WATER@@"
-	db "GRASS@@"
-	db "ELECTR@"
-	db "PSYCH@@"
-	db "ICE@@@@"
-	db "DRAGON@"
-	db "DARK@@@"
+	db "NORM@"
+	db "FGHT@"
+	db "FLNG@"
+	db "POIS@"
+	db "GRND@"
+	db "ROCK@"
+	db "BIRD@"
+	db " BUG@"
+	db "GHST@"
+	db "STEL@"
+
+	db "TP10@"
+	db "TP11@"
+	db "TP12@"
+	db "TP13@"
+	db "TP14@"
+	db "TP15@"
+	db "TP16@"
+	db "TP17@"
+	db "TP18@"
+	db "CRSE@"
+
+	db "FIRE@"
+	db "WATR@"
+	db "GRAS@"
+	db "ELEC@"
+	db "PSYC@"
+	db " ICE@"
+	db "DRGN@"
+	db "DARK@"
+.Classes
+	db "PHYS@"
+	db "SPEC@"
+	db "STAT@"
 
 .PrintMoveDesc
 	push de
