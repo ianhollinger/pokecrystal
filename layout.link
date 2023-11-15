@@ -291,7 +291,6 @@ ROMX $71
 	"Text 3"
 ROMX $72
 	"Miscellaneous Text"
-	"Map Scripts 12"
 ROMX $73
 	"Pokedex Entries 129-192"
 ROMX $74
@@ -312,6 +311,7 @@ ROMX $7c
 	"Battle Tower Trainer Data"
 ROMX $7d
 	"Mobile News Data"
+	"Map Scripts 12"
 ROMX $7e
 	"Crystal Events"
 ROMX $7f
