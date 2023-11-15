@@ -233,7 +233,6 @@ ROMX $59
 	"Pics 18"
 ROMX $5a
 	"Pics 19"
-	"bank1"
 ROMX $5b
 	"bank5B"
 	"Pics 20"
@@ -292,6 +291,7 @@ ROMX $71
 	"Text 3"
 ROMX $72
 	"Miscellaneous Text"
+	"bank1"
 ROMX $73
 	"Pokedex Entries 129-192"
 ROMX $74
