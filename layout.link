@@ -72,11 +72,11 @@ ROMX $11
 ROMX $12
 	"Map Scripts 12"
 ROMX $13
-	"bank13"
+	"bank13_2"
 	"Crystal Features 1"
 ROMX $14
 	"bank14"
-	"bank13_2"
+	"bank13"	
 ROMX $15
 	"Map Scripts 1"
 ROMX $16
