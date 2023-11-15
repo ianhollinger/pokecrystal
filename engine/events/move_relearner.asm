@@ -11,17 +11,19 @@
 MoveRelearner:
 	ld a, MOVERELEARNERTEXT_INTRO
 	call PrintMoveRelearnerText
-	farcall PlaceMoneyTopRight
+;	farcall PlaceMoneyTopRight
 	call YesNoBox
 	jp c, .cancel
-	ld hl, .cost_to_relearn
-	ld de, hMoneyTemp
-	ld bc, 3
-	call CopyBytes
-	ld bc, hMoneyTemp
-	ld de, wMoney
-	farcall CompareMoney
-	jp c, .not_enough_money
+;	ld hl, .cost_to_relearn
+;	ld de, hMoneyTemp
+;	ld bc, 3
+;	call CopyBytes
+;	ld bc, hMoneyTemp
+;	ld de, wMoney
+;	farcall CompareMoney
+;	jp c, .not_enough_money
+	checkitem BRICK_PIECE
+	iffalse .not_enough_money
 	ld a, MOVERELEARNERTEXT_WHICHMON
 	call PrintMoveRelearnerText
 	call JoyWaitAorB
@@ -58,13 +60,14 @@ MoveRelearner:
 	ld a, b
 	and a
 	jr z, .skip_learn
-	ld hl, .cost_to_relearn
-	ld de, hMoneyTemp
-	ld bc, 3
-	call CopyBytes
-	ld bc, hMoneyTemp
-	ld de, wMoney
-	farcall TakeMoney
+;	ld hl, .cost_to_relearn
+;	ld de, hMoneyTemp
+;	ld bc, 3
+;	call CopyBytes
+;	ld bc, hMoneyTemp
+;	ld de, wMoney
+;	farcall TakeMoney
+	takeitem BRICK_PIECE
 	ld de, SFX_TRANSACTION
 	call PlaySFX
 	call WaitSFX
@@ -92,8 +95,8 @@ MoveRelearner:
 	call PrintMoveRelearnerText
 	ret
 
-.cost_to_relearn
-	dt 1000
+; .cost_to_relearn
+;	dt 1000
 
 GetRelearnableMoves:
 	; Get moves relearnable by CurPartyMon
@@ -438,11 +441,14 @@ PrintMoveRelearnerText:
 	para "learned for each"
 	line "#MON."
 
-	para "For just ¥1000, I"
-	line "can share that"
+	para "In exchange for"
+	line "just one BRICK" 
 
-	para "knowledge with"
-	line "you. How about it?"
+	para "PIECE, I can share"
+	line "that knowledge"
+
+	para "with you. How"
+	line "about it?"
 	done
 .WhichMon
 	text "Excellent! Which"
@@ -469,7 +475,7 @@ PrintMoveRelearnerText:
 	done
 .NotEnoughMoney
 	text "You don't have"
-	line "enough money."
+	line "any BRICK PIECES."
 	done
 .NoMovesToLearn
 	text "This #MON can't"
