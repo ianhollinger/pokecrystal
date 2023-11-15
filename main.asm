@@ -13,7 +13,14 @@ INCLUDE "engine/overworld/npc_movement.asm"
 INCLUDE "engine/events/happiness_egg.asm"
 INCLUDE "engine/events/shuckle.asm"
 INCLUDE "engine/events/haircut.asm"
+
+
+SECTION "bank2", ROMX
+
 INCLUDE "engine/overworld/player_object.asm"
+INCLUDE "engine/math/sine.asm"
+INCLUDE "engine/predef.asm"
+INCLUDE "engine/gfx/color.asm"
 
 
 SECTION "bank3", ROMX
@@ -33,7 +40,6 @@ INCLUDE "engine/events/bug_contest/caught_mon.asm"
 INCLUDE "engine/items/item_effects.asm"
 INCLUDE "engine/battle_anims/pokeball_wobble.asm"
 INCLUDE "engine/pokemon/knows_move.asm"
-INCLUDE "engine/math/sine.asm"
 
 
 SECTION "bank4", ROMX
@@ -79,7 +85,6 @@ INCLUDE "engine/events/daycare.asm"
 INCLUDE "engine/events/print_unown.asm"
 INCLUDE "engine/events/print_photo.asm"
 INCLUDE "engine/pokemon/breeding.asm"
-INCLUDE "engine/predef.asm"
 
 
 SECTION "Roofs", ROMX
@@ -121,7 +126,6 @@ SECTION "bankA", ROMX
 INCLUDE "engine/link/link.asm"
 INCLUDE "engine/overworld/wildmons.asm"
 INCLUDE "engine/battle/link_result.asm"
-INCLUDE "engine/gfx/color.asm"
 
 
 SECTION "bankB", ROMX
