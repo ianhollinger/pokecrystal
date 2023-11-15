@@ -228,38 +228,38 @@ _OakTimeIsItText::
 	done
 
 ; Mobile Adapter
-
-_ThereIsNothingConnectedText:: ; unreferenced
-	text "There is nothing"
-	line "connected."
-	done
-
-_CheckCellPhoneAdapterText:: ; unreferenced
-	text "Check cell phone"
-	line "adapter."
-	done
-
-_CheckCDMAAdapterText:: ; unreferenced
-	text "Check CDMA"
-	line "adapter."
-	done
-
-_CheckDOCOMOPHSAdapterText:: ; unreferenced
-	text "Check DOCOMO PHS"
-	line "adapter."
-	done
-
-_CheckDDIPHSAdapterText:: ; unreferenced
-	text "Check DDI PHS"
-	line "adapter."
-	done
-
-_CheckMobileAdapterText:: ; unreferenced
-	text "Check unlimited"
-	line "battle mobile"
-	cont "adapter."
-	done
-
+;
+; _ThereIsNothingConnectedText:: ; unreferenced
+;	text "There is nothing"
+;	line "connected."
+;	done
+;
+; _CheckCellPhoneAdapterText:: ; unreferenced
+;	text "Check cell phone"
+;	line "adapter."
+;	done
+;
+; _CheckCDMAAdapterText:: ; unreferenced
+;	text "Check CDMA"
+;	line "adapter."
+;	done
+;
+; _CheckDOCOMOPHSAdapterText:: ; unreferenced
+;	text "Check DOCOMO PHS"
+;	line "adapter."
+;	done
+;
+; _CheckDDIPHSAdapterText:: ; unreferenced
+;	text "Check DDI PHS"
+;	line "adapter."
+;	done
+;
+; _CheckMobileAdapterText:: ; unreferenced
+;	text "Check unlimited"
+;	line "battle mobile"
+;	cont "adapter."
+;	done
+;
 ; Mobile Adapter End
 
 _ThePasswordIsText:: ; unreferenced
@@ -1714,24 +1714,24 @@ _DayCareLadyIntroText::
 	line "#MON for you?"
 	done
 
-; _DayCareLadyIntroEggText::
-;	text "I'm the DAY-CARE"
-;	line "LADY. Do you know"
-;	cont "about EGGS?"
-;
-;	para "My husband and I"
-;	line "were raising some"
-;	cont "#MON, you see."
-;
-;	para "We were shocked to"
-;	line "find an EGG!"
-;
-;	para "How incredible"
-;	line "could that be?"
-;
-;	para "Should I raise a"
-;	line "#MON for you?"
-;	done
+ _DayCareLadyIntroEggText::
+	text "I'm the DAY-CARE"
+	line "LADY. Do you know"
+	cont "about EGGS?"
+
+	para "My husband and I"
+	line "were raising some"
+	cont "#MON, you see."
+
+	para "We were shocked to"
+	line "find an EGG!"
+
+	para "How incredible"
+	line "could that be?"
+
+	para "Should I raise a"
+	line "#MON for you?"
+	done
 
 _WhatShouldIRaiseText::
 	text "What should I"
