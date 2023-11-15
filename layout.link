@@ -55,7 +55,7 @@ ROMX $0a
 	"Trainer Backpics"
 ROMX $0b
 	"bankB"
-	"Egg Moves"
+	"Map Scripts 12"
 ROMX $0c
 	"Tileset Data 4"
 ROMX $0d
@@ -116,6 +116,7 @@ ROMX $26
 	"Map Scripts 11"
 ROMX $27
 	"Evolutions and Attacks"
+	"Egg Moves"
 ROMX $28
 	"Phone Scripts 1"
 ROMX $29
@@ -281,7 +282,6 @@ ROMX $6c
 	"Map Scripts 25"
 ROMX $6d
 	"Special Phone Text"
-	"Map Scripts 12"
 ROMX $6e
 	"Pokedex Entries 065-128"
 ROMX $6f
