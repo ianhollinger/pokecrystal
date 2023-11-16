@@ -1126,7 +1126,7 @@ JohtoGrassWildMons:
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 59, GOLBAT
- db 58, STEELIX
+	db 58, STEELIX
 	db 58, GOLEM
 	db 60, URSARING
 	db 60, DONPHAN
