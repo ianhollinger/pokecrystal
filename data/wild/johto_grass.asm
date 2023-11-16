@@ -1125,26 +1125,26 @@ JohtoGrassWildMons:
 	def_grass_wildmons SILVER_CAVE_ROOM_3
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 61, CROBAT
-	db 58, STEELIX
+	db 59, GOLBAT
+ db 58, STEELIX
 	db 58, GOLEM
 	db 60, URSARING
 	db 60, DONPHAN
-	db 59, CROBAT
+	db 61, CROBAT
 	db 65, TYRANITAR
 	; day
-	db 61, CROBAT
+	db 59, GOLBAT
 	db 58, STEELIX
 	db 58, GOLEM
 	db 60, URSARING
 	db 60, DONPHAN
-	db 59, CROBAT
+	db 61, CROBAT
 	db 65, TYRANITAR
 	; nite
-	db 61, CROBAT
+	db 59, GOLBAT
 	db 58, STEELIX
 	db 58, GOLEM
-	db 59, CROBAT
+	db 61, CROBAT
 	db 55, GOLDUCK
 	db 63, CROBAT
 	db 65, TYRANITAR
