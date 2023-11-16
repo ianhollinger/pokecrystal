@@ -1165,6 +1165,8 @@ PonytaEvosAttacks:
 
 RapidashEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, HORN_DRILL
+	db 1, MEGAHORN
 	db 1, QUICK_ATTACK
 	db 1, GROWL
 	db 5, TAIL_WHIP
@@ -1174,10 +1176,9 @@ RapidashEvosAttacks:
 	db 24, FLAME_WHEEL
 	db 31, AGILITY
 	db 35, FIRE_SPIN
-	db 39, MEGAHORN
+	db 39, FURY_ATTACK
 	db 46, TAKE_DOWN
 	db 53, FIRE_BLAST 
-        db 67, HORN_DRILL
 	db 0 ; no more level-up moves
 
 SlowpokeEvosAttacks:
@@ -2303,6 +2304,7 @@ MoltresEvosAttacks:
 	db 65, SUNNY_DAY
 	db 73, SOLARBEAM
 	db 81, SKY_ATTACK
+	db 0 ; no more level-up moves
 
 DratiniEvosAttacks:
 	db EVOLVE_LEVEL, 30, DRAGONAIR
