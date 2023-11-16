@@ -246,11 +246,16 @@ SageLiFlashExplanationText:
 	line "even the darkest"
 	cont "of all places."
 
-	para "But to use it out"
-	line "of battle, you"
+	para "You do not need to"
+	line "teach your #MON"
 
-	para "need the BADGE"
-	line "from VIOLET's GYM."
+	para "an HM for them to"
+	line "use the move out-"
+	cont "side of battle."
+
+	para "But for FLASH, you"
+	line "need the BADGE"
+	cont "from VIOLET's GYM."
 	done
 
 SageLiAfterBattleText:
