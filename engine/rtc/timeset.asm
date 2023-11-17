@@ -351,8 +351,10 @@ OakText_ResponseToSetTime:
 	jr c, .nite
 	cp DAY_HOUR + 1
 	jr c, .morn
-	cp NITE_HOUR
+	cp EVE_HOUR
 	jr c, .day
+	cp NITE_HOUR
+	jr c, .eve
 .nite
 	ld hl, .OakTimeSoDarkText
 	ret
@@ -361,6 +363,10 @@ OakText_ResponseToSetTime:
 	ret
 .day
 	ld hl, .OakTimeYikesText
+	ret
+
+.eve
+	ld hl, .OakTimeNappedText
 	ret
 
 .OakTimeOversleptText:
@@ -373,6 +379,10 @@ OakText_ResponseToSetTime:
 
 .OakTimeSoDarkText:
 	text_far _OakTimeSoDarkText
+	text_end
+
+.OakTimeNappedText:
+	text_far _OakTimeNappedText
 	text_end
 
 TimeSetBackgroundGFX:
