@@ -694,8 +694,10 @@ GetTimeOfDayString:
 	jr c, .nite
 	cp DAY_HOUR
 	jr c, .morn
-	cp NITE_HOUR
+	cp EVE_HOUR
 	jr c, .day
+	cp NITE_HOUR
+	jr c, .eve
 .nite
 	ld de, .nite_string
 	ret
@@ -705,10 +707,14 @@ GetTimeOfDayString:
 .day
 	ld de, .day_string
 	ret
+.eve
+	ld de, .eve_string
+	ret
 
 .nite_string: db "NITE@"
 .morn_string: db "MORN@"
 .day_string:  db "DAY@"
+.eve_string:  db "EVE@"
 
 AdjustHourForAMorPM:
 ; Convert the hour stored in c (0-23) to a 1-12 value
