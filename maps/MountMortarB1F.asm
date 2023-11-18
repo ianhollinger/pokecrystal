@@ -20,6 +20,14 @@ MountMortarB1FMewtwoCallback:
 	iftrue .Appear
 	sjump .NoAppear
 
+.Appear:
+	appear MOUNTMORTARB1F_MEWTWO
+	endcallback
+
+.NoAppear:
+	disappear MOUNTMORTARB1F_MEWTWO
+	endcallback
+
 MountMortarB1FMewtwo:
 	faceplayer
 	opentext
