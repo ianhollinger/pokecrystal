@@ -1,16 +1,33 @@
 	object_const_def
 	const MOUNTMORTARB1F_POKE_BALL1
-	const MOUNTMORTARB1F_POKE_BALL2
+	const MOUNTMORTARB1F_MEWTWO
 	const MOUNTMORTARB1F_BOULDER
 	const MOUNTMORTARB1F_KIYO
+	const MOUNTMORTARB1F_POKE_BALL2
 	const MOUNTMORTARB1F_POKE_BALL3
 	const MOUNTMORTARB1F_POKE_BALL4
-	const MOUNTMORTARB1F_POKE_BALL5
 
 MountMortarB1F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+        callback MAPCALLBACK_OBJECTS, MountMortarB1FCallback
+        callback MAPCALLBACK_OBJECTS, MountMortarB1FMewtwoCallback
+
+MountMortarB1FMewtwo:
+	faceplayer
+	opentext
+	writetext MewtwoText
+	cry MEWTWO
+	pause 15
+	closetext
+	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
+	loadwildmon MEWTWO, 70
+	startbattle
+	disappear MOUNTMORTARB1F_MEWTWO
+	reloadmapafterbattle
+	setevent EVENT_FOUGHT_MEWTWO
+	end
 
 MountMortarB1FKiyoScript:
 	faceplayer
@@ -57,9 +74,6 @@ MountMortarB1FBoulder:
 MountMortarB1FHyperPotion:
 	itemball HYPER_POTION
 
-MountMortarB1FCarbos:
-	itemball CARBOS
-
 MountMortarB1FFullRestore:
 	itemball FULL_RESTORE
 
@@ -71,6 +85,10 @@ MountMortarB1FPPUp:
 
 MountMortarB1FHiddenMaxRevive:
 	hiddenitem MAX_REVIVE, EVENT_MOUNT_MORTAR_B1F_HIDDEN_MAX_REVIVE
+
+MewtwoText:
+	text "Mew!"
+        done
 
 MountMortarB1FKiyoIntroText:
 	text "Hey!"
@@ -146,7 +164,7 @@ MountMortarB1F_MapEvents:
 
 	def_object_events
 	object_event 29, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMortarB1FHyperPotion, EVENT_MOUNT_MORTAR_B1F_HYPER_POTION
-	object_event  4, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMortarB1FCarbos, EVENT_MOUNT_MORTAR_B1F_CARBOS
+	object_event  4, 16, SPRITE_MONSTER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMortarB1FMewtwo, EVENT_MOUNT_MORTAR_B1F_MEWTWO
 	object_event  9, 10, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMortarB1FBoulder, -1
 	object_event 16,  4, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, MountMortarB1FKiyoScript, -1
 	object_event 34, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMortarB1FFullRestore, EVENT_MOUNT_MORTAR_B1F_FULL_RESTORE
