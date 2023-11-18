@@ -1,47 +1,15 @@
         object_const_def
 	const CINNABARISLAND_BLUE
-	const CINNABARISLAND_MEWTWO
 
 CinnabarIsland_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, CinnabarIslandFlypointCallback
-        callback MAPCALLBACK_OBJECTS, CinnabarIslandMewtwoCallback
 
 CinnabarIslandFlypointCallback:
 	setflag ENGINE_FLYPOINT_CINNABAR
 	endcallback
-
-CinnabarIslandMewtwoCallback:
-	checkevent EVENT_FOUGHT_MEWTWO
-	iftrue .NoAppear
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Appear
-	sjump .NoAppear
-
-.Appear:
-	appear CINNABARISLAND_MEWTWO
-	endcallback
-
-.NoAppear:
-	disappear CINNABARISLAND_MEWTWO
-	endcallback
-
-CinnabarIslandMewtwo:
-	faceplayer
-	opentext
-	writetext MewtwoText
-	cry MEWTWO
-	pause 15
-	closetext
-	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
-	loadwildmon MEWTWO, 70
-	startbattle
-	disappear CINNABARISLAND_MEWTWO
-	reloadmapafterbattle
-	setevent EVENT_FOUGHT_MEWTWO
-	end
 
 CinnabarIslandBlue:
 	faceplayer
@@ -157,10 +125,6 @@ CinnabarIslandSignText:
 	line "Burning Desire"
 	done
 
-MewtwoText:
-	text "Mew!"
-        done
-
 CinnabarIsland_MapEvents:
 	db 0, 0 ; filler
 
@@ -177,4 +141,3 @@ CinnabarIsland_MapEvents:
 
 	def_object_events
 	object_event  9,  6, SPRITE_BLUE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarIslandBlue, EVENT_BLUE_IN_CINNABAR
-	object_event  9,  6, SPRITE_MONSTER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarIslandMewtwo, EVENT_CINNABAR_ISLAND_MEWTWO
