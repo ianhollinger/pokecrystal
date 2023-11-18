@@ -14,6 +14,13 @@ MountMortarB1F_MapScripts:
         callback MAPCALLBACK_OBJECTS, MountMortarB1FCallback
         callback MAPCALLBACK_OBJECTS, MountMortarB1FMewtwoCallback
 
+MountMortarB1FMewtwoCallback:
+	checkevent EVENT_FOUGHT_MEWTWO
+	iftrue .NoAppear
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Appear
+	sjump .NoAppear
+
 MountMortarB1FMewtwo:
 	faceplayer
 	opentext
