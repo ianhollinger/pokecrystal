@@ -7,7 +7,6 @@
 	const SAFFRONCITY_YOUNGSTER1
 	const SAFFRONCITY_YOUNGSTER2
 	const SAFFRONCITY_LASS2
-	const SAFFRONCITY_GRAMPS
 
 SaffronCity_MapScripts:
 	def_scene_scripts
@@ -105,9 +104,6 @@ SaffronCityPokecenterSign:
 
 SaffronCityMartSign:
 	jumpstd MartSignScript
-
-SaffronCityGrampsScript:
-	jumptextfaceplayer SaffronCityGrampsText
 
 SaffronCityLass1Text:
 	text "A little girl who"
@@ -230,24 +226,6 @@ SaffronCityLass2Text:
 	cont "too."
 	done
 
-SaffronCityGrampsText:
-	text "Years ago, a giant"
-	line "HAUNTER terrorized"
-	cont "the city."
-
-	para "It crept up at"
-	line "night like a fog,"
-
-	para "suffocating any-"
-	line "one who got caught"
-	cont "inside it."
-
-	para "A young SABRINA"
-	line "and her ALAKAZAM"
-	cont "put an end to its"
-	cont "awful reign."
-	done
-
 SaffronCitySignText:
 	text "SAFFRON CITY"
 
@@ -326,4 +304,3 @@ SaffronCity_MapEvents:
 	object_event 15, 19, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronCityYoungster1Script, -1
 	object_event 35, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityYoungster2Script, -1
 	object_event 19,  8, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronCityLass2Script, -1
-	object_event 30, 31, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCityGrampsScript, -1
