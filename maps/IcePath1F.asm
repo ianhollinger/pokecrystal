@@ -2,11 +2,53 @@
 	const ICEPATH1F_POKE_BALL1
 	const ICEPATH1F_POKE_BALL2
 	const ICEPATH1F_POKE_BALL3
+	const ICEPATH1F_ARTICUNO
 
 IcePath1F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+        callback MAPCALLBACK_OBJECTS, IcePath1FArticunoCallback
+
+IcePath1FArticunoCallback:
+	checkevent EVENT_FOUGHT_ARTICUNO
+	iftrue .NoAppear
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Appear
+	sjump .NoAppear
+
+.Appear:
+	appear IcePath1F_ARTICUNO
+	endcallback
+
+.NoAppear:
+	disappear IcePath1F_ARTICUNO
+	endcallback
+
+IcePath1FArticunoScript:
+	faceplayer
+	opentext
+	writetext ArticunoText
+	cry ARTICUNO
+	pause 15
+	closetext
+	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
+	loadwildmon ARTICUNO, 50
+	startbattle
+	disappear IcePath1F_ARTICUNO
+	reloadmapafterbattle
+	setevent EVENT_FOUGHT_ARTICUNO
+	end
+
+IcePath1FNevermeltice:
+	itemball NEVERMELTICE
+
+IcePath1FRock:
+	jumpstd SmashRockScript
+
+ArticunoText:
+	text "Gyaoo!"
+        done
 
 IcePath1FHMWaterfall:
 	itemball HM_WATERFALL
@@ -34,3 +76,4 @@ IcePath1F_MapEvents:
 	object_event 31,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePath1FHMWaterfall, EVENT_GOT_HM07_WATERFALL
 	object_event 32, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePath1FPPUp, EVENT_ICE_PATH_1F_PP_UP
 	object_event 35,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePath1FProtein, EVENT_ICE_PATH_1F_PROTEIN
+        object_event 18, 17, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IcePath1FArticunoScript, EVENT_ICE_PATH_1F_ARTICUNO
