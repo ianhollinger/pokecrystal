@@ -8,7 +8,6 @@ Route20_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, Route20ClearRocksCallback
-        callback MAPCALLBACK_OBJECTS, Route20ArticunoCallback
 
 Route20ClearRocksCallback:
 	setevent EVENT_CINNABAR_ROCKS_CLEARED
