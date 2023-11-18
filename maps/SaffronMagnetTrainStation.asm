@@ -3,6 +3,7 @@
 	const SAFFRONMAGNETTRAINSTATION_GYM_GUIDE
 	const SAFFRONMAGNETTRAINSTATION_TEACHER
 	const SAFFRONMAGNETTRAINSTATION_LASS
+	const SAFFRONCITY_GRAMPS
 
 SaffronMagnetTrainStation_MapScripts:
 	def_scene_scripts
@@ -89,6 +90,9 @@ SaffronMagnetTrainStationTeacherScript:
 
 SaffronMagnetTrainStationLassScript:
 	jumptextfaceplayer SaffronMagnetTrainStationLassText
+
+SaffronCityGrampsScript:
+	jumptextfaceplayer SaffronCityGrampsText
 
 SaffronMagnetTrainStationOfficerApproachTrainDoorMovement:
 	step UP
@@ -213,6 +217,24 @@ SaffronMagnetTrainStationLassText:
 	line "TRAIN have PASSES."
 	done
 
+SaffronCityGrampsText:
+	text "Years ago, a giant"
+	line "HAUNTER terrorized"
+	cont "the city."
+
+	para "It crept up at"
+	line "night like a fog,"
+
+	para "suffocating any-"
+	line "one who got caught"
+	cont "inside it."
+
+	para "A young SABRINA"
+	line "and her ALAKAZAM"
+	cont "put an end to its"
+	cont "awful reign."
+	done
+
 SaffronMagnetTrainStation_MapEvents:
 	db 0, 0 ; filler
 
@@ -232,3 +254,4 @@ SaffronMagnetTrainStation_MapEvents:
 	object_event 10, 14, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronMagnetTrainStationGymGuideScript, -1
 	object_event  6, 11, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronMagnetTrainStationTeacherScript, EVENT_SAFFRON_TRAIN_STATION_POPULATION
 	object_event  6, 10, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronMagnetTrainStationLassScript, EVENT_SAFFRON_TRAIN_STATION_POPULATION
+	object_event  4, 13, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SaffronCityGrampsScript, -1
