@@ -17,11 +17,11 @@ IcePath1FArticunoCallback:
 	sjump .NoAppear
 
 .Appear:
-	appear IcePath1F_ARTICUNO
+	appear ICEPATH1F_ARTICUNO
 	endcallback
 
 .NoAppear:
-	disappear IcePath1F_ARTICUNO
+	disappear ICEPATH1F_ARTICUNO
 	endcallback
 
 IcePath1FArticunoScript:
@@ -34,7 +34,7 @@ IcePath1FArticunoScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
 	loadwildmon ARTICUNO, 50
 	startbattle
-	disappear IcePath1F_ARTICUNO
+	disappear ICEPATH1F_ARTICUNO
 	reloadmapafterbattle
 	setevent EVENT_FOUGHT_ARTICUNO
 	end
