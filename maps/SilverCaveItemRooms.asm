@@ -29,7 +29,7 @@ SilverCaveItemRoomsMoltres:
 	pause 15
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
-	loadwildmon MOLTRES, 50
+	loadwildmon MOLTRES, 60
 	startbattle
 	disappear SILVERCAVEITEMROOMS_MOLTRES
 	reloadmapafterbattle
