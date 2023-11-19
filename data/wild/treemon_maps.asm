@@ -4,6 +4,7 @@ MACRO treemon_map
 ENDM
 
 TreeMonMaps:
+	treemon_map ROUTE_23,                  TREEMON_SET_KANTO
 	treemon_map ROUTE_26,                  TREEMON_SET_KANTO
 	treemon_map ROUTE_27,                  TREEMON_SET_TOWN
 	treemon_map ROUTE_28,                  TREEMON_SET_SILVER
