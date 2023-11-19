@@ -31,7 +31,7 @@ RockTunnel1FZapdos:
 	pause 15
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
-	loadwildmon ZAPDOS, 50
+	loadwildmon ZAPDOS, 60
 	startbattle
 	disappear ROCKTUNNEL1F_ZAPDOS
 	reloadmapafterbattle
