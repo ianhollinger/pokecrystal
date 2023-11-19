@@ -32,7 +32,7 @@ IcePath1FArticunoScript:
 	pause 15
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
-	loadwildmon ARTICUNO, 50
+	loadwildmon ARTICUNO, 60
 	startbattle
 	disappear ICEPATH1F_ARTICUNO
 	reloadmapafterbattle
