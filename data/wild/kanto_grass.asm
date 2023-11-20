@@ -38,16 +38,16 @@ KantoGrassWildMons:
 	db 38, SANDSHREW
 	db 42, PARAS
 	db 40, GEODUDE
-	db 38, TOGEPI
 	db 38, CLEFAIRY
+	db 38, TOGEPI
 	; day
 	db 36, ZUBAT
 	db 38, GEODUDE
 	db 38, SANDSHREW
 	db 42, PARAS
 	db 40, GEODUDE
-	db 38, TOGEPI
 	db 38, CLEFAIRY
+	db 38, TOGEPI
 	; nite
 	db 36, ZUBAT
 	db 38, GEODUDE
@@ -206,16 +206,16 @@ KantoGrassWildMons:
 	db 35, PIDGEY
 	db 37, BEEDRILL
 	db 37, ARIADOS
-	db 34, PIKACHU
 	db 34, PICHU
+	db 34, PIKACHU
 	; day
 	db 33, WEEDLE
 	db 33, PIDGEY
 	db 35, PIDGEY
 	db 37, BUTTERFREE
 	db 37, PIDGEOTTO
-	db 34, PIKACHU
 	db 34, PICHU
+	db 34, PIKACHU
 	; nite
 	db 33, HOOTHOOT
 	db 33, LEDYBA
@@ -430,24 +430,24 @@ KantoGrassWildMons:
 	db 40, RATICATE
 	db 40, FEAROW
 	db 40, MAROWAK
-	db 41, ELECTABUZZ
 	db 41, ELEKID
+	db 41, ELECTABUZZ
 	; day
 	db 40, SPEAROW
 	db 42, VOLTORB
 	db 40, RATICATE
 	db 40, FEAROW
 	db 40, MAROWAK
-	db 43, ELECTABUZZ
 	db 41, ELEKID
+	db 41, ELECTABUZZ
 	; nite
 	db 40, WOOPER
 	db 42, VOLTORB
 	db 40, RATICATE
 	db 40, QUAGSIRE
 	db 40, ZUBAT
-	db 41, ELECTABUZZ
 	db 41, ELEKID
+	db 41, ELECTABUZZ
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_11
@@ -486,7 +486,7 @@ KantoGrassWildMons:
 	db 47, SKIPLOOM
 	db 45, NIDORINA 
 	db 45, NIDORINO
-	db 46, NIDOKING
+	db 46, HOPPIP
 	db 46, NIDOQUEEN
 	; day
 	db 43, FARFETCH_D
@@ -494,8 +494,8 @@ KantoGrassWildMons:
 	db 47, SKIPLOOM
 	db 45, NIDORINA 
 	db 45, NIDORINO
+	db 46, HOPPIP
 	db 46, NIDOKING
-	db 46, NIDOQUEEN
 	; nite
 	db 43, VENONAT
 	db 43, QUAGSIRE
@@ -513,8 +513,8 @@ KantoGrassWildMons:
 	db 41, NIDORINA
 	db 41, NIDORINO
 	db 43, HOPPIP
-	db 45, PIDGEOT
 	db 45, SKIPLOOM
+	db 45, PIDGEOT
 	db 43, CHANSEY
 	; day
 	db 43, PIDGEOTTO 
@@ -690,16 +690,16 @@ KantoGrassWildMons:
 	db 35, MANKEY
 	db 34, DODUO
 	db 36, PONYTA
-	db 37, NIDORAN_F
 	db 37, NIDORAN_M
+	db 37, NIDORAN_F
 	; nite
 	db 33, RATTATA
 	db 33, POLIWAG
 	db 35, RATTATA
 	db 34, POLIWAG
 	db 36, RATTATA
-	db 37, NIDORAN_F
-	db 37, NIDORAN_M
+	db 37, RATTATA
+	db 37, POLIWAG
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_24
@@ -723,10 +723,10 @@ KantoGrassWildMons:
 	; nite
 	db 40, VENONAT
 	db 40, ODDISH
-	db 42, BELLSPROUT
+	db 42, ODDISH
 	db 42, ABRA
-	db 40, WEEPINBELL
-	db 44, GLOOM
+	db 40, GLOOM
+	db 44, VENOMOTH
 	db 44, VILEPLUME
 	end_grass_wildmons
 
@@ -739,7 +739,7 @@ KantoGrassWildMons:
 	db 42, METAPOD
 	db 40, BELLSPROUT
 	db 44, BUTTERFREE
-	db 44, SUNKERN
+	db 44, BUTTERFREE
 	; day
 	db 40, CATERPIE
 	db 40, PIDGEY
@@ -794,16 +794,16 @@ KantoGrassWildMons:
 	db 38, ARBOK
 	db 40, RATICATE
 	db 40, PONYTA
-	db 40, CHANSEY
-	db 42, RAPIDASH
+	db 40, RAPIDASH
+	db 42, CHANSEY
 	; day
 	db 38, DODUO
 	db 38, SANDSLASH
 	db 38, ARBOK
 	db 40, RATICATE
 	db 40, PONYTA
-	db 40, CHANSEY
-	db 42, RAPIDASH
+	db 40, RAPIDASH
+	db 42, CHANSEY
 	; nite
 	db 38, NOCTOWL
 	db 38, RATICATE
