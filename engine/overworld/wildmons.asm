@@ -310,7 +310,9 @@ ChooseWildEncounter:
 	jr z, .buff_levels
 
 	ld a, [wBattleType]
-	cp BATTLETYPE_FISH | BATTLETYPE_TREE
+	cp BATTLETYPE_FISH
+	jr nz, .ok
+	cp BATTLETYPE_TREE
 	jr nz, .ok
 
 ; Check if we buff the wild mon, and by how much.
