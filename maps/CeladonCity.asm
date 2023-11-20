@@ -183,11 +183,12 @@ CeladonCityLassText_Mobile: ; unreferenced
 	done
 
 CeladonCityLassText:
-	text "Looking at the"
-	line "ground while I was"
+	text "HOPPIP blew in"
+	line "from a storm last"
+	cont "year."
 
-	para "walking made me"
-	line "dizzy."
+	para "Now they're all"
+	line "over the place!"
 	done
 
 CeladonCitySignText:
