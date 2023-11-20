@@ -195,30 +195,30 @@ TreeMonSet_Town:
 TreeMonSet_Route:
 ; common
 	db 17, HOOTHOOT,    6
-	db 13, HOOTHOOT,    6
-	db 10, HOOTHOOT,    6
-	db  7, HOOTHOOT,    6
-	db  3, HOOTHOOT,    6
+	db 13, HOOTHOOT,    7
+	db 10, HOOTHOOT,    8
+	db  7, HOOTHOOT,    9
+	db  3, HOOTHOOT,   10
 	db  5, SPINARAK,    6
-	db  4, SPINARAK,    6
-	db  3, SPINARAK,    6
-	db  2, SPINARAK,    6
-	db  1, SPINARAK,    6
+	db  4, SPINARAK,    7
+	db  3, SPINARAK,    8
+	db  2, SPINARAK,    9
+	db  1, SPINARAK,   10
 	db  5, LEDYBA,      6
-	db  4, LEDYBA,      6
-	db  3, LEDYBA,      6
-	db  2, LEDYBA,      6
-	db  1, LEDYBA,      6
+	db  4, LEDYBA,      7
+	db  3, LEDYBA,      8
+	db  2, LEDYBA,      9
+	db  1, LEDYBA,     10
 	db  3, SUNKERN,     6
-	db  3, SUNKERN,     6
-	db  2, SUNKERN,     6
-	db  1, SUNKERN,     6
-	db  1, SUNKERN,     6
+	db  3, SUNKERN,     7
+	db  2, SUNKERN,     8
+	db  1, SUNKERN,     9
+	db  1, SUNKERN,    10
 	db  3, EXEGGCUTE,   6
-	db  3, EXEGGCUTE,   6
-	db  2, EXEGGCUTE,   6
-	db  1, EXEGGCUTE,   6
-	db  1, EXEGGCUTE,   6
+	db  3, EXEGGCUTE,   7
+	db  2, EXEGGCUTE,   8
+	db  1, EXEGGCUTE,   9
+	db  1, EXEGGCUTE,  10
 	db -1
 ; rare
 	db 17, HOOTHOOT,    8
