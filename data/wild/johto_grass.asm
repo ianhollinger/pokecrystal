@@ -341,16 +341,16 @@ JohtoGrassWildMons:
 	def_grass_wildmons NATIONAL_PARK
 	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
 	; morn
-	db 14, NIDORAN_M
 	db 14, NIDORAN_F
+	db 14, NIDORAN_M
 	db 16, SPINARAK
 	db 15, PIDGEY
 	db 12, CATERPIE
 	db 12, WEEDLE
 	db 12, PIKACHU
 	; day
-	db 14, NIDORAN_F
 	db 14, NIDORAN_M
+	db 14, NIDORAN_F
 	db 16, SUNKERN
 	db 15, PIDGEY
 	db 12, CATERPIE
@@ -767,7 +767,7 @@ JohtoGrassWildMons:
 	db 30, SWINUB
 	db 31, GOLBAT
 	db 27, SMOOCHUM
-	db 29, SMOOCHUM
+	db 29, GOLBAT
 	; day
 	db 28, SWINUB
 	db 29, ZUBAT
@@ -775,7 +775,7 @@ JohtoGrassWildMons:
 	db 30, SWINUB
 	db 31, GOLBAT
 	db 27, SMOOCHUM
-	db 29, SMOOCHUM
+	db 29, GOLBAT
 	; nite
 	db 28, DELIBIRD
 	db 29, ZUBAT
@@ -783,7 +783,7 @@ JohtoGrassWildMons:
 	db 30, DELIBIRD
 	db 31, GOLBAT
 	db 27, SNEASEL
-	db 29, SNEASEL
+	db 29, GOLBAT
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B2F_BLACKTHORN_SIDE
@@ -795,7 +795,7 @@ JohtoGrassWildMons:
 	db 30, SWINUB
 	db 31, GOLBAT
 	db 27, SMOOCHUM
-	db 29, SMOOCHUM
+	db 29, GOLBAT
 	; day
 	db 28, SWINUB
 	db 29, ZUBAT
@@ -803,7 +803,7 @@ JohtoGrassWildMons:
 	db 30, SWINUB
 	db 31, GOLBAT
 	db 27, SMOOCHUM
-	db 29, SMOOCHUM
+	db 29, GOLBAT
 	; nite
 	db 28, DELIBIRD
 	db 29, ZUBAT
@@ -811,7 +811,7 @@ JohtoGrassWildMons:
 	db 30, DELIBIRD
 	db 31, GOLBAT
 	db 27, SNEASEL
-	db 29, SNEASEL
+	db 29, GOLBAT
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B3F
@@ -821,25 +821,25 @@ JohtoGrassWildMons:
 	db 30, ZUBAT
 	db 30, GOLBAT
 	db 31, SWINUB
+	db 31, JYNX 
 	db 29, SMOOCHUM
-	db 31, JYNX
 	db 27, SMOOCHUM
 	; day
 	db 29, SWINUB
 	db 30, ZUBAT
 	db 30, GOLBAT
 	db 31, SWINUB
+	db 31, JYNX 
 	db 29, SMOOCHUM
-	db 31, JYNX
 	db 27, SMOOCHUM
 	; nite
 	db 29, DELIBIRD
 	db 30, ZUBAT
 	db 30, GOLBAT
 	db 31, DELIBIRD
-	db 27, SNEASEL
+	db 31, GOLBAT
 	db 29, SNEASEL
-	db 31, SNEASEL
+	db 27, SNEASEL
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_NW
@@ -1074,24 +1074,24 @@ JohtoGrassWildMons:
 	db 54, DONPHAN
 	db 52, ONIX
 	db 55, MAGMAR
-	db 55, GOLBAT
 	db 25, LARVITAR
+	db 56, GOLBAT
 	; day
 	db 53, GRAVELER
 	db 54, URSARING
 	db 54, DONPHAN
 	db 52, ONIX
 	db 55, MAGMAR
-	db 55, GOLBAT
 	db 25, LARVITAR
+	db 56, GOLBAT
 	; nite
 	db 53, GRAVELER
 	db 54, GOLBAT
 	db 52, ONIX
 	db 52, GOLBAT
 	db 55, GOLDUCK
-	db 56, GOLBAT
 	db 25, LARVITAR
+	db 56, GOLBAT
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_ROOM_2
@@ -1102,24 +1102,24 @@ JohtoGrassWildMons:
 	db 57, URSARING
 	db 57, DONPHAN
 	db 56, PARASECT
-	db 58, MACHAMP
 	db 45, PUPITAR
+	db 58, MACHAMP
 	; day
 	db 58, GOLBAT
 	db 58, PARASECT
 	db 57, URSARING
 	db 57, DONPHAN
 	db 56, PARASECT
-	db 58, MACHAMP
 	db 45, PUPITAR
+	db 58, MACHAMP
 	; nite
 	db 58, GOLBAT
 	db 58, GOLDUCK
 	db 56, GOLBAT
 	db 56, PARASECT
 	db 58, MISDREAVUS
-	db 55, MACHAMP
 	db 45, PUPITAR
+	db 58, MACHAMP
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_ROOM_3
@@ -1489,29 +1489,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_38
 	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
 	; morn
-	db 19, RATTATA
 	db 20, RATICATE
 	db 19, MAGNEMITE
 	db 19, PIDGEOTTO
-	db 16, TAUROS
-	db 16, MILTANK
+	db 18, TAUROS
+	db 17, MILTANK
+	db 16, DODUO
 	db 16, DODUO
 	; day
-	db 19, RATTATA
 	db 20, RATICATE
 	db 19, MAGNEMITE
 	db 19, PIDGEOTTO
-	db 16, TAUROS
-	db 16, MILTANK
+	db 18, TAUROS
+	db 17, MILTANK
+	db 16, DODUO
 	db 16, DODUO
 	; nite
-	db 19, MEOWTH
 	db 20, RATICATE
 	db 19, MAGNEMITE
+	db 19, MEOWTH
 	db 20, NOCTOWL
-	db 19, MEOWTH
-	db 19, MEOWTH
-	db 19, DODUO
+	db 16, MEOWTH
+	db 16, DODUO
+	db 16, DODUO
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_39
@@ -1537,9 +1537,9 @@ JohtoGrassWildMons:
 	db 20, RATICATE
 	db 19, MAGNEMITE
 	db 20, NOCTOWL
-	db 21, MEOWTH
-	db 21, MEOWTH
-	db 21, MEOWTH
+	db 18, MEOWTH
+	db 18, MEOWTH
+	db 18, MEOWTH
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_42
@@ -1606,7 +1606,7 @@ JohtoGrassWildMons:
 	db 27, BELLSPROUT
 	db 29, WEEPINBELL
 	db 29, LICKITUNG
-	db 31, LICKITUNG
+	db 31, MR__MIME
 	db 31, MR__MIME
 	; day
 	db 28, TANGELA
@@ -1614,7 +1614,7 @@ JohtoGrassWildMons:
 	db 27, BELLSPROUT
 	db 29, WEEPINBELL
 	db 29, LICKITUNG
-	db 31, LICKITUNG
+	db 31, MR__MIME
 	db 31, MR__MIME
 	; nite
 	db 28, TANGELA
@@ -1634,23 +1634,23 @@ JohtoGrassWildMons:
 	db 30, GLIGAR
 	db 31, DONPHAN
 	db 26, PHANPY
+	db 33, SKARMORY 
 	db 33, DUGTRIO
-	db 33, SKARMORY
 	; day
 	db 29, GEODUDE
 	db 29, GRAVELER
 	db 30, GLIGAR
 	db 31, DONPHAN
-	db 31, DUGTRIO
+	db 31, SLUGMA
 	db 33, SKARMORY
-	db 33, SLUGMA
+	db 33, DUGTRIO
 	; nite
 	db 29, GEODUDE
 	db 29, GRAVELER
 	db 30, GLIGAR
 	db 31, GRAVELER
 	db 33, GRAVELER
-	db 33, DIGLETT
+	db 26, DIGLETT
 	db 33, DUGTRIO
 	end_grass_wildmons
 
@@ -1706,7 +1706,7 @@ JohtoGrassWildMons:
 	db 52, TANGELA
 	db 54, SNEASEL
 	db 50, GOLBAT
-	db 54, POLIWRATH
+	db 54, TANGELA
 	db 54, POLIWRATH
 	end_grass_wildmons
 
