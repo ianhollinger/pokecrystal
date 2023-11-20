@@ -10,8 +10,8 @@ GrassMonProbTable:
 	mon_prob 70,  2 ; 20% chance
 	mon_prob 80,  3 ; 10% chance
 	mon_prob 90,  4 ; 10% chance
-	mon_prob 95,  5 ;  5% chance
-	mon_prob 100, 6 ;  5% chance
+	mon_prob 97,  5 ;  7% chance
+	mon_prob 100, 6 ;  3% chance
 	assert_table_length NUM_GRASSMON
 
 WaterMonProbTable:
