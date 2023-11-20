@@ -7,21 +7,26 @@ AsleepTreeMonsNite:
 	db WEEDLE
 	db KAKUNA
 	db BEEDRILL
-	db SPEAROW
+	db SPEAROW	
+	db FEAROW
 	db EKANS
+	db ARBOK
 	db EXEGGCUTE
+	db EXEGGUTOR
 	db AIPOM
 	db SPINARAK
 	db ARIADOS
+	db SUNKERN
+	db TEDDIURSA
 	db -1 ; end
 
 AsleepTreeMonsDay:
 	db VENONAT
 	db HOOTHOOT
 	db NOCTOWL
-	db HERACROSS
 	db LEDYBA
 	db LEDIAN
+	db HERACROSS
 	db -1 ; end
 
 AsleepTreeMonsMorn:
