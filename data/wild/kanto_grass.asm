@@ -458,7 +458,7 @@ KantoGrassWildMons:
 	db 45, MAGNEMITE
 	db 46, PIDGEOTTO
 	db 46, RATTATA
-	db 46, HOPPIP
+	db 46, MAGNETON
 	db 46, MAGNETON
 	; day
 	db 44, HOPPIP
@@ -466,7 +466,7 @@ KantoGrassWildMons:
 	db 45, MAGNEMITE
 	db 46, PIDGEOTTO
 	db 46, RATTATA
-	db 46, HOPPIP
+	db 46, MAGNETON
 	db 46, MAGNETON
 	; nite
 	db 44, DROWZEE
@@ -475,7 +475,7 @@ KantoGrassWildMons:
 	db 46, NOCTOWL
 	db 46, RATICATE
 	db 46, HYPNO
-	db 46, MAGNETON
+	db 46, HYPNO
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_13
