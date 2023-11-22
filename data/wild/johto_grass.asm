@@ -1691,7 +1691,7 @@ JohtoGrassWildMons:
 	db 54, RAPIDASH
 	db 52, URSARING
 	db 52, DONPHAN
-	db 53, RAICHU
+	db 53, BLISSEY
 	; day
 	db 51, TANGELA
 	db 52, ARBOK
