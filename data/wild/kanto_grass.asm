@@ -38,16 +38,16 @@ KantoGrassWildMons:
 	db 38, SANDSHREW
 	db 42, PARAS
 	db 40, GEODUDE
+	db 38, CLEFFA
 	db 38, CLEFAIRY
-	db 38, TOGEPI
 	; day
 	db 36, ZUBAT
 	db 38, GEODUDE
 	db 38, SANDSHREW
 	db 42, PARAS
 	db 40, GEODUDE
+	db 38, CLEFFA
 	db 38, CLEFAIRY
-	db 38, TOGEPI
 	; nite
 	db 36, ZUBAT
 	db 38, GEODUDE
@@ -67,7 +67,7 @@ KantoGrassWildMons:
 	db 42, ZUBAT
 	db 45, MACHOKE
 	db 42, MAROWAK
-	db 42, TYROGUE
+	db 42, MAROWAK
 	; day
 	db 40, CUBONE
 	db 41, GEODUDE
@@ -75,7 +75,7 @@ KantoGrassWildMons:
 	db 42, ZUBAT
 	db 45, MACHOKE
 	db 42, MAROWAK
-	db 42, TYROGUE
+	db 42, MAROWAK
 	; nite
 	db 42, ZUBAT
 	db 41, GEODUDE
