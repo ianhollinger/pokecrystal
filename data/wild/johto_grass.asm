@@ -1074,24 +1074,24 @@ JohtoGrassWildMons:
 	db 54, DONPHAN
 	db 52, ONIX
 	db 55, MAGMAR
-	db 56, GOLBAT
 	db 25, LARVITAR
+	db 56, GRAVELER
 	; day
 	db 53, GRAVELER
 	db 54, URSARING
 	db 54, DONPHAN
 	db 52, ONIX
 	db 55, MAGMAR
-	db 56, GOLBAT
 	db 25, LARVITAR
+	db 56, GRAVELER
 	; nite
 	db 53, GRAVELER
 	db 54, GOLBAT
 	db 52, ONIX
 	db 52, GOLBAT
 	db 55, GOLDUCK
-	db 56, GOLBAT
 	db 25, LARVITAR
+	db 56, GOLBAT
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_ROOM_2
