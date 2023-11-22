@@ -456,24 +456,24 @@ KantoGrassWildMons:
 	db 44, HOPPIP
 	db 43, RATICATE
 	db 45, MAGNEMITE
-	db 46, PIDGEOTTO
 	db 46, RATTATA
 	db 46, MAGNETON
-	db 46, MAGNETON
+	db 46, HOPPIP
+	db 46, PIDGEOT
 	; day
 	db 44, HOPPIP
 	db 43, RATICATE
 	db 45, MAGNEMITE
-	db 46, PIDGEOTTO
 	db 46, RATTATA
 	db 46, MAGNETON
-	db 46, MAGNETON
+	db 46, HOPPIP
+	db 46, PIDGEOT
 	; nite
-	db 44, DROWZEE
+	db 44, RATICATE
 	db 43, MEOWTH
 	db 45, MAGNEMITE
 	db 46, NOCTOWL
-	db 46, RATICATE
+	db 46, DROWZEE
 	db 46, HYPNO
 	db 46, HYPNO
 	end_grass_wildmons
@@ -514,15 +514,15 @@ KantoGrassWildMons:
 	db 41, NIDORINO
 	db 43, HOPPIP
 	db 45, SKIPLOOM
-	db 45, PIDGEOT
+	db 45, JUMPLUFF
 	db 43, CHANSEY
 	; day
 	db 43, PIDGEOTTO 
 	db 41, NIDORINA
 	db 41, NIDORINO
 	db 43, HOPPIP
-	db 45, PIDGEOT
 	db 45, SKIPLOOM
+	db 45, JUMPLUFF
 	db 43, CHANSEY
 	; nite
 	db 41, VENONAT
@@ -553,13 +553,13 @@ KantoGrassWildMons:
 	db 47, SKIPLOOM
 	db 45, CHANSEY
 	; nite
-	db 41, VENONAT
-	db 41, QUAGSIRE
-	db 43, NOCTOWL
-	db 43, VENOMOTH
+	db 43, VENONAT
 	db 43, QUAGSIRE
-	db 43, NOCTOWL
-	db 43, CHANSEY
+	db 45, NOCTOWL
+	db 45, VENOMOTH
+	db 45, QUAGSIRE
+	db 45, NOCTOWL
+	db 45, CHANSEY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_16
