@@ -42,16 +42,16 @@ TreeMonSet_Silver:
 	db  1, PINSIR,     50
 	db -1
 ; rare
-	db 17, NATU,       48
-	db 13, NATU,       49
-	db 10, NATU,       50
-	db  7, NATU,       51
-	db  3, NATU,       52
-	db  7, TANGELA,    48
-	db  5, TANGELA,    49
-	db  4, TANGELA,    50
-	db  3, TANGELA,    51
-	db  1, TANGELA,    52
+	db 17, TANGELA,    48
+	db 13, TANGELA,    49
+	db 10, TANGELA,    50
+	db  7, TANGELA,    51
+	db  3, TANGELA,    52
+	db  7, XATU,       48
+	db  5, XATU,       49
+	db  4, XATU,       50
+	db  3, XATU,       51
+	db  1, XATU,       52
 	db  5, SCIZOR,     48
 	db  4, SCIZOR,     49
 	db  3, SCIZOR,     50
