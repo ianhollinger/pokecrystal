@@ -93,16 +93,16 @@ KantoGrassWildMons:
 	db 44, GEODUDE
 	db 46, ONIX
 	db 42, GOLBAT
-	db 45, MAROWAK
 	db 45, SLUGMA
+	db 45, MAGCARGO
 	db 45, KANGASKHAN
 	; day
 	db 42, CUBONE
 	db 44, GEODUDE
 	db 46, ONIX
 	db 42, GOLBAT
-	db 45, MAROWAK
 	db 45, SLUGMA
+	db 45, MAGCARGO
 	db 45, KANGASKHAN
 	; nite
 	db 42, ZUBAT
