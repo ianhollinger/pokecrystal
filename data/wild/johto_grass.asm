@@ -1047,15 +1047,16 @@ JohtoGrassWildMons:
 	db 32, KINGLER
 	db 33, GOLBAT
 	db 32, GOLBAT
-	db 32, GOLBAT
+	db 34, DEWGONG
 	; day
+	db 32, GOLBAT
 	db 30, KRABBY
 	db 31, ZUBAT
 	db 30, SEEL
 	db 32, KINGLER
 	db 33, GOLBAT
 	db 32, GOLBAT
-	db 32, GOLBAT
+	db 34, DEWGONG
 	; nite
 	db 30, KRABBY
 	db 31, ZUBAT
