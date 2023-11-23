@@ -100,9 +100,9 @@ JohtoWaterWildMons:
 
 	def_water_wildmons WHIRL_ISLAND_LUGIA_CHAMBER
 	db 3 percent ; encounter rate
-	db 25, TENTACOOL
-	db 20, HORSEA
-	db 25, SEEL
+	db 30, TENTACOOL
+	db 25, HORSEA
+	db 30, SEEL
 	db 25, TENTACOOL
 	end_water_wildmons
 
