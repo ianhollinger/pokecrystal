@@ -457,21 +457,21 @@ FishGroups:
 	db  32 percent + 1, KRABBY,     42
 	db  37 percent + 1, KRABBY,     43
 	db  40 percent,     KRABBY,     44
-	db  50 percent + 1, HORSEA,     40
-	db  58 percent + 1, HORSEA,     41
-	db  64 percent,     HORSEA,     42
-	db  68 percent,     HORSEA,     43
-	db  70 percent + 1, HORSEA,     44
-	db  77 percent,     KINGLER,    40
-	db  82 percent,     KINGLER,    41
-	db  86 percent,     KINGLER,    42
-	db  88 percent + 1, KINGLER,    43
-	db  90 percent + 1, KINGLER,    44
-	db  93 percent,     SEADRA,     40
-	db  96 percent + 1, SEADRA,     41
-	db  98 percent + 1, SEADRA,     42
-	db  99 percent + 1, SEADRA,     43
-	db 100 percent,     SEADRA,     44
+	db  50 percent + 1, KINGLER,    40
+	db  58 percent + 1, KINGLER,    41
+	db  64 percent,     KINGLER,    42
+	db  68 percent,     KINGLER,    43
+	db  70 percent + 1, KINGLER,    44
+	db  78 percent + 1, SEADRA,     40
+	db  85 percent,     SEADRA,     41
+	db  90 percent,     SEADRA,     42
+	db  93 percent + 1, SEADRA,     43
+	db  95 percent,     SEADRA,     44
+	db  96 percent + 2, KINGDRA,    40
+	db  98 percent,     KINGDRA,    41
+	db  99 percent,     KINGDRA,    42
+	db  99 percent + 2, KINGDRA,    43
+	db 100 percent,     KINGDRA,    44
 
 .Qwilfish_NoSwarm_Old:
 .Qwilfish_Old:
