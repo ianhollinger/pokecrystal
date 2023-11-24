@@ -148,11 +148,9 @@ GameFreakGameDesignerAskForBattleText:
 	text "Do you want to"
 	line "have a battle"
 	
-	para "with me? I'll"
-	line "give you a"
-
-	para "special gift if"
-	line "you win!"
+	para "with me? I'll give"
+	line "you a special gift"
+	cont "if you win!"
 	
 	done
 
