@@ -43,7 +43,6 @@ Oak:
 	writetext OakLabCompletedPokedexText
 	promptbutton
 	special Diploma
-	waitbutton
 	closetext
 	setevent EVENT_ENABLE_DIPLOMA_PRINTING
 	end
