@@ -469,7 +469,7 @@ DEF KRIS EQU __trainer_class__
 	const NORTON ; unused
 	const HUGH
 	const MARKUS
-	const MORIMOTO
+	const SHIGEKI
 
 	trainerclass RIVAL2 ; 2a
 	const RIVAL2_1_CHIKORITA
