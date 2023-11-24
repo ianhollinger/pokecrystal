@@ -36,7 +36,7 @@ GameFreakGameDesignerScript:
 	waitbutton
 	closetext
 	winlosstext GameFreakGameDesignerWinLossText, 0
-	loadtrainer SUPER_NERD, MORIMOTO
+	loadtrainer SUPER_NERD, SHIGEKI
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_FOUGHT_MORIMOTO
