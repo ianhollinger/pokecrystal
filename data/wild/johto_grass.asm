@@ -1055,7 +1055,6 @@ JohtoGrassWildMons:
 	db 30, SEEL
 	db 32, KINGLER
 	db 33, GOLBAT
-	db 32, GOLBAT
 	db 34, DEWGONG
 	; nite
 	db 30, KRABBY
