@@ -1,4 +1,4 @@
-	db "BONEKEEPER@" ; species name
+	db "BONE KEEPER@" ; species name
 	dw 303, 990 ; height, weight
 
 	db   "Somewhere in the"
