@@ -1,4 +1,4 @@
-	db "STARSHAPE@" ; species name
+	db "STAR SHAPE@" ; species name
 	dw 207, 760 ; height, weight
 
 	db   "When the stars"
