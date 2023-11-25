@@ -298,7 +298,7 @@ MortyRematchHoohText:
         cont "your party."
 
         para "I would be honored"
-        line "to challenge you."
+        line "to battle you."
 	done
 
 MortyRematchText:
@@ -401,7 +401,7 @@ MortyFightDoneHoohText:
         line "training until I" 
   
         para "discover a new"
-        line "future for me."
+        line "future for myself."
         done 
 
 SageJeffreySeenText:
