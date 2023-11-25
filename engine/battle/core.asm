@@ -6909,7 +6909,18 @@ GiveExperiencePoints:
 	push bc
 	ld c, NUM_EXP_STATS
 .stat_exp_loop
+; add stat exp twice
 	inc hl
+	ld a, [de]
+	add [hl]
+	ld [de], a
+	jr nc, .no_carry_stat_exp
+	dec de
+	ld a, [de]
+	inc a
+	jr z, .stat_exp_maxed_out
+	ld [de], a
+	inc de
 	ld a, [de]
 	add [hl]
 	ld [de], a
@@ -6922,6 +6933,7 @@ GiveExperiencePoints:
 	inc de
 
 .no_carry_stat_exp
+; if user has pokerus, x4 stat exp
 	push hl
 	push bc
 	ld a, MON_POKERUS
@@ -6931,6 +6943,16 @@ GiveExperiencePoints:
 	pop bc
 	pop hl
 	jr z, .stat_exp_awarded
+	ld a, [de]
+	add [hl]
+	ld [de], a
+	jr nc, .stat_exp_awarded
+	dec de
+	ld a, [de]
+	inc a
+	jr z, .stat_exp_maxed_out
+	ld [de], a
+	inc de
 	ld a, [de]
 	add [hl]
 	ld [de], a
