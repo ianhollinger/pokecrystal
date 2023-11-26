@@ -33,7 +33,7 @@ Oak:
 	waitbutton
 	special ProfOaksPCBoot
 	readvar VAR_DEXCAUGHT
-	ifgreater NUM_POKEMON - 2 - 1, .CompletedPokedex ; ignore Mew and Celebi
+	ifgreater NUM_POKEMON - 1 - 1, .CompletedPokedex ; ignore Mew
 	writetext OakLabGoodbyeText
 	waitbutton
 	closetext
