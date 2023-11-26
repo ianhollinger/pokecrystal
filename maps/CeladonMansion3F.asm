@@ -18,7 +18,7 @@ GameFreakGameDesignerScript:
 	iftrue .GiveMew
 	writetext GameFreakGameDesignerText
 	readvar VAR_DEXCAUGHT
-	ifgreater NUM_POKEMON - 2 - 1, .CompletedPokedex ; ignore Mew and Celebi
+	ifgreater NUM_POKEMON - 1 - 1, .CompletedPokedex ; ignore Mew
 	waitbutton
 	closetext
 	end
