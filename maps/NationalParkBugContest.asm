@@ -107,7 +107,7 @@ NationalParkBugContestTrainerTipsSign:
 	jumptext NationalParkBugContestTrainerTipsText
 
 NationalParkBugContestParlyzHeal:
-	itemball PARLYZ_HEAL
+	itemball SILVERPOWDER
 
 NationalParkBugContestTMDig:
 	itemball TM_DIG
