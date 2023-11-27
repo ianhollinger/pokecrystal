@@ -176,7 +176,7 @@ ItemNames::
 	li "SITRUS BERRY"
 	li "SQUIRTBOTTLE"
 	li "TERU-SAMA"
-	li "PARK BALL"
+	li "SPORT BALL"
 	li "RAINBOW WING"
 	li "TERU-SAMA"
 	li "BRICK PIECE"
