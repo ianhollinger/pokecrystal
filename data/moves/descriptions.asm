@@ -760,8 +760,8 @@ SmogDescription:
 	next "poison the foe.@"
 
 SludgeDescription:
-	db   "Unsanitary sludge"
-	next "may poison foe.@"
+	db   "Unsanitary sludge."
+	next "May poison foe.@"
 
 BoneClubDescription:
 	db   "An attack that may"
@@ -792,8 +792,8 @@ SpikeCannonDescription:
 	next "hit 2-5 times.@"
 
 ConstrictDescription:
-	db   "A dumb-dumb attack"
-	next "for idiots.@"
+	db   "If you can read"
+	next "this, I messed up.@"
 
 AmnesiaDescription:
 	db   "Sharply raises the"
@@ -1016,8 +1016,8 @@ BellyDrumDescription:
 	next "maximize ATTACK.@"
 
 SludgeBombDescription:
-	db   "Unsanitary sludge"
-	next "may poison foe.@"
+	db   "Unsanitary sludge."
+	next "May poison foe.@"
 
 MudSlapDescription:
 	db   "Kicks mud to lower"
@@ -1104,8 +1104,8 @@ SparkDescription:
 	next "that may paralyze.@"
 
 FuryCutterDescription:
-	db   "Doubles power"
-	next "in succession.@"
+	db   "Powers up on each"
+	next "successive hit.@"
 
 SteelWingDescription:
 	db   "Stiff wings strike"
