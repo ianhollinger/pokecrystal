@@ -2238,10 +2238,10 @@ GetFailureResultText:
 	ld hl, wCurDamage
 	ld a, [hli]
 	ld b, [hl]
-rept 3
+; rept 3
 	srl a
 	rr b
-endr
+; endr
 	ld [hl], b
 	dec hl
 	ld [hli], a
