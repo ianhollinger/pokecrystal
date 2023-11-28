@@ -206,7 +206,8 @@
         const EVENT_FOUGHT_ZAPDOS
         const EVENT_FOUGHT_MOLTRES
         const EVENT_FOUGHT_MEWTWO
-; Unused: next 2 events
+	const EVENT_NATIONAL_PARK_HIDDEN_PARK_BALL
+; Unused: next 1 event
 
 	const_next 200
 ; Kanto story events
