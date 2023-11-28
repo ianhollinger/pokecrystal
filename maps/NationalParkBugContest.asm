@@ -115,6 +115,9 @@ NationalParkBugContestTMDig:
 NationalParkBugContestHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL
 
+NationalParkHiddenParkBall:
+	hiddenitem PARK_BALL, EVENT_NATIONAL_PARK_HIDDEN_PARK_BALL
+
 BugCatchingContestant1AText:
 	text "DON: I'm going to"
 	line "win! Don't bother"
@@ -234,6 +237,7 @@ NationalParkBugContest_MapEvents:
 	bg_event 27, 31, BGEVENT_READ, NationalParkBugContestBattleNoticeSign
 	bg_event  6, 47, BGEVENT_ITEM, NationalParkBugContestHiddenFullHeal
 	bg_event 12,  4, BGEVENT_READ, NationalParkBugContestTrainerTipsSign
+	bg_event 14, 17, BGEVENT_ITEM, NationalParkHiddenParkBall
 
 	def_object_events
 	object_event 19, 29, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant1AScript, EVENT_BUG_CATCHING_CONTESTANT_1A
