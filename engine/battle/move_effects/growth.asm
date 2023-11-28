@@ -11,6 +11,10 @@ BattleCommand_Growth:
 
 ; Raise Attack and Special Attack, +2 in sun
 .raise
+	ld a, $1
+	ld [wBattleAnimParam], a
+	call AnimateCurrentMove
+
 	lb bc, ATTACK, SP_ATTACK
 	ld a, [wBattleWeather]
 	cp WEATHER_SUN
