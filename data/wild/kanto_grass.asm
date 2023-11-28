@@ -486,7 +486,7 @@ KantoGrassWildMons:
 	db 47, SKIPLOOM
 	db 45, NIDORINA 
 	db 45, NIDORINO
-	db 46, HOPPIP
+	db 46, DITTO
 	db 46, NIDOQUEEN
 	; day
 	db 43, FARFETCH_D
@@ -494,7 +494,7 @@ KantoGrassWildMons:
 	db 47, SKIPLOOM
 	db 45, NIDORINA 
 	db 45, NIDORINO
-	db 46, HOPPIP
+	db 46, DITTO
 	db 46, NIDOKING
 	; nite
 	db 43, VENONAT
@@ -502,7 +502,7 @@ KantoGrassWildMons:
 	db 45, NOCTOWL
 	db 45, VENOMOTH
 	db 45, QUAGSIRE
-	db 45, NOCTOWL
+	db 45, DITTO
 	db 45, NOCTOWL
 	end_grass_wildmons
 
