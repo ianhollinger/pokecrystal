@@ -23,13 +23,13 @@ BattleCommand_Growth:
 .got_stats_to_raise
 	push bc
 	call RaiseStat
-	call BattleCommand_SwitchTurn
+;	call BattleCommand_SwitchTurn
 	call BattleCommand_StatUpMessage
 	call ResetMiss
 	pop bc
 	ld b, c
 	call RaiseStat
-	call BattleCommand_SwitchTurn
+;	call BattleCommand_SwitchTurn
 	call BattleCommand_StatUpMessage
 	jp ResetMiss
 
