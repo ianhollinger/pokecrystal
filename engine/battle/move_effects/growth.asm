@@ -1,11 +1,22 @@
 BattleCommand_Growth:
+	ld bc, wPlayerStatLevels
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .go
+	ld bc, wEnemyStatLevels
+
+.go
+
 ; If no stats can be increased, don't.
 ; Attack
-	ld a, [ATTACK]
+	ld a, [bc]
 	cp MAX_STAT_LEVEL
 	jr c, .raise
 ; Special Attack
-	ld a, [SP_ATTACK]
+	inc bc
+	inc bc
+	inc bc
+	ld a, [bc]
 	cp MAX_STAT_LEVEL
 	jr nc, .cantraise
 
