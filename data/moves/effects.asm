@@ -2108,12 +2108,8 @@ Growth:
 	checkobedience
 	usedmovetext
 	doturn
+	moveanim
 	growth
-        lowersub
-	statupanim
-	raisesub
-	statupmessage
-	statupfailtext
 	endmove
 
 LowKick:
