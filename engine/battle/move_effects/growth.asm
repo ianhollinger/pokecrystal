@@ -34,5 +34,4 @@ BattleCommand_Growth:
 	ld b, ABILITY + 1
 	call GetStatName
 	call AnimateFailedMove
-	ld hl, WontRiseAnymoreText
-	jp StdBattleTextbox
+	jp PrintButItFailed
