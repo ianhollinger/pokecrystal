@@ -2108,7 +2108,6 @@ Growth:
 	checkobedience
 	usedmovetext
 	doturn
-	moveanim
 	growth
 	endmove
 
