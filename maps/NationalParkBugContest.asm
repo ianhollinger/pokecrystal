@@ -115,7 +115,7 @@ NationalParkBugContestTMDig:
 NationalParkBugContestHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL
 
-NationalParkHiddenParkBall:
+NationalParkBugContestHiddenParkBall:
 	hiddenitem PARK_BALL, EVENT_NATIONAL_PARK_HIDDEN_PARK_BALL
 
 BugCatchingContestant1AText:
