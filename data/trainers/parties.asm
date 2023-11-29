@@ -3087,15 +3087,11 @@ BugCatcherGroup:
 	db -1 ; end
 
 	; BUG_CATCHER (4)
-	db "WADE@", TRAINERTYPE_STAT_EXP
+	db "WADE@", TRAINERTYPE_NORMAL
 	db  2, CATERPIE
-		dw $0027, $0027, $0027, $0027, $0027
 	db  2, WEEDLE 
-		dw $0027, $0027, $0027, $0027, $0027
 	db  3, LEDYBA
-		dw $0059, $0059, $0059, $0059, $0059
 	db  2, SPINARAK
-		dw $0027, $0027, $0027, $0027, $0027
 	db -1 ; end
 
 	; BUG_CATCHER (5)
