@@ -2,7 +2,6 @@ FleeMons:
 ; referenced by TryEnemyFlee and FastBallMultiplier
 
 SometimesFleeMons:
-	db MILTANK
 	db TYPHLOSION
 	db VOLTORB
 	db TENTACRUEL
@@ -27,13 +26,19 @@ SometimesFleeMons:
 	db JOLTEON
 	db KADABRA
 	db PIDGEOT
+	db TAUROS
 	db -1
 
-OftenFleeMons:
+OftenFleeMons: ; never flee mons
+	db MEW
+	db ELECTRODE
+	db CELEBI
+	db ZAPDOS
+	db LUGIA
+	db MEWTWO
 	db -1
 
 AlwaysFleeMons:
 	db RAIKOU
 	db ENTEI
-	db MEW
 	db -1
