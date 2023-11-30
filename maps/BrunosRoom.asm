@@ -47,8 +47,7 @@ BrunoScript_Battle:
 	iftrue BrunoScript_AfterBattle
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue BrunoScript_PostGame
-	checkevent EVENT_OPENED_MT_SILVER
-	iffalse BrunoScript_Fight
+	sjump BrunoScript_Fight
 
 BrunoScript_PostGame:
 	writetext BrunoScript_BrunoBeforeText
