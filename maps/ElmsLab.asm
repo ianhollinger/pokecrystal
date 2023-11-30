@@ -475,7 +475,7 @@ AideScript_GivePotion:
 	opentext
 	writetext AideText_GiveYouPotion
 	promptbutton
-	verbosegiveitem POTION
+	verbosegiveitem POTION, 5
 	writetext AideText_AlwaysBusy
 	waitbutton
 	closetext
@@ -1216,7 +1216,7 @@ ElmsLabMonEggText: ; unreferenced
 
 AideText_GiveYouPotion:
 	text "<PLAY_G>, I want"
-	line "you to have this"
+	line "you to have these"
 	cont "for your errand."
 	done
 
