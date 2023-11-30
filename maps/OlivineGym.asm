@@ -46,8 +46,6 @@ OlivineGymJasmineScript:
 	checkevent EVENT_BEAT_JASMINE2
 	iftrue .SpeechAfterRematch
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
 .Rematch:
