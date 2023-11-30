@@ -813,26 +813,26 @@ TryEnemyFlee:
 
 	call BattleRandom
 	ld b, a
-	cp 50 percent + 1
+	cp 10 percent + 1
 	jr nc, .Stay
 
 	push bc
 	ld a, [wTempEnemyMonSpecies]
 	ld de, 1
-	ld hl, OftenFleeMons
+	ld hl, SometimesFleeMons
 	call IsInArray
 	pop bc
 	jr c, .Flee
 
-	ld a, b
-	cp 10 percent + 1
-	jr nc, .Stay
+;	ld a, b
+;	cp 10 percent + 1
+;	jr nc, .Stay
 
-	ld a, [wTempEnemyMonSpecies]
-	ld de, 1
-	ld hl, SometimesFleeMons
-	call IsInArray
-	jr c, .Flee
+;	ld a, [wTempEnemyMonSpecies]
+;	ld de, 1
+;	ld hl, OftenFleeMons ; never flee mons
+;	call IsInArray
+;	jr c, .Stay 
 
 .Stay:
 	and a
