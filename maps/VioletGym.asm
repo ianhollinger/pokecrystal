@@ -52,8 +52,7 @@ VioletGymFalknerScript:
 	checkevent EVENT_BEAT_FALKNER2
 	iftrue .SpeechAfterRematch
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-	sjump .FightDone
+	iffalse .FightDone
 
 .Rematch:
 	writetext FalknerRematchText
