@@ -47,8 +47,6 @@ KogaScript_Battle:
 	iftrue KogaScript_AfterBattle
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue KogaScript_PostGame
-	checkevent EVENT_OPENED_MT_SILVER
-	iffalse KogaScript_Fight
 
 KogaScript_Fight:
 	writetext KogaScript_KogaBeforeText
