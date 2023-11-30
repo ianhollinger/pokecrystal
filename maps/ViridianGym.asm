@@ -34,8 +34,6 @@ ViridianGymBlueScript:
 	checkevent EVENT_BEAT_BLUE2
 	iftrue .RematchDone
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
 .Rematch:
