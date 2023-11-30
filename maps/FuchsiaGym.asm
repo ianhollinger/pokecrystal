@@ -44,8 +44,7 @@ FuchsiaGymJanineScript:
 	checkevent EVENT_BEAT_JANINE2
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-	sjump .FightDone
+	iffalse .FightDone
 
 .Rematch:
 	opentext
