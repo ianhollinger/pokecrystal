@@ -65,8 +65,7 @@ EcruteakGymMortyScript:
 	checkevent EVENT_BEAT_MORTY2
 	iftrue .RematchDone
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-        sjump .FightDone
+	iffalse .FightDone
 
 .Rematch:
         setval HO_OH
