@@ -88,8 +88,8 @@ CeruleanGymMistyScript:
 	iftrue .SpeechAfterRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .Rematch
-	checkevent EVENT_OPENED_MT_SILVER
-	iffalse .FightDone
+	sjump .FightDone
+
 .Rematch:
 	writetext MistyRematchText
 	waitbutton
