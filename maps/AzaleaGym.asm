@@ -32,6 +32,7 @@ AzaleaGymBugsyScript:
 	setflag ENGINE_HIVEBADGE
 	readvar VAR_BADGES
 	scall AzaleaGymActivateRockets
+
 .FightDone:
 	checkevent EVENT_GOT_TM49_FURY_CUTTER
 	iftrue .GotFuryCutter
@@ -54,8 +55,7 @@ AzaleaGymBugsyScript:
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .Rematch
-	checkevent EVENT_OPENED_MT_SILVER
-	iffalse .FightDone
+	sjump .FightDone
 
 .Rematch:
 	writetext BugsyRematchText
