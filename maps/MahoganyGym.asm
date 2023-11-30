@@ -54,8 +54,6 @@ MahoganyGymPryceScript:
 	checkevent EVENT_BEAT_PRYCE2
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-        checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
 .Rematch:
