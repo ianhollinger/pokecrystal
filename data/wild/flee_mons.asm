@@ -27,6 +27,7 @@ SometimesFleeMons:
 	db KADABRA
 	db PIDGEOT
 	db TAUROS
+	db MILTANK
 	db -1
 
 OftenFleeMons: ; never flee mons
