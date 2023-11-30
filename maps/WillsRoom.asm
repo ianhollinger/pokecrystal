@@ -47,8 +47,6 @@ WillScript_Battle:
 	iftrue WillScript_AfterBattle
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue WillScript_PostGame
-	checkevent EVENT_OPENED_MT_SILVER
-	iffalse WillScript_Fight
 
 WillScript_Fight:
 	writetext WillScript_WillBeforeText
