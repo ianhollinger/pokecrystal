@@ -48,8 +48,6 @@ VermilionGymSurgeScript:
 	checkevent EVENT_BEAT_LTSURGE2
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
 .Rematch:
