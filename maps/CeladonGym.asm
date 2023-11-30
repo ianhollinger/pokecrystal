@@ -51,8 +51,7 @@ CeladonGymErikaScript:
 	checkevent EVENT_BEAT_ERIKA2
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-	sjump .FightDone
+	iffalse .FightDone
 
 .Rematch:
 	writetext ErikaRematchText
