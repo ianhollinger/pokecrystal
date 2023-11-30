@@ -79,6 +79,10 @@ BlackthornGymClairScript:
 	promptbutton
 	sjump .GotTM24
 
+.PostGame:
+	checkevent EVENT_BEAT_CLAIR2
+	iftrue .RematchDone
+
 .Rematch:
 	writetext ClairRematchText
 	waitbutton
@@ -95,11 +99,6 @@ BlackthornGymClairScript:
 	waitbutton
         closetext
         end
-
-.PostGame:
-	checkevent EVENT_BEAT_CLAIR2
-	iftrue .RematchDone
-	sjump .Rematch
 
 .BagFull:
 	writetext BlackthornGymClairText_BagFull
