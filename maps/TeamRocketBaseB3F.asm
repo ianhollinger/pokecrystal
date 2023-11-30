@@ -125,28 +125,60 @@ RocketBaseMurkrow:
 	setevent EVENT_LEARNED_HAIL_GIOVANNI
 	end
 
-SlowpokeTailGrunt:
-	trainer GRUNTF, GRUNTF_5, EVENT_BEAT_ROCKET_GRUNTF_5, GruntF5SeenText, GruntF5BeatenText, 0, GruntF5Script
+; SlowpokeTailGrunt:
+;	trainer GRUNTF, GRUNTF_5, EVENT_BEAT_ROCKET_GRUNTF_5, GruntF5SeenText, GruntF5BeatenText, 0, GruntF5Script
 
 GruntF5Script:
-	endifjustbattled
+	faceplayer
 	opentext
+	checkevent EVENT_BEAT_ROCKET_GRUNTF_5
+	iftrue .Defeated
+	writetext GruntF5SeenText
+	waitbutton
+	closetext
+	winlosstext GruntF5BeatenText, 0
+	loadtrainer GRUNTF, GRUNTF_5
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_ROCKET_GRUNTF_5
+	opentext 
+	writetext GruntF5AfterBattleText
+	setevent EVENT_LEARNED_SLOWPOKETAIL
+	closetext
+	end
+
+.Defeated:
 	writetext GruntF5AfterBattleText
 	waitbutton
 	closetext
-	setevent EVENT_LEARNED_SLOWPOKETAIL
 	end
 
-RaticateTailGrunt:
-	trainer GRUNTM, GRUNTM_28, EVENT_BEAT_ROCKET_GRUNTM_28, GruntM28SeenText, GruntM28BeatenText, 0, GruntM28Script
+; RaticateTailGrunt:
+;	trainer GRUNTM, GRUNTM_28, EVENT_BEAT_ROCKET_GRUNTM_28, GruntM28SeenText, GruntM28BeatenText, 0, GruntM28Script
 
 GruntM28Script:
-	endifjustbattled
+	faceplayer
 	opentext
+	checkevent EVENT_BEAT_ROCKET_GRUNTM_28
+	iftrue .Defeated
+	writetext GruntM28SeenText
+	waitbutton
+	closetext
+	winlosstext GruntM28BeatenText, 0
+	loadtrainer GRUNTM, GRUNTM_28
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_ROCKET_GRUNTM_28
+	opentext 
+	writetext GruntM28AfterBattleText
+	setevent EVENT_LEARNED_RATICATE_TAIL
+	closetext
+	end
+
+.Defeated:
 	writetext GruntM28AfterBattleText
 	waitbutton
 	closetext
-	setevent EVENT_LEARNED_RATICATE_TAIL
 	end
 
 TrainerScientistRoss:
@@ -593,8 +625,8 @@ TeamRocketBaseB3F_MapEvents:
 	object_event 25, 14, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LanceGetPasswordScript, EVENT_TEAM_ROCKET_BASE_B3F_LANCE_PASSWORDS
 	object_event  8,  3, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B3F_EXECUTIVE
 	object_event  7,  2, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RocketBaseMurkrow, EVENT_TEAM_ROCKET_BASE_POPULATION
-	object_event 21,  7, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, SlowpokeTailGrunt, EVENT_TEAM_ROCKET_BASE_POPULATION
-	object_event  5, 14, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, RaticateTailGrunt, EVENT_TEAM_ROCKET_BASE_POPULATION
+	object_event 21,  7, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, GruntF5Script, EVENT_TEAM_ROCKET_BASE_POPULATION
+	object_event  5, 14, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, GruntM28Script, EVENT_TEAM_ROCKET_BASE_POPULATION
 	object_event 23, 11, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerScientistRoss, EVENT_TEAM_ROCKET_BASE_POPULATION
 	object_event 11, 15, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerScientistMitch, EVENT_TEAM_ROCKET_BASE_POPULATION
 	object_event 24, 14, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TeamRocketBaseB3FRocketScript, EVENT_TEAM_ROCKET_BASE_POPULATION
