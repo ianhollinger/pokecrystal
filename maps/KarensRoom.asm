@@ -47,8 +47,6 @@ KarenScript_Battle:
 	iftrue KarenScript_AfterBattle
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue KarenScript_PostGame
-	checkevent EVENT_OPENED_MT_SILVER
-	iffalse KarenScript_Fight
 
 KarenScript_Fight:
 	writetext KarenScript_KarenBeforeText
