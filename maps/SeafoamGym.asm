@@ -41,8 +41,6 @@ SeafoamGymBlaineScript:
 	checkevent EVENT_BEAT_BLAINE2
 	iftrue .FightDone
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Rematch
-	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
 .Rematch:
