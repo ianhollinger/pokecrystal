@@ -6,56 +6,56 @@ SwarmGrassWildMons:
 	map_id DARK_CAVE_VIOLET_ENTRANCE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
+	db 4, DUNSPARCE
 	db 3, GEODUDE
-	db 3, DUNSPARCE
 	db 2, ZUBAT
 	db 2, GEODUDE
-	db 2, DUNSPARCE
-	db 4, DUNSPARCE
-	db 4, DUNSPARCE
+	db 4, GEODUDE
+	db 2, TEDDIURSA
+	db 4, ZUBAT
 	; day
+	db 4, DUNSPARCE
 	db 3, GEODUDE
-	db 3, DUNSPARCE
 	db 2, ZUBAT
 	db 2, GEODUDE
-	db 2, DUNSPARCE
-	db 4, DUNSPARCE
-	db 4, DUNSPARCE
+	db 4, GEODUDE
+	db 2, ZUBAT
+	db 4, ZUBAT
 	; nite
+	db 4, DUNSPARCE
 	db 3, GEODUDE
-	db 3, DUNSPARCE
 	db 2, ZUBAT
 	db 2, GEODUDE
-	db 2, DUNSPARCE
-	db 4, DUNSPARCE
-	db 4, DUNSPARCE
+	db 4, GEODUDE
+	db 2, ZUBAT
+	db 4, ZUBAT
 
 ; Yanma swarm
 	map_id ROUTE_35
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
 	; morn
-	db 12, NIDORAN_M
-	db 12, NIDORAN_F
-	db 12, YANMA
 	db 14, YANMA
-	db 14, PIDGEY
-	db 10, DITTO
-	db 10, DITTO
+	db 14, SNUBBULL
+	db 16, PIDGEY
+	db 15, GROWLITHE
+	db 12, ABRA
+	db 14, MAGNEMITE
+	db 12, DITTO
 	; day
-	db 12, NIDORAN_M
-	db 12, NIDORAN_F
-	db 12, YANMA
 	db 14, YANMA
-	db 14, PIDGEY
-	db 10, DITTO
-	db 10, DITTO
+	db 14, SNUBBULL
+	db 16, PIDGEY
+	db 15, GROWLITHE
+	db 12, ABRA
+	db 14, MAGNEMITE
+	db 12, DITTO
 	; nite
-	db 12, NIDORAN_M
-	db 12, NIDORAN_F
-	db 12, YANMA
 	db 14, YANMA
-	db 14, HOOTHOOT
-	db 10, DITTO
-	db 10, DITTO
+	db 14, DROWZEE
+	db 16, HOOTHOOT
+	db 15, PSYDUCK
+	db 12, ABRA
+	db 14, MAGNEMITE
+	db 12, DITTO
 
 	db -1 ; end
