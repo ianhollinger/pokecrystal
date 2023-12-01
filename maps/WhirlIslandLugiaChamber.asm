@@ -33,6 +33,13 @@ Lugia:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon LUGIA, 70
 	startbattle
+	ifequal DRAW, DidntCatchLugia
+	disappear WHIRLISLANDLUGIACHAMBER_LUGIA
+	reloadmapafterbattle
+	end
+
+DidntCatchLugia:
+	setevent EVENT_DIDNT_CATCH_LUGIA
 	disappear WHIRLISLANDLUGIACHAMBER_LUGIA
 	reloadmapafterbattle
 	end
