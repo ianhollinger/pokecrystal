@@ -34,9 +34,16 @@ IcePath1FArticunoScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
 	loadwildmon ARTICUNO, 60
 	startbattle
+	setevent EVENT_FOUGHT_ARTICUNO
+	ifequal DRAW, DidntCatchArticuno
 	disappear ICEPATH1F_ARTICUNO
 	reloadmapafterbattle
-	setevent EVENT_FOUGHT_ARTICUNO
+	end
+
+DidntCatchArticuno:	
+	setevent EVENT_DIDNT_CATCH_ARTICUNO
+	disappear ICEPATH1F_ARTICUNO
+	reloadmapafterbattle
 	end
 
 IcePath1FNevermeltice:
