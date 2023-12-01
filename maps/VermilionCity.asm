@@ -55,8 +55,15 @@ VermilionSnorlax:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon SNORLAX, 50
 	startbattle
-	disappear VERMILIONCITY_BIG_SNORLAX
 	setevent EVENT_FOUGHT_SNORLAX
+	ifequal DRAW, DidntCatchSnorlax
+	disappear VERMILIONCITY_BIG_SNORLAX
+	reloadmapafterbattle
+	end
+
+DidntCatchSnorlax:
+	setevent EVENT_DIDNT_CATCH_SNORLAX
+	disappear VERMILIONCITY_BIG_SNORLAX
 	reloadmapafterbattle
 	end
 
