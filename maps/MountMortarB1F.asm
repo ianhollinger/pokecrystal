@@ -38,9 +38,16 @@ MountMortarB1FMewtwo:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
 	loadwildmon MEWTWO, 70
 	startbattle
+	setevent EVENT_FOUGHT_MEWTWO
+	ifequal DRAW, DidntCatchMewtwo
 	disappear MOUNTMORTARB1F_MEWTWO
 	reloadmapafterbattle
-	setevent EVENT_FOUGHT_MEWTWO
+	end
+
+DidntCatchMewtwo:
+	setevent EVENT_DIDNT_CATCH_MEWTWO
+	disappear MOUNTMORTARB1F_MEWTWO
+	reloadmapafterbattle
 	end
 
 MountMortarB1FKiyoScript:
