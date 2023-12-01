@@ -31,9 +31,16 @@ SilverCaveItemRoomsMoltres:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
 	loadwildmon MOLTRES, 60
 	startbattle
+	setevent EVENT_FOUGHT_MOLTRES
+	ifequal DRAW, DidntCatchMoltres
 	disappear SILVERCAVEITEMROOMS_MOLTRES
 	reloadmapafterbattle
-	setevent EVENT_FOUGHT_MOLTRES
+	end
+
+DidntCatchMoltres:
+	setevent EVENT_DIDNT_CATCH_MOLTRES
+	disappear SILVERCAVEITEMROOMS_MOLTRES
+	reloadmapafterbattle
 	end
 
 MoltresText:
