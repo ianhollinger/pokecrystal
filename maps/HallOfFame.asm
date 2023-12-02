@@ -59,7 +59,77 @@ HallOfFameEnterScript:
 	specialphonecall SPECIALCALL_SSTICKET
 .SkipPhoneCall:
 	halloffame
+	checkevent EVENT_DIDNT_CATCH_MEWTWO
+	iftrue .DidntCatchMewtwo
+.SkipMewtwo:
+	checkevent EVENT_DIDNT_CATCH_ARTICUNO
+	iftrue .DidntCatchArticuno
+.SkipArticuno:
+	checkevent EVENT_DIDNT_CATCH_ZAPDOS
+	iftrue .DidntCatchZapdos
+.SkipZapdos:
+	checkevent EVENT_DIDNT_CATCH_MOLTRES
+	iftrue .DidntCatchMoltres
+.SkipMoltres:
+	checkevent EVENT_DIDNT_CATCH_SUDOWOODO
+	iftrue .DidntCatchSudowoodo
+.SkipSudowoodo:
+	checkevent EVENT_DIDNT_CATCH_SNORLAX
+	iftrue .DidntCatchSnorlax
+.SkipSnorlax:
+	checkevent EVENT_DIDNT_CATCH_LUGIA
+	iftrue .DidntCatchLugia
+.SkipLugia:
+	checkevent EVENT_DIDNT_CATCH_HO_OH
+	iftrue .DidntCatchHoOh
+.SkipHoOh:
+	checkevent EVENT_DIDNT_CATCH_CELEBI
+	iffalse .SkipCelebi 
+.DidntCatchCelebi:
+	clearevent EVENT_FOUGHT_CELEBI
+	clearevent EVENT_DIDNT_CATCH_CELEBI
+.SkipCelebi:
 	end
+
+.DidntCatchMewtwo:
+	clearevent EVENT_FOUGHT_MEWTWO
+	clearevent EVENT_DIDNT_CATCH_MEWTWO
+	sjump .SkipMewtwo
+
+.DidntCatchArticuno:
+	clearevent EVENT_FOUGHT_ARTICUNO
+	clearevent EVENT_DIDNT_CATCH_ARTICUNO
+	sjump .SkipArticuno
+
+.DidntCatchZapdos:
+	clearevent EVENT_FOUGHT_ZAPDOS
+	clearevent EVENT_DIDNT_CATCH_ZAPDOS
+	sjump .SkipZapdos
+
+.DidntCatchMoltres:
+	clearevent EVENT_FOUGHT_MOLTRES
+	clearevent EVENT_DIDNT_CATCH_MOLTRES
+	sjump .SkipMoltres
+
+.DidntCatchSudowoodo:
+	clearevent EVENT_FOUGHT_SUDOWOODO
+	clearevent EVENT_DIDNT_CATCH_SUDOWOODO
+	sjump .SkipSudowoodo
+
+.DidntCatchSnorlax:
+	clearevent EVENT_FOUGHT_SNORLAX
+	clearevent EVENT_DIDNT_CATCH_SNORLAX
+	sjump .SkipSnorlax
+
+.DidntCatchLugia:
+	clearevent EVENT_FOUGHT_LUGIA
+	clearevent EVENT_DIDNT_CATCH_LUGIA
+	sjump .SkipLugia
+
+.DidntCatchHoOh:
+	clearevent EVENT_FOUGHT_HO_OH
+	clearevent EVENT_DIDNT_CATCH_HO_OH
+	sjump .SkipHoOh
 
 HallOfFame_WalkUpWithLance:
 	step UP
