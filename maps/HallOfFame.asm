@@ -58,7 +58,6 @@ HallOfFameEnterScript:
 	iftrue .SkipPhoneCall
 	specialphonecall SPECIALCALL_SSTICKET
 .SkipPhoneCall:
-	halloffame
 	checkevent EVENT_DIDNT_CATCH_MEWTWO
 	iftrue .DidntCatchMewtwo
 .SkipMewtwo:
@@ -89,6 +88,7 @@ HallOfFameEnterScript:
 	clearevent EVENT_FOUGHT_CELEBI
 	clearevent EVENT_DIDNT_CATCH_CELEBI
 .SkipCelebi:
+	halloffame
 	end
 
 .DidntCatchMewtwo:
