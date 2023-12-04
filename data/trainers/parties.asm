@@ -3651,7 +3651,7 @@ SwimmerMGroup:
 	db "PARKER@", TRAINERTYPE_STAT_EXP
 	db 47, HORSEA
 		dw $5630, $5630, $5630, $5630, $5630
-	db 47, HORSEA
+	db 47, MANTINE
 		dw $5630, $5630, $5630, $5630, $5630
 	db 50, SEADRA
 		dw $618B, $618B, $618B, $618B, $618B 
