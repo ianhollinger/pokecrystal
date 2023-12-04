@@ -3555,14 +3555,16 @@ MantineEvosAttacks:
         db 1, PSYBEAM
 	db 1, TACKLE
 	db 1, BUBBLE
-	db 7, SUPERSONIC
-	db 13, BUBBLEBEAM
+	db 1, SUPERSONIC
+	db 1, GUST
+	db 7, BUBBLEBEAM
+	db 13, CONFUSE_RAY
 	db 19, WING_ATTACK
-	db 25, CONFUSE_RAY
-	db 31, HEADBUTT
-	db 37, AGILITY
-	db 43, TAKE_DOWN
-	db 49, HYDRO_PUMP
+	db 25, HEADBUTT
+	db 31, AGILITY
+	db 37, TAKE_DOWN
+	db 43, HYDRO_PUMP
+	db 49, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 SkarmoryEvosAttacks:
