@@ -253,8 +253,8 @@ SageLiFlashExplanationText:
 	line "use the move out-"
 	cont "side of battle."
 
-	para "But for FLASH, you"
-	line "need the BADGE"
+	para "But to use FLASH,"
+	line "you need the BADGE"
 	cont "from VIOLET's GYM."
 	done
 
