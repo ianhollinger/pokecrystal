@@ -1765,14 +1765,15 @@ RhyhornEvosAttacks:
 	db 1, HORN_ATTACK
 	db 1, TAIL_WHIP
 	db 6, FURY_ATTACK
-	db 12, SAND_ATTACK
-	db 17, ROCK_THROW
-	db 23, STOMP
-	db 28, SCARY_FACE
-	db 34, TAKE_DOWN
-	db 39, ROCK_SLIDE
-	db 45, EARTHQUAKE
-	db 50, MEGAHORN
+	db 11, SAND_ATTACK
+	db 16, ROCK_THROW
+	db 21, STOMP
+	db 26, MAGNITUDE
+	db 31, SCARY_FACE
+	db 36, TAKE_DOWN
+	db 41, ROCK_SLIDE
+	db 46, EARTHQUAKE
+	db 51, MEGAHORN
 	db 56, HORN_DRILL
 	db 0 ; no more level-up moves
 
@@ -1785,11 +1786,12 @@ RhydonEvosAttacks:
 ;	db 17, ROCK_THROW
 ;	db 23, STOMP
 	db 1, STOMP
-	db 28, SCARY_FACE
-	db 34, TAKE_DOWN
-	db 39, ROCK_SLIDE
-	db 48, EARTHQUAKE
-	db 56, MEGAHORN
+	db 26, MAGNITUDE
+	db 31, SCARY_FACE
+	db 36, TAKE_DOWN
+	db 41, ROCK_SLIDE
+	db 49, EARTHQUAKE
+	db 57, MEGAHORN
 	db 65, HORN_DRILL
 	db 0 ; no more level-up moves
 
@@ -2820,23 +2822,25 @@ NatuEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LEER
 	db 1, PECK
-	db 8, TELEPORT
-	db 16, NIGHT_SHADE
-	db 24, CONFUSE_RAY
-	db 32, PSYCHIC_M
+	db 7, CONFUSION
+	db 14, TELEPORT
+	db 20, NIGHT_SHADE
+	db 27, CONFUSE_RAY
+	db 33, PSYCHIC_M
 	db 40, FUTURE_SIGHT
-	db 48, SAFEGUARD
+	db 46, SAFEGUARD
 	db 0 ; no more level-up moves
 
 XatuEvosAttacks:
 	db 0 ; no more evolutions
 ;	db 1, LEER
 	db 1, PECK
-	db 8, TELEPORT 
-	db 16, NIGHT_SHADE 
-	db 24, CONFUSE_RAY
-	db 34, PSYCHIC_M
-	db 44, FUTURE_SIGHT
+	db 7, CONFUSION
+	db 14, TELEPORT 
+	db 20, NIGHT_SHADE 
+	db 29, CONFUSE_RAY
+	db 37, PSYCHIC_M
+	db 46, FUTURE_SIGHT
 	db 54, SAFEGUARD
 	db 0 ; no more level-up moves
 
@@ -3630,13 +3634,14 @@ PhanpyEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
-	db 6, DEFENSE_CURL
-	db 11, FLAIL
-	db 16, ROLLOUT
-	db 21, SLAM 
-	db 26, ENDURE
-	db 31, TAKE_DOWN
-	db 36, CHARM
+	db 5, DEFENSE_CURL
+	db 10, FLAIL
+	db 14, ROLLOUT
+	db 19, MAGNITUDE 
+	db 23, ENDURE
+	db 28, SLAM 
+	db 32, TAKE_DOWN
+	db 37, CHARM
 	db 41, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
@@ -3645,16 +3650,18 @@ DonphanEvosAttacks:
 	db 1, HORN_ATTACK
 ;	db 1, TACKLE
 ;	db 1, GROWL
-;	db 6, DEFENSE_CURL
-	db 11, FLAIL
-	db 16, ROLLOUT
-	db 21, SLAM 
+;	db 5, DEFENSE_CURL
+	db 10, FLAIL
+	db 14, ROLLOUT
+	db 19, MAGNITUDE 
+	db 23, ENDURE
 	db 24, FURY_ATTACK
-	db 27, MAGNITUDE
-	db 33, RAPID_SPIN
-	db 39, EARTHQUAKE
-	db 45, SCARY_FACE
-	db 51, DOUBLE_EDGE
+	db 28, SLAM 
+	db 32, TAKE_DOWN
+	db 37, RAPID_SPIN
+	db 41, SCARY_FACE
+	db 46, EARTHQUAKE
+	db 50, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 Porygon2EvosAttacks:
