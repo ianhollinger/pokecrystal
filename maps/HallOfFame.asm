@@ -73,6 +73,9 @@ HallOfFameEnterScript:
 	checkevent EVENT_DIDNT_CATCH_SUDOWOODO
 	iftrue .DidntCatchSudowoodo
 .SkipSudowoodo:
+	checkevent EVENT_DIDNT_CATCH_RED_GYARADOS
+	iftrue .DidntCatchGyarados
+.SkipGyarados:
 	checkevent EVENT_DIDNT_CATCH_SNORLAX
 	iftrue .DidntCatchSnorlax
 .SkipSnorlax:
@@ -115,6 +118,11 @@ HallOfFameEnterScript:
 	clearevent EVENT_FOUGHT_SUDOWOODO
 	clearevent EVENT_DIDNT_CATCH_SUDOWOODO
 	sjump .SkipSudowoodo
+
+.DidntCatchGyarados:
+	clearevent EVENT_LAKE_OF_RAGE_RED_GYARADOS
+	clearevent EVENT_DIDNT_CATCH_RED_GYARADOS
+	sjump .SkipGyarados
 
 .DidntCatchSnorlax:
 	clearevent EVENT_FOUGHT_SNORLAX
