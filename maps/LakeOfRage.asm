@@ -103,7 +103,10 @@ RedGyarados:
 	itemnotify
 	closetext
 	setscene 0 ; Lake of Rage does not have a scene variable
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .PostGame
 	appear LAKEOFRAGE_LANCE
+.PostGame:
 	end
 
 LakeOfRageGrampsScript:
