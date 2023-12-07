@@ -88,6 +88,9 @@ RedGyarados:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
 	startbattle
 	ifequal LOSE, .NotBeaten
+	ifequal WIN, .Caught
+	setevent EVENT_DIDNT_CATCH_RED_GYARADOS
+.Caught:
 	disappear LAKEOFRAGE_GYARADOS
 .NotBeaten:
 	reloadmapafterbattle
