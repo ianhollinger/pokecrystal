@@ -284,7 +284,8 @@
 	const EVENT_DIDNT_CATCH_LUGIA	
 	const EVENT_DIDNT_CATCH_HO_OH
 	const EVENT_DIDNT_CATCH_CELEBI
-; Unused: next 329 events
+	const EVENT_DIDNT_CATCH_RED_GYARADOS
+; Unused: next 328 events
 
 	const_next 600
 ; Kurt Apricorn events
