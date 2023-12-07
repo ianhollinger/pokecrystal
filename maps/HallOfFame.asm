@@ -117,16 +117,19 @@ HallOfFameEnterScript:
 .DidntCatchSudowoodo:
 	clearevent EVENT_FOUGHT_SUDOWOODO
 	clearevent EVENT_DIDNT_CATCH_SUDOWOODO
+	appear ROUTE36_WEIRD_TREE
 	sjump .SkipSudowoodo
 
 .DidntCatchGyarados:
 	clearevent EVENT_LAKE_OF_RAGE_RED_GYARADOS
 	clearevent EVENT_DIDNT_CATCH_RED_GYARADOS
+	appear LAKEOFRAGE_GYARADOS
 	sjump .SkipGyarados
 
 .DidntCatchSnorlax:
 	clearevent EVENT_FOUGHT_SNORLAX
 	clearevent EVENT_DIDNT_CATCH_SNORLAX
+	appear VERMILIONCITY_BIG_SNORLAX
 	sjump .SkipSnorlax
 
 .DidntCatchLugia:
