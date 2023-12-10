@@ -201,26 +201,26 @@ KantoGrassWildMons:
 	def_grass_wildmons ROUTE_2
 	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
 	; morn
-	db 33, CATERPIE
-	db 33, SPINARAK
 	db 35, PIDGEY
+	db 33, WEEDLE
+	db 33, CATERPIE
 	db 37, BEEDRILL
-	db 37, ARIADOS
+	db 37, BUTTERFREE
 	db 34, PICHU
 	db 34, PIKACHU
 	; day
-	db 33, WEEDLE
-	db 33, PIDGEY
 	db 35, PIDGEY
+	db 33, WEEDLE
+	db 33, CATERPIE
+	db 37, BEEDRILL
 	db 37, BUTTERFREE
-	db 37, PIDGEOTTO
 	db 34, PICHU
 	db 34, PIKACHU
 	; nite
 	db 33, HOOTHOOT
 	db 33, LEDYBA
-	db 35, HOOTHOOT
-	db 37, NOCTOWL
+	db 33, SPINARAK
+	db 37, ARIADOS
 	db 37, LEDIAN
 	db 34, NOCTOWL
 	db 34, NOCTOWL
