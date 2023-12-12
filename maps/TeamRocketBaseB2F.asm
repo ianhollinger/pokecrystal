@@ -285,8 +285,8 @@ RocketBaseElectrodeScript:
 	opentext
 	writetext RocketBaseLanceElectrodeDoneText
 	promptbutton
-	verbosegiveitem HM_WATERFALL
-	setevent EVENT_GOT_HM07_WATERFALL
+	verbosegiveitem HM_WHIRLPOOL
+	setevent EVENT_GOT_HM06_WHIRLPOOL
 	writetext RocketBaseLanceWhirlpoolText
 	waitbutton
 	closetext
@@ -737,11 +737,11 @@ RocketBaseReceivedHM06Text: ; unreferenced
 	done
 
 RocketBaseLanceWhirlpoolText:
-	text "That's WATERFALL."
-	line "Have a #MON use"
+	text "That's WHIRLPOOL."
+	line "Teach it to a"
 
-	para "it to climb"
-	line "rough water."
+	para "#MON to get"
+	line "across wild water."
 
 	para "But keep this in"
 	line "mind."
@@ -750,8 +750,7 @@ RocketBaseLanceWhirlpoolText:
 	line "out of battle only"
 
 	para "with the BADGE"
-	line "from BLACKTHORN"
-	cont "GYM."
+	line "from MAHOGANY GYM."
 	done
 
 RocketBaseLanceMonMasterText:
