@@ -74,6 +74,7 @@ MrPokemonsHouse_MrPokemonScript:
 	takeitem RED_SCALE
 	setevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
 	writetext MrPokemonText_Everstone
+	waitbutton
 	sjump .AlwaysNewDiscoveries
 
 .refused
@@ -362,8 +363,6 @@ MrPokemonText_Everstone:
 	para "Perhaps he would"
 	line "be able to"
 	cont "open it."
-
-	para ""
 	done
 
 MrPokemonText_Disappointed:
