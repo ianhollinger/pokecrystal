@@ -1,10 +1,10 @@
 	object_const_def
 	const VERMILIONGYM_SURGE
-	const VERMILIONGYM_SURGE2
 	const VERMILIONGYM_GENTLEMAN
 	const VERMILIONGYM_ROCKER
 	const VERMILIONGYM_SUPER_NERD
 	const VERMILIONGYM_GYM_GUIDE
+	const VERMILIONGYM_SURGE2
 
 VermilionGym_MapScripts:
 	def_scene_scripts
