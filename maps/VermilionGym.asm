@@ -57,7 +57,7 @@ VermilionGymClosed:
 	warp VERMILION_CITY, 10, 19
 	end
 
-VermilionGymTrashCanScript:
+VermilionGymTrashCan:
 	checkevent EVENT_VERMILION_GYM_SWITCH_2
 	iftrue .trash_can
 	callasm CheckVermilionGymTrashCan
