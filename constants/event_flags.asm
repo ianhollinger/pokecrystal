@@ -285,7 +285,9 @@
 	const EVENT_DIDNT_CATCH_HO_OH
 	const EVENT_DIDNT_CATCH_CELEBI
 	const EVENT_DIDNT_CATCH_RED_GYARADOS
-; Unused: next 328 events
+	const EVENT_VERMILION_GYM_SWITCH_1
+	const EVENT_VERMILION_GYM_SWITCH_2
+; Unused: next 326 events
 
 	const_next 600
 ; Kurt Apricorn events
