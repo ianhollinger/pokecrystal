@@ -4,12 +4,12 @@
 	const VERMILIONGYM_ROCKER
 	const VERMILIONGYM_SUPER_NERD
 	const VERMILIONGYM_GYM_GUIDE
-	const VERMILIONGYM_SURGE2
+;	const VERMILIONGYM_SURGE2
 
 VermilionGym_MapScripts:
 	def_scene_scripts
-	scene_script VermilionGymForcedToLeaveScene, SCENE_VERMILIONGYM_FORCED_TO_LEAVE
-	scene_script VermilionGymNoopScene,          SCENE_VERMILIONGYM_NOOP
+;	scene_script VermilionGymForcedToLeaveScene, SCENE_VERMILIONGYM_FORCED_TO_LEAVE
+;	scene_script VermilionGymNoopScene,          SCENE_VERMILIONGYM_NOOP
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, .VermilionGymDoorsScript
@@ -34,28 +34,28 @@ VermilionGym_MapScripts:
 	changeblock 4, 4, $01 ; floor
 	endcallback
 
-VermilionGymForcedToLeaveScene:
-	sdefer VermilionGymClosed
-	end
+; VermilionGymForcedToLeaveScene:
+;	sdefer VermilionGymClosed
+;	end
 
-VermilionGymNoopScene:
-	end
+; VermilionGymNoopScene:
+;	end
 
-VermilionGymClosed: 
-	applymovement PLAYER, VermilionGymPlayerStepUpMovement
-	applymovement VERMILIONGYM_SURGE2, VermilionGymSurgeSlowStepDownMovement
-	opentext
-	writetext VermilionGymClosedText
-	waitbutton
-	closetext
-	follow PLAYER, VERMILIONGYM_SURGE2
-	applymovement PLAYER, VermilionGymPlayerSlowStepDownMovement
-	stopfollow
-	special FadeOutPalettes
-	playsound SFX_ENTER_DOOR
-	waitsfx
-	warp VERMILION_CITY, 10, 19
-	end
+; VermilionGymClosed: 
+;	applymovement PLAYER, VermilionGymPlayerStepUpMovement
+;	applymovement VERMILIONGYM_SURGE2, VermilionGymSurgeSlowStepDownMovement
+;	opentext
+;	writetext VermilionGymClosedText
+;	waitbutton
+;	closetext
+;	follow PLAYER, VERMILIONGYM_SURGE2
+;	applymovement PLAYER, VermilionGymPlayerSlowStepDownMovement
+;	stopfollow
+;	special FadeOutPalettes
+;	playsound SFX_ENTER_DOOR
+;	waitsfx
+;	warp VERMILION_CITY, 10, 19
+;	end
 
 VermilionGymTrashCan:
 	checkevent EVENT_VERMILION_GYM_SWITCH_2
@@ -654,4 +654,4 @@ VermilionGym_MapEvents:
 	object_event  4,  7, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 3, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerGuitaristVincent, -1
 	object_event  0, 10, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerJugglerHorton, -1
 	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 1, VermilionGymGuideScript, -1
-	object_event  4, 14, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_VERMILION_GYM_SURGE2
+;	object_event  4, 14, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_VERMILION_GYM_SURGE2
