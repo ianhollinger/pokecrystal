@@ -33,7 +33,6 @@ VermilionMachop:
 	writetext VermilionMachopText2
 	waitbutton
 	closetext
-	setmapscene VERMILION_GYM, SCENE_VERMILIONGYM_FORCED_TO_LEAVE
 	end
 
 VermilionCitySuperNerdScript:
