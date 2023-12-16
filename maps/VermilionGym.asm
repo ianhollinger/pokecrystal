@@ -525,11 +525,9 @@ GuitaristVincentBeatenText:
 	done
 
 GuitaristVincentAfterBattleText:
-	text "If the GYM's traps"
-	line "were working, you"
-
-	para "would have been"
-	line "toast…"
+	text "You won't stand a"
+	line "chance against the"
+	cont "Lieutenant!"
 	done
 
 JugglerHortonSeenText:
