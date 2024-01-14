@@ -187,7 +187,7 @@ ItemEffects:
 	dw NoEffect            ; ITEM_AB
 	dw EvoStoneEffect      ; UP_GRADE
 	dw RestoreHPEffect     ; BERRY
-	dw RestoreHPEffect     ; GOLD_BERRY
+	dw GoldBerryEffect     ; GOLD_BERRY
 	dw SquirtbottleEffect  ; SQUIRTBOTTLE
 	dw NoEffect            ; ITEM_B0
 	dw PokeBallEffect      ; PARK_BALL
@@ -1625,6 +1625,33 @@ RestoreHPEffect:
 	call ItemRestoreHP
 	jp StatusHealer_Jumptable
 
+GoldBerryEffect:
+	ld b, PARTYMENUACTION_HEALING_ITEM
+	call UseItem_SelectMon
+	ld a, 2
+	ret c
+
+	call IsMonFainted
+	ld a, 1
+	ret z
+
+	call IsMonAtFullHealth
+	ld a, 1
+	ret nc
+
+	xor a
+	ld [wLowHealthAlarm], a
+	call GetOneQuarterMaxHP
+	call RestoreHealth
+	call BattlemonRestoreHealth
+	call HealHP_SFX_GFX
+	ld a, PARTYMENUTEXT_HEAL_HP
+	ld [wPartyMenuActionText], a
+	call ItemActionTextWaitButton
+	call UseDisposableItem
+	ld a, 0
+	jp StatusHealer_Jumptable
+
 EnergypowderEffect:
 	ld c, HAPPINESS_BITTERPOWDER
 	jr EnergypowderEnergyRootCommon
@@ -1928,6 +1955,25 @@ LoadHPFromBuffer1:
 	ld d, a
 	ld a, [wHPBuffer1]
 	ld e, a
+	ret
+
+GetOneQuarterMaxHP:
+	push bc
+	ld a, MON_MAXHP
+	call GetPartyParamLocation
+	ld a, [hli]
+	ldh [hDividend + 0], a
+	ld a, [hl]
+	ldh [hDividend + 1], a
+	ld a, 4
+	ldh [hDivisor], a
+	ld b, 2
+	call Divide
+	ldh a, [hQuotient + 2]
+	ld d, a
+	ldh a, [hQuotient + 3]
+	ld e, a
+	pop bc
 	ret
 
 GetOneFifthMaxHP:
