@@ -4230,9 +4230,6 @@ HandleHPHealingItem:
 	ld a, b
 	cp HELD_BERRY
 	ret nz
-	ld a, [hl]
-	cp GOLD_BERRY
-	jr z, .quarter_maxhp
 	ld de, wEnemyMonHP + 1
 	ld hl, wEnemyMonMaxHP
 	ldh a, [hBattleTurn]
@@ -4240,11 +4237,6 @@ HandleHPHealingItem:
 	jr z, .go
 	ld de, wBattleMonHP + 1
 	ld hl, wBattleMonMaxHP
-	jr .go
-
-.quarter_maxhp
-	call GetQuarterMaxHP
-	ret
 
 .go
 ; If, and only if, Pokemon's HP is less than half max, use the item.
