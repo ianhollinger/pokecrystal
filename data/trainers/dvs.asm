@@ -27,7 +27,7 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; SCHOOLBOY
 	dn  9,  8, 10,  6 ; BIRD_KEEPER
 	dn  5,  8,  8,  5 ; LASS
-	dn  7, 10, 12,  7 ; JANINE
+	dn  7,  8, 10,  7 ; JANINE
 	dn 13,  8, 12, 10 ; COOLTRAINERM (HP Rock)
 	dn 10, 13, 11,  9 ; COOLTRAINERF
 	dn  6,  9,  9,  9 ; BEAUTY
