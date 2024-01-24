@@ -53,6 +53,8 @@ AzaleaGymBugsyScript:
 .PostBattle:
 	checkevent EVENT_BEAT_BUGSY2
 	iftrue .FightDone
+	checkevent EVENT_BEAT_RED
+	iftrue .ReRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
@@ -62,6 +64,18 @@ AzaleaGymBugsyScript:
 	closetext
 	winlosstext BugsyRematchWinLossText, 0
 	loadtrainer BUGSY, BUGSY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BUGSY2
+        opentext
+        jr .GotFuryCutter
+
+.ReRematch:
+	writetext BugsyRematchText
+	waitbutton
+	closetext
+	winlosstext BugsyRematchWinLossText, 0
+	loadtrainer BUGSY, BUGSY3
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BUGSY2
