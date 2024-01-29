@@ -45,15 +45,18 @@ WillScript_Battle:
 	opentext
 	checkevent EVENT_BEAT_ELITE_4_WILL
 	iftrue WillScript_AfterBattle
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue WillScript_PostGame
 
-WillScript_Fight:
+WillScript_BeforeFight:
 	writetext WillScript_WillBeforeText
 	waitbutton
 	closetext
+	checkevent EVENT_BEAT_RED
+	iftrue WillScript_Rerematch
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue WillScript_PostGame
 	winlosstext WillScript_WillBeatenText, 0
 	loadtrainer WILL, WILL1
+WillScript_BeginFight:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_WILL
@@ -70,25 +73,14 @@ WillScript_Fight:
 	end
 
 WillScript_PostGame:
-	writetext WillScript_WillBeforeText
-	waitbutton
-	closetext
 	winlosstext WillScript_WillBeatenText, 0
 	loadtrainer WILL, WILL2
-	startbattle
-	reloadmapafterbattle
-	setevent EVENT_BEAT_ELITE_4_WILL
-	opentext
-	writetext WillScript_WillDefeatText
-	waitbutton
-	closetext
-	playsound SFX_ENTER_DOOR
-	changeblock 4, 2, $16 ; open door
-	reloadmappart
-	closetext
-	setevent EVENT_WILLS_ROOM_EXIT_OPEN
-	waitsfx
-	end
+	sjump .WillScript_BeginFight
+
+WillScript_Rerematch:
+	winlosstext WillScript_WillBeatenText, 0
+	loadtrainer WILL, WILL3
+	sjump .WillScript_BeginFight
 
 WillScript_AfterBattle:
 	writetext WillScript_WillDefeatText
