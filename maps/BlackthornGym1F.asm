@@ -82,6 +82,20 @@ BlackthornGymClairScript:
 .PostGame:
 	checkevent EVENT_BEAT_CLAIR2
 	iftrue .RematchDone
+	checkevent EVENT_BEAT_RED
+	iffalse .Rematch
+
+.ReRematch:
+	writetext ClairRematchText
+	waitbutton
+	closetext
+	winlosstext ClairRematchWinLossText, 0
+	loadtrainer CLAIR, CLAIR3
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_CLAIR2
+	opentext
+	sjump .RematchDone
 
 .Rematch:
 	writetext ClairRematchText
