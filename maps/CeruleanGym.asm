@@ -86,10 +86,12 @@ CeruleanGymMistyScript:
 .PostBattle:
 	checkevent EVENT_BEAT_MISTY2
 	iftrue .SpeechAfterRematch
+	checkevent EVENT_BEAT_RED
+	iftrue .ReRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
-.Rematch:
+.Reematch:
 	writetext MistyRematchText
 	waitbutton
 	closetext
@@ -99,8 +101,20 @@ CeruleanGymMistyScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_MISTY2
 	opentext
+	jr .SpeechAfterRematch
 
-.SpeechAfterRematch
+.ReRematch:
+	writetext MistyRematchText
+	waitbutton
+	closetext
+	winlosstext MistyRematchWinLossText, 0
+	loadtrainer MISTY, MISTY3
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_MISTY2
+	opentext
+
+.SpeechAfterRematch:
 	writetext MistyRematchDoneText
 	waitbutton
 	closetext
