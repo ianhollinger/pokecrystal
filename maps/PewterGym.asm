@@ -35,6 +35,8 @@ PewterGymBrockScript:
 .PostBattle:
 	checkevent EVENT_BEAT_BROCK2
 	iftrue .FightDone
+	checkevent EVENT_BEAT_RED
+	iftrue .ReRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
@@ -44,6 +46,17 @@ PewterGymBrockScript:
 	closetext
 	winlosstext BrockRematchWinLossText, 0
 	loadtrainer BROCK, BROCK2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BROCK2
+	opentext
+
+.ReRematch:
+	writetext BrockRematchText
+	waitbutton
+	closetext
+	winlosstext BrockRematchWinLossText, 0
+	loadtrainer BROCK, BROCK3
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BROCK2
