@@ -43,6 +43,8 @@ FuchsiaGymJanineScript:
 .PostGame:
 	checkevent EVENT_BEAT_JANINE2
 	iftrue .FightDone
+	checkevent EVENT_BEAT_RED
+	iftrue .ReRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
@@ -53,6 +55,18 @@ FuchsiaGymJanineScript:
 	closetext
 	winlosstext JanineText_ToughOneRematch, 0
 	loadtrainer JANINE, JANINE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_JANINE2
+	jr .FightDone
+
+.ReRematch:
+	opentext
+	writetext JanineText_Rematch
+	waitbutton
+	closetext
+	winlosstext JanineText_ToughOneRematch, 0
+	loadtrainer JANINE, JANINE3
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_JANINE2
