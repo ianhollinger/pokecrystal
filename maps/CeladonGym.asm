@@ -50,6 +50,8 @@ CeladonGymErikaScript:
 .PostBattle:
 	checkevent EVENT_BEAT_ERIKA2
 	iftrue .FightDone
+	checkevent EVENT_BEAT_RED
+	iftrue .ReRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
@@ -63,6 +65,19 @@ CeladonGymErikaScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ERIKA2
 	opentext
+	jr .PostBattle
+
+.ReRematch:
+	writetext ErikaRematchText
+	waitbutton
+	closetext
+	winlosstext ErikaRematchBeatenText, 0
+	loadtrainer ERIKA, ERIKA3
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_ERIKA2
+	opentext
+.PostBattle:
 	writetext ErikaAfterBattleText
 	waitbutton
 	closetext
