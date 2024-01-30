@@ -50,6 +50,8 @@ GoldenrodGymWhitneyScript:
 .StoppedCrying:
 	checkevent EVENT_BEAT_WHITNEY2
 	iftrue .RematchDone
+	checkevent EVENT_BEAT_RED
+	iftrue .ReRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .Rematch
 	checkevent EVENT_GOT_TM45_ATTRACT
@@ -82,6 +84,18 @@ GoldenrodGymWhitneyScript:
 	closetext
 	winlosstext WhitneyRematchDefeatText, 0
 	loadtrainer WHITNEY, WHITNEY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_WHITNEY2
+	opentext
+	jr .RematchDone
+
+.ReRematch:
+        writetext WhitneyRematchBeforeText
+	waitbutton
+	closetext
+	winlosstext WhitneyRematchDefeatText, 0
+	loadtrainer WHITNEY, WHITNEY3
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_WHITNEY2
