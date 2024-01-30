@@ -69,6 +69,8 @@ CianwoodGymChuckScript:
 .PostBattle:
 	checkevent EVENT_BEAT_CHUCK2
 	iftrue .RematchDone
+	checkevent EVENT_BEAT_RED
+	iftrue .ReRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .Rematch
         sjump .FightDone
@@ -83,6 +85,19 @@ CianwoodGymChuckScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CHUCK2
         opentext
+	jr .RematchDone
+
+.ReRematch:
+	writetext ChuckRematchText
+	waitbutton
+	closetext
+	winlosstext ChuckRematchWinLossText, 0
+	loadtrainer CHUCK, CHUCK3
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_CHUCK2
+        opentext
+
 .RematchDone:
 	writetext ChuckRematchAfterText
 	waitbutton
