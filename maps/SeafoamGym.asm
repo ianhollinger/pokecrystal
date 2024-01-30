@@ -40,6 +40,8 @@ SeafoamGymBlaineScript:
 .PostBattle:
 	checkevent EVENT_BEAT_BLAINE2
 	iftrue .FightDone
+	checkevent EVENT_BEAT_RED
+	iftrue .ReRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
@@ -53,6 +55,19 @@ SeafoamGymBlaineScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLAINE2
 	opentext
+	jr .FightDone
+
+.ReRematch:
+	writetext BlaineRematchIntroText
+	waitbutton
+	closetext
+	winlosstext BlaineRematchWinLossText, 0
+	loadtrainer BLAINE, BLAINE3
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BLAINE2
+	opentext
+	jr .FightDone
 
 .FightDone:
 	writetext BlaineFightDoneText
