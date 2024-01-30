@@ -45,6 +45,8 @@ OlivineGymJasmineScript:
 .PostBattle:
 	checkevent EVENT_BEAT_JASMINE2
 	iftrue .SpeechAfterRematch
+	checkevent EVENT_BEAT_RED
+	iftrue .ReRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
@@ -58,6 +60,19 @@ OlivineGymJasmineScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_JASMINE2
 	opentext
+	jr .SpeechAfterRematch
+
+.ReRematch:
+	writetext JasmineRematchText
+	waitbutton
+	closetext
+	winlosstext JasmineRematchWinLossText, 0
+	loadtrainer JASMINE, JASMINE3
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_JASMINE2
+	opentext
+
 .SpeechAfterRematch:
 	writetext JasmineRematchDoneText
 	waitbutton
