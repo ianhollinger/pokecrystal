@@ -53,6 +53,8 @@ MahoganyGymPryceScript:
 .PostBattle:
 	checkevent EVENT_BEAT_PRYCE2
 	iftrue .FightDone
+	checkevent EVENT_BEAT_RED
+	iftrue .ReRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
@@ -62,6 +64,18 @@ MahoganyGymPryceScript:
 	closetext
 	winlosstext PryceRematchWinLossText, 0
 	loadtrainer PRYCE, PRYCE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_PRYCE2
+	opentext
+	jr .PryceScript_Defeat
+
+.ReRematch:
+	writetext PryceRematchText
+	waitbutton
+	closetext
+	winlosstext PryceRematchWinLossText, 0
+	loadtrainer PRYCE, PRYCE3
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_PRYCE2
