@@ -29,6 +29,7 @@ VioletGymFalknerScript:
 	setflag ENGINE_ZEPHYRBADGE
 	readvar VAR_BADGES
 	scall VioletGymActivateRockets
+
 .FightDone:
 	checkevent EVENT_BEAT_FALKNER2
 	iftrue .SpeechAfterRematch
@@ -51,6 +52,8 @@ VioletGymFalknerScript:
 .PostBattle:
 	checkevent EVENT_BEAT_FALKNER2
 	iftrue .SpeechAfterRematch
+	checkevent EVENT_BEAT_RED
+	iftrue .ReRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
@@ -64,6 +67,18 @@ VioletGymFalknerScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_FALKNER2
 	opentext
+        jr .SpeechAfterRematch
+
+.ReRematch:
+	writetext FalknerRematchText
+	waitbutton
+	closetext
+	winlosstext FalknerRematchWinLossText, 0
+	loadtrainer FALKNER, FALKNER3
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_FALKNER2
+        opentext
 
 .SpeechAfterRematch:
 	writetext FalknerRematchDoneText
