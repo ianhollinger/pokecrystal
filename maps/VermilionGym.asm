@@ -255,6 +255,8 @@ VermilionGymSurgeScript:
 .PostBattle:
 	checkevent EVENT_BEAT_LTSURGE2
 	iftrue .FightDone
+	checkevent EVENT_BEAT_RED
+	iftrue .ReRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
@@ -264,6 +266,18 @@ VermilionGymSurgeScript:
 	closetext
 	winlosstext LtSurgeRematchWinLossText, 0
 	loadtrainer LT_SURGE, LT_SURGE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_LTSURGE2
+	opentext
+	jr .SpeechAfterRematch
+
+.ReRematch:
+	writetext LtSurgeRematchText
+	waitbutton
+	closetext
+	winlosstext LtSurgeRematchWinLossText, 0
+	loadtrainer LT_SURGE, LT_SURGE3
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_LTSURGE2
