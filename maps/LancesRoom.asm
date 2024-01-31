@@ -55,10 +55,22 @@ LancesRoomLanceScript:
 	writetext LanceBattleIntroText
 	waitbutton
 	closetext
+	checkevent EVENT_BEAT_RED
+	iftrue LanceScript_ReRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse LanceScript_Fight
 LanceScript_PostGame:
 	loadtrainer CHAMPION, LANCE2
+	winlosstext LanceBattleWinText, 0
+	setlasttalked LANCESROOM_LANCE
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	setevent EVENT_BEAT_CHAMPION_LANCE
+	sjump LanceScript_AfterBattle
+
+LanceScript_ReRematch:
+	loadtrainer CHAMPION, LANCE3
 	winlosstext LanceBattleWinText, 0
 	setlasttalked LANCESROOM_LANCE
 	startbattle
