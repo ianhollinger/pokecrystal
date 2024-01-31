@@ -75,12 +75,12 @@ BrunoScript_BeginFight:
 BrunoScript_PostGame:
 	winlosstext BrunoScript_BrunoBeatenText, 0
 	loadtrainer BRUNO, BRUNO2
-	sjump .BrunoScript_BeginFight
+	sjump BrunoScript_BeginFight
 
 BrunoScript_Rerematch:
 	winlosstext BrunoScript_BrunoBeatenText, 0
 	loadtrainer BRUNO, BRUNO3
-	sjump .BrunoScript_BeginFight
+	sjump BrunoScript_BeginFight
 
 BrunoScript_AfterBattle:
 	writetext BrunoScript_BrunoDefeatText
