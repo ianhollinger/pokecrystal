@@ -33,6 +33,8 @@ ViridianGymBlueScript:
 .PostBattle:
 	checkevent EVENT_BEAT_BLUE2
 	iftrue .RematchDone
+	checkevent EVENT_BEAT_RED
+	iftrue .ReRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
@@ -46,6 +48,19 @@ ViridianGymBlueScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLUE2
 	opentext
+	jr .RematchDone
+
+.ReRematch:
+	writetext LeaderBlueRematchBeforeText
+	waitbutton
+	closetext
+	winlosstext LeaderBlueRematchWinText, 0
+	loadtrainer BLUE, BLUE3
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BLUE2
+	opentext
+
 .RematchDone:
 	writetext LeaderBlueRematchEpilogueText
 	waitbutton
