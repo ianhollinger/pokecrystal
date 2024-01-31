@@ -15,7 +15,7 @@ CeladonGymErikaScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_RAINBOWBADGE
-	iftrue .PostBattle
+	iftrue .PostGame
 	writetext ErikaBeforeBattleText
 	waitbutton
 	closetext
@@ -47,7 +47,7 @@ CeladonGymErikaScript:
 	closetext
 	end
 
-.PostBattle:
+.PostGame:
 	checkevent EVENT_BEAT_ERIKA2
 	iftrue .FightDone
 	checkevent EVENT_BEAT_RED
