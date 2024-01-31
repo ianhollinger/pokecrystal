@@ -75,12 +75,12 @@ KogaScript_BeginFight:
 KogaScript_PostGame:
 	winlosstext KogaScript_KogaBeatenText, 0
 	loadtrainer KOGA, KOGA2
-	sjump .KogaScript_BeginFight
+	sjump KogaScript_BeginFight
 
 KogaScript_Rerematch:
 	winlosstext KogaScript_KogaBeatenText, 0
 	loadtrainer KOGA, KOGA3
-	sjump .KogaScript_BeginFight
+	sjump KogaScript_BeginFight
 
 KogaScript_AfterBattle:
 	writetext KogaScript_KogaDefeatText
