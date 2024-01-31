@@ -73,12 +73,12 @@ KarenScript_BeginFight:
 KarenScript_PostGame:
 	winlosstext KarenScript_KarenBeatenText, 0
 	loadtrainer KAREN, KAREN2
- 	sjump .KarenScript_BeginFight
+ 	sjump KarenScript_BeginFight
 
 KarenScript_Rerematch:
 	winlosstext KarenScript_KarenBeatenText, 0
 	loadtrainer KAREN, KAREN3
- 	sjump .KarenScript_BeginFight
+ 	sjump KarenScript_BeginFight
 
 KarenScript_AfterBattle:
 	writetext KarenScript_KarenDefeatText
