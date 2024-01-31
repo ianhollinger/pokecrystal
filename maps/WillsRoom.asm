@@ -75,12 +75,12 @@ WillScript_BeginFight:
 WillScript_PostGame:
 	winlosstext WillScript_WillBeatenText, 0
 	loadtrainer WILL, WILL2
-	sjump .WillScript_BeginFight
+	sjump WillScript_BeginFight
 
 WillScript_Rerematch:
 	winlosstext WillScript_WillBeatenText, 0
 	loadtrainer WILL, WILL3
-	sjump .WillScript_BeginFight
+	sjump WillScript_BeginFight
 
 WillScript_AfterBattle:
 	writetext WillScript_WillDefeatText
