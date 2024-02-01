@@ -41,6 +41,7 @@ FuchsiaGymJanineScript:
 	setflag ENGINE_SOULBADGE
 	sjump .AfterBattle
 .PostGame:
+	faceplayer
 	checkevent EVENT_BEAT_JANINE2
 	iftrue .FightDone
 	checkevent EVENT_BEAT_RED
@@ -71,7 +72,6 @@ FuchsiaGymJanineScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_JANINE2
 .FightDone:
-	faceplayer
 	opentext
 .AfterBattle:
 	checkevent EVENT_GOT_TM06_TOXIC
