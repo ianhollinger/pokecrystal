@@ -93,6 +93,8 @@ PlateauRivalBattleCommon:
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
 	iftrue .Chikorita
 	; Cyndaquil
+	checkevent EVENT_BEAT_RED
+	iftrue .CyndaquilRematch
 	winlosstext PlateauRivalWinText, PlateauRivalLoseText
 	setlasttalked INDIGOPLATEAUPOKECENTER1F_RIVAL
 	loadtrainer RIVAL2, RIVAL2_2_TOTODILE
@@ -101,7 +103,18 @@ PlateauRivalBattleCommon:
 	reloadmapafterbattle
 	sjump PlateauRivalPostBattle
 
+.CyndaquilRematch:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_RIVAL
+	loadtrainer RIVAL2, RIVAL2_3_TOTODILE
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+
 .Totodile:
+	checkevent EVENT_BEAT_RED
+	iftrue .TotodileRematch
 	winlosstext PlateauRivalWinText, PlateauRivalLoseText
 	setlasttalked INDIGOPLATEAUPOKECENTER1F_RIVAL
 	loadtrainer RIVAL2, RIVAL2_2_CHIKORITA
@@ -110,10 +123,30 @@ PlateauRivalBattleCommon:
 	reloadmapafterbattle
 	sjump PlateauRivalPostBattle
 
+.TotodileRematch:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_RIVAL
+	loadtrainer RIVAL2, RIVAL2_3_CHIKORITA
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+
 .Chikorita:
+	checkevent EVENT_BEAT_RED
+	iftrue .ChikoritaRematch
 	winlosstext PlateauRivalWinText, PlateauRivalLoseText
 	setlasttalked INDIGOPLATEAUPOKECENTER1F_RIVAL
 	loadtrainer RIVAL2, RIVAL2_2_CYNDAQUIL
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+
+.ChikoritaRematch:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_RIVAL
+	loadtrainer RIVAL2, RIVAL2_3_CYNDAQUIL
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
