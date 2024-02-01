@@ -2881,7 +2881,7 @@ BattleTowerMons:
 
 	db ZAPDOS
 	db MINT_BERRY
-	db REST, DRILL_PECK, THUNDERBOLT, THUNDER_WAVE
+	db REST, DRILL_PECK, THUNDERBOLT, ANCIENTPOWER	
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
@@ -2891,7 +2891,7 @@ BattleTowerMons:
 	bigdw 55000
 	bigdw 50000
 	dn 13, 13, 15, 13 ; DVs
-	db 5, 20, 15, 20 ; PP
+	db 5, 20, 15, 5 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 60 ; Level
