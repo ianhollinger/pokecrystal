@@ -677,4 +677,11 @@ MoveReminderMoveLearnedText:
 	text "Done! Your #MON"
 	line "remembered the"
 	cont "move."
-	prompt
+
+	para "If you want your"
+	line "#MON to remem-"
+	cont "ber any more"
+	
+	para "moves, come back"
+	line "to me."
+	done
