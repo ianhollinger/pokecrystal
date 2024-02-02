@@ -14,7 +14,7 @@ MoveReminder:
 	ld [wCurItem], a
 	ld hl, wNumItems
 	call CheckItem
-	jr nc, .no_brick_pieces
+	jp nc, .no_brick_pieces
 
 	; Loads and prints the "MoveReminderWhichMonText" text.
 	ld hl, MoveReminderWhichMonText
@@ -170,6 +170,7 @@ GetRemindableMoves:
 	; and attack address from the "EvosAttacksPointers"
 	; table that is located in another bank. This is the
 	; list of evolutions and learnset of every Pokémon.
+.loop	
 	ld a, [wCurPartySpecies]
 	dec a
 	push bc
@@ -298,7 +299,7 @@ CheckPokemonAlreadyKnowsMove:
 ; The number of items is stored in "wd002"
 ; The list of items is stored in "wd002 + 1"
 ChooseMoveToLearn:
-	farcall FadeOutToWhite
+	farcall FadeOutPalettes
 	farcall BlankScreen
 	ld hl, .MenuHeader
 	call CopyMenuHeader
