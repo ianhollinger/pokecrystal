@@ -50,6 +50,8 @@ MoveReminder:
 	jr z, .no_moves_to_learn
 
 	; Loads and prints the "MoveReminderWhichMoveText" text.
+	ld hl, MoveReminderWhichMoveText
+	call PrintText
 ; This code falls through into the ".loop_move_menu" local jump.
 
 ; This is where the move menu loop begins.
@@ -130,7 +132,7 @@ MoveReminder:
 .move_learned
 	call ReturnToMapWithSpeechTextbox
 	ld hl, MoveReminderMoveLearnedText
-	call PrintText
+	jp PrintText
 
 .pay_for_move
 	ld a, BRICK_PIECE
