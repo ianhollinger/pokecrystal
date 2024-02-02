@@ -132,7 +132,7 @@ MoveReminder:
 .move_learned
 	call ReturnToMapWithSpeechTextbox
 	ld hl, MoveReminderMoveLearnedText
-	jp PrintText
+	call PrintText
 
 .pay_for_move
 	ld a, BRICK_PIECE
@@ -146,7 +146,8 @@ MoveReminder:
 	ld de, SFX_TRANSACTION
 	call PlaySFX
 	call WaitSFX
-	jr .cancel
+	ld hl, MoveReminderGoodbyeText
+	jp PrintText
 
 .no_brick_pieces
 	ld hl, MoveReminderNoBrickPiecesText
@@ -677,8 +678,10 @@ MoveReminderMoveLearnedText:
 	text "Done! Your #MON"
 	line "remembered the"
 	cont "move."
+	prompt
 
-	para "If you want your"
+MoveReminderGoodbyeText:
+	text "If you want your"
 	line "#MON to remem-"
 	cont "ber any more"
 	
