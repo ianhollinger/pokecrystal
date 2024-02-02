@@ -126,8 +126,6 @@ MoveReminder:
 	ld de, SFX_TRANSACTION
 	call PlaySFX
 	call WaitSFX
-	ld hl, MoveReminderCancelText
-	call PrintText
 	jr .cancel
 
 .no_brick_pieces
@@ -171,9 +169,10 @@ GetRemindableMoves:
 	; table that is located in another bank. This is the
 	; list of evolutions and learnset of every Pokémon.
 .loop	
+	push bc
 	ld a, [wCurPartySpecies]
 	dec a
-	push bc
+	ld b, 0
 	ld c, a
 	ld hl, EvosAttacksPointers
 	add hl, bc
