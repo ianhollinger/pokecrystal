@@ -670,7 +670,7 @@ MoveReminderNoMovesText:
 MoveReminderNoBrickPiecesText:
 	text "You don't have"
 	line "any BRICK PIECES."
-	prompt
+	done
 
 ; This is the text that displays after a
 ; Pokémon successfully learns a move.
