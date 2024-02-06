@@ -33,7 +33,7 @@ GetTimeOfDayNotEve:
 	ld a, [wTimeOfDay]
 	cp EVE_F
 	ret nz
-	ld a, DAY_F
+	ld a, NITE_F
 	ret
 
 FindNest:
