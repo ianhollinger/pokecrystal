@@ -60,7 +60,7 @@ OlivineGymJasmineScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_JASMINE2
 	opentext
-	jr .SpeechAfterRematch
+	sjump .SpeechAfterRematch
 
 .ReRematch:
 	writetext JasmineRematchText
