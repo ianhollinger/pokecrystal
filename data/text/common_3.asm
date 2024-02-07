@@ -935,7 +935,7 @@ _LearnedMoveText::
 _MoveAskForgetText::
 	text "Which move should"
 	next "be forgotten?"
-	done
+	prompt
 
 _StopLearningMoveText::
 	text "Stop learning"
