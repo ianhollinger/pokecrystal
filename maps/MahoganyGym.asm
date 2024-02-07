@@ -68,7 +68,7 @@ MahoganyGymPryceScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_PRYCE2
 	opentext
-	jr .PryceScript_Defeat
+	sjump .PryceScript_Defeat
 
 .ReRematch:
 	writetext PryceRematchText
