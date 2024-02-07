@@ -88,7 +88,7 @@ GoldenrodGymWhitneyScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_WHITNEY2
 	opentext
-	jr .RematchDone
+	sjump .RematchDone
 
 .ReRematch:
         writetext WhitneyRematchBeforeText
