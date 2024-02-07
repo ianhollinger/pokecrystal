@@ -55,7 +55,7 @@ SeafoamGymBlaineScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLAINE2
 	opentext
-	jr .FightDone
+	sjump .FightDone
 
 .ReRematch:
 	writetext BlaineRematchIntroText
