@@ -85,7 +85,7 @@ CianwoodGymChuckScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CHUCK2
         opentext
-	jr .RematchDone
+	sjump .RematchDone
 
 .ReRematch:
 	writetext ChuckRematchText
