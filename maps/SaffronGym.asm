@@ -56,7 +56,7 @@ SaffronGymSabrinaScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_SABRINA2
 	opentext
-	jr .FightDone
+	sjump .FightDone
 
 .ReRematch:
 	writetext SabrinaRematchText
