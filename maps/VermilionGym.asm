@@ -270,7 +270,7 @@ VermilionGymSurgeScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_LTSURGE2
 	opentext
-	jr .SpeechAfterRematch
+	sjump .SpeechAfterRematch
 
 .ReRematch:
 	writetext LtSurgeRematchText
