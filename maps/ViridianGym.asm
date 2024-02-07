@@ -48,7 +48,7 @@ ViridianGymBlueScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLUE2
 	opentext
-	jr .RematchDone
+	sjump .RematchDone
 
 .ReRematch:
 	writetext LeaderBlueRematchBeforeText
