@@ -67,7 +67,7 @@ VioletGymFalknerScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_FALKNER2
 	opentext
-        jr .SpeechAfterRematch
+        sjump .SpeechAfterRematch
 
 .ReRematch:
 	writetext FalknerRematchText
