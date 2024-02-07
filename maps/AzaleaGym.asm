@@ -68,7 +68,7 @@ AzaleaGymBugsyScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BUGSY2
         opentext
-        jr .GotFuryCutter
+        sjump .GotFuryCutter
 
 .ReRematch:
 	writetext BugsyRematchText
