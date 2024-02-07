@@ -40,6 +40,7 @@ FuchsiaGymJanineScript:
 	waitsfx
 	setflag ENGINE_SOULBADGE
 	sjump .AfterBattle
+
 .PostGame:
 	faceplayer
 	checkevent EVENT_BEAT_JANINE2
@@ -59,7 +60,7 @@ FuchsiaGymJanineScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_JANINE2
-	jr .FightDone
+	sjump .FightDone
 
 .ReRematch:
 	opentext
