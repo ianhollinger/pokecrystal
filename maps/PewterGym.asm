@@ -50,6 +50,7 @@ PewterGymBrockScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BROCK2
 	opentext
+	sjump .FightDone
 
 .ReRematch:
 	writetext BrockRematchText
