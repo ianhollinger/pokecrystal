@@ -101,7 +101,7 @@ CeruleanGymMistyScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_MISTY2
 	opentext
-	jr .SpeechAfterRematch
+	sjump .SpeechAfterRematch
 
 .ReRematch:
 	writetext MistyRematchText
