@@ -65,7 +65,7 @@ CeladonGymErikaScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ERIKA2
 	opentext
-	jr .PostBattle
+	sjump .PostBattle
 
 .ReRematch:
 	writetext ErikaRematchText
