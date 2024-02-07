@@ -82,7 +82,7 @@ EcruteakGymMortyScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_MORTY2
 	opentext
-	jr .RematchDone
+	sjump .RematchDone
 
 .ReRematch:
 	winlosstext MortyRematchWinLossText, 0
@@ -105,7 +105,7 @@ EcruteakGymMortyScript:
         writetext MortyRematchText
 	waitbutton
 	closetext
-	jr .CheckRed
+	sjump .CheckRed
 
 .GotShadowBall:
         writetext MortyFightDoneText
