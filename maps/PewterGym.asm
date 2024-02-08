@@ -186,15 +186,23 @@ BrockFightDoneText:
 	done
 
 BrockRematchText:
-	text "BROCK: I heard"
-	line "you've beaten"
-	cont "BLUE."
+;	text "BROCK: …You sure"
+;	line "look different"
+;	cont "from when we"
+;	cont "first met!"
+
+	text "BROCK: You've"
+	line "defeated BLUE?"
+
+	para "That must have"
+	line "been an amazing"
+	cont "battle!"
 
 	para "Please allow me"
 	line "the privilege of"
 
-	para "facing you in"
-	line "battle once again!"
+	para "challenging you"
+	line "once again!"
 
 	para "I will show"
 	line "you the true rock-"
