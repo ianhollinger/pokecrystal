@@ -10,18 +10,20 @@ IcePath1F_MapScripts:
         callback MAPCALLBACK_OBJECTS, IcePath1FArticunoCallback
 
 IcePath1FArticunoCallback:
-	checkevent EVENT_FOUGHT_ARTICUNO
-	iftrue .NoAppear
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Appear
-	sjump .NoAppear
+	iftrue .CheckCaught
+.NoAppear:
+	disappear ICEPATH1F_ARTICUNO
+	endcallback
+
+.CheckCaught:
+	checkevent EVENT_CAUGHT_ARTICUNO
+	iftrue .NoAppear
+;	checkevent EVENT_FOUGHT_ARTICUNO
+;	iftrue .NoAppear
 
 .Appear:
 	appear ICEPATH1F_ARTICUNO
-	endcallback
-
-.NoAppear:
-	disappear ICEPATH1F_ARTICUNO
 	endcallback
 
 IcePath1FArticunoScript:
@@ -31,20 +33,35 @@ IcePath1FArticunoScript:
 	cry ARTICUNO
 	pause 15
 	closetext
+;	setval ARTICUNO
+;	special MonCheck
+;	iffalse .DidntCatchArticuno
+	setevent EVENT_FOUGHT_ARTICUNO
 	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
 	loadwildmon ARTICUNO, 60
 	startbattle
-	setevent EVENT_FOUGHT_ARTICUNO
-	ifequal DRAW, DidntCatchArticuno
+        setval ARTICUNO
+        special MonCheck
+        iffalse .DidntCatchArticuno
+	setevent EVENT_CAUGHT_ARTICUNO
+.DidntCatchArticuno:
 	disappear ICEPATH1F_ARTICUNO
 	reloadmapafterbattle
 	end
 
-DidntCatchArticuno:	
-	setevent EVENT_DIDNT_CATCH_ARTICUNO
-	disappear ICEPATH1F_ARTICUNO
-	reloadmapafterbattle
-	end
+; .DidntCatchArticuno:	
+;	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
+;	loadwildmon ARTICUNO, 60
+;	startbattle
+;	setevent EVENT_FOUGHT_ARTICUNO
+;       setval ARTICUNO
+;       special MonCheck
+;       iffalse .StillDidntCatchArticuno
+;	setevent EVENT_CAUGHT_ARTICUNO
+; .StillDidntCatchArticuno:
+;	disappear ICEPATH1F_ARTICUNO
+;	reloadmapafterbattle
+;	end
 
 IcePath1FNevermeltice:
 	itemball NEVERMELTICE
