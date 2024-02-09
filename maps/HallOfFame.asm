@@ -61,7 +61,9 @@ HallOfFameEnterScript:
 	checkevent EVENT_DIDNT_CATCH_MEWTWO
 	iftrue .DidntCatchMewtwo
 .SkipMewtwo:
-	checkevent EVENT_DIDNT_CATCH_ARTICUNO
+	checkevent EVENT_CAUGHT_ARTICUNO
+	iftrue .SkipArticuno
+	checkevent EVENT_FOUGHT_ARTICUNO
 	iftrue .DidntCatchArticuno
 .SkipArticuno:
 	checkevent EVENT_DIDNT_CATCH_ZAPDOS
@@ -101,7 +103,6 @@ HallOfFameEnterScript:
 
 .DidntCatchArticuno:
 	clearevent EVENT_FOUGHT_ARTICUNO
-	clearevent EVENT_DIDNT_CATCH_ARTICUNO
 	sjump .SkipArticuno
 
 .DidntCatchZapdos:
