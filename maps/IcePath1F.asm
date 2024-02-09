@@ -11,15 +11,17 @@ IcePath1F_MapScripts:
 
 IcePath1FArticunoCallback:
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .CheckCaught
+	iftrue .CheckFought
 .NoAppear:
 	disappear ICEPATH1F_ARTICUNO
 	endcallback
 
-.CheckCaught:
-	checkevent EVENT_CAUGHT_ARTICUNO
+.CheckFought: 
+	checkevent EVENT_FOUGHT_ARTICUNO
 	iftrue .NoAppear
-;	checkevent EVENT_FOUGHT_ARTICUNO
+
+; .CheckCaught:
+;	checkevent EVENT_CAUGHT_ARTICUNO
 ;	iftrue .NoAppear
 
 .Appear:
@@ -36,10 +38,10 @@ IcePath1FArticunoScript:
 ;	setval ARTICUNO
 ;	special MonCheck
 ;	iffalse .DidntCatchArticuno
-	setevent EVENT_FOUGHT_ARTICUNO
 	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
 	loadwildmon ARTICUNO, 60
 	startbattle
+	setevent EVENT_FOUGHT_ARTICUNO
         setval ARTICUNO
         special MonCheck
         iffalse .DidntCatchArticuno
