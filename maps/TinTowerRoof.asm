@@ -32,15 +32,16 @@ TinTowerHoOh:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon HO_OH, 70
 	startbattle
+	ifequal LOSE, .DidntCatchHoOh
+	disappear TINTOWERROOF_HO_OH
 	setevent EVENT_FOUGHT_HO_OH
+	setevent EVENT_SET_WHEN_FOUGHT_HO_OH
         setval HO_OH
         special MonCheck
         iffalse .DidntCatchHooh
 	setevent EVENT_CAUGHT_HO_OH
 .DidntCatchHoOh:
-	disappear TINTOWERROOF_HO_OH
 	reloadmapafterbattle
-	setevent EVENT_SET_WHEN_FOUGHT_HO_OH
 	end
 
 HoOhText:
