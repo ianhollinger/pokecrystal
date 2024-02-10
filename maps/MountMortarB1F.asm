@@ -14,18 +14,16 @@ MountMortarB1F_MapScripts:
         callback MAPCALLBACK_OBJECTS, MountMortarB1FMewtwoCallback
 
 MountMortarB1FMewtwoCallback:
-	checkevent EVENT_FOUGHT_MEWTWO
-	iftrue .NoAppear
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Appear
-	sjump .NoAppear
-
-.Appear:
-	appear MOUNTMORTARB1F_MEWTWO
-	endcallback
-
+	iftrue .CheckFought
 .NoAppear:
 	disappear MOUNTMORTARB1F_MEWTWO
+	endcallback
+
+.CheckFought: 
+	checkevent EVENT_FOUGHT_MEWTWO
+	iftrue .NoAppear
+	appear MOUNTMORTARB1F_MEWTWO
 	endcallback
 
 MountMortarB1FMewtwo:
@@ -39,13 +37,11 @@ MountMortarB1FMewtwo:
 	loadwildmon MEWTWO, 70
 	startbattle
 	setevent EVENT_FOUGHT_MEWTWO
-	ifequal DRAW, DidntCatchMewtwo
-	disappear MOUNTMORTARB1F_MEWTWO
-	reloadmapafterbattle
-	end
-
-DidntCatchMewtwo:
-	setevent EVENT_DIDNT_CATCH_MEWTWO
+        setval MEWTWO
+        special MonCheck
+        iffalse .DidntCatchMewtwo
+	setevent EVENT_CAUGHT_MEWTWO
+.DidntCatchMewtwo:
 	disappear MOUNTMORTARB1F_MEWTWO
 	reloadmapafterbattle
 	end
