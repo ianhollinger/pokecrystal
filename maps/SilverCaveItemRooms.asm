@@ -18,8 +18,6 @@ SilverCaveItemRoomsMoltresCallback:
 .CheckFought: 
 	checkevent EVENT_FOUGHT_MOLTRES
 	iftrue .NoAppear
-
-.Appear:
 	appear SILVERCAVEITEMROOMS_MOLTRES
 	endcallback
 
