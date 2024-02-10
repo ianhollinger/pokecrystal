@@ -36,13 +36,15 @@ MountMortarB1FMewtwo:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
 	loadwildmon MEWTWO, 70
 	startbattle
+	ifequal LOSE, .NotBeaten
+	disappear MOUNTMORTARB1F_MEWTWO
+.NotBeaten:
 	setevent EVENT_FOUGHT_MEWTWO
         setval MEWTWO
         special MonCheck
         iffalse .DidntCatchMewtwo
 	setevent EVENT_CAUGHT_MEWTWO
 .DidntCatchMewtwo:
-	disappear MOUNTMORTARB1F_MEWTWO
 	reloadmapafterbattle
 	end
 
