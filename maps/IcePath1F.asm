@@ -20,10 +20,6 @@ IcePath1FArticunoCallback:
 	checkevent EVENT_FOUGHT_ARTICUNO
 	iftrue .NoAppear
 
-; .CheckCaught:
-;	checkevent EVENT_CAUGHT_ARTICUNO
-;	iftrue .NoAppear
-
 .Appear:
 	appear ICEPATH1F_ARTICUNO
 	endcallback
@@ -35,9 +31,6 @@ IcePath1FArticunoScript:
 	cry ARTICUNO
 	pause 15
 	closetext
-;	setval ARTICUNO
-;	special MonCheck
-;	iffalse .DidntCatchArticuno
 	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
 	loadwildmon ARTICUNO, 60
 	startbattle
@@ -50,20 +43,6 @@ IcePath1FArticunoScript:
 	disappear ICEPATH1F_ARTICUNO
 	reloadmapafterbattle
 	end
-
-; .DidntCatchArticuno:	
-;	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
-;	loadwildmon ARTICUNO, 60
-;	startbattle
-;	setevent EVENT_FOUGHT_ARTICUNO
-;       setval ARTICUNO
-;       special MonCheck
-;       iffalse .StillDidntCatchArticuno
-;	setevent EVENT_CAUGHT_ARTICUNO
-; .StillDidntCatchArticuno:
-;	disappear ICEPATH1F_ARTICUNO
-;	reloadmapafterbattle
-;	end
 
 IcePath1FNevermeltice:
 	itemball NEVERMELTICE
