@@ -31,13 +31,14 @@ RockTunnel1FZapdos:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
 	loadwildmon ZAPDOS, 60
 	startbattle
+	ifequal LOSE, .DidntCatchZapdos
+	disappear ROCKTUNNEL1F_ZAPDOS
 	setevent EVENT_FOUGHT_ZAPDOS
         setval ZAPDOS
         special MonCheck
         iffalse .DidntCatchZapdos
 	setevent EVENT_CAUGHT_ZAPDOS
 .DidntCatchZapdos:
-	disappear ROCKTUNNEL1F_ZAPDOS
 	reloadmapafterbattle
 	end
 
