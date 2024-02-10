@@ -9,18 +9,18 @@ RockTunnel1F_MapScripts:
         callback MAPCALLBACK_OBJECTS, RockTunnel1FZapdosCallback
 
 RockTunnel1FZapdosCallback:
-        checkevent EVENT_FOUGHT_ZAPDOS
-	iftrue .NoAppear
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Appear
-	sjump .NoAppear
+	iftrue .CheckFought
+.NoAppear:
+	disappear ROCKTUNNEL1F_ZAPDOS
+	endcallback
+
+.CheckFought: 
+	checkevent EVENT_FOUGHT_ZAPDOS
+	iftrue .NoAppear
 
 .Appear:
 	appear ROCKTUNNEL1F_ZAPDOS
-	endcallback
-
-.NoAppear:
-	disappear ROCKTUNNEL1F_ZAPDOS
 	endcallback
 
 RockTunnel1FZapdos:
@@ -34,13 +34,11 @@ RockTunnel1FZapdos:
 	loadwildmon ZAPDOS, 60
 	startbattle
 	setevent EVENT_FOUGHT_ZAPDOS
-	ifequal DRAW, DidntCatchZapdos
-	disappear ROCKTUNNEL1F_ZAPDOS
-	reloadmapafterbattle
-	end
-
-DidntCatchZapdos:
-	setevent EVENT_DIDNT_CATCH_ZAPDOS	
+        setval ZAPDOS
+        special MonCheck
+        iffalse .DidntCatchZapdos
+	setevent EVENT_CAUGHT_ZAPDOS
+.DidntCatchZapdos:
 	disappear ROCKTUNNEL1F_ZAPDOS
 	reloadmapafterbattle
 	end
