@@ -66,10 +66,9 @@ VermilionSnorlax:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon SNORLAX, 50
 	startbattle
-	ifequal LOSE, .NotBeaten
+	ifequal LOSE, .DidntCatchSnorlax
 	disappear VERMILIONCITY_BIG_SNORLAX
 	setevent EVENT_FOUGHT_SNORLAX
-.NotBeaten:
         setval SNORLAX
         special MonCheck
         iffalse .DidntCatchSnorlax
