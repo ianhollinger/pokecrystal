@@ -11,9 +11,20 @@ VermilionCity_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, VermilionCityFlypointCallback
+        callback MAPCALLBACK_OBJECTS, VermilionSnorlaxCallback
 
 VermilionCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_VERMILION
+	endcallback
+
+VermilionSnorlaxCallback:
+	checkevent EVENT_FOUGHT_SNORLAX
+	iftrue .NoAppear
+	appear VERMILIONCITY_BIG_SNORLAX
+	endcallback
+
+.NoAppear:
+	disappear VERMILIONCITY_BIG_SNORLAX
 	endcallback
 
 VermilionCityTeacherScript:
@@ -56,13 +67,11 @@ VermilionSnorlax:
 	loadwildmon SNORLAX, 50
 	startbattle
 	setevent EVENT_FOUGHT_SNORLAX
-	ifequal DRAW, DidntCatchSnorlax
-	disappear VERMILIONCITY_BIG_SNORLAX
-	reloadmapafterbattle
-	end
-
-DidntCatchSnorlax:
-	setevent EVENT_DIDNT_CATCH_SNORLAX
+        setval SNORLAX
+        special MonCheck
+        iffalse .DidntCatchSnorlax
+	setevent EVENT_CAUGHT_SNORLAX
+.DidntCatchSnorlax:
 	disappear VERMILIONCITY_BIG_SNORLAX
 	reloadmapafterbattle
 	end
