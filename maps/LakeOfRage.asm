@@ -20,6 +20,7 @@ LakeOfRage_MapScripts:
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, LakeOfRageFlypointCallback
 	callback MAPCALLBACK_OBJECTS, LakeOfRageWesleyCallback
+        callback MAPCALLBACK_OBJECTS, LakeOfRageGyaradosCallback
 
 LakeOfRageNoop1Scene:
 	end
@@ -39,6 +40,15 @@ LakeOfRageWesleyCallback:
 
 .WesleyAppears:
 	appear LAKEOFRAGE_WESLEY
+	endcallback
+
+LakeOfRageGyaradosCallback:
+	checkevent EVENT_FOUGHT_GYARADOS
+	iftrue .NoAppear
+	appear LAKEOFRAGE_GYARADOS
+	endcallback
+.NoAppear:
+	disappear LAKEOFRAGE_GYARADOS
 	endcallback
 
 LakeOfRageLanceScript:
@@ -85,15 +95,14 @@ RedGyarados:
 	cry GYARADOS
 	closetext
 	loadwildmon GYARADOS, 30
-	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCESHINY
 	startbattle
 	ifequal LOSE, .NotBeaten
-	ifequal WIN, .Caught
-	setevent EVENT_DIDNT_CATCH_RED_GYARADOS
-.Caught:
 	disappear LAKEOFRAGE_GYARADOS
 .NotBeaten:
 	reloadmapafterbattle
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .BeatEliteFour
 	opentext
 	giveitem RED_SCALE
 	waitsfx
@@ -103,10 +112,8 @@ RedGyarados:
 	itemnotify
 	closetext
 	setscene 0 ; Lake of Rage does not have a scene variable
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .PostGame
 	appear LAKEOFRAGE_LANCE
-.PostGame:
+.BeatEliteFour:
 	end
 
 LakeOfRageGrampsScript:
