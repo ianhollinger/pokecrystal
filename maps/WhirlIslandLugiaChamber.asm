@@ -29,17 +29,15 @@ Lugia:
 	cry LUGIA
 	pause 15
 	closetext
-	setevent EVENT_FOUGHT_LUGIA
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon LUGIA, 70
+	loadwildmon LUGIA, 60
 	startbattle
-	ifequal DRAW, DidntCatchLugia
-	disappear WHIRLISLANDLUGIACHAMBER_LUGIA
-	reloadmapafterbattle
-	end
-
-DidntCatchLugia:
-	setevent EVENT_DIDNT_CATCH_LUGIA
+	setevent EVENT_FOUGHT_LUGIA
+        setval LUGIA
+        special MonCheck
+        iffalse .DidntCatchLugia
+	setevent EVENT_CAUGHT_LUGIA
+.DidntCatchLugia:
 	disappear WHIRLISLANDLUGIACHAMBER_LUGIA
 	reloadmapafterbattle
 	end
