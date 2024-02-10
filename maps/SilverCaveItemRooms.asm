@@ -29,8 +29,8 @@ SilverCaveItemRoomsMoltres:
 	startbattle
 	ifequal LOSE, .NotBeaten
 	disappear SILVERCAVEITEMROOMS_MOLTRES
-.NotBeaten:
 	setevent EVENT_FOUGHT_MOLTRES
+.NotBeaten:
         setval MOLTRES
         special MonCheck
         iffalse .DidntCatchMoltres
