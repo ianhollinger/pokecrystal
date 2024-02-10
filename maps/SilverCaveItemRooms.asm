@@ -9,16 +9,12 @@ SilverCaveItemRooms_MapScripts:
         callback MAPCALLBACK_OBJECTS, SilverCaveItemRoomsMoltresCallback
 
 SilverCaveItemRoomsMoltresCallback:
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .CheckFought
-.NoAppear:
-	disappear SILVERCAVEITEMROOMS_MOLTRES
-	endcallback
-
-.CheckFought: 
 	checkevent EVENT_FOUGHT_MOLTRES
 	iftrue .NoAppear
 	appear SILVERCAVEITEMROOMS_MOLTRES
+	endcallback
+.NoAppear:
+	disappear SILVERCAVEITEMROOMS_MOLTRES
 	endcallback
 
 SilverCaveItemRoomsMoltres:
