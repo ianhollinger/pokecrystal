@@ -18,8 +18,6 @@ RockTunnel1FZapdosCallback:
 .CheckFought: 
 	checkevent EVENT_FOUGHT_ZAPDOS
 	iftrue .NoAppear
-
-.Appear:
 	appear ROCKTUNNEL1F_ZAPDOS
 	endcallback
 
