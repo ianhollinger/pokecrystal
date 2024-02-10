@@ -9,16 +9,18 @@ SilverCaveItemRooms_MapScripts:
         callback MAPCALLBACK_OBJECTS, SilverCaveItemRoomsMoltresCallback
 
 SilverCaveItemRoomsMoltresCallback:
-        checkevent EVENT_FOUGHT_MOLTRES
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .CheckFought
+.NoAppear:
+	disappear SILVERCAVEITEMROOMS_MOLTRES
+	endcallback
+
+.CheckFought: 
+	checkevent EVENT_FOUGHT_MOLTRES
 	iftrue .NoAppear
-        sjump .Appear
 
 .Appear:
 	appear SILVERCAVEITEMROOMS_MOLTRES
-	endcallback
-
-.NoAppear:
-	disappear SILVERCAVEITEMROOMS_MOLTRES
 	endcallback
 
 SilverCaveItemRoomsMoltres:
@@ -32,13 +34,11 @@ SilverCaveItemRoomsMoltres:
 	loadwildmon MOLTRES, 60
 	startbattle
 	setevent EVENT_FOUGHT_MOLTRES
-	ifequal DRAW, DidntCatchMoltres
-	disappear SILVERCAVEITEMROOMS_MOLTRES
-	reloadmapafterbattle
-	end
-
-DidntCatchMoltres:
-	setevent EVENT_DIDNT_CATCH_MOLTRES
+        setval MOLTRES
+        special MonCheck
+        iffalse .DidntCatchMoltres
+	setevent EVENT_CAUGHT_MOLTRES
+.DidntCatchMoltres:
 	disappear SILVERCAVEITEMROOMS_MOLTRES
 	reloadmapafterbattle
 	end
@@ -49,9 +49,6 @@ MoltresText:
 
 SilverCaveItemRoomsMaxRevive:
 	itemball MAX_REVIVE
-
-; SilverCaveItemRoomsFullRestore:
-;	itemball FULL_RESTORE
 
 SilverCaveItemRooms_MapEvents:
 	db 0, 0 ; filler
@@ -66,7 +63,6 @@ SilverCaveItemRooms_MapEvents:
 
 	def_object_events
 	object_event  6,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveItemRoomsMaxRevive, EVENT_SILVER_CAVE_ITEM_ROOMS_MAX_REVIVE
-;	object_event 15, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveItemRoomsFullRestore, EVENT_SILVER_CAVE_ITEM_ROOMS_FULL_RESTORE
         object_event 15, 10, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SilverCaveItemRoomsMoltres, EVENT_SILVER_CAVE_ITEM_ROOMS_MOLTRES
 
 
