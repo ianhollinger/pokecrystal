@@ -427,28 +427,9 @@ IlexForestSignpost:
 	jumptext IlexForestSignpostText
 
 IlexForestShrineScript:
-	checkevent EVENT_DIDNT_CATCH_CELEBI
-	iftrue .RespawnCelebi
 	checkevent EVENT_FOREST_IS_RESTLESS
 	iftrue .ForestIsRestless
 	sjump .DontDoCelebiEvent
-
-.RespawnCelebi:
-	checkevent EVENT_FOUGHT_CELEBI
-	iftrue .DontDoCelebiEvent
-	special CelebiShrineEvent
-	loadwildmon CELEBI, 30
-	startbattle
-	reloadmapafterbattle
-	pause 20
-	setevent EVENT_FOUGHT_CELEBI
-	special CheckCaughtCelebi
-	iffalse .DidntCatchCelebi
-	end
-
-.DidntCatchCelebi:
-	setevent EVENT_DIDNT_CATCH_CELEBI
-	end
 
 .ForestIsRestless:
 	checkitem GS_BALL
@@ -486,11 +467,8 @@ IlexForestShrineScript:
 	startbattle
 	reloadmapafterbattle
 	pause 20
-	setevent EVENT_FOUGHT_CELEBI
 	special CheckCaughtCelebi
-	iftrue .CaughtCelebi
-	setevent EVENT_DIDNT_CATCH_CELEBI
-.CaughtCelebi:
+	iffalse .DidntCatchCelebi
 	appear ILEXFOREST_KURT
 	applymovement ILEXFOREST_KURT, IlexForestKurtStepsUpMovement
 	opentext
@@ -499,6 +477,7 @@ IlexForestShrineScript:
 	closetext
 	applymovement ILEXFOREST_KURT, IlexForestKurtStepsDownMovement
 	disappear ILEXFOREST_KURT
+.DidntCatchCelebi:
 	end
 
 MovementData_Farfetchd_Pos1_Pos2:
