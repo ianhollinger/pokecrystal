@@ -103,14 +103,17 @@ HallOfFameEnterScript:
 	checkevent EVENT_FOUGHT_HO_OH
 	iftrue .DidntCatchHoOh
 .SkipHoOh:
-;	checkevent EVENT_CAUGHT_CELEBI
-;	iffalse .SkipCelebi 
-; .DidntCatchCelebi:
-;	clearevent EVENT_FOUGHT_CELEBI
-;	clearevent EVENT_CAUGHT_CELEBI
-; .SkipCelebi:
+	checkevent EVENT_CAUGHT_CELEBI
+	iftrue .SkipCelebi
+	checkevent EVENT_FOUGHT_CELEBI
+	iftrue .DidntCatchCelebi
+.SkipCelebi:
 	halloffame
 	end
+
+.DidntCatchCelebi:
+	clearevent EVENT_FOUGHT_CELEBI
+	sjump .SkipCelebi
 
 .DidntCatchMewtwo:
 	clearevent EVENT_FOUGHT_MEWTWO
