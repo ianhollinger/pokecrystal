@@ -10,12 +10,14 @@
 	const ILEXFOREST_POKE_BALL2
 	const ILEXFOREST_POKE_BALL3
 	const ILEXFOREST_POKE_BALL4
+	const ILEXFOREST_CELEBI
 
 IlexForest_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, IlexForestFarfetchdCallback
+	callback MAPCALLBACK_OBJECTS, IlexForestCelebiCallback
 
 IlexForestFarfetchdCallback:
 	checkevent EVENT_GOT_HM01_CUT
@@ -342,6 +344,31 @@ IlexForestFarfetchdScript:
 	readvar VAR_FACING
 	end
 
+IlexForestCelebiCallback:
+	checkevent EVENT_FOUGHT_CELEBI
+	iftrue .NoAppear
+	appear ILEXFOREST_CELEBI
+	endcallback
+
+.NoAppear:
+	disappear ILEXFOREST_CELEBI
+	endcallback
+
+IlexForestCelebiScript:
+	loadwildmon CELEBI, 30
+	startbattle
+	reloadmapafterbattle
+	pause 20
+	setevent EVENT_FOUGHT_CELEBI
+	special CheckCaughtCelebi
+	iftrue .CaughtCelebi
+	disappear ILEXFOREST_CELEBI
+	end
+.CaughtCelebi:
+	setevent EVENT_CAUGHT_CELEBI
+	disappear ILEXFOREST_CELEBI
+	end
+
 IlexForestCharcoalMasterScript:
 	faceplayer
 	opentext
@@ -467,8 +494,10 @@ IlexForestShrineScript:
 	startbattle
 	reloadmapafterbattle
 	pause 20
+	setevent EVENT_FOUGHT_CELEBI
 	special CheckCaughtCelebi
-	iffalse .DidntCatchCelebi
+	iftrue .CaughtCelebi
+.DidntCatchCelebi:
 	appear ILEXFOREST_KURT
 	applymovement ILEXFOREST_KURT, IlexForestKurtStepsUpMovement
 	opentext
@@ -477,8 +506,10 @@ IlexForestShrineScript:
 	closetext
 	applymovement ILEXFOREST_KURT, IlexForestKurtStepsDownMovement
 	disappear ILEXFOREST_KURT
-.DidntCatchCelebi:
 	end
+.CaughtCelebi:
+	setevent EVENT_CAUGHT_CELEBI
+	sjump .DidntCatchCelebi
 
 MovementData_Farfetchd_Pos1_Pos2:
 	big_step UP
@@ -963,3 +994,4 @@ IlexForest_MapEvents:
 	object_event  9, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IlexForestXAttack, EVENT_ILEX_FOREST_X_ATTACK
 	object_event 17,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IlexForestAntidote, EVENT_ILEX_FOREST_ANTIDOTE
 	object_event 27,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IlexForestEther, EVENT_ILEX_FOREST_ETHER
+	object_event  8, 23, SPRITE_JYNX, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, IlexForestCelebiScript, EVENT_ILEX_FOREST_CELEBI
