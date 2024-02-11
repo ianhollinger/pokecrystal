@@ -347,14 +347,24 @@ IlexForestFarfetchdScript:
 IlexForestCelebiCallback:
 	checkevent EVENT_FOUGHT_CELEBI
 	iftrue .NoAppear
-	appear ILEXFOREST_CELEBI
-	endcallback
+	checkevent EVENT_FOREST_WAS_RESTLESS
+	iftrue .Appear
 
 .NoAppear:
 	disappear ILEXFOREST_CELEBI
 	endcallback
 
+.Appear:
+	appear ILEXFOREST_CELEBI
+	endcallback
+
 IlexForestCelebiScript:
+	faceplayer
+	opentext
+	writetext CelebiText
+	cry CELEBI
+	pause 15
+	closetext
 	loadwildmon CELEBI, 30
 	startbattle
 	reloadmapafterbattle
@@ -495,6 +505,7 @@ IlexForestShrineScript:
 	reloadmapafterbattle
 	pause 20
 	setevent EVENT_FOUGHT_CELEBI
+	setevent EVENT_FOREST_WAS_RESTLESS
 	special CheckCaughtCelebi
 	iftrue .CaughtCelebi
 .DidntCatchCelebi:
@@ -965,6 +976,10 @@ BugCatcherWayneAfterBattleText:
 	cont "places too."
 	done
 
+CelebiText:
+	text "Bii!"
+	done
+
 IlexForest_MapEvents:
 	db 0, 0 ; filler
 
@@ -994,4 +1009,4 @@ IlexForest_MapEvents:
 	object_event  9, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IlexForestXAttack, EVENT_ILEX_FOREST_X_ATTACK
 	object_event 17,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IlexForestAntidote, EVENT_ILEX_FOREST_ANTIDOTE
 	object_event 27,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IlexForestEther, EVENT_ILEX_FOREST_ETHER
-	object_event  8, 23, SPRITE_JYNX, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, IlexForestCelebiScript, EVENT_ILEX_FOREST_CELEBI
+	object_event  8, 24, SPRITE_JYNX, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, IlexForestCelebiScript, EVENT_ILEX_FOREST_CELEBI
