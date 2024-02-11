@@ -358,26 +358,26 @@ IlexForestFarfetchdScript:
 ;	appear ILEXFOREST_CELEBI
 ;	endcallback
 
-IlexForestCelebiScript:
-	faceplayer
-	opentext
-	writetext CelebiText
-	cry CELEBI
-	pause 15
-	closetext
-	loadwildmon CELEBI, 30
-	startbattle
-	reloadmapafterbattle
-	pause 20
-	setevent EVENT_FOUGHT_CELEBI
-	special CheckCaughtCelebi
-	iftrue .CaughtCelebi
-	disappear ILEXFOREST_CELEBI
-	end
-.CaughtCelebi:
-	setevent EVENT_CAUGHT_CELEBI
-	disappear ILEXFOREST_CELEBI
-	end
+;IlexForestCelebiScript:
+;	faceplayer
+;	opentext
+;	writetext CelebiText
+;	cry CELEBI
+;	pause 15
+;	closetext
+;	loadwildmon CELEBI, 30
+;	startbattle
+;	reloadmapafterbattle
+;	pause 20
+;	setevent EVENT_FOUGHT_CELEBI
+;	special CheckCaughtCelebi
+;	iftrue .CaughtCelebi
+;	disappear ILEXFOREST_CELEBI
+;	end
+;.CaughtCelebi:
+;	setevent EVENT_CAUGHT_CELEBI
+;	disappear ILEXFOREST_CELEBI
+;	end
 
 IlexForestCharcoalMasterScript:
 	faceplayer
