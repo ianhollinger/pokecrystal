@@ -38,7 +38,7 @@ TinTowerHoOh:
 	setevent EVENT_SET_WHEN_FOUGHT_HO_OH
         setval HO_OH
         special MonCheck
-        iffalse .DidntCatchHooh
+        iffalse .DidntCatchHoOh
 	setevent EVENT_CAUGHT_HO_OH
 .DidntCatchHoOh:
 	reloadmapafterbattle
