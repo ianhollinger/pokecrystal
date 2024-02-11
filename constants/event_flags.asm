@@ -1504,7 +1504,8 @@
 	const EVENT_DARK_CAVE_VIOLET_ENTRANCE_DIRE_HIT
 	const EVENT_BATTLE_TOWER_OPEN_CIVILIANS
 	const EVENT_VERMILION_GYM_SURGE2
-; Unused: next 47 events
+	const EVENT_ILEX_FOREST_CELEBI
+; Unused: next 46 events
 
 	const_next 2048
 DEF NUM_EVENTS EQU const_value ; 800
