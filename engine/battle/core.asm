@@ -4230,6 +4230,7 @@ HandleHPHealingItem:
 	ld a, b
 	cp HELD_BERRY
 	ret nz
+	ld b, 0
 	ld a, [hl]
 	cp GOLD_BERRY
 	jr z, .quarter
@@ -4244,8 +4245,7 @@ HandleHPHealingItem:
 	jr .go
 
 .quarter:
-	ld bc, GetQuarterMaxHP
-	ld b, 0
+	call GetQuarterMaxHP
 	jr .DontQuarter
 
 .go
