@@ -58,7 +58,7 @@ HallOfFameEnterScript:
 	iftrue .SkipPhoneCall
 	specialphonecall SPECIALCALL_SSTICKET
 .SkipPhoneCall:
-	checkevent EVENT_DIDNT_CATCH_MEWTWO
+	checkevent EVENT_CAUGHT_MEWTWO
 	iftrue .DidntCatchMewtwo
 .SkipMewtwo:
 	checkevent EVENT_CAUGHT_ARTICUNO
@@ -66,39 +66,39 @@ HallOfFameEnterScript:
 	checkevent EVENT_FOUGHT_ARTICUNO
 	iftrue .DidntCatchArticuno
 .SkipArticuno:
-	checkevent EVENT_DIDNT_CATCH_ZAPDOS
+	checkevent EVENT_CAUGHT_ZAPDOS
 	iftrue .DidntCatchZapdos
 .SkipZapdos:
-	checkevent EVENT_DIDNT_CATCH_MOLTRES
+	checkevent EVENT_CAUGHT_MOLTRES
 	iftrue .DidntCatchMoltres
 .SkipMoltres:
-	checkevent EVENT_DIDNT_CATCH_SUDOWOODO
+	checkevent EVENT_CAUGHT_SUDOWOODO
 	iftrue .DidntCatchSudowoodo
 .SkipSudowoodo:
-	checkevent EVENT_DIDNT_CATCH_RED_GYARADOS
+	checkevent EVENT_CAUGHT_RED_GYARADOS
 	iftrue .DidntCatchGyarados
 .SkipGyarados:
-	checkevent EVENT_DIDNT_CATCH_SNORLAX
+	checkevent EVENT_CAUGHT_SNORLAX
 	iftrue .DidntCatchSnorlax
 .SkipSnorlax:
-	checkevent EVENT_DIDNT_CATCH_LUGIA
+	checkevent EVENT_CAUGHT_LUGIA
 	iftrue .DidntCatchLugia
 .SkipLugia:
-	checkevent EVENT_DIDNT_CATCH_HO_OH
+	checkevent EVENT_CAUGHT_HO_OH
 	iftrue .DidntCatchHoOh
 .SkipHoOh:
-	checkevent EVENT_DIDNT_CATCH_CELEBI
+	checkevent EVENT_CAUGHT_CELEBI
 	iffalse .SkipCelebi 
 .DidntCatchCelebi:
 	clearevent EVENT_FOUGHT_CELEBI
-	clearevent EVENT_DIDNT_CATCH_CELEBI
+	clearevent EVENT_CAUGHT_CELEBI
 .SkipCelebi:
 	halloffame
 	end
 
 .DidntCatchMewtwo:
 	clearevent EVENT_FOUGHT_MEWTWO
-	clearevent EVENT_DIDNT_CATCH_MEWTWO
+	clearevent EVENT_CAUGHT_MEWTWO
 	sjump .SkipMewtwo
 
 .DidntCatchArticuno:
@@ -107,40 +107,40 @@ HallOfFameEnterScript:
 
 .DidntCatchZapdos:
 	clearevent EVENT_FOUGHT_ZAPDOS
-	clearevent EVENT_DIDNT_CATCH_ZAPDOS
+	clearevent EVENT_CAUGHT_ZAPDOS
 	sjump .SkipZapdos
 
 .DidntCatchMoltres:
 	clearevent EVENT_FOUGHT_MOLTRES
-	clearevent EVENT_DIDNT_CATCH_MOLTRES
+	clearevent EVENT_CAUGHT_MOLTRES
 	sjump .SkipMoltres
 
 .DidntCatchSudowoodo:
 	clearevent EVENT_FOUGHT_SUDOWOODO
-	clearevent EVENT_DIDNT_CATCH_SUDOWOODO
+	clearevent EVENT_CAUGHT_SUDOWOODO
 	appear ROUTE36_WEIRD_TREE
 	sjump .SkipSudowoodo
 
 .DidntCatchGyarados:
 	clearevent EVENT_LAKE_OF_RAGE_RED_GYARADOS
-	clearevent EVENT_DIDNT_CATCH_RED_GYARADOS
+	clearevent EVENT_CAUGHT_RED_GYARADOS
 	appear LAKEOFRAGE_GYARADOS
 	sjump .SkipGyarados
 
 .DidntCatchSnorlax:
 	clearevent EVENT_FOUGHT_SNORLAX
-	clearevent EVENT_DIDNT_CATCH_SNORLAX
+	clearevent EVENT_CAUGHT_SNORLAX
 	appear VERMILIONCITY_BIG_SNORLAX
 	sjump .SkipSnorlax
 
 .DidntCatchLugia:
 	clearevent EVENT_FOUGHT_LUGIA
-	clearevent EVENT_DIDNT_CATCH_LUGIA
+	clearevent EVENT_CAUGHT_LUGIA
 	sjump .SkipLugia
 
 .DidntCatchHoOh:
 	clearevent EVENT_FOUGHT_HO_OH
-	clearevent EVENT_DIDNT_CATCH_HO_OH
+	clearevent EVENT_CAUGHT_HO_OH
 	sjump .SkipHoOh
 
 HallOfFame_WalkUpWithLance:
