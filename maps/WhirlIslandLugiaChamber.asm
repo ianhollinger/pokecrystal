@@ -30,7 +30,7 @@ Lugia:
 	pause 15
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon LUGIA, 60
+	loadwildmon LUGIA, 70
 	startbattle
 	ifequal LOSE, .DidntCatchLugia
 	disappear WHIRLISLANDLUGIACHAMBER_LUGIA
