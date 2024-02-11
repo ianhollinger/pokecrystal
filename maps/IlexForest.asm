@@ -10,14 +10,14 @@
 	const ILEXFOREST_POKE_BALL2
 	const ILEXFOREST_POKE_BALL3
 	const ILEXFOREST_POKE_BALL4
-	const ILEXFOREST_CELEBI
+;	const ILEXFOREST_CELEBI
 
 IlexForest_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, IlexForestFarfetchdCallback
-	callback MAPCALLBACK_OBJECTS, IlexForestCelebiCallback
+;	callback MAPCALLBACK_OBJECTS, IlexForestCelebiCallback
 
 IlexForestFarfetchdCallback:
 	checkevent EVENT_GOT_HM01_CUT
@@ -344,19 +344,19 @@ IlexForestFarfetchdScript:
 	readvar VAR_FACING
 	end
 
-IlexForestCelebiCallback:
-	checkevent EVENT_FOUGHT_CELEBI
-	iftrue .NoAppear
-	checkevent EVENT_FOREST_WAS_RESTLESS
-	iftrue .Appear
-
-.NoAppear:
-	disappear ILEXFOREST_CELEBI
-	endcallback
-
-.Appear:
-	appear ILEXFOREST_CELEBI
-	endcallback
+;IlexForestCelebiCallback:
+;	checkevent EVENT_FOUGHT_CELEBI
+;	iftrue .NoAppear
+;	checkevent EVENT_FOREST_WAS_RESTLESS
+;	iftrue .Appear
+;
+;.NoAppear:
+;	disappear ILEXFOREST_CELEBI
+;	endcallback
+;
+;.Appear:
+;	appear ILEXFOREST_CELEBI
+;	endcallback
 
 IlexForestCelebiScript:
 	faceplayer
@@ -466,6 +466,13 @@ IlexForestSignpost:
 IlexForestShrineScript:
 	checkevent EVENT_FOREST_IS_RESTLESS
 	iftrue .ForestIsRestless
+	checkevent EVENT_FOREST_WAS_RESTLESS
+	iftrue .CheckCaught
+	sjump .DontDoCelebiEvent
+
+.CheckCaught:
+	checkevent EVENT_CAUGHT_CELEBI
+	iffalse .CelebiEventRematch
 	sjump .DontDoCelebiEvent
 
 .ForestIsRestless:
@@ -489,6 +496,7 @@ IlexForestShrineScript:
 	disappear ILEXFOREST_LASS
 	clearevent EVENT_ROUTE_34_ILEX_FOREST_GATE_LASS
 	writetext Text_InsertGSBall
+.CelebiEventRematch:
 	waitbutton
 	closetext
 	pause 20
@@ -505,6 +513,8 @@ IlexForestShrineScript:
 	reloadmapafterbattle
 	pause 20
 	setevent EVENT_FOUGHT_CELEBI
+	checkevent EVENT_FOREST_WAS_RESTLESS
+	iftrue .CheckCaughtRematch
 	setevent EVENT_FOREST_WAS_RESTLESS
 	special CheckCaughtCelebi
 	iftrue .CaughtCelebi
@@ -521,6 +531,12 @@ IlexForestShrineScript:
 .CaughtCelebi:
 	setevent EVENT_CAUGHT_CELEBI
 	sjump .DidntCatchCelebi
+.CheckCaughtRematch:
+	special CheckCaughtCelebi
+	iffalse .DidntCatchCelebiRematch
+	setevent EVENT_CAUGHT_CELEBI
+.DidntCatchCelebiRematch:
+	end
 
 MovementData_Farfetchd_Pos1_Pos2:
 	big_step UP
@@ -1009,4 +1025,4 @@ IlexForest_MapEvents:
 	object_event  9, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IlexForestXAttack, EVENT_ILEX_FOREST_X_ATTACK
 	object_event 17,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IlexForestAntidote, EVENT_ILEX_FOREST_ANTIDOTE
 	object_event 27,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IlexForestEther, EVENT_ILEX_FOREST_ETHER
-	object_event  8, 24, SPRITE_JYNX, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, IlexForestCelebiScript, EVENT_ILEX_FOREST_CELEBI
+;	object_event  8, 24, SPRITE_JYNX, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, IlexForestCelebiScript, EVENT_ILEX_FOREST_CELEBI
