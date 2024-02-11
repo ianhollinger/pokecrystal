@@ -4245,6 +4245,7 @@ HandleHPHealingItem:
 
 .quarter:
 	ld bc, GetQuarterMaxHP
+	ld b, 0
 	jr .DontQuarter
 
 .go
