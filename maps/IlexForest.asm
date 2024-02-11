@@ -471,7 +471,7 @@ IlexForestShrineScript:
 	sjump .DontDoCelebiEvent
 
 .CheckCaught:
-	checkevent EVENT_CAUGHT_CELEBI
+	checkevent EVENT_FOUGHT_CELEBI
 	iffalse .CelebiEventRematch
 	sjump .DontDoCelebiEvent
 
@@ -496,9 +496,9 @@ IlexForestShrineScript:
 	disappear ILEXFOREST_LASS
 	clearevent EVENT_ROUTE_34_ILEX_FOREST_GATE_LASS
 	writetext Text_InsertGSBall
-.CelebiEventRematch:
 	waitbutton
 	closetext
+.CelebiEventRematch:
 	pause 20
 	showemote EMOTE_SHOCK, PLAYER, 20
 	special FadeOutMusic
