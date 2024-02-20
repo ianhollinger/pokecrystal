@@ -64,12 +64,12 @@ MeetMomScript:
 	writetext ComeHomeForDSTText
 	yesorno
 	iffalse .ExplainPhone
-	sjump .KnowPhone
+;	sjump .KnowPhone
+	sjump .FinishPhone
 
 .KnowPhone:
-	writetext KnowTheInstructionsText
-	promptbutton
-	sjump .FinishPhone
+;	writetext KnowTheInstructionsText
+;	promptbutton
 
 .ExplainPhone:
 	writetext DontKnowTheInstructionsText
