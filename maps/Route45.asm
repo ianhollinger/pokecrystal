@@ -23,7 +23,7 @@ TrainerBlackbeltKenji:
 
 .Script:
 	loadvar VAR_CALLERID, PHONE_BLACKBELT_KENJI
-	endifjustbattled
+;	endifjustbattled
 	opentext
 	checkcellnum PHONE_BLACKBELT_KENJI
 	iftrue .Registered
