@@ -2338,12 +2338,12 @@ AI_Smart_HiddenPower:
 ; Encourage Hidden Power if super-effective.
 	ld a, [wTypeMatchup]
 	cp EFFECTIVE + 1
-	jr nc, .good
-
-; Just encourage Hidden Power lol
-	ld a, d
-	cp 60
+;	jr nc, .good
 	ret c
+
+;	ld a, d
+;	cp 60
+;	ret c
 
 .good
 	dec [hl]
