@@ -15,12 +15,12 @@ TrainerClassDVs:
 	dn 13, 12, 13, 14 ; WILL
 	dn 13, 12, 13, 14 ; CAL
 	dn 15, 12, 13, 12 ; BRUNO
-	dn 13, 12, 13, 13 ; KAREN
+	dn 14, 14, 15, 15 ; KAREN (HP Grass)
 	dn 13, 12, 13, 14 ; KOGA
 	dn 13, 12, 13, 14 ; CHAMPION
 	dn  9, 12,  8,  8 ; BROCK
 	dn  7,  8, 12,  9 ; MISTY
-	dn  9,  8, 10, 10 ; LT_SURGE
+	dn 10,  9, 12, 10 ; LT_SURGE (HP Water)
 	dn  7,  8,  9, 10 ; SCIENTIST
 	dn  10, 8, 11, 13 ; ERIKA (HP Fire)
 	dn  9,  6,  6,  6 ; YOUNGSTER
@@ -28,8 +28,8 @@ TrainerClassDVs:
 	dn  9,  8, 10,  6 ; BIRD_KEEPER
 	dn  5,  8,  8,  5 ; LASS
 	dn  7,  8, 10,  7 ; JANINE
-	dn 13,  8, 12, 10 ; COOLTRAINERM (HP Rock)
-	dn 10, 13, 11,  9 ; COOLTRAINERF
+	dn 14, 11, 12, 10 ; COOLTRAINERM (HP Electric)
+	dn 10, 15,  9,  9 ; COOLTRAINERF (HP Electric)
 	dn  6,  9,  9,  9 ; BEAUTY
 	dn  9,  7,  7,  8 ; POKEMANIAC
 	dn 13,  8, 10,  8 ; GRUNTM
@@ -64,7 +64,7 @@ TrainerClassDVs:
 	dn  5,  8,  8, 10 ; KIMONO_GIRL
 	dn  5,  5,  5,  5 ; TWINS
 	dn  7,  9,  5,  7 ; POKEFANF
-	dn 15, 13, 13, 14 ; RED
+	dn 12, 13, 15, 15 ; RED
 	dn 13, 13,  9, 12 ; BLUE
 	dn  7,  7,  8,  8 ; OFFICER
 	dn  7, 14, 10,  7 ; GRUNTF
