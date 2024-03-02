@@ -459,7 +459,7 @@ RivalCherrygroveWinText:
 CherrygroveRivalText_YouLost:
 	text "<……> <……> <……>"
 
-	para "My name's ???."
+;	para "My name's ???."
 
 	para "I'm going to be"
 	line "the world's great-"
