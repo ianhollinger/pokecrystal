@@ -61,7 +61,7 @@ Pokedex:
 	ld a, [wCurDexMode]
 	ld [wLastDexMode], a
 
-	ld a, [wPokedexShinyToggle]
+;	ld a, [wPokedexShinyToggle]
 	xor a
 	ld [wPokedexShinyToggle], a
 
@@ -401,7 +401,7 @@ Pokedex_UpdateDexEntryScreen:
 	call Pokedex_GetSGBLayout
 	; play sound based on setting
 	ld a, [wPokedexShinyToggle]
-	bit 0, a
+	and a
 	ld de, SFX_BUMP
 	jr z, .got_sound
 	ld de, SFX_SHINE
