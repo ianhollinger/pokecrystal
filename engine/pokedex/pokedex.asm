@@ -61,7 +61,7 @@ Pokedex:
 	ld a, [wCurDexMode]
 	ld [wLastDexMode], a
 
-	ld a, [wPokedexShinyToggle]
+;	ld a, [wPokedexShinyToggle]
 	xor a
 	ld [wPokedexShinyToggle], a
 
