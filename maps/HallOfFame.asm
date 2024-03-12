@@ -58,6 +58,11 @@ HallOfFameEnterScript:
 	iftrue .SkipPhoneCall
 	specialphonecall SPECIALCALL_SSTICKET
 .SkipPhoneCall:
+	checkevent EVENT_CAUGHT_LAPRAS
+	iftrue .SkipLapras
+	checkflag ENGINE_UNION_CAVE_LAPRAS
+	iftrue .DidntCatchLapras
+.SkipLapras:
 	checkevent EVENT_CAUGHT_MEWTWO
 	iftrue .SkipMewtwo
 	checkevent EVENT_FOUGHT_MEWTWO
@@ -114,6 +119,10 @@ HallOfFameEnterScript:
 .DidntCatchCelebi:
 	clearevent EVENT_FOUGHT_CELEBI
 	sjump .SkipCelebi
+
+.DidntCatchLapras:
+	clearflag ENGINE_UNION_CAVE_LAPRAS
+	sjump .SkipLapras
 
 .DidntCatchMewtwo:
 	clearevent EVENT_FOUGHT_MEWTWO
