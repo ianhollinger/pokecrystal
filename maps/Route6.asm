@@ -31,7 +31,32 @@ TrainerPokefanmAllan:
 	end
 
 Route6PokefanMScript:
-	jumptextfaceplayer Route6PokefanMText
+	faceplayer
+	opentext
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	iftrue .imposter
+	writetext Route6PokefanMText
+	waitbutton
+	closetext
+	end
+
+.imposter:
+	writetext Route6PokefanMImposterText
+	pause 15
+	cry DITTO
+	closetext
+	loadwildmon DITTO, 45
+	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
+	startbattle
+	disappear ROUTE6_POKEFAN_M1
+	setevent EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	end
+
+Route6PokefanMImposterText:
+	text "…"
+
+	para "DITTO!"
+	done
 
 Route6UndergroundPathSign:
 	jumptext Route6UndergroundPathSignText
