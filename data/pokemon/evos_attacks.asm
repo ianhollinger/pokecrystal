@@ -1798,8 +1798,8 @@ RhydonEvosAttacks:
 ChanseyEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, BLISSEY
 	db 0 ; no more evolutions
-	db 1, CHARM
 	db 1, POUND
+	db 1, GROWL
 	db 6, DEFENSE_CURL 
 	db 10, TAIL_WHIP
 	db 13, DOUBLESLAP
@@ -2793,28 +2793,30 @@ IgglybuffEvosAttacks:
 TogepiEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, TOGETIC
 	db 0 ; no more evolutions
+	db 1, GROWL
 	db 1, POUND 
-	db 1, CHARM
 	db 7, METRONOME
 	db 12, SWEET_KISS
 	db 18, ENCORE
-	db 23, ANCIENTPOWER
-	db 29, SAFEGUARD
-	db 34, BATON_PASS
-	db 40, DOUBLE_EDGE
+	db 22, CHARM
+	db 29, ANCIENTPOWER
+	db 34, SAFEGUARD
+	db 40, BATON_PASS
+	db 45, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 TogeticEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, GROWL
 	db 1, POUND 
-	db 1, CHARM
 	db 7, METRONOME
 	db 12, SWEET_KISS
 	db 18, ENCORE
-	db 23, ANCIENTPOWER
-	db 29, SAFEGUARD
-	db 34, BATON_PASS
-	db 40, DOUBLE_EDGE
+	db 22, CHARM
+	db 29, ANCIENTPOWER
+	db 34, SAFEGUARD
+	db 40, BATON_PASS
+	db 45, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 NatuEvosAttacks:
@@ -3808,8 +3810,8 @@ MiltankEvosAttacks:
 
 BlisseyEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, CHARM
 	db 1, POUND
+	db 1, GROWL
 	db 6, DEFENSE_CURL 
 	db 10, TAIL_WHIP
 	db 13, DOUBLESLAP
