@@ -419,6 +419,8 @@ ChanseyEggMoves:
 	db PRESENT
 	db METRONOME
 	db HEAL_BELL
+	db SWEET_KISS
+	db CHARM
 	db -1 ; end
 
 TangelaEggMoves:
