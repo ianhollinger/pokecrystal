@@ -7,7 +7,32 @@ Route5_MapScripts:
 	def_callbacks
 
 Route5PokefanMScript:
-	jumptextfaceplayer Route5PokefanMText
+	faceplayer
+	opentext
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	iftrue .imposter
+	writetext Route5PokefanMText
+	waitbutton
+	closetext
+	end
+
+.imposter:
+	writetext Route5PokefanMImposterText
+	pause 15
+	cry DITTO
+	closetext
+	loadwildmon DITTO, 45
+	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
+	startbattle
+	disappear ROUTE5_POKEFAN_M
+	setevent EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	end
+
+Route5PokefanMImposterText:
+	text "…"
+
+	para "DITTO!"
+	done
 
 Route5UndergroundPathSign:
 	jumptext Route5UndergroundPathSignText
