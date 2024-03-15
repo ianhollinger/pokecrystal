@@ -24,6 +24,7 @@ Route5PokefanMScript:
 	loadwildmon DITTO, 45
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
 	startbattle
+	reloadmapafterbattle
 	disappear ROUTE5_POKEFAN_M
 	setevent EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
 	end
