@@ -251,6 +251,7 @@ Route36Officer_ContestHasConcluded:
 	iffalse .BagFull
 	clearevent EVENT_CONTEST_OFFICER_HAS_SUN_STONE
 	closetext
+	clearevent EVENT_NATIONAL_PARK_HIDDEN_PARK_BALL
 	end
 
 .Everstone:
@@ -260,6 +261,7 @@ Route36Officer_ContestHasConcluded:
 	iffalse .BagFull
 	clearevent EVENT_CONTEST_OFFICER_HAS_EVERSTONE
 	closetext
+	clearevent EVENT_NATIONAL_PARK_HIDDEN_PARK_BALL
 	end
 
 .GoldBerry:
@@ -269,6 +271,7 @@ Route36Officer_ContestHasConcluded:
 	iffalse .BagFull
 	clearevent EVENT_CONTEST_OFFICER_HAS_GOLD_BERRY
 	closetext
+	clearevent EVENT_NATIONAL_PARK_HIDDEN_PARK_BALL
 	end
 
 .Berry:
@@ -278,6 +281,7 @@ Route36Officer_ContestHasConcluded:
 	iffalse .BagFull
 	clearevent EVENT_CONTEST_OFFICER_HAS_BERRY
 	closetext
+	clearevent EVENT_NATIONAL_PARK_HIDDEN_PARK_BALL
 	end
 
 .BagFull:
