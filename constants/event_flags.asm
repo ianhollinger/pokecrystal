@@ -288,7 +288,8 @@
 	const EVENT_VERMILION_GYM_SWITCH_1
 	const EVENT_VERMILION_GYM_SWITCH_2
 	const EVENT_FOREST_WAS_RESTLESS
-; Unused: next 325 events
+	const EVENT_CAUGHT_LAPRAS
+; Unused: next 324 events
 
 	const_next 600
 ; Kurt Apricorn events
