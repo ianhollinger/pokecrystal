@@ -4245,7 +4245,9 @@ HandleHPHealingItem:
 	jr .go
 
 .quarter:
+	call SwitchTurnCore 
 	call GetQuarterMaxHP
+	call SwitchTurnCore
 	jr .DontQuarter
 
 .go
