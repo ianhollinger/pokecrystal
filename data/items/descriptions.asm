@@ -834,8 +834,8 @@ TeruSama17Desc:
 	db   "?@"
 
 MysteryBerryDesc:
-	db   "A self-restore"
-	next "for PP. (10, HOLD)@"
+	db   "Self-restores PP."
+	next "(10, HOLD)@"
 
 DragonScaleDesc:
 	db   "A rare dragon-type"
@@ -921,12 +921,12 @@ UpGradeDesc:
 	next "for PORYGON.@"
 
 BerryDesc:
-	db   "A self-restore"
-	next "item. (10HP, HOLD)@"
+	db   "Self-restores HP."
+	next "(10, HOLD)@"
 
-GoldBerryDesc:
-	db   "A self-restore"
-	next "item. (30HP, HOLD)@"
+GoldBerryDesc:	
+	db   "Self-restores HP."
+	next "(1/4 max, HOLD)@"
 
 SquirtBottleDesc:
 	db   "A bottle used for"
