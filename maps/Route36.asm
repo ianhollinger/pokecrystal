@@ -39,6 +39,7 @@ Route36SudowoodoCallback:
 	checkevent EVENT_FOUGHT_SUDOWOODO
 	iftrue .NoAppear
 	appear ROUTE36_WEIRD_TREE
+	variablesprite SPRITE_TWIN, SPRITE_WEIRD_TREE
 	endcallback
 .NoAppear:
 	disappear ROUTE36_WEIRD_TREE
