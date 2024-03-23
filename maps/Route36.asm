@@ -95,7 +95,7 @@ WateredWeirdTreeScript:: ; export (for when you use Squirtbottle from pack)
 	end
 .Beaten:
 	disappear ROUTE36_WEIRD_TREE
-	variablesprite SPRITE_WEIRD_TREE, SPRITE_TWIN
+;	variablesprite SPRITE_WEIRD_TREE, SPRITE_TWIN
 	reloadmapafterbattle
    	setval SUDOWOODO
         special MonCheck
@@ -113,7 +113,7 @@ DidntCatchSudowoodo:
 	reloadmapafterbattle
 	applymovement ROUTE36_WEIRD_TREE, WeirdTreeMovement_Flee
 	disappear ROUTE36_WEIRD_TREE
-	variablesprite SPRITE_WEIRD_TREE, SPRITE_TWIN
+;	variablesprite SPRITE_WEIRD_TREE, SPRITE_TWIN
 	special LoadUsedSpritesGFX
 	special RefreshSprites
 	end
