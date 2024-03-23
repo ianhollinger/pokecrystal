@@ -42,7 +42,7 @@ OlivineCityRivalSceneTop:
 	setscene SCENE_OLIVINECITY_NOOP
 	disappear OLIVINECITY_OLIVINE_RIVAL
 	special RestartMapMusic
-	variablesprite SPRITE_OLIVINE_RIVAL, SPRITE_SWIMMER_GUY
+;	variablesprite SPRITE_OLIVINE_RIVAL, SPRITE_SWIMMER_GUY
 	special LoadUsedSpritesGFX
 	end
 
