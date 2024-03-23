@@ -90,10 +90,10 @@ WateredWeirdTreeScript:: ; export (for when you use Squirtbottle from pack)
 	startbattle
 	setevent EVENT_FOUGHT_SUDOWOODO
 	ifequal DRAW, DidntCatchSudowoodo
-	ifequal WIN, .Beaten
-	reloadmapafterbattle
-	end
-.Beaten:
+;	ifequal WIN, .Beaten
+;	reloadmapafterbattle
+;	end
+;.Beaten:
 	disappear ROUTE36_WEIRD_TREE
 ;	variablesprite SPRITE_WEIRD_TREE, SPRITE_TWIN
 	reloadmapafterbattle
