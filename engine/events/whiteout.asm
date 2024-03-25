@@ -136,12 +136,12 @@ LoseWhiteOutMoney:
 
 .PayoutBadgeFactors:
 	db  8 ; 0
-	db  17 ; 1
-	db  27 ; 2
-	db  38 ; 3
-	db  50 ; 4
-	db  63 ; 5
-	db  77 ; 6
+	db  16 ; 1
+	db  24 ; 2
+	db  36 ; 3
+	db  48 ; 4
+	db  60 ; 5
+	db  76 ; 6
 	db  92 ; 7
 	db  108 ; 8+
 
