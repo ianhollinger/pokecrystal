@@ -302,7 +302,7 @@ InitializeNPCNames:
 	call CopyBytes
 	ret
 
-.Rival:  db "PASSERBY BOY@"
+.Rival:  db "BOY@"
 .Red:    db "RED@"
 .Green:  db "GREEN@"
 .Mom:    db "MOM@"
