@@ -353,8 +353,8 @@ PlaceEnemysName::
 	jr nz, .linkbattle
 
 	ld a, [wTrainerClass]
-	cp RIVAL1
-	jr z, .rival
+;	cp RIVAL1
+;	jr z, .rival
 	cp RIVAL2
 	jr z, .rival
 
