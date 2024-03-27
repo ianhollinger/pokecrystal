@@ -614,19 +614,19 @@ ClairGroup:
 
 Rival1Group:
 	; RIVAL1 (1)
-	db "?@", TRAINERTYPE_ITEM
+	db "BOY@", TRAINERTYPE_ITEM
 	db  5, CHIKORITA
 		db BERRY
 	db -1 ; end
 
 	; RIVAL1 (2)
-	db "?@", TRAINERTYPE_ITEM
+	db "BOY@", TRAINERTYPE_ITEM
 	db  5, CYNDAQUIL
 		db BERRY
 	db -1 ; end
 
 	; RIVAL1 (3)
-	db "?@", TRAINERTYPE_ITEM
+	db "BOY@", TRAINERTYPE_ITEM
 	db  5, TOTODILE
 		db BERRY
 	db -1 ; end
