@@ -3554,6 +3554,9 @@ OctilleryEvosAttacks:
 DelibirdEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PRESENT
+	db 13, PAY_DAY
+	db 25, DRILL_PECK
+	db 37, SPIKES
 	db 0 ; no more level-up moves
 
 MantineEvosAttacks:
