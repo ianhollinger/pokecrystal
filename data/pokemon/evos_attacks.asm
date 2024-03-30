@@ -2822,28 +2822,26 @@ TogeticEvosAttacks:
 NatuEvosAttacks:
 	db EVOLVE_LEVEL, 25, XATU
 	db 0 ; no more evolutions
-	db 1, LEER
 	db 1, PECK
-	db 7, CONFUSION
+	db 7, LEER
 	db 14, TELEPORT
-	db 20, NIGHT_SHADE
-	db 27, CONFUSE_RAY
-	db 33, PSYCHIC_M
-	db 40, FUTURE_SIGHT
-	db 46, SAFEGUARD
+	db 21, NIGHT_SHADE
+	db 28, CONFUSE_RAY
+	db 35, PSYCHIC_M 
+	db 42, SAFEGUARD
+	db 49, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
 XatuEvosAttacks:
 	db 0 ; no more evolutions
-;	db 1, LEER
 	db 1, PECK
-	db 7, CONFUSION
-	db 14, TELEPORT 
-	db 20, NIGHT_SHADE 
-	db 29, CONFUSE_RAY
-	db 37, PSYCHIC_M
-	db 46, FUTURE_SIGHT
-	db 54, SAFEGUARD
+	db 7, LEER
+	db 14, TELEPORT
+	db 21, NIGHT_SHADE
+	db 30, CONFUSE_RAY
+	db 39, PSYCHIC_M 
+	db 48, SAFEGUARD
+	db 57, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
 MareepEvosAttacks:
