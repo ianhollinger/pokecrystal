@@ -13,7 +13,7 @@ TrainerClassDVs:
 	dn 14, 13, 13, 14 ; RIVAL1
 	dn  9,  8,  8,  8 ; POKEMON_PROF
 	dn 13, 12, 13, 14 ; WILL
-	dn 13, 12, 13, 14 ; CAL
+	dn 13, 13, 12, 12 ; CAL (HP Bug)
 	dn 15, 12, 13, 12 ; BRUNO
 	dn 14, 14, 15, 15 ; KAREN (HP Grass)
 	dn 13, 12, 13, 14 ; KOGA
