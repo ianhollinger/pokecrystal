@@ -15,22 +15,28 @@ TrainerHouseReceptionistScript:
 	turnobject PLAYER, UP
 	opentext
 	checkflag ENGINE_FOUGHT_IN_TRAINER_HALL_TODAY
-	iftrue .FoughtTooManyTimes
+	iftrue FoughtTooManyTimes
 	writetext TrainerHouseB1FIntroText
 	promptbutton
 	special TrainerHouse
-	iffalse .GetCal3Name
-	gettrainername STRING_BUFFER_3, CAL, CAL2
-	sjump .GotName
+	iffalse GetWhichTrainer
+	sjump Cal2
 
-.GetCal3Name:
-	gettrainername STRING_BUFFER_3, CAL, CAL3
-.GotName:
+GetWhichTrainer:
+	ld a, 3
+	call RandomRange
+	add 1
+	ifequal 1, Cal1
+	ifequal 2, Cal3
+	sjump Cal4
+
+Cal2:
+	gettrainername STRING_BUFFER_3, CAL, CAL2
 	writetext TrainerHouseB1FYourOpponentIsText
 	promptbutton
 	writetext TrainerHouseB1FAskWantToBattleText
 	yesorno
-	iffalse .Declined
+	iffalse Declined
 	setflag ENGINE_FOUGHT_IN_TRAINER_HALL_TODAY
 	writetext TrainerHouseB1FGoRightInText
 	waitbutton
@@ -40,32 +46,93 @@ TrainerHouseReceptionistScript:
 	writetext TrainerHouseB1FCalBeforeText
 	waitbutton
 	closetext
-	special TrainerHouse
-	iffalse .NoSpecialBattle
 	winlosstext TrainerHouseB1FCalBeatenText, 0
 	setlasttalked TRAINERHOUSEB1F_CHRIS
 	loadtrainer CAL, CAL2
 	startbattle
 	reloadmapafterbattle
-	iffalse .End
-.NoSpecialBattle:
+	sjump End
+
+Cal1:
+	gettrainername STRING_BUFFER_3, CAL, CAL1
+	writetext TrainerHouseB1FYourOpponentIsText
+	promptbutton
+	writetext TrainerHouseB1FAskWantToBattleText
+	yesorno
+	iffalse Declined
+	setflag ENGINE_FOUGHT_IN_TRAINER_HALL_TODAY
+	writetext TrainerHouseB1FGoRightInText
+	waitbutton
+	closetext
+	applymovement PLAYER, Movement_EnterTrainerHouseBattleRoom
+	opentext
+	writetext TrainerHouseB1FCalBeforeText
+	waitbutton
+	closetext
+	winlosstext TrainerHouseB1FCalBeatenText, 0
+	setlasttalked TRAINERHOUSEB1F_CHRIS
+	loadtrainer CAL, CAL1
+	startbattle
+	reloadmapafterbattle
+	sjump End
+
+Cal3:
+	gettrainername STRING_BUFFER_3, CAL, CAL3
+	writetext TrainerHouseB1FYourOpponentIsText
+	promptbutton
+	writetext TrainerHouseB1FAskWantToBattleText
+	yesorno
+	iffalse Declined
+	setflag ENGINE_FOUGHT_IN_TRAINER_HALL_TODAY
+	writetext TrainerHouseB1FGoRightInText
+	waitbutton
+	closetext
+	applymovement PLAYER, Movement_EnterTrainerHouseBattleRoom
+	opentext
+	writetext TrainerHouseB1FCalBeforeText
+	waitbutton
+	closetext
 	winlosstext TrainerHouseB1FCalBeatenText, 0
 	setlasttalked TRAINERHOUSEB1F_CHRIS
 	loadtrainer CAL, CAL3
 	startbattle
 	reloadmapafterbattle
-.End:
+	sjump End
+
+Cal4:
+	gettrainername STRING_BUFFER_3, CAL, CAL4
+	writetext TrainerHouseB1FYourOpponentIsText
+	promptbutton
+	writetext TrainerHouseB1FAskWantToBattleText
+	yesorno
+	iffalse Declined
+	setflag ENGINE_FOUGHT_IN_TRAINER_HALL_TODAY
+	writetext TrainerHouseB1FGoRightInText
+	waitbutton
+	closetext
+	applymovement PLAYER, Movement_EnterTrainerHouseBattleRoom
+	opentext
+	writetext TrainerHouseB1FCalBeforeText
+	waitbutton
+	closetext
+	winlosstext TrainerHouseB1FCalBeatenText, 0
+	setlasttalked TRAINERHOUSEB1F_CHRIS
+	loadtrainer CAL, CAL4
+	startbattle
+	reloadmapafterbattle
+
+End:
 	applymovement PLAYER, Movement_ExitTrainerHouseBattleRoom
 	end
 
-.Declined:
+Declined:
 	writetext TrainerHouseB1FPleaseComeAgainText
 	waitbutton
 	closetext
 	applymovement PLAYER, Movement_TrainerHouseTurnBack
 	end
 
-.FoughtTooManyTimes:
+FoughtTooManyTimes:
 	writetext TrainerHouseB1FSecondChallengeDeniedText
 	waitbutton
 	closetext
