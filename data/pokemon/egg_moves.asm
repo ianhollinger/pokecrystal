@@ -194,7 +194,7 @@ PsyduckEggMoves:
 	db FORESIGHT
 	db LIGHT_SCREEN
 	db FUTURE_SIGHT
-	db PSYCHIC_M
+;	db PSYCHIC_M
 	db CROSS_CHOP
 	db CONFUSE_RAY
 	db AMNESIA
@@ -349,7 +349,7 @@ GastlyEggMoves:
 	db -1 ; end
 
 OnixEggMoves:
-	db DEFENSE_CURL
+;	db DEFENSE_CURL
 	db FLAIL
 	db EXPLOSION
 	db -1 ; end
@@ -363,7 +363,7 @@ DrowzeeEggMoves:
 	db -1 ; end
 
 KrabbyEggMoves:
-	db DIG
+;	db DIG
 	db HAZE
 	db AMNESIA
 	db SLASH
@@ -504,7 +504,7 @@ LaprasEggMoves:
 EeveeEggMoves:
 	db FLAIL
 	db SING
-	db DETECT
+;	db DETECT
 	db DOUBLE_KICK
 	db -1 ; end
 
@@ -522,7 +522,7 @@ KabutoEggMoves:
 	db BUBBLEBEAM
 	db AURORA_BEAM
 	db RAPID_SPIN
-	db DIG
+;	db DIG
 	db FLAIL
 	db CONFUSE_RAY
 	db TAKE_DOWN
@@ -676,11 +676,11 @@ NatuEggMoves:
 	db DRILL_PECK
 	db QUICK_ATTACK
 	db FAINT_ATTACK
-	db STEEL_WING
+;	db STEEL_WING
 	db -1 ; end
 
 MareepEggMoves:
-	db THUNDERBOLT
+;	db THUNDERBOLT
 	db BODY_SLAM
 	db SAFEGUARD
 	db SCREECH
@@ -778,7 +778,7 @@ PinecoEggMoves:
 	db REFLECT
 	db PIN_MISSILE
 	db FLAIL
-	db SWIFT
+;	db SWIFT
 	db COUNTER
 	db -1 ; end
 
@@ -902,9 +902,9 @@ DelibirdEggMoves:
 	db FUTURE_SIGHT
 	db SPLASH
 	db RAPID_SPIN
-	db PAY_DAY
-	db DRILL_PECK
-	db SPIKES
+;	db PAY_DAY
+;	db DRILL_PECK
+;	db SPIKES
 	db -1 ; end
 
 MantineEggMoves:
