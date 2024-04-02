@@ -84,6 +84,7 @@ DEF KRIS EQU __trainer_class__
 	const CAL1 ; unused
 	const CAL2
 	const CAL3
+	const CAL4
 
 	trainerclass BRUNO ; d
 	const BRUNO1
