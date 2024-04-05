@@ -26,6 +26,7 @@ GetWhichTrainer:
 	ld a, 3
 	call RandomRange
 	add 1
+	ld [wScriptVar], a
 	ifequal 1, Cal1
 	ifequal 2, Cal3
 	sjump Cal4
