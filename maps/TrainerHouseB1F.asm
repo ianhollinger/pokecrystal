@@ -23,9 +23,9 @@ TrainerHouseReceptionistScript:
 	sjump Cal2
 
 GetWhichTrainer:
-	writetext TrainerHouseB1FCalBeforeText
 	call Random
 	and %10
+	writetext TrainerHouseB1FCalBeforeText
 	ifequal 1, Cal1
 	ifequal 2, Cal3
 	sjump Cal4
