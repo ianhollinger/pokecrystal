@@ -23,12 +23,14 @@ TrainerHouseReceptionistScript:
 	sjump Cal2
 
 GetWhichTrainer:
-	call Random
-	writetext TrainerHouseB1FCalBeforeText
-	and %10
-	ifequal 1, Cal1
-	ifequal 2, Cal3
-	sjump Cal4
+	readvar VAR_WEEKDAY
+	ifequal MONDAY, Cal1
+	ifequal TUESDAY, Cal3
+	ifequal WEDNESDAY, Cal4
+	ifequal THURSDAY, Cal1
+	ifequal FRIDAY, Cal3
+	ifequal SATURDAY, Cal4
+	sjump Cal3
 
 Cal2:
 	gettrainername STRING_BUFFER_3, CAL, CAL2
