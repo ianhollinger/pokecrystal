@@ -23,10 +23,8 @@ TrainerHouseReceptionistScript:
 	sjump Cal2
 
 GetWhichTrainer:
-	ld a, 3
-	call RandomRange
-	add 1
-	ld [wScriptVar], a
+	call Random
+	and %10
 	ifequal 1, Cal1
 	ifequal 2, Cal3
 	sjump Cal4
