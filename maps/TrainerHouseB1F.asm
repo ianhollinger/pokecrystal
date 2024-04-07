@@ -20,66 +20,45 @@ TrainerHouseReceptionistScript:
 	promptbutton
 	special TrainerHouse
 	iffalse GetWhichTrainer
-	sjump Cal2
+	sjump LoadCal2
 
 GetWhichTrainer:
 	readvar VAR_WEEKDAY
-	ifequal MONDAY, Cal1
-	ifequal TUESDAY, Cal3
-	ifequal WEDNESDAY, Cal4
-	ifequal THURSDAY, Cal1
-	ifequal FRIDAY, Cal3
-	ifequal SATURDAY, Cal4
-	sjump Cal3
+	ifequal MONDAY, LoadCal1
+	ifequal TUESDAY, LoadCal3
+	ifequal WEDNESDAY, LoadCal4
+	ifequal THURSDAY, LoadCal1
+	ifequal FRIDAY, LoadCal3
+	ifequal SATURDAY, LoadCal4
+	sjump LoadCal3
 
-Cal2:
-	gettrainername STRING_BUFFER_3, CAL, CAL2
-	writetext TrainerHouseB1FYourOpponentIsText
-	promptbutton
-	writetext TrainerHouseB1FAskWantToBattleText
-	yesorno
-	iffalse Declined
-	setflag ENGINE_FOUGHT_IN_TRAINER_HALL_TODAY
-	writetext TrainerHouseB1FGoRightInText
-	waitbutton
-	closetext
-	applymovement PLAYER, Movement_EnterTrainerHouseBattleRoom
-	opentext
-	writetext TrainerHouseB1FCalBeforeText
-	waitbutton
-	closetext
-	winlosstext TrainerHouseB1FCalBeatenText, 0
-	setlasttalked TRAINERHOUSEB1F_CHRIS
-	loadtrainer CAL, CAL2
-	startbattle
-	reloadmapafterbattle
-	sjump End
+GetWhichTrainerAgain:
+	special TrainerHouse
+	iftrue StartCal2
+	readvar VAR_WEEKDAY
+	ifequal MONDAY, StartCal1
+	ifequal TUESDAY, StartCal3
+	ifequal WEDNESDAY, StartCal4
+	ifequal THURSDAY, StartCal1
+	ifequal FRIDAY, StartCal3
+	ifequal SATURDAY, StartCal4
+	sjump StartCal3
 
-Cal1:
+LoadCal1:
 	gettrainername STRING_BUFFER_3, CAL, CAL1
-	writetext TrainerHouseB1FYourOpponentIsText
-	promptbutton
-	writetext TrainerHouseB1FAskWantToBattleText
-	yesorno
-	iffalse Declined
-	setflag ENGINE_FOUGHT_IN_TRAINER_HALL_TODAY
-	writetext TrainerHouseB1FGoRightInText
-	waitbutton
-	closetext
-	applymovement PLAYER, Movement_EnterTrainerHouseBattleRoom
-	opentext
-	writetext TrainerHouseB1FCalBeforeText
-	waitbutton
-	closetext
-	winlosstext TrainerHouseB1FCalBeatenText, 0
-	setlasttalked TRAINERHOUSEB1F_CHRIS
-	loadtrainer CAL, CAL1
-	startbattle
-	reloadmapafterbattle
-	sjump End
+	sjump SetupFight
 
-Cal3:
+LoadCal2:
+	gettrainername STRING_BUFFER_3, CAL, CAL2
+	sjump SetupFight
+
+LoadCal3:
 	gettrainername STRING_BUFFER_3, CAL, CAL3
+	sjump SetupFight
+
+LoadCal4:
+	gettrainername STRING_BUFFER_3, CAL, CAL4
+SetupFight:
 	writetext TrainerHouseB1FYourOpponentIsText
 	promptbutton
 	writetext TrainerHouseB1FAskWantToBattleText
@@ -96,33 +75,27 @@ Cal3:
 	closetext
 	winlosstext TrainerHouseB1FCalBeatenText, 0
 	setlasttalked TRAINERHOUSEB1F_CHRIS
+	sjump GetWhichTrainerAgain
+
+StartCal1: 
+	loadtrainer CAL, CAL1
+	sjump StartFight
+
+StartCal2:
+	loadtrainer CAL, CAL2
+	sjump StartFight
+
+StartCal3:
 	loadtrainer CAL, CAL3
+	sjump StartFight
+
+StartCal4:
+	loadtrainer CAL, CAL4
+StartFight:
 	startbattle
 	reloadmapafterbattle
 	sjump End
-
-Cal4:
-	gettrainername STRING_BUFFER_3, CAL, CAL4
-	writetext TrainerHouseB1FYourOpponentIsText
-	promptbutton
-	writetext TrainerHouseB1FAskWantToBattleText
-	yesorno
-	iffalse Declined
-	setflag ENGINE_FOUGHT_IN_TRAINER_HALL_TODAY
-	writetext TrainerHouseB1FGoRightInText
-	waitbutton
-	closetext
-	applymovement PLAYER, Movement_EnterTrainerHouseBattleRoom
-	opentext
-	writetext TrainerHouseB1FCalBeforeText
-	waitbutton
-	closetext
-	winlosstext TrainerHouseB1FCalBeatenText, 0
-	setlasttalked TRAINERHOUSEB1F_CHRIS
-	loadtrainer CAL, CAL4
-	startbattle
-	reloadmapafterbattle
-
+	
 End:
 	applymovement PLAYER, Movement_ExitTrainerHouseBattleRoom
 	end
