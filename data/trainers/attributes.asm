@@ -4,49 +4,49 @@ TrainerClassAttributes:
 
 ; Falkner
 	db NO_ITEM, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Whitney
 	db NO_ITEM, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Bugsy
 	db NO_ITEM, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Morty
 	db X_SPEED, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Pryce
 	db GUARD_SPEC, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Jasmine
 	db X_DEFEND, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Chuck
 	db X_ATTACK, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Clair
 	db X_SP_DEF, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
@@ -64,7 +64,7 @@ TrainerClassAttributes:
 
 ; Will
 	db X_SPECIAL, NO_ITEM ; items
-	db 25 ; base reward
+	db 40 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
@@ -76,103 +76,103 @@ TrainerClassAttributes:
 
 ; Bruno
 	db X_ATTACK, NO_ITEM ; items
-	db 25 ; base reward
+	db 40 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Karen
 	db X_SP_DEF, NO_ITEM ; items
-	db 25 ; base reward
+	db 40 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Koga
 	db X_SPEED, NO_ITEM ; items
-	db 25 ; base reward
+	db 40 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Champion
 	db DIRE_HIT, NO_ITEM ; items
-	db 25 ; base reward
+	db 50 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Brock
 	db X_DEFEND, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Misty
 	db X_ACCURACY, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Lt Surge
 	db X_SPEED, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Scientist
 	db NO_ITEM, NO_ITEM ; items
-	db 25 ; base reward
+	db 15 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Erika
 	db X_SPECIAL, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Youngster
 	db NO_ITEM, NO_ITEM ; items
-	db 4 ; base reward
+	db 5 ; base reward
 	dw AI_BASIC | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Schoolboy
 	db NO_ITEM, NO_ITEM ; items
-	db 8 ; base reward
+	db 5 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Bird Keeper
 	db NO_ITEM, NO_ITEM ; items
-	db 6 ; base reward
+	db 10 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_OFFENSIVE | AI_OPPORTUNIST | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Lass
 	db NO_ITEM, NO_ITEM ; items
-	db 6 ; base reward
+	db 5 ; base reward
 	dw AI_BASIC | AI_CAUTIOUS | AI_STATUS
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Janine
 	db DIRE_HIT, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Cooltrainerm
 	db NO_ITEM, NO_ITEM ; items
-	db 12 ; base reward
+	db 25 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Cooltrainerf
 	db NO_ITEM, NO_ITEM ; items
-	db 12 ; base reward
+	db 25 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Beauty
 	db NO_ITEM, NO_ITEM ; items
-	db 22 ; base reward
+	db 20 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
@@ -190,31 +190,31 @@ TrainerClassAttributes:
 
 ; Gentleman
 	db NO_ITEM, NO_ITEM ; items
-	db 18 ; base reward
+	db 50 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_AGGRESSIVE | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Skier
 	db NO_ITEM, NO_ITEM ; items
-	db 18 ; base reward
+	db 15 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Teacher
 	db NO_ITEM, NO_ITEM ; items
-	db 18 ; base reward
+	db 10 ; base reward
 	dw AI_BASIC | AI_OPPORTUNIST | AI_AGGRESSIVE | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Sabrina
 	db X_SPECIAL, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Bug Catcher
 	db NO_ITEM, NO_ITEM ; items
-	db 4 ; base reward
+	db 5 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
@@ -226,7 +226,7 @@ TrainerClassAttributes:
 
 ; Swimmerm
 	db NO_ITEM, NO_ITEM ; items
-	db 2 ; base reward
+	db 5 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_OFFENSIVE | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
@@ -244,7 +244,7 @@ TrainerClassAttributes:
 
 ; Super Nerd
 	db NO_ITEM, NO_ITEM ; items
-	db 8 ; base reward
+	db 10 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_SMART | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
@@ -256,37 +256,37 @@ TrainerClassAttributes:
 
 ; Guitarist
 	db NO_ITEM, NO_ITEM ; items
-	db 8 ; base reward
+	db 10 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_CAUTIOUS | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Hiker
 	db NO_ITEM, NO_ITEM ; items
-	db 8 ; base reward
+	db 10 ; base reward
 	dw AI_BASIC | AI_OFFENSIVE | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Biker
 	db NO_ITEM, NO_ITEM ; items
-	db 8 ; base reward
+	db 5 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Blaine
 	db GUARD_SPEC, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
-	dw CONTEXT_USE | SWITCH_OFTEN
+	dw CONTEXT_USE | SWITCH_OFTENf
 
 ; Burglar
 	db NO_ITEM, NO_ITEM ; items
-	db 22 ; base reward
+	db 20 ; base reward
 	dw AI_BASIC | AI_OFFENSIVE | AI_CAUTIOUS | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Firebreather
 	db NO_ITEM, NO_ITEM ; items
-	db 12 ; base reward
+	db 10 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_OFFENSIVE | AI_OPPORTUNIST | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
@@ -298,19 +298,19 @@ TrainerClassAttributes:
 
 ; Blackbelt T
 	db NO_ITEM, NO_ITEM ; items
-	db 6 ; base reward
+	db 5 ; base reward
 	dw AI_BASIC | AI_OFFENSIVE | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Executivem
 	db X_DEFEND, NO_ITEM ; items
-	db 18 ; base reward
+	db 20 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_SMART | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Psychic T
 	db NO_ITEM, NO_ITEM ; items
-	db 8 ; base reward
+	db 10 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
@@ -328,13 +328,13 @@ TrainerClassAttributes:
 
 ; Executivef
 	db X_SP_DEF, NO_ITEM ; items
-	db 18 ; base reward
+	db 20 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_SMART | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Sage
 	db NO_ITEM, NO_ITEM ; items
-	db 8 ; base reward
+	db 10 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
@@ -346,7 +346,7 @@ TrainerClassAttributes:
 
 ; Boarder
 	db NO_ITEM, NO_ITEM ; items
-	db 18 ; base reward
+	db 15; base reward
 	dw AI_BASIC | AI_TYPES | AI_OPPORTUNIST | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
@@ -358,7 +358,7 @@ TrainerClassAttributes:
 
 ; Kimono Girl
 	db NO_ITEM, NO_ITEM ; items
-	db 18 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
@@ -376,13 +376,13 @@ TrainerClassAttributes:
 
 ; Red
 	db X_ACCURACY, NO_ITEM ; items
-	db 25 ; base reward
+	db 50 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Blue
 	db DIRE_HIT, NO_ITEM ; items
-	db 25 ; base reward
+	db 40 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
@@ -400,7 +400,7 @@ TrainerClassAttributes:
 
 ; Mysticalman
 	db GUARD_SPEC, NO_ITEM ; items
-	db 25 ; base reward
+	db 30 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
