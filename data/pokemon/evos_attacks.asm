@@ -917,7 +917,7 @@ PoliwagEvosAttacks:
 
 PoliwhirlEvosAttacks:
 	db EVOLVE_ITEM, WATER_STONE, POLIWRATH
-	db EVOLVE_ITEM, KINGS_ROCK, POLITOED
+	db EVOLVE_TRADE, KINGS_ROCK, POLITOED
 	db EVOLVE_HELD, KINGS_ROCK, POLITOED
 	db 0 ; no more evolutions
 ;	db 1, WATER_GUN
