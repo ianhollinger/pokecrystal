@@ -135,15 +135,15 @@ LoseWhiteOutMoney:
 	ret
 
 .PayoutBadgeFactors:
-	db  8 ; 0
-	db  16 ; 1
-	db  24 ; 2
-	db  36 ; 3
-	db  48 ; 4
+	db  10 ; 0
+	db  20 ; 1
+	db  30 ; 2
+	db  40 ; 3
+	db  50 ; 4
 	db  60 ; 5
-	db  76 ; 6
-	db  92 ; 7
-	db  108 ; 8+
+	db  80 ; 6
+	db  100 ; 7
+	db  120 ; 8+
 
 CheckWildBattlePanic:
 	ld hl, wWildBattlePanic
