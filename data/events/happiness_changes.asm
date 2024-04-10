@@ -16,8 +16,8 @@ HappinessChanges:
 	db  +1,  +1,  +1 ; Haircut (younger brother) 1
 	db  +3,  +3,  +3 ; Haircut (younger brother) 2
 	db +10, +10, +10 ; Haircut (younger brother) 3
-	db  -4,  -8, -12 ; Used Heal Powder or Energypowder (bitter)
-	db  -8, -12, -16 ; Used Energy Root (bitter)
+	db  -6,  -8, -10 ; Used Heal Powder or Energypowder (bitter)
+	db  -9, -12, -15 ; Used Energy Root (bitter)
 	db -12, -16, -20 ; Used Revival Herb (bitter)
 	db +10, +10, +10 ; Grooming
 	db +10,  +8,  +6 ; Gained a level in the place where it was caught
