@@ -45,7 +45,7 @@ Route6PokefanMScript:
 	pause 15
 	cry DITTO
 	closetext
-	loadwildmon DITTO, 45
+	loadwildmon DITTO, 80
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
 	startbattle
 	reloadmapafterbattle
