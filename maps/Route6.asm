@@ -34,24 +34,35 @@ Route6PokefanMScript:
 	faceplayer
 	opentext
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iftrue .imposter
+	iftrue .Imposter
 	writetext Route6PokefanMText
 	waitbutton
 	closetext
 	end
 
-.imposter:
+.Imposter:
 	writetext Route6PokefanMImposterText
 	pause 15
 	cry DITTO
 	closetext
-	loadwildmon DITTO, 80
+	checkevent EVENT_BEAT_RED
+	iftrue .BeatRed
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Silver
+	loadwildmon DITTO, 40
+.Begin:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
 	startbattle
 	reloadmapafterbattle
-	disappear ROUTE6_POKEFAN_M1
+	disappear ROUTE5_POKEFAN_M
 	setevent EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
 	end
+.BeatRed:
+	loadwildmon DITTO, 80
+	sjump .Begin
+.Silver:
+	loadwildmon DITTO, 60
+	sjump .Begin
 
 Route6PokefanMImposterText:
 	text "…"
