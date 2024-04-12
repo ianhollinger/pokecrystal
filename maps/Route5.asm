@@ -21,6 +21,8 @@ Route5PokefanMScript:
 	pause 15
 	cry DITTO
 	closetext
+	checkevent EVENT_GOT_MEW
+	iftrue .GotMew
 	checkevent EVENT_BEAT_RED
 	iftrue .BeatRed
 	checkevent EVENT_OPENED_MT_SILVER
@@ -33,6 +35,9 @@ Route5PokefanMScript:
 	disappear ROUTE5_POKEFAN_M
 	setevent EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
 	end
+.GotMew: 
+	loadwildmon DITTO, 100
+	sjump .Begin
 .BeatRed:
 	loadwildmon DITTO, 80
 	sjump .Begin
