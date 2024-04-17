@@ -30,14 +30,14 @@ UnionCaveLapras:
 	cry LAPRAS
 	loadwildmon LAPRAS, 20
 	startbattle
-	ifequal LOSE, .DidntCatchLapras
+;	ifequal LOSE, .DidntCatchLapras
 	disappear UNIONCAVEB2F_LAPRAS
 	setflag ENGINE_UNION_CAVE_LAPRAS
-        setval LAPRAS
-        special MonCheck
-        iffalse .DidntCatchLapras
-	setevent EVENT_CAUGHT_LAPRAS
-.DidntCatchLapras
+;	setval LAPRAS
+;	special MonCheck
+;	iffalse .DidntCatchLapras
+;	setevent EVENT_CAUGHT_LAPRAS
+; .DidntCatchLapras:
 	reloadmapafterbattle
 	end
 
