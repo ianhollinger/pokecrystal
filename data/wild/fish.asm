@@ -323,16 +323,11 @@ FishGroups:
 	db  96 percent + 1, REMORAID,   20
 	db 100 percent,     REMORAID,   21
 .Remoraid_Swarm_Super:
-	db  30 percent + 1, REMORAID,   40
-	db  54 percent + 1, REMORAID,   41
-	db  72 percent + 1, REMORAID,   42
-	db  84 percent,     REMORAID,   43
-	db  90 percent + 1, REMORAID,   44
-	db  93 percent + 1, OCTILLERY,  40
-	db  96 percent + 1, OCTILLERY,  41
-	db  98 percent + 1, OCTILLERY,  42
-	db  99 percent + 1, OCTILLERY,  43
-	db 100 percent,     OCTILLERY,  44
+	db  33 percent + 1, REMORAID,   40
+	db  60 percent,     REMORAID,   41
+	db  80 percent,     REMORAID,   42
+	db  93 percent +1,  REMORAID,   43
+	db 100 percent,     REMORAID,   44
 
 .Gyarados_Old:
 	db  33 percent + 1, MAGIKARP,   4
