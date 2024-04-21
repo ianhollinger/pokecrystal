@@ -119,6 +119,7 @@ TinTower1FSuicuneBattleScript:
 	loadwildmon SUICUNE, 40
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SUICUNE
 	startbattle
+;	ifequal LOSE, .DidntCatchSuicune
 	dontrestartmapmusic
 	disappear TINTOWER1F_SUICUNE
 	setevent EVENT_FOUGHT_SUICUNE
@@ -130,6 +131,11 @@ TinTower1FSuicuneBattleScript:
 	setmapscene CIANWOOD_CITY, SCENE_CIANWOODCITY_NOOP
 	setscene SCENE_TINTOWER1F_NOOP
 	clearevent EVENT_SET_WHEN_FOUGHT_HO_OH
+        setval SUICUNE
+        special MonCheck
+        iffalse .DidntCatchSuicune
+	setevent EVENT_CAUGHT_SUICUNE
+.DidntCatchSuicune:
 	reloadmapafterbattle
 	pause 20
 	turnobject PLAYER, DOWN
