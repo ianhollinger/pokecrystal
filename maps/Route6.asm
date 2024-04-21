@@ -56,7 +56,7 @@ Route6PokefanMScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
 	startbattle
 	reloadmapafterbattle
-	disappear ROUTE6_POKEFAN_M
+	disappear ROUTE6_POKEFAN_M1
 	setevent EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
 	end
 
