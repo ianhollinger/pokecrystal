@@ -62,7 +62,7 @@ HallOfFameEnterScript:
 ;	iftrue .SkipLapras
 ;	checkflag ENGINE_UNION_CAVE_LAPRAS
 ;	iftrue .DidntCatchLapras
-;.SkipLapras:
+.SkipLapras:
 	checkevent EVENT_CAUGHT_MEWTWO
 	iftrue .SkipMewtwo
 	checkevent EVENT_FOUGHT_MEWTWO
