@@ -117,8 +117,15 @@ HallOfFameEnterScript:
 	iftrue .SkipSuicune
 	checkevent EVENT_FOUGHT_SUICUNE
 	iftrue .DidntCatchSuicune
-
-.SkipSuicune:
+.SkipSuicune: ; If both Entei and Raikou have not been caught, re-release both
+	setval ENTEI
+	special MonCheck
+        iftrue .SkipBeasts
+	setval RAIKOU
+	special MonCheck
+        iftrue .SkipBeasts
+	special InitRoamMons
+.SkipBeasts:
 	halloffame
 	end
 
