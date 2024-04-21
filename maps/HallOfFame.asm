@@ -113,8 +113,18 @@ HallOfFameEnterScript:
 	checkevent EVENT_FOUGHT_CELEBI
 	iftrue .DidntCatchCelebi
 .SkipCelebi:
+	checkevent EVENT_CAUGHT_SUICUNE
+	iftrue .SkipSuicune
+	checkevent EVENT_FOUGHT_SUICUNE
+	iftrue .DidntCatchSuicune
+
+.SkipSuicune:
 	halloffame
 	end
+
+.DidntCatchSuicune:
+	clearevent EVENT_FOUGHT_SUICUNE
+	sjump .SkipSuicune
 
 .DidntCatchCelebi:
 	clearevent EVENT_FOUGHT_CELEBI
