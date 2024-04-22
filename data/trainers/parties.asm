@@ -5011,7 +5011,7 @@ HikerGroup:
 	db -1 ; end
 
 	; HIKER (13)
-	db "TIM@", TRAINERTYPE_STAT_EXP
+	db "EOIN@", TRAINERTYPE_STAT_EXP
 	db 46, GRAVELER
 		dw $4AF9, $4AF9, $4AF9, $4AF9, $4AF9
 	db 46, URSARING
@@ -5029,7 +5029,7 @@ HikerGroup:
 	db -1 ; end
 
 	; HIKER (15)
-	db "SIDNEY@", TRAINERTYPE_STAT_EXP
+	db "CLARKE@", TRAINERTYPE_STAT_EXP
 	db 49, DUGTRIO
 		dw $5512, $5512, $5512, $5512, $5512
 	db 47, ONIX
