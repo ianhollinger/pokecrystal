@@ -10,15 +10,15 @@ HappinessChanges:
 	db  -1,  -1,  -1 ; Lost to an enemy
 	db  -5,  -5,  -5 ; Fainted due to poison
 	db  -5,  -5,  -5 ; Lost to a much stronger enemy
-	db  +1,  +1,  +1 ; Haircut (older brother) 1
-	db  +3,  +3,  +3 ; Haircut (older brother) 2
-	db  +5,  +5,  +5 ; Haircut (older brother) 3
-	db  +1,  +1,  +1 ; Haircut (younger brother) 1
-	db  +3,  +3,  +3 ; Haircut (younger brother) 2
-	db +10, +10, +10 ; Haircut (younger brother) 3
+	db  +3,  +2,  +1 ; Haircut (older brother) 1
+	db  +5,  +4,  +3 ; Haircut (older brother) 2
+	db +10,  +8,  +6 ; Haircut (older brother) 3
+	db  +3,  +2,  +1 ; Haircut (younger brother) 1
+	db  +5,  +4,  +3 ; Haircut (younger brother) 2
+	db +10,  +8,  +6 ; Haircut (younger brother) 3
 	db  -6,  -8, -10 ; Used Heal Powder or Energypowder (bitter)
 	db  -9, -12, -15 ; Used Energy Root (bitter)
 	db -12, -16, -20 ; Used Revival Herb (bitter)
-	db +10, +10, +10 ; Grooming
+	db +10,  +8,  +6 ; Grooming
 	db +10,  +8,  +6 ; Gained a level in the place where it was caught
 	assert_table_length NUM_HAPPINESS_CHANGES
