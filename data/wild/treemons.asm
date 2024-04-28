@@ -10,7 +10,9 @@ TreeMons:
 	dw TreeMonSet_Kanto ; Route 26
 	dw TreeMonSet_Lake ; Lake of Rage, Route 43
 	dw TreeMonSet_Forest ; Ilex Forest
-	dw TreeMonSet_Rock ; Rock Smash
+	dw TreeMonSet_Rock_Beach ; Rock Smash (Route 40, Cianwood City)
+	dw TreeMonSet_Rock_Cave ; Rock Smash (Dark Cave, Slowpoke Well)
+	dw TreeMonSet_Rock_Tower ; Rock Smash (Burned Tower)
 	assert_table_length NUM_TREEMON_SETS
 
 ; Two tables each (common, rare).
@@ -267,20 +269,41 @@ TreeMonSet_Forest:
 	db  2, HERACROSS,  10
 	db -1
 
-TreeMonSet_Rock:
-	db 17, GEODUDE,    16
-	db 13, GEODUDE,    17
-	db 10, GEODUDE,    18
-	db  7, GEODUDE,    19
-	db  3, GEODUDE,    20
-	db 10, KRABBY,     16
-	db  8, KRABBY,     17
-	db  6, KRABBY,     18
-	db  4, KRABBY,     19
-	db  2, KRABBY,     20
-	db  7, SHUCKLE,    16
-	db  5, SHUCKLE,    17
-	db  4, SHUCKLE,    18
-	db  3, SHUCKLE,    19
-	db  1, SHUCKLE,    20
+TreeMonSet_Rock_Beach:
+	db 22, KRABBY,     16
+	db 18, KRABBY,     17
+	db 13, KRABBY,     18
+	db  9, KRABBY,     19
+	db  5, KRABBY,     20
+	db 11, SHUCKLE,    16
+	db  9, SHUCKLE,    17
+	db  7, SHUCKLE,    18
+	db  4, SHUCKLE,    19
+	db  2, SHUCKLE,    20
+	db -1
+
+TreeMonSet_Rock_Cave:
+	db 22, GEODUDE,    16
+	db 18, GEODUDE,    17
+	db 13, GEODUDE,    18
+	db  9, GEODUDE,    19
+	db  5, GEODUDE,    20
+	db 11, DUNSPARCE,  16
+	db  9, DUNSPARCE,  17
+	db  7, DUNSPARCE,  18
+	db  4, DUNSPARCE,  19
+	db  2, DUNSPARCE,  20
+	db -1
+
+TreeMonSet_Rock_Tower:
+	db 22, GEODUDE,    16
+	db 18, GEODUDE,    17
+	db 13, GEODUDE,    18
+	db  9, GEODUDE,    19
+	db  5, GEODUDE,    20
+	db 11, SLUGMA,     16
+	db  9, SLUGMA,     17
+	db  7, SLUGMA,     18
+	db  4, SLUGMA,     19
+	db  2, SLUGMA,     20
 	db -1
