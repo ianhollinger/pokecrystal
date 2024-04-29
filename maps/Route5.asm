@@ -27,7 +27,7 @@ Route5PokefanMScript:
 ;	iftrue .BeatRed
 ;	checkevent EVENT_OPENED_MT_SILVER
 ;	iftrue .Silver
-	loadwildmon DITTO, 80
+	loadwildmon DITTO, 67
 ;.Begin:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
 	startbattle
