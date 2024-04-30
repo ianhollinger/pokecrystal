@@ -3640,9 +3640,9 @@ PhanpyEvosAttacks:
 	db 5, DEFENSE_CURL
 	db 10, FLAIL
 	db 14, ROLLOUT
-	db 19, MAGNITUDE 
-	db 23, ENDURE
-	db 28, SLAM 
+	db 19, ENDURE  
+	db 23, SLAM
+	db 28, ABSORB
 	db 32, TAKE_DOWN
 	db 37, CHARM
 	db 41, DOUBLE_EDGE
@@ -3651,20 +3651,18 @@ PhanpyEvosAttacks:
 DonphanEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HORN_ATTACK
-;	db 1, TACKLE
 ;	db 1, GROWL
 ;	db 5, DEFENSE_CURL
 	db 10, FLAIL
 	db 14, ROLLOUT
-	db 19, MAGNITUDE 
-	db 23, ENDURE
+	db 19, ENDURE
+	db 23, SLAM
 	db 24, FURY_ATTACK
-	db 28, SLAM 
-	db 32, TAKE_DOWN
-	db 37, RAPID_SPIN
-	db 41, SCARY_FACE
-	db 46, EARTHQUAKE
-	db 50, DOUBLE_EDGE
+	db 28, MAGNITUDE
+	db 32, RAPID_SPIN
+	db 37, SCARY_FACE
+	db 41, EARTHQUAKE
+	db 46, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 Porygon2EvosAttacks:
