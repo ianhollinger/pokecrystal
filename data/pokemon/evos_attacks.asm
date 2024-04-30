@@ -1768,7 +1768,7 @@ RhyhornEvosAttacks:
 	db 11, SAND_ATTACK
 	db 16, ROCK_THROW
 	db 21, STOMP
-	db 26, MAGNITUDE
+	db 26, ROCK_SMASH
 	db 31, SCARY_FACE
 	db 36, TAKE_DOWN
 	db 41, ROCK_SLIDE
@@ -1786,7 +1786,7 @@ RhydonEvosAttacks:
 ;	db 17, ROCK_THROW
 ;	db 23, STOMP
 	db 1, STOMP
-	db 26, MAGNITUDE
+	db 26, ROCK_SMASH
 	db 31, SCARY_FACE
 	db 36, TAKE_DOWN
 	db 41, ROCK_SLIDE
