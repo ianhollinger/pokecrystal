@@ -500,61 +500,6 @@ LookUpWildmonsForMapDE:
 	scf
 	ret
 
-InitRoamMons:
-; initialize wRoamMon structs
-
-; Raikou:
-; check if caught
-	setval RAIKOU
-	special MonCheck
-	iftrue .SkipRaikou
-
-; species
-	ld a, RAIKOU
-	ld [wRoamMon1Species], a
-
-; level
-	ld a, 40
-	ld [wRoamMon1Level], a
-
-; raikou starting map
-	ld a, GROUP_ROUTE_42
-	ld [wRoamMon1MapGroup], a
-	ld a, MAP_ROUTE_42
-	ld [wRoamMon1MapNumber], a
-
-; hp
-	xor a ; generate new stats
-	ld [wRoamMon1HP], a
-
-.SkipRaikou:
-; check if caught
-	setval ENTEI
-	special MonCheck
-	iftrue .SkipEntei
-
-; species
-	ld a, ENTEI
-	ld [wRoamMon2Species], a
-
-; level
-	ld a, 40
-	ld [wRoamMon2Level], a
-
-; entei starting map
-	ld a, GROUP_ROUTE_37
-	ld [wRoamMon2MapGroup], a
-	ld a, MAP_ROUTE_37
-	ld [wRoamMon2MapNumber], a
-
-; hp
-	xor a ; generate new stats
-	ld [wRoamMon1HP], a
-	ld [wRoamMon2HP], a
-
-.SkipEntei:
-	ret
-
 CheckEncounterRoamMon:
 	push hl
 ; Don't trigger an encounter if we're on water.
