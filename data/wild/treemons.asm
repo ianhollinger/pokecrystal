@@ -283,16 +283,16 @@ TreeMonSet_Rock_Beach:
 	db -1
 
 TreeMonSet_Rock_Cave:
-	db 22, GEODUDE,    16
-	db 18, GEODUDE,    17
-	db 13, GEODUDE,    18
-	db  9, GEODUDE,    19
-	db  5, GEODUDE,    20
-	db 11, DUNSPARCE,  16
-	db  9, DUNSPARCE,  17
-	db  7, DUNSPARCE,  18
-	db  4, DUNSPARCE,  19
-	db  2, DUNSPARCE,  20
+	db 22, GEODUDE,    6
+	db 18, GEODUDE,    7
+	db 13, GEODUDE,    8
+	db  9, GEODUDE,    9
+	db  5, GEODUDE,    10
+	db 11, DUNSPARCE,  6
+	db  9, DUNSPARCE,  7
+	db  7, DUNSPARCE,  8
+	db  4, DUNSPARCE,  9
+	db  2, DUNSPARCE,  10
 	db -1
 
 TreeMonSet_Rock_Tower:
