@@ -1090,8 +1090,8 @@ JohtoGrassWildMons:
 	db 52, ONIX
 	db 52, GOLBAT
 	db 55, GOLDUCK
-	db 25, LARVITAR
-	db 56, GOLBAT
+	db 54, GOLBAT
+	db 56, GRAVELER
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_ROOM_2
@@ -1118,7 +1118,7 @@ JohtoGrassWildMons:
 	db 56, GOLBAT
 	db 56, PARASECT
 	db 58, MISDREAVUS
-	db 45, PUPITAR
+	db 57, MISDREAVUS
 	db 58, MACHAMP
 	end_grass_wildmons
 
@@ -1147,7 +1147,7 @@ JohtoGrassWildMons:
 	db 61, CROBAT
 	db 55, GOLDUCK
 	db 63, CROBAT
-	db 65, TYRANITAR
+	db 59, STEELIX
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_ITEM_ROOMS
