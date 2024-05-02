@@ -763,24 +763,24 @@ KantoGrassWildMons:
 	; morn
 	db 38, DODUO
 	db 38, ARBOK
-	db 38, SANDSLASH
-	db 40, RATICATE
-	db 42, PONYTA
+	db 40, SANDSLASH
+	db 38, RATICATE
+	db 40, PONYTA
 	db 40, DODRIO
-	db 40, AMPHAROS
+	db 42, AMPHAROS
 	; day
 	db 38, DODUO
 	db 38, ARBOK
-	db 38, SANDSLASH
-	db 40, RATICATE
-	db 42, PONYTA
+	db 40, SANDSLASH
+	db 38, RATICATE
+	db 40, PONYTA
 	db 40, DODRIO
-	db 40, AMPHAROS
+	db 42, AMPHAROS
 	; nite
 	db 38, NOCTOWL
 	db 38, RATICATE
 	db 40, RATICATE
-	db 40, QUAGSIRE
+	db 38, QUAGSIRE
 	db 40, QUAGSIRE
 	db 40, QUAGSIRE
 	db 42, NOCTOWL
@@ -791,16 +791,16 @@ KantoGrassWildMons:
 	; morn
 	db 38, DODUO
 	db 38, SANDSLASH
-	db 38, ARBOK
-	db 40, RATICATE
+	db 40, ARBOK
+	db 38, RATICATE
 	db 40, PONYTA
 	db 40, RAPIDASH
 	db 42, CHANSEY
 	; day
 	db 38, DODUO
 	db 38, SANDSLASH
-	db 38, ARBOK
-	db 40, RATICATE
+	db 40, ARBOK
+	db 38, RATICATE
 	db 40, PONYTA
 	db 40, RAPIDASH
 	db 42, CHANSEY
@@ -808,7 +808,7 @@ KantoGrassWildMons:
 	db 38, NOCTOWL
 	db 38, RATICATE
 	db 40, RATICATE
-	db 40, QUAGSIRE
+	db 38, QUAGSIRE
 	db 40, QUAGSIRE
 	db 40, QUAGSIRE
 	db 42, NOCTOWL
