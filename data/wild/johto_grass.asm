@@ -650,7 +650,7 @@ JohtoGrassWildMons:
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 39, GRAVELER
-	db 40, MACHOKE
+	db 38, MACHOKE
 	db 39, GEODUDE
 	db 38, RATICATE
 	db 36, MACHOP
@@ -1209,29 +1209,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons DARK_CAVE_BLACKTHORN_ENTRANCE
 	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
 	; morn
-	db 27, GEODUDE
-	db 27, ZUBAT
-	db 29, GRAVELER
-	db 24, TEDDIURSA
-	db 27, GOLBAT
+	db 23, GEODUDE
+	db 23, ZUBAT
+	db 25, GRAVELER
+	db 20, TEDDIURSA
+	db 23, GOLBAT
 	db 30, URSARING
-	db 27, DUNSPARCE
+	db 23, DUNSPARCE
 	; day
-	db 27, GEODUDE
-	db 27, ZUBAT
-	db 29, GRAVELER
-	db 27, GOLBAT
+	db 23, GEODUDE
+	db 23, ZUBAT
+	db 25, GRAVELER
+	db 23, GOLBAT
+	db 23, GOLBAT
 	db 30, URSARING
-	db 30, URSARING
-	db 27, DUNSPARCE
+	db 23, DUNSPARCE
 	; nite
-	db 27, GEODUDE
-	db 27, ZUBAT
-	db 29, GRAVELER
-	db 27, GOLBAT
-	db 24, WOBBUFFET
-	db 29, WOBBUFFET
-	db 27, DUNSPARCE
+	db 23, GEODUDE
+	db 23, ZUBAT
+	db 25, GRAVELER
+	db 23, GOLBAT
+	db 23, GOLBAT
+	db 30, WOBBUFFET
+	db 23, WOBBUFFET
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_29
@@ -1321,7 +1321,7 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_32
 	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
 	; morn
-	db 3, EKANS
+	db 4, EKANS
 	db 4, RATTATA
 	db 6, BELLSPROUT
 	db 5, HOPPIP
@@ -1329,7 +1329,7 @@ JohtoGrassWildMons:
 	db 6, MAREEP
 	db 6, MAREEP
 	; day
-	db 3, EKANS
+	db 4, EKANS
 	db 4, RATTATA
 	db 6, BELLSPROUT
 	db 5, HOPPIP
@@ -1337,7 +1337,7 @@ JohtoGrassWildMons:
 	db 6, MAREEP
 	db 6, MAREEP
 	; nite
-	db 3, WOOPER
+	db 4, WOOPER
 	db 4, RATTATA
 	db 6, HOOTHOOT 
 	db 5, ZUBAT
