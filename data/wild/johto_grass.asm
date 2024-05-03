@@ -346,24 +346,24 @@ JohtoGrassWildMons:
 	db 14, NIDORAN_M
 	db 15, PIDGEY
 	db 12, CATERPIE
-	db 12, WEEDLE
+	db 13, WEEDLE
 	db 12, WEEDLE
 	; day
 	db 14, NIDORAN_F
 	db 14, NIDORAN_M
 	db 14, NIDORAN_M
-	db 16, SUNKERN
 	db 15, PIDGEY
-	db 12, PIKACHU
+	db 12, SUNKERN
+	db 13, PIKACHU
 	db 12, PIKACHU
 	; nite
 	db 14, PSYDUCK
-	db 15, SPINARAK
-	db 16, LEDYBA
-	db 17, HOOTHOOT
+	db 14, SPINARAK
+	db 14, LEDYBA
+	db 15, HOOTHOOT
 	db 12, VENONAT
-	db 14, VENONAT
-	db 14, VENONAT
+	db 13, VENONAT
+	db 12, VENONAT
 	end_grass_wildmons
 
 	def_grass_wildmons RUINS_OF_ALPH_OUTSIDE
@@ -389,7 +389,7 @@ JohtoGrassWildMons:
 	db 25, NATU
 	db 21, NATU
 	db 27, NATU
-	db 25, WOOPER
+	db 23, WOOPER
 	db 25, QUAGSIRE
 	db 25, QUAGSIRE
 	end_grass_wildmons
