@@ -1,7 +1,7 @@
 FleeMons:
 ; referenced by TryEnemyFlee and FastBallMultiplier
 
-SometimesFleeMons:
+SometimesFleeMons: ; 10% chance of fleeing, get fast ball boost 
 	db TYPHLOSION
 	db VOLTORB
 	db TENTACRUEL
@@ -30,7 +30,7 @@ SometimesFleeMons:
 	db MILTANK
 	db -1
 
-OftenFleeMons: ; never flee mons
+OftenFleeMons: ; never flee but still get fast ball boost 
 	db MEW
 	db ELECTRODE
 	db CELEBI
@@ -39,7 +39,7 @@ OftenFleeMons: ; never flee mons
 	db MEWTWO
 	db -1
 
-AlwaysFleeMons:
+AlwaysFleeMons: ; and get fast ball boost
 	db RAIKOU
 	db ENTEI
 	db -1
