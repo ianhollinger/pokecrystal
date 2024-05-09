@@ -238,18 +238,18 @@ TreeMonSet_Forest:
 	db 25, HOOTHOOT,   11
 	db 17, HOOTHOOT,   12
 	db  8, HOOTHOOT,   13
-	db  7, PINECO,     11
-	db  5, PINECO,     12
-	db  3, PINECO,     13
-	db  7, SUNKERN,    11
-	db  5, SUNKERN,    12
-	db  3, SUNKERN,    13
-	db  5, CATERPIE,   11
-	db  3, CATERPIE,   12
-	db  2, CATERPIE,   13
-	db  5, WEEDLE,     11
-	db  3, WEEDLE,     12
-	db  2, WEEDLE,     13
+	db  7, CATERPIE,   11
+	db  5, CATERPIE,   12
+	db  3, CATERPIE,   13
+	db  7, WEEDLE,     11
+	db  5, WEEDLE,     12
+	db  3, WEEDLE,     13
+	db  5, PINECO,     11
+	db  3, PINECO,     12
+	db  2, PINECO,     13
+	db  5, EXEGGCUTE,  11
+	db  3, EXEGGCUTE,  12
+	db  2, EXEGGCUTE,  13
 	db -1
 ; rare
 	db 25, HOOTHOOT,   13
