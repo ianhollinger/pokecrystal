@@ -500,6 +500,48 @@ LookUpWildmonsForMapDE:
 	scf
 	ret
 
+InitRoamMon1:
+; initialize wRoamMon structs
+; Raikou:
+; species
+	ld a, RAIKOU
+	ld [wRoamMon1Species], a
+
+; level
+	ld a, 40
+	ld [wRoamMon1Level], a
+
+; Raikou starting map
+	ld a, GROUP_ROUTE_42
+	ld [wRoamMon1MapGroup], a
+	ld a, MAP_ROUTE_42
+	ld [wRoamMon1MapNumber], a
+
+; hp
+	xor a ; generate new stats
+	ld [wRoamMon1HP], a
+
+	ret
+
+InitRoamMon2:
+; Entei:
+; species
+	ld a, ENTEI
+	ld [wRoamMon2Species], a
+; level
+	ld a, 40
+	ld [wRoamMon2Level], a
+; Entei starting map
+	ld a, GROUP_ROUTE_37
+	ld [wRoamMon2MapGroup], a
+	ld a, MAP_ROUTE_37
+	ld [wRoamMon2MapNumber], a
+; hp
+	xor a ; generate new stats
+	ld [wRoamMon2HP], a
+
+	ret
+
 CheckEncounterRoamMon:
 	push hl
 ; Don't trigger an encounter if we're on water.
