@@ -175,18 +175,15 @@ TreeMonSet_Kanto:
 	db 25, NOCTOWL,    36
 	db 17, NOCTOWL,    37
 	db  8, NOCTOWL,    38
-	db  7, LEDIAN,     36
-	db  5, LEDIAN,     37
-	db  3, LEDIAN,     38
-	db  7, ARIADOS,    36
-	db  5, ARIADOS,    37
-	db  3, ARIADOS,    38
+	db 10, LEDIAN,     36
+	db  6, LEDIAN,     37
+	db  4, LEDIAN,     38
+	db 10, ARIADOS,    36
+	db  6, ARIADOS,    37
+	db  4, ARIADOS,    38
 	db  5, ARBOK,      36
 	db  3, ARBOK,      37
 	db  2, ARBOK,      38
-	db  5, EXEGGUTOR,  36
-	db  3, EXEGGUTOR,  37
-	db  2, EXEGGUTOR,  38
 	db -1
 ; rare
 	db 25, NOCTOWL,    38
@@ -283,16 +280,16 @@ TreeMonSet_Rock_Beach:
 	db -1
 
 TreeMonSet_Rock_Cave:
-	db 22, GEODUDE,    11
-	db 18, GEODUDE,    12
-	db 13, GEODUDE,    13
-	db  9, GEODUDE,    14
-	db  5, GEODUDE,    15
-	db 11, DUNSPARCE,  11
-	db  9, DUNSPARCE,  12
-	db  7, DUNSPARCE,  13
-	db  4, DUNSPARCE,  14
-	db  2, DUNSPARCE,  15
+	db 22, GEODUDE,    16
+	db 18, GEODUDE,    17
+	db 13, GEODUDE,    18
+	db  9, GEODUDE,    19
+	db  5, GEODUDE,    20
+	db 11, DUNSPARCE,  16
+	db  9, DUNSPARCE,  17
+	db  7, DUNSPARCE,  18
+	db  4, DUNSPARCE,  19
+	db  2, DUNSPARCE,  20
 	db -1
 
 TreeMonSet_Rock_Tower:
