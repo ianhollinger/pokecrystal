@@ -20,6 +20,7 @@ Route45_MapScripts:
         callback MAPCALLBACK_OBJECTS, Route45CamperQuentinCallback
 
 Route45CamperQuentinCallback:
+	disappear ROUTE45_YOUNGSTER
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iffalse .NoAppear
 	appear ROUTE45_YOUNGSTER
