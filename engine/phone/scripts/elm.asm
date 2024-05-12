@@ -88,7 +88,6 @@ ElmPhoneCallerScript:
 .rocket
 	farwritetext ElmPhoneRadioTowerRocketTakeoverText
 	specialphonecall SPECIALCALL_NONE
-	disappear ROUTE45_YOUNGSTER
 	end
 
 .gift
