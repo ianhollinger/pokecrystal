@@ -21,7 +21,7 @@ Route45_MapScripts:
 
 Route45CamperQuentinCallback:
 	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .NoAppear
+	iffalse .NoAppear
 	appear ROUTE45_YOUNGSTER
 	endcallback
 .NoAppear:
@@ -515,7 +515,7 @@ CamperQuentinSeenText:
 	done
 
 CamperQuentinFightText:
-	text "Let's do this!"
+	text "Let's go!"
 
 	done
 
