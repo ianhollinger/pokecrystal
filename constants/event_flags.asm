@@ -1507,7 +1507,8 @@
 	const EVENT_BATTLE_TOWER_OPEN_CIVILIANS
 	const EVENT_VERMILION_GYM_SURGE2
 	const EVENT_ILEX_FOREST_CELEBI
-; Unused: next 46 events
+	const EVENT_CAMPER_QUENTIN
+; Unused: next 45 events
 
 	const_next 2048
 DEF NUM_EVENTS EQU const_value ; 800
