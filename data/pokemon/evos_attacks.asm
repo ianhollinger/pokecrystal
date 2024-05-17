@@ -988,19 +988,19 @@ MachopEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LOW_KICK
 	db 1, LEER
-	db 4, FOCUS_ENERGY
-	db 8, BIDE
-	db 11, KARATE_CHOP
-	db 15, SEISMIC_TOSS
-	db 18, FORESIGHT
-	db 22, MACH_PUNCH
+	db 1, FOCUS_ENERGY
+	db 5, BIDE
+	db 9, KARATE_CHOP
+	db 13, SEISMIC_TOSS
+	db 17, FORESIGHT
+	db 21, MACH_PUNCH
 	db 25, STRENGTH
 	db 29, SUBMISSION
-	db 32, VITAL_THROW
-	db 36, SCARY_FACE
-	db 39, CROSS_CHOP
-	db 43, DYNAMICPUNCH
-	db 46, DOUBLE_EDGE
+	db 33, VITAL_THROW
+	db 37, CROSS_CHOP
+	db 41, SCARY_FACE
+	db 45, DYNAMICPUNCH
+	db 49, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 MachokeEvosAttacks:
@@ -1009,40 +1009,40 @@ MachokeEvosAttacks:
 	db 0 ; no more evolutions
 ;	db 1, LOW_KICK
 ;	db 1, LEER
-;	db 4, FOCUS_ENERGY
-;	db 8, BIDE
-;	db 12, KARATE_CHOP
-;	db 16, SEISMIC_TOSS
+;	db 1, FOCUS_ENERGY
+;	db 5, BIDE
+;	db 9, KARATE_CHOP
+;	db 13, SEISMIC_TOSS
 	db 1, SEISMIC_TOSS
-	db 18, FORESIGHT
-	db 22, MACH_PUNCH
+	db 17, FORESIGHT
+	db 21, MACH_PUNCH
 	db 25, STRENGTH
 	db 31, SUBMISSION
-	db 36, VITAL_THROW
-	db 42, SCARY_FACE
-	db 47, CROSS_CHOP
-	db 53, DYNAMICPUNCH
-	db 58, DOUBLE_EDGE
+	db 37, VITAL_THROW
+	db 43, CROSS_CHOP
+	db 49, SCARY_FACE
+	db 55, DYNAMICPUNCH
+	db 61, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 MachampEvosAttacks:
 	db 0 ; no more evolutions
 ;	db 1, LOW_KICK
 ;	db 1, LEER
-;	db 4, FOCUS_ENERGY
-;	db 8, BIDE
-;	db 12, KARATE_CHOP
-;	db 16, SEISMIC_TOSS
+;	db 1, FOCUS_ENERGY
+;	db 5, BIDE
+;	db 9, KARATE_CHOP
+;	db 13, SEISMIC_TOSS
 	db 1, SEISMIC_TOSS
-	db 18, FORESIGHT
-	db 22, MACH_PUNCH
+	db 17, FORESIGHT
+	db 21, MACH_PUNCH
 	db 25, STRENGTH
 	db 31, SUBMISSION
-	db 36, VITAL_THROW
-	db 42, SCARY_FACE
-	db 47, CROSS_CHOP
-	db 53, DYNAMICPUNCH
-	db 58, DOUBLE_EDGE
+	db 37, VITAL_THROW
+	db 43, CROSS_CHOP
+	db 49, SCARY_FACE
+	db 55, DYNAMICPUNCH
+	db 61, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 BellsproutEvosAttacks:
