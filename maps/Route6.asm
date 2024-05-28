@@ -45,19 +45,19 @@ Route6PokefanMScript:
 	pause 15
 	cry DITTO
 	closetext
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .Silver
-	loadwildmon DITTO, 40
-.Begin:
+;	checkevent EVENT_OPENED_MT_SILVER
+;	iftrue .Silver
+	loadwildmon DITTO, 50
+;.Begin:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
 	startbattle
 	reloadmapafterbattle
 	disappear ROUTE6_POKEFAN_M1
 	setevent EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
 	end
-.Silver:
-	loadwildmon DITTO, 80
-	sjump .Begin
+;.Silver:
+;	loadwildmon DITTO, 80
+;	sjump .Begin
 
 Route6PokefanMImposterText:
 	text "…"
