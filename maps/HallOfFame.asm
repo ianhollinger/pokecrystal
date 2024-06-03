@@ -137,6 +137,7 @@ HallOfFameEnterScript:
 
 .DidntCatchSuicune:
 	clearevent EVENT_FOUGHT_SUICUNE
+	setmapscene TIN_TOWER_2F, SCENE_TINTOWER1F_SUICUNE_BATTLE
 	sjump .SkipSuicune
 
 .DidntCatchCelebi:
@@ -165,7 +166,7 @@ HallOfFameEnterScript:
 
 .DidntCatchSudowoodo:
 	clearevent EVENT_FOUGHT_SUDOWOODO
-	clearevent EVENT_ROUTE_36_SUDOWOODO
+;	clearevent EVENT_ROUTE_36_SUDOWOODO
 	sjump .SkipSudowoodo
 
 ;.DidntCatchGyarados:
