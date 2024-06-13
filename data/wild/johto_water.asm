@@ -133,9 +133,9 @@ JohtoWaterWildMons:
 	def_water_wildmons DRAGONS_DEN_B1F
 	db 3 percent ; encounter rate
 	db 15, MAGIKARP
-	db 10, MAGIKARP
-	db  5, MAGIKARP
 	db 20, DRATINI
+	db 25, GYARADOS
+	db 30, DRAGONAIR
 	end_water_wildmons
 
 	def_water_wildmons OLIVINE_PORT
