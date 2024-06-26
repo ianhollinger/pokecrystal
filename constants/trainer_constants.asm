@@ -52,16 +52,19 @@ DEF KRIS EQU __trainer_class__
 	const PRYCE1
 	const PRYCE2
 	const PRYCE3
+	const PRYCE4
 
 	trainerclass JASMINE ; 6
 	const JASMINE1
 	const JASMINE2
 	const JASMINE3
+	const JASMINE4
 
 	trainerclass CHUCK ; 7
 	const CHUCK1
 	const CHUCK2
 	const CHUCK3
+	const CHUCK4
 
 	trainerclass CLAIR ; 8
 	const CLAIR1
@@ -585,6 +588,7 @@ DEF KRIS EQU __trainer_class__
 	const EXECUTIVEM_2
 	const EXECUTIVEM_3
 	const EXECUTIVEM_4
+	const EXECUTIVEM_5
 
 	trainerclass PSYCHIC_T ; 34
 	const NATHAN
@@ -656,6 +660,7 @@ DEF KRIS EQU __trainer_class__
 	trainerclass EXECUTIVEF ; 37
 	const EXECUTIVEF_1
 	const EXECUTIVEF_2
+	const EXECUTIVEF_3
 
 	trainerclass SAGE ; 38
 	const CHOW
