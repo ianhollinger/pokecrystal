@@ -102,10 +102,11 @@ RocketBaseBoss:
 	applymovement TEAMROCKETBASEB3F_ROCKET1, RocketBaseBossApproachesPlayerMovement
 	winlosstext ExecutiveM4BeatenText, 0
 	setlasttalked TEAMROCKETBASEB3F_ROCKET1
-	readvar VAR_BADGES
-	ifequal 4, .TeamRocketFirst
-	loadtrainer EXECUTIVEM, EXECUTIVEM_5
-.StartFight:
+;	readvar VAR_BADGES
+;	ifequal 4, .TeamRocketFirst
+;	loadtrainer EXECUTIVEM, EXECUTIVEM_5
+	loadtrainer EXECUTIVEM, EXECUTIVEM_4
+;.StartFight:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ROCKET_EXECUTIVEM_4
@@ -120,9 +121,9 @@ RocketBaseBoss:
 	setscene SCENE_TEAMROCKETBASEB3F_NOOP
 	end
 
-.TeamRocketFirst:
-	loadtrainer EXECUTIVEM, EXECUTIVEM_4
-	sjump .StartFight
+;.TeamRocketFirst:
+;	loadtrainer EXECUTIVEM, EXECUTIVEM_4
+;	sjump .StartFight
 
 RocketBaseMurkrow:
 	opentext
