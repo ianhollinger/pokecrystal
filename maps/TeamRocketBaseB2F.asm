@@ -99,7 +99,7 @@ RocketBaseBossFScript:
 ;	ifequal 4, .TeamRocketFirst
 ;	loadtrainer EXECUTIVEF, EXECUTIVEF_3
 	loadtrainer EXECUTIVEF, EXECUTIVEF_2
-.StartFight:
+;.StartFight:
 	startbattle
 	disappear TEAMROCKETBASEB2F_DRAGON
 	setevent EVENT_TEAM_ROCKET_BASE_B2F_EXECUTIVE
