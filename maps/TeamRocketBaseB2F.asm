@@ -95,9 +95,10 @@ RocketBaseBossFScript:
 	applymovement TEAMROCKETBASEB2F_ROCKET_GIRL, RocketBaseBossFBattlesPlayerMovement
 	winlosstext RocketBaseBossWinText, 0
 	setlasttalked TEAMROCKETBASEB2F_ROCKET_GIRL
-	readvar VAR_BADGES
-	ifequal 4, .TeamRocketFirst
-	loadtrainer EXECUTIVEF, EXECUTIVEF_3
+;	readvar VAR_BADGES
+;	ifequal 4, .TeamRocketFirst
+;	loadtrainer EXECUTIVEF, EXECUTIVEF_3
+	loadtrainer EXECUTIVEF, EXECUTIVEF_2
 .StartFight:
 	startbattle
 	disappear TEAMROCKETBASEB2F_DRAGON
@@ -143,9 +144,9 @@ RocketBaseBossFScript:
 	applymovement TEAMROCKETBASEB2F_LANCE, RocketBaseLanceApproachesElectrodesMovement
 	disappear TEAMROCKETBASEB2F_LANCE
 
-.TeamRocketFirst:
-	loadtrainer EXECUTIVEF, EXECUTIVEF_2
-	sjump .StartFight
+;.TeamRocketFirst:
+;	loadtrainer EXECUTIVEF, EXECUTIVEF_2
+;	sjump .StartFight
 
 RocketBaseCantLeaveScript:
 	applymovement PLAYER, RocketBasePlayerCantLeaveElectrodesMovement
