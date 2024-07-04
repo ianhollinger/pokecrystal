@@ -28,8 +28,8 @@ TrainerClassDVs:
 	dn  9,  8, 10,  6 ; BIRD_KEEPER
 	dn  5,  8,  8,  5 ; LASS
 	dn  7, 10, 12,  7 ; JANINE
-	dn 14, 11, 12, 10 ; COOLTRAINERM (HP Electric)
-	dn 10, 15,  9,  9 ; COOLTRAINERF (HP Electric)
+	dn 10, 15,  9, 10 ; COOLTRAINERM (HP Electric)
+	dn 14, 11,  8, 11 ; COOLTRAINERF (HP Electric)
 	dn  6,  9,  9,  9 ; BEAUTY
 	dn  9,  7,  7,  8 ; POKEMANIAC
 	dn 13,  8, 10,  8 ; GRUNTM
@@ -48,11 +48,11 @@ TrainerClassDVs:
 	dn  8, 11,  7,  8 ; HIKER
 	dn  9,  8, 10,  8 ; BIKER
 	dn 10,  7,  7, 12 ; BLAINE
-	dn  9,  8, 10,  8 ; BURGLAR
+	dn 10,  7, 11,  8 ; BURGLAR
 	dn  7,  8,  9, 10 ; FIREBREATHER
 	dn 10,  6, 13,  6 ; JUGGLER (HP Grass)
 	dn 12,  7,  7,  8 ; BLACKBELT_T
-	dn 10, 10, 13, 14 ; EXECUTIVEM (HP Grass)
+	dn 11,  9, 10, 10 ; EXECUTIVEM (HP Ice)
 	dn  9,  6,  8, 10 ; PSYCHIC_T (HP Ghost)
 	dn  8,  8,  9,  9 ; PICNICKER
 	dn  7,  6,  8,  8 ; CAMPER
