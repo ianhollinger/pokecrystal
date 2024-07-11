@@ -22,8 +22,9 @@ MahoganyGymPryceScript:
 	closetext
 	winlosstext PryceText_Impressed, 0
 	readvar VAR_BADGES
-	ifequal 4, .PryceFirst
-	loadtrainer PRYCE, PRYCE1
+	ifequal 5, .PryceSecond
+	ifequal 6, .PryceThird
+	loadtrainer PRYCE, PRYCE5
 .StartFight:
 	startbattle
 	reloadmapafterbattle
@@ -53,8 +54,12 @@ MahoganyGymPryceScript:
 	closetext
 	end
 
-.PryceFirst:
+.PryceSecond:
 	loadtrainer PRYCE, PRYCE4
+	sjump .StartFight
+
+.PryceThird:
+	loadtrainer PRYCE, PRYCE1
 	sjump .StartFight
 
 .PostBattle:
