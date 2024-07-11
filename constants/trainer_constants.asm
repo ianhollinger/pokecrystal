@@ -53,18 +53,21 @@ DEF KRIS EQU __trainer_class__
 	const PRYCE2
 	const PRYCE3
 	const PRYCE4
+	const PRYCE5
 
 	trainerclass JASMINE ; 6
 	const JASMINE1
 	const JASMINE2
 	const JASMINE3
 	const JASMINE4
+	const JASMINE5
 
 	trainerclass CHUCK ; 7
 	const CHUCK1
 	const CHUCK2
 	const CHUCK3
 	const CHUCK4
+	const CHUCK5
 
 	trainerclass CLAIR ; 8
 	const CLAIR1
