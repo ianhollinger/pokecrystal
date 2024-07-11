@@ -39,8 +39,9 @@ CianwoodGymChuckScript:
 	closetext
 	winlosstext ChuckLossText, 0
 	readvar VAR_BADGES
-	ifequal 4, .ChuckFirst
-	loadtrainer CHUCK, CHUCK4
+	ifequal 5, .ChuckSecond
+	ifequal 6, .ChuckThird
+	loadtrainer CHUCK, CHUCK5
 .StartFight:
 	startbattle
 	reloadmapafterbattle
@@ -69,8 +70,12 @@ CianwoodGymChuckScript:
 	closetext
 	end
 
-.ChuckFirst:
+.ChuckSecond:
 	loadtrainer CHUCK, CHUCK1
+	sjump .StartFight
+
+.ChuckThird:
+	loadtrainer CHUCK, CHUCK4
 	sjump .StartFight
 
 .PostBattle:
