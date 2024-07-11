@@ -17,8 +17,9 @@ OlivineGymJasmineScript:
 	closetext
 	winlosstext Jasmine_BetterTrainer, 0
 	readvar VAR_BADGES
-	ifequal 4, .JasmineFirst
-	loadtrainer JASMINE, JASMINE1
+	ifequal 5, .JasmineSecond
+	ifequal 6, .JasmineThird
+	loadtrainer JASMINE, JASMINE5
 .StartFight:
 	startbattle
 	reloadmapafterbattle
@@ -45,8 +46,12 @@ OlivineGymJasmineScript:
 	closetext
 	end
 
-.JasmineFirst:
+.JasmineSecond:
 	loadtrainer JASMINE, JASMINE4
+	sjump .StartFight
+
+.JasmineThird:
+	loadtrainer JASMINE, JASMINE1
 	sjump .StartFight
 
 .PostBattle:
