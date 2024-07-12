@@ -17,16 +17,16 @@ Route45_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-        callback MAPCALLBACK_OBJECTS, Route45CamperQuentinCallback
+;       callback MAPCALLBACK_OBJECTS, Route45CamperQuentinCallback
 
-Route45CamperQuentinCallback:
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iffalse .NoAppear
-	appear ROUTE45_YOUNGSTER
-	endcallback
-.NoAppear:
-	disappear ROUTE45_YOUNGSTER
-	endcallback
+;Route45CamperQuentinCallback:
+;	checkevent EVENT_CLEARED_RADIO_TOWER
+;	iffalse .NoAppear
+;	appear ROUTE45_YOUNGSTER
+;	endcallback
+;.NoAppear:
+;	disappear ROUTE45_YOUNGSTER
+;	endcallback
 
 TrainerBlackbeltKenji:
 	trainer BLACKBELT_T, KENJI3, EVENT_BEAT_BLACKBELT_KENJI, BlackbeltKenji3SeenText, BlackbeltKenji3BeatenText, 0, .Script
