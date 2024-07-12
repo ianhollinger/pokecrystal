@@ -117,29 +117,29 @@ KantoGrassWildMons:
 	def_grass_wildmons VICTORY_ROAD
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 43, GRAVELER
-	db 41, RHYHORN
-	db 42, STEELIX
-	db 43, GOLBAT
-	db 44, SANDSLASH
-	db 44, RHYDON
+	db 42, GRAVELER
+	db 40, RHYHORN
+	db 41, STEELIX
+	db 42, GOLBAT
+	db 43, SANDSLASH
+	db 43, RHYDON
 	db 20, LARVITAR
 	; day
-	db 43, GRAVELER
-	db 41, RHYHORN
-	db 42, STEELIX
-	db 43, GOLBAT
-	db 44, SANDSLASH
-	db 44, RHYDON
+	db 42, GRAVELER
+	db 40, RHYHORN
+	db 41, STEELIX
+	db 42, GOLBAT
+	db 43, SANDSLASH
+	db 43, RHYDON
 	db 20, LARVITAR
 	; nite
-	db 43, GOLBAT
-	db 41, GRAVELER
-	db 42, STEELIX
-	db 43, GOLBAT
-	db 44, GRAVELER
-	db 44, GRAVELER
+	db 42, GOLBAT
+	db 40, GRAVELER
+	db 41, STEELIX
+	db 42, GOLBAT
 	db 43, GRAVELER
+	db 43, GRAVELER
+	db 42, GRAVELER
 	end_grass_wildmons
 
 	def_grass_wildmons TOHJO_FALLS
@@ -766,52 +766,52 @@ KantoGrassWildMons:
 	db 40, SANDSLASH
 	db 38, RATICATE
 	db 40, PONYTA
-	db 40, DODRIO
-	db 42, AMPHAROS
+	db 42, DODRIO
+	db 40, AMPHAROS
 	; day
 	db 38, DODUO
 	db 38, ARBOK
 	db 40, SANDSLASH
 	db 38, RATICATE
 	db 40, PONYTA
-	db 40, DODRIO
-	db 42, AMPHAROS
+	db 42, DODRIO
+	db 40, AMPHAROS
 	; nite
 	db 38, NOCTOWL
 	db 38, RATICATE
 	db 40, RATICATE
 	db 38, QUAGSIRE
 	db 40, QUAGSIRE
-	db 40, QUAGSIRE
-	db 42, NOCTOWL
+	db 42, QUAGSIRE
+	db 40, NOCTOWL
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_27
 	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
 	; morn
-	db 38, DODUO
-	db 38, SANDSLASH
-	db 40, ARBOK
-	db 38, RATICATE
-	db 40, PONYTA
-	db 40, RAPIDASH
-	db 42, CHANSEY
+	db 37, DODUO
+	db 37, SANDSLASH
+	db 39, ARBOK
+	db 37, RATICATE
+	db 39, PONYTA
+	db 41, RAPIDASH
+	db 39, CHANSEY
 	; day
-	db 38, DODUO
-	db 38, SANDSLASH
-	db 40, ARBOK
-	db 38, RATICATE
-	db 40, PONYTA
-	db 40, RAPIDASH
-	db 42, CHANSEY
+	db 37, DODUO
+	db 37, SANDSLASH
+	db 39, ARBOK
+	db 37, RATICATE
+	db 39, PONYTA
+	db 41, RAPIDASH
+	db 39, CHANSEY
 	; nite
-	db 38, NOCTOWL
-	db 38, RATICATE
-	db 40, RATICATE
-	db 38, QUAGSIRE
-	db 40, QUAGSIRE
-	db 40, QUAGSIRE
-	db 42, NOCTOWL
+	db 37, NOCTOWL
+	db 37, RATICATE
+	db 39, RATICATE
+	db 37, QUAGSIRE
+	db 39, QUAGSIRE
+	db 41, QUAGSIRE
+	db 39, NOCTOWL
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_28
