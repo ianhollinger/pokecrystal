@@ -563,12 +563,12 @@ CheckEncounterRoamMon:
 	ld a, 7 ; length of the roam_struct
 	call AddNTimes
 	ld a, d
-;	cp [hl]
-;	jr nz, .DontEncounterRoamMon
+	cp [hl]
+	jr nz, .DontEncounterRoamMon
 	inc hl
 	ld a, e
-;	cp [hl]
-;	jr nz, .DontEncounterRoamMon
+	cp [hl]
+	jr nz, .DontEncounterRoamMon
 ; We've decided to take on a beast, so stage its information for battle.
 	dec hl
 	dec hl
