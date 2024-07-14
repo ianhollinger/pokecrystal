@@ -3399,14 +3399,14 @@ GentlemanGroup:
 SkierGroup:
 	; SKIER (1)
 	db "DIANA@", TRAINERTYPE_STAT_EXP
-	db 33, JYNX
-		dw $2695, $2695, $2695, $2695, $2695 
+	db 32, JYNX
+		dw $2448, $2448, $2448, $2448, $2448
 	db -1 ; end
 
 	; SKIER (2)
 	db "JILL@", TRAINERTYPE_STAT_EXP | TRAINERTYPE_MOVES
-	db 33, LAPRAS
-		dw $2695, $2695, $2695, $2695, $2695 
+	db 32, LAPRAS
+		dw $2448, $2448, $2448, $2448, $2448
 		db SING, CONFUSE_RAY, BODY_SLAM, AURORA_BEAM
 	db -1 ; end
 
@@ -6443,30 +6443,30 @@ MediumGroup:
 BoarderGroup:
 	; BOARDER (1)
 	db "DEANDRE@", TRAINERTYPE_STAT_EXP
-	db 29, SEEL
+	db 28, SEEL
+		dw $1BC7, $1BC7, $1BC7, $1BC7, $1BC7
+	db 29, SMOOCHUM
 		dw $1DCC, $1DCC, $1DCC, $1DCC, $1DCC
-	db 30, SMOOCHUM
-		dw $1FE3, $1FE3, $1FE3, $1FE3, $1FE3
-	db 29, SEEL
-		dw $1DCC, $1DCC, $1DCC, $1DCC, $1DCC
+	db 28, SEEL
+		dw $1BC7, $1BC7, $1BC7, $1BC7, $1BC7
 	db -1 ; end
 
 	; BOARDER (2)
 	db "PATTON@", TRAINERTYPE_STAT_EXP
-	db 31, SWINUB
-		dw $220C, $220C, $220C, $220C, $220C
-	db 31, SNEASEL
-		dw $220C, $220C, $220C, $220C, $220C
+	db 30, SWINUB
+		dw $1FE3, $1FE3, $1FE3, $1FE3, $1FE3
+	db 30, SNEASEL
+		dw $1FE3, $1FE3, $1FE3, $1FE3, $1FE3
 	db -1 ; end
 
 	; BOARDER (3)
 	db "GERARDO@", TRAINERTYPE_STAT_EXP
-	db 29, SHELLDER	
+	db 28, SHELLDER	
+		dw $1BC7, $1BC7, $1BC7, $1BC7, $1BC7
+	db 28, DELIBIRD
+		dw $1BC7, $1BC7, $1BC7, $1BC7, $1BC7
+	db 29, CLOYSTER
 		dw $1DCC, $1DCC, $1DCC, $1DCC, $1DCC
-	db 29, DELIBIRD
-		dw $1DCC, $1DCC, $1DCC, $1DCC, $1DCC
-	db 30, CLOYSTER
-		dw $1FE3, $1FE3, $1FE3, $1FE3, $1FE3
 	db -1 ; end
 
 PokefanMGroup:
