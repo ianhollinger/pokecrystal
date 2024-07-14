@@ -3179,7 +3179,7 @@ GruntMGroup:
 
 	; GRUNTM (8)
 	db "GRUNT@", TRAINERTYPE_STAT_EXP
-	db 31, QWILFISH
+	db 31, PERSIAN
 		dw $220C, $220C, $220C, $220C, $220C
 	db -1 ; end
 
