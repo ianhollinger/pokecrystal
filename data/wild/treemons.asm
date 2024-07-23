@@ -76,32 +76,32 @@ TreeMonSet_East:
 
 TreeMonSet_Canyon:
 ; common
-	db 25, SPEAROW,    26
-	db 17, SPEAROW,    27
-	db  8, SPEAROW,    28
-	db 10, FEAROW,     26
-	db  7, FEAROW,     27
-	db  3, FEAROW,     28
-	db  7, AIPOM,      26
-	db  5, AIPOM,      27
-	db  3, AIPOM,      28
-	db  7, MANKEY,     26
-	db  5, MANKEY,     27
-	db  3, MANKEY,     28
+	db 25, SPEAROW,    31
+	db 17, SPEAROW,    32
+	db  8, SPEAROW,    33
+	db 10, FEAROW,     31
+	db  7, FEAROW,     32
+	db  3, FEAROW,     33
+	db  7, AIPOM,      31
+	db  5, AIPOM,      32
+	db  3, AIPOM,      33
+	db  7, MANKEY,     31
+	db  5, MANKEY,     32
+	db  3, MANKEY,     33
 	db -1
 ; rare
-	db 25, SPEAROW,    28
-	db 17, SPEAROW,    29
-	db  8, SPEAROW,    30
-	db 10, HERACROSS,  28
-	db  7, HERACROSS,  29
-	db  3, HERACROSS,  30
-	db  7, AIPOM,      28
-	db  5, AIPOM,      29
-	db  3, AIPOM,      30
-	db  7, PRIMEAPE,   28
-	db  5, PRIMEAPE,   29
-	db  3, PRIMEAPE,   30
+	db 25, SPEAROW,    33
+	db 17, SPEAROW,    34
+	db  8, SPEAROW,    35
+	db 10, HERACROSS,  33
+	db  7, HERACROSS,  34
+	db  3, HERACROSS,  35
+	db  7, AIPOM,      33
+	db  5, AIPOM,      34
+	db  3, AIPOM,      35
+	db  7, PRIMEAPE,   33
+	db  5, PRIMEAPE,   34
+	db  3, PRIMEAPE,   35
 	db -1
 
 TreeMonSet_Town:
