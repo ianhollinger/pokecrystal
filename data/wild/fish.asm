@@ -25,16 +25,16 @@ FishGroups:
 	assert_table_length NUM_FISHGROUPS
 
 .Shore_Old:
-	db  23 percent + 2, MAGIKARP,    5
-	db  42 percent,     MAGIKARP,    6
-	db  56 percent + 1, MAGIKARP,    7
-	db  65 percent + 2, MAGIKARP,    8
-	db  70 percent + 1, MAGIKARP,    9
-	db  80 percent,     KRABBY,      5
-	db  88 percent,     KRABBY,      6
-	db  94 percent + 1, KRABBY,      7
-	db  98 percent + 1, KRABBY,      8
-	db 100 percent,     KRABBY,      9
+	db  23 percent + 2, MAGIKARP,    4
+	db  42 percent,     MAGIKARP,    5
+	db  56 percent + 1, MAGIKARP,    6
+	db  65 percent + 2, MAGIKARP,    7
+	db  70 percent + 1, MAGIKARP,    8
+	db  80 percent,     KRABBY,      4
+	db  88 percent,     KRABBY,      5
+	db  94 percent + 1, KRABBY,      6
+	db  98 percent + 1, KRABBY,      7
+	db 100 percent,     KRABBY,      8
 .Shore_Good:
 	db  13 percent + 1, MAGIKARP,   18
 	db  24 percent,     MAGIKARP,   19
@@ -357,25 +357,7 @@ FishGroups:
 	db 100 percent,     GYARADOS,   44
 
 .Dratini_2_Old:
-	db  5  percent + 1, MAGIKARP,   5
-	db  10 percent + 1, MAGIKARP,   10
-	db  15 percent,     MAGIKARP,   15
-	db  20 percent,     MAGIKARP,   20
-	db  25 percent + 1, MAGIKARP,   25
-	db  30 percent + 1, MAGIKARP,   30
-	db  35 percent,     MAGIKARP,   35
-	db  40 percent,     MAGIKARP,   40
-	db  45 percent + 1, MAGIKARP,   45
-	db  50 percent + 1, MAGIKARP,   50
-	db  55 percent,     MAGIKARP,   55
-	db  60 percent,     MAGIKARP,   60
-	db  65 percent + 1, MAGIKARP,   65
-	db  70 percent + 1, MAGIKARP,   70
-	db  75 percent,     MAGIKARP,   75
-	db  80 percent,     MAGIKARP,   80
-	db  85 percent + 1, MAGIKARP,   85
-	db  90 percent + 1, MAGIKARP,   90
-	db  95 percent,     MAGIKARP,   95
+	db  99 percent + 2, MAGIKARP,   1
 	db 100 percent,     MAGIKARP,   100
 .Dratini_2_Good:
 	db  13 percent + 1, SLOWPOKE,   33
