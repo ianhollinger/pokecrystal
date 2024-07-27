@@ -797,26 +797,26 @@ AICheckEnemyFractionMaxHP: ; unreferenced
 	ret
 
 EnemyUsedXAttack:
-	ld b, ATTACK
+	ld b, $10 | ATTACK
 	ld a, X_ATTACK
 	jr EnemyUsedXItem
 
 EnemyUsedXDefend:
-	ld b, DEFENSE
+	ld b, $10 | DEFENSE
 	ld a, X_DEFEND
 	jr EnemyUsedXItem
 
 EnemyUsedXSpeed:
-	ld b, SPEED
+	ld b, $10 | SPEED
 	ld a, X_SPEED
 	jr EnemyUsedXItem
 
 EnemyUsedXSpecial:
-	ld b, SP_ATTACK
+	ld b, $10 | SP_ATTACK
 	ld a, X_SPECIAL
 
 EnemyUsedXSpDef:
-	ld b, SP_DEFENSE
+	ld b, $10 | SP_DEFENSE
 	ld a, X_SP_DEF
 	jr EnemyUsedXItem
 
