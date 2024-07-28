@@ -364,7 +364,7 @@ TwinsAmyandmay1SeenText:
 	done
 
 TwinsAmyandmay1BeatenText:
-	text "AMY & MAY: Oh,"
+	text "AMY & MIMI: Oh,"
 	line "double goodness!"
 	done
 
@@ -374,20 +374,20 @@ TwinsAmyandmay1AfterBattleText:
 	done
 
 TwinsAmyandmay2SeenText:
-	text "MAY: You want to"
+	text "MIMI: You want to"
 	line "see the LEADER?"
 	cont "We come first!"
 	done
 
 TwinsAmyandmay2BeatenText:
-	text "AMY & MAY: Oh,"
+	text "AMY & MIMI: Oh,"
 	line "double goodness!"
 	done
 
 TwinsAmyandmay2AfterBattleText:
-	text "MAY: Our bug #-"
-	line "MON lost! Oh, what"
-	cont "a shame."
+	text "MIMI: Our bug"
+	line "#MON lost! Oh,"
+	cont "what a shame."
 	done
 
 AzaleaGymGuideText:
