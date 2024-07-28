@@ -115,18 +115,18 @@ Route37HiddenEther:
 	hiddenitem ETHER, EVENT_ROUTE_37_HIDDEN_ETHER
 
 TwinsAnnandanne1SeenText:
-	text "ANN: ANNE and I"
+	text "TORI: TIL and I"
 	line "are in this to-"
 	cont "gether!"
 	done
 
 TwinsAnnandanne1BeatenText:
-	text "ANN & ANNE: Nnn… A"
+	text "TORI & TIL: Nnn… A"
 	line "little too strong."
 	done
 
 TwinsAnnandanne1AfterBattleText:
-	text "ANN: I can tell"
+	text "TORI: I can tell"
 	line "what my sister and"
 
 	para "my #MON are"
@@ -134,18 +134,18 @@ TwinsAnnandanne1AfterBattleText:
 	done
 
 TwinsAnnandanne2SeenText:
-	text "ANNE: ANN and I"
+	text "TIL: TORI and I"
 	line "are in this to-"
 	cont "gether!"
 	done
 
 TwinsAnnandanne2BeatenText:
-	text "ANN & ANNE: Nnn… A"
+	text "TORI & TIL: Nnn… A"
 	line "little too strong."
 	done
 
 TwinsAnnandanne2AfterBattleText:
-	text "ANNE: We share the"
+	text "TIL: We share the"
 	line "same feelings as"
 	cont "our #MON."
 	done
