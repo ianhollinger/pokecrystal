@@ -6709,9 +6709,9 @@ KimonoGirlGroup:
 TwinsGroup:
 	; TWINS (1)
 	db "AMY & MIMI@", TRAINERTYPE_STAT_EXP
-	db 11, SPINARAK
+	db 11, PARAS
 		dw $038B, $038B, $038B, $038B, $038B
-	db 11, LEDYBA
+	db 11, VENONAT
 		dw $038B, $038B, $038B, $038B, $038B
 	db -1 ; end
 
@@ -6737,9 +6737,9 @@ TwinsGroup:
 
 	; TWINS (4)
 	db "AMY & MIMI@", TRAINERTYPE_STAT_EXP
-	db 11, LEDYBA
+	db 11, VENONAT
 		dw $038B, $038B, $038B, $038B, $038B
-	db 11, SPINARAK
+	db 11, PARAS
 		dw $038B, $038B, $038B, $038B, $038B
 	db -1 ; end
 
