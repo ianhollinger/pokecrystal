@@ -506,6 +506,7 @@ EeveeEggMoves:
 	db SING
 ;	db DETECT
 	db DOUBLE_KICK
+	db MIMIC
 	db -1 ; end
 
 OmanyteEggMoves:
