@@ -1732,14 +1732,14 @@ KoffingEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_GAS
 	db 1, TACKLE
-	db 7, SMOG
-	db 12, SMOKESCREEN
+	db 6, SMOG
+	db 11, SMOKESCREEN
 	db 16, HAZE
-	db 22, SLUDGE
-	db 27, SELFDESTRUCT
+	db 21, SLUDGE
+	db 26, SELFDESTRUCT
 	db 31, TOXIC
-	db 37, SLUDGE_BOMB
-	db 42, EXPLOSION
+	db 36, SLUDGE_BOMB
+	db 41, EXPLOSION
 	db 46, DESTINY_BOND
 	db 0 ; no more level-up moves
 
@@ -1751,11 +1751,11 @@ WeezingEvosAttacks:
 ;	db 12, SMOKESCREEN
 ;	db 16, HAZE
 	db 1, HAZE
-	db 22, SLUDGE
-	db 27, SELFDESTRUCT
+	db 21, SLUDGE
+	db 26, SELFDESTRUCT
 	db 31, TOXIC
-	db 40, SLUDGE_BOMB
-	db 48, EXPLOSION
+	db 39, SLUDGE_BOMB
+	db 47, EXPLOSION
 	db 55, DESTINY_BOND
 	db 0 ; no more level-up moves
 
