@@ -288,7 +288,7 @@ ExplodingTrap2:
 ExplodingTrap3:
 	checkevent EVENT_EXPLODING_TRAP_3
 	iftrue NoExplodingTrap
-	scall GeodudeExplodingTrap
+	scall PinecoExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_3
 	end
@@ -296,7 +296,7 @@ ExplodingTrap3:
 ExplodingTrap4:
 	checkevent EVENT_EXPLODING_TRAP_4
 	iftrue NoExplodingTrap
-	scall VoltorbExplodingTrap
+	scall PinecoExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_4
 	end
@@ -328,7 +328,7 @@ ExplodingTrap7:
 ExplodingTrap8:
 	checkevent EVENT_EXPLODING_TRAP_8
 	iftrue NoExplodingTrap
-	scall KoffingExplodingTrap
+	scall PinecoExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_8
 	end
@@ -352,7 +352,7 @@ ExplodingTrap10:
 ExplodingTrap11:
 	checkevent EVENT_EXPLODING_TRAP_11
 	iftrue NoExplodingTrap
-	scall GeodudeExplodingTrap
+	scall PinecoExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_11
 	end
@@ -392,7 +392,7 @@ ExplodingTrap15:
 ExplodingTrap16:
 	checkevent EVENT_EXPLODING_TRAP_16
 	iftrue NoExplodingTrap
-	scall KoffingExplodingTrap
+	scall PinecoExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_16
 	end
@@ -440,7 +440,7 @@ ExplodingTrap21:
 ExplodingTrap22:
 	checkevent EVENT_EXPLODING_TRAP_22
 	iftrue NoExplodingTrap
-	scall VoltorbExplodingTrap
+	scall PinecoExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_22
 	end
@@ -451,7 +451,7 @@ VoltorbExplodingTrap:
 	special FadeInPalettes
 	setlasttalked -1
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-	loadwildmon VOLTORB, 23
+	loadwildmon VOLTORB, 25
 	startbattle
 	end
 
@@ -461,7 +461,17 @@ GeodudeExplodingTrap:
 	special FadeInPalettes
 	setlasttalked -1
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-	loadwildmon GEODUDE, 21
+	loadwildmon GEODUDE, 23
+	startbattle
+	end
+
+PinecoExplodingTrap:
+	special FadeOutPalettes
+	cry PINECO
+	special FadeInPalettes
+	setlasttalked -1
+	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
+	loadwildmon PINECO, 24
 	startbattle
 	end
 
@@ -471,7 +481,7 @@ KoffingExplodingTrap:
 	special FadeInPalettes
 	setlasttalked -1
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-	loadwildmon KOFFING, 21
+	loadwildmon KOFFING, 26
 	startbattle
 	end
 
