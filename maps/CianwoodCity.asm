@@ -60,9 +60,10 @@ CianwoodCitySuicuneAndEusine:
 	writetext EusineSuicuneText
 	waitbutton
 	closetext
-	winlosstext EusineBeatenText, 0
+	winlosstext EusineBeatenText, EusineLostText
 	setlasttalked CIANWOODCITY_EUSINE
 	loadtrainer MYSTICALMAN, EUSINE
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -75,6 +76,7 @@ CianwoodCitySuicuneAndEusine:
 	disappear CIANWOODCITY_EUSINE
 	pause 20
 	special FadeOutMusic
+	special HealParty
 	playmapmusic
 	pause 10
 .Done:
@@ -315,6 +317,12 @@ EusineSuicuneText:
 EusineBeatenText:
 	text "I hate to admit"
 	line "it, but you win."
+	done
+
+EusineLostText:
+	text "All right!"
+	line "SUICUNE, were you"
+	cont "watching us?"
 	done
 
 EusineAfterText:
