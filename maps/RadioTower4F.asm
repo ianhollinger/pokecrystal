@@ -167,17 +167,36 @@ GruntM10AfterBattleText:
 	done
 
 Executivem2SeenText:
-	text "Stop! I'm known as"
-	line "the TEAM ROCKET"
-	cont "fortress!"
-
-	para "You're not taking"
+	text "Stop! Don't take"
 	line "another step!"
+
+	para "Aren't you the one" 
+	line "who got in our way"
+	cont "at SLOWPOKE WELL?"
+
+	para "I see… You're"
+	line "doing all this"
+
+	para "because you want"
+	line "to make me angry."
+
+	para "Be careful!"
+	line "But since you seem"
+
+	para "to wish it, I'll"
+	line "show you the full"
+
+	para "extent of a ROCKET" 
+	line "EXECUTIVE'S wrath!"
 	done
 
 Executivem2BeatenText:
-	text "The fortress came"
-	line "down!"
+	text "You may have won"
+	line "this time… But all"
+
+	para "you did was make"
+	line "TEAM ROCKET'S"
+	cont "wrath grow…"
 	done
 
 Executivem2AfterBattleText:
