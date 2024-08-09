@@ -11,8 +11,12 @@
 
 SlowpokeWellB1F_MapScripts:
 	def_scene_scripts
+	scene_script SlowpokeWellB1FNoop1Scene, SCENE_PROTON
 
 	def_callbacks
+
+SlowpokeWellB1FNoop1Scene:
+	end
 
 SlowpokeWellB1FKurtScript:
 	jumptextfaceplayer SlowpokeWellB1FKurtText
@@ -29,9 +33,20 @@ TrainerGruntM29:
 	end
 
 TrainerGruntM1:
-	trainer EXECUTIVEM, EXECUTIVEM_7, EVENT_BEAT_ROCKET_GRUNTM_1, GruntM1SeenText, GruntM1BeatenText, 0, .Script
-
-.Script:
+	playmusic MUSIC_ROCKET_ENCOUNTER
+	showemote EMOTE_SHOCK, SLOWPOKEWELLB1F_ROCKET2, 15
+	opentext
+	writetext GruntM1SeenText
+	waitbutton
+	closetext
+	winlosstext GruntM1BeatenText, GruntM1LostText
+	setlasttalked SLOWPOKEWELLB1F_ROCKET2
+	loadtrainer EXECUTIVEM, EXECUTIVEM_7
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmapafterbattle
+	playmapmusic
+	setevent EVENT_BEAT_ROCKET_GRUNTM_1
 	opentext
 	writetext TrainerGruntM1WhenTalkText
 	waitbutton
@@ -326,12 +341,13 @@ SlowpokeWellB1F_MapEvents:
 	warp_event  7, 11, SLOWPOKE_WELL_B2F, 1
 
 	def_coord_events
+	coord_event 5, 3, SCENE_PROTON, TrainerGruntM1
 
 	def_bg_events
 
 	def_object_events
 	object_event 15,  7, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM29, EVENT_SLOWPOKE_WELL_ROCKETS
-	object_event  5,  2, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerGruntM1, EVENT_SLOWPOKE_WELL_ROCKETS
+	object_event  5,  2, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerGruntM1, EVENT_SLOWPOKE_WELL_ROCKETS
 	object_event  5,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerGruntM2, EVENT_SLOWPOKE_WELL_ROCKETS
 	object_event 10,  4, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerGruntF1, EVENT_SLOWPOKE_WELL_ROCKETS
 	object_event  7,  4, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FSlowpokeWithMailScript, EVENT_SLOWPOKE_WELL_SLOWPOKES
