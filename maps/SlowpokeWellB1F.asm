@@ -34,7 +34,7 @@ TrainerGruntM29:
 
 TrainerGruntM1:
 	playmusic MUSIC_ROCKET_ENCOUNTER
-	showemote EMOTE_SHOCK, SLOWPOKEWELLB1F_ROCKET2, 15
+	showemote EMOTE_SHOCK, SLOWPOKEWELLB1F_ROCKET2, 30
 	opentext
 	writetext GruntM1SeenText
 	waitbutton
