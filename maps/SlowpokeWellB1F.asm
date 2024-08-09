@@ -240,15 +240,24 @@ GruntM29AfterBattleText:
 GruntM1SeenText:
 	text "What do you want?"
 
+	para "I'm known as the"
+	line "TEAM ROCKET"
+	cont "fortress!"
+
 	para "If you interrupt"
 	line "our work, don't"
 	cont "expect any mercy!"
 	done
 
 GruntM1BeatenText:
+	text "The fortress came"
+	line "down!"
+	done
+
+GruntM1LostText:
 	text "You did OK today,"
-	line "but wait till next"
-	cont "time!"
+	line "brat, but wait"
+	cont "till next time!"
 	done
 
 TrainerGruntM1WhenTalkText:
