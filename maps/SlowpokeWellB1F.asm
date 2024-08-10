@@ -35,20 +35,7 @@ TrainerGruntM29:
 TrainerGruntM1:
 	trainer EXECUTIVEM, EXECUTIVEM_7, EVENT_BEAT_ROCKET_GRUNTM_1, GruntM1SeenText, GruntM1BeatenText, 0, .Script
 
-;	playmusic MUSIC_ROCKET_ENCOUNTER
-;	showemote EMOTE_SHOCK, SLOWPOKEWELLB1F_ROCKET2, 30
-;	opentext
-;	writetext GruntM1SeenText
-;	waitbutton
-;	closetext
-;	winlosstext GruntM1BeatenText, GruntM1LostText
-;	setlasttalked SLOWPOKEWELLB1F_ROCKET2
-;	loadtrainer EXECUTIVEM, EXECUTIVEM_7
-;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-;	startbattle
-;	reloadmapafterbattle
-;	playmapmusic
-;	setevent EVENT_BEAT_ROCKET_GRUNTM_1
+.Script:
 	opentext
 	writetext TrainerGruntM1WhenTalkText
 	waitbutton
