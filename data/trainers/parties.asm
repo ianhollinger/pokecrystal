@@ -3121,7 +3121,7 @@ GruntMGroup:
 		dw $0244, $0244, $0244, $0244, $0244
 	db 10, ZUBAT
 		dw $038B, $038B, $038B, $038B, $038B
-	db 10, GROWLITHE
+	db 10, KOFFING
 		dw $038B, $038B, $038B, $038B, $038B
 	db -1 ; end
 
@@ -3203,11 +3203,11 @@ GruntMGroup:
 
 	; GRUNTM (11)
 	db "GRUNT@", TRAINERTYPE_STAT_EXP
-	db 28, MACHOKE
+	db 28, RATTATA
 		dw $1BC7, $1BC7, $1BC7, $1BC7, $1BC7
 	db 28, KOFFING
 		dw $1BC7, $1BC7, $1BC7, $1BC7, $1BC7
-	db 30, RATTATA
+	db 30, MACHOKE
 		dw $1FE3, $1FE3, $1FE3, $1FE3, $1FE3
 	db -1 ; end
 
