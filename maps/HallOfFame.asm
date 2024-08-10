@@ -58,11 +58,6 @@ HallOfFameEnterScript:
 	iftrue .SkipPhoneCall
 	specialphonecall SPECIALCALL_SSTICKET
 .SkipPhoneCall:
-;	checkevent EVENT_CAUGHT_LAPRAS
-;	iftrue .SkipLapras
-;	checkflag ENGINE_UNION_CAVE_LAPRAS
-;	iftrue .DidntCatchLapras
-.SkipLapras:
 	checkevent EVENT_CAUGHT_MEWTWO
 	iftrue .SkipMewtwo
 	checkevent EVENT_FOUGHT_MEWTWO
@@ -113,11 +108,11 @@ HallOfFameEnterScript:
 	checkevent EVENT_FOUGHT_CELEBI
 	iftrue .DidntCatchCelebi
 .SkipCelebi:
-	checkevent EVENT_CAUGHT_SUICUNE
-	iftrue .SkipSuicune
-	checkevent EVENT_FOUGHT_SUICUNE
-	iftrue .DidntCatchSuicune
-.SkipSuicune: ; If Entei or Raikou have not been caught, re-release either
+;	checkevent EVENT_CAUGHT_SUICUNE
+;	iftrue .SkipSuicune
+;	checkevent EVENT_FOUGHT_SUICUNE
+;	iftrue .DidntCatchSuicune
+;.SkipSuicune: ; If Entei or Raikou have not been caught, re-release either
 ; Raikou:
 ; check if caught
 	setval RAIKOU
@@ -135,18 +130,14 @@ HallOfFameEnterScript:
 	halloffame
 	end
 
-.DidntCatchSuicune:
-	clearevent EVENT_FOUGHT_SUICUNE
-	setmapscene TIN_TOWER_2F, SCENE_TINTOWER1F_SUICUNE_BATTLE
-	sjump .SkipSuicune
+;.DidntCatchSuicune:
+;	clearevent EVENT_FOUGHT_SUICUNE
+;	setmapscene TIN_TOWER_2F, SCENE_TINTOWER1F_SUICUNE_BATTLE
+;	sjump .SkipSuicune
 
 .DidntCatchCelebi:
 	clearevent EVENT_FOUGHT_CELEBI
 	sjump .SkipCelebi
-
-.DidntCatchLapras:
-	clearflag ENGINE_UNION_CAVE_LAPRAS
-	sjump .SkipLapras
 
 .DidntCatchMewtwo:
 	clearevent EVENT_FOUGHT_MEWTWO
