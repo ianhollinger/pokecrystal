@@ -428,7 +428,7 @@ TrainerCooltrainerfKate:
 	iftrue .GotSoftSand
 	writetext CooltrainerfKateOfferSoftSandText
 	promptbutton
-	verbosegiveitem SOFT_SAND
+	verbosegiveitem BRIGHTPOWDER
 	iffalse .BagFull
 	setevent EVENT_GOT_SOFT_SAND_FROM_KATE
 .GotSoftSand:
@@ -451,13 +451,13 @@ DayCareSign:
 	jumptext DayCareSignText
 
 Route34Nugget:
-	itemball NUGGET
+	itemball SOFT_SAND
 
 Route34HiddenRareCandy:
 	hiddenitem RARE_CANDY, EVENT_ROUTE_34_HIDDEN_RARE_CANDY
 
 Route34HiddenSuperPotion:
-	hiddenitem SUPER_POTION, EVENT_ROUTE_34_HIDDEN_SUPER_POTION
+	hiddenitem NUGGET, EVENT_ROUTE_34_HIDDEN_SUPER_POTION
 
 Route34MovementData_DayCareManWalksBackInside:
 	slow_step LEFT
