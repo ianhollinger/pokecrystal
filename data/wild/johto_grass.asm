@@ -1546,56 +1546,56 @@ JohtoGrassWildMons:
 	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
 	; morn
 	db 17, EKANS
-	db 18, SPEAROW
-	db 19, RATTATA
+	db 17, SPEAROW
+	db 18, RATTATA
+	db 18, MANKEY
+	db 19, CUBONE
 	db 20, RATICATE
-	db 19, MANKEY
-	db 20, CUBONE
 	db 20, FEAROW
 	; day
 	db 17, EKANS
-	db 18, SPEAROW
-	db 19, RATTATA
+	db 17, SPEAROW
+	db 18, RATTATA
+	db 18, MANKEY
+	db 19, CUBONE
 	db 20, RATICATE
-	db 19, MANKEY
-	db 20, CUBONE
 	db 20, FEAROW
 	; nite
-	db 17, RATTATA
-	db 18, ZUBAT
-	db 20, RATICATE
-	db 21, GOLBAT
+	db 18, RATTATA
+	db 17, ZUBAT
+	db 17, ZUBAT
 	db 19, MARILL
-	db 21, GOLBAT
-	db 21, GOLBAT
+	db 18, MANKEY
+	db 18, MANKEY
+	db 20, RATICATE
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_43
 	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
 	; morn
-	db 19, PIDGEOTTO
-	db 20, FARFETCH_D
-	db 20, FURRET
+	db 18, PIDGEOTTO
+	db 19, FARFETCH_D
+	db 19, FURRET
 	db 20, RATICATE
-	db 21, FLAAFFY
-	db 21, ELEKID
-	db 21, ELEKID
+	db 20, FLAAFFY
+	db 20, ELEKID
+	db 20, ELEKID
 	; day
-	db 19, PIDGEOTTO
-	db 20, FARFETCH_D
-	db 20, FURRET
+	db 18, PIDGEOTTO
+	db 19, FARFETCH_D
+	db 19, FURRET
 	db 20, RATICATE
-	db 21, FLAAFFY
-	db 21, GIRAFARIG
-	db 21, GIRAFARIG
+	db 20, FLAAFFY
+	db 20, GIRAFARIG
+	db 20, GIRAFARIG
 	; nite
-	db 19, VENONAT
+	db 18, VENONAT
+	db 19, MURKROW
+	db 19, MURKROW
+	db 20, VENONAT
 	db 20, NOCTOWL
 	db 20, RATICATE
-	db 21, VENONAT
-	db 21, RATICATE
-	db 21, MURKROW
-	db 21, MURKROW
+	db 20, RATICATE
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_44
