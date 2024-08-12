@@ -677,29 +677,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons MOUNT_MORTAR_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 19, ZUBAT
-	db 21, ZUBAT
-	db 21, GOLBAT
-	db 20, MACHOP
-	db 20, GEODUDE
-	db 22, RATICATE
-	db 22, RATICATE
+	db 18, ZUBAT
+	db 20, ZUBAT
+	db 20, GOLBAT
+	db 19, MACHOP
+	db 19, GEODUDE
+	db 21, RATICATE
+	db 21, RATICATE
 	; day
-	db 19, ZUBAT
-	db 21, ZUBAT
-	db 21, GOLBAT
-	db 20, MACHOP
-	db 20, GEODUDE
-	db 22, RATICATE
-	db 22, RATICATE
+	db 18, ZUBAT
+	db 20, ZUBAT
+	db 20, GOLBAT
+	db 19, MACHOP
+	db 19, GEODUDE
+	db 21, RATICATE
+	db 21, RATICATE
 	; nite
-	db 19, ZUBAT
-	db 21, ZUBAT
-	db 21, GOLBAT
-	db 20, MARILL
-	db 20, GEODUDE
-	db 22, RATICATE
-	db 22, RATICATE
+	db 18, ZUBAT
+	db 20, ZUBAT
+	db 20, GOLBAT
+	db 19, MARILL
+	db 19, GEODUDE
+	db 21, RATICATE
+	db 21, RATICATE
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_1F
