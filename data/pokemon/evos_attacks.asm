@@ -3931,33 +3931,31 @@ TyranitarEvosAttacks:
 LugiaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, GUST
-	db 9, WHIRLWIND
-	db 18, MIST 
-	db 27, SAFEGUARD 
-	db 36, PSYCHIC_M
-	db 45, RECOVER 
-	db 54, AEROBLAST 
-	db 63, HYDRO_PUMP 
-	db 72, RAIN_DANCE
-	db 81, ANCIENTPOWER
+	db 10, WHIRLWIND
+	db 20, MIST 
+	db 30, RAIN_DANCE
+	db 40, RECOVER 
+	db 50, AEROBLAST 
+	db 60, HYDRO_PUMP 
+	db 70, SAFEGUARD
+	db 80, ANCIENTPOWER
 	db 90, FUTURE_SIGHT
-	db 99, SKY_ATTACK
+	db 100, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 HoOhEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, GUST
-	db 9, WHIRLWIND
-	db 18, SWIFT
-	db 27, SAFEGUARD
-	db 36, PSYCHIC_M 
-	db 45, RECOVER
-	db 54, SACRED_FIRE
-	db 63, FIRE_BLAST
-	db 72, SUNNY_DAY
-	db 81, ANCIENTPOWER
+	db 10, WHIRLWIND
+	db 20, SWIFT
+	db 30, SUNNY_DAY
+	db 40, RECOVER
+	db 50, SACRED_FIRE
+	db 60, FIRE_BLAST
+	db 70, SAFEGUARD
+	db 80, ANCIENTPOWER
 	db 90, FUTURE_SIGHT
-	db 99, SKY_ATTACK
+	db 100, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 CelebiEvosAttacks:
