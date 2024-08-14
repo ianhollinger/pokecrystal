@@ -2183,19 +2183,19 @@ PorygonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, CONVERSION
-	db 1, SHARPEN
-	db 6, THUNDERSHOCK
-	db 11, PSYBEAM
-	db 16, CONVERSION2
+	db 5, SHARPEN
+	db 9, THUNDERSHOCK
+	db 13, PSYBEAM
+	db 17, CONVERSION2
 	db 21, AGILITY
-	db 26, BARRIER
-	db 31, THUNDER_WAVE
-	db 36, TRI_ATTACK
-	db 41, RECOVER 
-	db 46, THUNDERBOLT 
-	db 51, LOCK_ON 
-	db 56, ZAP_CANNON
-	db 61, HYPER_BEAM
+	db 25, BARRIER
+	db 29, THUNDER_WAVE
+	db 33, TRI_ATTACK
+	db 37, RECOVER 
+	db 41, THUNDERBOLT 
+	db 45, LOCK_ON 
+	db 49, ZAP_CANNON
+	db 53, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 OmanyteEvosAttacks:
@@ -3671,19 +3671,19 @@ Porygon2EvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, CONVERSION
-	db 1, DEFENSE_CURL
-	db 6, THUNDERSHOCK
-	db 11, PSYBEAM
-	db 16, CONVERSION2
+	db 5, SHARPEN
+	db 9, THUNDERSHOCK
+	db 13, PSYBEAM
+	db 17, CONVERSION2
 	db 21, AGILITY
-	db 26, BARRIER
-	db 31, THUNDER_WAVE
-	db 36, TRI_ATTACK
-	db 41, RECOVER 
-	db 46, THUNDERBOLT 
-	db 51, LOCK_ON 
-	db 56, ZAP_CANNON
-	db 61, HYPER_BEAM
+	db 25, BARRIER
+	db 29, THUNDER_WAVE
+	db 33, TRI_ATTACK
+	db 37, RECOVER 
+	db 41, THUNDERBOLT 
+	db 45, LOCK_ON 
+	db 49, ZAP_CANNON
+	db 53, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 StantlerEvosAttacks:
