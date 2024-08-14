@@ -1368,15 +1368,16 @@ GrimerEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POUND 
 	db 1, POISON_GAS
-	db 7, HARDEN
-	db 12, MUD_SLAP
-	db 18, DISABLE
-	db 23, SLUDGE
-	db 29, MINIMIZE
-	db 34, TOXIC
-	db 40, SLUDGE_BOMB
-	db 45, SCREECH
-	db 51, ACID_ARMOR
+	db 4, HARDEN
+	db 8, MUD_SLAP
+	db 13, SMOG 
+	db 17, DISABLE
+	db 22, SLUDGE
+	db 28, MINIMIZE
+	db 33, TOXIC
+	db 39, SLUDGE_BOMB
+	db 46, SCREECH
+	db 52, ACID_ARMOR
 	db 0 ; no more level-up moves
 
 MukEvosAttacks:
@@ -1387,12 +1388,12 @@ MukEvosAttacks:
 ;	db 12, MUD_SLAP
 ;	db 18, DISABLE
 	db 1, DISABLE
-	db 23, SLUDGE
-	db 29, MINIMIZE
-	db 34, TOXIC
-	db 42, SLUDGE_BOMB
-	db 49, SCREECH
-	db 57, ACID_ARMOR
+	db 22, SLUDGE
+	db 28, MINIMIZE
+	db 33, TOXIC
+	db 41, SLUDGE_BOMB
+	db 50, SCREECH
+	db 58, ACID_ARMOR
 	db 0 ; no more level-up moves
 
 ShellderEvosAttacks:
