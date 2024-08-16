@@ -1576,7 +1576,7 @@ JohtoGrassWildMons:
 	db 18, PIDGEOTTO
 	db 19, FARFETCH_D
 	db 19, FURRET
-	db 20, RATICATE
+	db 20, GIRAFARIG
 	db 20, FLAAFFY
 	db 20, ELEKID
 	db 20, ELEKID
@@ -1584,10 +1584,10 @@ JohtoGrassWildMons:
 	db 18, PIDGEOTTO
 	db 19, FARFETCH_D
 	db 19, FURRET
-	db 20, RATICATE
+	db 20, GIRAFARIG
 	db 20, FLAAFFY
-	db 20, GIRAFARIG
-	db 20, GIRAFARIG
+	db 20, ELEKID
+	db 20, ELEKID
 	; nite
 	db 18, VENONAT
 	db 19, MURKROW
