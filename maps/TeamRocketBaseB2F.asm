@@ -143,6 +143,7 @@ RocketBaseBossFScript:
 	closetext
 	applymovement TEAMROCKETBASEB2F_LANCE, RocketBaseLanceApproachesElectrodesMovement
 	disappear TEAMROCKETBASEB2F_LANCE
+	sjump RocketBaseCantLeaveScript
 
 .FiveBadges:
 	loadtrainer EXECUTIVEF, EXECUTIVEF_3
