@@ -503,6 +503,7 @@ JasmineGroup:
 	db -1 ; end
 
 	; JASMINE (5)
+	db "JASMINE@", TRAINERTYPE_STAT_EXP | TRAINERTYPE_ITEM_MOVES
 	db 31, MAGNEMITE
 		dw $220C, $220C, $220C, $220C, $220C
 		db NO_ITEM
