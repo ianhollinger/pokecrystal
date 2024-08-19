@@ -74,6 +74,7 @@ TrainerExecutivef1:
 	writetext Executivef1AfterBattleText
 	waitbutton
 	closetext
+	setmapscene MAHOGANY_TOWN, SCENE_MAHOGANYTOWN_TRY_RAGECANDYBAR
 	end
 
 RadioTower5FRocketBossScript:
@@ -128,6 +129,7 @@ RadioTower5FRocketBossScript:
 	closetext
 	setscene SCENE_RADIOTOWER5F_NOOP
 	setmapscene ECRUTEAK_TIN_TOWER_ENTRANCE, SCENE_ECRUTEAKTINTOWERENTRANCE_SAGE_BLOCKS
+	setmapscene MAHOGANY_TOWN, SCENE_MAHOGANYTOWN_NOOP
 	setevent EVENT_GOT_CLEAR_BELL
 	setevent EVENT_TEAM_ROCKET_DISBANDED
 	sjump .UselessJump
