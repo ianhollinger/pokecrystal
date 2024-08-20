@@ -11,7 +11,7 @@ MahoganyRedGyaradosSpeechHouseBlackBeltScript:
 	jumptextfaceplayer MahoganyRedGyaradosSpeechHouseBlackBeltText
 
 MahoganyRedGyaradosSpeechHouseTeacherScript:
-	setmapscene MAHOGANY_TOWN, SCENE_MAHOGANYTOWN_TRY_RAGECANDYBAR
+	setmapscene MAHOGANY_TOWN, SCENE_MAHOGANYTOWN_NOOP
 	faceplayer
 	opentext
 	checkflag ENGINE_ROCKETS_IN_RADIO_TOWER
