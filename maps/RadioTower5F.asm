@@ -74,7 +74,6 @@ TrainerExecutivef1:
 	writetext Executivef1AfterBattleText
 	waitbutton
 	closetext
-	setmapscene MAHOGANY_TOWN, SCENE_MAHOGANYTOWN_TRY_RAGECANDYBAR
 	end
 
 RadioTower5FRocketBossScript:
@@ -144,7 +143,7 @@ Ben:
 	jumptextfaceplayer BenText
 
 RadioTower5FUltraBall:
-	itemball RARE_CANDY
+	itemball ULTRA_BALL
 
 RadioTower5FDirectorsOfficeSign:
 	jumptext RadioTower5FDirectorsOfficeSignText
