@@ -117,29 +117,29 @@ KantoGrassWildMons:
 	def_grass_wildmons VICTORY_ROAD
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 42, GRAVELER
-	db 40, RHYHORN
-	db 41, STEELIX
-	db 42, GOLBAT
-	db 43, SANDSLASH
-	db 43, RHYDON
+	db 41, GRAVELER
+	db 39, RHYHORN
+	db 40, STEELIX
+	db 41, GOLBAT
+	db 42, SANDSLASH
+	db 42, RHYDON
 	db 20, LARVITAR
 	; day
-	db 42, GRAVELER
-	db 40, RHYHORN
-	db 41, STEELIX
-	db 42, GOLBAT
-	db 43, SANDSLASH
-	db 43, RHYDON
+	db 41, GRAVELER
+	db 39, RHYHORN
+	db 40, STEELIX
+	db 41, GOLBAT
+	db 42, SANDSLASH
+	db 42, RHYDON
 	db 20, LARVITAR
 	; nite
-	db 42, GOLBAT
-	db 40, GRAVELER
-	db 41, STEELIX
-	db 42, GOLBAT
-	db 43, GRAVELER
-	db 43, GRAVELER
+	db 41, GOLBAT
+	db 39, GRAVELER
+	db 40, STEELIX
+	db 41, GOLBAT
 	db 42, GRAVELER
+	db 42, GRAVELER
+	db 41, GRAVELER
 	end_grass_wildmons
 
 	def_grass_wildmons TOHJO_FALLS
@@ -789,29 +789,29 @@ KantoGrassWildMons:
 	def_grass_wildmons ROUTE_27
 	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
 	; morn
-	db 37, DODUO
-	db 37, SANDSLASH
-	db 39, ARBOK
-	db 37, RATICATE
-	db 39, PONYTA
-	db 41, RAPIDASH
-	db 39, CHANSEY
+	db 36, DODUO
+	db 36, SANDSLASH
+	db 38, ARBOK
+	db 36, RATICATE
+	db 38, PONYTA
+	db 40, RAPIDASH
+	db 38, CHANSEY
 	; day
-	db 37, DODUO
-	db 37, SANDSLASH
-	db 39, ARBOK
-	db 37, RATICATE
-	db 39, PONYTA
-	db 41, RAPIDASH
-	db 39, CHANSEY
+	db 36, DODUO
+	db 36, SANDSLASH
+	db 38, ARBOK
+	db 36, RATICATE
+	db 38, PONYTA
+	db 40, RAPIDASH
+	db 38, CHANSEY
 	; nite
-	db 37, NOCTOWL
-	db 37, RATICATE
-	db 39, RATICATE
-	db 37, QUAGSIRE
-	db 39, QUAGSIRE
-	db 41, QUAGSIRE
-	db 39, NOCTOWL
+	db 36, NOCTOWL
+	db 36, RATICATE
+	db 38, RATICATE
+	db 36, QUAGSIRE
+	db 38, QUAGSIRE
+	db 40, QUAGSIRE
+	db 38, NOCTOWL
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_28
