@@ -256,9 +256,9 @@ GetRemindableMoves:
 ; Adds any moves pre-evolutions would know
 ; by current level.
 .done
-	callfar GetPreEvolution
+;	callfar GetPreEvolution
 	pop bc
-	jr c, .loop
+;	jr c, .loop
 ; Adds all the possible moves the currently
 ; selected Pokémon can learn into "wd002".
 ; Which is the move list.
