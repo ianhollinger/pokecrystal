@@ -5808,7 +5808,7 @@ BattleCommand_Paralyze:
 	jr z, .didnt_affect
         ld a, ELECTRIC ; Don't paralyze an Electric-type
 	call CheckIfTargetIsGivenType
-	ret z
+	jr z, .failed
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_PARALYZE
