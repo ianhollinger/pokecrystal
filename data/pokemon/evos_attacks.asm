@@ -388,6 +388,8 @@ PikachuEvosAttacks:
 
 RaichuEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, SWEET_KISS
+        db 1, CHARM
 ;	db 1, THUNDERSHOCK
 	db 1, GROWL
 ;	db 1, TAIL_WHIP
@@ -564,6 +566,9 @@ ClefairyEvosAttacks:
 
 ClefableEvosAttacks:
 	db 0 ; no more evolutions
+        db 1, SPLASH
+	db 1, SWEET_KISS
+        db 1, CHARM
 	db 1, POUND
 	db 1, GROWL
 	db 1, ENCORE
@@ -638,6 +643,8 @@ JigglypuffEvosAttacks:
 
 WigglytuffEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, SWEET_KISS
+	db 1, CHARM
 ;	db 1, SING
 ;	db 1, DEFENSE_CURL
 	db 1, POUND
@@ -3031,6 +3038,17 @@ AmpharosEvosAttacks:
 
 BellossomEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, ABSORB
+	db 1, GROWTH
+;	db 1, ACID
+;	db 1, SWEET_SCENT
+;	db 1, MEGA_DRAIN 
+;	db 1, POISONPOWDER
+;	db 1, STUN_SPORE
+	db 1, SLEEP_POWDER
+	db 1, GIGA_DRAIN
+	db 1, TOXIC
+	db 1, MOONLIGHT
 	db 1, MEGA_DRAIN
 	db 1, SWEET_SCENT
 	db 1, STUN_SPORE
@@ -3087,6 +3105,16 @@ SudowoodoEvosAttacks:
 
 PolitoedEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, WATER_GUN
+;	db 1, HYPNOSIS
+	db 1, BUBBLE 
+;	db 1, DOUBLESLAP
+;	db 1, BUBBLEBEAM
+	db 1, RAIN_DANCE
+	db 1, BODY_SLAM
+	db 1, BELLY_DRUM
+	db 1, HYDRO_PUMP
+	db 1, DOUBLE_EDGE
 	db 1, BUBBLEBEAM
 	db 1, HYPNOSIS
 	db 1, DOUBLESLAP
