@@ -66,7 +66,7 @@ ROMX $0e
 ROMX $0f
 	"Battle Core"
 ROMX $10
-	"Evolutions and Attacks"
+	"Evolutions and Attacks 1"
 ROMX $11
 	"bank11"
 ROMX $12
@@ -292,6 +292,7 @@ ROMX $71
 	"Text 3"
 ROMX $72
 	"Miscellaneous Text"
+	"Evolutions and Attacks 2"
 ROMX $73
 	"Pokedex Entries 129-192"
 ROMX $74
