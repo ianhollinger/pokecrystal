@@ -314,7 +314,7 @@ WhitneyRematchBeforeText:
 	line "good on you!"
 
 	para "Oh, you want a"
-	line "Rematch? Okay!"
+	line "rematch? Okay!"
 
 	para "But I gotta"
 	line "warn ya--I've"
