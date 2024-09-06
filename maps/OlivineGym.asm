@@ -219,7 +219,7 @@ Jasmine_BetterTrainer:
 	done
 
 JasmineRematchWinLossText:
-	text "your kindness and"
+	text "Your kindness and"
 	line "your #MON's"
 
 	para "strength brought"
