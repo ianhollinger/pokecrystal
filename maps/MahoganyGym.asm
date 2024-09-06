@@ -249,9 +249,9 @@ PryceRematchText:
 	text "Ah, young"
 	line "CHAMPION!"
 
-	para "Do you know why"
-	line "they call me the"
-	cont "winter Trainer?"
+;	para "Do you know why"
+;	line "they call me the"
+;	cont "winter Trainer?"
 
 	para "Did you know that"
 	line "my middle name is"
