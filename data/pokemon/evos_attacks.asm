@@ -2202,66 +2202,72 @@ OmanyteEvosAttacks:
 	db EVOLVE_LEVEL, 40, OMASTAR
 	db 0 ; no more evolutions
 	db 1, BIND
-	db 6, WITHDRAW
-	db 11, BITE
-	db 16, WATER_GUN
-	db 21, LEER
-	db 26, ROLLOUT
-	db 31, SAND_ATTACK
-	db 36, PROTECT
-	db 41, ANCIENTPOWER
-	db 46, HYDRO_PUMP
-	db 51, ROCK_SLIDE
+	db 1, WITHDRAW
+	db 6, BITE
+	db 11, WATER_GUN
+	db 16, LEER
+	db 21, ROLLOUT
+	db 26, SAND_ATTACK
+	db 31, PROTECT
+	db 36, ANCIENTPOWER
+	db 41, SURF
+	db 46, ROCK_SLIDE
+	db 51, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 OmastarEvosAttacks:
 	db 0 ; no more evolutions
-        db 1, CRUNCH
+;       db 1, CRUNCH
 ;	db 1, BIND
-;	db 6, WITHDRAW
-;	db 11, BITE
-;	db 16, WATER_GUN
-;	db 21, LEER
-	db 26, ROLLOUT
-	db 31, SAND_ATTACK
-	db 36, PROTECT
+;	db 1, WITHDRAW
+;	db 6, BITE
+;	db 11, WATER_GUN
+;	db 16, LEER
+	db 21, ROLLOUT
+	db 26, SAND_ATTACK
+	db 31, PROTECT
+	db 36, ANCIENTPOWER
 	db 39, SPIKE_CANNON
-	db 44, ANCIENTPOWER
-	db 52, HYDRO_PUMP
-	db 60, ROCK_SLIDE
+	db 43, SURF 
+	db 50, ROCK_SLIDE
+	db 57, HYDRO_PUMP
+	db 64, CRUNCH
 	db 0 ; no more level-up moves
 
 KabutoEvosAttacks:
 	db EVOLVE_LEVEL, 40, KABUTOPS
 	db 0 ; no more evolutions
 	db 1, SCRATCH
-	db 6, HARDEN
-	db 11, ABSORB
-	db 16, ROCK_THROW
-	db 21, LEER
-	db 26, MEGA_DRAIN
-	db 31, SAND_ATTACK
-	db 36, PROTECT 
-	db 41, ANCIENTPOWER
-	db 46, ENDURE
+	db 1, HARDEN
+	db 6, ABSORB
+	db 11, ROCK_THROW
+	db 16, LEER
+	db 21, MEGA_DRAIN
+	db 26, SAND_ATTACK
+	db 31, PROTECT 
+	db 36, ANCIENTPOWER
+	db 41, ENDURE
+	db 46, ROCK_SLIDE
 	db 51, LEECH_LIFE
 	db 0 ; no more level-up moves
 
 KabutopsEvosAttacks:
 	db 0 ; no more evolutions
-        db 1, SWORDS_DANCE
+;       db 1, SWORDS_DANCE
 ;	db 1, SCRATCH
-;	db 6, HARDEN
-;	db 11, ABSORB
-;	db 16, ROCK_THROW
-;	db 21, LEER
-	db 26, MEGA_DRAIN
-	db 31, SAND_ATTACK
-	db 36, PROTECT 
+;	db 1, HARDEN
+;	db 6, ABSORB
+;	db 11, ROCK_THROW
+;	db 16, LEER
+	db 21, MEGA_DRAIN
+	db 26, SAND_ATTACK
+	db 31, PROTECT 
+	db 36, ANCIENTPOWER
 	db 39, SLASH
-	db 44, ANCIENTPOWER
-	db 52, ENDURE
-	db 60, LEECH_LIFE
+	db 43, ENDURE
+	db 50, ROCK_SLIDE 
+	db 57, LEECH_LIFE
+	db 64, SWORDS_DANCE
 	db 0 ; no more level-up moves
 
 AerodactylEvosAttacks:
