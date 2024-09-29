@@ -342,17 +342,17 @@ JohtoGrassWildMons:
 	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
 	; morn
 	db 14, NIDORAN_F
-	db 14, NIDORAN_M
-	db 14, NIDORAN_M
 	db 15, PIDGEY
+	db 14, NIDORAN_M
+	db 14, NIDORAN_M
 	db 12, CATERPIE
 	db 13, WEEDLE
 	db 12, WEEDLE
 	; day
 	db 14, NIDORAN_F
-	db 14, NIDORAN_M
-	db 14, NIDORAN_M
 	db 15, PIDGEY
+	db 14, NIDORAN_M
+	db 14, NIDORAN_M
 	db 12, SUNKERN
 	db 13, PIKACHU
 	db 12, PIKACHU
