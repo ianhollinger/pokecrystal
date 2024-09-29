@@ -680,22 +680,22 @@ KantoGrassWildMons:
 	db 33, RATTATA
 	db 33, SPEAROW
 	db 35, MANKEY
-	db 34, DODUO
-	db 36, PONYTA
 	db 37, NIDORAN_F
 	db 37, NIDORAN_M
+	db 34, DODUO
+	db 36, PONYTA
 	; day
 	db 33, RATTATA
 	db 33, SPEAROW
 	db 35, MANKEY
-	db 34, DODUO
-	db 36, PONYTA
 	db 37, NIDORAN_M
 	db 37, NIDORAN_F
+	db 34, DODUO
+	db 36, PONYTA
 	; nite
 	db 33, RATTATA
 	db 33, POLIWAG
-	db 35, RATTATA
+	db 35, MANKEY
 	db 34, POLIWAG
 	db 36, RATTATA
 	db 37, RATTATA
