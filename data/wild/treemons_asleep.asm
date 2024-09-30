@@ -27,6 +27,7 @@ AsleepTreeMonsDay:
 	db SPINARAK
 	db ARIADOS
 	db HERACROSS
+	db MURKROW
 	db -1 ; end
 
 AsleepTreeMonsMorn:
@@ -38,4 +39,5 @@ AsleepTreeMonsMorn:
 	db HERACROSS
 	db SPINARAK
 	db ARIADOS
+	db MURKROW
 	db -1 ; end
