@@ -1515,7 +1515,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_39
-	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 19, RATTATA
 	db 20, RATICATE
@@ -1683,7 +1683,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_OUTSIDE
-	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 51, TANGELA
 	db 52, ARBOK
