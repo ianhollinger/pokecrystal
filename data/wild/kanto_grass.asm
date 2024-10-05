@@ -507,7 +507,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_14
-	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 43, PIDGEOTTO 
 	db 41, NIDORINA
@@ -523,7 +523,7 @@ KantoGrassWildMons:
 	db 43, HOPPIP
 	db 45, SKIPLOOM
 	db 45, JUMPLUFF
-	db 43, CHANSEY
+	db 43, SKIPLOOM
 	; nite
 	db 41, VENONAT
 	db 41, QUAGSIRE
@@ -531,11 +531,11 @@ KantoGrassWildMons:
 	db 43, VENOMOTH
 	db 43, QUAGSIRE
 	db 43, NOCTOWL
-	db 43, CHANSEY
+	db 43, NOCTOWL
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_15
-	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 45, PIDGEOTTO 
 	db 43, NIDORINA
@@ -551,7 +551,7 @@ KantoGrassWildMons:
 	db 45, HOPPIP
 	db 47, TAUROS
 	db 47, SKIPLOOM
-	db 45, CHANSEY
+	db 45, SKIPLOOM
 	; nite
 	db 43, VENONAT
 	db 43, QUAGSIRE
@@ -559,7 +559,7 @@ KantoGrassWildMons:
 	db 45, VENOMOTH
 	db 45, QUAGSIRE
 	db 45, NOCTOWL
-	db 45, CHANSEY
+	db 45, NOCTOWL
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_16
@@ -787,7 +787,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_27
-	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 36, DODUO
 	db 36, SANDSLASH
@@ -803,7 +803,7 @@ KantoGrassWildMons:
 	db 36, RATICATE
 	db 38, PONYTA
 	db 40, RAPIDASH
-	db 38, CHANSEY
+	db 38, PONYTA
 	; nite
 	db 36, NOCTOWL
 	db 36, RATICATE
