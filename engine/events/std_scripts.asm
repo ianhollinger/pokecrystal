@@ -1828,10 +1828,10 @@ CoinVendor_IntroScript:
 .Buy50:
 	checkcoins MAX_COINS - 50
 	ifequal HAVE_MORE, .CoinCaseFull
-	checkmoney YOUR_MONEY, 1000
+	checkmoney YOUR_MONEY, 500
 	ifequal HAVE_LESS, .NotEnoughMoney
 	givecoins 50
-	takemoney YOUR_MONEY, 1000
+	takemoney YOUR_MONEY, 500
 	waitsfx
 	playsound SFX_TRANSACTION
 	farwritetext CoinVendor_Buy50CoinsText
@@ -1841,10 +1841,10 @@ CoinVendor_IntroScript:
 .Buy500:
 	checkcoins MAX_COINS - 500
 	ifequal HAVE_MORE, .CoinCaseFull
-	checkmoney YOUR_MONEY, 10000
+	checkmoney YOUR_MONEY, 5000
 	ifequal HAVE_LESS, .NotEnoughMoney
 	givecoins 500
-	takemoney YOUR_MONEY, 10000
+	takemoney YOUR_MONEY, 5000
 	waitsfx
 	playsound SFX_TRANSACTION
 	farwritetext CoinVendor_Buy500CoinsText
