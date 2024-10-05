@@ -326,7 +326,7 @@ CoinVendor_IntroText:
 	text "Do you need some"
 	line "game coins?"
 
-	para "It costs ¥1000 for"
+	para "It costs ¥500 for"
 	line "50 coins. Do you"
 	cont "want some?"
 	done
