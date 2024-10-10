@@ -3138,7 +3138,7 @@ GruntMGroup:
 	db "GRUNT@", TRAINERTYPE_STAT_EXP
 	db 28, GRIMER
 		dw $19D4, $19D4, $19D4, $19D4, $19D4
-	db 27, GRIMER
+	db 27, NIDORINO
 		dw $17F3, $17F3, $17F3, $17F3, $17F3
 	db 31, VENOMOTH
 		dw $1FE3, $1FE3, $1FE3, $1FE3, $1FE3
@@ -3146,23 +3146,23 @@ GruntMGroup:
 
 	; GRUNTM (5)
 	db "GRUNT@", TRAINERTYPE_STAT_EXP
-	db 26, RATTATA
+	db 24, PINECO
+		dw $12BE, $12BE, $12BE, $12BE, $12BE
+	db 26, GEODUDE
 		dw $1625, $1625, $1625, $1625, $1625
-	db 26, RATTATA
-		dw $1625, $1625, $1625, $1625, $1625
-	db 28, RATTATA
+	db 28, VOLTORB
 	 	dw $19D4, $19D4, $19D4, $19D4, $19D4
-	db 28, RATTATA
-	 	dw $19D4, $19D4, $19D4, $19D4, $19D4
-	db 28, RATTATA
-	 	dw $19D4, $19D4, $19D4, $19D4, $19D4
+	db 30, KOFFING
+	 	dw $1DCC, $1DCC, $1DCC, $1DCC, $1DCC
+;	db 28, RATTATA
+;	 	dw $19D4, $19D4, $19D4, $19D4, $19D4
 	db -1 ; end
 
 	; GRUNTM (6)
 	db "GRUNT@", TRAINERTYPE_STAT_EXP
 	db 31, ZUBAT
 		dw $1FE3, $1FE3, $1FE3, $1FE3, $1FE3
-	db 31, MANKEY
+	db 31, MACHOP
 		dw $1FE3, $1FE3, $1FE3, $1FE3, $1FE3
 	db -1 ; end
 
@@ -3188,7 +3188,7 @@ GruntMGroup:
 	db "GRUNT@", TRAINERTYPE_STAT_EXP
 	db 29, RATICATE
 	 	dw $1BC7, $1BC7, $1BC7, $1BC7, $1BC7
-	db 31, KOFFING
+	db 31, QWILFISH
 		dw $1FE3, $1FE3, $1FE3, $1FE3, $1FE3
 	db -1 ; end
 
