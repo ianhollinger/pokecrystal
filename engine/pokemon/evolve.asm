@@ -184,6 +184,15 @@ EvolveAfterBattle_MasterLoop:
 	jp nz, .dont_evolve_3
 	jr .proceed
 
+.level
+	ld a, [hli]
+	ld b, a
+	ld a, [wTempMonLevel]
+	cp b
+	jp c, .dont_evolve_3
+	call IsMonHoldingEverstone
+	jp z, .dont_evolve_3
+
 .held
 	push hl
 	ld a, [wCurPartyMon]
@@ -196,16 +205,6 @@ EvolveAfterBattle_MasterLoop:
 	ld a, [hli]
 	cp b
 	jp nz, .dont_evolve_2
-	jp .proceed
-
-.level
-	ld a, [hli]
-	ld b, a
-	ld a, [wTempMonLevel]
-	cp b
-	jp c, .dont_evolve_3
-	call IsMonHoldingEverstone
-	jp z, .dont_evolve_3
 
 .proceed
 	ld a, [wTempMonLevel]
