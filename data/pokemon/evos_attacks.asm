@@ -1484,22 +1484,22 @@ OnixEvosAttacks:
 ;	db EVOLVE_TRADE, METAL_COAT, STEELIX
 	db EVOLVE_HELD, METAL_COAT, 1, STEELIX
 	db 0 ; no more evolutions
-	db 1, SHARPEN
 	db 1, TACKLE
-	db 1, HARDEN
-	db 5, BIND
-	db 8, ROCK_THROW
-	db 12, CURSE
-	db 15, RAGE
-	db 19, DRAGONBREATH
-	db 22, DIG
-	db 26, SCREECH
-	db 29, SLAM 
+	db 3, SHARPEN
+	db 6, HARDEN
+	db 10, BIND
+	db 12, ROCK_THROW
+	db 15, CURSE
+	db 19, RAGE
+	db 21, DRAGONBREATH
+	db 24, DIG
+	db 28, SCREECH
+	db 30, SLAM 
 	db 33, ROCK_SLIDE 
-	db 36, EARTHQUAKE
-	db 40, IRON_TAIL
-	db 43, SANDSTORM
-	db 47, DOUBLE_EDGE
+	db 37, EARTHQUAKE
+	db 39, IRON_TAIL
+	db 42, SANDSTORM
+	db 46, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 DrowzeeEvosAttacks:
@@ -3286,22 +3286,22 @@ GligarEvosAttacks:
 SteelixEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CRUNCH
-	db 1, SHARPEN
 	db 1, TACKLE
-	db 1, HARDEN
-	db 5, BIND
-	db 8, ROCK_THROW
-	db 12, CURSE
-	db 15, RAGE
-	db 19, DRAGONBREATH
-	db 22, DIG
-	db 26, SCREECH
-	db 29, SLAM 
+	db 3, SHARPEN
+	db 6, HARDEN
+	db 10, BIND
+	db 12, ROCK_THROW
+	db 15, CURSE
+	db 19, RAGE
+	db 21, DRAGONBREATH
+	db 24, DIG
+	db 28, SCREECH
+	db 30, SLAM 
 	db 33, ROCK_SLIDE 
-	db 36, EARTHQUAKE
-	db 40, IRON_TAIL
-	db 43, SANDSTORM
-	db 47, DOUBLE_EDGE
+	db 37, EARTHQUAKE
+	db 39, IRON_TAIL
+	db 42, SANDSTORM
+	db 46, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 SnubbullEvosAttacks:
