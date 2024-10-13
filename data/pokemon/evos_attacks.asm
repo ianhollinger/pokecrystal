@@ -918,7 +918,7 @@ PoliwagEvosAttacks:
 PoliwhirlEvosAttacks:
 	db EVOLVE_ITEM, WATER_STONE, POLIWRATH
 	db EVOLVE_TRADE, KINGS_ROCK, POLITOED
-	db EVOLVE_HELD, KINGS_ROCK, POLITOED
+	db EVOLVE_HELD, KINGS_ROCK, 1, POLITOED
 	db 0 ; no more evolutions
 ;	db 1, WATER_GUN
 ;	db 5, HYPNOSIS
@@ -951,7 +951,7 @@ AbraEvosAttacks:
 
 KadabraEvosAttacks:
 	db EVOLVE_TRADE, -1, ALAKAZAM
-	db EVOLVE_HELD, TWISTEDSPOON, ALAKAZAM
+	db EVOLVE_HELD, TWISTEDSPOON, 1, ALAKAZAM
 	db 0 ; no more evolutions
 	db 1, TELEPORT
 	db 1, KINESIS
@@ -1005,7 +1005,7 @@ MachopEvosAttacks:
 
 MachokeEvosAttacks:
 	db EVOLVE_TRADE, -1, MACHAMP
-	db EVOLVE_HELD, BLACKBELT_I, MACHAMP
+	db EVOLVE_HELD, BLACKBELT_I, 1, MACHAMP
 	db 0 ; no more evolutions
 ;	db 1, LOW_KICK
 ;	db 1, LEER
@@ -1135,7 +1135,7 @@ GeodudeEvosAttacks:
 
 GravelerEvosAttacks:
 	db EVOLVE_TRADE, -1, GOLEM
-	db EVOLVE_HELD, HARD_STONE, GOLEM
+	db EVOLVE_HELD, HARD_STONE, 1, GOLEM
 	db 0 ; no more evolutions
 ;	db 1, TACKLE
 ;	db 1, DEFENSE_CURL
@@ -1207,7 +1207,7 @@ RapidashEvosAttacks:
 SlowpokeEvosAttacks:
 	db EVOLVE_LEVEL, 37, SLOWBRO
 	db EVOLVE_TRADE, KINGS_ROCK, SLOWKING
-	db EVOLVE_HELD, KINGS_ROCK, SLOWKING
+	db EVOLVE_HELD, KINGS_ROCK, 1, SLOWKING
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, CURSE
@@ -1444,7 +1444,7 @@ GastlyEvosAttacks:
 
 HaunterEvosAttacks:
 	db EVOLVE_TRADE, -1, GENGAR
-	db EVOLVE_HELD, SPELL_TAG, GENGAR
+	db EVOLVE_HELD, SPELL_TAG, 1, GENGAR
 	db 0 ; no more evolutions
 ;	db 1, HYPNOSIS
 ;	db 1, LICK
@@ -1482,7 +1482,7 @@ GengarEvosAttacks:
 
 OnixEvosAttacks:
 	db EVOLVE_TRADE, METAL_COAT, STEELIX
-	db EVOLVE_HELD, METAL_COAT, STEELIX
+	db EVOLVE_HELD, METAL_COAT, 1, STEELIX
 	db 0 ; no more evolutions
 	db 1, SHARPEN
 	db 1, TACKLE
@@ -1864,7 +1864,7 @@ HorseaEvosAttacks:
 
 SeadraEvosAttacks:
 	db EVOLVE_TRADE, DRAGON_SCALE, KINGDRA
-	db EVOLVE_HELD, DRAGON_SCALE, KINGDRA
+	db EVOLVE_HELD, DRAGON_SCALE, 1, KINGDRA
 	db 0 ; no more evolutions
 ;	db 1, WATER_GUN 
 ;	db 1, LEER
@@ -1963,7 +1963,7 @@ MrMimeEvosAttacks:
 
 ScytherEvosAttacks:
 	db EVOLVE_TRADE, METAL_COAT, SCIZOR
-	db EVOLVE_HELD, METAL_COAT, SCIZOR
+	db EVOLVE_HELD, METAL_COAT, 1, SCIZOR
 	db 0 ; no more evolutions
 	db 1, LEER
 	db 1, QUICK_ATTACK
@@ -2179,7 +2179,7 @@ FlareonEvosAttacks:
 
 PorygonEvosAttacks:
 	db EVOLVE_TRADE, UP_GRADE, PORYGON2
-	db EVOLVE_HELD, UP_GRADE, PORYGON2
+	db EVOLVE_HELD, UP_GRADE, 1, PORYGON2
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, CONVERSION
