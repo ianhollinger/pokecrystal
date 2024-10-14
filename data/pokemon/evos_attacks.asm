@@ -2912,15 +2912,14 @@ MarillEvosAttacks:
 	db 1, TACKLE
 	db 1, TAIL_WHIP 
 	db 5, WATER_GUN
-	db 9, BUBBLE
-	db 13, DEFENSE_CURL
-	db 17, ROLLOUT
-	db 21, BUBBLEBEAM
-	db 25, CHARM
-	db 29, SLAM
-	db 33, RAIN_DANCE
-	db 37, DOUBLE_EDGE
-	db 41, HYDRO_PUMP
+	db 9, DEFENSE_CURL
+	db 13, ROLLOUT
+	db 17, BUBBLEBEAM
+	db 21, CHARM
+	db 25, SLAM
+	db 29, RAIN_DANCE
+	db 33, DOUBLE_EDGE
+	db 37, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 AzumarillEvosAttacks:
@@ -2929,14 +2928,13 @@ AzumarillEvosAttacks:
 ;	db 1, TAIL_WHIP 
 ;	db 5, WATER_GUN 
 	db 1, WATER_GUN 
-	db 9, BUBBLE
-	db 13, DEFENSE_CURL
-	db 17, ROLLOUT
-	db 22, BUBBLEBEAM
-	db 27, CHARM
-	db 32, SLAM
-	db 37, RAIN_DANCE
-	db 42, DOUBLE_EDGE
+	db 9, DEFENSE_CURL
+	db 13, ROLLOUT
+	db 17, BUBBLEBEAM
+	db 23, CHARM
+	db 29, SLAM
+	db 35, RAIN_DANCE
+	db 41, DOUBLE_EDGE
 	db 47, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
