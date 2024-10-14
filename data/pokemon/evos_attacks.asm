@@ -3144,8 +3144,8 @@ UmbreonEvosAttacks:
 MurkrowEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
-	db 6, GUST
-	db 12, PURSUIT
+	db 6, PURSUIT
+	db 12, GUST
 	db 17, HAZE
 	db 23, WING_ATTACK
 	db 28, NIGHT_SHADE
