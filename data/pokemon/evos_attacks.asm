@@ -1800,17 +1800,17 @@ ChanseyEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, BLISSEY
 	db 0 ; no more evolutions
 	db 1, POUND
-	db 1, GROWL
-	db 6, DEFENSE_CURL 
-	db 10, TAIL_WHIP
-	db 13, DOUBLESLAP
+	db 4, GROWL
+	db 8, DEFENSE_CURL 
+	db 11, TAIL_WHIP
+	db 15, DOUBLESLAP
 	db 18, SOFTBOILED
 	db 22, MINIMIZE
 	db 25, TAKE_DOWN
-	db 30, SING
-	db 34, EGG_BOMB
-	db 37, LIGHT_SCREEN
-	db 42, DOUBLE_EDGE
+	db 29, SING
+	db 32, EGG_BOMB
+	db 36, LIGHT_SCREEN
+	db 39, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 TangelaEvosAttacks:
@@ -3816,17 +3816,17 @@ MiltankEvosAttacks:
 BlisseyEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POUND
-	db 1, GROWL
-	db 6, DEFENSE_CURL 
-	db 10, TAIL_WHIP
-	db 13, DOUBLESLAP
+	db 4, GROWL
+	db 8, DEFENSE_CURL 
+	db 11, TAIL_WHIP
+	db 15, DOUBLESLAP
 	db 18, SOFTBOILED
 	db 22, MINIMIZE
 	db 25, TAKE_DOWN
-	db 30, SING
-	db 34, EGG_BOMB
-	db 37, LIGHT_SCREEN
-	db 42, DOUBLE_EDGE
+	db 29, SING
+	db 32, EGG_BOMB
+	db 36, LIGHT_SCREEN
+	db 39, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 RaikouEvosAttacks:
