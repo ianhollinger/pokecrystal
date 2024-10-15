@@ -1252,11 +1252,11 @@ MagnemiteEvosAttacks:
 	db 10, THUNDER_WAVE 
 	db 14, SONICBOOM
 	db 19, SPARK
-	db 23, AGILITY 
-	db 27, LIGHT_SCREEN
-	db 32, SWIFT
-	db 36, SCREECH
-	db 40, THUNDERBOLT
+	db 23, LIGHT_SCREEN 
+	db 27, SWIFT
+	db 32, SCREECH
+	db 36, THUNDERBOLT
+	db 40, AGILITY
 	db 45, LOCK_ON
 	db 49, ZAP_CANNON
 	db 0 ; no more level-up moves
@@ -1270,12 +1270,12 @@ MagnetonEvosAttacks:
 ;	db 14, SONICBOOM
 ;	db 19, SPARK
 	db 1, SPARK
-	db 23, AGILITY 
-	db 27, LIGHT_SCREEN
+	db 23, LIGHT_SCREEN
+	db 27, SWIFT 
 	db 29, TRI_ATTACK
-	db 34, SWIFT
-	db 40, SCREECH
-	db 46, THUNDERBOLT
+	db 34, SCREECH
+	db 40, THUNDERBOLT
+	db 46, AGILITY
 	db 53, LOCK_ON
 	db 59, ZAP_CANNON
 	db 0 ; no more level-up moves
