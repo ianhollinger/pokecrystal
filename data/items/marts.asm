@@ -38,7 +38,11 @@ Marts:
 	dw MartSaffron2
 	dw MartMtMoon
 	dw MartIndigoPlateau
-	dw MartUnderground
+	dw MartUnderground	
+	dw MartUnderground2
+	dw MartUnderground3
+	dw MartUnderground4
+	dw MartUnderground5
 	assert_table_length NUM_MARTS
 
 MartCherrygrove:
@@ -443,6 +447,38 @@ MartUnderground:
 	db ENERGY_ROOT
 	db HEAL_POWDER
 	db REVIVAL_HERB
+	db -1 ; end
+
+MartUnderground2:
+	db 4 ; # items
+	db PINK_BOW
+	db BLACKGLASSES
+	db BLACKBELT_I
+	db DRAGON_FANG
+	db -1 ; end
+
+MartUnderground3:
+	db 4 ; # items
+	db SHARP_BEAK
+	db NEVERMELTICE
+	db POISON_BARB
+	db TWISTEDSPOON
+	db -1 ; end
+
+MartUnderground4:
+	db 4 ; # items
+	db METAL_COAT
+	db MAGNET
+	db HARD_STONE
+	db MIRACLE_SEED
+	db -1 ; end
+
+MartUnderground5:
+	db 4 ; # items
+	db SILVERPOWDER
+	db MYSTIC_WATER
+	db SPELL_TAG	
+	db CHARCOAL
 	db -1 ; end
 
 DefaultMart:
