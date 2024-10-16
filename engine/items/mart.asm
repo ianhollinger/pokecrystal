@@ -22,6 +22,7 @@ OpenMartDialog::
 	dw BargainShop
 	dw Pharmacist
 	dw RooftopSale
+	dw TypeItemShop
 
 MartDialog:
 	ld a, MARTTYPE_STANDARD
@@ -93,6 +94,16 @@ RooftopSale:
 	ret
 
 INCLUDE "data/items/rooftop_sale.asm"
+
+TypeItemShop:
+	call FarReadMart
+	call LoadStandardMenuHeader
+	ld hl, TypeItemShopMerchantIntroText
+	call MartTextbox
+	call BuyMenu
+	ld hl, TypeItemShopMerchantComeAgainText
+	call MartTextbox
+	ret
 
 LoadMartPointer:
 	ld a, b
@@ -435,6 +446,7 @@ GetMartDialogGroup:
 	dwb .BargainShopPointers, 1
 	dwb .PharmacyPointers, 0
 	dwb .StandardMartPointers, 2
+	dwb .TypeItemShopPointers, 0
 
 .StandardMartPointers:
 	dw MartHowManyText
@@ -466,6 +478,14 @@ GetMartDialogGroup:
 	dw PharmacyNoMoneyText
 	dw PharmacyPackFullText
 	dw PharmacyThanksText
+	dw BuyMenuLoop
+
+.TypeItemShopPointers:
+	dw TypeItemMerchantHowManyText
+	dw TypeItemMerchantFinalPriceText
+	dw TypeItemMerchantNoMoneyText
+	dw TypeItemMerchantPackFullText
+	dw TypeItemMerchantThanksText
 	dw BuyMenuLoop
 
 BuyMenuLoop:
@@ -746,6 +766,34 @@ PharmacyNoMoneyText:
 
 PharmacyComeAgainText:
 	text_far _PharmacyComeAgainText
+	text_end
+
+TypeItemShopMerchantIntroText:
+	text_far _TypeItemShopMerchantIntroText
+	text_end
+
+TypeItemShopMerchantHowManyText:
+	text_far _TypeItemShopMerchantHowManyText
+	text_end
+
+TypeItemShopMerchantFinalPriceText:
+	text_far _TypeItemShopMerchantFinalPriceText
+	text_end
+
+TypeItemShopMerchantNoMoneyText:
+	text_far _TypeItemShopMerchantNoMoneyText
+	text_end
+
+TypeItemShopMerchantPackFullText:
+	text_far _TypeItemShopMerchantPackFullText
+	text_end
+
+TypeItemShopMerchantThanksText:
+	text_far _TypeItemShopMerchantThanksText
+	text_end
+
+TypeItemShopMerchantComeAgainText:
+	text_far _TypeItemShopMerchantComeAgainText
 	text_end
 
 SellMenu:
