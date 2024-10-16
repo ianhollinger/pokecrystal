@@ -2,6 +2,8 @@ BuenaPrizeItems:
 	table_width 2, BuenaPrizeItems
 	db ULTRA_BALL,   2
 	db FULL_RESTORE, 3
+	db DRAGON_SCALE, 3
+	db UP_GRADE,     3
 	db QUICK_CLAW,   4
 	db FOCUS_BAND,   4
 	db BRIGHTPOWDER, 4
