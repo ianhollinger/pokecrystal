@@ -617,6 +617,48 @@ _PharmacyComeAgainText::
 	line "See you around."
 	done
 
+_TypeItemShopMerchantIntroText::
+	text "Good day to you."
+
+	para "I find rare items"
+	line "that power up your"
+	cont "#MON's moves."
+	
+	para "Come take a look."
+	done
+
+_TypeItemShopMerchantHowManyText::
+	text "How many?"
+	done
+
+_TypeItemShopMerchantFinalPriceText::
+	text_decimal wItemQuantityChange, 1, 2
+	text " @"
+	text_ram wStringBuffer2
+	text "(S)"
+	line "will be ¥@"
+	text_decimal hMoneyTemp, 3, 6
+	text "."
+	done
+
+_TypeItemShopMerchantNoMoneyText::
+	text "That's not enough."
+	done
+
+_TypeItemShopMerchantPackFullText::
+	text "You don't have"
+	line "room."
+	done
+
+_TypeItemShopMerchantThanksText::
+	text "Thank you kindly."
+	done
+
+_TypeItemShopMerchantComeAgainText::
+	text "Come back another"
+	line "day, all right?"
+	done
+
 _NothingToSellText::
 	text "You don't have"
 	line "anything to sell."
