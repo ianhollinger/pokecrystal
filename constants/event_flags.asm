@@ -1508,7 +1508,8 @@
 	const EVENT_VERMILION_GYM_SURGE2
 	const EVENT_ILEX_FOREST_CELEBI
 	const EVENT_CAMPER_QUENTIN
-; Unused: next 45 events
+	const EVENT_GOLDENROD_UNDERGROUND_TYPE_ITEM
+; Unused: next 44 events
 
 	const_next 2048
 DEF NUM_EVENTS EQU const_value ; 800
