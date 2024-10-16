@@ -190,17 +190,17 @@ TypeItemMerchantScript:
 	end
 
 .Tuesday:
-	pokemart MARTTYPE_EVO_ITEM, MART_UNDERGROUND3
+	pokemart MARTTYPE_TYPE_ITEM, MART_UNDERGROUND3
 	closetext
 	end
 
 .Wednesday:
-	pokemart MARTTYPE_EVO_ITEM, MART_UNDERGROUND4
+	pokemart MARTTYPE_TYPE_ITEM, MART_UNDERGROUND4
 	closetext
 	end
 
 .Thursday:
-	pokemart MARTTYPE_EVO_ITEM, MART_UNDERGROUND5
+	pokemart MARTTYPE_TYPE_ITEM, MART_UNDERGROUND5
 	closetext
 	end
 
