@@ -179,7 +179,7 @@ TypeItemMerchantScript:
 	opentext
 	readvar VAR_WEEKDAY
 	ifequal MONDAY, .Monday
-	ifequal TUEDSAY, .Tuesday
+	ifequal TUESDAY, .Tuesday
 	ifequal WEDNESDAY, .Wednesday
 	ifequal THURSDAY, .Thursday
 	sjump GoldenrodUndergroundScript_ShopClosed
