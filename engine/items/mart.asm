@@ -481,11 +481,11 @@ GetMartDialogGroup:
 	dw BuyMenuLoop
 
 .TypeItemShopPointers:
-	dw TypeItemMerchantHowManyText
-	dw TypeItemMerchantFinalPriceText
-	dw TypeItemMerchantNoMoneyText
-	dw TypeItemMerchantPackFullText
-	dw TypeItemMerchantThanksText
+	dw TypeItemShopMerchantHowManyText
+	dw TypeItemShopMerchantFinalPriceText
+	dw TypeItemShopMerchantNoMoneyText
+	dw TypeItemShopMerchantPackFullText
+	dw TypeItemShopMerchantThanksText
 	dw BuyMenuLoop
 
 BuyMenuLoop:
