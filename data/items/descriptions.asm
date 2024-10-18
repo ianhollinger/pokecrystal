@@ -580,8 +580,8 @@ PoisonBarbDesc:
 	next "type moves. (HOLD)@"
 
 KingsRockDesc:
-	db   "May make the foe"
-	next "flinch. (HOLD)@"
+	db   "May flinch foe."
+	next "(HOLD, EVO)@"
 
 BitterBerryDesc:
 	db   "A self-cure for"
@@ -631,15 +631,15 @@ MysticWaterDesc:
 	next "type moves. (HOLD)@"
 
 TwistedSpoonDesc:
-	db   "Powers up psychic-"
-	next "type moves. (HOLD)@"
+	db   "Powers up psychic"
+	next "moves. (HOLD, EVO)@"
 
 WhtApricornDesc:
 	db   "A white APRICORN.@"
 
 BlackbeltDesc:
-	db   "Boosts fighting-"
-	next "type moves. (HOLD)@"
+	db   "Boosts fighting"
+	next "moves. (HOLD, EVO)@"
 
 BlkApricornDesc:
 	db   "A black APRICORN."
@@ -697,8 +697,8 @@ EverStoneDesc:
 	next "(HOLD)@"
 
 SpellTagDesc:
-	db   "Powers up ghost-"
-	next "type moves. (HOLD)@"
+	db   "Powers up ghost"
+	next "moves. (HOLD, EVO)@"
 
 RageCandyBarDesc:
 	db   "Eliminates all"
@@ -744,8 +744,8 @@ RevivalHerbDesc:
 	next "#MON. Bitter.@"
 
 HardStoneDesc:
-	db   "Powers up rock-"
-	next "type moves. (HOLD)@"
+	db   "Powers up rock"
+	next "moves. (HOLD, EVO)@"
 
 LuckyEggDesc:
 	db   "Earns extra EXP."
@@ -810,8 +810,8 @@ TeruSama13Desc:
 	db   "?@"
 
 MetalCoatDesc:
-	db   "Powers up steel-"
-	next "type moves. (HOLD)@"
+	db   "Powers up steel"
+	next "moves. (HOLD, EVO)@"
 
 DragonFangDesc:
 	db   "Powers up dragon-"
@@ -838,8 +838,8 @@ MysteryBerryDesc:
 	next "(10, HOLD)@"
 
 DragonScaleDesc:
-	db   "A rare dragon-type"
-	next "item.@"
+	db   "Sought by SEADRA."
+	next "(HOLD, EVO)@"
 
 BerserkGeneDesc:
 	db   "Boosts ATTACK but"
@@ -917,8 +917,8 @@ TeruSama22Desc:
 	db   "?@"
 
 UpGradeDesc:
-	db   "A software update"
-	next "for PORYGON.@"
+	db   "A PORYGON update."
+	next "(HOLD, EVO)@"
 
 BerryDesc:
 	db   "Self-restores HP."
