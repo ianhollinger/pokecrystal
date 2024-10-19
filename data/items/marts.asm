@@ -428,7 +428,7 @@ MartMtMoon:
 	db -1 ; end
 
 MartIndigoPlateau:
-	db 10 ; # items
+	db 12 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
 	db HYPER_POTION
@@ -439,6 +439,8 @@ MartIndigoPlateau:
 	db MAX_REPEL
 	db REVIVE
 	db FULL_HEAL
+	db ETHER
+	db ELIXER
 	db -1 ; end
 
 MartUnderground:
