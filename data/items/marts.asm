@@ -453,18 +453,18 @@ MartUnderground:
 
 MartUnderground2:
 	db 4 ; # items
-	db PINK_BOW
-	db BLACKGLASSES
-	db BLACKBELT_I
-	db DRAGON_FANG
+	db SILVERPOWDER
+	db MYSTIC_WATER
+	db SPELL_TAG	
+	db CHARCOAL
 	db -1 ; end
 
 MartUnderground3:
 	db 4 ; # items
-	db SHARP_BEAK
-	db NEVERMELTICE
-	db POISON_BARB
-	db TWISTEDSPOON
+	db PINK_BOW
+	db BLACKGLASSES
+	db BLACKBELT_I
+	db DRAGON_FANG
 	db -1 ; end
 
 MartUnderground4:
@@ -477,10 +477,10 @@ MartUnderground4:
 
 MartUnderground5:
 	db 4 ; # items
-	db SILVERPOWDER
-	db MYSTIC_WATER
-	db SPELL_TAG	
-	db CHARCOAL
+	db SHARP_BEAK
+	db NEVERMELTICE
+	db POISON_BARB
+	db TWISTEDSPOON
 	db -1 ; end
 
 DefaultMart:
