@@ -5251,7 +5251,7 @@ BikerGroup:
 
 	; BIKER (7)
 	db "REESE@", TRAINERTYPE_STAT_EXP
-	db 49, WEEZING
+	db 49, KANGASKHAN
 		dw $51A2, $51A2, $51A2, $51A2, $51A2
 	db -1 ; end
 
