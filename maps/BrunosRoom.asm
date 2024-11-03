@@ -47,7 +47,10 @@ BrunoScript_Battle:
 	iftrue BrunoScript_AfterBattle
 
 BrunoScript_BeforeFight:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .rematch
 	writetext BrunoScript_BrunoBeforeText
+.fight:
 	waitbutton
 	closetext
 	checkevent EVENT_BEAT_RED
@@ -56,12 +59,19 @@ BrunoScript_BeforeFight:
 	iftrue BrunoScript_PostGame
 	winlosstext BrunoScript_BrunoBeatenText, 0
 	loadtrainer BRUNO, BRUNO1
+	sjump BrunoScript_BeginFight
+.rematch: 
+	writetext BrunoScript_BrunoBeforeRematchText
+	sjump .fight
 BrunoScript_BeginFight:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_BRUNO
 	opentext
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .rematchDefeat
 	writetext BrunoScript_BrunoDefeatText
+.defeat:
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
@@ -71,6 +81,9 @@ BrunoScript_BeginFight:
 	setevent EVENT_BRUNOS_ROOM_EXIT_OPEN
 	waitsfx
 	end
+.rematchDefeat:
+	writetext BrunoScript_BrunoRematchDefeatText
+	sjump .defeat
 
 BrunoScript_PostGame:
 	winlosstext BrunoScript_BrunoBeatenText, 0
@@ -83,10 +96,16 @@ BrunoScript_Rerematch:
 	sjump BrunoScript_BeginFight
 
 BrunoScript_AfterBattle:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .afterRematch
 	writetext BrunoScript_BrunoDefeatText
+.end:
 	waitbutton
 	closetext
 	end
+.afterRematch:
+	writetext BrunoScript_BrunoRematchDefeatText
+	sjump .end
 
 BrunosRoom_EnterMovement:
 	step UP
@@ -137,6 +156,44 @@ BrunoScript_BrunoDefeatText:
 
 	para "Go face your next"
 	line "challenge!"
+	done
+
+BrunoScript_BrunoBeforeRematchText:
+	text "I could feel the"
+	line "intensity of your"
+
+	para "battle with KOGA,"
+	line "even from here!"
+
+	para "Now it's time to"
+	line "show you the power"
+
+	para "of my fighting-"
+	line "type #MON, who"
+
+	para "I've been training"
+	line "just as hard as"
+
+	para "you've trained your"
+	line "team, surely!"
+
+	para "Hoo hah!"
+	line "Hoo! HAH!!!"
+	done
+
+BrunoScript_BrunoRematchDefeatText:
+	text "Ugh! No! So my"
+	line "training is still"
+
+	para "lacking, is that" 
+	line "it?" 
+
+	para "…Go. Do not"
+	line "trouble yourself"
+	cont "on my behalf."
+
+	para "Continue to move"
+	line "forward!"
 	done
 
 BrunosRoom_MapEvents:
