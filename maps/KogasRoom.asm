@@ -47,7 +47,10 @@ KogaScript_Battle:
 	iftrue KogaScript_AfterBattle
 
 KogaScript_BeforeFight:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .rematch
 	writetext KogaScript_KogaBeforeText
+.fight:
 	waitbutton
 	closetext
 	checkevent EVENT_BEAT_RED
@@ -56,6 +59,10 @@ KogaScript_BeforeFight:
 	iftrue KogaScript_PostGame
 	winlosstext KogaScript_KogaBeatenText, 0
 	loadtrainer KOGA, KOGA1
+	sjump KogaScript_BeginFight
+.rematch: 
+	writetext KogaScript_KogaBeforeRematchText
+	sjump .fight
 KogaScript_BeginFight:
 	startbattle
 	reloadmapafterbattle
@@ -142,6 +149,29 @@ KogaScript_KogaDefeatText:
 	para "Go on to the next"
 	line "room, and put your"
 	cont "abilities to test!"
+	done
+
+KogaScript_BeforeRematchText:
+	text "Fwahahaha! If it"
+	line "isn't the child."
+
+	para "It seems we are"
+	line "fated to meet once"
+	cont "again."
+
+	para "You have come at a"
+	line "truly opportune"
+
+	para "time. I was just" 
+	line "thinking that I"
+
+	para "wanted to test my"
+	line "newly refined sin-"
+	cont "ister techniques…"
+
+	para "in a battle that"
+	line "will end in your"
+	cont "utter defeat!"
 	done
 
 KogasRoom_MapEvents:
