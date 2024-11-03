@@ -47,7 +47,10 @@ WillScript_Battle:
 	iftrue WillScript_AfterBattle
 
 WillScript_BeforeFight:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .rematch
 	writetext WillScript_WillBeforeText
+.fight:
 	waitbutton
 	closetext
 	checkevent EVENT_BEAT_RED
@@ -56,6 +59,10 @@ WillScript_BeforeFight:
 	iftrue WillScript_PostGame
 	winlosstext WillScript_WillBeatenText, 0
 	loadtrainer WILL, WILL1
+	sjump WillScript_BeginFight
+.rematch: 
+	writetext WillScript_WillBeforeRematchText
+	sjump .fight
 WillScript_BeginFight:
 	startbattle
 	reloadmapafterbattle
@@ -71,6 +78,10 @@ WillScript_BeginFight:
 	setevent EVENT_WILLS_ROOM_EXIT_OPEN
 	waitsfx
 	end
+
+WillScript_WillBeforeRematch:
+	writetext WillScript_WillBeforeRematchText
+ 
 
 WillScript_PostGame:
 	winlosstext WillScript_WillBeatenText, 0
@@ -118,6 +129,28 @@ WillScript_WillBeforeText:
 
 	para "Losing is not an"
 	line "option!"
+	done
+
+WillScript_WillBeforeRematchText:
+	text "Welcome back to"
+	line "#MON LEAGUE,"
+	cont "<PLAYER>."
+
+	para "You've returned to"
+	line "defend your title,"
+	cont "I presume?"
+
+	para "I've been training"
+	line "constantly with my"
+	cont "#MON since our" 
+	cont "last battle."
+
+	para "Our psychic bonds"
+	line "have never been"
+	cont "stronger." 
+
+	para "There's no way"
+	line "I'll lose now!"
 	done
 
 WillScript_WillBeatenText:
