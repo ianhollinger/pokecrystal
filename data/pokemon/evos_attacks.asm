@@ -1283,17 +1283,18 @@ MagnetonEvosAttacks:
 FarfetchDEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
-	db 5, SAND_ATTACK
-	db 9, LEER
-	db 13, FOCUS_ENERGY 
-	db 17, FURY_ATTACK 
-	db 21, FURY_CUTTER
-	db 25, CUT
-	db 29, RAZOR_LEAF
-	db 33, SLASH 
-	db 37, SWORDS_DANCE
-	db 41, FALSE_SWIPE
-	db 45, AGILITY
+	db 3, SAND_ATTACK
+	db 4, LEER
+	db 7, FOCUS_ENERGY 
+	db 9, FURY_ATTACK 
+	db 13, FURY_CUTTER
+	db 16, CUT
+	db 21, RAZOR_LEAF
+	db 25, SLASH 
+	db 31, SWORDS_DANCE
+	db 36, FALSE_SWIPE
+	db 43, AGILITY
+	db 49, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 DoduoEvosAttacks:
