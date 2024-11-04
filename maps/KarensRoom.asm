@@ -45,7 +45,10 @@ KarenScript_Battle:
 	checkevent EVENT_BEAT_ELITE_4_KAREN
 	iftrue KarenScript_AfterBattle
 KarenScript_BeforeFight:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .rematch
 	writetext KarenScript_KarenBeforeText
+.fight:
 	waitbutton
 	closetext
 	checkevent EVENT_BEAT_RED
@@ -54,12 +57,20 @@ KarenScript_BeforeFight:
 	iftrue KarenScript_PostGame
 	winlosstext KarenScript_KarenBeatenText, 0
 	loadtrainer KAREN, KAREN1
+	sjump BrunoScript_BeginFight
+.rematch: 
+	writetext KarenScript_KarenBeforeRematchText
+	sjump .fight
+
 KarenScript_BeginFight:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KAREN
 	opentext
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .rematchDefeat
 	writetext KarenScript_KarenDefeatText
+.defeat:
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
@@ -69,6 +80,9 @@ KarenScript_BeginFight:
 	setevent EVENT_KARENS_ROOM_EXIT_OPEN
 	waitsfx
 	end
+.rematchDefeat:
+	writetext KarenScript_KarenRematchDefeatText
+	sjump .defeat
 
 KarenScript_PostGame:
 	winlosstext KarenScript_KarenBeatenText, 0
@@ -81,10 +95,16 @@ KarenScript_Rerematch:
  	sjump KarenScript_BeginFight
 
 KarenScript_AfterBattle:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .afterRematch
 	writetext KarenScript_KarenDefeatText
+.end:
 	waitbutton
 	closetext
 	end
+.afterRematch:
+	writetext KarenScript_KarenRematchDefeatText
+	sjump .end
 
 KarensRoom_EnterMovement:
 	step UP
@@ -144,6 +164,46 @@ KarenScript_KarenDefeatText:
 	para "Go on--the CHAM-"
 	line "PION is waiting."
 	done
+
+KarenScript_KarenBeforeRematchText:
+	text "Ah, I had a feel-"
+	line "ing it was you."
+
+	para "I sensed your"
+	line "presence coming"
+	cont "closer to me."
+
+	para "You didn't seem"
+	line "very vigilant,"
+	cont "though."
+
+	para "You should never"
+	line "let your guard"
+	cont "down."
+
+	para "straighten up your"
+	line "appearance and try"
+
+	para "not to give your"
+	line "opponent an open-"
+	cont "ing."
+
+	para "Now, show me your"
+	line "battle stance!"
+	done
+
+KarenScript_KarenRematchDefeatText:
+	text "No! I can't win."
+	line "How did you become"
+	cont "so strong?"
+
+	para "I will not stray"
+	line "from my chosen"
+	cont "path."
+
+	para "LANCE is looking"
+	line "forward to meet-"
+	cont "ing you."
 
 KarensRoom_MapEvents:
 	db 0, 0 ; filler
