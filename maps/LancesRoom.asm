@@ -52,16 +52,23 @@ Script_ApproachLanceFromRight:
 LancesRoomLanceScript:
 	turnobject LANCESROOM_LANCE, LEFT
 	opentext
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .rematch
 	writetext LanceBattleIntroText
+.fight:
 	waitbutton
 	closetext
 	checkevent EVENT_BEAT_RED
 	iftrue LanceScript_ReRematch
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse LanceScript_Fight
+	sjump LanceScript_PostGame
+.rematch:
+	writetext LanceBattleRematchIntroText
+	sjump .fight
 LanceScript_PostGame:
 	loadtrainer CHAMPION, LANCE2
-	winlosstext LanceBattleWinText, 0
+	winlosstext LanceBattleRematchWinText, 0
 	setlasttalked LANCESROOM_LANCE
 	startbattle
 	dontrestartmapmusic
@@ -71,7 +78,7 @@ LanceScript_PostGame:
 
 LanceScript_ReRematch:
 	loadtrainer CHAMPION, LANCE3
-	winlosstext LanceBattleWinText, 0
+	winlosstext LanceBattleRematchWinText, 0
 	setlasttalked LANCESROOM_LANCE
 	startbattle
 	dontrestartmapmusic
@@ -81,14 +88,23 @@ LanceScript_ReRematch:
 
 LanceScript_Fight:
 	loadtrainer CHAMPION, LANCE
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .rematch
 	winlosstext LanceBattleWinText, 0
+.fight:
 	setlasttalked LANCESROOM_LANCE
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CHAMPION_LANCE
+	sjump LanceScript_AfterBattle
+.rematch:
+	winlosstext LanceBattleRematchWinText, 0
+	sjump .fight
 LanceScript_AfterBattle:
 	opentext
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .rematch
 	writetext LanceBattleAfterText
 	waitbutton
 	closetext
@@ -149,6 +165,26 @@ LanceScript_AfterBattle:
 	pause 30
 	closetext
 	applymovement LANCESROOM_MARY, LancesRoomMovementData_MaryRunsBackAndForth
+	special FadeOutPalettes
+	pause 15
+	warpfacing UP, HALL_OF_FAME, 4, 13
+	end
+.rematch:
+	writetext LanceBattleRematchAfterText
+	waitbutton
+	closetext
+	playsound SFX_ENTER_DOOR
+	changeblock 4, 0, $0b ; open door
+	reloadmappart
+	closetext
+	setevent EVENT_LANCES_ROOM_ENTRANCE_CLOSED
+	applymovement LANCESROOM_LANCE, LancesRoomMovementData_LanceLeadsPlayerToHallOfFame
+	stopfollow
+	playsound SFX_EXIT_BUILDING
+	disappear LANCESROOM_LANCE
+	applymovement PLAYER, LancesRoomMovementData_PlayerExits
+	playsound SFX_EXIT_BUILDING
+	disappear PLAYER
 	special FadeOutPalettes
 	pause 15
 	warpfacing UP, HALL_OF_FAME, 4, 13
@@ -297,6 +333,51 @@ LanceBattleAfterText:
 
 	para "grow strong with"
 	line "your #MON."
+	done
+
+LanceBattleRematchIntroText:
+	text "LANCE: <PLAY_G>."
+	
+	para "I knew I would"
+	line "see you again."
+
+	para "You must have"
+	line "grown as a"
+
+	para "trainer since our"
+	line "last battle."
+
+	para "You remind me of"
+	line "the CHAMPION be-"
+
+	para "fore me. He never"
+	line "stopped training."
+
+	para "Show me, CHAMPION,"
+	line "what you've"
+	cont "learned!"
+
+	para "Let us fight, as"
+	line "equals!"
+	done
+
+LanceBattleRematchWinText:
+	text "What an epic"
+	line "battle!" 
+
+	para "You really are"
+	line "a #MON master!"
+	done
+
+LanceBattleRematchAfterText:
+	text "Come with me,"	
+	line "CHAMPION, to"
+
+	para "the HALL OF FAME,"
+	line "so we could record"
+
+	para "this battle for"
+	line "eternity!"
 	done
 
 LancesRoomMaryOhNoOakText:
