@@ -250,7 +250,7 @@ HallOfFame_LanceRematchText:
 	text "You're familiar"
 	line "with this room."
 
-	para "Come and record"
+	para "Go and record"
 	line "your #MON so"
 
 	para "they could be for-" 
