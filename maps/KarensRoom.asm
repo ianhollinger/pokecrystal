@@ -204,6 +204,7 @@ KarenScript_KarenRematchDefeatText:
 	para "LANCE is looking"
 	line "forward to meet-"
 	cont "ing you."
+	done
 
 KarensRoom_MapEvents:
 	db 0, 0 ; filler
