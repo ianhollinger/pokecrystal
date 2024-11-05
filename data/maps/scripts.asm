@@ -244,8 +244,6 @@ INCLUDE "maps/BrunosRoom.asm"
 INCLUDE "maps/KarensRoom.asm"
 INCLUDE "maps/LancesRoom.asm"
 INCLUDE "maps/HallOfFame.asm"
-INCLUDE "maps/TrainerHouse1F.asm"
-INCLUDE "maps/TrainerHouseB1F.asm"
 
 
 SECTION "Map Scripts 14", ROMX
@@ -483,3 +481,5 @@ SECTION "Map Scripts 25", ROMX
 INCLUDE "maps/VictoryRoadGate.asm"
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
+INCLUDE "maps/TrainerHouse1F.asm"
+INCLUDE "maps/TrainerHouseB1F.asm"
