@@ -151,7 +151,7 @@ KogaScript_KogaDefeatText:
 	cont "abilities to test!"
 	done
 
-KogaScript_BeforeRematchText:
+KogaScript_KogaBeforeRematchText:
 	text "Fwahahaha! If it"
 	line "isn't the child."
 
