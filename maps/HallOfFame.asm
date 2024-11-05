@@ -21,7 +21,10 @@ HallOfFameEnterScript:
 	stopfollow
 	turnobject PLAYER, RIGHT
 	opentext
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .rematch
 	writetext HallOfFame_LanceText
+.enter:
 	waitbutton
 	closetext
 	turnobject HALLOFFAME_LANCE, UP
@@ -176,6 +179,10 @@ HallOfFameEnterScript:
 	clearevent EVENT_FOUGHT_HO_OH
 	sjump .SkipHoOh
 
+.rematch:
+	writetext HallOfFame_LanceRematchText
+	sjump .enter
+
 HallOfFame_WalkUpWithLance:
 	step UP
 	step UP
@@ -237,6 +244,17 @@ HallOfFame_LanceText:
 
 	para "and your partners"
 	line "as CHAMPIONS!"
+	done
+
+HallOfFame_LanceRematchText:
+	text "You're familiar"
+	line "with this room."
+
+	para "Come and record"
+	line "your #MON so"
+
+	para "they could be for-" 
+	line "ever remembered!"
 	done
 
 HallOfFame_MapEvents:
