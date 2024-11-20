@@ -507,7 +507,7 @@ GetNumberedTMHM:
 ;	jr c, .skip_one
 ; skip two
 ;	inc a
-.;skip_one
+;.skip_one
 ;	inc a
 ;.done
 	add TM01
