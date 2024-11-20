@@ -489,7 +489,7 @@ GetTMHMNumber::
 ;	cp ITEM_DC ; TM28-29
 ;	jr c, .skip
 ;	dec a
-.;skip
+;.skip
 ;	dec a
 ;.done
 	sub TM01
