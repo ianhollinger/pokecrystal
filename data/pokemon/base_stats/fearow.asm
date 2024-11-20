@@ -8,14 +8,14 @@
 	db 155 ; base exp
 	db NO_ITEM, SHARP_BEAK ; items
 	db GENDER_F50 ; gender ratio
-	db 100 ; unknown 1
+;	db 100 ; unknown 1
 	db 15 ; step cycles to hatch
-	db 5 ; unknown 2
+;	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/fearow/front.dimensions"
-	dw NULL, NULL ; unused (beta front/back pics)
+;	dw NULL, NULL ; unused (beta front/back pics)
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FLYING, EGG_FLYING ; egg groups
 
 	; tm/hm learnset
-	tmhm HEADBUTT, CURSE, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, DETECT, REST, ATTRACT, THIEF, STEEL_WING, FLY
+	tmhm HEADBUTT, CURSE, HIDDEN_POWER, SUNNY_DAY, HYPER_BEAM, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, REST, ATTRACT, THIEF, STEEL_WING, FLY, SUBSTITUTE, MIMIC, DOUBLE_EDGE, BATON_PASS, FALSE_SWIPE, TRI_ATTACK, SKY_ATTACK, RAZOR_WIND 
 	; end

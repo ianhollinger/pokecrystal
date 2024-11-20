@@ -8,14 +8,14 @@
 	db 61 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
-	db 100 ; unknown 1
+;	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
-	db 5 ; unknown 2
+;	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/venonat/front.dimensions"
-	dw NULL, NULL ; unused (beta front/back pics)
+;	dw NULL, NULL ; unused (beta front/back pics)
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups
 
 	; tm/hm learnset
-	tmhm HEADBUTT, CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SWEET_SCENT, SNORE, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, SOLARBEAM, RETURN, PSYCHIC_M, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, SWIFT, REST, ATTRACT, THIEF, FLASH
+	tmhm HEADBUTT, CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SWEET_SCENT, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, SOLARBEAM, RETURN, PSYCHIC_M, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, SWIFT, REST, ATTRACT, THIEF, FLASH, SUBSTITUTE, MIMIC, DOUBLE_EDGE, NIGHT_SHADE, BATON_PASS, LEECH_LIFE, MEGA_DRAIN, PSYBEAM, REFLECT
 	; end

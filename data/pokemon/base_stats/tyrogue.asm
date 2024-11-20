@@ -8,14 +8,14 @@
 	db 42 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F0 ; gender ratio
-	db 100 ; unknown 1
+;	db 100 ; unknown 1
 	db 25 ; step cycles to hatch
-	db 5 ; unknown 2
+;	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/tyrogue/front.dimensions"
-	dw NULL, NULL ; unused (beta front/back pics)
+;	dw NULL, NULL ; unused (beta front/back pics)
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 
 	; tm/hm learnset
-	tmhm HEADBUTT, CURSE, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, EARTHQUAKE, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, DETECT, REST, ATTRACT, THIEF, STRENGTH
+	tmhm HEADBUTT, CURSE, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, EARTHQUAKE, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, REST, ATTRACT, THIEF, STRENGTH, SUBSTITUTE, MIMIC, DOUBLE_EDGE, BODY_SLAM, SEISMIC_TOSS, ROCK_SLIDE
 	; end

@@ -8,14 +8,14 @@
 	db 163 ; base exp
 	db NO_ITEM, METAL_COAT ; items
 	db GENDER_F50 ; gender ratio
-	db 100 ; unknown 1
+;	db 100 ; unknown 1
 	db 25 ; step cycles to hatch
-	db 5 ; unknown 2
+;	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/skarmory/front.dimensions"
-	dw NULL, NULL ; unused (beta front/back pics)
+;	dw NULL, NULL ; unused (beta front/back pics)
 	db GROWTH_SLOW ; growth rate
 	dn EGG_FLYING, EGG_FLYING ; egg groups
 
 	; tm/hm learnset
-	tmhm CURSE, ROAR, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, ICY_WIND, PROTECT, ENDURE, FRUSTRATION, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SANDSTORM, SWIFT, DETECT, REST, ATTRACT, THIEF, STEEL_WING, FURY_CUTTER, CUT, FLY
+	tmhm CURSE, ROAR, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, ICY_WIND, PROTECT, ENDURE, FRUSTRATION, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SANDSTORM, SWIFT, REST, ATTRACT, THIEF, STEEL_WING, FURY_CUTTER, CUT, FLY, SKY_ATTACK, ROCK_SLIDE, REVERSAL, SWORDS_DANCE, SUBSTITUTE, MIMIC, DOUBLE_EDGE
 	; end
