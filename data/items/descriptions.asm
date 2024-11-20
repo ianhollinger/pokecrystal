@@ -6,7 +6,7 @@ ItemDescriptions:
 	dw BrightpowderDesc
 	dw GreatBallDesc
 	dw PokeBallDesc
-	dw TeruSama1Desc
+;	dw TeruSama1Desc
 	dw BicycleDesc
 	dw MoonStoneDesc
 	dw AntidoteDesc
@@ -25,7 +25,7 @@ ItemDescriptions:
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
-	dw TeruSama2Desc
+;	dw TeruSama2Desc
 	dw HPUpDesc
 	dw ProteinDesc
 	dw IronDesc
@@ -45,7 +45,7 @@ ItemDescriptions:
 	dw SuperRepelDesc
 	dw MaxRepelDesc
 	dw DireHitDesc
-	dw TeruSama3Desc
+;	dw TeruSama3Desc
 	dw FreshWaterDesc
 	dw SodaPopDesc
 	dw LemonadeDesc
@@ -56,7 +56,7 @@ ItemDescriptions:
 	dw XSpecialDesc
 	dw CoinCaseDesc
 	dw ItemfinderDesc
-	dw TeruSama5Desc
+;	dw TeruSama5Desc
 	dw ExpShareDesc
 	dw OldRodDesc
 	dw GoodRodDesc
@@ -90,7 +90,7 @@ ItemDescriptions:
 	dw BigMushroomDesc
 	dw SilverPowderDesc
 	dw BluApricornDesc
-	dw TeruSama6Desc
+;	dw TeruSama6Desc
 	dw AmuletCoinDesc
 	dw YlwApricornDesc
 	dw GrnApricornDesc
@@ -100,7 +100,7 @@ ItemDescriptions:
 	dw WhtApricornDesc
 	dw BlackbeltDesc
 	dw BlkApricornDesc
-	dw TeruSama7Desc
+;	dw TeruSama7Desc
 	dw PnkApricornDesc
 	dw BlackGlassesDesc
 	dw SlowpokeTailDesc
@@ -120,7 +120,7 @@ ItemDescriptions:
 	dw MiracleSeedDesc
 	dw ThickClubDesc
 	dw FocusBandDesc
-	dw TeruSama8Desc
+;	dw TeruSama8Desc
 	dw EnergyPowderDesc
 	dw EnergyRootDesc
 	dw HealPowderDesc
@@ -129,57 +129,57 @@ ItemDescriptions:
 	dw LuckyEggDesc
 	dw CardKeyDesc
 	dw MachinePartDesc
-	dw EggTicketDesc
+;	dw EggTicketDesc
 	dw LostItemDesc
 	dw StardustDesc
 	dw StarPieceDesc
 	dw BasementKeyDesc
 	dw PassDesc
-	dw TeruSama9Desc
-	dw TeruSama10Desc
-	dw TeruSama11Desc
+;	dw TeruSama9Desc
+;	dw TeruSama10Desc
+;	dw TeruSama11Desc
 	dw CharcoalDesc
 	dw BerryJuiceDesc
 	dw ScopeLensDesc
-	dw TeruSama12Desc
-	dw TeruSama13Desc
+;	dw TeruSama12Desc
+;	dw TeruSama13Desc
 	dw MetalCoatDesc
 	dw DragonFangDesc
-	dw TeruSama14Desc
+;	dw TeruSama14Desc
 	dw LeftoversDesc
-	dw TeruSama15Desc
-	dw TeruSama16Desc
-	dw TeruSama17Desc
+;	dw TeruSama15Desc
+;	dw TeruSama16Desc
+;	dw TeruSama17Desc
 	dw MysteryBerryDesc
 	dw DragonScaleDesc
 	dw BerserkGeneDesc
-	dw TeruSama18Desc
-	dw TeruSama19Desc
-	dw TeruSama20Desc
+;	dw TeruSama18Desc
+;	dw TeruSama19Desc
+;	dw TeruSama20Desc
 	dw SacredAshDesc
 	dw HeavyBallDesc
 	dw FlowerMailDesc
 	dw LevelBallDesc
 	dw LureBallDesc
 	dw FastBallDesc
-	dw TeruSama21Desc
+;	dw TeruSama21Desc
 	dw LightBallDesc
 	dw FriendBallDesc
 	dw MoonBallDesc
 	dw LoveBallDesc
-	dw NormalBoxDesc
-	dw GorgeousBoxDesc
+;	dw NormalBoxDesc
+;	dw GorgeousBoxDesc
 	dw SunStoneDesc
-	dw PolkadotBowDesc
-	dw TeruSama22Desc
+;	dw PolkadotBowDesc
+;	dw TeruSama22Desc
 	dw UpGradeDesc
 	dw BerryDesc
 	dw GoldBerryDesc
 	dw SquirtBottleDesc
-	dw TeruSama23Desc
+;	dw TeruSama23Desc
 	dw ParkBallDesc
 	dw RainbowWingDesc
-	dw TeruSama24Desc
+;	dw TeruSama24Desc
 	dw BrickPieceDesc
 	dw SurfMailDesc
 	dw LiteBlueMailDesc
@@ -190,13 +190,41 @@ ItemDescriptions:
 	dw BlueSkyMailDesc
 	dw MusicMailDesc
 	dw MirageMailDesc
-	dw TeruSama25Desc
+;	dw TeruSama25Desc
 	assert_table_length NUM_ITEMS
 	dw TeruSama26Desc
 	dw TeruSama26Desc
 	dw TeruSama26Desc
 	dw TeruSama26Desc
 	dw TeruSama26Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
+	dw TeruSama27Desc
 	dw TeruSama27Desc
 	dw TeruSama27Desc
 	dw TeruSama27Desc
