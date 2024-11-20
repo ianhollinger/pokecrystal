@@ -241,7 +241,7 @@ DEF TM01 EQU const_value
 	add_tm FRUSTRATION  ; b7
 	add_tm SOLARBEAM    ; b8
 	add_tm IRON_TAIL    ; b9
-	add_tm OUTRAGE		; ba
+	add_tm OUTRAGE	    ; ba
 	add_tm THUNDER      ; bb
 	add_tm EARTHQUAKE   ; bc
 	add_tm RETURN       ; bd
@@ -269,36 +269,36 @@ DEF TM01 EQU const_value
 	add_tm FIRE_PUNCH   ; d2
 	add_tm FURY_CUTTER  ; d3
 	add_tm NIGHTMARE    ; d4
-	add_tm RAZOR_WIND	; d5
-    add_tm THUNDER_WAVE	; d6
-    add_tm ROCK_SLIDE	; d7
-    add_tm EXPLOSION	; d8
-    add_tm BATON_PASS	; d9
-    add_tm SAFEGUARD	; da
-    add_tm LIGHT_SCREEN	; db
-    add_tm CRUNCH		; dc
-    add_tm REVERSAL		; dd
-    add_tm LEECH_LIFE	; de
-    add_tm GROWTH		; df
-    add_tm MIMIC		; e0
-    add_tm MEGA_DRAIN	; e1
-    add_tm SWORDS_DANCE	; e2
-    add_tm PSYBEAM		; e3
-    add_tm HYDRO_PUMP	; e4
-    add_tm FALSE_SWIPE	; e5
-    add_tm SWEET_KISS	; e6
-    add_tm REFLECT		; e7
-    add_tm TRI_ATTACK	; e8
-    add_tm PETAL_DANCE	; e9
-    add_tm BODY_SLAM	; ea
-    add_tm SKY_ATTACK	; eb
-    add_tm SKULL_BASH	; ec
-    add_tm SUBMISSION	; ed
-    add_tm DOUBLE_EDGE	; ee
-    add_tm HEAL_BELL	; ef	
-    add_tm SUBSTITUTE	; f0
-    add_tm SELFDESTRUCT	; f1
-    add_tm METRONOME	; f2
+	add_tm RAZOR_WIND   ; d5
+	add_tm THUNDER_WAVE	; d6
+	add_tm ROCK_SLIDE	; d7
+	add_tm EXPLOSION	; d8
+	add_tm BATON_PASS	; d9
+	add_tm SAFEGUARD	; da
+	add_tm LIGHT_SCREEN	; db
+    	add_tm CRUNCH		; dc
+    	add_tm REVERSAL		; dd
+    	add_tm LEECH_LIFE	; de
+    	add_tm GROWTH		; df
+    	add_tm MIMIC		; e0
+    	add_tm MEGA_DRAIN	; e1
+    	add_tm SWORDS_DANCE	; e2
+    	add_tm PSYBEAM		; e3
+    	add_tm HYDRO_PUMP	; e4
+   	add_tm FALSE_SWIPE	; e5
+   	add_tm SWEET_KISS	; e6
+    	add_tm REFLECT		; e7
+    	add_tm TRI_ATTACK	; e8
+    	add_tm PETAL_DANCE	; e9
+    	add_tm BODY_SLAM	; ea
+    	add_tm SKY_ATTACK	; eb
+    	add_tm SKULL_BASH	; ec
+    	add_tm SUBMISSION	; ed
+    	add_tm DOUBLE_EDGE	; ee
+    	add_tm HEAL_BELL	; ef	
+    	add_tm SUBSTITUTE	; f0
+    	add_tm SELFDESTRUCT	; f1
+    	add_tm METRONOME	; f2
 DEF NUM_TMS EQU __tmhm_value__ - 1
 
 MACRO add_hm
