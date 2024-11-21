@@ -2679,12 +2679,12 @@ wBaseItems::
 wBaseItem1:: db
 wBaseItem2:: db
 wBaseGender:: db
-wBaseUnknown1:: db
+;wBaseUnknown1:: db
 wBaseEggSteps:: db
-wBaseUnknown2:: db
+;wBaseUnknown2:: db
 wBasePicSize:: db
-wBaseUnusedFrontpic:: dw
-wBaseUnusedBackpic:: dw
+;wBaseUnusedFrontpic:: dw
+;wBaseUnusedBackpic:: dw
 wBaseGrowthRate:: db
 wBaseEggGroups:: db
 wBaseTMHM:: flag_array NUM_TM_HM_TUTOR
@@ -2693,7 +2693,7 @@ wCurBaseDataEnd::
 
 wCurDamage:: dw
 
-	ds 1
+	ds 6
 
 wMornEncounterRate::  db
 wDayEncounterRate::   db
