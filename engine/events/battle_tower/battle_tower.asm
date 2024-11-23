@@ -867,7 +867,7 @@ BattleTowerAction:
 	dw CheckMobileEventIndex
 	dw BattleTowerAction_0C
 	dw BattleTowerAction_0D
-	dw BattleTowerAction_EggTicket
+;	dw BattleTowerAction_EggTicket
 	dw BattleTowerAction_0F
 	dw BattleTowerAction_10
 	dw BattleTowerAction_11
