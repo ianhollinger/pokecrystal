@@ -345,12 +345,11 @@ MartCeladon2F3:
 	db -1 ; end
 
 MartCeladon3F:
-	db 5 ; # items
-	db TM_PSYCH_UP
-	db TM_SUNNY_DAY
+	db 4 ; # items
 	db TM_PROTECT
-	db TM_RAIN_DANCE
-	db TM_SANDSTORM
+	db TM_SAFEGUARD
+	db TM_LIGHT_SCREEN
+	db TM_REFLECT
 	db -1 ; end
 
 MartCeladon4F:
