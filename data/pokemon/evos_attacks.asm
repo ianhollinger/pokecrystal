@@ -470,7 +470,7 @@ NidorinoEvosAttacks:
 	db 1, POISON_STING
 	db 5, PECK
 	db 10, FOCUS_ENERGY
-	db 14 DOUBLE_KICK
+	db 14, DOUBLE_KICK
 	db 20, HORN_ATTACK
 	db 27, FURY_ATTACK
 	db 33, TOXIC
