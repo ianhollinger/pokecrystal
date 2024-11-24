@@ -37,7 +37,7 @@ MahoganyGymPryceScript:
 	readvar VAR_BADGES
 	scall MahoganyGymActivateRockets
 .FightDone:
-	checkevent EVENT_GOT_TM16_ICY_WIND
+	checkevent EVENT_GOT_TM14_BLIZZARD
 	iftrue .PryceScript_Defeat
 	setevent EVENT_BEAT_SKIER_ROXANNE
 	setevent EVENT_BEAT_SKIER_CLARISSA
@@ -46,9 +46,9 @@ MahoganyGymPryceScript:
 	setevent EVENT_BEAT_BOARDER_DOUGLAS
 	writetext PryceText_GlacierBadgeSpeech
 	promptbutton
-	verbosegiveitem TM_ICY_WIND
+	verbosegiveitem TM_BLIZZARD
 	iffalse .MahoganyGym_NoRoomForIcyWind
-	setevent EVENT_GOT_TM16_ICY_WIND
+	setevent EVENT_GOT_TM14_BLIZZARD
 	writetext PryceText_IcyWindSpeech
 	waitbutton
 	closetext
@@ -297,10 +297,11 @@ PryceText_GlacierBadgeSpeech:
 
 PryceText_IcyWindSpeech:
 	text "That TM contains"
-	line "ICY WIND."
+	line "BLIZZARD."
 
 	para "It inflicts damage"
-	line "and lowers speed."
+	line "and may freeze"
+	cont "your opponent."
 
 	para "It demonstrates"
 	line "the harshness of"
