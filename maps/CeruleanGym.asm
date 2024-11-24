@@ -78,6 +78,14 @@ CeruleanGymMistyScript:
 	waitsfx
 	setflag ENGINE_CASCADEBADGE
 .FightDone:
+	checkevent EVENT_GOT_TM66_HYDRO_PUMP
+	iftrue .GotHydroPump
+	writetext MistyExplainTMText
+	promptbutton
+	verbosegiveitem TM_HYDRO_PUMP
+	iffalse .GotHydroPump
+	setevent EVENT_GOT_TM66_HYDRO_PUMP
+.GotHydroPump:
 	writetext MistyFightDoneText
 	waitbutton
 	closetext
@@ -315,6 +323,16 @@ MistyWinLossText:
 ReceivedCascadeBadgeText:
 	text "<PLAYER> received"
 	line "CASCADEBADGE."
+	done
+
+MistyExplainTMText:
+	text "Take this TM too."
+	line "it contains HYDRO"
+	cont "PUMP."
+
+	para "Use it to"
+	line "hose down pesky"
+	cont "#MON."
 	done
 
 MistyFightDoneText:
