@@ -25,6 +25,14 @@ ViridianGymBlueScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_EARTHBADGE
+	checkevent EVENT_GOT_TM_76_DOUBLE_EDGE
+	iftrue .GotDoubleEdge
+	writetext BlueExplainTMText
+	promptbutton
+	verbosegiveitem TM_DOUBLE_EDGE
+	iffalse .GotDoubleEdge
+	setevent EVENT_GOT_TM_76_DOUBLE_EDGE
+.GotDoubleEdge:
 	writetext LeaderBlueAfterText
 	waitbutton
 	closetext
@@ -157,6 +165,22 @@ LeaderBlueWinText:
 Text_ReceivedEarthBadge:
 	text "<PLAYER> received"
 	line "EARTHBADGE."
+	done
+
+BlueExplainTMText:
+	text "Here! Take this"
+	line "as well!"
+
+	para "It contains"
+	line "DOUBLE-EDGE!"
+
+	para "It does a lot of"
+	line "damage, but hurts"
+	cont "the user as well."
+
+	para "Like a double-"
+	line "edged sword!" 
+	cont "Hence the name."
 	done
 
 LeaderBlueAfterText:
