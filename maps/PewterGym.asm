@@ -28,6 +28,14 @@ PewterGymBrockScript:
 	waitsfx
 	setflag ENGINE_BOULDERBADGE
 	writetext BrockBoulderBadgeText
+	checkevent EVENT_GOT_TM53_ROCK_SLIDE
+	iftrue .GotRockSlide
+	writetext BrockExplainTMText
+	promptbutton
+	verbosegiveitem TM_ROCK_SLIDE
+	iffalse .GotRockSlide
+	setevent EVENT_GOT_TM53_ROCK_SLIDE
+.GotRockSlide:
 	waitbutton
 	closetext
 	end
@@ -165,11 +173,17 @@ BrockBoulderBadgeText:
 	line "though I am a bit"
 	cont "upset."
 
-	para "That BOULDERBADGE"
-	line "will make your"
+	para "Wait! Take this"
+	line "with you."
+	done
 
-	para "#MON even more"
-	line "powerful."
+BrockExplainTMText:
+	text "TM53 contains"
+	line "ROCK SLIDE!"
+
+	para "It overwhelms"
+	line "the foe with"
+	cont "boulders."
 	done
 
 BrockFightDoneText:
