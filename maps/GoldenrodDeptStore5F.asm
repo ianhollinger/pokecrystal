@@ -25,13 +25,13 @@ GoldenrodDeptStore5F_MapScripts:
 GoldenrodDeptStore5FClerkScript:
 	faceplayer
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_GOLDENROD_5F1
+	pokemart MARTTYPE_STANDARD, MART_GOLDENROD_5F_1
 	closetext
 	end
 
 GoldenrodDeptStore5FReceptionistScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_GOLDENROD_5F2
+	pokemart MARTTYPE_STANDARD, MART_GOLDENROD_5F_2
 	closetext
 	end
 
