@@ -99,7 +99,7 @@ CeruleanGymMistyScript:
 	checkevent EVENT_OPENED_MT_SILVER
 	iffalse .FightDone
 
-.Reematch:
+.Rematch:
 	writetext MistyRematchText
 	waitbutton
 	closetext
