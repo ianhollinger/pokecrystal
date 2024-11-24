@@ -32,6 +32,14 @@ SeafoamGymBlaineScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_VOLCANOBADGE
+	checkevent EVENT_GOT_TM38_FIRE_BLAST
+	iftrue .GotFireBlast
+	writetext BlaineExplainTMText
+	promptbutton
+	verbosegiveitem TM_FIRE_BLAST
+	iffalse .GotFireBlast
+	setevent EVENT_GOT_TM38_FIRE_BLAST
+.GotFireBlast:
 	writetext BlaineAfterBattleText
 	waitbutton
 	closetext
@@ -177,6 +185,18 @@ BlaineRematchWinLossText:
 ReceivedVolcanoBadgeText:
 	text "<PLAYER> received"
 	line "VOLCANOBADGE."
+	done
+
+BlaineExplainTMText:
+	text "Here, you can have"
+	line "this, too!"
+	
+	para "FIRE BLAST is the"
+	line "ultimate fire"
+
+	para "technique. Don't"
+	line "waste it on Water"
+	cont "#MON."
 	done
 
 BlaineAfterBattleText:
