@@ -1,6 +1,6 @@
 DEF CELADONGAMECORNERPRIZEROOM_TM32_COINS     EQU 1500
-DEF CELADONGAMECORNERPRIZEROOM_TM29_COINS     EQU 3500
-DEF CELADONGAMECORNERPRIZEROOM_TM15_COINS     EQU 7500
+DEF CELADONGAMECORNERPRIZEROOM_TM58_COINS     EQU 4000
+DEF CELADONGAMECORNERPRIZEROOM_TM73_COINS     EQU 7000
 DEF CELADONGAMECORNERPRIZEROOM_EEVEE_COINS    EQU 1111
 DEF CELADONGAMECORNERPRIZEROOM_OMANYTE_COINS  EQU 2222
 DEF CELADONGAMECORNERPRIZEROOM_KABUTO_COINS   EQU 2222
@@ -37,8 +37,8 @@ CeladonPrizeRoom_tmcounterloop:
 	verticalmenu
 	closewindow
 	ifequal 1, .DoubleTeam
-	ifequal 2, .Psychic
-	ifequal 3, .HyperBeam
+	ifequal 2, .Crunch
+	ifequal 3, .SkyAttack
 	sjump CeladonPrizeRoom_CancelPurchaseScript
 
 .DoubleTeam:
@@ -54,30 +54,30 @@ CeladonPrizeRoom_tmcounterloop:
 	takecoins CELADONGAMECORNERPRIZEROOM_TM32_COINS
 	sjump CeladonPrizeRoom_purchased
 
-.Psychic:
-	checkitem TM_PSYCHIC_M
+.Crunch:
+	checkitem TM_CRUNCH
 	iftrue CeladonPrizeRoom_alreadyhavetm
-	checkcoins CELADONGAMECORNERPRIZEROOM_TM29_COINS
+	checkcoins CELADONGAMECORNERPRIZEROOM_TM58_COINS
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
-	getitemname STRING_BUFFER_3, TM_PSYCHIC_M
+	getitemname STRING_BUFFER_3, TM_CRUNCH
 	scall CeladonPrizeRoom_askbuy
 	iffalse CeladonPrizeRoom_CancelPurchaseScript
-	giveitem TM_PSYCHIC_M
+	giveitem TM_CRUNCH
 	iffalse CeladonPrizeRoom_notenoughroom
-	takecoins CELADONGAMECORNERPRIZEROOM_TM29_COINS
+	takecoins CELADONGAMECORNERPRIZEROOM_TM58_COINS
 	sjump CeladonPrizeRoom_purchased
 
-.HyperBeam:
-	checkitem TM_HYPER_BEAM
+.SkyAttack:
+	checkitem TM_SKY_ATTACK
 	iftrue CeladonPrizeRoom_alreadyhavetm
-	checkcoins CELADONGAMECORNERPRIZEROOM_TM15_COINS
+	checkcoins CELADONGAMECORNERPRIZEROOM_TM73_COINS
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
-	getitemname STRING_BUFFER_3, TM_HYPER_BEAM
+	getitemname STRING_BUFFER_3, TM_SKY_ATTACK
 	scall CeladonPrizeRoom_askbuy
 	iffalse CeladonPrizeRoom_CancelPurchaseScript
-	giveitem TM_HYPER_BEAM
+	giveitem TM_SKY_ATTACK
 	iffalse CeladonPrizeRoom_notenoughroom
-	takecoins CELADONGAMECORNERPRIZEROOM_TM15_COINS
+	takecoins CELADONGAMECORNERPRIZEROOM_TM73_COINS
 	sjump CeladonPrizeRoom_purchased
 
 CeladonPrizeRoom_askbuy:
