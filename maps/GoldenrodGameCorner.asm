@@ -1,5 +1,6 @@
-DEF GOLDENRODGAMECORNER_TM70_COINS       EQU 4000
-DEF GOLDENRODGAMECORNER_TM74_COINS       EQU 6500
+DEF GOLDENRODGAMECORNER_TM16_COINS       EQU 2500
+DEF GOLDENRODGAMECORNER_TM58_COINS       EQU 4000
+DEF GOLDENRODGAMECORNER_TM71_COINS       EQU 6000
 DEF GOLDENRODGAMECORNER_TM79_COINS       EQU 9999
 DEF GOLDENRODGAMECORNER_HORSEA_COINS     EQU 500
 DEF GOLDENRODGAMECORNER_WOBBUFFET_COINS  EQU 1000
@@ -72,35 +73,49 @@ GoldenrodGameCornerTMVendor_LoopScript:
 	loadmenu GoldenrodGameCornerTMVendorMenuHeader
 	verticalmenu
 	closewindow
-	ifequal 1, .TriAttack
-	ifequal 2, .SkullBash
-	ifequal 3, .SelfDestruct
+	ifequal 1, .IcyWind
+	ifequal 2, .Crunch
+	ifequal 3, .PetalDance
+	ifequal 4, .SelfDestruct
 	sjump GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 
-.TriAttack:
-	checkitem TM_TRI_ATTACK
+.IcyWind:
+	checkitem TM_ICY_WIND
 	iftrue GoldenrodGameCornerPrizeVendor_AlreadyHaveTMScript
-	checkcoins GOLDENRODGAMECORNER_TM70_COINS
+	checkcoins GOLDENRODGAMECORNER_TM16_COINS
 	ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
-	getitemname STRING_BUFFER_3, TM_TRI_ATTACK
+	getitemname STRING_BUFFER_3, TM_ICY_WIND
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
-	giveitem TM_TRI_ATTACK
+	giveitem TM_ICY_WIND
 	iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	takecoins GOLDENRODGAMECORNER_TM70_COINS
+	takecoins GOLDENRODGAMECORNER_TM16_COINS
 	sjump GoldenrodGameCornerTMVendor_FinishScript
 
-.SkullBash:
-	checkitem TM_SKULL_BASH
+.Crunch:
+	checkitem TM_CRUNCH
 	iftrue GoldenrodGameCornerPrizeVendor_AlreadyHaveTMScript
-	checkcoins GOLDENRODGAMECORNER_TM74_COINS
+	checkcoins GOLDENRODGAMECORNER_TM58_COINS
 	ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
-	getitemname STRING_BUFFER_3, TM_SKULL_BASH
+	getitemname STRING_BUFFER_3, TM_CRUNCH
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
-	giveitem TM_SKULL_BASH
+	giveitem TM_CRUNCH
 	iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	takecoins GOLDENRODGAMECORNER_TM74_COINS
+	takecoins GOLDENRODGAMECORNER_TM58_COINS
+	sjump GoldenrodGameCornerTMVendor_FinishScript
+
+.PetalDance:
+	checkitem TM_PETAL_DANCE
+	iftrue GoldenrodGameCornerPrizeVendor_AlreadyHaveTMScript
+	checkcoins GOLDENRODGAMECORNER_TM71_COINS
+	ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
+	getitemname STRING_BUFFER_3, TM_PETAL_DANCE
+	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
+	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
+	giveitem TM_PETAL_DANCE
+	iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	takecoins GOLDENRODGAMECORNER_TM71_COINS
 	sjump GoldenrodGameCornerTMVendor_FinishScript
 
 .SelfDestruct:
@@ -165,10 +180,11 @@ GoldenrodGameCornerTMVendorMenuHeader:
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 4 ; items
-	db "TM25    5500@"
-	db "TM14    5500@"
-	db "TM38    5500@"
+	db 5 ; items
+	db "TM16    2500@"
+	db "TM58    4000@"
+	db "TM71    6000@"
+	db "TM79    9999@"
 	db "CANCEL@"
 
 GoldenrodGameCornerPrizeMonVendorScript:
