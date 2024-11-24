@@ -11,7 +11,8 @@ Marts:
 	dw MartGoldenrod2F2
 	dw MartGoldenrod3F
 	dw MartGoldenrod4F
-	dw MartGoldenrod5F
+	dw MartGoldenrod5F1
+	dw MartGoldenrod5F2
 	dw MartOlivine1	
 	dw MartOlivine2
 	dw MartEcruteak
@@ -147,11 +148,24 @@ MartGoldenrod4F:
 	db HP_UP
 	db -1 ; end
 
-MartGoldenrod5F:
-	db 3 ; # items
+MartGoldenrod5F1:
+	db 6 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
+	db TM_PSYBEAM
+	db TM_SOLARBEAM
+	db TM_HYPER_BEAM
+	db -1 ; end
+
+MartGoldenrod5F2:
+	db 6 ; # items
+	db TM_RETURN
+	db TM_FRUSTRATION
+	db TM_METRONOME	
+	db TM_MIMIC
+	db TM_FALSE_SWIPE
+	db TM_REVERSAL
 	db -1 ; end
 
 MartOlivine1:
