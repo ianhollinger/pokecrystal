@@ -240,6 +240,15 @@ VermilionGymSurgeScript:
 	waitsfx
 	setflag ENGINE_THUNDERBADGE
 	writetext LtSurgeThunderBadgeText
+	checkevent EVENT_GOT_TM25_THUNDER
+	iftrue .GotThunder
+	writetext LtSurgeExplainTMText
+	promptbutton
+	verbosegiveitem TM_THUNDER
+	iffalse .GotThunder
+	setevent EVENT_GOT_TM25_THUNDER
+.GotThunder:
+	writetext LtSurgeFightDoneText
 	waitbutton
 	closetext
 	end
@@ -443,6 +452,18 @@ LtSurgeThunderBadgeText:
 
 	para "me. You wear it"
 	line "proudly, hear?"
+
+	para "There is something"
+	line "else. Here is a"
+	cont "great TM for you!"
+	done
+
+LtSurgeExplainTMText:
+	text "That TM contains"
+	line "THUNDER… Zzzap!"
+	
+	para "Use it to go"
+	line "like lightning!"
 	done
 
 LtSurgeFightDoneText:
