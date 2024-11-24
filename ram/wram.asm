@@ -3039,7 +3039,7 @@ wMooMooBerries:: db
 wUndergroundSwitchPositions:: db
 wFarfetchdPosition:: db
 
-	ds 13
+;	ds 13
 
 ; map scene ids
 wPokecenter2FSceneID::                            db
@@ -3168,7 +3168,7 @@ wCelebiEvent::
 ; bit 2: forest is restless
 	db
 
-	ds 1
+;	ds 1
 
 wBikeFlags::
 ; bit 0: using strength
@@ -3193,7 +3193,7 @@ wCurMapSceneScriptsPointer:: dw
 wCurMapCallbackCount:: db
 wCurMapCallbacksPointer:: dw
 
-	ds 2
+;	ds 2
 
 ; Sprite id of each decoration
 wDecoBed::           db
@@ -3214,9 +3214,9 @@ wDailyResetTimer:: dw
 wDailyFlags1:: db
 wDailyFlags2:: db
 wSwarmFlags:: db
-	ds 2
+;	ds 2
 wTimerEventStartDay:: db
-	ds 3
+;	ds 3
 
 wFruitTreeFlags:: flag_array NUM_FRUIT_TREES
 
@@ -3225,12 +3225,12 @@ wFruitTreeFlags:: flag_array NUM_FRUIT_TREES
 wLuckyNumberDayTimer:: dw
 	ds 2
 wSpecialPhoneCallID:: db
-	ds 3
+;	ds 3
 wBugContestStartTime:: ds 4 ; day, hour, min, sec
 wUnusedTwoDayTimerOn:: db
 wUnusedTwoDayTimer:: db
 wUnusedTwoDayTimerStartDate:: db
-	ds 4
+;	ds 4
 wMobileOrCable_LastSelection:: db
 wdc41:: ds 1
 wdc42:: ds 8
@@ -3246,17 +3246,16 @@ wPlayerMonSelection:: ds 3
 wdc5f:: db
 wdc60:: db
 
-;	ds 18
-	ds 16
+;	ds 16
 
 wVermilionGymTrashCan1:: db
 wVermilionGymTrashCan2:: db
 
 wStepCount:: db
 wPoisonStepCount:: db
-	ds 2
+;	ds 2
 wHappinessStepCount:: db
-	ds 1
+;	ds 1
 
 wParkBallsRemaining::
 wSafariBallsRemaining:: db
@@ -3290,7 +3289,7 @@ wBackupWarpNumber:: db
 wBackupMapGroup::   db
 wBackupMapNumber::  db
 
-	ds 3
+;	ds 3
 
 wLastSpawnMapGroup:: db
 wLastSpawnMapNumber:: db
