@@ -13,10 +13,10 @@ RuinsOfAlphOmanyteItemRoomMysteryberry:
 	itemball MYSTERYBERRY
 
 RuinsOfAlphOmanyteItemRoomMysticWater:
-	itemball SPELL_TAG
+	itemball MYSTIC_WATER
 
 RuinsOfAlphOmanyteItemRoomStardust:
-	itemball STARDUST
+	itemball TM_ANCIENTPOWER
 
 RuinsOfAlphOmanyteItemRoomStarPiece:
 	itemball STAR_PIECE
