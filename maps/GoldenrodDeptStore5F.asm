@@ -10,17 +10,17 @@ GoldenrodDeptStore5F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, GoldenrodDeptStore5FCheckIfSundayCallback
+;	callback MAPCALLBACK_OBJECTS, GoldenrodDeptStore5FCheckIfSundayCallback
 
-GoldenrodDeptStore5FCheckIfSundayCallback:
-	readvar VAR_WEEKDAY
-	ifequal SUNDAY, .yes
-	disappear GOLDENRODDEPTSTORE5F_RECEPTIONIST
-	endcallback
-
-.yes
-	appear GOLDENRODDEPTSTORE5F_RECEPTIONIST
-	endcallback
+;GoldenrodDeptStore5FCheckIfSundayCallback:
+;	readvar VAR_WEEKDAY
+;	ifequal SUNDAY, .yes
+;	disappear GOLDENRODDEPTSTORE5F_RECEPTIONIST
+;	endcallback
+;
+;.yes
+;	appear GOLDENRODDEPTSTORE5F_RECEPTIONIST
+;	endcallback
 
 GoldenrodDeptStore5FClerkScript:
 	faceplayer
@@ -30,58 +30,63 @@ GoldenrodDeptStore5FClerkScript:
 	end
 
 GoldenrodDeptStore5FReceptionistScript:
-	faceplayer
 	opentext
-	readvar VAR_WEEKDAY
-	ifnotequal SUNDAY, .EventIsOver
-	checkflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
-	iftrue .EventIsOver
-	special GetFirstPokemonHappiness
-	writetext GoldenrodDeptStore5FReceptionistOhYourMonDotDotDotText
-	promptbutton
-	ifgreater 150 - 1, .VeryHappy
-	ifgreater 50 - 1, .SomewhatHappy
-	sjump .NotVeryHappy
-
-.VeryHappy:
-	writetext GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText
-	promptbutton
-	checkitem TM_RETURN
-	iftrue .AlreadyGotTM
-	verbosegiveitem TM_RETURN
-	setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
+	pokemart MARTTYPE_STANDARD, MART_GOLDENROD_5F2
 	closetext
 	end
 
-
-.SomewhatHappy:
-	writetext GoldenrodDeptStore5FReceptionistItsAdorableText
-	waitbutton
-	closetext
-	end
-
-.NotVeryHappy:
-	writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
-	promptbutton
-	checkitem TM_FRUSTRATION
-	iftrue .AlreadyGotTM
-	verbosegiveitem TM_FRUSTRATION
-	setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
-	closetext
-	end
-
-.AlreadyGotTM:
-	writetext GoldenrodDeptStore5FAlreadyGotTMText
-	waitbutton
-	closetext
-	end
-
-.EventIsOver:
-	writetext GoldenrodDeptStore5FReceptionistThereAreTMsPerfectForMonText
-	waitbutton
-.Done:
-	closetext
-	end
+;	faceplayer
+;	opentext
+;	readvar VAR_WEEKDAY
+;	ifnotequal SUNDAY, .EventIsOver
+;	checkflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
+;	iftrue .EventIsOver
+;	special GetFirstPokemonHappiness
+;	writetext GoldenrodDeptStore5FReceptionistOhYourMonDotDotDotText
+;	promptbutton
+;	ifgreater 150 - 1, .VeryHappy
+;	ifgreater 50 - 1, .SomewhatHappy
+;	sjump .NotVeryHappy
+;
+;.VeryHappy:
+;	writetext GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText
+;	promptbutton
+;	checkitem TM_RETURN
+;	iftrue .AlreadyGotTM
+;	verbosegiveitem TM_RETURN
+;	setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
+;	closetext
+;	end
+;
+;
+;.SomewhatHappy:
+;	writetext GoldenrodDeptStore5FReceptionistItsAdorableText
+;	waitbutton
+;	closetext
+;	end
+;
+;.NotVeryHappy:
+;	writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
+;	promptbutton
+;	checkitem TM_FRUSTRATION
+;	iftrue .AlreadyGotTM
+;	verbosegiveitem TM_FRUSTRATION
+;	setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
+;	closetext
+;	end
+;
+;.AlreadyGotTM:
+;	writetext GoldenrodDeptStore5FAlreadyGotTMText
+;	waitbutton
+;	closetext
+;	end
+;
+;.EventIsOver:
+;	writetext GoldenrodDeptStore5FReceptionistThereAreTMsPerfectForMonText
+;	waitbutton
+;.Done:
+;	closetext
+;	end
 
 Carrie:
 	faceplayer
