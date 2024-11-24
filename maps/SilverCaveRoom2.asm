@@ -12,7 +12,7 @@ SilverCaveRoom2Calcium:
 	itemball CALCIUM
 
 SilverCaveRoom2UltraBall:
-	itemball ULTRA_BALL
+	itemball TM_EXPLOSION
 
 SilverCaveRoom2PPUp:
 	itemball PP_UP
