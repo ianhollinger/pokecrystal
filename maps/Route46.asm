@@ -185,11 +185,10 @@ HikerBaileyAfterBattleText:
 	done
 
 CamperTedSeenText:
-	text "I'm raising #-"
-	line "MON too!"
+	text "I can never"
+	line "decide which"
 
-	para "Will you battle"
-	line "with me?"
+	para "move to use."
 	done
 
 CamperTedBeatenText:
