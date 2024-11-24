@@ -1,5 +1,6 @@
 DEF CELADONGAMECORNERPRIZEROOM_TM32_COINS     EQU 1500
-DEF CELADONGAMECORNERPRIZEROOM_TM58_COINS     EQU 4000
+DEF CELADONGAMECORNERPRIZEROOM_TM60_COINS     EQU 4000
+DEF CELADONGAMECORNERPRIZEROOM_TM74_COINS     EQU 6500
 DEF CELADONGAMECORNERPRIZEROOM_TM73_COINS     EQU 7000
 DEF CELADONGAMECORNERPRIZEROOM_EEVEE_COINS    EQU 1111
 DEF CELADONGAMECORNERPRIZEROOM_OMANYTE_COINS  EQU 2222
@@ -37,8 +38,9 @@ CeladonPrizeRoom_tmcounterloop:
 	verticalmenu
 	closewindow
 	ifequal 1, .DoubleTeam
-	ifequal 2, .Crunch
-	ifequal 3, .SkyAttack
+	ifequal 2, .LeechLife
+	ifequal 3, .SkullBash
+	ifequal 4, .SkyAttack
 	sjump CeladonPrizeRoom_CancelPurchaseScript
 
 .DoubleTeam:
@@ -54,17 +56,30 @@ CeladonPrizeRoom_tmcounterloop:
 	takecoins CELADONGAMECORNERPRIZEROOM_TM32_COINS
 	sjump CeladonPrizeRoom_purchased
 
-.Crunch:
-	checkitem TM_CRUNCH
+.LeechLife:
+	checkitem TM_LEECH_LIFE
 	iftrue CeladonPrizeRoom_alreadyhavetm
-	checkcoins CELADONGAMECORNERPRIZEROOM_TM58_COINS
+	checkcoins CELADONGAMECORNERPRIZEROOM_TM60_COINS
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
-	getitemname STRING_BUFFER_3, TM_CRUNCH
+	getitemname STRING_BUFFER_3, TM_LEECH_LIFE
 	scall CeladonPrizeRoom_askbuy
 	iffalse CeladonPrizeRoom_CancelPurchaseScript
-	giveitem TM_CRUNCH
+	giveitem TM_LEECH_LIFE
 	iffalse CeladonPrizeRoom_notenoughroom
-	takecoins CELADONGAMECORNERPRIZEROOM_TM58_COINS
+	takecoins CELADONGAMECORNERPRIZEROOM_TM60_COINS
+	sjump CeladonPrizeRoom_purchased
+
+.SkullBash:
+	checkitem TM_SKULL_BASH
+	iftrue CeladonPrizeRoom_alreadyhavetm
+	checkcoins CELADONGAMECORNERPRIZEROOM_TM74_COINS
+	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
+	getitemname STRING_BUFFER_3, TM_SKULL_BASH
+	scall CeladonPrizeRoom_askbuy
+	iffalse CeladonPrizeRoom_CancelPurchaseScript
+	giveitem TM_SKULL_BASH
+	iffalse CeladonPrizeRoom_notenoughroom
+	takecoins CELADONGAMECORNERPRIZEROOM_TM74_COINS
 	sjump CeladonPrizeRoom_purchased
 
 .SkyAttack:
@@ -129,10 +144,11 @@ CeladonPrizeRoom_TMMenuHeader:
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 4 ; items
+	db 5 ; items
 	db "TM32    {d:CELADONGAMECORNERPRIZEROOM_TM32_COINS}@"
-	db "TM29    {d:CELADONGAMECORNERPRIZEROOM_TM29_COINS}@"
-	db "TM15    {d:CELADONGAMECORNERPRIZEROOM_TM15_COINS}@"
+	db "TM60    {d:CELADONGAMECORNERPRIZEROOM_TM60_COINS}@"
+	db "TM74    {d:CELADONGAMECORNERPRIZEROOM_TM74_COINS}@"
+	db "TM73    {d:CELADONGAMECORNERPRIZEROOM_TM73_COINS}@"
 	db "CANCEL@"
 
 CeladonGameCornerPrizeRoomPokemonVendor:
