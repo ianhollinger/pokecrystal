@@ -89,7 +89,7 @@ VioletGymFalknerScript:
 .SpeechAfterTM:
 	writetext FalknerFightDoneText
 	waitbutton
-.NoRoomForMudSlap:
+.NoRoomForRazorWind:
 	closetext
 	end
 
