@@ -33,7 +33,7 @@ VioletGymFalknerScript:
 .FightDone:
 	checkevent EVENT_BEAT_FALKNER2
 	iftrue .SpeechAfterRematch
-        checkevent EVENT_GOT_TM31_MUD_SLAP
+        checkevent EVENT_GOT_TM51_RAZOR_WIND
 	iftrue .SpeechAfterTM
 	setevent EVENT_BEAT_BIRD_KEEPER_ROD
 	setevent EVENT_BEAT_BIRD_KEEPER_ABE
@@ -41,10 +41,10 @@ VioletGymFalknerScript:
 	specialphonecall SPECIALCALL_ASSISTANT
 	writetext FalknerZephyrBadgeText
 	promptbutton
-	verbosegiveitem TM_MUD_SLAP
-	iffalse .NoRoomForMudSlap
-	setevent EVENT_GOT_TM31_MUD_SLAP
-	writetext FalknerTMMudSlapText
+	verbosegiveitem TM_RAZOR_WIND
+	iffalse .NoRoomForRazorWind
+	setevent EVENT_GOT_TM51_RAZOR_WIND
+	writetext FalknerTMRazorWindText
 	waitbutton
 	closetext
 	end
@@ -233,7 +233,7 @@ FalknerZephyrBadgeText:
 	line "too."
 	done
 
-FalknerTMMudSlapText:
+FalknerTMRazorWindText:
 	text "By using a TM, a"
 	line "#MON will"
 
@@ -245,17 +245,14 @@ FalknerTMMudSlapText:
 	cont "you like."
 
 	para "TM31 contains"
-	line "MUD-SLAP."
+	line "RAZOR WIND."
 
-	para "It reduces the"
-	line "enemy's accuracy"
+	para "It slashes the"
+	line "enemy with wind."
 
-	para "while it causes"
-	line "damage."
-
-	para "In other words, it"
-	line "is both defensive"
-	cont "and offensive."
+	para "It takes a while"
+	line "to execute,"
+	cont "though."
 	done
 
 FalknerFightDoneText:
