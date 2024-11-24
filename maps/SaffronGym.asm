@@ -34,6 +34,14 @@ SaffronGymSabrinaScript:
 	waitsfx
 	setflag ENGINE_MARSHBADGE
 	writetext SabrinaMarshBadgeText
+	checkevent EVENT_GOT_TM55_BATON_PASS
+	iftrue .GotBatonPass
+	verbosegiveitem TM_BATON_PASS
+	iffalse .GotBatonPass
+	setevent EVENT_GOT_TM55_BATON_PASS
+	writetext SabrinaExplainTMText
+	promptbutton
+.GotBatonPass:
 	waitbutton
 	closetext
 	end
@@ -244,6 +252,16 @@ SabrinaMarshBadgeText:
 
 	para "your subliminal"
 	line "powers…"
+
+	para "And this TM will"
+	line "help you in your"
+	cont "future."
+
+SabrinaExplainTMText:
+	text "BATON PASS allows"
+	line "you to transfer"
+	cont "stat changes to"
+	cont "an ally."
 
 	para "Although I failed"
 	line "to accurately pre-"
