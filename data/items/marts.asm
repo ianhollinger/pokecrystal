@@ -5,7 +5,8 @@ Marts:
 	dw MartCherrygroveDex
 	dw MartViolet1
 	dw MartViolet2
-	dw MartAzalea
+	dw MartAzalea1
+	dw MartAzalea2
 	dw MartCianwood
 	dw MartGoldenrod2F1
 	dw MartGoldenrod2F2
@@ -15,7 +16,8 @@ Marts:
 	dw MartGoldenrod5F2
 	dw MartOlivine1	
 	dw MartOlivine2
-	dw MartEcruteak
+	dw MartEcruteak1 
+	dw MartEcruteak2
 	dw MartMahogany1
 	dw MartMahogany2
 	dw MartBlackthorn1
@@ -80,7 +82,7 @@ MartViolet2:
 	db FLOWER_MAIL
 	db -1 ; end
 
-MartAzalea:
+MartAzalea1:
 	db 10 ; # items
 	db POKE_BALL
 	db POTION
@@ -92,6 +94,13 @@ MartAzalea:
 	db AWAKENING
 	db BURN_HEAL
 	db ICE_HEAL
+	db -1 ; end
+
+MartAzalea2:
+	db 3 ; # items
+	db TM_MEGA_DRAIN
+	db TM_GROWTH
+	db TM_MUD_SLAP
 	db -1 ; end
 
 MartCianwood:
@@ -187,7 +196,7 @@ MartOlivine2:
 	db SURF_MAIL
 	db -1 ; end
 
-MartEcruteak:
+MartEcruteak1:
 	db 9 ; # items
 	db POKE_BALL
 	db GREAT_BALL
@@ -198,6 +207,13 @@ MartEcruteak:
 	db SUPER_REPEL
 	db REVIVE
 	db AWAKENING
+	db -1 ; end
+
+MartEcruteak2:
+	db 3 ; # items
+	db TM_PAIN_SPLIT
+	db TM_NIGHT_SHADE
+	db TM_SEISMIC_TOSS
 	db -1 ; end
 
 MartMahogany1:
