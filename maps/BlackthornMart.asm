@@ -11,13 +11,13 @@ BlackthornMart_MapScripts:
 
 BlackthornMartClerk1Script:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_BLACKTHORN1
+	pokemart MARTTYPE_STANDARD, MART_BLACKTHORN_1
 	closetext
 	end
 
 BlackthornMartClerk2Script:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_BLACKTHORN2
+	pokemart MARTTYPE_STANDARD, MART_BLACKTHORN_2
 	closetext
 	end
 
