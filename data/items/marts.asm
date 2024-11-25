@@ -169,12 +169,12 @@ MartGoldenrod5F1:
 
 MartGoldenrod5F2:
 	db 6 ; # items
-	db TM_RETURN
 	db TM_FRUSTRATION
-	db TM_METRONOME	
+	db TM_RETURN	
+	db TM_REVERSAL
 	db TM_MIMIC
 	db TM_FALSE_SWIPE
-	db TM_REVERSAL
+	db TM_METRONOME
 	db -1 ; end
 
 MartOlivine1:
@@ -212,8 +212,8 @@ MartEcruteak1:
 MartEcruteak2:
 	db 3 ; # items
 	db TM_PAIN_SPLIT
-	db TM_NIGHT_SHADE
 	db TM_SEISMIC_TOSS
+	db TM_NIGHT_SHADE
 	db -1 ; end
 
 MartMahogany1:
