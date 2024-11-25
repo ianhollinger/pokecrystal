@@ -180,12 +180,12 @@ GoldenrodDeptStore5FCarrieMysteryGiftRequiresGBCText:
 	done
 
 GoldenrodDeptStore5FLassText:
-	text "On Sundays, a lady"
-	line "comes to check out"
-	cont "#MON."
+	text "That lady sold"
+	line "me a TM!"
 
-	para "She even gives"
-	line "away TMs!"
+	para "It cost me"
+	line "all my birthday"
+	cont "money!"
 	done
 
 GoldenrodDeptStore5FPokefanMText:
