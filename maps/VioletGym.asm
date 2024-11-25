@@ -244,7 +244,7 @@ FalknerTMRazorWindText:
 	line "as many times as"
 	cont "you like."
 
-	para "TM31 contains"
+	para "TM51 contains"
 	line "RAZOR WIND."
 
 	para "It slashes the"
