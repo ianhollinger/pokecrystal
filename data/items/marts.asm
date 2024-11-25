@@ -98,9 +98,9 @@ MartAzalea1:
 
 MartAzalea2:
 	db 3 ; # items
-	db TM_MEGA_DRAIN
-	db TM_GROWTH
 	db TM_MUD_SLAP
+	db TM_GROWTH
+	db TM_MEGA_DRAIN
 	db -1 ; end
 
 MartCianwood:
