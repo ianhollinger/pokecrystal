@@ -173,8 +173,8 @@ MartGoldenrod5F2:
 	db TM_RETURN	
 	db TM_REVERSAL
 	db TM_MIMIC
-	db TM_FALSE_SWIPE
 	db TM_METRONOME
+	db TM_FALSE_SWIPE
 	db -1 ; end
 
 MartOlivine1:
