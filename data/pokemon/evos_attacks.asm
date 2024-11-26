@@ -566,20 +566,22 @@ ZubatEvosAttacks:
 	db 33, LEECH_LIFE 
 	db 37, HAZE
 	db 42, TOXIC
+	db 46, SUPER_FANG 
 	db 0 ; no more level-up moves
 
 GolbatEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, CROBAT
 	db 0 ; no more evolutions
+	db 1, SCREECH
 	db 1, WING_ATTACK
 	db 19, CONFUSE_RAY
 	db 21, CRUNCH
-	db 22, SCREECH
 	db 26, SWIFT
 	db 32, MEAN_LOOK
 	db 39, LEECH_LIFE 
 	db 45, HAZE
 	db 52, TOXIC
+	db 58, SUPER_FANG
 	db 0 ; no more level-up moves
 
 OddishEvosAttacks:
@@ -2451,15 +2453,16 @@ AriadosEvosAttacks:
 
 CrobatEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, SCREECH
 	db 1, WING_ATTACK
 	db 19, CONFUSE_RAY
 	db 21, CRUNCH
-	db 22, SCREECH
 	db 26, SWIFT
 	db 32, MEAN_LOOK
 	db 39, LEECH_LIFE 
 	db 45, HAZE
 	db 52, TOXIC
+	db 58, SUPER_FANG
 	db 0 ; no more level-up moves
 
 ChinchouEvosAttacks:
