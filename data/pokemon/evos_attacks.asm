@@ -875,7 +875,7 @@ KadabraEvosAttacks:
 	db 1, TELEPORT
 	db 1, KINESIS
 	db 15, CONFUSION
-	db 16, KINESIS
+;	db 16, KINESIS
 	db 19, DISABLE
 	db 23, HYPNOSIS 
 	db 26, PSYBEAM 
@@ -891,7 +891,7 @@ AlakazamEvosAttacks:
 	db 1, TELEPORT
 	db 1, KINESIS
 	db 15, CONFUSION
-	db 16, KINESIS
+;	db 16, KINESIS
 	db 19, DISABLE
 	db 23, HYPNOSIS 
 	db 26, PSYBEAM 
