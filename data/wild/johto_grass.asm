@@ -341,21 +341,21 @@ JohtoGrassWildMons:
 	def_grass_wildmons NATIONAL_PARK
 	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
 	; morn
-	db 14, NIDORAN_F
 	db 15, PIDGEY
+	db 14, NIDORAN_F
 	db 14, NIDORAN_M
-	db 14, NIDORAN_M
+	db 12, CATERPIE
 	db 12, CATERPIE
 	db 13, WEEDLE
 	db 12, WEEDLE
 	; day
-	db 14, NIDORAN_F
 	db 15, PIDGEY
+	db 14, NIDORAN_F
 	db 14, NIDORAN_M
-	db 14, NIDORAN_M
+	db 12, CATERPIE
+	db 13, WEEDLE
+	db 13, SUNKERN
 	db 12, SUNKERN
-	db 13, PIKACHU
-	db 12, PIKACHU
 	; nite
 	db 14, PSYDUCK
 	db 14, SPINARAK
@@ -569,17 +569,17 @@ JohtoGrassWildMons:
 	db 9, WEEDLE
 	db 10, METAPOD
 	db 10, KAKUNA
-	db 10, PARAS
 	db 11, PIDGEY
-	db 11, PIDGEY
+	db 10, PICHU
+	db 10, PIKACHU
 	; day
 	db 9, CATERPIE
 	db 9, WEEDLE
 	db 10, METAPOD
 	db 10, KAKUNA
+	db 11, PIDGEY
 	db 10, PICHU
-	db 11, PIDGEY
-	db 11, PIDGEY
+	db 10, PIKACHU
 	; nite
 	db 9, ODDISH
 	db 9, VENONAT
@@ -1231,7 +1231,7 @@ JohtoGrassWildMons:
 	db 23, GOLBAT
 	db 23, GOLBAT
 	db 30, WOBBUFFET
-	db 23, WOBBUFFET
+	db 23, CLEFAIRY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_29
@@ -1383,7 +1383,7 @@ JohtoGrassWildMons:
 	db 12, ABRA
 	db 14, DITTO
 	db 12, IGGLYBUFF
-	db 12, IGGLYBUFF
+	db 12, JIGGLYPUFF
 	; day
 	db 12, SNUBBULL
 	db 13, RATTATA
@@ -1391,7 +1391,7 @@ JohtoGrassWildMons:
 	db 12, ABRA
 	db 14, DITTO
 	db 12, IGGLYBUFF
-	db 12, IGGLYBUFF
+	db 12, JIGGLYPUFF
 	; nite
 	db 14, DROWZEE
 	db 13, RATTATA
@@ -1399,7 +1399,7 @@ JohtoGrassWildMons:
 	db 12, ABRA
 	db 14, DITTO
 	db 12, IGGLYBUFF
-	db 12, IGGLYBUFF
+	db 12, JIGGLYPUFF
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_35
