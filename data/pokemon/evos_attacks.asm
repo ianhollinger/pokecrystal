@@ -268,10 +268,10 @@ RattataEvosAttacks:
 
 RaticateEvosAttacks:
 	db 0 ; no more evolutions
+        db 1, SWORDS_DANCE
 	db 1, HYPER_FANG
         db 19, PURSUIT
 	db 19, SCARY_FACE
-        db 20, SWORDS_DANCE
         db 24, TAKE_DOWN
 	db 30, CRUNCH
 	db 35, SUPER_FANG
