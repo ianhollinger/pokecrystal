@@ -831,6 +831,7 @@ PoliwagEvosAttacks:
 	db 32, BELLY_DRUM 
 	db 37, HYDRO_PUMP
 	db 41, DOUBLE_EDGE
+	db 46, LOVELY_KISS 
 	db 0 ; no more level-up moves
 
 PoliwhirlEvosAttacks:
@@ -846,6 +847,7 @@ PoliwhirlEvosAttacks:
 	db 36, BELLY_DRUM
 	db 43, HYDRO_PUMP
 	db 49, DOUBLE_EDGE
+	db 56, LOVELY_KISS
 	db 0 ; no more level-up moves
 
 PoliwrathEvosAttacks:
