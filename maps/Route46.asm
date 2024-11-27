@@ -186,9 +186,8 @@ HikerBaileyAfterBattleText:
 
 CamperTedSeenText:
 	text "I can never"
-	line "decide which"
-
-	para "move to use."
+	line "decide which move"
+	cont "to use."
 	done
 
 CamperTedBeatenText:
