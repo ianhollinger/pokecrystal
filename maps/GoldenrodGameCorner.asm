@@ -510,8 +510,8 @@ GoldenrodGameCornerCooltrainerFText:
 
 GoldenrodGameCornerGentlemanText:
 	text "I taught PETAL"
-	line "DANCE to my"
-	cont "#MON."
+	line "DANCE to my #-"
+	cont "MON."
 
 	para "It was hard to get"
 	line "enough coins for"
