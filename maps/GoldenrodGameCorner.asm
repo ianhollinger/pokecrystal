@@ -174,7 +174,7 @@ GoldenrodGameCornerPrizeVendor_NoCoinCaseScript:
 
 GoldenrodGameCornerTMVendorMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 15, TEXTBOX_Y + 2
+	menu_coords 0, 2, 14, TEXTBOX_Y + 1
 	dw .MenuData
 	db 1 ; default option
 
