@@ -174,7 +174,7 @@ GoldenrodGameCornerPrizeVendor_NoCoinCaseScript:
 
 GoldenrodGameCornerTMVendorMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 16, TEXTBOX_Y - 1
+	menu_coords 0, 2, 16, TEXTBOX_Y + 2
 	dw .MenuData
 	db 1 ; default option
 
@@ -509,8 +509,9 @@ GoldenrodGameCornerCooltrainerFText:
 	done
 
 GoldenrodGameCornerGentlemanText:
-	text "I taught BLIZZARD"
-	line "to my #MON."
+	text "I taught PETAL"
+	line "DANCE to my"
+	cont "#MON."
 
 	para "It was hard to get"
 	line "enough coins for"
