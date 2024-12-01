@@ -337,7 +337,7 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_HYPER_BEAM,       AI_Smart_HyperBeam
 	dbw EFFECT_RAGE,             AI_Smart_Rage
 	dbw EFFECT_MIMIC,            AI_Smart_Mimic
-	dbw EFFECT_LEECH_SEED,       AI_Smart_LeechSeed
+;	dbw EFFECT_LEECH_SEED,       AI_Smart_LeechSeed
 	dbw EFFECT_DISABLE,          AI_Smart_Disable
 	dbw EFFECT_COUNTER,          AI_Smart_Counter
 	dbw EFFECT_ENCORE,           AI_Smart_Encore
@@ -964,7 +964,7 @@ AI_Smart_Moonlight:
 	ret
 
 AI_Smart_Toxic:
-AI_Smart_LeechSeed:
+;AI_Smart_LeechSeed:
 ; Discourage this move if player's HP is below 50%.
 
 	call AICheckPlayerHalfHP
@@ -1180,6 +1180,12 @@ AI_Smart_Fly:
 	ret
 
 AI_Smart_LeechSeed:
+; Discourage this move if player's HP is below 50%.
+
+	call AICheckPlayerHalfHP
+	ret c
+	inc [hl]
+
 ; don't use against grass types
 
 	ld a, [wBattleMonType1]
