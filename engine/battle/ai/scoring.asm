@@ -2263,13 +2263,85 @@ AI_Smart_Earthquake:
 AI_Smart_BatonPass:
 ; Discourage this move if the player hasn't shown super-effective moves against the enemy.
 ; Consider player's type(s) if its moves are unknown.
-
 	push hl
 	callfar CheckPlayerMoveTypeMatchups
 	ld a, [wEnemyAISwitchScore]
 	cp BASE_AI_SWITCH_SCORE
 	pop hl
-	ret c
+	jr c, .checkstats
+	inc [hl]
+
+; discourage if enemy is confused, seeded, under Curse or Perish Song.
+	ld a, [wEnemySubStatus1]
+	bit SUBSTATUS_CURSE, a
+	jr nz, .discourage
+	bit SUBSTATUS_PERISH, a
+	jr nz, .discourage
+
+	ld a, [wEnemySubStatus3]
+	bit SUBSTATUS_CONFUSED, a
+	jr nz, .discourage
+
+	ld a, [wEnemySubStatus4]
+	bit SUBSTATUS_LEECH_SEED, a
+	jr nz, .discourage
+
+	ld a, [wEnemySubStatus5]
+	bit SUBSTATUS_CANT_RUN, a
+	jr nz, .discourage
+
+; encourage if enemy is pumped or under Substitute.
+	ld a, [wEnemySubStatus4]
+	bit SUBSTATUS_FOCUS_ENERGY, a
+	jr nz, .encourage
+	bit SUBSTATUS_SUBSTITUTE, a
+	jr nz, .encourage
+
+; This is supposed to check how much each stat has been raised and encourage for each 
+; 2+ stages, again for 4+
+.checkstats
+	ld a, [wEnemyAtkLevel]
+	cp BASE_STAT_LEVEL + 2
+	jr c, .encourage
+	cp BASE_STAT_LEVEL + 4
+	jr c, .encourage
+	ld a, [wEnemyDefLevel]
+	cp BASE_STAT_LEVEL + 2
+	jr c, .encourage
+	cp BASE_STAT_LEVEL + 4
+	jr c, .encourage
+	ld a, [wEnemySpdLevel]
+	cp BASE_STAT_LEVEL + 2
+	jr c, .encourage
+	cp BASE_STAT_LEVEL + 4
+	jr c, .encourage
+	ld a, [wEnemySAtkLevel]
+	cp BASE_STAT_LEVEL + 2
+	jr c, .encourage
+	cp BASE_STAT_LEVEL + 4
+	jr c, .encourage
+	ld a, [wEnemySDefLevel]
+	cp BASE_STAT_LEVEL + 2
+	jr c, .encourage
+	cp BASE_STAT_LEVEL + 4
+	jr c, .encourage
+	ld a, [wEnemyAccLevel]
+	cp BASE_STAT_LEVEL + 2
+	jr c, .encourage
+	cp BASE_STAT_LEVEL + 4
+	jr c, .encourage
+	ld a, [wEnemyEvaLevel]
+	cp BASE_STAT_LEVEL + 2
+	jr c, .encourage
+	cp BASE_STAT_LEVEL + 4
+	jr c, .encourage
+	ret
+
+.encourage
+	dec [hl]
+	ret
+
+.discourage
 	inc [hl]
 	ret
 
