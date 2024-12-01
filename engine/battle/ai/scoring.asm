@@ -2271,7 +2271,7 @@ AI_Smart_BatonPass:
 	jr c, .checkstats
 	inc [hl]
 
-; discourage if enemy is confused, seeded, under Curse or Perish Song.
+; greatly discourage if enemy is confused, seeded, trapped, under Curse or Perish Song.
 	ld a, [wEnemySubStatus1]
 	bit SUBSTATUS_CURSE, a
 	jr nz, .discourage
@@ -2342,6 +2342,7 @@ AI_Smart_BatonPass:
 	ret
 
 .discourage
+	inc [hl]
 	inc [hl]
 	ret
 
