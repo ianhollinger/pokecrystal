@@ -388,6 +388,7 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_SOLARBEAM,        AI_Smart_Solarbeam
 	dbw EFFECT_THUNDER,          AI_Smart_Thunder
 	dbw EFFECT_FLY,              AI_Smart_Fly
+	dbw EFFECT_LEECH_SEED,       AI_Smart_LeechSeed 
 	db -1 ; end
 
 AI_Smart_Sleep:
@@ -1176,6 +1177,22 @@ AI_Smart_Fly:
 	dec [hl]
 	dec [hl]
 	dec [hl]
+	ret
+
+AI_Smart_LeechSeed:
+; don't use against grass types
+
+	ld a, [wBattleMonType1]
+	cp GRASS
+	jr z, .immune
+	ld a, [wBattleMonType2]
+	cp GRASS
+	jr z, .immune
+	ret
+.immune
+	inc [hl]
+	inc [hl]
+	inc [hl]
 	ret
 
 AI_Smart_SuperFang:
