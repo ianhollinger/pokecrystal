@@ -2284,6 +2284,8 @@ AI_Smart_Earthquake:
 	ret
 
 AI_Smart_BatonPass:
+; Discourage by default.
+	inc [hl]
 ; Discourage this move if the player hasn't shown super-effective moves against the enemy.
 ; Consider player's type(s) if its moves are unknown.
 	push hl
@@ -2291,10 +2293,11 @@ AI_Smart_BatonPass:
 	ld a, [wEnemyAISwitchScore]
 	cp BASE_AI_SWITCH_SCORE
 	pop hl
-	jr c, .checkstats
+	jr c, .checkstatus
 	inc [hl]
 
-; greatly discourage if enemy is confused, seeded, trapped, under Curse or Perish Song.
+; Greatly discourage if enemy is confused, seeded, trapped, under Curse or Perish Song.
+.checkstatus
 	ld a, [wEnemySubStatus1]
 	bit SUBSTATUS_CURSE, a
 	jr nz, .discourage
@@ -2322,7 +2325,6 @@ AI_Smart_BatonPass:
 
 ; This is supposed to check how much each stat has been raised and encourage for each 
 ; 2+ stages, again for 4+
-.checkstats
 	ld a, [wEnemyAtkLevel]
 	cp BASE_STAT_LEVEL + 2
 	jr c, .encourage
