@@ -256,6 +256,7 @@ SabrinaMarshBadgeText:
 	para "And this TM will"
 	line "help you in your"
 	cont "future."
+	done
 
 SabrinaExplainTMText:
 	text "BATON PASS allows"
