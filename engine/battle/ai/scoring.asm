@@ -2284,10 +2284,19 @@ AI_Smart_Earthquake:
 	ret
 
 AI_Smart_BatonPass:
-; Discourage by default.
+; Discourage if enemy's first turn.
+	ld a, [wEnemyTurnsTaken]
+	and a
+	jr z, .discourage
+
+; 20% chance to discourage by default.
+	call AI_80_20
+	jr nc, .checksupereffective
 	inc [hl]
+	
 ; Discourage this move if the player hasn't shown super-effective moves against the enemy.
 ; Consider player's type(s) if its moves are unknown.
+.checksupereffective
 	push hl
 	callfar CheckPlayerMoveTypeMatchups
 	ld a, [wEnemyAISwitchScore]
@@ -2299,9 +2308,7 @@ AI_Smart_BatonPass:
 ; Greatly discourage if enemy is confused, seeded, trapped, under Curse or Perish Song.
 .checkstatus
 	ld a, [wEnemySubStatus1]
-	bit SUBSTATUS_CURSE, a
-	jr nz, .discourage
-	bit SUBSTATUS_PERISH, a
+	and 1 << SUBSTATUS_CURSE | 1 << SUBSTATUS_PERISH
 	jr nz, .discourage
 
 	ld a, [wEnemySubStatus3]
@@ -2318,51 +2325,55 @@ AI_Smart_BatonPass:
 
 ; encourage if enemy is pumped or under Substitute.
 	ld a, [wEnemySubStatus4]
-	bit SUBSTATUS_FOCUS_ENERGY, a
-	jr nz, .encourage
-	bit SUBSTATUS_SUBSTITUTE, a
+	and 1 << SUBSTATUS_FOCUS_ENERGY | 1 << SUBSTATUS_SUBSTITUTE
 	jr nz, .encourage
 
-; This is supposed to check how much each stat has been raised and encourage for each 
-; 2+ stages, again for 4+
-	ld a, [wEnemyAtkLevel]
-	cp BASE_STAT_LEVEL + 2
-	jr c, .encourage
-	cp BASE_STAT_LEVEL + 4
-	jr c, .encourage
-	ld a, [wEnemyDefLevel]
-	cp BASE_STAT_LEVEL + 2
-	jr c, .encourage
-	cp BASE_STAT_LEVEL + 4
-	jr c, .encourage
-	ld a, [wEnemySpdLevel]
-	cp BASE_STAT_LEVEL + 2
-	jr c, .encourage
-	cp BASE_STAT_LEVEL + 4
-	jr c, .encourage
-	ld a, [wEnemySAtkLevel]
-	cp BASE_STAT_LEVEL + 2
-	jr c, .encourage
-	cp BASE_STAT_LEVEL + 4
-	jr c, .encourage
-	ld a, [wEnemySDefLevel]
-	cp BASE_STAT_LEVEL + 2
-	jr c, .encourage
-	cp BASE_STAT_LEVEL + 4
-	jr c, .encourage
-	ld a, [wEnemyAccLevel]
-	cp BASE_STAT_LEVEL + 2
-	jr c, .encourage
-	cp BASE_STAT_LEVEL + 4
-	jr c, .encourage
-	ld a, [wEnemyEvaLevel]
-	cp BASE_STAT_LEVEL + 2
-	jr c, .encourage
-	cp BASE_STAT_LEVEL + 4
-	jr c, .encourage
+; Calculate the sum of all enemy's stat level modifiers. Add 100 first to prevent underflow.
+; Put the result in c. c will range between 58 and 142.
+	push hl
+	ld hl, wEnemyAtkLevel
+	ld b, NUM_LEVEL_STATS
+	ld c, 100
+
+.enemy_loop
+	ld a, [hli]
+	sub BASE_STAT_LEVEL
+	add c
+	ld c, a
+	dec b
+	jr nz, .enemy_loop
+
+; 20% chance to encourage this move if stats are raised once, 50% if raised three 
+; times, 80% if raised five times (can stack)
+	ld a, c
+	cp 100
+	pop hl
+	jr c, .possiblyencourage
+	cp 102
+	jr c, .maybeencourage
+	cp 104
+	jr c, .likelyencourage
 	ret
 
 .encourage
+	dec [hl]
+	ret
+
+.maybeencourage
+	call AI_50_50
+	ret c
+	dec [hl]
+	ret
+
+.possiblyencourage
+	call AI_80_20
+	ret nc
+	dec [hl]
+	ret
+
+.likelyencourage
+	call AI_80_20
+	ret c
 	dec [hl]
 	ret
 
