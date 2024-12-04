@@ -195,6 +195,7 @@
 	const BLUESKY_MAIL ; a0
 	const MUSIC_MAIL   ; a1
 	const MIRAGE_MAIL  ; a2
+	const LINKING_CORD ; a3
 ;	const ITEM_BE      
 DEF NUM_ITEMS EQU const_value - 1
 
@@ -217,94 +218,94 @@ ENDM
 
 ; see data/moves/tmhm_moves.asm for moves
 DEF TM01 EQU const_value
-	add_tm DYNAMICPUNCH ; a3
-	add_tm HEADBUTT     ; a4
-	add_tm CURSE        ; a5
-	add_tm ROLLOUT      ; a6
+	add_tm DYNAMICPUNCH ; a4
+	add_tm HEADBUTT     ; a5
+	add_tm CURSE        ; a6
+	add_tm ROLLOUT      ; a7
 ;	const ITEM_C3       
-	add_tm ROAR         ; a7
-	add_tm TOXIC        ; a8
-	add_tm ZAP_CANNON   ; a9
-	add_tm ROCK_SMASH   ; aa
-	add_tm PAIN_SPLIT   ; ab
-	add_tm HIDDEN_POWER ; ac
-	add_tm SUNNY_DAY    ; ad
-	add_tm SWEET_SCENT  ; ae
-	add_tm SEISMIC_TOSS ; af
-	add_tm BLIZZARD     ; b0
-	add_tm HYPER_BEAM   ; b1
-	add_tm ICY_WIND     ; b2
-	add_tm PROTECT      ; b3
-	add_tm RAIN_DANCE   ; b4
-	add_tm GIGA_DRAIN   ; b5
-	add_tm ENDURE       ; b6
-	add_tm FRUSTRATION  ; b7
-	add_tm SOLARBEAM    ; b8
-	add_tm IRON_TAIL    ; b9
-	add_tm OUTRAGE	    ; ba
-	add_tm THUNDER      ; bb
-	add_tm EARTHQUAKE   ; bc
-	add_tm RETURN       ; bd
-	add_tm DIG          ; be
+	add_tm ROAR         ; a8
+	add_tm TOXIC        ; a9
+	add_tm ZAP_CANNON   ; aa
+	add_tm ROCK_SMASH   ; ab
+	add_tm PAIN_SPLIT   ; ac
+	add_tm HIDDEN_POWER ; ad
+	add_tm SUNNY_DAY    ; ae
+	add_tm SWEET_SCENT  ; af
+	add_tm SEISMIC_TOSS ; b0
+	add_tm BLIZZARD     ; b1
+	add_tm HYPER_BEAM   ; b2
+	add_tm ICY_WIND     ; b3
+	add_tm PROTECT      ; b4
+	add_tm RAIN_DANCE   ; b5
+	add_tm GIGA_DRAIN   ; b6
+	add_tm ENDURE       ; b7
+	add_tm FRUSTRATION  ; b8
+	add_tm SOLARBEAM    ; b9
+	add_tm IRON_TAIL    ; ba
+	add_tm OUTRAGE	    ; bb
+	add_tm THUNDER      ; bc
+	add_tm EARTHQUAKE   ; bd
+	add_tm RETURN       ; be
+	add_tm DIG          ; bf
 ;	const ITEM_DC       
-	add_tm PSYCHIC_M    ; bf
-	add_tm SHADOW_BALL  ; c0
-	add_tm MUD_SLAP     ; c1
-	add_tm DOUBLE_TEAM  ; c2
-	add_tm ICE_PUNCH    ; c3
-	add_tm SWAGGER      ; c4
-	add_tm SLEEP_TALK   ; c5
-	add_tm SLUDGE_BOMB  ; c6
-	add_tm SANDSTORM    ; c7
-	add_tm FIRE_BLAST   ; c8
-	add_tm SWIFT        ; c9
-	add_tm NIGHT_SHADE  ; ca
-	add_tm THUNDERPUNCH ; cb
-	add_tm DREAM_EATER  ; cc
-	add_tm ANCIENTPOWER ; cd
-	add_tm REST         ; ce
-	add_tm ATTRACT      ; cf
-	add_tm THIEF        ; d0
-	add_tm STEEL_WING   ; d1
-	add_tm FIRE_PUNCH   ; d2
-	add_tm FURY_CUTTER  ; d3
-	add_tm NIGHTMARE    ; d4
-	add_tm RAZOR_WIND   ; d5
-	add_tm THUNDER_WAVE	; d6
-	add_tm ROCK_SLIDE	; d7
-	add_tm EXPLOSION	; d8
-	add_tm BATON_PASS	; d9
-	add_tm SAFEGUARD	; da
-	add_tm LIGHT_SCREEN	; db
-    	add_tm CRUNCH		; dc
-    	add_tm REVERSAL		; dd
-    	add_tm LEECH_LIFE	; de
-    	add_tm GROWTH		; df
-    	add_tm MIMIC		; e0
-    	add_tm MEGA_DRAIN	; e1
-    	add_tm SWORDS_DANCE	; e2
-    	add_tm PSYBEAM		; e3
-    	add_tm HYDRO_PUMP	; e4
-   	add_tm FALSE_SWIPE	; e5
-   	add_tm SWEET_KISS	; e6
-    	add_tm REFLECT		; e7
-    	add_tm TRI_ATTACK	; e8
-    	add_tm PETAL_DANCE	; e9
-    	add_tm BODY_SLAM	; ea
-    	add_tm SKY_ATTACK	; eb
-    	add_tm SKULL_BASH	; ec
-    	add_tm SUBMISSION	; ed
-    	add_tm DOUBLE_EDGE	; ee
-    	add_tm HEAL_BELL	; ef	
-    	add_tm SUBSTITUTE	; f0
-    	add_tm SELFDESTRUCT	; f1
-    	add_tm METRONOME	; f2
+	add_tm PSYCHIC_M    ; c0
+	add_tm SHADOW_BALL  ; c1
+	add_tm MUD_SLAP     ; c2
+	add_tm DOUBLE_TEAM  ; c3
+	add_tm ICE_PUNCH    ; c4
+	add_tm SWAGGER      ; c5
+	add_tm SLEEP_TALK   ; c6
+	add_tm SLUDGE_BOMB  ; c7
+	add_tm SANDSTORM    ; c8
+	add_tm FIRE_BLAST   ; c9
+	add_tm SWIFT        ; ca
+	add_tm NIGHT_SHADE  ; cb
+	add_tm THUNDERPUNCH ; cc
+	add_tm DREAM_EATER  ; cd
+	add_tm ANCIENTPOWER ; ce
+	add_tm REST         ; cf
+	add_tm ATTRACT      ; d0
+	add_tm THIEF        ; d1
+	add_tm STEEL_WING   ; d2
+	add_tm FIRE_PUNCH   ; d3
+	add_tm FURY_CUTTER  ; d4
+	add_tm NIGHTMARE    ; d5
+	add_tm RAZOR_WIND   ; d6
+	add_tm THUNDER_WAVE ; d7
+	add_tm ROCK_SLIDE   ; d8
+	add_tm EXPLOSION    ; d9
+	add_tm BATON_PASS   ; da
+	add_tm SAFEGUARD    ; db
+	add_tm LIGHT_SCREEN ; dc
+    	add_tm CRUNCH	    ; dd
+    	add_tm REVERSAL	    ; de
+    	add_tm LEECH_LIFE   ; df
+    	add_tm GROWTH	    ; e0
+    	add_tm MIMIC	    ; e1
+    	add_tm MEGA_DRAIN   ; e2
+    	add_tm SWORDS_DANCE ; e3
+    	add_tm PSYBEAM	    ; e4
+    	add_tm HYDRO_PUMP   ; e5
+   	add_tm FALSE_SWIPE  ; e6
+   	add_tm SWEET_KISS   ; e7
+    	add_tm REFLECT	    ; e8
+    	add_tm TRI_ATTACK   ; e9
+    	add_tm PETAL_DANCE  ; ea
+    	add_tm BODY_SLAM    ; eb
+    	add_tm SKY_ATTACK   ; ec
+    	add_tm SKULL_BASH   ; ed
+    	add_tm SUBMISSION   ; ee
+    	add_tm DOUBLE_EDGE  ; ef
+    	add_tm HEAL_BELL    ; f0	
+    	add_tm SUBSTITUTE   ; f1
+    	add_tm SELFDESTRUCT ; f2
+    	add_tm METRONOME    ; f3
 DEF NUM_TMS EQU __tmhm_value__ - 1
 
 MACRO add_hm
 ; Defines three constants:
-; - HM_\1: the item id, starting at $f3
-; - \1_TMNUM: the learnable TM/HM flag, starting at 51
+; - HM_\1: the item id, starting at $f4
+; - \1_TMNUM: the learnable TM/HM flag, starting at 81
 ; - HM##_MOVE: alias for the move id, equal to the value of \1
 	const HM_\1
 	DEF HM_VALUE = __tmhm_value__ - NUM_TMS
@@ -313,16 +314,14 @@ MACRO add_hm
 ENDM
 
 DEF HM01 EQU const_value
-	add_hm CUT          ; f3
-	add_hm FLY          ; f4
-	add_hm SURF         ; f5
-	add_hm STRENGTH     ; f6
-	add_hm FLASH        ; f7
-	add_hm WHIRLPOOL    ; f8
-	add_hm WATERFALL    ; f9
+	add_hm CUT          ; f4
+	add_hm FLY          ; f5
+	add_hm SURF         ; f6
+	add_hm STRENGTH     ; f7
+	add_hm FLASH        ; f8
+	add_hm WHIRLPOOL    ; f9
+	add_hm WATERFALL    ; fa
 DEF NUM_HMS EQU __tmhm_value__ - NUM_TMS - 1
-
-	const LINKING_CORD ; fa
 
 MACRO add_mt
 ; Defines two constants:
