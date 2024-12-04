@@ -190,6 +190,7 @@ ItemDescriptions:
 	dw BlueSkyMailDesc
 	dw MusicMailDesc
 	dw MirageMailDesc
+	dw LinkingCordDesc
 ;	dw TeruSama25Desc
 	assert_table_length NUM_ITEMS
 	dw TeruSama26Desc
@@ -279,7 +280,6 @@ ItemDescriptions:
 	dw TeruSama28Desc
 	dw TeruSama28Desc
 	dw TeruSama28Desc
-	dw LinkingCordDesc
 	dw TeruSama29Desc
 	dw TeruSama30Desc
 	dw TeruSama31Desc
@@ -1014,6 +1014,10 @@ MirageMailDesc:
 	db   "MEW-print MAIL."
 	next "(HOLD)@"
 
+LinkingCordDesc:
+	db   "Evolves certain"
+	next "#MON. (HOLD)"
+
 TeruSama25Desc:
 	db   "?@"
 
@@ -1025,10 +1029,6 @@ TeruSama27Desc:
 
 TeruSama28Desc:
 	db   "?@"
-
-LinkingCordDesc:
-	db   "Evolves certain"
-	next "#MON. (HOLD)"
 
 TeruSama29Desc:
 	db   "?@"
