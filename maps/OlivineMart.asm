@@ -54,7 +54,7 @@ OlivineMartLassText:
 	line "It's a secret!"
 	done
 
-OlivineMartYoungsterScript:
+OlivineMartYoungsterText:
 	text "LINKING CORD?"
 
 	para "I heard it sim-"
