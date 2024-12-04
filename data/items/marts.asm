@@ -188,7 +188,8 @@ MartOlivine1:
 	db -1 ; end
 
 MartOlivine2:
-	db 5 ; # items
+	db 6 ; # items
+	db LINKING_CORD
 	db FIRE_STONE
 	db WATER_STONE
 	db THUNDERSTONE
