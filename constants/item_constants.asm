@@ -322,6 +322,8 @@ DEF HM01 EQU const_value
 	add_hm WATERFALL    ; f9
 DEF NUM_HMS EQU __tmhm_value__ - NUM_TMS - 1
 
+	const LINKING_CORD ; fa
+
 MACRO add_mt
 ; Defines two constants:
 ; - \1_TMNUM: the learnable TM/HM flag, starting at 58
@@ -338,8 +340,6 @@ DEF MT01 EQU const_value
 DEF NUM_TUTORS = __tmhm_value__ - NUM_TMS - NUM_HMS - 1
 
 DEF NUM_TM_HM_TUTOR EQU NUM_TMS + NUM_HMS + NUM_TUTORS
-
-	const LINKING_CORD ; fa
 
 DEF USE_SCRIPT_VAR EQU $00
 DEF ITEM_FROM_MEM  EQU $ff
