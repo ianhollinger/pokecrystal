@@ -106,20 +106,20 @@ RockItemEncounter:
 	db 3, STAR_PIECE   ; 1.172%
 	db 3, BIG_PEARL    ; 1.172%
 	db 4, KINGS_ROCK   ; 1.563%
-	db 5, SOFT_SAND    ; 1.953%
-	db 5, HARD_STONE   ; 1.953%
-	db 5, FIRE_STONE   ; 1.953%
-	db 5, WATER_STONE  ; 1.953%
-	db 5, THUNDERSTONE ; 1.953%
-	db 5, LEAF_STONE   ; 1.953%
-	db 5, MOON_STONE   ; 1.953%
-	db 5, SUN_STONE    ; 1.953%
-	db 5, EVERSTONE    ; 1.953%
-	db 5, STARDUST     ; 1.953%
-	db 6, PEARL        ; 2.344%
-	db 6, GOLD_LEAF    ; 2.344%
-        db 7, THICK_CLUB   ; 2.734%
-	db 7, SILVER_LEAF  ; 2.734%
-	db 15, POKE_BALL   ; 5.859%
-	db 25, BRICK_PIECE ; 9.766%
+	db 6, SOFT_SAND    ; 2.344%
+	db 6, HARD_STONE   ; 2.344%
+	db 6, FIRE_STONE   ; 2.344%
+	db 6, WATER_STONE  ; 2.344%
+	db 6, THUNDERSTONE ; 2.344%
+	db 6, LEAF_STONE   ; 2.344%
+	db 6, MOON_STONE   ; 2.344%
+	db 6, SUN_STONE    ; 2.344%
+	db 6, EVERSTONE    ; 2.344%
+	db 6, STARDUST     ; 2.344%
+	db 7, PEARL        ; 2.734%
+	db 7, GOLD_LEAF    ; 2.734%
+        db 8, THICK_CLUB   ; 3.125%
+	db 8, SILVER_LEAF  ; 3.125%
+;	db 15, POKE_BALL   
+	db 26, BRICK_PIECE ; 10.156%
 	db -1              ; 50%
