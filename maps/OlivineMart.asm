@@ -28,6 +28,9 @@ OlivineMartCooltrainerFScript:
 OlivineMartLassScript:
 	jumptextfaceplayer OlivineMartLassText
 
+OlivineMartYoungsterScript:
+	jumptextfaceplayer OlivineMartYoungsterText
+
 OlivineMartCooltrainerFText:
 	text "Do your #MON"
 	line "already know the"
