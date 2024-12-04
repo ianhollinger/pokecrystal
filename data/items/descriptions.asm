@@ -1026,6 +1026,10 @@ TeruSama27Desc:
 TeruSama28Desc:
 	db   "?@"
 
+LinkingCordDesc:
+	db   "Evolves certain"
+	next "#MON. (HOLD)"
+
 TeruSama29Desc:
 	db   "?@"
 
@@ -1041,6 +1045,3 @@ TeruSama32Desc:
 TeruSama33Desc:
 	db   "?@"
 
-LinkingCordDesc:
-	db   "Evolves certain"
-	next "#MON. (HOLD)"
