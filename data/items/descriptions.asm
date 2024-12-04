@@ -1016,7 +1016,7 @@ MirageMailDesc:
 
 LinkingCordDesc:
 	db   "Evolves certain"
-	next "#MON. (HOLD)"
+	next "#MON. (HOLD)@"
 
 TeruSama25Desc:
 	db   "?@"
