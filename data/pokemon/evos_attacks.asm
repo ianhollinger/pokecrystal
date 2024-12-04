@@ -838,7 +838,7 @@ PoliwagEvosAttacks:
 
 PoliwhirlEvosAttacks:
 	db EVOLVE_ITEM, WATER_STONE, POLIWRATH
-	db EVOLVE_HELD, KINGS_ROCK, POLITOED
+	db EVOLVE_ITEM, KINGS_ROCK, POLITOED
 	db EVOLVE_TRADE, KINGS_ROCK, POLITOED
 	db 0 ; no more evolutions
 	db 1, BUBBLE 
@@ -869,7 +869,7 @@ AbraEvosAttacks:
 	db 0 ; no more level-up moves
 
 KadabraEvosAttacks:
-	db EVOLVE_HELD, LINKING_CORD, ALAKAZAM
+	db EVOLVE_ITEM, LINKING_CORD, ALAKAZAM
 	db EVOLVE_TRADE, -1, ALAKAZAM
 	db 0 ; no more evolutions
 	db 1, TELEPORT
@@ -923,7 +923,7 @@ MachopEvosAttacks:
 	db 0 ; no more level-up moves
 
 MachokeEvosAttacks:
-	db EVOLVE_HELD, LINKING_CORD, MACHAMP
+	db EVOLVE_ITEM, LINKING_CORD, MACHAMP
 	db EVOLVE_TRADE, -1, MACHAMP
 	db 0 ; no more evolutions
 	db 1, SEISMIC_TOSS
@@ -1034,7 +1034,7 @@ GeodudeEvosAttacks:
 	db 0 ; no more level-up moves
 
 GravelerEvosAttacks:
-	db EVOLVE_HELD, LINKING_CORD, GOLEM
+	db EVOLVE_ITEM, LINKING_CORD, GOLEM
 	db EVOLVE_TRADE, -1, GOLEM
 	db 0 ; no more evolutions
 	db 1, ROCK_THROW
@@ -1090,7 +1090,7 @@ RapidashEvosAttacks:
 
 SlowpokeEvosAttacks:
 	db EVOLVE_LEVEL, 37, SLOWBRO
-	db EVOLVE_HELD, KINGS_ROCK, SLOWKING
+	db EVOLVE_ITEM, KINGS_ROCK, SLOWKING
 	db EVOLVE_TRADE, KINGS_ROCK, SLOWKING
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -1298,7 +1298,7 @@ GastlyEvosAttacks:
 	db 0 ; no more level-up moves
 
 HaunterEvosAttacks:
-	db EVOLVE_HELD, LINKING_CORD, GENGAR
+	db EVOLVE_ITEM, LINKING_CORD, GENGAR
 	db EVOLVE_TRADE, -1, GENGAR
 	db 0 ; no more evolutions
 	db 1, MEAN_LOOK
@@ -1326,7 +1326,7 @@ GengarEvosAttacks:
 	db 0 ; no more level-up moves
 
 OnixEvosAttacks:
-	db EVOLVE_HELD, METAL_COAT, STEELIX
+	db EVOLVE_ITEM, METAL_COAT, STEELIX
 	db EVOLVE_TRADE, METAL_COAT, STEELIX
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -1672,7 +1672,7 @@ HorseaEvosAttacks:
 	db 0 ; no more level-up moves
 
 SeadraEvosAttacks:
-	db EVOLVE_HELD, DRAGON_SCALE, KINGDRA
+	db EVOLVE_ITEM, DRAGON_SCALE, KINGDRA
 	db EVOLVE_TRADE, DRAGON_SCALE, KINGDRA
 	db 0 ; no more evolutions
 	db 1, TWISTER
@@ -1762,7 +1762,7 @@ MrMimeEvosAttacks:
 	db 0 ; no more level-up moves
 
 ScytherEvosAttacks:
-	db EVOLVE_HELD, METAL_COAT, SCIZOR
+	db EVOLVE_ITEM, METAL_COAT, SCIZOR
 	db EVOLVE_TRADE, METAL_COAT, SCIZOR
 	db 0 ; no more evolutions
 	db 1, LEER
@@ -1963,7 +1963,7 @@ FlareonEvosAttacks:
 	db 0 ; no more level-up moves
 
 PorygonEvosAttacks:
-	db EVOLVE_HELD, UP_GRADE, PORYGON2
+	db EVOLVE_ITEM, UP_GRADE, PORYGON2
 	db EVOLVE_TRADE, UP_GRADE, PORYGON2
 	db 0 ; no more evolutions
 	db 1, TACKLE
