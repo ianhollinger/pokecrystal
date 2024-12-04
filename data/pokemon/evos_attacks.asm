@@ -869,7 +869,7 @@ AbraEvosAttacks:
 	db 0 ; no more level-up moves
 
 KadabraEvosAttacks:
-	db EVOLVE_ITEM, TWISTEDSPOON, ALAKAZAM
+	db EVOLVE_ITEM, LINKING_CORD, ALAKAZAM
 	db EVOLVE_TRADE, -1, ALAKAZAM
 	db 0 ; no more evolutions
 	db 1, TELEPORT
@@ -923,7 +923,7 @@ MachopEvosAttacks:
 	db 0 ; no more level-up moves
 
 MachokeEvosAttacks:
-	db EVOLVE_ITEM, BLACKBELT_I, MACHAMP
+	db EVOLVE_ITEM, LINKING_CORD, MACHAMP
 	db EVOLVE_TRADE, -1, MACHAMP
 	db 0 ; no more evolutions
 	db 1, SEISMIC_TOSS
@@ -1034,7 +1034,7 @@ GeodudeEvosAttacks:
 	db 0 ; no more level-up moves
 
 GravelerEvosAttacks:
-	db EVOLVE_ITEM, HARD_STONE, GOLEM
+	db EVOLVE_ITEM, LINKING_CORD, GOLEM
 	db EVOLVE_TRADE, -1, GOLEM
 	db 0 ; no more evolutions
 	db 1, ROCK_THROW
@@ -1298,7 +1298,7 @@ GastlyEvosAttacks:
 	db 0 ; no more level-up moves
 
 HaunterEvosAttacks:
-	db EVOLVE_ITEM, SPELL_TAG, GENGAR
+	db EVOLVE_ITEM, LINKING_CORD, GENGAR
 	db EVOLVE_TRADE, -1, GENGAR
 	db 0 ; no more evolutions
 	db 1, MEAN_LOOK
