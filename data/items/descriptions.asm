@@ -279,7 +279,7 @@ ItemDescriptions:
 	dw TeruSama28Desc
 	dw TeruSama28Desc
 	dw TeruSama28Desc
-	dw TeruSama28Desc
+	dw LinkingCordDesc
 	dw TeruSama29Desc
 	dw TeruSama30Desc
 	dw TeruSama31Desc
@@ -1040,3 +1040,7 @@ TeruSama32Desc:
 
 TeruSama33Desc:
 	db   "?@"
+
+LinkingCordDesc:
+	db   "Evolves certain"
+	next "#MON. (HOLD)"
