@@ -189,6 +189,7 @@ ItemNames::
 	li "BLUESKY MAIL"
 	li "MUSIC MAIL"
 	li "MIRAGE MAIL"
+	li "LINKING CORD"
 ;	li "TERU-SAMA"
 	assert_list_length NUM_ITEMS
 	li "TM01"
@@ -282,7 +283,6 @@ ItemNames::
 	li "HM06"
 	li "HM07"
 	assert_list_length NUM_ITEMS + NUM_TMS + NUM_HMS ; count ITEM_C3 and ITEM_DC
-	li "LINKING CORD"
 	li "TERU-SAMA"
 	li "TERU-SAMA"
 	li "TERU-SAMA"
