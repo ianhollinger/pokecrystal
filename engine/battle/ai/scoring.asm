@@ -69,9 +69,9 @@ INCLUDE "data/battle/ai/status_only_effects.asm"
 AI_Setup:
 ; Use stat-modifying moves on turn 1.
 
-; 50% chance to greatly encourage stat-up moves during the first turn of enemy's Pokemon.
-; 50% chance to greatly encourage stat-down moves during the first turn of player's Pokemon.
-; Almost 90% chance to greatly discourage stat-modifying moves otherwise.
+; 80% chance to greatly encourage stat-up moves during the first turn of enemy's Pokemon.
+; 80% chance to greatly encourage stat-down moves during the first turn of player's Pokemon.
+; 80% chance to greatly discourage stat-modifying moves otherwise.
 
 	ld hl, wEnemyAIMoveScores - 1
 	ld de, wEnemyMonMoves
@@ -125,7 +125,7 @@ AI_Setup:
 	jr nz, .discourage
 
 .encourage
-	call AI_50_50
+	call AI_80_20
 	jr c, .checkmove
 
 	dec [hl]
@@ -133,9 +133,9 @@ AI_Setup:
 	jr .checkmove
 
 .discourage
-	call Random
-	cp 12 percent
+	call AI_80_20
 	jr c, .checkmove
+
 	inc [hl]
 	inc [hl]
 	jr .checkmove
