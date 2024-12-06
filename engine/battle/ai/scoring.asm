@@ -2343,8 +2343,8 @@ AI_Smart_BatonPass:
 	dec b
 	jr nz, .enemy_loop
 
-; 20% chance to encourage this move if stats are raised once, 50% if raised three 
-; times, 80% if raised five times (can stack)
+; 50% chance to greatly encourage this move if stats are raised once, 50% chance to encourage if raised three 
+; times, 80% chance to encourage if raised five times (can stack)
 	ld a, c
 	cp 100
 	pop hl
@@ -2359,15 +2359,16 @@ AI_Smart_BatonPass:
 	dec [hl]
 	ret
 
-.maybeencourage
+.possiblyencourage
 	call AI_50_50
 	ret c
 	dec [hl]
+	dec [hl]
 	ret
 
-.possiblyencourage
-	call AI_80_20
-	ret nc
+.maybeencourage
+	call AI_50_50
+	ret c
 	dec [hl]
 	ret
 
