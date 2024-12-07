@@ -2291,7 +2291,7 @@ AI_Smart_BatonPass:
 
 ; 20% chance to discourage by default.
 	call AI_80_20
-	jr nc, .checksupereffective
+	jr nc, .checkstatus
 	inc [hl]
 	
 ; Discourage this move if the player hasn't shown super-effective moves against the enemy.
