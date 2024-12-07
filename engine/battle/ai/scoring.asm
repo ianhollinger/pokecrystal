@@ -2296,14 +2296,14 @@ AI_Smart_BatonPass:
 	
 ; Discourage this move if the player hasn't shown super-effective moves against the enemy.
 ; Consider player's type(s) if its moves are unknown.
-.checksupereffective
-	push hl
-	callfar CheckPlayerMoveTypeMatchups
-	ld a, [wEnemyAISwitchScore]
-	cp BASE_AI_SWITCH_SCORE
-	pop hl
-	jr c, .checkstatus
-	inc [hl]
+;.checksupereffective
+;	push hl
+;	callfar CheckPlayerMoveTypeMatchups
+;	ld a, [wEnemyAISwitchScore]
+;	cp BASE_AI_SWITCH_SCORE
+;	pop hl
+;	jr c, .checkstatus
+;	inc [hl]
 
 ; Greatly discourage if enemy is confused, seeded, trapped, under Curse or Perish Song.
 .checkstatus
