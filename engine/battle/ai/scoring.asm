@@ -1940,6 +1940,9 @@ AI_Smart_Curse:
 	ret
 
 AI_Smart_Protect:
+; Discourage lmao
+	inc [hl]
+
 ; Greatly discourage this move if the enemy already used Protect.
 	ld a, [wEnemyProtectCount]
 	and a
@@ -1952,7 +1955,7 @@ AI_Smart_Protect:
 
 ; Encourage this move if the player's Fury Cutter is boosted enough.
 	ld a, [wPlayerFuryCutterCount]
-	cp 3
+	cp 2
 	jr nc, .encourage
 
 ; Encourage this move if the player has charged a two-turn move.
@@ -1984,9 +1987,11 @@ AI_Smart_Protect:
 	ret c
 
 	dec [hl]
+	dec [hl]
 	ret
 
 .greatly_discourage
+	inc [hl]
 	inc [hl]
 
 .discourage
