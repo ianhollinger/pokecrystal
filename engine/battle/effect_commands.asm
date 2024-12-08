@@ -1567,6 +1567,12 @@ BattleCommand_CheckHit:
 	call .ThunderRain
 	ret z
 
+	call .Mimimize:
+	ret z
+
+	call .Toxic
+	ret z
+
 	call .XAccuracy
 	ret nz
 
@@ -1767,6 +1773,17 @@ BattleCommand_CheckHit:
 	cp EFFECT_STOMP
 	ret z
 	cp EFFECT_BODY_SLAM
+	ret
+
+.Toxic:
+; return z if the user is poison-type.
+	ld hl, wBattleMonType1
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_type
+	ld hl, wEnemyMonType1
+.got_type:
+	cp POISON
 	ret
 
 .XAccuracy:
