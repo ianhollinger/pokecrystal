@@ -2612,6 +2612,7 @@ PlayerAttackDamage:
 .thickclub
 ; Note: Returns player attack at hl in hl.
 	call ThickClubBoost
+	call LightBallBoost
 
 .done
 	push hl
@@ -3148,13 +3149,23 @@ DEF DAMAGE_CAP EQU MAX_DAMAGE - MIN_DAMAGE
 	ret z
 
 ; x2
+;	ldh a, [hQuotient + 3]
+;	add a
+;	ldh [hQuotient + 3], a
+;
+;	ldh a, [hQuotient + 2]
+;	rl a
+;	ldh [hQuotient + 2], a
+;
+; x 1.5
 	ldh a, [hQuotient + 3]
+	push af
 	add a
 	ldh [hQuotient + 3], a
-
-	ldh a, [hQuotient + 2]
-	rl a
-	ldh [hQuotient + 2], a
+	pop af
+	srl a
+	add a, [hQuotient + 3]
+	ldh [hQuotient + 3], a
 
 ; Cap at $ffff.
 	ret nc
