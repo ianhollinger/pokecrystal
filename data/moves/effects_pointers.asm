@@ -8,6 +8,7 @@ MoveEffectsPointers:
 	dw BurnHit
 	dw FreezeHit
 	dw ParalyzeHit
+	dw BodySlam
 	dw Selfdestruct
 	dw DreamEater
 	dw MirrorMove
