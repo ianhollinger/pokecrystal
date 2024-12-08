@@ -1754,6 +1754,21 @@ BattleCommand_CheckHit:
 	cp WEATHER_RAIN
 	ret
 
+.Mimimize:
+; Return z if the move does double damage under Minimize and the opponent is Minimized.
+	ld hl, wEnemyMinimized
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .ok
+	ld hl, wPlayerMinimized
+.ok:
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_STOMP
+	ret z
+	cp EFFECT_BODY_SLAM
+	ret
+
 .XAccuracy:
 	ld a, BATTLE_VARS_SUBSTATUS4
 	call GetBattleVar
