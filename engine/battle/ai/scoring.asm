@@ -384,6 +384,7 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_EARTHQUAKE,       AI_Smart_Earthquake
 	dbw EFFECT_FUTURE_SIGHT,     AI_Smart_FutureSight
 	dbw EFFECT_GUST,             AI_Smart_Gust
+	dbw EFFECT_BODY_SLAM, 	     AI_Smart_Body_Slam
 	dbw EFFECT_STOMP,            AI_Smart_Stomp
 	dbw EFFECT_SOLARBEAM,        AI_Smart_Solarbeam
 	dbw EFFECT_THUNDER,          AI_Smart_Thunder
@@ -2745,6 +2746,7 @@ AI_Smart_FutureSight:
 	dec [hl]
 	ret
 
+AI_Smart_Body_Slam:
 AI_Smart_Stomp:
 ; 80% chance to encourage this move if the player has used Minimize.
 
