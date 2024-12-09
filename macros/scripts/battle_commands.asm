@@ -44,6 +44,7 @@ ENDM
 	command flinchtarget            ; 25
 	command ohko                    ; 26
 	command recoil                  ; 27
+	command doubleedge
 	command mist                    ; 28
 	command focusenergy             ; 29
 	command confuse                 ; 2a
