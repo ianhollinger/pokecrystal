@@ -986,6 +986,27 @@ RecoilHit:
 	kingsrock
 	endmove
 
+DoubleEdge:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	doubleedge
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+
 Mist:
 	checkobedience
 	usedmovetext
