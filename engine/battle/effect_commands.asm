@@ -1567,7 +1567,7 @@ BattleCommand_CheckHit:
 	call .ThunderRain
 	ret z
 
-	call .Mimimize:
+	call .Mimimize
 	ret z
 
 	call .Toxic
