@@ -3190,14 +3190,28 @@ DEF DAMAGE_CAP EQU MAX_DAMAGE - MIN_DAMAGE
 ;	ldh [hQuotient + 2], a
 ;
 ; x 1.5
+	ldh [hMultiplicand + 0], a
+	dec hl
+	ld a, [hli]
+	ldh [hMultiplicand + 1], a
+	ld a, [hl]
+	ldh [hMultiplicand + 2], a
+
+	ld a, 3
+	ldh [hMultiplier], a
+	call Multiply
+
+	ld a, 2
+	ldh [hDivisor], a
+	ld b, $4
+	call Divide
+
+	ldh a, [hQuotient + 2]
+	ld hl, wCurDamage
+	ld [hli], a
 	ldh a, [hQuotient + 3]
-	push af
-	add a
-	ldh [hQuotient + 3], a
-	pop af
-	srl a
-	add a, [hQuotient + 3]
-	ldh [hQuotient + 3], a
+	ld [hl], a
+	ret
 
 ; Cap at $ffff.
 	ret nc
