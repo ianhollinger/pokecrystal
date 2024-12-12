@@ -8,7 +8,6 @@ MoveEffectsPointers:
 	dw BurnHit
 	dw FreezeHit
 	dw ParalyzeHit
-	dw BodySlam
 	dw Selfdestruct
 	dw DreamEater
 	dw MirrorMove
@@ -39,7 +38,6 @@ MoveEffectsPointers:
 	dw PayDay
 	dw LightScreen
 	dw TriAttack
-	dw NormalHit
 	dw OHKOHit
 	dw RazorWind
 	dw SuperFang
@@ -51,7 +49,6 @@ MoveEffectsPointers:
 	dw Mist
 	dw FocusEnergy
 	dw RecoilHit
-	dw DoubleEdge
 	dw DoConfuse
 	dw AttackUp2
 	dw DefenseUp2
@@ -162,4 +159,7 @@ MoveEffectsPointers:
 	dw DefenseCurl
 	dw Growth
 	dw LowKick
+	dw BodySlam
+	dw DoubleEdge
+	dw NormalHit
 	assert_table_length NUM_MOVE_EFFECTS
