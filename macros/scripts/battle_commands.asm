@@ -44,7 +44,6 @@ ENDM
 	command flinchtarget            ; 25
 	command ohko                    ; 26
 	command recoil                  ; 27
-	command doubleedge
 	command mist                    ; 28
 	command focusenergy             ; 29
 	command confuse                 ; 2a
@@ -98,7 +97,7 @@ ENDM
 	command endure                  ; 5a
 	command checkcurl               ; 5b
 	command rolloutpower            ; 5c
-;	command effect0x5d              ; 5d
+	command effect0x5d              ; 5d
 	command furycutter              ; 5e
 	command attract                 ; 5f
 	command happinesspower          ; 60
