@@ -1567,12 +1567,6 @@ BattleCommand_CheckHit:
 	call .ThunderRain
 	ret z
 
-	call .Mimimize
-	ret z
-
-	call .Toxic
-	ret z
-
 	call .XAccuracy
 	ret nz
 
@@ -1758,32 +1752,6 @@ BattleCommand_CheckHit:
 
 	ld a, [wBattleWeather]
 	cp WEATHER_RAIN
-	ret
-
-.Mimimize:
-; Return z if the move does double damage under Minimize and the opponent is Minimized.
-	ld hl, wEnemyMinimized
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .ok
-	ld hl, wPlayerMinimized
-.ok:
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_STOMP
-	ret z
-	cp EFFECT_BODY_SLAM
-	ret
-
-.Toxic:
-; return z if the user is poison-type.
-	ld hl, wBattleMonType1
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .got_type
-	ld hl, wEnemyMonType1
-.got_type:
-	cp POISON
 	ret
 
 .XAccuracy:
@@ -3181,37 +3149,13 @@ DEF DAMAGE_CAP EQU MAX_DAMAGE - MIN_DAMAGE
 	ret z
 
 ; x2
-;	ldh a, [hQuotient + 3]
-;	add a
-;	ldh [hQuotient + 3], a
-;
-;	ldh a, [hQuotient + 2]
-;	rl a
-;	ldh [hQuotient + 2], a
-;
-; x 1.5
-	ldh [hMultiplicand + 0], a
-	dec hl
-	ld a, [hli]
-	ldh [hMultiplicand + 1], a
-	ld a, [hl]
-	ldh [hMultiplicand + 2], a
-
-	ld a, 3
-	ldh [hMultiplier], a
-	call Multiply
-
-	ld a, 2
-	ldh [hDivisor], a
-	ld b, $4
-	call Divide
+	ldh a, [hQuotient + 3]
+	add a
+	ldh [hQuotient + 3], a
 
 	ldh a, [hQuotient + 2]
-	ld hl, wCurDamage
-	ld [hli], a
-	ldh a, [hQuotient + 3]
-	ld [hl], a
-	ret
+	rl a
+	ldh [hQuotient + 2], a
 
 ; Cap at $ffff.
 	ret nc
@@ -3399,26 +3343,26 @@ INCLUDE "engine/battle/move_effects/sketch.asm"
 BattleCommand_DefrostOpponent:
 ; Thaw the opponent if frozen, and
 ; raise the user's Attack one stage.
-;
-;	call AnimateCurrentMove;
-;
-;	ld a, BATTLE_VARS_STATUS_OPP
-;	call GetBattleVarAddr
-;	call Defrost
-;
-;	ld a, BATTLE_VARS_MOVE_EFFECT
-;	call GetBattleVarAddr
-;	ld a, [hl]
-;	push hl
-;	push af
-;
-;	ld a, EFFECT_ATTACK_UP
-;	ld [hl], a
-;	call BattleCommand_StatUp
-;
-;	pop af
-;	pop hl
-;	ld [hl], a
+
+	call AnimateCurrentMove
+
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	call Defrost
+
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVarAddr
+	ld a, [hl]
+	push hl
+	push af
+
+	ld a, EFFECT_ATTACK_UP
+	ld [hl], a
+	call BattleCommand_StatUp
+
+	pop af
+	pop hl
+	ld [hl], a
 	ret
 
 INCLUDE "engine/battle/move_effects/sleep_talk.asm"
@@ -3482,24 +3426,24 @@ DoEnemyDamage:
 	ld [wHPBuffer2 + 1], a
 	sbc b
 	ld [wEnemyMonHP], a
-;if DEF(_DEBUG)
-;	push af
-;	ld a, BANK(sSkipBattle)
-;	call OpenSRAM
-;	ld a, [sSkipBattle]
-;	call CloseSRAM
-;	or a
-;	; If [sSkipBattle] is nonzero, skip the "jr nc, .no_underflow" check,
-;	; so any attack deals maximum damage to the enemy.
-;	jr nz, .debug_skip
-;	pop af
-;	jr nc, .no_underflow
-;	push af
-;.debug_skip
-;	pop af
-;else
+if DEF(_DEBUG)
+	push af
+	ld a, BANK(sSkipBattle)
+	call OpenSRAM
+	ld a, [sSkipBattle]
+	call CloseSRAM
+	or a
+	; If [sSkipBattle] is nonzero, skip the "jr nc, .no_underflow" check,
+	; so any attack deals maximum damage to the enemy.
+	jr nz, .debug_skip
+	pop af
 	jr nc, .no_underflow
-;endc
+	push af
+.debug_skip
+	pop af
+else
+	jr nc, .no_underflow
+endc
 
 	ld a, [wHPBuffer2 + 1]
 	ld [hli], a
@@ -5627,9 +5571,9 @@ BattleCommand_Charge:
 	text_far _BattleDugText
 	text_end
 
-;BattleCommand_Unused3C:
+BattleCommand_Unused3C:
 ; effect0x3c
-;	ret
+	ret
 
 BattleCommand_TrapTarget:
 	ld a, [wAttackMissed]
@@ -5695,68 +5639,6 @@ INCLUDE "engine/battle/move_effects/mist.asm"
 INCLUDE "engine/battle/move_effects/focus_energy.asm"
 
 BattleCommand_Recoil:
-	ld hl, wBattleMonMaxHP
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .got_hp
-	ld hl, wEnemyMonMaxHP
-.got_hp
-	ld a, BATTLE_VARS_MOVE_ANIM
-	call GetBattleVar
-	ld d, a
-; get 1/4 damage or 1 HP, whichever is higher
-	ld a, [wCurDamage]
-	ld b, a
-	ld a, [wCurDamage + 1]
-	ld c, a
-	srl b
-	rr c
-	srl b
-	rr c
-	ld a, b
-	or c
-	jr nz, .min_damage
-	inc c
-.min_damage
-	ld a, [hli]
-	ld [wHPBuffer1 + 1], a
-	ld a, [hl]
-	ld [wHPBuffer1], a
-	dec hl
-	dec hl
-	ld a, [hl]
-	ld [wHPBuffer2], a
-	sub c
-	ld [hld], a
-	ld [wHPBuffer3], a
-	ld a, [hl]
-	ld [wHPBuffer2 + 1], a
-	sbc b
-	ld [hl], a
-	ld [wHPBuffer3 + 1], a
-	jr nc, .dont_ko
-	xor a
-	ld [hli], a
-	ld [hl], a
-	ld hl, wHPBuffer3
-	ld [hli], a
-	ld [hl], a
-.dont_ko
-	hlcoord 10, 9
-	ldh a, [hBattleTurn]
-	and a
-	ld a, 1
-	jr z, .animate_hp_bar
-	hlcoord 2, 2
-	xor a
-.animate_hp_bar
-	ld [wWhichHPBar], a
-	predef AnimateHPBar
-	call RefreshBattleHuds
-	ld hl, RecoilText
-	jp StdBattleTextbox
-
-BattleCommand_DoubleEdge:
 	ld hl, wBattleMonMaxHP
 	ldh a, [hBattleTurn]
 	and a
@@ -6395,9 +6277,9 @@ INCLUDE "engine/battle/move_effects/sandstorm.asm"
 
 INCLUDE "engine/battle/move_effects/rollout.asm"
 
-;BattleCommand_Unused5D:
+BattleCommand_Unused5D:
 ; effect0x5d
-;	ret
+	ret
 
 INCLUDE "engine/battle/move_effects/fury_cutter.asm"
 
