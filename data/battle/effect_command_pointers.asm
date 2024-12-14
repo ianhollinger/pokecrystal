@@ -44,7 +44,6 @@ BattleCommandPointers:
 	dw BattleCommand_FlinchTarget
 	dw BattleCommand_OHKO
 	dw BattleCommand_Recoil
-	dw BattleCommand_DoubleEdge
 	dw BattleCommand_Mist
 	dw BattleCommand_FocusEnergy
 	dw BattleCommand_Confuse
@@ -98,7 +97,7 @@ BattleCommandPointers:
 	dw BattleCommand_Endure
 	dw BattleCommand_CheckCurl
 	dw BattleCommand_RolloutPower
-;	dw BattleCommand_Unused5D
+	dw BattleCommand_Unused5D
 	dw BattleCommand_FuryCutter
 	dw BattleCommand_Attract
 	dw BattleCommand_HappinessPower
