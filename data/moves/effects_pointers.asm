@@ -38,6 +38,7 @@ MoveEffectsPointers:
 	dw PayDay
 	dw LightScreen
 	dw TriAttack
+	dw NormalHit
 	dw OHKOHit
 	dw RazorWind
 	dw SuperFang
@@ -159,7 +160,4 @@ MoveEffectsPointers:
 	dw DefenseCurl
 	dw Growth
 	dw LowKick
-	dw BodySlam
-	dw DoubleEdge
-	dw NormalHit
 	assert_table_length NUM_MOVE_EFFECTS
