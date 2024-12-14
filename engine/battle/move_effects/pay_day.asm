@@ -6,11 +6,9 @@ BattleCommand_PayDay:
 	ldh a, [hBattleTurn]
 	and a
 	ld a, [wBattleMonLevel]
-	jr nz, .done
-
-	add a
-	add a
-	add a
+	jr z, .ok
+	ld a, [wEnemyMonLevel]
+.ok
 	add a
 	ld hl, wPayDayMoney + 2
 	add [hl]
