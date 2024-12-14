@@ -141,29 +141,6 @@ ParalyzeHit:
         kingsrock
 	endmove
 
-BodySlam:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	doubleminimizedamage
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	paralyzetarget
-        kingsrock
-	endmove
-
 Selfdestruct:
 	checkobedience
 	usedmovetext
@@ -981,27 +958,6 @@ RecoilHit:
 	criticaltext
 	supereffectivetext
 	recoil
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
-
-DoubleEdge:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	doubleedge
 	checkfaint
 	buildopponentrage
 	kingsrock
