@@ -2612,7 +2612,7 @@ PlayerAttackDamage:
 .thickclub
 ; Note: Returns player attack at hl in hl.
 	call ThickClubBoost
-	call LightBallBoost
+;	call LightBallBoost
 
 .done
 	push hl
