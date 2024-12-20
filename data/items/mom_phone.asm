@@ -6,14 +6,14 @@ MACRO momitem
 ENDM
 
 MomItems_1:
-	momitem   2048,  350, MOM_ITEM, SUPER_POTION
-	momitem   3072,  100, MOM_ITEM, ANTIDOTE
-	momitem   4096,  100, MOM_ITEM, POKE_BALL
-	momitem   5120,  275, MOM_ITEM, ESCAPE_ROPE
-	momitem   6144,  300, MOM_ITEM, GREAT_BALL
-	momitem   7168,  175, MOM_ITEM, REPEL
-	momitem   8192, 1500, MOM_ITEM, MOON_STONE
-	momitem   9216,  750, MOM_ITEM, HYPER_POTION
+	momitem    256,  100, MOM_ITEM, ANTIDOTE
+	momitem    512,  350, MOM_ITEM, SUPER_POTION
+	momitem   1024,  100, MOM_ITEM, POKE_BALL
+	momitem   2048,  275, MOM_ITEM, ESCAPE_ROPE
+	momitem   4096,  300, MOM_ITEM, GREAT_BALL
+	momitem   8192,  175, MOM_ITEM, REPEL
+	momitem  16384, 1500, MOM_ITEM, MOON_STONE
+	momitem  32768,  750, MOM_ITEM, HYPER_POTION
 .End
 
 MomItems_2:
