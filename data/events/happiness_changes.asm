@@ -6,7 +6,7 @@ HappinessChanges:
 	db  +5,  +4,  +3 ; Vitamin
 	db  +2,  +1,  +0 ; X Item
 	db  +5,  +4,  +3 ; Battled a Gym Leader
-	db  +2,  +1,  +0 ; Learned a move
+	db  +0,  +0,  +0 ; Learned a move
 	db  -1,  -1,  -1 ; Lost to an enemy
 	db  -5,  -5,  -5 ; Fainted due to poison
 	db  -5,  -5,  -5 ; Lost to a much stronger enemy
