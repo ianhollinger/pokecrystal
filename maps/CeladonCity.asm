@@ -233,12 +233,12 @@ endc
 CeladonCityTrainerTipsText:
 	text "TRAINER TIPS"
 
-	para "GUARD SPEC."
+	para "X SPCL.DEF"
 	line "protects #MON"
 
 	para "against SPECIAL"
 	line "attacks such as"
-	cont "fire and water."
+	cont "ACID and EMBER."
 
 	para "Get your items at"
 	line "CELADON DEPT."
