@@ -1197,12 +1197,12 @@ JohtoGrassWildMons:
 	db 4, ZUBAT
 	db 4, DUNSPARCE
 	; nite
+	db 2, ZUBAT
 	db 3, GEODUDE
 	db 2, ZUBAT
-	db 2, GEODUDE
 	db 4, SWINUB
-	db 2, ZUBAT
-	db 4, ZUBAT
+	db 2, GEODUDE
+	db 4, CLEFFA
 	db 4, DUNSPARCE
 	end_grass_wildmons
 
@@ -1678,8 +1678,8 @@ JohtoGrassWildMons:
 	db 3, GEODUDE
 	db 3, RATTATA
 	db 2, RATTATA
-	db 2, CLEFFA
-	db 2, CLEFFA
+	db 2, RATTATA
+	db 2, RATTATA
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_OUTSIDE
