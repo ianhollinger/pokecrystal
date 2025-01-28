@@ -286,7 +286,7 @@ PonytaEggMoves:
 	db MORNING_SUN
 	db PAY_DAY
 ;	db DOUBLE_EDGE
-	db HORN_DRILL
+;	db HORN_DRILL
 	db -1 ; end
 
 SlowpokeEggMoves:
