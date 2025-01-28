@@ -33,5 +33,8 @@ StallMoves:
 	db SHARPEN
 	db CONVERSION
 	db SUBSTITUTE
-	db FLAME_WHEEL
+	db SOLARBEAM
+	db RAZOR_WIND
+	db SKULL_BASH
+	db SOLAR_BEAM
 	db -1 ; end
