@@ -234,7 +234,7 @@ AcademyEarlTeachHowToRaiseWellText:
 	cont "become!"
 	done
 
-AcademyEarlHiddenPowerText
+AcademyEarlHiddenPowerText:
 	text "You are good"
 	line "listener! I"
 	cont "reward you with"
