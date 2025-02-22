@@ -25,13 +25,13 @@ ViridianGymBlueScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_EARTHBADGE
-	checkevent EVENT_GOT_TM_76_DOUBLE_EDGE
+	checkevent EVENT_GOT_TM76_DOUBLE_EDGE
 	iftrue .GotDoubleEdge
 	writetext BlueExplainTMText
 	promptbutton
 	verbosegiveitem TM_DOUBLE_EDGE
 	iffalse .GotDoubleEdge
-	setevent EVENT_GOT_TM_76_DOUBLE_EDGE
+	setevent EVENT_GOT_TM76_DOUBLE_EDGE
 .GotDoubleEdge:
 	writetext LeaderBlueAfterText
 	waitbutton
