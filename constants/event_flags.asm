@@ -294,8 +294,9 @@
 	const EVENT_GOT_TM53_ROCK_SLIDE
 	const EVENT_GOT_TM38_FIRE_BLAST
 	const EVENT_GOT_TM55_BATON_PASS
-	const EVENT_GOT_TM_76_DOUBLE_EDGE
-; Unused: next 318 events
+	const EVENT_GOT_TM76_DOUBLE_EDGE
+	const EVENT_GOT_TM43_ANCIENTPOWER
+; Unused: next 317 events
 
 	const_next 600
 ; Kurt Apricorn events
