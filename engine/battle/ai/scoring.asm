@@ -389,7 +389,8 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_SOLARBEAM,        AI_Smart_Solarbeam
 	dbw EFFECT_THUNDER,          AI_Smart_Thunder
 	dbw EFFECT_FLY,              AI_Smart_Fly
-	dbw EFFECT_LEECH_SEED,       AI_Smart_LeechSeed 
+	dbw EFFECT_LEECH_SEED,       AI_Smart_LeechSeed 	
+	dbw EFFECT_LOW_KICK,         AI_Smart_LowKick
 	db -1 ; end
 
 AI_Smart_Sleep:
@@ -2799,6 +2800,28 @@ AI_Smart_Thunder:
 	ret c
 
 	inc [hl]
+	ret
+
+AI_Smart_LowKick:
+; find opponent's weight (rude)
+; discourage if opponent's weight is <25kg
+; encourage if opponent's weight is >100kg
+
+	farcall BattleCommand_LowKick
+	cp 60
+	jp c, .discourage
+	cp 100
+	jp z, .encourage	
+	cp 120
+	jp z, .encourage
+	ret
+
+.discourage:
+	inc [hl]
+	ret
+
+.encourage:
+	dec [hl]
 	ret
 
 AICompareSpeed:
