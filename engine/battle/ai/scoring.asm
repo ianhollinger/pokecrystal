@@ -2804,16 +2804,20 @@ AI_Smart_Thunder:
 
 AI_Smart_LowKick:
 ; find opponent's weight (rude)
+; greatly discourage if opponent's weight is <10kg
 ; discourage if opponent's weight is <25kg
 ; encourage if opponent's weight is >100kg
+; greatly encourage if opponent's weight is >120kg
 
 	farcall BattleCommand_LowKick
-	cp 60
+	cp 20 
+	jp c, .greatlydiscourage
+	cp 40
 	jp c, .discourage
+	cp 120
+	jp z, .greatlyencourage
 	cp 100
 	jp z, .encourage	
-	cp 120
-	jp z, .encourage
 	ret
 
 .discourage:
@@ -2821,6 +2825,16 @@ AI_Smart_LowKick:
 	ret
 
 .encourage:
+	dec [hl]
+	ret
+
+.greatlydiscourage:
+	inc [hl]
+	inc [hl]
+	ret
+
+.greatlyencourage:
+	dec [hl]
 	dec [hl]
 	ret
 
