@@ -16,7 +16,7 @@ RuinsOfAlphOmanyteItemRoomMysticWater:
 	itemball MYSTIC_WATER
 
 RuinsOfAlphOmanyteItemRoomStardust:
-	itemball TM_ANCIENTPOWER
+	itemball STARDUST
 
 RuinsOfAlphOmanyteItemRoomStarPiece:
 	itemball STAR_PIECE
