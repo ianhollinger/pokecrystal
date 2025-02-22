@@ -36,5 +36,5 @@ StallMoves:
 	db SOLARBEAM
 	db RAZOR_WIND
 	db SKULL_BASH
-	db SOLAR_BEAM
+	db SOLARBEAM
 	db -1 ; end
