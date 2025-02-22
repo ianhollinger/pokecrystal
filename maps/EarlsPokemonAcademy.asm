@@ -27,11 +27,30 @@ AcademyEarl:
 	iffalse .Done
 	writetext AcademyEarlTeachHowToRaiseWellText
 	waitbutton
+	checkevent EVENT_GOT_TM10_HIDDEN_POWER
+	iffalse .GiveTM10
+	closetext
+	end
+
+.GiveTM10:
+	writetext AcademyEarlHiddenPowerText
+	promptbutton
+	verbosegiveitem TM_HIDDEN_POWER
+	iffalse .NoRoomForHiddenPower
+	setevent EVENT_GOT_TM10_HIDDEN_POWER
+	writetext AcademyEarlHiddenPowerText2
+	waitbutton
 	closetext
 	end
 
 .Done:
 	writetext AcademyEarlNoMoreToTeachText
+	waitbutton
+	closetext
+	end
+
+.NoRoomForHiddenPower:
+	writetext AcademyEarlNoMoreRoomText
 	waitbutton
 	closetext
 	end
@@ -213,6 +232,29 @@ AcademyEarlTeachHowToRaiseWellText:
 	para "This way, weak"
 	line "#MON strong"
 	cont "become!"
+	done
+
+AcademyEarlHiddenPowerText
+	text "You are good"
+	line "listener! I"
+	cont "reward you with"
+	cont "useful item!"
+	done
+
+AcademyEarlHiddenPowerText2:
+	text "It is HIDDEN"
+	line "POWER! It has"
+
+	para "different type"
+	line "for every #MON!"
+
+	para "Use it to cover"
+	line "weaknesses!"
+	done
+
+AcademyEarlNoMoreRoomText:
+	text "You have no"
+	line "room! Oh well!"
 	done
 
 AcademyEarlNoMoreToTeachText:
