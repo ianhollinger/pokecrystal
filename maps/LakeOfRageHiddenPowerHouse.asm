@@ -13,7 +13,7 @@ HiddenPowerGuy:
 	iftrue .AlreadyGotItem
 	writetext HiddenPowerGuyText1
 	promptbutton
-	verbosegiveitem TM_ANCIENT_POWER
+	verbosegiveitem TM_ANCIENTPOWER
 	iffalse .Done
 	setevent EVENT_GOT_TM43_ANCIENTPOWER
 	writetext HiddenPowerGuyText2
