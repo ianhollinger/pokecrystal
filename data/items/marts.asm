@@ -159,10 +159,10 @@ MartGoldenrod4F:
 
 MartGoldenrod5F1:
 	db 6 ; # items
+	db TM_PSYBEAM
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
-	db TM_PSYBEAM
 	db TM_SOLARBEAM
 	db TM_HYPER_BEAM
 	db -1 ; end
