@@ -4,7 +4,7 @@
 	const OPT_BATTLE_SCENE  ; 1
 	const OPT_BATTLE_STYLE  ; 2
 	const OPT_SOUND         ; 3
-	const OPT_STAT_EXP      ; 4
+	const OPT_DIFFICULTY    ; 4
 	const OPT_MENU_ACCOUNT  ; 5
 	const OPT_FRAME         ; 6
 	const OPT_CANCEL        ; 7
@@ -83,7 +83,7 @@ StringOptions:
 	db "        :<LF>"
 	db "SOUND<LF>"
 	db "        :<LF>"
-	db "FOE EFFORT PTS.<LF>"
+	db "DIFFICULTY<LF>"
 	db "        :<LF>"
 	db "MENU ACCOUNT<LF>"
 	db "        :<LF>"
@@ -100,7 +100,7 @@ GetOptionPointer:
 	dw Options_BattleScene
 	dw Options_BattleStyle
 	dw Options_Sound
-	dw Options_StatExp
+	dw Options_Difficulty
 	dw Options_MenuAccount
 	dw Options_Frame
 	dw Options_Cancel
@@ -453,43 +453,91 @@ Options_MenuAccount:
 .Off: db "OFF@"
 .On:  db "ON @"
 
-Options_StatExp:
- 	ld hl, wOptions2
- 	ldh a, [hJoyPressed]
- 	bit D_LEFT_F, a
- 	jr nz, .LeftPressed
- 	bit D_RIGHT_F, a
- 	jr z, .NonePressed
- 	bit STAT_EXP_OPTION, [hl]
- 	jr nz, .ToggleOff
- 	jr .ToggleOn
- 
- .LeftPressed:
- 	bit STAT_EXP_OPTION, [hl]
- 	jr z, .ToggleOn
- 	jr .ToggleOff
- 
- .NonePressed:
- 	bit STAT_EXP_OPTION, [hl]
- 	jr nz, .ToggleOn
- 
- .ToggleOff:
- 	res STAT_EXP_OPTION, [hl]
- 	ld de, .Off
- 	jr .Display
- 
- .ToggleOn:
- 	set STAT_EXP_OPTION, [hl]
- 	ld de, .On
- 
- .Display:
- 	hlcoord 11, 11
- 	call PlaceString
- 	and a
- 	ret
- 
- .Off: db "OFF@"
- .On:  db "ON @"
+	const_def
+	const OPT_DIFFICULTY_HARD   ; 0
+	const OPT_DIFFICULTY_NORMAL ; 1
+	const OPT_DIFFICULTY_EASY   ; 2
+
+Options_Difficulty:
+	call GetDifficulty
+	ldh a, [hJoyPressed]
+	bit D_LEFT_F, a
+	jr nz, .LeftPressed
+	bit D_RIGHT_F, a
+	jr z, .NonePressed
+	ld a, c ; right pressed
+	cp OPT_DIFFICULTY_EASY
+	jr c, .Increase
+	ld c, OPT_DIFFICULTY_HARD - 1
+
+.Increase:
+	inc c
+	ld a, e
+	jr .Save
+
+.LeftPressed:
+	ld a, c
+	and a
+	jr nz, .Decrease
+	ld c, OPT_DIFFICULTY_EASY + 1
+
+.Decrease:
+	dec c
+	ld a, d
+
+.Save:
+	ld b, a
+	ld a, [wOptions2]
+	and $f0
+	or b
+	ld [wOptions2], a
+
+.NonePressed:
+	ld b, 0
+	ld hl, .Strings
+	add hl, bc
+	add hl, bc
+	ld e, [hl]
+	inc hl
+	ld d, [hl]
+	hlcoord 11, 11
+	call PlaceString
+	and a
+	ret
+
+.Strings:
+; entries correspond to OPT_DIFFICULTY_* constants
+	dw .Hard
+	dw .Normal
+	dw .Easy
+
+.Hard:   db "HARD   @"
+.Normal: db "NORMAL @"
+.Easy:   db "EASY  @"
+
+GetDifficulty:
+; converts DIFFICULTY_* value in a to OPT_DIFFICULTY_* value in c,
+; with previous/next DIFFICULTY_* values in d/e
+	ld a, [wOptions2]
+	and DIFFICULTY_MASK
+	cp DIFFICULTY_EASY
+	jr z, .easy
+	cp DIFFICULTY_HARD
+	jr z, .hard
+	; none of the above
+	ld c, OPT_DIFFICULTY_NORMAL
+	lb de, DIFFICULTY_HARD, DIFFICULTY_EASY
+	ret
+
+.easy
+	ld c, OPT_DIFFICULTY_EASY
+	lb de, DIFFICULTY_NORMAL, DIFFICULTY_HARD
+	ret
+
+.hard
+	ld c, OPT_DIFFICULTY_HARD
+	lb de, DIFFICULTY_EASY, DIFFICULTY_NORMAL
+	ret
 
 Options_Frame:
 	ld hl, wTextboxFrame
