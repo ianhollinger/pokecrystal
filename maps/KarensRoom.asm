@@ -57,7 +57,7 @@ KarenScript_BeforeFight:
 	iftrue KarenScript_PostGame
 	winlosstext KarenScript_KarenBeatenText, 0
 	loadtrainer KAREN, KAREN1
-	sjump BrunoScript_BeginFight
+	sjump KarenScript_BeginFight
 .rematch: 
 	writetext KarenScript_KarenBeforeRematchText
 	sjump .fight
