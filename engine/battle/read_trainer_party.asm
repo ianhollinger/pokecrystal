@@ -153,19 +153,19 @@ ReadTrainerPartyPieces:
 	ld c, NUM_EXP_STATS
 .stat_exp_loop
 ; if the stat exp option is turned off, set stat exp to 0
-	ld a, [wOptions2]
-	and 1 << STAT_EXP_OPTION
-	jr nz, .perfect_stat_exp
-rept 2
-	call GetNextTrainerDataByte
-	ld a, 0
-	ld [de], a
-	inc de
-endr
-	jr .continue_stat_exp
+;	ld a, [wOptions2]
+;	and 1 << STAT_EXP_OPTION
+;	jr nz, .perfect_stat_exp
+;rept 2
+;	call GetNextTrainerDataByte
+;	ld a, 0
+;	ld [de], a
+;	inc de
+;endr
+;	jr .continue_stat_exp
 
 ; When reading stat experience, treat PERFECT_STAT_EXP as $FFFF
-.perfect_stat_exp
+;.perfect_stat_exp
 	call GetNextTrainerDataByte
 	dec hl
 	cp LOW(PERFECT_STAT_EXP)
