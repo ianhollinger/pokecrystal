@@ -6831,10 +6831,10 @@ BoostStat:
 	ld e, [hl]
 	srl d
 	rr e
-;	srl d
-;	rr e
-;	srl d
-;	rr e
+	srl d
+	rr e
+	srl d
+	rr e
 	ld a, [hl]
 	add e
 	ld [hld], a
@@ -6862,10 +6862,10 @@ NerfStat:
 	ld e, [hl]
 	srl d
 	rr e
-;	srl d
-;	rr e
-;	srl d
-;	rr e
+	srl d
+	rr e
+	srl d
+	rr e
 	ld a, [hl]
 	sub e
 	ld [hld], a
