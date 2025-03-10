@@ -6820,7 +6820,7 @@ CheckDifficulty:
 	cp DIFFICULTY_EASY
 	jr z, .BoostStat
 	cp DIFFICULTY_HARD
-	jr z, .LowerStat
+	jr z, .NerfStat
 	ret
 
 BoostStat:
@@ -6854,7 +6854,7 @@ BoostStat:
 	ld [hld], a
 	ret
 
-LowerStat:
+NerfStat:
 ; Lower stat at hl by 1/8.
 
 	ld a, [hli]
