@@ -6818,9 +6818,9 @@ CheckDifficulty:
 	ld a, [wOptions2]
 	and DIFFICULTY_MASK
 	cp DIFFICULTY_EASY
-	jr z, .BoostStat
+	jr z, BoostStat
 	cp DIFFICULTY_HARD
-	jr z, .NerfStat
+	jr z, NerfStat
 	ret
 
 BoostStat:
