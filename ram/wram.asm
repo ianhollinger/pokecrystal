@@ -1811,8 +1811,12 @@ wGBPrinterBrightness::
 ;   darkest:  $7F
 	db
 wOptions2::
-; bit 1: menu account off/on
-; bit 2: enemy stat exp off/on
+; bits 1-3: difficulty setting
+	; 001 = hard (nerf own stats 1/8)
+	; 011 = normal
+	; 101 = easy (buff own stats 1/8)
+; bit 4: menu account off/on
+; bit 2 used to toggle stat exp on/off, is now always on 
 	db
 	ds 2
 wOptionsEnd::
