@@ -6825,16 +6825,17 @@ CheckDifficulty:
 
 BoostStat:
 ; Raise stat at hl by 1/8.
+; 2xing for testing
 
 	ld a, [hli]
 	ld d, a
 	ld e, [hl]
-	srl d
-	rr e
-	srl d
-	rr e
-	srl d
-	rr e
+;	srl d
+;	rr e
+;	srl d
+;	rr e
+;	srl d
+;	rr e
 	ld a, [hl]
 	add e
 	ld [hld], a
@@ -6856,14 +6857,15 @@ BoostStat:
 
 NerfStat:
 ; Lower stat at hl by 1/8.
+; halving for testing
 
 	ld a, [hli]
 	ld d, a
 	ld e, [hl]
-	srl d
-	rr e
-	srl d
-	rr e
+;	srl d
+;	rr e
+;	srl d
+;	rr e
 	srl d
 	rr e
 	ld a, [hl]
