@@ -305,8 +305,7 @@ Text_Route31SleepyManGotMail:
 
 Text_Route31HandOverMailMon:
 	text "<PLAYER> handed"
-	line "over the #MON"
-	cont "holding the MAIL."
+	line "over the MAIL."
 	done
 
 Text_Route31ReadingMail:
