@@ -100,7 +100,7 @@ Route35GoldenrodGateRandyAskTakeThisMonToMyFriendText:
 	cont "a favor?"
 
 	para "Can you take this"
-	line "#MON with MAIL"
+	line "DELIBIRD with MAIL"
 	cont "to my friend?"
 
 	para "He's on ROUTE 31."
@@ -120,7 +120,8 @@ Route35GoldenrodGateRandyThanksText:
 
 Route35GoldenrodGatePlayerReceivedAMonWithMailText:
 	text "<PLAYER> received a"
-	line "#MON with MAIL."
+	line "DELIBIRD with"
+	cont "MAIL."
 	done
 
 Route35GoldenrodGateRandyWeirdTreeBlockingRoadText:
