@@ -28,7 +28,7 @@ RandyScript:
 	writetext Route35GoldenrodGatePlayerReceivedAMonWithMailText
 	playsound SFX_KEY_ITEM
 	waitsfx
-	givepoke SPEAROW, 10, NO_ITEM, GiftSpearowName, GiftSpearowOTName
+	givepoke DELIBIRD, 10, NO_ITEM, GiftSpearowName, GiftSpearowOTName
 	givepokemail GiftSpearowMail
 	setevent EVENT_GOT_KENYA
 .alreadyhavekenya
@@ -52,7 +52,7 @@ RandyScript:
 .questcomplete
 	writetext Route35GoldenrodGateRandySomethingForYourTroubleText
 	promptbutton
-	verbosegiveitem HP_UP
+	verbosegiveitem LEFTOVERS
 	iffalse .bagfull
 	setevent EVENT_GOT_HP_UP_FROM_RANDY
 .gothpup
@@ -68,7 +68,7 @@ GiftSpearowMail:
 	next "to another road@"
 
 GiftSpearowName:
-	db "KENYA@"
+	db "NORWAY@"
 
 GiftSpearowOTName:
 	db "RANDY@"
