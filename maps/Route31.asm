@@ -183,7 +183,7 @@ Route31MailRecipientScript:
 	ifequal POKEMAIL_WRONG_MAIL, .WrongMail
 	ifequal POKEMAIL_REFUSED, .Refused
 	ifequal POKEMAIL_NO_MAIL, .NoMail
-	ifequal POKEMAIL_LAST_MON, .LastMon
+;	ifequal POKEMAIL_LAST_MON, .LastMon
 	; POKEMAIL_CORRECT
 	writetext Text_Route31HandOverMailMon
 	promptbutton
