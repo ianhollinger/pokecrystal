@@ -18,7 +18,7 @@ Celebrity:
 	iftrue .AlreadyGotItem
 	writetext CelebrityText1
 	promptbutton
-	verbosegiveitem LUCKY_EGG
+	verbosegiveitem TM_NIGHTMARE
 	iffalse .Done
 	setevent EVENT_GOT_TM47_STEEL_WING
 .Done:
