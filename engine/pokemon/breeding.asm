@@ -221,7 +221,7 @@ HatchEggs:
 	ld a, [hl]
 	and a
 	jp nz, .next
-	ld [hl], $78
+	ld [hl], $64
 
 	push de
 
