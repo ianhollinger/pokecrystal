@@ -211,7 +211,7 @@ EcruteakGymGuideScript:
 .EcruteakGymGuideRematchScript:
 	checkevent EVENT_BEAT_MORTY2
 	iftrue .EcruteakGymGuideWinScript
-	writetext EcruteakGymGuideText
+	writetext EcruteakGymGuideRematchText
 	waitbutton
 	closetext
 	end
@@ -493,6 +493,19 @@ EcruteakGymGuideText:
 
 	para "deep secrets about"
 	line "ECRUTEAK."
+	done
+
+EcruteakGymGuideRematchText:
+	text "MORTY has been"
+	line "training like"
+	cont "crazy."
+
+	para "He kind of scares"
+	line "me."
+
+	para "Anyway, I'm sure"
+	line "you can beat him,"
+	cont "<PLAYER>!"
 	done
 
 EcruteakGymGuideWinText:
