@@ -428,7 +428,7 @@ TrainerCooltrainerfKate:
 	iftrue .GotSoftSand
 	writetext CooltrainerfKateOfferSoftSandText
 	promptbutton
-	verbosegiveitem BRIGHTPOWDER
+	verbosegiveitem SCOPE_LENS
 	iffalse .BagFull
 	setevent EVENT_GOT_SOFT_SAND_FROM_KATE
 .GotSoftSand:
