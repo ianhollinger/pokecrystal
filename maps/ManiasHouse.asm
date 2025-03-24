@@ -59,9 +59,17 @@ ManiaScript:
 	ifequal SHUCKIE_FAINTED, .default_postevent
 	; SHUCKIE_RETURNED
 	writetext ManiaText_ThankYou
+.giveleftovers
+	setevent EVENT_MANIA_TOOK_SHUCKIE_OR_LET_YOU_KEEP_HIM
+	promptbutton
+	writetext ManiaText_GiveLeftovers
+	promptbutton
+	verbosegiveitem LEFTOVERS
+	iffalse .ManiaDone
+	setevent EVENT_GOT_LEFTOVERS_FROM_MANIA
+.ManiaDone
 	waitbutton
 	closetext
-	setevent EVENT_MANIA_TOOK_SHUCKIE_OR_LET_YOU_KEEP_HIM
 	end
 
 .wrong
@@ -72,10 +80,11 @@ ManiaScript:
 
 .superhappy
 	writetext ManiaText_ShuckleLikesYou
-	waitbutton
-	closetext
-	setevent EVENT_MANIA_TOOK_SHUCKIE_OR_LET_YOU_KEEP_HIM
-	end
+	sjump .giveleftovers
+;	waitbutton
+;	closetext
+;	setevent EVENT_MANIA_TOOK_SHUCKIE_OR_LET_YOU_KEEP_HIM
+;	end
 
 .refused
 	writetext ManiaText_SameAsBeingRobbed
@@ -156,6 +165,10 @@ ManiaText_CanIHaveMyMonBack:
 
 ManiaText_ThankYou:
 	text "Thank you!"
+
+ManiaText_GiveLeftovers:
+	text "Please take this"
+	line "for your help."
 	done
 
 ManiaText_ShuckleNotThere:
