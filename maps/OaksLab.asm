@@ -52,6 +52,8 @@ Oak:
 	promptbutton
 	setevent EVENT_OPENED_MT_SILVER
 	setevent EVENT_RED_IN_MT_SILVER
+	setevent EVENT_CIANWOOD_GYM_GUIDE
+	setevent EVENT_CELADON_GYM_GUIDE
 	sjump .CheckPokedex
 
 .Complain:
