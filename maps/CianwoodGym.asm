@@ -209,18 +209,18 @@ CianwoodGymMovement_ChuckChucksBoulder:
 	remove_sliding
 	step_end
 
-CianwoodGymGuideScript:
+CianwoodGymGymGuideScript:
 	faceplayer 
 	opentext
 	checkevent EVENT_BEAT_CHUCK2
-	iftrue .CianwoodGymGuideWinScript
-	writetext CianwoodGymGuideText
+	iftrue .CianwoodGymGymGuideWinScript
+	writetext CianwoodGymGymGuideText
 	waitbutton
 	closetext
 	end
 
-.CianwoodGymGuideWinScript:
-	writetext CianwoodGymGuideWinText
+.CianwoodGymGymGuideWinScript:
+	writetext CianwoodGymGymGuideWinText
 	waitbutton
 	closetext
 	end
@@ -415,7 +415,7 @@ BlackbeltLungAfterText:
 	cont "shattered…"
 	done
 
-CianwoodGymGuideText:
+CianwoodGymGymGuideText:
 	text "Hey, CHAMP!"
 
 	para "I've been taking"
@@ -435,7 +435,7 @@ CianwoodGymGuideText:
 	cont "for me?"
 	done
 	
-CianwoodGymGuideWinText:
+CianwoodGymGymGuideWinText:
 	text "You showed him"
 	line "who's boss!"
 	done
@@ -463,4 +463,4 @@ CianwoodGym_MapEvents:
 	object_event  3,  7, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
 	object_event  4,  7, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
 	object_event  5,  7, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
-	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodGymGuideScript, EVENT_CIANWOOD_GYM_GUIDE
+	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodGymGymGuideScript, EVENT_CIANWOOD_GYM_GUIDE
