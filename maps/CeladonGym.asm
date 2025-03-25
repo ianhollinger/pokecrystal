@@ -5,11 +5,23 @@
 	const CELADONGYM_BEAUTY
 	const CELADONGYM_TWIN1
 	const CELADONGYM_TWIN2
+	const CELADONGYM_GYM_GUIDE
 
 CeladonGym_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback  MAPCALLBACK_OBJECTS, CeladonGymGuideCallback
+
+CeladonGymGuideCallback:
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .appear
+	disappear CELADONGYM_GYM_GUIDE
+	endcallback
+
+.appear:
+	appear CELADONGYM_GYM_GUIDE
+	endcallback
 
 CeladonGymErikaScript:
 	faceplayer
@@ -134,6 +146,22 @@ TrainerTwinsJoAndZoe2:
 	endifjustbattled
 	opentext
 	writetext TwinsJoAndZoe2AfterBattleText
+	waitbutton
+	closetext
+	end
+
+CeladonGymGuideScript:
+	faceplayer 
+	opentext
+	checkevent EVENT_BEAT_ERIKA2
+	iftrue .CeladonGymGuideWinScript
+	writetext CeladonGymGuideText
+	waitbutton
+	closetext
+	end
+
+.CeladonGymGuideWinScript:
+	writetext CeladonGymGuideWinText
 	waitbutton
 	closetext
 	end
@@ -342,6 +370,29 @@ TwinsJoAndZoe2AfterBattleText:
 	line "much stronger!"
 	done
 
+CeladonGymGuideText:
+	text "CHAMP!"
+
+	para "Guess who just"
+	line "scored a CHANSEY"
+	cont "at the GAME"
+	cont "CORNER!"
+
+	para "…Anyway, ERIKA"
+	line "may look like a"
+	cont "delicate flower…"
+
+	para "Hey, wanna see"
+	line "my CHANSEY?"
+	done
+
+CeladonGymGuideWinText:
+	text "You won!"
+
+	para "Back to the"
+	line "Slots for me!"
+	done
+
 CeladonGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -362,3 +413,4 @@ CeladonGym_MapEvents:
 	object_event  3,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBeautyJulia, -1
 	object_event  4, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsJoAndZoe1, -1
 	object_event  5, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsJoAndZoe2, -1
+	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonGymGuideScript, EVENT_CELADON_GYM_GUIDE
