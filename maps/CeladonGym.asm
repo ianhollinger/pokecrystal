@@ -150,18 +150,18 @@ TrainerTwinsJoAndZoe2:
 	closetext
 	end
 
-CeladonGymGuideScript:
+CeladonGymGymGuideScript:
 	faceplayer 
 	opentext
 	checkevent EVENT_BEAT_ERIKA2
-	iftrue .CeladonGymGuideWinScript
-	writetext CeladonGymGuideText
+	iftrue .CeladonGymGymGuideWinScript
+	writetext CeladonGymGymGuideText
 	waitbutton
 	closetext
 	end
 
-.CeladonGymGuideWinScript:
-	writetext CeladonGymGuideWinText
+.CeladonGymGymGuideWinScript:
+	writetext CeladonGymGymGuideWinText
 	waitbutton
 	closetext
 	end
@@ -370,7 +370,7 @@ TwinsJoAndZoe2AfterBattleText:
 	line "much stronger!"
 	done
 
-CeladonGymGuideText:
+CeladonGymGymGuideText:
 	text "CHAMP!"
 
 	para "Guess who just"
@@ -386,7 +386,7 @@ CeladonGymGuideText:
 	line "my CHANSEY?"
 	done
 
-CeladonGymGuideWinText:
+CeladonGymGymGuideWinText:
 	text "You won!"
 
 	para "Back to the"
@@ -413,4 +413,4 @@ CeladonGym_MapEvents:
 	object_event  3,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBeautyJulia, -1
 	object_event  4, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsJoAndZoe1, -1
 	object_event  5, 10, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsJoAndZoe2, -1
-	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonGymGuideScript, EVENT_CELADON_GYM_GUIDE
+	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonGymGymGuideScript, EVENT_CELADON_GYM_GUIDE
