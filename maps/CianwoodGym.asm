@@ -8,11 +8,23 @@
 	const CIANWOODGYM_BOULDER2
 	const CIANWOODGYM_BOULDER3
 	const CIANWOODGYM_BOULDER4
+	const CIANWOODGYM_GYM_GUIDE
 
 CianwoodGym_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback  MAPCALLBACK_OBJECTS, CianwoodGymGuideCallback
+
+CianwoodGymGuideCallback:
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .appear
+	disappear CIANWOODGYM_GYM_GUIDE
+	endcallback
+
+.appear:
+	appear CIANWOODGYM_GYM_GUIDE
+	endcallback
 
 CianwoodGymChuckScript:
 	faceplayer
@@ -196,6 +208,22 @@ CianwoodGymMovement_ChuckChucksBoulder:
 	fast_jump_step RIGHT
 	remove_sliding
 	step_end
+
+CianwoodGymGuideScript:
+	faceplayer 
+	opentext
+	checkevent EVENT_BEAT_CHUCK2
+	iftrue .CianwoodGymGuideWinScript
+	writetext CianwoodGymGuideText
+	waitbutton
+	closetext
+	end
+
+.CianwoodGymGuideWinScript:
+	writetext CianwoodGymGuideWinText
+	waitbutton
+	closetext
+	end
 
 ChuckIntroText1:
 	text "WAHAHAH!"
@@ -387,6 +415,31 @@ BlackbeltLungAfterText:
 	cont "shattered…"
 	done
 
+CianwoodGymGuideText:
+	text "Hey, CHAMP!"
+
+	para "I've been taking"
+	line "self-defense"
+	cont "classes!"
+
+	para "I'm not afraid of"
+	line "these fighting-"
+	cont "type trainers!"
+
+	para "I just might take"
+	line "on CHUCK myself!"
+
+	para "…on second"
+	line "thought, why don't"
+	cont "you take him on"
+	cont "for me?"
+	done
+	
+CianwoodGymGuideWinText:
+	text "You showed him"
+	line "who's boss!"
+	done
+
 CianwoodGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -410,3 +463,4 @@ CianwoodGym_MapEvents:
 	object_event  3,  7, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
 	object_event  4,  7, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
 	object_event  5,  7, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
+	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodGymGuideScript, EVENT_CIANWOOD_GYM_GUIDE
