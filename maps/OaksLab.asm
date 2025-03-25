@@ -15,6 +15,8 @@ OaksLab_MapScripts:
 Oak:
 	faceplayer
 	opentext
+	setevent EVENT_CIANWOOD_GYM_GUIDE
+	setevent EVENT_CELADON_GYM_GUIDE
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .CheckPokedex
 	checkevent EVENT_TALKED_TO_OAK_IN_KANTO
