@@ -679,27 +679,27 @@ JohtoGrassWildMons:
 	; morn
 	db 18, ZUBAT
 	db 20, ZUBAT
-	db 20, GOLBAT
+	db 20, RATICATE
 	db 19, MACHOP
 	db 19, GEODUDE
-	db 21, RATICATE
-	db 21, RATICATE
+	db 21, GOLBAT
+	db 21, GOLBAT
 	; day
 	db 18, ZUBAT
 	db 20, ZUBAT
-	db 20, GOLBAT
+	db 20, RATICATE
 	db 19, MACHOP
 	db 19, GEODUDE
-	db 21, RATICATE
-	db 21, RATICATE
+	db 21, GOLBAT
+	db 21, GOLBAT
 	; nite
 	db 18, ZUBAT
 	db 20, ZUBAT
-	db 20, GOLBAT
+	db 20, RATICATE
 	db 19, MARILL
 	db 19, GEODUDE
-	db 21, RATICATE
-	db 21, RATICATE
+	db 21, GOLBAT
+	db 21, GOLBAT
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_1F
