@@ -1381,25 +1381,25 @@ JohtoGrassWildMons:
 	db 13, RATTATA
 	db 14, PIDGEY
 	db 12, ABRA
-	db 14, DITTO
-	db 12, IGGLYBUFF
-	db 12, JIGGLYPUFF
+	db 12, DITTO
+	db 14, IGGLYBUFF
+	db 14, JIGGLYPUFF
 	; day
 	db 12, SNUBBULL
 	db 13, RATTATA
 	db 14, PIDGEY
 	db 12, ABRA
-	db 14, DITTO
-	db 12, IGGLYBUFF
-	db 12, JIGGLYPUFF
+	db 12, DITTO
+	db 14, IGGLYBUFF
+	db 14, JIGGLYPUFF
 	; nite
 	db 14, DROWZEE
 	db 13, RATTATA
 	db 14, HOOTHOOT
 	db 12, ABRA
-	db 14, DITTO
-	db 12, IGGLYBUFF
-	db 12, JIGGLYPUFF
+	db 12, DITTO
+	db 14, IGGLYBUFF
+	db 14, JIGGLYPUFF
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_35
@@ -1629,29 +1629,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_45
 	db 9 percent, 9 percent, 9 percent ; encounter rates: morn/day/nite
 	; morn
-	db 32, GEODUDE
-	db 32, GRAVELER
-	db 34, DONPHAN
-	db 29, PHANPY
-	db 29, DIGLETT
-	db 36, SKARMORY 
-	db 36, DUGTRIO
+	db 31, GEODUDE
+	db 31, GRAVELER
+	db 33, DONPHAN
+	db 28, PHANPY
+	db 32, DIGLETT
+	db 35, SKARMORY 
+	db 35, DUGTRIO
 	; day
-	db 32, GEODUDE
-	db 32, GRAVELER
-	db 34, DONPHAN
-	db 29, SLUGMA
-	db 29, DIGLETT
-	db 36, SKARMORY 
-	db 36, DUGTRIO
+	db 31, GEODUDE
+	db 31, GRAVELER
+	db 33, DONPHAN
+	db 28, SLUGMA
+	db 32, DIGLETT
+	db 35, SKARMORY 
+	db 35, DUGTRIO
 	; nite
-	db 32, GEODUDE
-	db 32, GRAVELER
-	db 31, GLIGAR
-	db 34, GRAVELER
-	db 34, GRAVELER
+	db 31, GEODUDE
+	db 31, GRAVELER
 	db 32, GLIGAR
-	db 36, DUGTRIO
+	db 33, GRAVELER
+	db 33, GRAVELER
+	db 32, GLIGAR
+	db 35, DUGTRIO
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_46
