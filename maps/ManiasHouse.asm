@@ -63,14 +63,13 @@ ManiaScript:
 	writetext ManiaText_ThankYou
 .giveleftovers
 	setevent EVENT_MANIA_TOOK_SHUCKIE_OR_LET_YOU_KEEP_HIM
-	promptbutton
+	waitbutton
 	writetext ManiaText_GiveLeftovers
-	promptbutton
+	waitbutton
 	verbosegiveitem LEFTOVERS
 	iffalse .ManiaDone
 	setevent EVENT_GOT_LEFTOVERS_FROM_MANIA
 .ManiaDone
-	waitbutton
 	closetext
 	end
 
