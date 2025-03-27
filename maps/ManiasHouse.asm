@@ -167,6 +167,7 @@ ManiaText_CanIHaveMyMonBack:
 
 ManiaText_ThankYou:
 	text "Thank you!"
+	done 
 
 ManiaText_GiveLeftovers:
 	text "Please take this"
