@@ -14,7 +14,7 @@ BulbasaurEggMoves:
 ;	db LIGHT_SCREEN
 ;	db SKULL_BASH
 ;	db SAFEGUARD
-	db RAZOR_WIND
+;	db RAZOR_WIND
 ;	db PETAL_DANCE
 	db CHARM
 	db AMNESIA
@@ -162,7 +162,7 @@ ParasEggMoves:
 	db -1 ; end
 
 VenonatEggMoves:
-	db BATON_PASS
+;	db BATON_PASS
 	db SCREECH
 	db MORNING_SUN
 	db AGILITY
@@ -215,7 +215,7 @@ MankeyEggMoves:
 	db -1 ; end
 
 GrowlitheEggMoves:
-	db BODY_SLAM
+;	db BODY_SLAM
 ;	db SAFEGUARD
 ;	db CRUNCH
 	db THRASH
@@ -458,7 +458,7 @@ HorseaEggMoves:
 	db -1 ; end
 
 GoldeenEggMoves:
-	db PSYBEAM
+;	db PSYBEAM
 	db HAZE
 ;	db HYDRO_PUMP
 	db -1 ; end
@@ -476,7 +476,7 @@ ScytherEggMoves:
 	db COUNTER
 ;	db SAFEGUARD
 ;	db BATON_PASS
-	db REVERSAL
+;	db REVERSAL
 ;	db LIGHT_SCREEN
 	db MORNING_SUN
 	db SONICBOOM
@@ -611,7 +611,7 @@ HoothootEggMoves:
 	db -1 ; end
 
 LedybaEggMoves:
-	db PSYBEAM
+;	db PSYBEAM
 	db BIDE
 	db BARRIER
 	db SCREECH
@@ -619,7 +619,7 @@ LedybaEggMoves:
 	db -1 ; end
 
 SpinarakEggMoves:
-	db PSYBEAM
+;	db PSYBEAM
 	db DISABLE
 	db SONICBOOM
 ;	db BATON_PASS
@@ -634,11 +634,11 @@ ChinchouEggMoves:
 	db SCREECH
 	db MIST
 	db AGILITY
-	db PSYBEAM
+;	db PSYBEAM
 	db -1 ; end
 
 PichuEggMoves:
-	db REVERSAL
+;	db REVERSAL
 	db BIDE
 	db PRESENT
 	db ENCORE
@@ -649,7 +649,7 @@ PichuEggMoves:
 	db EXTREMESPEED
 	db DOUBLE_KICK
 	db MEGA_KICK
-    db DIZZY_PUNCH
+        db DIZZY_PUNCH
 	db -1 ; end
 
 CleffaEggMoves:
@@ -660,7 +660,7 @@ CleffaEggMoves:
 	db SPLASH
 	db MIMIC
 	db SCARY_FACE
-    db DIZZY_PUNCH
+        db DIZZY_PUNCH
 	db -1 ; end
 
 IgglybuffEggMoves:
@@ -669,7 +669,7 @@ IgglybuffEggMoves:
 	db FAINT_ATTACK
 	db MIMIC
 	db SCARY_FACE
-    db DIZZY_PUNCH
+        db DIZZY_PUNCH
 	db -1 ; end
 
 TogepiEggMoves:
@@ -808,11 +808,11 @@ DunsparceEggMoves:
 GligarEggMoves:
 	db METAL_CLAW
 	db WING_ATTACK
-	db RAZOR_WIND
+;	db RAZOR_WIND
 	db COUNTER
 	db AGILITY
 ;	db DOUBLE_EDGE
-	db BATON_PASS
+;	db BATON_PASS
 	db -1 ; end
 
 SnubbullEggMoves:
@@ -861,7 +861,7 @@ SneaselEggMoves:
 	db COUNTER
 	db SPITE
 	db FORESIGHT
-	db REFLECT
+;	db REFLECT
 	db BITE
 	db PURSUIT
 	db -1 ; end
@@ -987,13 +987,13 @@ TyrogueEggMoves:
 	db COUNTER
 	db LEER
 	db LOW_KICK
-    db DIZZY_PUNCH
+        db DIZZY_PUNCH
 	db -1 ; end
 
 SmoochumEggMoves:
 	db MEDITATE
 	db TELEPORT
-    db DIZZY_PUNCH
+        db DIZZY_PUNCH
 	db PSYCH_UP
 	db -1 ; end
 
@@ -1004,7 +1004,7 @@ ElekidEggMoves:
 	db MEDITATE
 	db CROSS_CHOP
 	db PURSUIT
-    db DIZZY_PUNCH
+        db DIZZY_PUNCH
 	db -1 ; end
 
 MagbyEggMoves:
