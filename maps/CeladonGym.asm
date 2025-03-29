@@ -11,17 +11,17 @@ CeladonGym_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback  MAPCALLBACK_OBJECTS, CeladonGymGuideCallback
+;	callback  MAPCALLBACK_OBJECTS, CeladonGymGuideCallback
 
-CeladonGymGuideCallback:
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .appear
-	disappear CELADONGYM_GYM_GUIDE
-	endcallback
-
-.appear:
-	appear CELADONGYM_GYM_GUIDE
-	endcallback
+;CeladonGymGuideCallback:
+;	checkevent EVENT_OPENED_MT_SILVER
+;	iftrue .appear
+;	disappear CELADONGYM_GYM_GUIDE
+;	endcallback
+;
+;.appear:
+;	appear CELADONGYM_GYM_GUIDE
+;	endcallback
 
 CeladonGymErikaScript:
 	faceplayer
