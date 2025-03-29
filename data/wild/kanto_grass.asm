@@ -119,24 +119,24 @@ KantoGrassWildMons:
 	; morn
 	db 41, GRAVELER
 	db 39, RHYHORN
-	db 40, STEELIX
 	db 41, GOLBAT
+	db 40, STEELIX
 	db 42, SANDSLASH
 	db 42, RHYDON
 	db 20, LARVITAR
 	; day
 	db 41, GRAVELER
 	db 39, RHYHORN
-	db 40, STEELIX
 	db 41, GOLBAT
+	db 40, STEELIX
 	db 42, SANDSLASH
 	db 42, RHYDON
 	db 20, LARVITAR
 	; nite
 	db 41, GOLBAT
 	db 39, GRAVELER
-	db 40, STEELIX
 	db 41, GOLBAT
+	db 40, STEELIX
 	db 42, GRAVELER
 	db 42, GRAVELER
 	db 41, GRAVELER
