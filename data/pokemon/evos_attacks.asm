@@ -1027,8 +1027,8 @@ GeodudeEvosAttacks:
 	db 19, ROLLOUT
 	db 23, SELFDESTRUCT
 	db 27, SANDSTORM 
-	db 32, EARTHQUAKE 
-	db 36, ROCK_SLIDE 
+	db 32, ROCK_SLIDE 
+	db 36, EARTHQUAKE
 	db 40, EXPLOSION 
 	db 45, DOUBLE_EDGE
 	db 0 ; no more level-up moves
@@ -1042,8 +1042,8 @@ GravelerEvosAttacks:
 	db 19, ROLLOUT
 	db 23, SELFDESTRUCT
 	db 29, SANDSTORM 
-	db 35, EARTHQUAKE 
-	db 41, ROCK_SLIDE 
+	db 35, ROCK_SLIDE 
+	db 41, EARTHQUAKE 
 	db 47, EXPLOSION 
 	db 53, DOUBLE_EDGE
 	db 0 ; no more level-up moves
@@ -1055,8 +1055,8 @@ GolemEvosAttacks:
 	db 19, ROLLOUT
 	db 23, SELFDESTRUCT
 	db 29, SANDSTORM 
-	db 35, EARTHQUAKE 
-	db 41, ROCK_SLIDE 
+	db 35, ROCK_SLIDE 
+	db 41, EARTHQUAKE 
 	db 47, EXPLOSION 
 	db 53, MEGA_PUNCH
 	db 0 ; no more level-up moves
