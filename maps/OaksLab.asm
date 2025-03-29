@@ -15,12 +15,6 @@ OaksLab_MapScripts:
 Oak:
 	faceplayer
 	opentext
-	setevent EVENT_OPENED_MT_SILVER
-	setevent EVENT_RED_IN_MT_SILVER
-	setevent EVENT_CIANWOOD_POKECENTER_GYM_GUIDE
-	setevent EVENT_CELADON_GAME_CORNER_GYM_GUIDE
-	clearevent EVENT_CIANWOOD_GYM_GUIDE
-	clearevent EVENT_CELADON_GYM_GUIDE
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .CheckPokedex
 	checkevent EVENT_TALKED_TO_OAK_IN_KANTO
@@ -93,8 +87,6 @@ OaksLabPoster2:
 	jumptext OaksLabPoster2Text
 
 OaksLabTrashcan:
-	setevent EVENT_CIANWOOD_GYM_GUIDE
-	setevent EVENT_CELADON_GYM_GUIDE
 	jumptext OaksLabTrashcanText
 
 OaksLabPC:
