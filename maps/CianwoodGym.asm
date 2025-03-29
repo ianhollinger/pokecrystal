@@ -14,17 +14,17 @@ CianwoodGym_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback  MAPCALLBACK_OBJECTS, CianwoodGymGuideCallback
+;	callback  MAPCALLBACK_OBJECTS, CianwoodGymGuideCallback
 
-CianwoodGymGuideCallback:
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .appear
-	disappear CIANWOODGYM_GYM_GUIDE
-	endcallback
-
-.appear:
-	appear CIANWOODGYM_GYM_GUIDE
-	endcallback
+;CianwoodGymGuideCallback:
+;	checkevent EVENT_OPENED_MT_SILVER
+;	iftrue .appear
+;	disappear CIANWOODGYM_GYM_GUIDE
+;	endcallback
+;
+;.appear:
+;	appear CIANWOODGYM_GYM_GUIDE
+;	endcallback
 
 CianwoodGymChuckScript:
 	faceplayer
