@@ -43,7 +43,7 @@ MoveNames::
 	li "TWINEEDLE"
 	li "PIN MISSILE"
 	li "LEER"
-	li "BITE"
+	li "BITE OF '87"
 	li "GROWL"
 	li "ROAR"
 	li "SING"
