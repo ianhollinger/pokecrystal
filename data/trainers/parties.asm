@@ -1614,10 +1614,10 @@ YoungsterGroup:
 
 	; YOUNGSTER (2)
 	db "MIKEY@", TRAINERTYPE_STAT_EXP
-	db  2, PIDGEY
-		dw $0009, $0009, $0009, $0009, $0009
-	db  4, RATTATA
-		dw $0051, $0051, $0051, $0051, $0051
+	db  3, PIDGEY
+		dw $0024, $0024, $0024, $0024, $0024
+	db  5, RATTATA
+		dw $0091, $0091, $0091, $0091, $0091
 	db -1 ; end
 
 	; YOUNGSTER (3)
@@ -3524,10 +3524,10 @@ SabrinaGroup:
 BugCatcherGroup:
 	; BUG_CATCHER (1)
 	db "DON@", TRAINERTYPE_STAT_EXP
-	db  3, CATERPIE
-		dw $0024, $0024, $0024, $0024, $0024
-	db  3, CATERPIE
-		dw $0024, $0024, $0024, $0024, $0024
+	db  4, CATERPIE
+		dw $0051, $0051, $0051, $0051, $0051
+	db  4, CATERPIE
+		dw $0051, $0051, $0051, $0051, $0051
 	db -1 ; end
 
 	; BUG_CATCHER (2)
@@ -3547,10 +3547,10 @@ BugCatcherGroup:
 
 	; BUG_CATCHER (4)
 	db "WADE@", TRAINERTYPE_NORMAL
-	db  2, CATERPIE
-	db  2, WEEDLE 
-	db  3, LEDYBA
-	db  2, SPINARAK
+	db  3, CATERPIE
+	db  3, WEEDLE 
+	db  4, LEDYBA
+	db  3, SPINARAK
 	db -1 ; end
 
 	; BUG_CATCHER (5)
@@ -6366,22 +6366,18 @@ ExecutiveFGroup:
 SageGroup:
 	; SAGE (1)
 	db "CHOW@", TRAINERTYPE_STAT_EXP
-	db  3, BELLSPROUT
-		dw $0024, $0024, $0024, $0024, $0024
-	db  3, GASTLY
-		dw $0024, $0024, $0024, $0024, $0024
-	db  3, PHANPY
-		dw $0024, $0024, $0024, $0024, $0024
+	db  5, BELLSPROUT
+		dw $0091, $0091, $0091, $0091, $0091
+	db  5, GASTLY
+		dw $0091, $0091, $0091, $0091, $0091
 	db -1 ; end
 
 	; SAGE (2)
 	db "NICO@", TRAINERTYPE_STAT_EXP
-	db  3, BELLSPROUT
-		dw $0024, $0024, $0024, $0024, $0024
-	db  3, SPINARAK
-		dw $0024, $0024, $0024, $0024, $0024
-	db  3, SENTRET
-		dw $0024, $0024, $0024, $0024, $0024
+	db  5, BELLSPROUT
+		dw $0091, $0091, $0091, $0091, $0091
+	db  5, SENTRET
+		dw $0091, $0091, $0091, $0091, $0091
 	db -1 ; end
 
 	; SAGE (3)
@@ -6394,7 +6390,7 @@ SageGroup:
 	db "TROY@", TRAINERTYPE_STAT_EXP
 	db  7, BELLSPROUT
 		dw $0146, $0146, $0146, $0146, $0146
-	db  7, HOOTHOOT
+	db  7, NATU
 		dw $0146, $0146, $0146, $0146, $0146
 	db -1 ; end
 
@@ -6421,12 +6417,10 @@ SageGroup:
 
 	; SAGE (7)
 	db "EDMOND@", TRAINERTYPE_STAT_EXP
-	db  3, BELLSPROUT
-		dw $0024, $0024, $0024, $0024, $0024
-	db  3, NATU
-		dw $0024, $0024, $0024, $0024, $0024
-	db  3, VULPIX
-		dw $0024, $0024, $0024, $0024, $0024
+	db  5, BELLSPROUT
+		dw $0091, $0091, $0091, $0091, $0091
+	db  5, VULPIX
+		dw $0091, $0091, $0091, $0091, $0091
 	db -1 ; end
 
 	; SAGE (8)
@@ -6437,11 +6431,11 @@ SageGroup:
 
 	; SAGE (9)
 	db "LI@", TRAINERTYPE_STAT_EXP | TRAINERTYPE_MOVES
-	db  7, BELLSPROUT
-		dw $0146, $0146, $0146, $0146, $0146
+	db  8, BELLSPROUT
+		dw $01BC, $01BC, $01BC, $01BC, $01BC
 		db VINE_WHIP, GROWTH, FLASH, WRAP
-	db  7, ABRA
-		dw $0146, $0146, $0146, $0146, $0146
+	db  8, ABRA
+		dw $01BC, $01BC, $01BC, $01BC, $01BC
 		db FLASH, CONFUSION, HIDDEN_POWER, METRONOME ; HP Rock
 	db 10, HOOTHOOT
 		dw $02DE, $02DE, $02DE, $02DE, $02DE
