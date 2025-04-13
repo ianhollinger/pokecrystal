@@ -1181,27 +1181,27 @@ JohtoGrassWildMons:
 	def_grass_wildmons DARK_CAVE_VIOLET_ENTRANCE
 	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
 	; morn
+	db 4, GEODUDE
+	db 3, ZUBAT
 	db 3, GEODUDE
-	db 2, ZUBAT
-	db 2, GEODUDE
 	db 4, SWINUB
-	db 2, TEDDIURSA
+	db 3, TEDDIURSA
 	db 4, ZUBAT
 	db 4, DUNSPARCE
 	; day
+	db 4, GEODUDE
+	db 3, ZUBAT
 	db 3, GEODUDE
-	db 2, ZUBAT
-	db 2, GEODUDE
 	db 4, SWINUB
-	db 2, ZUBAT
+	db 3, ZUBAT
 	db 4, ZUBAT
 	db 4, DUNSPARCE
 	; nite
-	db 2, ZUBAT
-	db 3, GEODUDE
-	db 2, ZUBAT
+	db 3, ZUBAT
+	db 4, GEODUDE
+	db 3, ZUBAT
 	db 4, SWINUB
-	db 2, GEODUDE
+	db 3, GEODUDE
 	db 4, CLEFFA
 	db 4, DUNSPARCE
 	end_grass_wildmons
