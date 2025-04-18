@@ -2390,7 +2390,7 @@ NoctowlEvosAttacks:
 	db 28, NIGHT_SHADE
 	db 35, TAKE_DOWN
 	db 44, DREAM_EATER
-	db 52, SKY_ATTACK
+	db 51, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 LedybaEvosAttacks:
