@@ -2371,25 +2371,25 @@ HoothootEvosAttacks:
 	db 1, TACKLE
 	db 1, GROWL
 	db 1, FORESIGHT
-	db 6, PECK
-	db 10, HYPNOSIS
-	db 17, CONFUSION
-	db 22, REFLECT
-	db 26, NIGHT_SHADE
-	db 33, TAKE_DOWN
-	db 38, DREAM_EATER
+	db 4, PECK
+	db 9, HYPNOSIS
+	db 16, CONFUSION
+	db 21, REFLECT
+	db 24, NIGHT_SHADE
+	db 29, TAKE_DOWN
+	db 36, DREAM_EATER
 	db 0 ; no more level-up moves
 
 NoctowlEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, FORESIGHT
-	db 6, PECK
-	db 10, HYPNOSIS
-	db 17, CONFUSION
-	db 24, REFLECT
-	db 30, NIGHT_SHADE
-	db 39, TAKE_DOWN
-	db 46, DREAM_EATER
+	db 4, PECK
+	db 9, HYPNOSIS
+	db 16, CONFUSION
+	db 23, REFLECT
+	db 28, NIGHT_SHADE
+	db 35, TAKE_DOWN
+	db 44, DREAM_EATER
 	db 52, SKY_ATTACK
 	db 0 ; no more level-up moves
 
