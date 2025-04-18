@@ -573,7 +573,8 @@ GolbatEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, CROBAT
 	db 0 ; no more evolutions
 	db 1, SCREECH
-	db 1, WING_ATTACK
+	db 1, BITE
+	db 15, WING_ATTACK
 	db 19, CONFUSE_RAY
 	db 21, CRUNCH
 	db 26, SWIFT
