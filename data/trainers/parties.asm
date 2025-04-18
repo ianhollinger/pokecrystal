@@ -1608,16 +1608,16 @@ ErikaGroup:
 YoungsterGroup:
 	; YOUNGSTER (1)
 	db "JOEY@", TRAINERTYPE_STAT_EXP
-	db  4, RATTATA
-		dw $0051, $0051, $0051, $0051, $0051
+	db  5, RATTATA
+		dw $0091, $0091, $0091, $0091, $0091
 	db -1 ; end
 
 	; YOUNGSTER (2)
 	db "MIKEY@", TRAINERTYPE_STAT_EXP
 	db  3, PIDGEY
 		dw $0024, $0024, $0024, $0024, $0024
-	db  5, RATTATA
-		dw $0091, $0091, $0091, $0091, $0091
+	db  4, RATTATA
+		dw $0051, $0051, $0051, $0051, $0051
 	db -1 ; end
 
 	; YOUNGSTER (3)
@@ -6437,8 +6437,8 @@ SageGroup:
 	db  8, ABRA
 		dw $01BC, $01BC, $01BC, $01BC, $01BC
 		db FLASH, CONFUSION, HIDDEN_POWER, METRONOME ; HP Rock
-	db 10, HOOTHOOT
-		dw $02DE, $02DE, $02DE, $02DE, $02DE
+	db  9, HOOTHOOT
+		dw $0244, $0244, $0244, $0244, $0244
 		db TACKLE, PECK, HYPNOSIS, FLASH
 	db -1 ; end
 
