@@ -1064,28 +1064,30 @@ GolemEvosAttacks:
 PonytaEvosAttacks:
 	db EVOLVE_LEVEL, 40, RAPIDASH
 	db 0 ; no more evolutions
-	db 1, QUICK_ATTACK
+	db 1, TACKLE
 	db 1, GROWL
-	db 5, TAIL_WHIP
-	db 10, EMBER
-	db 14, DOUBLE_KICK
-	db 20, STOMP
-	db 24, FLAME_WHEEL
-	db 31, AGILITY
-	db 35, FIRE_SPIN
-	db 43, TAKE_DOWN
-	db 47, FIRE_BLAST 
+	db 6, TAIL_WHIP
+	db 11, EMBER
+	db 16, QUICK_ATTACK
+	db 21, DOUBLE_KICK
+	db 26, STOMP
+	db 31, FLAME_WHEEL
+	db 36, AGILITY
+	db 41, FIRE_SPIN
+	db 46, TAKE_DOWN
+	db 51, FIRE_BLAST 
 	db 0 ; no more level-up moves
 
 RapidashEvosAttacks:
 	db 0 ; no more evolutions
         db 1, HORN_DRILL
-	db 1, FLAME_WHEEL
-	db 31, AGILITY
-	db 35, FIRE_SPIN
+	db 1, STOMP
+	db 31, FLAME_WHEEL
+	db 36, AGILITY
 	db 39, MEGAHORN
-	db 46, TAKE_DOWN
-	db 53, FIRE_BLAST 
+	db 43, FIRE_SPIN
+	db 50, TAKE_DOWN
+	db 57, FIRE_BLAST 
 	db 0 ; no more level-up moves
 
 SlowpokeEvosAttacks:
