@@ -876,7 +876,7 @@ KadabraEvosAttacks:
 	db 1, TELEPORT
 	db 1, KINESIS
 	db 15, CONFUSION
-;	db 16, KINESIS
+	db 16, KINESIS
 	db 19, DISABLE
 	db 23, HYPNOSIS 
 	db 26, PSYBEAM 
@@ -892,7 +892,7 @@ AlakazamEvosAttacks:
 	db 1, TELEPORT
 	db 1, KINESIS
 	db 15, CONFUSION
-;	db 16, KINESIS
+	db 16, KINESIS
 	db 19, DISABLE
 	db 23, HYPNOSIS 
 	db 26, PSYBEAM 
@@ -1736,8 +1736,8 @@ StaryuEvosAttacks:
 
 StarmieEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, WATER_GUN
 	db 1, HYDRO_PUMP
+	db 1, WATER_GUN
 	db 1, RAPID_SPIN 
 	db 1, RECOVER
 	db 1, SWIFT
@@ -2038,7 +2038,7 @@ KabutopsEvosAttacks:
 	db 1, MEGA_DRAIN
 	db 26, SAND_ATTACK
 	db 31, PROTECT 
-	db 46, ANCIENTPOWER
+	db 36, ANCIENTPOWER
 	db 39, SLASH
 	db 43, ENDURE
 	db 50, ROCK_SLIDE
@@ -3055,6 +3055,7 @@ QwilfishEvosAttacks:
 
 ScizorEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, METAL_CLAW
 	db 1, LEER
 	db 1, QUICK_ATTACK 
 	db 5, FURY_CUTTER
@@ -3074,12 +3075,12 @@ ShuckleEvosAttacks:
 	db 1, WRAP
 	db 1, WITHDRAW
 	db 7, BIDE 
-	db 13, ROLLOUT 
-	db 19, ENCORE
-	db 25, ROCK_THROW
-	db 31, SAFEGUARD
-	db 37, REST
-	db 43, ROCK_SLIDE
+	db 12, ROLLOUT 
+	db 18, ENCORE
+	db 23, ROCK_THROW
+	db 29, SAFEGUARD
+	db 34, REST
+	db 40, ROCK_SLIDE
 	db 0 ; no more level-up moves
 
 HeracrossEvosAttacks:
