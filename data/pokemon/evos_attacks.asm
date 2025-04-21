@@ -957,28 +957,28 @@ BellsproutEvosAttacks:
 	db EVOLVE_LEVEL, 21, WEEPINBELL
 	db 0 ; no more evolutions
 	db 1, VINE_WHIP
-	db 6, GROWTH
-	db 12, WRAP 
-	db 17, SLEEP_POWDER 
-	db 17, POISONPOWDER 
-	db 17, STUN_SPORE 
-	db 23, ACID
+	db 4, GROWTH
+	db 8, WRAP 
+	db 13, SLEEP_POWDER 
+	db 16, POISONPOWDER 
+	db 20, STUN_SPORE 
+	db 25, ACID
 	db 28, SWEET_SCENT
-	db 34, RAZOR_LEAF
-	db 39, SLAM
+	db 32, RAZOR_LEAF
+	db 37, SLAM
 	db 0 ; no more level-up moves
 
 WeepinbellEvosAttacks:
 	db EVOLVE_ITEM, LEAF_STONE, VICTREEBEL
 	db 0 ; no more evolutions
 	db 1, WRAP 
-	db 17, SLEEP_POWDER 
-	db 17, POISONPOWDER 
-	db 17, STUN_SPORE 
-	db 25, ACID
+	db 13, SLEEP_POWDER 
+	db 16, POISONPOWDER 
+	db 20, STUN_SPORE 
+	db 27, ACID
 	db 32, SWEET_SCENT
-	db 40, RAZOR_LEAF
-	db 47, SLAM
+	db 38, RAZOR_LEAF
+	db 45, SLAM
 	db 0 ; no more level-up moves
 
 VictreebelEvosAttacks:
