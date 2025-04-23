@@ -594,12 +594,28 @@ DayCare_InitBreeding:
 ; Nidoran♀ can give birth to either gender of Nidoran
 	ld a, [wCurPartySpecies]
 	cp NIDORAN_F
-	jr nz, .GotEggSpecies
+	jr nz, .CheckHitmonlee
 	call Random
 	cp 50 percent + 1
 	ld a, NIDORAN_F
 	jr c, .GotEggSpecies
-	ld a, NIDORAN_M
+	ld a, NIDORAN_M	
+	jr .GotEggSpecies
+; sloppily fixing bug where Hitmons give birth to themselves instead of Tyrogue
+.CheckHitmonlee:
+	cp HITMONLEE
+	jr nz, .CheckHitmonchan
+	ld a, TYROGUE
+	jr .GotEggSpecies
+.CheckHitmonchan:
+	cp HITMONCHAN
+	jr nz, .CheckHitmontop
+	ld a, TYROGUE
+	jr .GotEggSpecies
+.CheckHitmontop:
+	cp HITMONTOP
+	jr nz, .GotEggSpecies
+	ld a, TYROGUE
 .GotEggSpecies:
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
