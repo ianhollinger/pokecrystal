@@ -269,7 +269,8 @@ RattataEvosAttacks:
 RaticateEvosAttacks:
 	db 0 ; no more evolutions
         db 1, SWORDS_DANCE
-	db 1, HYPER_FANG
+        db 1, BITE 
+	db 15, HYPER_FANG
         db 19, PURSUIT
 	db 19, SCARY_FACE
         db 24, TAKE_DOWN
