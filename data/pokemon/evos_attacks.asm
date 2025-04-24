@@ -1279,7 +1279,7 @@ CloysterEvosAttacks:
 	db 1, SUPERSONIC
 	db 1, WITHDRAW
 	db 1, SPIKE_CANNON
-	db 36, SPIKES  
+	db 31, SPIKES  
 	db 0 ; no more level-up moves
 
 GastlyEvosAttacks:
