@@ -1860,20 +1860,21 @@ MagikarpEvosAttacks:
 
 GyaradosEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, RAGE 
+	db 1, BIND 
+	db 6, LEER
+	db 10, RAGE 
+	db 15, SCARY_FACE
+	db 19, TWISTER
 	db 19, BITE
-	db 23, LEER
-	db 26, TWISTER
-	db 29, DRAGON_RAGE
-	db 32, WHIRLPOOL
-	db 35, SCARY_FACE
-	db 38, WATERFALL
-	db 41, CRUNCH
-	db 44, RAIN_DANCE
-	db 47, THRASH
-	db 50, HYDRO_PUMP
-	db 53, OUTRAGE
-	db 56, HYPER_BEAM
+	db 24, WHIRLPOOL
+	db 28, DRAGON_RAGE
+	db 33, WATERFALL
+	db 37, CRUNCH
+	db 42, RAIN_DANCE
+	db 46, THRASH
+	db 51, HYDRO_PUMP
+	db 55, OUTRAGE
+	db 60, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 LaprasEvosAttacks:
