@@ -1419,11 +1419,11 @@ VoltorbEvosAttacks:
 	db EVOLVE_LEVEL, 30, ELECTRODE
 	db 0 ; no more evolutions
 	db 1, TACKLE 
-	db 5, THUNDERSHOCK
-	db 9, SONICBOOM 
-	db 13, SPARK
+	db 5, SONICBOOM
+	db 9, THUNDERSHOCK
+	db 13, ROLLOUT 
 	db 17, SCREECH
-	db 21, ROLLOUT 
+	db 21, SPARK
 	db 25, SELFDESTRUCT 
 	db 29, SWIFT
 	db 33, AGILITY
@@ -1436,7 +1436,7 @@ VoltorbEvosAttacks:
 ElectrodeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCREECH
-	db 21, ROLLOUT 
+	db 21, SPARK 
 	db 25, SELFDESTRUCT 
 	db 29, SWIFT
 	db 35, AGILITY
