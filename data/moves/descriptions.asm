@@ -1068,8 +1068,8 @@ OutrageDescription:
 	next "and confuses self.@"
 
 SandstormDescription:
-	db   "Inflicts damage"
-	next "every turn.@"
+	db   "Hurts non-ground,"
+	next "rock and steel.@"
 
 GigaDrainDescription:
 	db   "Steals 1/2 of the"
