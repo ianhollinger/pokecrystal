@@ -2291,6 +2291,12 @@ AI_Smart_Earthquake:
 	ret
 
 AI_Smart_BatonPass:
+; dismiss if enemy is last Pokemon 
+	push hl
+	farcall FindAliveEnemyMons
+	pop hl
+	jp c, AIDiscourageMove
+
 ; Discourage if enemy's first turn.
 	ld a, [wEnemyTurnsTaken]
 	and a
