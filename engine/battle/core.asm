@@ -1062,7 +1062,16 @@ ResidualDamage:
 	xor a
 	ld [wNumHits], a
 	call Call_PlayBattleAnim_OnlyIfVisible
+
+	ld a, BATTLE_VARS_STATUS
+	call GetBattleVar
+	and 1 << BRN
+	jr z, .is_brn
 	call GetEighthMaxHP
+	jr .is_psn
+.is_brn
+	call GetSixteenthMaxHP
+.is_psn
 	ld de, wPlayerToxicCount
 	ldh a, [hBattleTurn]
 	and a
