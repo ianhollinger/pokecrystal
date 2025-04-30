@@ -1066,7 +1066,7 @@ ResidualDamage:
 	ld a, BATTLE_VARS_STATUS
 	call GetBattleVar
 	and 1 << BRN
-	jr z, .is_brn
+	jr nz, .is_brn
 	call GetEighthMaxHP
 	jr .is_psn
 .is_brn
