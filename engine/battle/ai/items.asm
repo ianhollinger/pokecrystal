@@ -743,12 +743,12 @@ AI_HealStatus:
 	res SUBSTATUS_TOXIC, [hl]
 	ret
 
-EnemyUsedXAccuracy:
-	call AIUsedItemSound
-	ld hl, wEnemySubStatus4
-	set SUBSTATUS_X_ACCURACY, [hl]
-	ld a, X_ACCURACY
-	jp PrintText_UsedItemOn_AND_AIUpdateHUD
+;EnemyUsedXAccuracy:
+;	call AIUsedItemSound
+;	ld hl, wEnemySubStatus4
+;	set SUBSTATUS_X_ACCURACY, [hl]
+;	ld a, X_ACCURACY
+;	jp PrintText_UsedItemOn_AND_AIUpdateHUD
 
 EnemyUsedGuardSpec:
 	call AIUsedItemSound
@@ -811,14 +811,19 @@ EnemyUsedXSpeed:
 	ld a, X_SPEED
 	jr EnemyUsedXItem
 
-EnemyUsedXSpecial:
-	ld b, $10 | SP_ATTACK
-	ld a, X_SPECIAL
-
 EnemyUsedXSpDef:
 	ld b, $10 | SP_DEFENSE
 	ld a, X_SP_DEF
 	jr EnemyUsedXItem
+
+EnemyUsedXAccuracy:
+	ld b, $10 | ACCURACY
+	ld a, X_SP_DEF
+	jr EnemyUsedXItem
+
+EnemyUsedXSpecial:
+	ld b, $10 | SP_ATTACK
+	ld a, X_SPECIAL
 
 ; Parameter
 ; a = ITEM_CONSTANT
