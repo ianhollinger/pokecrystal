@@ -46,7 +46,7 @@ ItemEffects:
 	dw NoEffect            ; LUCKY_PUNCH
 	dw VitaminEffect       ; CALCIUM
 	dw RareCandyEffect     ; RARE_CANDY
-	dw XAccuracyEffect     ; X_ACCURACY
+	dw XItemEffect         ; X_ACCURACY
 	dw EvoStoneEffect      ; LEAF_STONE
 	dw NoEffect            ; METAL_POWDER
 	dw NoEffect            ; NUGGET
