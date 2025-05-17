@@ -88,14 +88,35 @@ GameFreakGraphicArtistScript:
 	yesorno
 	iffalse .Refused
 	special PrintDiploma
-	closetext
-	end
+	sjump .AskForBattle
 
 .Refused:
 	writetext GameFreakGraphicArtistRefusedText
 	waitbutton
+.AskForBattle:
+	checkevent EVENT_FOUGHT_SUGIMORI
+	iftrue .end
+	writetext GameFreakGraphicArtistAskForBattleText
+	yesorno
+	iffalse .RefusedBattle
+	writetext GameFreakGraphicArtistLetsBeginText
+	waitbutton
+	closetext
+	winlosstext GameFreakGraphicArtistWinLossText, 0
+	loadtrainer SUPER_NERD, KEN1
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_FOUGHT_SUGIMORI
+	opentext
+	writetext GameFreakGraphicArtistGivePPUPsText
+	verbosegiveitem PP_UP, 30
+	waitbutton
+.End:
 	closetext
 	end
+.RefusedBattle:
+	writetext GameFreakGameDesignerRefusedBattleText
+	sjump .End
 
 .CancelPrinting: ; unreferenced
 	writetext GameFreakGraphicArtistErrorText
