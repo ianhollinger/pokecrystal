@@ -484,6 +484,7 @@ DEF KRIS EQU __trainer_class__
 	const HUGH
 	const MARKUS
 	const SHIGEKI
+	const KEN1
 
 	trainerclass RIVAL2 ; 2a
 	const RIVAL1_2_CHIKORITA
