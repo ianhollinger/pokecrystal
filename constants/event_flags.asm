@@ -538,7 +538,8 @@
 	const EVENT_GOT_ODD_EGG
 	const EVENT_FOUGHT_MORIMOTO
 	const EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
-; Unused: next 167 events
+	const EVENT_FOUGHT_SUGIMORI
+; Unused: next 166 events
 
 	const_next 1000
 ; Trainer flags
