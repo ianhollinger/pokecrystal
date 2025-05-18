@@ -110,12 +110,12 @@ GameFreakGraphicArtistScript:
 	opentext
 	writetext GameFreakGraphicArtistGivePPUPsText
 	verbosegiveitem PP_UP, 30
-	waitbutton
 .End:
 	closetext
 	end
 .RefusedBattle:
 	writetext GameFreakGameDesignerRefusedBattleText
+	waitbutton
 	sjump .End
 
 .CancelPrinting: ; unreferenced
@@ -196,7 +196,6 @@ GameFreakGameDesignerMewText:
 	para "minder of our"
 	line "battle. It's"
 	cont "my favorite!"
-
 	done
 
 ReceivedMewText:
@@ -255,6 +254,31 @@ GameFreakGraphicArtistErrorText:
 	text "Something's wrong."
 	line "I'll have to can-"
 	cont "cel printing."
+	done
+
+GameFreakGraphicArtistAskForBattleText:
+	text "How about a"
+	line "friendly battle?"
+
+	para "Not that I'll"
+	line "go easy on you…"
+	done
+
+GameFreakGraphicArtistLetsBeginText:
+	text "En garde!"
+	done
+
+GameFreakGraphicArtistWinLossText:
+	text "Not bad!"
+	done
+
+GameFreakGameDesignerRefusedBattleText:
+	text "Worth a shot…"
+	done
+
+GameFreakGraphicArtistGivePPUPsText:
+	text "You're strong."
+	line "I'll give you this."
 	done
 
 GameFreakProgrammerText:
