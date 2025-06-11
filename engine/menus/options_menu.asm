@@ -454,9 +454,9 @@ Options_MenuAccount:
 .On:  db "ON @"
 
 	const_def
-	const OPT_DIFFICULTY_HARD   ; 0
+	const OPT_DIFFICULTY_EASY   ; 0
 	const OPT_DIFFICULTY_NORMAL ; 1
-	const OPT_DIFFICULTY_EASY   ; 2
+	const OPT_DIFFICULTY_HARD   ; 2
 
 Options_Difficulty:
 	call GetDifficulty
