@@ -178,17 +178,17 @@ GetTextSpeed:
 	jr z, .slow
 	; none of the above
 	ld c, OPT_TEXT_SPEED_MED
-	lb de, TEXT_DELAY_FAST, TEXT_DELAY_SLOW
+	lb de, TEXT_DELAY_SLOW, TEXT_DELAY_FAST
 	ret
 
 .fast
 	ld c, OPT_TEXT_SPEED_FAST 
-	lb de, TEXT_DELAY_SLOW, TEXT_DELAY_MED 
+	lb de, TEXT_DELAY_MED, TEXT_DELAY_SLOW
 	ret
 
 .slow
 	ld c, OPT_TEXT_SPEED_SLOW 
-	lb de, TEXT_DELAY_MED, TEXT_DELAY_FAST
+	lb de, TEXT_DELAY_FAST, TEXT_DELAY_MED
 	ret
 
 Options_BattleScene:
