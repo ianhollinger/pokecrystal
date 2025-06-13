@@ -18,8 +18,7 @@ GameFreakGameDesignerScript:
 	iftrue .GiveMew
 	writetext GameFreakGameDesignerText
 	readvar VAR_DEXCAUGHT
-;	ifgreater NUM_POKEMON - 1 - 1, .CompletedPokedex ; caught everything but Mew
-	ifgreater 0, .CompletedPokedex ; testing
+	ifgreater NUM_POKEMON - 1 - 1, .CompletedPokedex ; caught everything but Mew
 	waitbutton
 	closetext
 	end
@@ -29,7 +28,6 @@ GameFreakGameDesignerScript:
 	writetext GameFreakGameDesignerCompletedPokedexText
 	playsound SFX_DEX_FANFARE_230_PLUS
 	waitsfx
-;	writetext GameFreakGameDesignerPauseForDiplomaText
 	writetext GameFreakGameDesignerAskForBattleText
 	yesorno
 	iffalse .Refused
@@ -42,9 +40,6 @@ GameFreakGameDesignerScript:
 	reloadmapafterbattle
 	setevent EVENT_FOUGHT_MORIMOTO
 	opentext
-;	special Diploma
-;	writetext GameFreakGameDesignerAfterDiplomaText
-;	setevent EVENT_ENABLE_DIPLOMA_PRINTING
 .GiveMew:
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .NoRoom
@@ -78,8 +73,7 @@ GameFreakGraphicArtistScript:
 	faceplayer
 	opentext
 	checkevent EVENT_ENABLE_DIPLOMA_PRINTING
-;	iftrue .CanPrintDiploma
-	sjump .CanPrintDiploma
+	iftrue .CanPrintDiploma
 	writetext GameFreakGraphicArtistText
 	waitbutton
 	closetext
