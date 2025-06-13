@@ -111,6 +111,7 @@ GameFreakGraphicArtistScript:
 	setevent EVENT_FOUGHT_SUGIMORI
 	opentext
 	writetext GameFreakGraphicArtistGivePPUPsText
+	waitbutton
 	verbosegiveitem PP_UP, 30
 .End:
 	closetext
