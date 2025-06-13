@@ -181,12 +181,12 @@ GetTextSpeed:
 	lb de, TEXT_DELAY_SLOW, TEXT_DELAY_FAST 
 	ret
 
-.slow
+.fast
 	ld c, OPT_TEXT_SPEED_FAST 
 	lb de, TEXT_DELAY_MED, TEXT_DELAY_SLOW 
 	ret
 
-.fast
+.slow
 	ld c, OPT_TEXT_SPEED_SLOW 
 	lb de, TEXT_DELAY_FAST, TEXT_DELAY_MED
 	ret
@@ -521,20 +521,20 @@ GetDifficulty:
 	ld a, [wOptions2]
 	and DIFFICULTY_MASK
 	cp DIFFICULTY_HARD
-	jr z, .easy
-	cp DIFFICULTY_EASY
 	jr z, .hard
+	cp DIFFICULTY_EASY
+	jr z, .easy
 	; none of the above
 	ld c, OPT_DIFFICULTY_NORMAL
 	lb de, DIFFICULTY_EASY, DIFFICULTY_HARD
 	ret
 
-.easy
+.hard
 	ld c, OPT_DIFFICULTY_HARD
 	lb de, DIFFICULTY_NORMAL, DIFFICULTY_EASY
 	ret
 
-.hard
+.easy
 	ld c, OPT_DIFFICULTY_EASY
 	lb de, DIFFICULTY_HARD, DIFFICULTY_NORMAL
 	ret
