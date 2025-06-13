@@ -106,9 +106,9 @@ GetOptionPointer:
 	dw Options_Cancel
 
 	const_def
-	const OPT_TEXT_SPEED_FAST ; 0
+	const OPT_TEXT_SPEED_SLOW ; 0
 	const OPT_TEXT_SPEED_MED  ; 1
-	const OPT_TEXT_SPEED_SLOW ; 2
+	const OPT_TEXT_SPEED_FAST ; 2
 
 Options_TextSpeed:
 	call GetTextSpeed
@@ -118,9 +118,9 @@ Options_TextSpeed:
 	bit D_RIGHT_F, a
 	jr z, .NonePressed
 	ld a, c ; right pressed
-	cp OPT_TEXT_SPEED_SLOW
+	cp OPT_TEXT_SPEED_FAST 
 	jr c, .Increase
-	ld c, OPT_TEXT_SPEED_FAST - 1
+	ld c, OPT_TEXT_SPEED_SLOW - 1
 
 .Increase:
 	inc c
@@ -131,7 +131,7 @@ Options_TextSpeed:
 	ld a, c
 	and a
 	jr nz, .Decrease
-	ld c, OPT_TEXT_SPEED_SLOW + 1
+	ld c, OPT_TEXT_SPEED_FAST + 1
 
 .Decrease:
 	dec c
@@ -159,36 +159,36 @@ Options_TextSpeed:
 
 .Strings:
 ; entries correspond to OPT_TEXT_SPEED_* constants
-	dw .Fast
-	dw .Mid
 	dw .Slow
+	dw .Mid
+	dw .Fast 
 
-.Fast: db "FAST@"
-.Mid:  db "MID @"
 .Slow: db "SLOW@"
+.Mid:  db "MID @"
+.Fast: db "FAST@"
 
 GetTextSpeed:
 ; converts TEXT_DELAY_* value in a to OPT_TEXT_SPEED_* value in c,
 ; with previous/next TEXT_DELAY_* values in d/e
 	ld a, [wOptions]
 	and TEXT_DELAY_MASK
-	cp TEXT_DELAY_SLOW
-	jr z, .slow
-	cp TEXT_DELAY_FAST
+	cp TEXT_DELAY_FAST 
 	jr z, .fast
+	cp TEXT_DELAY_SLOW 
+	jr z, .slow
 	; none of the above
 	ld c, OPT_TEXT_SPEED_MED
-	lb de, TEXT_DELAY_FAST, TEXT_DELAY_SLOW
+	lb de, TEXT_DELAY_SLOW, TEXT_DELAY_FAST 
 	ret
 
 .slow
-	ld c, OPT_TEXT_SPEED_SLOW
-	lb de, TEXT_DELAY_MED, TEXT_DELAY_FAST
+	ld c, OPT_TEXT_SPEED_FAST 
+	lb de, TEXT_DELAY_MED, TEXT_DELAY_SLOW 
 	ret
 
 .fast
-	ld c, OPT_TEXT_SPEED_FAST
-	lb de, TEXT_DELAY_SLOW, TEXT_DELAY_MED
+	ld c, OPT_TEXT_SPEED_SLOW 
+	lb de, TEXT_DELAY_FAST, TEXT_DELAY_MED
 	ret
 
 Options_BattleScene:
@@ -466,9 +466,9 @@ Options_Difficulty:
 	bit D_RIGHT_F, a
 	jr z, .NonePressed
 	ld a, c ; right pressed
-	cp OPT_DIFFICULTY_EASY
+	cp OPT_DIFFICULTY_HARD
 	jr c, .Increase
-	ld c, OPT_DIFFICULTY_HARD - 1
+	ld c, OPT_DIFFICULTY_EASY - 1
 
 .Increase:
 	inc c
@@ -479,7 +479,7 @@ Options_Difficulty:
 	ld a, c
 	and a
 	jr nz, .Decrease
-	ld c, OPT_DIFFICULTY_EASY + 1
+	ld c, OPT_DIFFICULTY_HARD + 1
 
 .Decrease:
 	dec c
@@ -507,36 +507,36 @@ Options_Difficulty:
 
 .Strings:
 ; entries correspond to OPT_DIFFICULTY_* constants
-	dw .Hard
-	dw .Normal
 	dw .Easy
+	dw .Normal
+	dw .Hard
 
-.Hard:   db "HARD   @"
-.Normal: db "NORMAL @"
 .Easy:   db "EASY  @"
+.Normal: db "NORMAL @"
+.Hard:   db "HARD   @"
 
 GetDifficulty:
 ; converts DIFFICULTY_* value in a to OPT_DIFFICULTY_* value in c,
 ; with previous/next DIFFICULTY_* values in d/e
 	ld a, [wOptions2]
 	and DIFFICULTY_MASK
-	cp DIFFICULTY_EASY
-	jr z, .easy
 	cp DIFFICULTY_HARD
+	jr z, .easy
+	cp DIFFICULTY_EASY
 	jr z, .hard
 	; none of the above
 	ld c, OPT_DIFFICULTY_NORMAL
-	lb de, DIFFICULTY_HARD, DIFFICULTY_EASY
+	lb de, DIFFICULTY_EASY, DIFFICULTY_HARD
 	ret
 
 .easy
-	ld c, OPT_DIFFICULTY_EASY
-	lb de, DIFFICULTY_NORMAL, DIFFICULTY_HARD
+	ld c, OPT_DIFFICULTY_HARD
+	lb de, DIFFICULTY_NORMAL, DIFFICULTY_EASY
 	ret
 
 .hard
-	ld c, OPT_DIFFICULTY_HARD
-	lb de, DIFFICULTY_EASY, DIFFICULTY_NORMAL
+	ld c, OPT_DIFFICULTY_EASY
+	lb de, DIFFICULTY_HARD, DIFFICULTY_NORMAL
 	ret
 
 Options_Frame:
