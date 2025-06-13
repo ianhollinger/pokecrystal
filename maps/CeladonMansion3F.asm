@@ -96,7 +96,7 @@ GameFreakGraphicArtistScript:
 	waitbutton
 .AskForBattle:
 	checkevent EVENT_FOUGHT_SUGIMORI
-	iftrue .end
+	iftrue .End
 	writetext GameFreakGraphicArtistAskForBattleText
 	yesorno
 	iffalse .RefusedBattle
