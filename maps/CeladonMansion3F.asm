@@ -78,7 +78,8 @@ GameFreakGraphicArtistScript:
 	faceplayer
 	opentext
 	checkevent EVENT_ENABLE_DIPLOMA_PRINTING
-	iftrue .CanPrintDiploma
+;	iftrue .CanPrintDiploma
+	sjump .CanPrintDiploma
 	writetext GameFreakGraphicArtistText
 	waitbutton
 	closetext
