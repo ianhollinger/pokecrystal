@@ -42,12 +42,12 @@ GameFreakGameDesignerScript:
 	reloadmapafterbattle
 	setevent EVENT_FOUGHT_MORIMOTO
 	opentext
-	readvar VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, .NoRoom
 ;	special Diploma
 ;	writetext GameFreakGameDesignerAfterDiplomaText
 ;	setevent EVENT_ENABLE_DIPLOMA_PRINTING
 .GiveMew:
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .NoRoom
 	writetext GameFreakGameDesignerMewText
 	promptbutton
 	waitsfx
