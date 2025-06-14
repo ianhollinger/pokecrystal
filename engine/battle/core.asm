@@ -6846,8 +6846,8 @@ BoostStat:
 	rr e
 	ld a, [hl]
 	add e
-	add e
-	add e
+;	add e
+;	add e
 	ld [hld], a
 	ld a, [hl]
 	adc d
@@ -6879,8 +6879,8 @@ NerfStat:
 	rr e
 	ld a, [hl]
 	sub e
-	sub e
-	sub e
+;	sub e
+;	sub e
 	ld [hld], a
 	ld a, [hl]
 	adc d
