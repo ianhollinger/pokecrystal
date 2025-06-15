@@ -6826,13 +6826,17 @@ BadgeStatBoosts:
 CheckDifficulty:
 	ld a, [wOptions2]
 	and DIFFICULTY_MASK
+	cp DIFFICULTY_ROOKIE
+	jr z, BoostStatFourth
 	cp DIFFICULTY_EASY
-	jr z, BoostStat
+	jr z, BoostStatEighth
 	cp DIFFICULTY_HARD
-	jr z, NerfStat
+	jr z, NerfStatEighth
+	cp DIFFICULTY_MASTER
+	jr z, NerfStatFourth
 	ret
 
-BoostStat:
+BoostStatEighth:
 ; Raise stat at hl by 1/8. 
 
 	ld a, [hli]
@@ -6846,8 +6850,6 @@ BoostStat:
 	rr e
 	ld a, [hl]
 	add e
-;	add e
-;	add e
 	ld [hld], a
 	ld a, [hl]
 	adc d
@@ -6865,8 +6867,8 @@ BoostStat:
 	ld [hld], a
 	ret
 
-NerfStat:
-; Lower stat at hl by 1/8.
+BoostStatFourth:
+; Raise stat at hl by 1/4. 
 
 	ld a, [hli]
 	ld d, a
@@ -6875,12 +6877,8 @@ NerfStat:
 	rr e
 	srl d
 	rr e
-	srl d
-	rr e
 	ld a, [hl]
-	sub e
-;	sub e
-;	sub e
+	add e
 	ld [hld], a
 	ld a, [hl]
 	adc d
@@ -6896,6 +6894,55 @@ NerfStat:
 	ld [hli], a
 	ld a, LOW(MAX_STAT_VALUE)
 	ld [hld], a
+	ret
+
+NerfStatEighth:
+; Lower stat at hl by 1/8.
+
+	ld a, [hli]
+	ld d, a
+	ld e, [hl]
+	srl d
+	rr e
+	srl d
+	rr e
+	srl d
+	rr e
+	ld a, [hl]
+	sub e
+	ld [hld], a
+	ld a, [hl]
+	adc d
+	ld [hli], a
+	ret
+
+NerfStatFourth:
+; Lower stat at hl by 1/4.
+
+	ld a, [hli]
+	ld d, a
+	ld e, [hl]
+	srl d
+	rr e
+	srl d
+	rr e
+	ld a, [hl]
+	sub e
+	ld [hld], a
+	ld a, [hl]
+	adc d
+	ld [hli], a
+
+; Cap at 999.
+;	ld a, [hld]
+;	sub LOW(MAX_STAT_VALUE)
+;	ld a, [hl]
+;	sbc HIGH(MAX_STAT_VALUE)
+;	ret c
+;	ld a, HIGH(MAX_STAT_VALUE)
+;	ld [hli], a
+;	ld a, LOW(MAX_STAT_VALUE)
+;	ld [hld], a
 	ret
 
 _LoadBattleFontsHPBar:
