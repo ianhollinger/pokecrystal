@@ -454,9 +454,11 @@ Options_MenuAccount:
 .On:  db "ON @"
 
 	const_def
-	const OPT_DIFFICULTY_EASY   ; 0
-	const OPT_DIFFICULTY_NORMAL ; 1
-	const OPT_DIFFICULTY_HARD   ; 2
+	const OPT_DIFFICULTY_ROOKIE ; 0
+	const OPT_DIFFICULTY_EASY   ; 1
+	const OPT_DIFFICULTY_NORMAL ; 2
+	const OPT_DIFFICULTY_HARD   ; 3
+	const OPT_DIFFICULTY_MASTER ; 4
 
 Options_Difficulty:
 	call GetDifficulty
@@ -466,9 +468,9 @@ Options_Difficulty:
 	bit D_RIGHT_F, a
 	jr z, .NonePressed
 	ld a, c ; right pressed
-	cp OPT_DIFFICULTY_HARD
+	cp OPT_DIFFICULTY_MASTER
 	jr c, .Increase
-	ld c, OPT_DIFFICULTY_EASY - 1
+	ld c, OPT_DIFFICULTY_ROOKIE - 1
 
 .Increase:
 	inc c
@@ -479,7 +481,7 @@ Options_Difficulty:
 	ld a, c
 	and a
 	jr nz, .Decrease
-	ld c, OPT_DIFFICULTY_HARD + 1
+	ld c, OPT_DIFFICULTY_MASTER + 1
 
 .Decrease:
 	dec c
@@ -507,36 +509,54 @@ Options_Difficulty:
 
 .Strings:
 ; entries correspond to OPT_DIFFICULTY_* constants
+	dw .Rookie
 	dw .Easy
 	dw .Normal
 	dw .Hard
+	dw .Master
 
-.Easy:   db "EASY  @"
+.Rookie	 db "ROOKIE @"
+.Easy:   db "EASY   @"
 .Normal: db "NORMAL @"
 .Hard:   db "HARD   @"
+.Master: db "MASTER @"
 
 GetDifficulty:
 ; converts DIFFICULTY_* value in a to OPT_DIFFICULTY_* value in c,
 ; with previous/next DIFFICULTY_* values in d/e
 	ld a, [wOptions2]
 	and DIFFICULTY_MASK
+	cp DIFFICULTY_MASTER
+	jr z, .master
 	cp DIFFICULTY_HARD
 	jr z, .hard
 	cp DIFFICULTY_EASY
 	jr z, .easy
+	cp DIFFICULTY_ROOKIE
+	jr z, .rookie
 	; none of the above
 	ld c, OPT_DIFFICULTY_NORMAL
 	lb de, DIFFICULTY_HARD, DIFFICULTY_EASY
 	ret
 
+.master:
+	ld c, OPT_DIFFICULTY_MASTER
+	lb de, DIFFICULTY_ROOKIE, DIFFICULTY_HARD
+	ret
+
+.rookie:
+	ld c, OPT_DIFFICULTY_ROOKIE
+	lb de, DIFFICULTY_EASY, DIFFICULTY_MASTER
+	ret
+
 .hard
 	ld c, OPT_DIFFICULTY_HARD
-	lb de, DIFFICULTY_EASY, DIFFICULTY_NORMAL
+	lb de, DIFFICULTY_MASTER, DIFFICULTY_NORMAL
 	ret
 
 .easy
 	ld c, OPT_DIFFICULTY_EASY
-	lb de, DIFFICULTY_NORMAL, DIFFICULTY_HARD
+	lb de, DIFFICULTY_NORMAL, DIFFICULTY_ROOKIE
 	ret
 
 Options_Frame:
