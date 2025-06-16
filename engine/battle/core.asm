@@ -6850,6 +6850,7 @@ BoostStatEighth:
 	rr e
 	ld a, [hl]
 	add e
+	add e
 	ld [hld], a
 	ld a, [hl]
 	adc d
@@ -6878,6 +6879,7 @@ BoostStatFourth:
 	srl d
 	rr e
 	ld a, [hl]
+	add e
 	add e
 	ld [hld], a
 	ld a, [hl]
@@ -6910,6 +6912,7 @@ NerfStatEighth:
 	rr e
 	ld a, [hl]
 	sub e
+	sub e
 	ld [hld], a
 	ld a, [hl]
 	adc d
@@ -6927,6 +6930,7 @@ NerfStatFourth:
 	srl d
 	rr e
 	ld a, [hl]
+	sub e
 	sub e
 	ld [hld], a
 	ld a, [hl]
