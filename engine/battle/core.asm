@@ -6824,8 +6824,8 @@ BadgeStatBoosts:
 	ret
 
 CheckDifficulty:
-	ld a, [wOptions2]
-	and DIFFICULTY_MASK
+	ld a, [wDifficulty]
+;	and DIFFICULTY_MASK
 	cp DIFFICULTY_ROOKIE
 	jr z, BoostStatFourth
 	cp DIFFICULTY_EASY
