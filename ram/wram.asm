@@ -1811,14 +1811,18 @@ wGBPrinterBrightness::
 ;   darkest:  $7F
 	db
 wOptions2::
-; bits 1-3: difficulty setting
-	; 001 = hard (nerf own stats 1/8)
-	; 011 = normal
-	; 101 = easy (buff own stats 1/8)
-; bit 4: menu account off/on
-; bit 2 used to toggle stat exp on/off, is now always on 
+; bit 1: menu account off/on
 	db
-	ds 2
+
+wDifficulty::
+; difficulty slider
+;   rookie: 0 (buff own stats 25%)
+;   easy: 1 (buff own stats 12.5%)
+;   normal: 2 (no change)
+;   hard: 3 (nerf own stats 12.5%)
+;   master: 4 (nerf own stats 25%)
+	db
+	ds 1
 wOptionsEnd::
 
 ; Time buffer, for counting the amount of time since
