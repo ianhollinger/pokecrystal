@@ -489,10 +489,7 @@ Options_Difficulty:
 
 .Save:
 	ld b, a
-	ld a, [wOptions2]
-	and $f0
-	or b
-	ld [wOptions2], a
+	ld [wDifficulty], a
 
 .NonePressed:
 	ld b, 0
