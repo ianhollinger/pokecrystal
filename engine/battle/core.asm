@@ -6917,6 +6917,17 @@ NerfStatEighth:
 	ld a, [hl]
 	adc d
 	ld [hli], a
+
+; Cap at 999.
+	ld a, [hld]
+	sub LOW(MAX_STAT_VALUE)
+	ld a, [hl]
+	sbc HIGH(MAX_STAT_VALUE)
+	ret c
+	ld a, HIGH(MAX_STAT_VALUE)
+	ld [hli], a
+	ld a, LOW(MAX_STAT_VALUE)
+	ld [hld], a
 	ret
 
 NerfStatFourth:
@@ -6938,15 +6949,15 @@ NerfStatFourth:
 	ld [hli], a
 
 ; Cap at 999.
-;	ld a, [hld]
-;	sub LOW(MAX_STAT_VALUE)
-;	ld a, [hl]
-;	sbc HIGH(MAX_STAT_VALUE)
-;	ret c
-;	ld a, HIGH(MAX_STAT_VALUE)
-;	ld [hli], a
-;	ld a, LOW(MAX_STAT_VALUE)
-;	ld [hld], a
+	ld a, [hld]
+	sub LOW(MAX_STAT_VALUE)
+	ld a, [hl]
+	sbc HIGH(MAX_STAT_VALUE)
+	ret c
+	ld a, HIGH(MAX_STAT_VALUE)
+	ld [hli], a
+	ld a, LOW(MAX_STAT_VALUE)
+	ld [hld], a
 	ret
 
 _LoadBattleFontsHPBar:
