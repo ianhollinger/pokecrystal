@@ -512,17 +512,16 @@ Options_Difficulty:
 	dw .Hard
 	dw .Master
 
-.Rookie	 db "ROOKIE @"
-.Easy:   db "EASY   @"
-.Normal: db "NORMAL @"
-.Hard:   db "HARD   @"
-.Master: db "MASTER @"
+.Rookie	 db "ROOKIE@"
+.Easy:   db "EASY  @"
+.Normal: db "NORMAL@"
+.Hard:   db "HARD  @"
+.Master: db "MASTER@"
 
 GetDifficulty:
 ; converts DIFFICULTY_* value in a to OPT_DIFFICULTY_* value in c,
 ; with previous/next DIFFICULTY_* values in d/e
-	ld a, [wOptions2]
-	and DIFFICULTY_MASK
+	ld a, [wDifficulty]
 	cp DIFFICULTY_MASTER
 	jr z, .master
 	cp DIFFICULTY_HARD
