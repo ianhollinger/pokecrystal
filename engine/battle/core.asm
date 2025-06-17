@@ -6787,40 +6787,40 @@ BadgeStatBoosts:
 	ld a, [wJohtoBadges]
 
 ; Swap badges 3 (PlainBadge) and 5 (MineralBadge).
-;	ld d, a
-;	and (1 << PLAINBADGE)
-;	add a
-;	add a
-;	ld b, a
-;	ld a, d
-;	and (1 << MINERALBADGE)
-;	rrca
-;	rrca
-;	ld c, a
-;	ld a, d
-;	and ((1 << ZEPHYRBADGE) | (1 << HIVEBADGE) | (1 << FOGBADGE) | (1 << STORMBADGE) | (1 << GLACIERBADGE) | (1 << RISINGBADGE))
-;	or b
-;	or c
-;	ld b, a
+	ld d, a
+	and (1 << PLAINBADGE)
+	add a
+	add a
+	ld b, a
+	ld a, d
+	and (1 << MINERALBADGE)
+	rrca
+	rrca
+	ld c, a
+	ld a, d
+	and ((1 << ZEPHYRBADGE) | (1 << HIVEBADGE) | (1 << FOGBADGE) | (1 << STORMBADGE) | (1 << GLACIERBADGE) | (1 << RISINGBADGE))
+	or b
+	or c
+	ld b, a
 
 	ld hl, wBattleMonAttack
 	ld c, 4
-;.CheckBadge:
-;	ld a, b
-;	srl b
+.CheckBadge:
+	ld a, b
+	srl b
 	push af
 ;	call c, BoostStat
 	call CheckDifficulty
 	pop af
 ; this should basically ignore the badges you have and give you the boost anyway
-;	inc hl
-;	inc hl
+	inc hl
+	inc hl
 ; Check every other badge.
-;	srl b
-;	dec c
-;	jr nz, .CheckBadge
-;	srl a
-;	call c, CheckDifficulty
+	srl b
+	dec c
+	jr nz, .CheckBadge
+	srl a
+	call c, CheckDifficulty
 	ret
 
 CheckDifficulty:
