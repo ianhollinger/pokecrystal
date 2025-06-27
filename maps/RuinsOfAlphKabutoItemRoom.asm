@@ -10,7 +10,7 @@ RuinsOfAlphKabutoItemRoom_MapScripts:
 	def_callbacks
 
 RuinsOfAlphKabutoItemRoomBerry:
-	itemball METAL_COAT
+	itemball GOLD_BERRY 
 
 RuinsOfAlphKabutoItemRoomPsncureberry:
 	itemball PSNCUREBERRY
