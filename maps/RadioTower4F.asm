@@ -181,13 +181,13 @@ Executivem2SeenText:
 	line "to make me angry."
 
 	para "Be careful!"
-	line "But since you seem"
 
-	para "to wish it, I'll"
-	line "show you the full"
-
-	para "extent of a ROCKET" 
-	line "EXECUTIVE'S wrath!"
+	para "But since you seem"
+	line "to wish it, I'll"
+	
+	para "show you the full"
+	like "extent of a ROCKET" 
+	cont "EXECUTIVE'S wrath!"
 	done
 
 Executivem2BeatenText:
@@ -200,11 +200,11 @@ Executivem2BeatenText:
 	done
 
 Executivem2AfterBattleText:
-	text "You've earned my"
-	line "respect, so here's"
-	cont "some advice."
+;	text "You've earned my"
+;	line "respect, so here's"
+;	cont "some advice."
 
-	para "It's not too late."
+	text "It's not too late."
 	line "You can still turn"
 	cont "back."
 	done
