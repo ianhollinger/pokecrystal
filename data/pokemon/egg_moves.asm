@@ -454,6 +454,7 @@ HorseaEggMoves:
 	db SPLASH
 	db DRAGON_RAGE
 	db HAZE
+	db DRAGONBREATH 
 ;	db OUTRAGE
 	db -1 ; end
 
