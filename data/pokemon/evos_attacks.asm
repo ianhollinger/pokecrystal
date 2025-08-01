@@ -2130,6 +2130,7 @@ MoltresEvosAttacks:
 	db 65, SUNNY_DAY
 	db 73, SOLARBEAM
 	db 81, SKY_ATTACK
+	db 0 ; no more level-up moves
 
 DratiniEvosAttacks:
 	db EVOLVE_LEVEL, 30, DRAGONAIR
