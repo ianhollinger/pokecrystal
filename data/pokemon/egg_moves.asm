@@ -331,7 +331,7 @@ GrimerEggMoves:
 	db HAZE
 	db MEAN_LOOK
 	db LICK
-	db SMOG
+;	db SMOG
 ;	db EXPLOSION
 	db -1 ; end
 
