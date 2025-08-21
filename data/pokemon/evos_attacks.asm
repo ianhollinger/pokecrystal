@@ -3342,15 +3342,15 @@ DonphanEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HORN_ATTACK
 	db 1, FLAIL
-	db 16, ROLLOUT
-	db 21, SLAM 
+	db 14, ROLLOUT
+	db 19, ENDURE
+	db 23, SLAM 
 	db 24, FURY_ATTACK
-	db 28, MAGNITUDE
-	db 32, TAKE_DOWN
-	db 37, RAPID_SPIN
-	db 41, EARTHQUAKE
-	db 46, SCARY_FACE
-	db 50, DOUBLE_EDGE
+	db 29, MAGNITUDE
+	db 34, RAPID_SPIN
+	db 40, SCARY_FACE
+	db 45, EARTHQUAKE
+	db 51, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 Porygon2EvosAttacks:
