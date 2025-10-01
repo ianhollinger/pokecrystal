@@ -186,7 +186,7 @@ Executivem2SeenText:
 	line "to wish it, I'll"
 	
 	para "show you the full"
-	like "extent of a ROCKET" 
+	line "extent of a ROCKET" 
 	cont "EXECUTIVE'S wrath!"
 	done
 
