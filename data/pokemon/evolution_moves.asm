@@ -8,7 +8,7 @@ EvolutionMoves::
 	db WING_ATTACK  ; CHARIZARD
 	db NO_MOVE      ; SQUIRTLE
 	db NO_MOVE      ; WARTORTLE
-	db NO_MOVE      ; BLASTOISE
+	db HYDRO_PUMP      ; BLASTOISE
 	db NO_MOVE      ; CATERPIE
 	db HARDEN       ; METAPOD
 	db GUST    	; BUTTERFREE
@@ -70,14 +70,14 @@ EvolutionMoves::
 	db NO_MOVE      ; MACHAMP
 	db NO_MOVE      ; BELLSPROUT
 	db NO_MOVE      ; WEEPINBELL
-	db LEECH_LIFE   ; VICTREEBEL
+	db NO_MOVE   ; VICTREEBEL
 	db NO_MOVE      ; TENTACOOL
 	db NO_MOVE      ; TENTACRUEL
 	db NO_MOVE      ; GEODUDE
 	db NO_MOVE      ; GRAVELER
 	db NO_MOVE      ; GOLEM
 	db NO_MOVE	; PONYTA
-	db FURY_ATTACK  ; RAPIDASH
+	db MEGAHORN  ; RAPIDASH
 	db NO_MOVE      ; SLOWPOKE
 	db WITHDRAW     ; SLOWBRO
 	db NO_MOVE      ; MAGNEMITE
@@ -158,8 +158,8 @@ EvolutionMoves::
 	db NO_MOVE      ; QUILAVA
 	db NO_MOVE      ; TYPHLOSION
 	db NO_MOVE      ; TOTODILE
-	db NO_MOVE      ; CROCONAW
-	db NO_MOVE      ; FERALIGATR
+	db SLASH      ; CROCONAW
+	db CRUNCH      ; FERALIGATR
 	db NO_MOVE      ; SENTRET
 	db AGILITY      ; FURRET
 	db NO_MOVE      ; HOOTHOOT
