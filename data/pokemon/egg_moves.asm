@@ -79,6 +79,7 @@ EkansEggMoves:
 ;	db CRUNCH
 	db DISABLE
 	db SCARY_FACE
+	db TACKLE
 	db -1 ; end
 
 SandshrewEggMoves:
@@ -134,6 +135,7 @@ ZubatEggMoves:
 	db WHIRLWIND
 	db FLAIL
 	db HYPNOSIS
+	db SUPER_FANG
 	db -1 ; end
 
 OddishEggMoves:
@@ -444,6 +446,7 @@ KangaskhanEggMoves:
 	db FAINT_ATTACK
 	db COUNTER
 	db SCREECH
+	db TACKLE
 	db -1 ; end
 
 HorseaEggMoves:
@@ -455,6 +458,7 @@ HorseaEggMoves:
 	db DRAGON_RAGE
 	db HAZE
 	db DRAGONBREATH 
+	db BUBBLE
 ;	db OUTRAGE
 	db -1 ; end
 
@@ -489,7 +493,13 @@ PinsirEggMoves:
 	db QUICK_ATTACK
 	db ROCK_THROW
 	db SLASH
+	db TACKLE
+	db TAKE_DOWN
 ;	db FALSE_SWIPE
+	db -1 ; end
+
+TaurosEggMoves:
+	db QUICK_ATTACK
 	db -1 ; end
 
 MagikarpEggMoves:
@@ -562,6 +572,7 @@ DratiniEggMoves:
 	db BARRIER
 	db EXTREMESPEED
 	db DRAGONBREATH
+	db TACKLE
 	db -1 ; end
 
 ChikoritaEggMoves:
@@ -570,6 +581,7 @@ ChikoritaEggMoves:
 	db COUNTER
 ;	db ANCIENTPOWER
 	db FLAIL
+	db TAIL_WHIP
 ;	db SWORDS_DANCE
 	db -1 ; end
 
@@ -589,6 +601,7 @@ TotodileEggMoves:
 ;	db ROCK_SLIDE
 ;	db SUBMISSION
 	db METAL_CLAW
+	db TACKLE
 	db -1 ; end
 
 SentretEggMoves:
@@ -650,7 +663,7 @@ PichuEggMoves:
 	db EXTREMESPEED
 	db DOUBLE_KICK
 	db MEGA_KICK
-        db DIZZY_PUNCH
+    db DIZZY_PUNCH
 	db -1 ; end
 
 CleffaEggMoves:
@@ -658,19 +671,18 @@ CleffaEggMoves:
 ;	db METRONOME
 	db AMNESIA
 	db BELLY_DRUM
-	db SPLASH
 	db MIMIC
 	db SCARY_FACE
-        db DIZZY_PUNCH
+    db DIZZY_PUNCH
 	db -1 ; end
 
 IgglybuffEggMoves:
 	db PERISH_SONG
 	db PRESENT
 	db FAINT_ATTACK
-	db MIMIC
+;	db MIMIC
 	db SCARY_FACE
-        db DIZZY_PUNCH
+    db DIZZY_PUNCH
 	db -1 ; end
 
 TogepiEggMoves:
@@ -770,6 +782,8 @@ MurkrowEggMoves:
 	db MIRROR_MOVE
 	db WING_ATTACK
 ;	db SKY_ATTACK
+	db CONFUSE_RAY
+	db SCREECH
 	db -1 ; end
 
 MisdreavusEggMoves:
@@ -955,6 +969,7 @@ HoundourEggMoves:
 ;	db REVERSAL
 	db CHARM
 	db SUPER_FANG
+	db TACKLE
 	db -1 ; end
 
 PhanpyEggMoves:
@@ -988,13 +1003,13 @@ TyrogueEggMoves:
 	db COUNTER
 	db LEER
 	db LOW_KICK
-        db DIZZY_PUNCH
+    db DIZZY_PUNCH
 	db -1 ; end
 
 SmoochumEggMoves:
 	db MEDITATE
 	db TELEPORT
-        db DIZZY_PUNCH
+    db DIZZY_PUNCH
 	db PSYCH_UP
 	db -1 ; end
 
@@ -1005,7 +1020,7 @@ ElekidEggMoves:
 	db MEDITATE
 	db CROSS_CHOP
 	db PURSUIT
-        db DIZZY_PUNCH
+    db DIZZY_PUNCH
 	db -1 ; end
 
 MagbyEggMoves:
