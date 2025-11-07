@@ -1285,13 +1285,14 @@ ShellderEvosAttacks:
 
 CloysterEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, TWINEEDLE
 	db 1, AURORA_BEAM
 	db 1, PROTECT
 	db 1, CLAMP
 	db 1, SUPERSONIC
 	db 1, WITHDRAW
 	db 1, SPIKE_CANNON
-	db 36, SPIKES  
+	db 31, SPIKES  
 	db 0 ; no more level-up moves
 
 GastlyEvosAttacks:
