@@ -1215,27 +1215,28 @@ SeelEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HEADBUTT
 	db 5, GROWL
-	db 11, WATER_GUN
-	db 15, ICY_WIND
-	db 21, ENCORE
-	db 25, REST
-	db 31, AURORA_BEAM
-	db 35, WATERFALL
+	db 10, WATER_GUN
+	db 14, ICY_WIND
+	db 19, CHARM
+	db 23, ENCORE
+	db 28, REST
+	db 33, AURORA_BEAM
+	db 37, WATERFALL
 	db 41, TAKE_DOWN
-	db 45, ICE_BEAM
-	db 51, SAFEGUARD
+	db 46, ICE_BEAM
+	db 50, SAFEGUARD
 	db 0 ; no more level-up moves
 
 DewgongEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, ICY_WIND
-	db 21, ENCORE
-	db 25, REST
-	db 31, AURORA_BEAM
-	db 37, WATERFALL
+	db 1, CHARM
+	db 23, ENCORE
+	db 28, REST
+	db 33, AURORA_BEAM
+	db 39, WATERFALL
 	db 45, TAKE_DOWN
-	db 51, ICE_BEAM
-	db 59, SAFEGUARD
+	db 52, ICE_BEAM
+	db 58, SAFEGUARD
 	db 0 ; no more level-up moves
 
 GrimerEvosAttacks:
