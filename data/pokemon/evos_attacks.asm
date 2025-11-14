@@ -443,7 +443,7 @@ NidoqueenEvosAttacks:
 	db 1, TAIL_WHIP
 	db 1, DOUBLE_KICK
 	db 1, BODY_SLAM
-	db 60, COUNTER 
+	db 53, COUNTER 
 	db 0 ; no more level-up moves
 
 NidoranMEvosAttacks:
@@ -483,7 +483,7 @@ NidokingEvosAttacks:
 	db 1, PECK
 	db 1, DOUBLE_KICK
 	db 1, THRASH
-	db 60, MEGAHORN
+	db 53, MEGAHORN
 	db 0 ; no more level-up moves
 
 ClefairyEvosAttacks:
@@ -867,7 +867,7 @@ PoliwrathEvosAttacks:
 	db 1, HYPNOSIS
 	db 1, DOUBLESLAP
 	db 1, SUBMISSION 
-	db 32, MIND_READER
+	db 36, MIND_READER
 	db 43, DYNAMICPUNCH
 	db 0 ; no more level-up moves
 
@@ -882,7 +882,6 @@ KadabraEvosAttacks:
 	db EVOLVE_TRADE, -1, ALAKAZAM
 	db 0 ; no more evolutions
 	db 1, TELEPORT
-	db 1, KINESIS
 	db 15, CONFUSION
 	db 16, KINESIS
 	db 19, DISABLE
@@ -898,7 +897,6 @@ KadabraEvosAttacks:
 AlakazamEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TELEPORT
-	db 1, KINESIS
 	db 15, CONFUSION
 	db 16, KINESIS
 	db 19, DISABLE
@@ -1220,7 +1218,7 @@ SeelEvosAttacks:
 	db 19, CHARM
 	db 23, ENCORE
 	db 28, REST
-	db 33, AURORA_BEAM
+	db 32, AURORA_BEAM
 	db 37, WATERFALL
 	db 41, TAKE_DOWN
 	db 46, ICE_BEAM
@@ -1232,7 +1230,7 @@ DewgongEvosAttacks:
 	db 1, CHARM
 	db 23, ENCORE
 	db 28, REST
-	db 33, AURORA_BEAM
+	db 32, AURORA_BEAM
 	db 39, WATERFALL
 	db 45, TAKE_DOWN
 	db 52, ICE_BEAM
@@ -1486,7 +1484,7 @@ ExeggutorEvosAttacks:
 	db 1, HYPNOSIS
 	db 1, CONFUSION
 	db 1, STOMP
-	db 27, EGG_BOMB
+	db 1, EGG_BOMB
 	db 0 ; no more level-up moves
 
 CuboneEvosAttacks:
@@ -1754,6 +1752,7 @@ StaryuEvosAttacks:
 StarmieEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HYDRO_PUMP
+	db 1, TAKE_DOWN
 	db 1, WATER_GUN
 	db 1, RAPID_SPIN 
 	db 1, RECOVER
@@ -2558,8 +2557,8 @@ TogepiEvosAttacks:
 	db 1, POUND 
 	db 7, METRONOME
 	db 12, SWEET_KISS
-	db 18, ENCORE
-	db 23, CHARM
+	db 18, CHARM
+	db 23, ENCORE
 	db 29, ANCIENTPOWER
 	db 34, SAFEGUARD
 	db 40, BATON_PASS
@@ -2572,8 +2571,8 @@ TogeticEvosAttacks:
 	db 1, POUND 
 	db 7, METRONOME
 	db 12, SWEET_KISS
-	db 18, ENCORE
-	db 23, CHARM
+	db 18, CHARM
+	db 23, ENCORE
 	db 29, ANCIENTPOWER
 	db 34, SAFEGUARD
 	db 40, BATON_PASS
@@ -2930,6 +2929,7 @@ UnownEvosAttacks:
 
 WobbuffetEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, SPLASH
 	db 1, CHARM
 	db 1, ENCORE
 	db 1, AMNESIA
@@ -3358,13 +3358,14 @@ PhanpyEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
-	db 5, DEFENSE_CURL
+	db 1, DEFENSE_CURL
+	db 5, ABSORB
 	db 10, FLAIL
 	db 14, ROLLOUT
 	db 19, ENDURE
 	db 23, SLAM 
-	db 28, ABSORB
-	db 32, TAKE_DOWN
+	db 28, TAKE_DOWN
+	db 32, ENCORE
 	db 37, CHARM
 	db 41, DOUBLE_EDGE
 	db 0 ; no more level-up moves
@@ -3377,11 +3378,10 @@ DonphanEvosAttacks:
 	db 19, ENDURE
 	db 23, SLAM 
 	db 24, FURY_ATTACK
-	db 29, MAGNITUDE
-	db 34, RAPID_SPIN
-	db 40, SCARY_FACE
-	db 45, EARTHQUAKE
-	db 51, DOUBLE_EDGE
+	db 30, MAGNITUDE
+	db 36, RAPID_SPIN
+	db 43, SCARY_FACE
+	db 49, EARTHQUAKE
 	db 0 ; no more level-up moves
 
 Porygon2EvosAttacks:
