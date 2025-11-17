@@ -316,6 +316,7 @@ DoduoEggMoves:
 	db FLAIL
 	db LOW_KICK
 	db MIRROR_MOVE
+	db WHIRLWIND 
 	db -1 ; end
 
 SeelEggMoves:
