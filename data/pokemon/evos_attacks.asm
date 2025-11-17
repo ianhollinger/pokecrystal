@@ -1977,8 +1977,8 @@ FlareonEvosAttacks:
 	db 17, SWIFT
 	db 23, FIRE_SPIN
 	db 28, SMOG
-	db 34, SCARY_FACE
-	db 39, FLAMETHROWER
+	db 34, FLAME_WHEEL
+	db 39, SCARY_FACE
 	db 45, FIRE_BLAST
 	db 0 ; no more level-up moves
 
