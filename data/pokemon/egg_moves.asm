@@ -33,6 +33,7 @@ CharmanderEggMoves:
 ;	db SWORDS_DANCE
 ;	db CRUNCH
 ;	db FALSE_SWIPE
+	db TACKLE
 	db -1 ; end
 
 SquirtleEggMoves:
@@ -106,6 +107,7 @@ NidoranFEggMoves:
 	db PURSUIT
 ;	db SKULL_BASH
 ;	db SWEET_KISS
+	db TACKLE
 	db -1 ; end
 
 NidoranMEggMoves:
@@ -118,6 +120,7 @@ NidoranMEggMoves:
 	db BEAT_UP
 	db MORNING_SUN
 ;	db SWEET_KISS
+	db TACKLE
 	db -1 ; end
 
 VulpixEggMoves:
@@ -225,6 +228,7 @@ GrowlitheEggMoves:
 	db MORNING_SUN
 	db CHARM
 	db DOUBLE_KICK
+	db TACKLE
 	db -1 ; end
 
 PoliwagEggMoves:
@@ -277,13 +281,14 @@ GeodudeEggMoves:
 	db RAPID_SPIN
 	db SAND_ATTACK
 	db HARDEN
+	db TAKE_DOWN
 	db -1 ; end
 
 PonytaEggMoves:
 	db THRASH
 	db HYPNOSIS
 	db CHARM
-	db TACKLE
+;	db TACKLE
 	db LOW_KICK
 	db MORNING_SUN
 	db PAY_DAY
@@ -404,6 +409,7 @@ LickitungEggMoves:
 	db MAGNITUDE
 ;	db BODY_SLAM
 	db SNORE
+	db TACKLE
 	db -1 ; end
 
 KoffingEggMoves:
@@ -428,6 +434,7 @@ ChanseyEggMoves:
 	db PRESENT
 ;	db METRONOME
 ;	db HEAL_BELL
+	db TACKLE
 	db -1 ; end
 
 TangelaEggMoves:
@@ -675,6 +682,7 @@ CleffaEggMoves:
 	db MIMIC
 	db SCARY_FACE
     db DIZZY_PUNCH
+	db TACKLE
 	db -1 ; end
 
 IgglybuffEggMoves:
@@ -693,6 +701,7 @@ TogepiEggMoves:
 	db FORESIGHT
 	db FUTURE_SIGHT
 	db PSYCH_UP
+	db TACKLE
 	db -1 ; end
 
 NatuEggMoves:
@@ -731,6 +740,7 @@ SudowoodoEggMoves:
 ;	db SELFDESTRUCT
 	db HARDEN
 	db DEFENSE_CURL
+	db TACKLE
 	db -1 ; end
 
 HoppipEggMoves:
@@ -892,6 +902,7 @@ TeddiursaEggMoves:
 	db BELLY_DRUM
 	db CROSS_CHOP
 	db FOCUS_ENERGY
+	db TACKLE
 ;	db DOUBLE_EDGE
 	db -1 ; end
 
@@ -1036,6 +1047,7 @@ MagbyEggMoves:
 	db BELLY_DRUM
 	db POISON_GAS
 	db DIZZY_PUNCH
+	db TACKLE
 	db -1 ; end
 
 MiltankEggMoves:
