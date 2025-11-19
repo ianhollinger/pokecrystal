@@ -455,6 +455,7 @@ KangaskhanEggMoves:
 	db COUNTER
 	db SCREECH
 	db TACKLE
+	db TAKE_DOWN
 	db -1 ; end
 
 HorseaEggMoves:
@@ -581,6 +582,7 @@ DratiniEggMoves:
 	db EXTREMESPEED
 	db DRAGONBREATH
 	db TACKLE
+	db TAKE_DOWN
 	db -1 ; end
 
 ChikoritaEggMoves:
