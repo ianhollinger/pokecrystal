@@ -121,6 +121,7 @@ NidoranMEggMoves:
 	db MORNING_SUN
 ;	db SWEET_KISS
 	db TACKLE
+	db THRASH 
 	db -1 ; end
 
 VulpixEggMoves:
