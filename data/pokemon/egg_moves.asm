@@ -281,7 +281,7 @@ GeodudeEggMoves:
 	db RAPID_SPIN
 	db SAND_ATTACK
 	db HARDEN
-	db TAKE_DOWN
+;	db TAKE_DOWN
 	db -1 ; end
 
 PonytaEggMoves:
