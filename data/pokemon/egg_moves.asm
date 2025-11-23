@@ -613,6 +613,7 @@ TotodileEggMoves:
 ;	db SUBMISSION
 	db METAL_CLAW
 	db TACKLE
+	db COUNTER
 	db -1 ; end
 
 SentretEggMoves:
