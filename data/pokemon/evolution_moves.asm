@@ -70,7 +70,7 @@ EvolutionMoves::
 	db NO_MOVE      ; MACHAMP
 	db NO_MOVE      ; BELLSPROUT
 	db NO_MOVE      ; WEEPINBELL
-	db NO_MOVE   ; VICTREEBEL
+	db SLUDGE_BOMB   ; VICTREEBEL
 	db NO_MOVE      ; TENTACOOL
 	db NO_MOVE      ; TENTACRUEL
 	db NO_MOVE      ; GEODUDE
@@ -158,7 +158,7 @@ EvolutionMoves::
 	db NO_MOVE      ; QUILAVA
 	db NO_MOVE      ; TYPHLOSION
 	db NO_MOVE      ; TOTODILE
-	db SLASH      ; CROCONAW
+	db NO_MOVE      ; CROCONAW
 	db CRUNCH      ; FERALIGATR
 	db NO_MOVE      ; SENTRET
 	db AGILITY      ; FURRET
