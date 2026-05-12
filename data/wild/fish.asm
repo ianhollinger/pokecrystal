@@ -25,16 +25,16 @@ FishGroups:
 	assert_table_length NUM_FISHGROUPS
 
 .Shore_Old:
-	db  23 percent + 2, MAGIKARP,    4
-	db  42 percent,     MAGIKARP,    5
-	db  56 percent + 1, MAGIKARP,    6
-	db  65 percent + 2, MAGIKARP,    7
-	db  70 percent + 1, MAGIKARP,    8
-	db  80 percent,     KRABBY,      4
-	db  88 percent,     KRABBY,      5
-	db  94 percent + 1, KRABBY,      6
-	db  98 percent + 1, KRABBY,      7
-	db 100 percent,     KRABBY,      8
+	db  23 percent + 2, MAGIKARP,    3
+	db  42 percent,     MAGIKARP,    4
+	db  56 percent + 1, MAGIKARP,    5
+	db  65 percent + 2, MAGIKARP,    6
+	db  70 percent + 1, MAGIKARP,    7
+	db  80 percent,     KRABBY,      3
+	db  88 percent,     KRABBY,      4
+	db  94 percent + 1, KRABBY,      5
+	db  98 percent + 1, KRABBY,      6
+	db 100 percent,     KRABBY,      7
 .Shore_Good:
 	db  13 percent + 1, MAGIKARP,   18
 	db  24 percent,     MAGIKARP,   19
@@ -52,21 +52,21 @@ FishGroups:
 	db  99 percent,     time_group 3 
 	db 100 percent,     time_group 4 
 .Shore_Super:
-	db  13 percent + 1, KRABBY,     40
-	db  24 percent,     KRABBY,     41
-	db  32 percent + 1, KRABBY,     42
-	db  37 percent + 1, KRABBY,     43
-	db  40 percent,     KRABBY,     44
-	db  50 percent + 1, KINGLER,    40
-	db  58 percent + 1, KINGLER,    41
-	db  64 percent,     KINGLER,    42
-	db  68 percent,     KINGLER,    43
-	db  70 percent + 1, KINGLER,    44
-	db  77 percent,     MAGIKARP,   40
-	db  82 percent,     MAGIKARP,   41
-	db  86 percent,     MAGIKARP,   42
-	db  88 percent + 2, MAGIKARP,   43
-	db  90 percent + 1, MAGIKARP,   44
+	db  13 percent + 1, KRABBY,     38
+	db  24 percent,     KRABBY,     39
+	db  32 percent + 1, KRABBY,     40
+	db  37 percent + 1, KRABBY,     41
+	db  40 percent,     KRABBY,     42
+	db  50 percent + 1, KINGLER,    38
+	db  58 percent + 1, KINGLER,    39
+	db  64 percent,     KINGLER,    40
+	db  68 percent,     KINGLER,    41
+	db  70 percent + 1, KINGLER,    42
+	db  77 percent,     MAGIKARP,   38
+	db  82 percent,     MAGIKARP,   39
+	db  86 percent,     MAGIKARP,   40
+	db  88 percent + 2, MAGIKARP,   41
+	db  90 percent + 1, MAGIKARP,   42
 	db  93 percent + 1, time_group 5
 	db  96 percent + 1, time_group 6
 	db  98 percent + 1, time_group 7
@@ -74,16 +74,16 @@ FishGroups:
 	db 100 percent,     time_group 9
 
 .Ocean_Old:
-	db  23 percent + 2, MAGIKARP,    4
-	db  42 percent,     MAGIKARP,    5
-	db  56 percent + 1, MAGIKARP,    6
-	db  65 percent + 1, MAGIKARP,    7
-	db  70 percent + 1, MAGIKARP,    8
-	db  80 percent,     TENTACOOL,   4
-	db  88 percent,     TENTACOOL,   5
-	db  94 percent + 1, TENTACOOL,   6
-	db  98 percent + 1, TENTACOOL,   7
-	db 100 percent,     TENTACOOL,   8
+	db  23 percent + 2, MAGIKARP,    3
+	db  42 percent,     MAGIKARP,    4
+	db  56 percent + 1, MAGIKARP,    5
+	db  65 percent + 1, MAGIKARP,    6
+	db  70 percent + 1, MAGIKARP,    7
+	db  80 percent,     TENTACOOL,   3
+	db  88 percent,     TENTACOOL,   4
+	db  94 percent + 1, TENTACOOL,   5
+	db  98 percent + 1, TENTACOOL,   6
+	db 100 percent,     TENTACOOL,   7
 .Ocean_Good:
 	db  13 percent + 1, REMORAID,   18
 	db  24 percent,     REMORAID,   19
@@ -107,26 +107,26 @@ FishGroups:
 	db 100 percent,     time_group 14
 	
 .Ocean_Super:
-	db  11 percent + 2, REMORAID,   40
-	db  21 percent + 1, REMORAID,   41
-	db  28 percent,     REMORAID,   42
-	db  32 percent + 2, REMORAID,   43
-	db  35 percent,     REMORAID,   44
-	db  37 percent,     OCTILLERY,  40
-	db  38 percent + 1, OCTILLERY,  41
-	db  39 percent,     OCTILLERY,  42
-	db  39 percent + 2, OCTILLERY,  43
-	db  40 percent,     OCTILLERY,  44
-	db  50 percent + 1, TENTACRUEL, 40
-	db  58 percent + 1, TENTACRUEL, 41
-	db  64 percent,     TENTACRUEL, 42
-	db  68 percent,     TENTACRUEL, 43
-	db  70 percent + 1, TENTACRUEL, 44
-	db  77 percent,     LANTURN,    40
-	db  82 percent,     LANTURN,    41
-	db  86 percent,     LANTURN,    42
-	db  88 percent + 2, LANTURN,    43
-	db  90 percent + 1, LANTURN,    44
+	db  11 percent + 2, REMORAID,   38
+	db  21 percent + 1, REMORAID,   39
+	db  28 percent,     REMORAID,   40
+	db  32 percent + 2, REMORAID,   41
+	db  35 percent,     REMORAID,   42
+	db  37 percent,     OCTILLERY,  38
+	db  38 percent + 1, OCTILLERY,  39
+	db  39 percent,     OCTILLERY,  40
+	db  39 percent + 2, OCTILLERY,  41
+	db  40 percent,     OCTILLERY,  42
+	db  50 percent + 1, TENTACRUEL, 38
+	db  58 percent + 1, TENTACRUEL, 39
+	db  64 percent,     TENTACRUEL, 40
+	db  68 percent,     TENTACRUEL, 41
+	db  70 percent + 1, TENTACRUEL, 42
+	db  77 percent,     LANTURN,    38
+	db  82 percent,     LANTURN,    39
+	db  86 percent,     LANTURN,    40
+	db  88 percent + 2, LANTURN,    41
+	db  90 percent + 1, LANTURN,    42
 	db  93 percent + 2, time_group 15
 	db  96 percent + 1, time_group 16
 	db  98 percent + 1, time_group 17
@@ -134,21 +134,21 @@ FishGroups:
 	db 100 percent,     time_group 19
 
 .Lake_Old:
-	db  23 percent + 2, MAGIKARP,    4
-	db  42 percent,     MAGIKARP,    5
-	db  56 percent + 1, MAGIKARP,    6
-	db  65 percent + 1, MAGIKARP,    7
-	db  70 percent + 1, MAGIKARP,    8
-	db  76 percent + 2, WOOPER,      4
-	db  82 percent,     WOOPER,      5
-	db  86 percent,     WOOPER,      6 
-	db  88 percent + 2, WOOPER,      7
-	db  90 percent + 1, WOOPER,      8
-	db  93 percent + 1, GOLDEEN,     4
-	db  96 percent + 1, GOLDEEN,     5
-	db  98 percent + 1, GOLDEEN,     6
-	db  99 percent + 1, GOLDEEN,     7
-	db 100 percent,     GOLDEEN,     8
+	db  23 percent + 2, MAGIKARP,    3
+	db  42 percent,     MAGIKARP,    4
+	db  56 percent + 1, MAGIKARP,    5
+	db  65 percent + 1, MAGIKARP,    6
+	db  70 percent + 1, MAGIKARP,    7
+	db  76 percent + 2, WOOPER,      3
+	db  82 percent,     WOOPER,      4
+	db  86 percent,     WOOPER,      5
+	db  88 percent + 2, WOOPER,      6
+	db  90 percent + 1, WOOPER,      7
+	db  93 percent + 1, GOLDEEN,     3
+	db  96 percent + 1, GOLDEEN,     4
+	db  98 percent + 1, GOLDEEN,     5
+	db  99 percent + 1, GOLDEEN,     6
+	db 100 percent,     GOLDEEN,     7
 .Lake_Good:
 	db  13 percent + 1, MAGIKARP,   18
 	db  24 percent,     MAGIKARP,   19
@@ -171,38 +171,38 @@ FishGroups:
 	db  99 percent + 1, time_group 23
 	db 100 percent,     time_group 24
 .Lake_Super:
-	db  13 percent + 1, GOLDEEN,    40
-	db  24 percent,     GOLDEEN,    41
-	db  32 percent + 1, GOLDEEN,    42
-	db  37 percent + 1, GOLDEEN,    43
-	db  40 percent,     GOLDEEN,    44
+	db  13 percent + 1, GOLDEEN,    38
+	db  24 percent,     GOLDEEN,    39
+	db  32 percent + 1, GOLDEEN,    40
+	db  37 percent + 1, GOLDEEN,    41
+	db  40 percent,     GOLDEEN,    42
 	db  50 percent + 1, time_group 25
 	db  58 percent + 1, time_group 26
 	db  64 percent,     time_group 27
 	db  68 percent,     time_group 28
 	db  70 percent + 1, time_group 29
-	db  77 percent,     QUAGSIRE,   40
-	db  82 percent,     QUAGSIRE,   41
-	db  86 percent,     QUAGSIRE,   42
-	db  88 percent + 2, QUAGSIRE,   43
-	db  90 percent + 1, QUAGSIRE,   44
-	db  93 percent + 1, SEAKING,    40
-	db  96 percent + 1, SEAKING,    41
-	db  98 percent + 1, SEAKING,    42
-	db  99 percent + 1, SEAKING,    43
-	db 100 percent,     SEAKING,    44
+	db  77 percent,     QUAGSIRE,   38
+	db  82 percent,     QUAGSIRE,   39
+	db  86 percent,     QUAGSIRE,   40
+	db  88 percent + 2, QUAGSIRE,   41
+	db  90 percent + 1, QUAGSIRE,   42
+	db  93 percent + 1, SEAKING,    38
+	db  96 percent + 1, SEAKING,    39
+	db  98 percent + 1, SEAKING,    40
+	db  99 percent + 1, SEAKING,    41
+	db 100 percent,     SEAKING,    42
 
 .Pond_Old:	
-	db  23 percent + 1, MAGIKARP,    4
-	db  42 percent,     MAGIKARP,    5
-	db  56 percent + 1, MAGIKARP,    6
-	db  65 percent + 1, MAGIKARP,    7
-	db  70 percent + 1, MAGIKARP,    8	
-	db  80 percent,     POLIWAG,     4
-	db  88 percent,     POLIWAG,     5
-	db  94 percent + 1, POLIWAG,     6
-	db  98 percent + 1, POLIWAG,     7
-	db 100 percent,     POLIWAG,     8
+	db  23 percent + 1, MAGIKARP,    3
+	db  42 percent,     MAGIKARP,    4
+	db  56 percent + 1, MAGIKARP,    5
+	db  65 percent + 1, MAGIKARP,    6
+	db  70 percent + 1, MAGIKARP,    7
+	db  80 percent,     POLIWAG,     3
+	db  88 percent,     POLIWAG,     4
+	db  94 percent + 1, POLIWAG,     5
+	db  98 percent + 1, POLIWAG,     6
+	db 100 percent,     POLIWAG,     7
 
 .Pond_Good:
 	db  13 percent + 1, MAGIKARP,   18
@@ -221,28 +221,28 @@ FishGroups:
 	db  99 percent + 1, time_group 33
 	db 100 percent,     time_group 34
 .Pond_Super:
-	db  23 percent + 1, POLIWAG,    40
-	db  42 percent,     POLIWAG,    41
-	db  56 percent + 1, POLIWAG,    42
-	db  65 percent + 1, POLIWAG,    43
-	db  70 percent + 1, POLIWAG,    44
-	db  77 percent,     MAGIKARP,   40
-	db  82 percent,     MAGIKARP,   41
-	db  86 percent,     MAGIKARP,   42
-	db  88 percent + 2, MAGIKARP,   43
-	db  90 percent + 1, MAGIKARP,   44
-	db  93 percent + 1, POLIWHIRL,  40
-	db  96 percent + 1, POLIWHIRL,  41
-	db  98 percent + 1, POLIWHIRL,  42
-	db  99 percent + 1, POLIWHIRL,  43
-	db 100 percent,     POLIWHIRL,  44
+	db  23 percent + 1, POLIWAG,    38
+	db  42 percent,     POLIWAG,    39
+	db  56 percent + 1, POLIWAG,    40
+	db  65 percent + 1, POLIWAG,    41
+	db  70 percent + 1, POLIWAG,    42
+	db  77 percent,     MAGIKARP,   38
+	db  82 percent,     MAGIKARP,   39
+	db  86 percent,     MAGIKARP,   40
+	db  88 percent + 2, MAGIKARP,   41
+	db  90 percent + 1, MAGIKARP,   42
+	db  93 percent + 1, POLIWHIRL,  38
+	db  96 percent + 1, POLIWHIRL,  39
+	db  98 percent + 1, POLIWHIRL,  40
+	db  99 percent + 1, POLIWHIRL,  41
+	db 100 percent,     POLIWHIRL,  42
 
 .Dratini_Old:
-	db  33 percent + 1, MAGIKARP,   9
-	db  60 percent,     MAGIKARP,   10
-	db  80 percent,     MAGIKARP,   11
-	db  93 percent + 1, MAGIKARP,   12
-	db 100 percent,     MAGIKARP,   13
+	db  33 percent + 1, MAGIKARP,   8
+	db  60 percent,     MAGIKARP,   9
+	db  80 percent,     MAGIKARP,   10
+	db  93 percent + 1, MAGIKARP,   11
+	db 100 percent,     MAGIKARP,   12
 .Dratini_Good:
 	db  30 percent + 1, MAGIKARP,   23
 	db  54 percent + 1, MAGIKARP,   24
@@ -255,33 +255,33 @@ FishGroups:
 	db  99 percent + 1, time_group 38
 	db 100 percent,     time_group 39
 .Dratini_Super:
-	db  20 percent,     MAGIKARP,   45
-	db  36 percent + 1, MAGIKARP,   46
-	db  48 percent,     MAGIKARP,   47
-	db  56 percent + 1, MAGIKARP,   48
-	db  60 percent,     MAGIKARP,   49
+	db  20 percent,     MAGIKARP,   43
+	db  36 percent + 1, MAGIKARP,   44
+	db  48 percent,     MAGIKARP,   45
+	db  56 percent + 1, MAGIKARP,   46
+	db  60 percent,     MAGIKARP,   47
 	db  70 percent + 1, time_group 40
 	db  78 percent + 1, time_group 41
 	db  84 percent,     time_group 42
 	db  88 percent,     time_group 43
 	db  90 percent + 1, time_group 44
-	db  93 percent + 1, DRAGONAIR,  45
-	db  96 percent + 1, DRAGONAIR,  46
-	db  98 percent + 1, DRAGONAIR,  47
-	db  99 percent + 1, DRAGONAIR,  48
-	db 100 percent,     DRAGONAIR,  49
+	db  93 percent + 1, DRAGONAIR,  43
+	db  96 percent + 1, DRAGONAIR,  44
+	db  98 percent + 1, DRAGONAIR,  45
+	db  99 percent + 1, DRAGONAIR,  46
+	db 100 percent,     DRAGONAIR,  47
 
 .Qwilfish_Swarm_Old:
-	db  20 percent,     MAGIKARP,   4
-	db  36 percent + 1, MAGIKARP,   5
-	db  48 percent,     MAGIKARP,   6
-	db  56 percent + 1, MAGIKARP,   7
-	db  60 percent,     MAGIKARP,   8
-	db  73 percent + 1, QWILFISH,   4
-	db  84 percent,     QWILFISH,   5
-	db  92 percent + 1, QWILFISH,   6
-	db  97 percent + 1, QWILFISH,   7
-	db 100 percent,     QWILFISH,   8
+	db  20 percent,     MAGIKARP,   3
+	db  36 percent + 1, MAGIKARP,   4
+	db  48 percent,     MAGIKARP,   5
+	db  56 percent + 1, MAGIKARP,   6
+	db  60 percent,     MAGIKARP,   7
+	db  73 percent + 1, QWILFISH,   3
+	db  84 percent,     QWILFISH,   4
+	db  92 percent + 1, QWILFISH,   5
+	db  97 percent + 1, QWILFISH,   6
+	db 100 percent,     QWILFISH,   7
 .Qwilfish_Swarm_Good:
 	db  13 percent + 1, MAGIKARP,   18
 	db  24 percent,     MAGIKARP,   19
@@ -294,23 +294,23 @@ FishGroups:
 	db  96 percent + 1, QWILFISH,   21
 	db 100 percent,     QWILFISH,   22
 .Qwilfish_Swarm_Super:
-	db  33 percent + 1, QWILFISH,   40
-	db  60 percent,     QWILFISH,   41
-	db  80 percent,     QWILFISH,   42
-	db  93 percent + 1, QWILFISH,   43
-	db 100 percent,     QWILFISH,   44
+	db  33 percent + 1, QWILFISH,   38
+	db  60 percent,     QWILFISH,   39
+	db  80 percent,     QWILFISH,   40
+	db  93 percent + 1, QWILFISH,   41
+	db 100 percent,     QWILFISH,   42
 
 .Remoraid_Swarm_Old:
-	db  20 percent,     MAGIKARP,   4
-	db  36 percent + 1, MAGIKARP,   5
-	db  48 percent,     MAGIKARP,   6
-	db  56 percent + 1, MAGIKARP,   7
-	db  60 percent,     MAGIKARP,   8
-	db  73 percent + 1, REMORAID,   4
-	db  84 percent,     REMORAID,   5
-	db  92 percent + 1, REMORAID,   6
-	db  97 percent + 1, REMORAID,   7
-	db 100 percent,     REMORAID,   8
+	db  20 percent,     MAGIKARP,   3
+	db  36 percent + 1, MAGIKARP,   4
+	db  48 percent,     MAGIKARP,   5
+	db  56 percent + 1, MAGIKARP,   6
+	db  60 percent,     MAGIKARP,   7
+	db  73 percent + 1, REMORAID,   3
+	db  84 percent,     REMORAID,   4
+	db  92 percent + 1, REMORAID,   5
+	db  97 percent + 1, REMORAID,   6
+	db 100 percent,     REMORAID,   7
 .Remoraid_Swarm_Good:
 	db  13 percent + 1, MAGIKARP,   18
 	db  24 percent,     MAGIKARP,   19
@@ -323,18 +323,18 @@ FishGroups:
 	db  96 percent + 1, REMORAID,   21
 	db 100 percent,     REMORAID,   22
 .Remoraid_Swarm_Super:
-	db  33 percent + 1, REMORAID,   40
-	db  60 percent,     REMORAID,   41
-	db  80 percent,     REMORAID,   42
-	db  93 percent +1,  REMORAID,   43
-	db 100 percent,     REMORAID,   44
+	db  33 percent + 1, REMORAID,   38
+	db  60 percent,     REMORAID,   39
+	db  80 percent,     REMORAID,   40
+	db  93 percent +1,  REMORAID,   41
+	db 100 percent,     REMORAID,   42
 
 .Gyarados_Old:
-	db  33 percent + 1, MAGIKARP,   4
-	db  60 percent,     MAGIKARP,   5
-	db  80 percent,     MAGIKARP,   6
-	db  93 percent + 1, MAGIKARP,   7
-	db 100 percent,     MAGIKARP,   8
+	db  33 percent + 1, MAGIKARP,   3
+	db  60 percent,     MAGIKARP,   4
+	db  80 percent,     MAGIKARP,   5
+	db  93 percent + 1, MAGIKARP,   6
+	db 100 percent,     MAGIKARP,   7
 .Gyarados_Good:
 	db  30 percent + 1, MAGIKARP,   18
 	db  54 percent + 1, MAGIKARP,   19
@@ -345,16 +345,16 @@ FishGroups:
 	db  98 percent + 1, GYARADOS,   21
 	db 100 percent,     GYARADOS,   22
 .Gyarados_Super:
-	db  23 percent + 1, MAGIKARP,   40
-	db  42 percent,     MAGIKARP,   41
-	db  56 percent + 1, MAGIKARP,   42
-	db  65 percent + 1, MAGIKARP,   43
-	db  70 percent + 1, MAGIKARP,   44
-	db  80 percent,     GYARADOS,   40
-	db  88 percent,     GYARADOS,   41
-	db  94 percent + 1, GYARADOS,   42
-	db  98 percent + 1, GYARADOS,   43
-	db 100 percent,     GYARADOS,   44
+	db  23 percent + 1, MAGIKARP,   38
+	db  42 percent,     MAGIKARP,   39
+	db  56 percent + 1, MAGIKARP,   40
+	db  65 percent + 1, MAGIKARP,   41
+	db  70 percent + 1, MAGIKARP,   42
+	db  80 percent,     GYARADOS,   38
+	db  88 percent,     GYARADOS,   39
+	db  94 percent + 1, GYARADOS,   40
+	db  98 percent + 1, GYARADOS,   41
+	db 100 percent,     GYARADOS,   42
 
 .Dratini_2_Old:
 	db  99 percent + 2, MAGIKARP,   1
@@ -381,26 +381,26 @@ FishGroups:
 	db  99 percent + 1, DRAGONAIR,  36
 	db 100 percent,     DRAGONAIR,  37
 .Dratini_2_Super:
-	db  13 percent + 1, GYARADOS,   55
-	db  24 percent,     GYARADOS,   56
-	db  32 percent,     GYARADOS,   57
-	db  37 percent + 1, GYARADOS,   58
-	db  40 percent,     GYARADOS,   59
-	db  50 percent + 1, DRAGONAIR,  55
-	db  58 percent + 1, DRAGONAIR,  56
-	db  64 percent,     DRAGONAIR,  57
-	db  68 percent,     DRAGONAIR,  58
-	db  70 percent + 1, DRAGONAIR,  59
-	db  77 percent,     SLOWBRO,    55
-	db  82 percent,     SLOWBRO,    56
-	db  86 percent,     SLOWBRO,    57
-	db  88 percent + 2, SLOWBRO,    58
-	db  90 percent + 1, SLOWBRO,    59
-	db  93 percent + 1, DRAGONITE,  55
-	db  96 percent + 1, DRAGONITE,  56
-	db  98 percent + 1, DRAGONITE,  57
-	db  99 percent + 1, DRAGONITE,  58
-	db 100 percent,     DRAGONITE,  59
+	db  13 percent + 1, GYARADOS,   53
+	db  24 percent,     GYARADOS,   54
+	db  32 percent,     GYARADOS,   55
+	db  37 percent + 1, GYARADOS,   56
+	db  40 percent,     GYARADOS,   57
+	db  50 percent + 1, DRAGONAIR,  53
+	db  58 percent + 1, DRAGONAIR,  54
+	db  64 percent,     DRAGONAIR,  55
+	db  68 percent,     DRAGONAIR,  56
+	db  70 percent + 1, DRAGONAIR,  57
+	db  78 percent + 1, SLOWBRO,    53
+	db  85 percent,     SLOWBRO,    54
+	db  90 percent,     SLOWBRO,    55
+	db  93 percent + 1, SLOWBRO,    56
+	db  95 percent,     SLOWBRO,    57
+	db  97 percent,     DRAGONITE,  58
+	db  98 percent + 1, DRAGONITE,  59
+	db  99 percent,     DRAGONITE,  60
+	db  99 percent + 2, DRAGONITE,  61
+	db 100 percent,     DRAGONITE,  62
 
 .WhirlIslands_Old:
 	db  23 percent + 1, MAGIKARP,   4
